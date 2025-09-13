@@ -43,7 +43,10 @@ Antes de la era digital, el término "computadora" se refería a personas especi
 
 La evolución desde "computadoras humanas" hacia computadoras electrónicas marcó un hito. Nació de la necesidad de manejar grandes volúmenes de operaciones más rápidamente y con máxima precisión, algo que las computadoras humanas ya no podían soportar con la misma velocidad.
 
-![Evolución de las computadoras](https://cdn.slidesharecdn.com/ss_thumbnails/evolucindecomputador-230421152747-ff4b4e9a-thumbnail.jpg?width=640&height=640&fit=bounds)
+<div style="text-align: center;">
+<img src="https://cdn.slidesharecdn.com/ss_thumbnails/evolucindecomputador-230421152747-ff4b4e9a-thumbnail.jpg?width=640&height=640&fit=bounds"
+/>
+</div>
 
 ##### Imagen tomada de: https://cdn.slidesharecdn.com/ss_thumbnails/evolucindecomputador-230421152747-ff4b4e9a-thumbnail.jpg?width=640&height=640&fit=bounds
 
@@ -58,11 +61,13 @@ Es de analizar que por ejemplo, uno de los problemas que se buscaban solucionar 
 Eventualmente al poder procesar información se presentó un nuevo problema al querrer solucionarse otros problemas: **cómo guardamos información** y a partir de esta pregunta, nacieron las [Tarjetas Perforadas](https://upload.wikimedia.org/wikipedia/commons/f/fe/Used_Punchcard_%285151286161%29.jpg "Tarjetas Perforadas"), despues para hacer más efectivo este sistema sale el primer lenguaje de computadora - Código Máquina = Machine Code, es básicamente el lenguaje que entiende una máquina y que está representado por ceros y unos. A esto se le conoce como sistema 
 binario.
 
+<div aling = "center">
 <img 
 src="https://cdn.hashnode.com/res/hashnode/image/upload/v1685691688545/3f785744-bf63-42cd-b151-5e993d97c606.jpeg"
 width="300px"
 height="300px"
 />
+<div>
 
 #### Imagen tomada de: https://ritik111-1683018186475.hashnode.dev/introduction-to-programming-and-programming-languages
 
@@ -81,7 +86,7 @@ La importancia del lenguaje de máquina radica en la capacidad de traducir las i
 
 #### ¿Cómo influyó IBM en el desarrollo de lenguajes de programación?
 
-El trabajo de IBM destacó por sentar las bases de la programación moderna en 1950, permitiendo a los desarrolladores dejar atrás el código binario y emplear un lenguaje más intuitivo para los humanos. Este paso esencial abrió camino a lenguajes que funcionan como intermediarios entre la mente humana y la capacidad de cálculo de la máquina. A través de estos desarrollos, se transformó la interacción con la tecnología, ampliando las posibilidades de lo que se puede lograr con las computadoras.
+El trabajo de [IBM](https://www.ibm.com/mx-es "Page IBM") destacó por sentar las bases de la programación moderna en 1950, permitiendo a los desarrolladores dejar atrás el código binario y emplear un lenguaje más intuitivo para los humanos. Este paso esencial abrió camino a lenguajes que funcionan como intermediarios entre la mente humana y la capacidad de cálculo de la máquina. A través de estos desarrollos, se transformó la interacción con la tecnología, ampliando las posibilidades de lo que se puede lograr con las computadoras.
 
 ---
 
@@ -224,12 +229,6 @@ Todo lo que vemos y entendemos de internet, **Viene por cables** y estos cables 
 
 El internet llega a nuestras casas a través de los ISP (Internet Service Provider) como Claro, Movistar, etc. Estas compañías utilizan una variedad de tecnologías para brindar el servicio como cable coaxial y fibra óptica. . Los ISP construyen y mantienen una infraestructura de red para proporcionar acceso a internet. Esto incluye cables, torres de comunicación y demás equipos necesarios para transmitir datos. Luego, los ISP se conectan a una red de nivel superior, que es una red global que interconecta ISP por medio de cables submarinos intercontinentales que permiten la comunicación a nivel mundial.
 
->ISP:
-
->Cable Coaxial:
-
->Fibra Optica:
-
 A lo largo de toda esta información encontrada vimos cómo nuestros dispositivos traducen e interpretan nuestro lenguaje, pero ¿Cómo enviamos esa información de una computadora a otra? Y esto es por medio de cables, asi conectamos todas las computadoras al rededor del mundo.
 
 **el router** no nos podria dar internet si no esta conectado por un cable.
@@ -286,6 +285,8 @@ Estos nacieron de la necesidad de resolver problemas de conectividad, especialme
 
 >Interoperabilidad: Es la capacidad que tienen diferentes sistemas de información, plataformas o organizaciones para intercambiar, compartir y utilizar datos y conocimientos de manera uniforme y eficiente. 
 
+En el mundo de las comunicaciones digitales, el envío de un mensaje de una computadora a otra implica procesos complejos que son esenciales para garantizar que el mensaje llegue de manera segura y eficiente. Este procedimiento sigue un conjunto de reglas y protocolos que actúan a través de cinco capas diferentes. Vamos a profundizar en cada una de estas capas para comprender mejor cómo funciona este intercambio de mensajes
+
 De ahí surgen los protocolos: TCP / IP 
 
 ---
@@ -310,51 +311,67 @@ Qué hace: Traduce y da formato a los datos para que sean comprensibles por la c
 
 Ejemplo: Codificación, cifrado, compresión de datos.
 
+
+<!-- APPLICATION -->
+
+
 ### 2. Capa de Aplicación (Application)
-Al realizar un mensaje y oprimir enter, esta es la primera "Etapa" en donde va a generar una conexión directamente con un servidor para poder enviar ese mensaje en donde como primera información tedrá un header:
 
-Es la primera al 
-Qué hace: Interactúa directamente con el software del usuario para iniciar la transmisión.
+El primer paso cuando un mensaje se envía desde una computadora es pasar por la capa de aplicación en donde va a generar una conexión directamente con un servidor para poder enviar ese mensaje. Esta capa utiliza protocolos como HTTPS para crear una conexión segura entre el emisor y el servidor. Cuando presionamos "Enter" para enviar un mensaje, se genera un paquete inicial al que se le agrega un header. Este encabezado incluye información crucial sobre el origen y el destino del mensaje.
 
-<!-- TRANSPORTE -->
+* Qué hace: Interactúa directamente con el software del usuario para iniciar la transmisión.
+
+
+<!-- TRANSPORT -->
+
 
 ### 3. Capa de Transporte (Transport)
 
-Si el mensaje o paquete es muy grande, ese paquete lo va a dividir en paquetes pequeños y cada uno de estos tendrá información del Origen y Destino
-Qué hace: Garantiza la transferencia confiable de datos, controla errores y segmenta la información.
+Si el mensaje o paquete es muy grande, ese paquete lo va a dividir en paquetes pequeños y cada uno de estos tendrá información del Origen y Destino cada uno conservando el encabezado de la capa anterior. En esta etapa, se agrega un nuevo encabezado que también contiene datos sobre el origen y destino, adaptados al contexto de la capa de transporte.
+
+* Qué hace: Garantiza la transferencia confiable de datos, controla errores y segmenta la información.
 
 __Protocolos:__
+* TCP: Confiable, con control de errores.
+* UDP: Más rápido, sin control de errores estricto.
 
-TCP: Confiable, con control de errores.
 
-UDP: Más rápido, sin control de errores estricto.
+<!-- NETWORK -->
+
 
 ### 4. Capa de Red (Network)
 
-Se agrega el IP ADDRESS del dispositivo de Origen y del Dispositivo del Destino
-Qué hace: Encapsula la información en paquetes y se encarga de direccionar el envío hacia su destino.
+La capa de red es responsable de manejar direcciones IP. Cada paquete que llega a este nivel recibe un nuevo encabezado que incluye la dirección IP del origen y del destino. Así, se facilita el encaminamiento adecuado de los paquetes a través de la red.
 
-Ejemplos: IP, Routers.
+>Se agrega el IP ADDRESS del dispositivo de Origen y del Dispositivo del Destino
+
+* Qué hace: Encapsula la información en paquetes y se encarga de direccionar el envío hacia su destino.
+>Ejemplos: IP, Routers.
 
 ### 5. Capa de Enlace de Datos (Data Link)
 
-Se agrega el Mac Address del dispositivo de origen y del dispositivo de destino
-Qué hace: Organiza los datos en tramas, controla errores de transmisión y administra el acceso al medio.
+Esta capa actúa como un puente crucial en la transferencia de datos de red. A diferencia de las capas anteriores, la capa de enlace de datos no solo agrega un nuevo encabezado, sino también un trailer. El encabezado aquí contiene las direcciones MAC de las computadoras de origen y destino, mientras que el trailer facilita una verificación doble cuando el paquete alcanza su destino.
 
-Ejemplos: Ethernet, Switches.
+>Se agrega el Mac Address del dispositivo de origen y del dispositivo de destino
+
+* Qué hace: Organiza los datos en tramas, controla errores de transmisión y administra el acceso al medio.
+
+* Ejemplos: Ethernet, Switches.
 
 __Protocolos:__
-
 * HTTP: Transferencia de hipertexto (páginas web).
-
 * FTP: Transferencia de archivos.
+
+
+<!-- PHYSICAL -->
+
 
 ### 6. Capa Física (Physical)
 
-Esto lleva la información en paquetes por medio de cables a la carpeta destino con todas las capas quitando cada uno de los headers que se realizo en cada una de las capas comparandolo con cada una de las capas. (Como montarlo y desmontarlo) 
+Finalmente, los paquetes, ahora con todos sus encabezados y trailers, son enviados a través de la infraestructura física, __como cables__, hacia la computadora de destino. Una vez allí, el proceso se invierte: desde la capa física hasta la capa de aplicación, cada header se elimina sucesivamente, asegurando que la información correcta llegue a cada capa superior hasta completarse el proceso de comunicación.
 
-1. Información de Origen
-2. Información de Destino
+* Información de Origen
+* Información de Destino
 
 Qué hace: Define el medio físico por el que viajan los datos.
 Ejemplos: Cables, conectores, señales eléctricas u ópticas.
@@ -367,21 +384,115 @@ Qué hace: Establece, gestiona y finaliza las conexiones entre aplicaciones.
 
 Ejemplo: Coordinación de inicio y cierre de sesión en una comunicación.
 
-Por lo que:
+<!-- RESUMEN -->
 
-<div aling="center">
+**Por lo que:**
 
-1. **Presentation** → Traducción y formato.
-2. **Application** → HTTP, FTP.
-3. **Transport** → TCP, UDP.
-4. **Network** → IP, routers.
-5. **Data Link** → Ethernet, switches.
-6. **Physical** → Cables.
-7. **Session** → Gestión de conexiones.
+<div style="text-align: center;">
+
+1.**Presentation** → Traducción y formato.
+
+2.**Application** → HTTP, FTP.
+
+3.**Transport** → TCP, UDP.
+
+4.**Network** → IP, routers.
+
+5.**Data Link** → Ethernet, switches.
+
+6.**Physical** → Cables.
+
+7.**Session** → Gestión de conexiones.
 
 </div>
 
+---
 
+<!-- ---------------------------------------------------------------------------------------------- -->
 
+## Origen y evolución de los proveedores de Internet (ISP)
 
+Al ser un proyecto grande [ARPANET](https://es.wikipedia.org/wiki/ARPANET "Wikipedia de Arpanet"), empezó a haber un problema respecto al proveer infraestructura para este sistema, entonces se piensa en la solución de hacer que sea realizado por terceros para que se financien de una forma diferente. De ahí surgen los ISP, a finales de la década de 1980 y principios de la década de 1990, cuando Internet comenzó a abrirse al público. 
+
+[Un proveedor de servicios de Internet](https://kinsta.com/wp-content/uploads/2022/02/Dial-up-Internet-Providers.png "Image-Example-ISP") Un ISP (Internet Service Provider), es una compañía que suministra acceso a internet y otros servicios a individuos y organizaciones. Su papel es proporcionar conectividad a Internet a través de diferentes tecnologías y medios de transmisión, como líneas telefónicas, cable coaxial, fibra óptica, conexiones inalámbricas o satelitales.
+
+>¿Cómo Funciona un ISP?: Los ISP están conectados a una o más líneas de internet de alta velocidad. Los ISP más grandes tienen sus propias líneas arrendadas de alta velocidad, por lo que dependen menos de los servicios de telecomunicaciones y pueden brindar un mejor servicio a sus clientes.
+
+>* Empresas: Claro, Movistar, Telmex y cualquier empresa por la que se le pague por internet. Estas empresas tuvieron que agregar infraestructura para el internet y poder agregar conectividad a la población.
+
+>* Cable Coaxial: Utiliza los cables coaxiales de televisión por cable para ofrecer acceso a Internet.
+
+>* Fibra Optica: Utiliza cables de fibra óptica para ofrecer acceso a Internet de alta velocidad.
+
+>* Satélite: Utiliza satélites para ofrecer acceso a Internet en áreas rurales donde no hay otras opciones disponibles.
+
+Con la irrupción de los ISP, la forma en la que el público general accedía a Internet cambió drásticamente. Hoy, gracias a los ISP, millones de personas en todo el mundo tienen acceso a Internet desde sus hogares, escuelas, y lugares de trabajo. La facilidad de conexión ha permitido un flujo constante de información y comunicación sin precedentes.
+
+---
+
+## Direcciones IP y DNS: Fundamentos para la Conectividad en Internet
+
+Arpanet dejo de existir y el gobierno le da el proyecto a empresas para que ellos puedan crear la infraestructura y puedan cobrar para que nosotros tengamos acceso a internet.
+
+Con la transición de ARPANET a una infraestructura controlada por empresas privadas, Internet se abrió para permitir conexiones más personalizadas. Ahora, en vez de conectar a pocos puntos centrales de información, cualquier persona con acceso a Internet puede comunicarse con quien desee, en cualquier parte del mundo.
+
+* Descentralización: La construcción de redes de cables permitió que el acceso a Internet se volviera más descentralizado y accesible a nivel global.
+
+* Masificación: Los protocolos establecidos no solo facilitaron esta conexión, sino que dieron pie al desarrollo posterior de la web, que es un tema paralelo pero separado de la tecnología fundamental del Internet.
+
+>Podemos pensar de internet como la red de cables que interconectan las computadoras
+
+Entonces empieza a haber una dificultad para enviar o recibir información de especificamente una computadora a otra y es de aqui que surge la IP ADRESS, cada computadora tiene una de estas que es practicamente la dirección de la computadora.
+
+>IP = Internet Protocol Address  -  el DNS = Domain Name System
+
+*Al haber muchos lugares digitales posibles para poder ir o acceder: se empieza a dificultar recordar todas las IP ADDRESS* por lo que:
+
+La IP es un numero como: 216.58.214.174 y el DNS es como ponerle una mascara a ese numero por lo que: **216.58.214.174 = google.com** añadiendole una palabra a ese numero para que nosotros podamos entender.
+
+* Identificación única: Cada computadora o dispositivo conectado en la red tiene una dirección IP única, que ayuda a dirigir la información y asegurar que llegue a su destino correcto.
+
+* Protocolo de comunicación: Tal como se describió, cuando un usuario envía datos por la red, estos llevan consigo la dirección IP origen y destino. Esto asegura que los paquetes de información sean enviados y regresados al lugar correcto.
+
+El [DNS (Domain Name System)](https://cf-assets.www.cloudflare.com/slt3lc6tev37/1NzaAqpEFGjqTZPAS02oNv/bf7b3f305d9c35bde5c5b93a519ba6d5/what_is_a_dns_server_dns_lookup.png "Imagen Explicativa DNS") es un sistema que se utiliza para traducir los nombres de dominio legibles por nosotros, en direcciones IP que las computadoras entienden. El DNS permite asociar un nombre de dominio, como “chatgpt.com”, con la dirección IP correspondiente, como “104.18.32.47”. El DNS nace para facilitar la navegación en internet. En lugar de tener que recordar un número complicado como la IP, podemos usar nombres de dominio más fáciles de recordar. El DNS se diseñó para resolver el problema de escalabilidad y la facilidad de uso al proporcionar una forma organizada y jerárquica de asignar nombres a direcciones IP.
+
+Entonces al buscar un dominio, lo que hacemos es que se da una solicitud a internet (La red busca en un indice enorme) y se te conecta con la computadora que buscabas. Por lo que ya no nos conectamos a un centro de información sino que nos interconectamos a computadoras de una forma ultra personalizada.
+
+---
+
+<!-- HISTORIA DE LA WEB -->
+
+## Historia y Evolución de la Web: De ARPANET a Tim Berners-Lee
+
+Web e Internet son cosas distintas, siendo internet toda la infraestructura por donde viaja la información, **web es la forma en la que nosotros consumimos información** y eso en ARPANET no existia pues se conectaba de una computadora a otra computadora atraves de una consola, por lo que la experiencia de usuario era muy mala.
+
+### ¿Quien fue el primer desarrollador web?
+
+Tim Berners - Lee: Postulo que la forma en la que consumiamos la información no era la mejor, muchas partes de la web que conocemos hoy en día viene gracias a el. Postulando la URL, HIPERVINCULOS para navegar por muchas paginas.
+
+>El primer desarrollador web: Este título se le atribuye a Tim Berners-Lee quien es un científico de la computación británico, quién es ampliamente reconocido como el inventor de la World Wide Web (WWW) y el creador del primer sitio web. En 1989, Tim Berners-Lee trabajaba en el CERN (Organización Europea para la Investigación Nuclear) dónde desarrollo un sistema para compartir información y documentos científicos utilizando hipertexto. Este sistema se convirtió en la base del World Wide Web. En 1990, Berners-Lee implementó el primer sitio web llamado “info. cern. ch”, que se convirtió en el primer sitio web accesible públicamente. Este sitio consistía en páginas estáticas que proporcionaban información sobre el proyecto WWW. . Este sitio fue creado con HTML (HyperText Markup Language) para la estructura del contenido y HTTP (Hypertext Transfer Protocol) para la transferencia de datos entre el servidor web y los clientes. No existían elementos visuales complejos o diseño gráfico, ya que su enfoque principal estaba en la estructura y accesibilidad de la información.
+
+El programo 3 Bases de la web como la conocemos hoy en día:
+
+1. El programo el lenguaje HTML, un lenguaje de marcado para darle estructura a la información 
+
+2. URL = Uniform Resource Locator que es una dirección unica que se utiliza para identificar cada recurso en la web siendo la combinación de la IP y el DNS 
+
+>Por lo que ingresamos a un navegador que pide una URL que contiene el DNS para descifrarlo y mirar la IP para poderse conectar a un servidor 
+
+3. HTTP = Hypertext Transfer Protocol. Permite la recuperación de recursos vinculados de toda la web 
+
+>Una vez yo ponga la URL en el navegador se va a hacer una petición via HTTP a un servidor u otra computadora para que me pueda enviar la información que estoy buscando
+
+**La primera pagina que se programo era el documento de postulación de Tim Berners - Lee con su propuesta de [WORLD WIDE WEB](https://i.insider.com/4e0b8f4dccd1d54255060000?width=900&format=jpeg&auto=webp "La primera pagina del mundo")** 
+
+pagina recomendada: https://info.cern.ch/hypertext/WWW/TheProject.html
+
+Ademas de programar estas 3 bases de la web, realizo el primer navegador y el primer servidor.
+
+Y teniendo en cuenta el servidor ¿La conexión a internet antes del invento de la web requería sí o sí a los humanos?Sí. Ya que eran ellos los que autorizaban la conexión y ahora gracias a los servidores no necesitas una autorización y puedes mirar la web 24/7.
+
+La experiencia era poco amigable, ya que requería la intervención de otra persona para permitir el acceso. La creación de un navegador gráfico cambió por completo esta dinámica, mejorando significativamente la interfaz.
+
+---
 
