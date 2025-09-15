@@ -1,20 +1,22 @@
-# Introducción a la Web: Historia y Funcionamiento de Internet
+<!-- Introducción al repositorio -->
 
-Al acostumbrarnos a usar ciertos recursos o herramientas de forma diaria ignoramos lo que son. 
+<div style="text-align:center;"><h1>Introducción a la Web: Historia y Funcionamiento de Internet</h1></div>
 
->¿Realmente sabes cómo funciona internet?
-
->¿Sabes qué es internet? 
-
->¿Sabes cómo se comunican las computadoras?
-
->¿Qué es la Web?
+Los seres humanos estamos cada vez más inmersos en la tecnología, utilizándola de manera cotidiana en múltiples actividades. Sin embargo, en la medida en que nos habituamos a ciertas herramientas, solemos pasar por alto su esencia y los principios que hacen posible su funcionamiento.
 
 Es fundamental entender como desarrollador cómo nos comunicamos con las maquinas y cómo las maquinas se comunican con nosotros los humanos. Mi función es servir de puente entre un usuario y una maquina para obtener un resultado, y ese es el producto por el que trabajo.
 
-### Temas y dudas a resolver en este texto
+>¿Cómo funciona la red que utilizamos a diario?
+<br>
+¿Qué es realmente Internet? 
+<br>
+¿De qué manera se comunican las computadoras entre sí?
+<br>
+¿Qué es la Web?
 
-1. Internet
+### Temario
+
+1. Evolución de Cálculos: Del Ábaco a Computadoras Humanas
 2. Evolución de internet
 3. Historia del internet
 4. Cómo se comunican las computadoras
@@ -52,22 +54,18 @@ La evolución desde "computadoras humanas" hacia computadoras electrónicas marc
 
 Es de analizar que por ejemplo, uno de los problemas que se buscaban solucionar por medio de calculos necesitandose exclusiva precisión y exactitud para evitar errores es: ¿Cómo mandamos humanos a la orbita o a la luna?
 
-<u>Teniendo en cuenta esto, un error matemático podemos pensarlo como un "Vamos a explotar."</u>
+Teniendo en cuenta esto: Un error matemático podemos pensarlo como un <u>"Vamos a explotar."</u>
 
 ---
 
 ## Evolución de las Computadoras y el Código Máquina
 
-Eventualmente al poder procesar información se presentó un nuevo problema al querrer solucionarse otros problemas: **cómo guardamos información** y a partir de esta pregunta, nacieron las [Tarjetas Perforadas](https://upload.wikimedia.org/wikipedia/commons/f/fe/Used_Punchcard_%285151286161%29.jpg "Tarjetas Perforadas"), despues para hacer más efectivo este sistema sale el primer lenguaje de computadora - Código Máquina = Machine Code, es básicamente el lenguaje que entiende una máquina y que está representado por ceros y unos. A esto se le conoce como sistema 
+Eventualmente al poder procesar información se presentó un nuevo problema: **¿cómo guardamos información?**, y a partir de esta pregunta, nacieron las [Tarjetas Perforadas](https://upload.wikimedia.org/wikipedia/commons/f/fe/Used_Punchcard_%285151286161%29.jpg "Imagen de Tarjetas Perforadas from Wikipedia"), despues para hacer más efectivo este sistema sale el primer lenguaje de computadora - <u>[Código Máquina = Machine Code](https://en.wikipedia.org/wiki/Machine_code "Wikipedia - Machine Code")</u>, es básicamente el lenguaje que entiende una máquina y que está representado por ceros y unos. A esto se le conoce como sistema 
 binario.
 
-<div aling = "center">
-<img 
-src="https://cdn.hashnode.com/res/hashnode/image/upload/v1685691688545/3f785744-bf63-42cd-b151-5e993d97c606.jpeg"
-width="300px"
-height="300px"
-/>
-<div>
+<div style="text-align: center;">
+<img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1685691688545/3f785744-bf63-42cd-b151-5e993d97c606.jpeg" width="300px" height="300px"/>
+</div>
 
 #### Imagen tomada de: https://ritik111-1683018186475.hashnode.dev/introduction-to-programming-and-programming-languages
 
@@ -81,7 +79,7 @@ Utilizar tarjetas perforadas significaba poder guardar y modificar información,
 #### ¿Cómo surgió el código máquina?
 Con el avance de la tecnología, la comunidad empezó a buscar maneras más eficientes de comunicarse con las computadoras: _Nació así el código máquina_, <strong>un lenguaje compuesto de unos y ceros</strong>, fundamental para que las computadoras procesen y comprendan los datos que se les suministran. Este lenguaje binario permitía cálculos rápidos y precisos, cerrando la brecha entre los datos introducidos y los resultados proporcionados por la máquina.
 
-La importancia del lenguaje de máquina radica en la capacidad de traducir las instrucciones humanas a un formato que las computadoras pudieran procesar.
+<p style="color: green;">La importancia del lenguaje de máquina radica en la capacidad de traducir las instrucciones humanas a un formato que las computadoras pudieran procesar.</p>
 
 
 #### ¿Cómo influyó IBM en el desarrollo de lenguajes de programación?
@@ -95,23 +93,25 @@ El trabajo de [IBM](https://www.ibm.com/mx-es "Page IBM") destacó por sentar la
 Es de recordarse que el problema principal era realizar calculos, asi que los humanos crearon unas maquinas para ingresarle información y a partir de esto que la maquina lo procesara y diera unos resultados.
 
 >inputs --> "Ingreso Información" <br>
->Proceso --> "Pasa algo" <br>
->ouputs --> "Recibo Información
+Proceso --> "Pasa algo" <br>
+ouputs --> "Recibo Información
 
-<strong>Es la forma de nosotros comunicarnos con la maquina sin importar qué dispositivo o tecnología sea. (Celular, Computador, Carro, Calculadora, Objetos con internet como ventanas y neveras con inteligencia.)</strong>
+<p style="color:green;">Es el proceso que permite la interacción entre las personas y los sistemas computacionales, sin importar el tipo de dispositivo o tecnología. Algunos ejemplos de esta interacción incluyen: teléfonos móviles, computadores, calculadoras, vehículos inteligentes y cualquier otro objeto con capacidades digitales.</p>
+
+>Digital: Se define como todo aquello que se representa, procesa o transmite mediante números discretos, generalmente en formato binario (0 y 1).
 
 Un _teclado_ y un _mouse_ son dispositivos de **inputs** pensandolo de forma que al escribir o realizar algo con estos perifericos, se hace un proceso en el computador mostrandonos un resultado por medio de un monitor.
 
->>>Dispositivos de entrada 
+>Dispositivos de entrada 
 
->>>Dispositivos de salida
+>Dispositivos de salida
 
 Retomando la idea del **Abaco** nosotros teniamos un problema inicial y eso es el **proceso**, el calculo que necesitabamos realizar como seres humanos.
 
 > ¿Cómo Funciona un Teclado? <br>
-> ¿Cómo funciona un Mouse? <br>
-> ¿Cómo el monitor sabe donde ubicar cada pixel RGB? <br>
-> ¿Cómo se originaron todos los procesos internos de un computador?
+ ¿Cómo funciona un Mouse? <br>
+ ¿Cómo el monitor sabe donde ubicar cada pixel RGB? <br>
+ ¿Cómo se originaron todos los procesos internos de un computador?
 
 ---
 
@@ -121,15 +121,13 @@ Machine code = [Codigo Binario](https://static.platzi.com/media/user_upload/bina
 
 lo que hizo el ser humano es hacer que sea natural una traducción del **Idioma humano** Al **Machine Code** 
 
->Conteo Humano: 1,2,3,4,5,6,7,8,9 (Unidad, Decena, Centena, Mil, Decena de mil...)
+Conteo Humano: 1, 2, 3, 4, 5, 6, 7, 8, 9 (Unidad, Decena, Centena, Mil, Decena de mil...)
 
->Machine Code: 0,1 --> Absolutamente toda información debe pasar por este sistema para que una maquina pueda entender.
-
->128, 64, 32, 16, 8, 4, 2, 1
+Machine Code: 0, 1 --> Absolutamente toda información debe pasar por este sistema para que una maquina pueda entender. Pasando la información a datos **Binarios**: 11111111 - 128, 64, 32, 16, 8, 4, 2, 1
 
 >00000001 = 1  -  00000010 = 2  - 00000011 = 3   - 00010100 = 20   - 11111111 = 255
 
-#### BITS = Digito Binario
+> BITS = Digito Binario
 
 ---
 
@@ -139,22 +137,21 @@ Es todo un proceso lo que transforma el lenguaje humano con el sistema binario y
 
 >Peso de información y Cómo se traduce esta información --> Byte y Bytes
 
-[El conjunto de 8 espacios](https://www.dataunitconverter.com/blog/images/bit-nibble-byte-0.png "Imagen ¿Qué es un Byte?")  "10010010" se les conoce como un Byte, cada digito binario es un Bit, *Por lo que 8 Bits = 1 Byte* que es la representación de __156 patrones o combinaciones__ que da el valor de 255, [por lo que si tenemos un conjunto de 255 bits, podemos decir que tenemos un byte que pesa 255.](https://wiki.ead.pucv.cl/images/thumb/2/25/Bits_and_Bytes.svg.png/350px-Bits_and_Bytes.svg.png "Imagen que explica diferencia de pesos en bytes")
+El conjunto de 8 espacios  "10010010" se les conoce como un Byte, cada digito binario es un Bit, *Por lo que 8 Bits = 1 Byte* que es la representación de __156 patrones o combinaciones__ que da el valor de 255, [por lo que si tenemos un conjunto de 255 bits, podemos decir que tenemos un byte que pesa 255.](https://wiki.ead.pucv.cl/images/thumb/2/25/Bits_and_Bytes.svg.png/350px-Bits_and_Bytes.svg.png "Imagen que explica diferencia de pesos en bytes")
 
 En computación, el concepto de **"peso"** se refiere al tamaño o cantidad de datos que una secuencia de bits puede representar. Un solo bit puede tener dos estados (0 o 1), mientras que un byte, compuesto por 8 bits, puede representar 256 combinaciones diferentes (2^8). Esto significa que un byte tiene un peso de 255 en la escala binaria, ya que puede almacenar valores de 0 a 255.
 
-**Yo como desarrollador estoy creando información que tendrá un peso**
-**Cualquier persona que utilice un dispositivo crea información con un peso.**
+<p style="color:green;">Yo como desarrollador estoy creando información que tendrá un peso, cualquier persona que utilice un dispositivo crea información con un peso.</p>
 
 La forma de traducción de todo esto es por medio de [Transistores](https://es.wikipedia.org/wiki/Transistor "Transistor") siendo uno de los más grandes inventos de la humanidad y que aun hoy en día siguen evolucionando. (Antes focos enormes que se prendian y apagaban hasta hoy en día que tenemos procesadores que tienen millones de transistores)
 
-### Los transistores funcionan de forma:
+### ¿Cómo los transistores funcionan?:
 
->True = ON = 1
+>True = ON = Prendido = 1 <br> False = OFF = Apagado = 0
 
->False = OFF = 0
-
-### ¿Cómo los bytes pueden representar letras, numeros, caracteres especiales, colores o en musica?
+<div style="text-align: center;">
+<img src="https://www.dataunitconverter.com/blog/images/bit-nibble-byte-0.png"/>
+</div>
 
 ---
 
@@ -164,7 +161,9 @@ El American Standard Code for Information Interchange f ue creado en 1963 por el
 
 >En codigo ascci: 161 72 111 108 97 33 --> ¿Qué quiere decir esos 6 Bits?
 
+<div style="text-align: center;">
 <img src="https://www.dongee.com/tutoriales/content/images/2023/04/image-72.png"/>
+</div>
 
 La palabra <u>"¡Hola!"</u> se representa en la computadora como una secuencia de valores ASCII (<u>161, 72, 111, 108, 97, 33</u>), que a su vez se traducen en números binarios para que la máquina los pueda procesar: <u>10100001 01001000 01101111 01101100 01100001 00100001</u>
 
@@ -208,22 +207,31 @@ Por lo que un morado = R:178, 80, 228 y este color en binario: R:10110010 G:0101
 + Si todos los sub píxeles están encendidos en su máxima intensidad, el píxel aparece blanco.
 + Si solo el sub píxel rojo está encendido, el píxel aparece rojo.
 + Si solo el sub píxel verde está encendido, el píxel aparece verde.
-+ Si solo el sub píxel azul está encendido, el píxel aparece azul. .
++ Si solo el sub píxel azul está encendido, el píxel aparece azul.
+
+<div style="text-align: center;">
+<img src="https://amadine.com/assets/img/articles/rgb-vs-cmyk/rgb-color-model@2x.png" width="500px" height="300px"/>
+</div>
+
+>Imagen tomada de: https://amadine.com/useful-articles/rgb-vs-cmyk
+
 
 ## MUSICA
+
+<!-- INTERNET -->
+
 
 Con la musica es algo muy similar a los colores RGB y al texto, sólo que esta vez es por medio de ONDAS que suben y bajan generando diferentes sonidos
 
 ## Historia del Internet: De ARPANET a la Conexión Global
 
-**¿Cómo funciona el internet?**
+### ¿Qué es y de donde viene el internet?
 
->¿Qué es y de donde viene el internet?
->>Desde mi perspectiva, internet es la forma de conexion global a otros dispositivos en donde hay una transferencia de datos, todo como si fuera una corriente que envia información en bytes y esta es traducida o interpretada para mostrar algún texto, imagen o sonido. No sé de donde viene.
+>Desde mi perspectiva, internet es la forma de conexion global a otros dispositivos en donde hay una transferencia de datos, todo como si fuera una corriente que envia información en bytes y esta es traducida o interpretada para mostrar algún texto, imagen o sonido. No sé de donde viene.
 
->>Internet es una red global de computadoras interconectadas. Su historia se remonta a la década de 1960, cuando el Departamento de Defensa de Estados Unidos desarrolló una red experimental llamada ARPANET (Advanced Rechearch Project Agency Network).
+Internet es una red global de computadoras interconectadas. Su historia se remonta a la década de 1960, cuando el Departamento de Defensa de Estados Unidos desarrolló una red experimental llamada ARPANET (Advanced Rechearch Project Agency Network).
 
-video recomendado: https://www.youtube.com/watch?v=2j6XKpRyIrc
+>Video recomendado: https://www.youtube.com/watch?v=2j6XKpRyIrc
 
 Todo lo que vemos y entendemos de internet, **Viene por cables** y estos cables pasan por todo el mundo de forma submarina por lo que nosotros los humanos tenemos conectados paises, continentes a traves de cables en el mar que nos dan internet. 
 
@@ -237,9 +245,8 @@ A lo largo de toda esta información encontrada vimos cómo nuestros dispositivo
     <img src="https://techterms.com/img/xl/backbone_365.png">
 </div>
 
-imagen tomada de: https://techterms.com/definition/backbone
-
-web site muy recomendado para mirar: https://www.submarinecablemap.com/
+>Imagen tomada de: https://techterms.com/definition/backbone <br>
+Web site recomendado: https://www.submarinecablemap.com/
 
 ### Arpanet
 
@@ -470,7 +477,7 @@ Web e Internet son cosas distintas, siendo internet toda la infraestructura por 
 
 Tim Berners - Lee: Postulo que la forma en la que consumiamos la información no era la mejor, muchas partes de la web que conocemos hoy en día viene gracias a el. Postulando la URL, HIPERVINCULOS para navegar por muchas paginas.
 
->El primer desarrollador web: Este título se le atribuye a Tim Berners-Lee quien es un científico de la computación británico, quién es ampliamente reconocido como el inventor de la World Wide Web (WWW) y el creador del primer sitio web. En 1989, Tim Berners-Lee trabajaba en el CERN (Organización Europea para la Investigación Nuclear) dónde desarrollo un sistema para compartir información y documentos científicos utilizando hipertexto. Este sistema se convirtió en la base del World Wide Web. En 1990, Berners-Lee implementó el primer sitio web llamado “info. cern. ch”, que se convirtió en el primer sitio web accesible públicamente. Este sitio consistía en páginas estáticas que proporcionaban información sobre el proyecto WWW. . Este sitio fue creado con HTML (HyperText Markup Language) para la estructura del contenido y HTTP (Hypertext Transfer Protocol) para la transferencia de datos entre el servidor web y los clientes. No existían elementos visuales complejos o diseño gráfico, ya que su enfoque principal estaba en la estructura y accesibilidad de la información.
+>El primer desarrollador web: Este título se le atribuye a Tim Berners-Lee quien es un científico de la computación británico, quién es ampliamente reconocido como el inventor de la World Wide Web (WWW) y el creador del primer sitio web. En 1989, Tim Berners-Lee trabajaba en el CERN (Organización Europea para la Investigación Nuclear) dónde desarrollo un sistema para compartir información y documentos científicos utilizando hipertexto. Este sistema se convirtió en la base del World Wide Web. En 1990, Berners-Lee implementó el primer sitio web llamado “info. cern. ch”, que se convirtió en el primer sitio web accesible públicamente. Este sitio consistía en páginas estáticas que proporcionaban información sobre el proyecto WWW. Este sitio fue creado con HTML (HyperText Markup Language) para la estructura del contenido y HTTP (Hypertext Transfer Protocol) para la transferencia de datos entre el servidor web y los clientes. No existían elementos visuales complejos o diseño gráfico, ya que su enfoque principal estaba en la estructura y accesibilidad de la información.
 
 El programo 3 Bases de la web como la conocemos hoy en día:
 
@@ -486,13 +493,120 @@ El programo 3 Bases de la web como la conocemos hoy en día:
 
 **La primera pagina que se programo era el documento de postulación de Tim Berners - Lee con su propuesta de [WORLD WIDE WEB](https://i.insider.com/4e0b8f4dccd1d54255060000?width=900&format=jpeg&auto=webp "La primera pagina del mundo")** 
 
-pagina recomendada: https://info.cern.ch/hypertext/WWW/TheProject.html
+>Web Site recomendada: https://info.cern.ch/hypertext/WWW/TheProject.html
 
 Ademas de programar estas 3 bases de la web, realizo el primer navegador y el primer servidor.
 
 Y teniendo en cuenta el servidor ¿La conexión a internet antes del invento de la web requería sí o sí a los humanos?Sí. Ya que eran ellos los que autorizaban la conexión y ahora gracias a los servidores no necesitas una autorización y puedes mirar la web 24/7.
 
-La experiencia era poco amigable, ya que requería la intervención de otra persona para permitir el acceso. La creación de un navegador gráfico cambió por completo esta dinámica, mejorando significativamente la interfaz.
+La experiencia era poco amigable, ya que requería la intervención de otra persona para permitir el acceso. La creación de un navegador gráfico cambió por completo esta dinámica, mejorando significativamente la interfaz
 
 ---
 
+<!-- NAVEGADORES -->
+
+## Evolución de los Navegadores Web = Web Browser: De Mosaic a Chrome
+
+Estas herramientas han sido los cimientos del actual ecosistema digital, a partir del Navegador que realizó Tim Berners Lee (WorldWideWeb), [empezaron a surgir más navegadores](https://static.platzi.com/media/user_upload/NAVEGADORES%20WEB-e56b5c19-d09c-4e22-8863-d19fba6251a5.jpg "Imagen Historia de los Navegadores") por lo que la experiencia de la web comenzó a mejorar mucho a beneficio de los usuarios transformándose en portales que maximizaron la experiencia del usuario y permitieron un consumo de información más interactivo.
+
+**Despues de WorldWideWeb más tarde renombrado como Nexus:**
+
+NCSA Mosaic (1993): Desarrollado por el National Center for Supercomputing Applications (NCSA), que gracias a este, ahora tenemos imagenes visuales y que no sea sólo texto. Demostrandole a los demas navegadores que tambien pueden aportar valor.
+
+[Netscape Navigator (1994)](https://blogthinkbig.com/wp-content/uploads/sites/4/2017/08/NetscapeNavigator404.png?resize=500%2C375 "Imagen de Netscape"): Desarrollado por Netscape Communications Corporation, Introdujo características como las pestañas de navegación, el soporte para lenguajes de programación como JavaScript JavaScript. Este lenguaje de programación, 100% orientado a mejorar la dinámica web, posibilitó la creación de experiencias interactivas en línea como la posibilidad de reproducir contenido multimedia, sentando las bases para la poderosa herramienta que conocemos hoy. 
+
+Internet Explorer (1995): Lanzado por Microsoft como parte del sistema operativo Windows, se convirtió en uno de los navegadores más utilizados debido a su integración con Windows y su amplia distribución. Durante años, fue el navegador dominante en el mercado. 
+
+Safari (2003): Desarrollado por Apple, se introdujo como el navegador predeterminado en los dispositivos macOS e iOS. Se destacó por su rendimiento y su enfoque en la integración con otros productos de Apple. En donde hay un apartado más visual diferenciandose por su diseño.
+
+Mozilla Firefox (2004): Creado por la Fundación Mozilla, se destacó por su enfoque en la seguridad, la personalización y el cumplimiento de los estándares web. Ganó popularidad por su velocidad y capacidad de extensión, y se convirtió en una alternativa a Internet Explorer.
+
+Google Chrome (2008): Desarrollado por Google, se lanzó con un enfoque en la velocidad, la simplicidad y la estabilidad. Rápidamente, ganó popularidad y se convirtió en uno de los navegadores más utilizados debido a su rendimiento y la integración con los servicios de Google. Entendiendo que la información debe generar interacción con los usuarios pues anteriormente las imagenes, el texto no cambiaban. Por lo que ayudaron a ver paginas dinmicas y no solamente estaticas. Permitió aplicaciones complejas como Google Maps, transformando la interacción en línea y elevando las expectativas de los usuarios respecto a la funcionalidad de las páginas web.
+
+La primera aplicación de Google, fue Google Maps que es puro Javascript pues puedes mirar un mapa de forma interactiva y desplazarte en el, tener una inmersion en las ciudades y buscar numeros telefonicos, direcciones y puedes mirar la ciudad desde una perspectiva distinta.
+
+>Vidoe Recomendado: https://www.youtube.com/watch?v=NbHDJVquY0k
+
+>Motor V8 - Interprete de Javascript
+
+Con la aparición de múltiples navegadores, cada empresa desarrolló sus propias reglas y características, generando experiencias muy distintas entre sí. La ausencia de un estándar común provocó problemas de consistencia, compatibilidad y una experiencia de usuario fragmentada.
+
+---
+
+<!-- W3C -->
+
+## Estándares Web y el Rol del W3C en su Evolución
+
+Tim Berners Lee sembro las primeras bases y estandares de la web, para poder agregar y consumir contenido en la web creando asi: 
+
+**W3C = World Wide Web Consortium** es un consorcio internacional que se dedica a establecer estándares abiertos para la web y promover su desarrollo y evolución. Fue fundado en 1994 por Tim Berners-Lee, el inventor del World Wide Web. Encargandose de realizar estandares para la creación y consumo de contenido en la web. Como por ejemplo, anteriormente habia un gran problema para los desarrolladores debido a que cada navegador tenia sus propias reglas para interpretar codigo. Por lo que la W3C genera reglas base para todos los navegadores y ayuda a gente que realiza productos web para que sólo desarrolle un proyecto y se vea bien en cualquier navegador porque cada uno de ellos van a seguir cada una de las reglas.
+
+El W3C trabaja en colaboración con organizaciones, empresas y la comunidad web en general para desarrollar y mantener estándares técnicos que aseguren la calidad, accesibilidad y usabilidad de la web.
+
+<!-- APORTES DE W3C -->
+
+>Algunos de los estándares más conocidos desarrollados por el W3C incluyen:
+HTML (HyperText Markup Language): Es el lenguaje de marcado utilizado para estructurar el contenido de las páginas web. <br>
+CSS (Cascading Style Sheets): Es el lenguaje utilizado para describir la presentación y el estilo visual de las páginas web. <br>
+XML (eXtensible Markup Language): Es un lenguaje de marcado utilizado para estructurar datos de manera legible tanto para humanos como para máquinas. <br>
+DOM (Document Object Model): Es una interfaz de programación que permite el acceso y la manipulación de los elementos de una página web. <br>
+SVG (Scalable Vector Graphics): Es un formato de imágenes vectoriales que permite representar gráficos escalables y animaciones en la web.
+
+<!-- Encargados de estandares de la Web asi como W3C -->
+
+### Empresas e instituciones encargadas de los Estandares de la WEB
+
+>La W3C no es la unica empresa encargada de esta pues hay más empresas e instituciones, hoy en día todavia generan nuevas reglas, estandares y muchos más. El W3C no actúa solo, sino que coordina con una serie de actores del sector privado y académico. Estas entidades contribuyen de la siguiente manera:
+
+Aporte de innovación: Las empresas y entidades educativas ayudan al consorcio a identificar y predecir tendencias tecnológicas emergentes.
+
+Discusión y validación: Nuevas propuestas de estándares se discuten y perfeccionan colectivamente, asegurando que sean viables y útiles a largo plazo.
+
+Mejora continua: Como todos pueden participar, el sistema se beneficia de una amplia diversidad de ideas, fomentando una constante evolución y mejora de los estándares.
+
+>IETF (Internet Engineering Task Force): Se enfoca en estándares relacionados con protocolos de Internet, como HTTP, TCP/IP, SMTP y otros.
+
+>ISO (International Organization for Standardization): No se dedica exclusivamente a la tecnología web, pero es una organización internacional que desarrolla estándares en diversas áreas, incluyendo la tecnología de la información y la comunicación.
+
+>IEEE (Institute of Electrical and Electronics Engineers): Se concentra en estándares relacionados con la electrónica, la informática y la tecnología eléctrica.
+
+>OASIS (Organization for the Advancement of Structured Information Standards): Se enfoca en estándares abiertos para aplicaciones empresariales y tecnologías relacionadas con la seguridad, la privacidad y otros campos.
+
+>Khronos Group: Se dedica a la creación de estándares abiertos en gráficos 3D, realidad virtual y aumentada, así como APIs relacionadas con gráficos, como OpenGL y Vulkan.
+
+>OMG (Object Management Group): Se centra en la gestión de objetos y la definición de estándares en la industria de la tecnología de objetos.
+
+>IAB (Internet Architecture Board): Contribuye a la arquitectura y evolución de Internet.
+
+>WAI (Web Accessibility Initiative): Aunque es parte de la W3C, se centra en la accesibilidad web y la creación de estándares para garantizar que la web sea accesible para todas las personas.
+
+>OIN (Open Invention Network): No crea estándares, pero trabaja para proteger y promover el desarrollo de Linux y otras tecnologías de código abierto mediante la creación de un portafolio de patentes.
+
+Web Site Recomendado: https://www.w3.org/
+
+---
+
+## Funcionamiento y métodos del protocolo HTTP
+
+>HTTP = Hypertext Transfer Protocol 
+
+Podemos pensarlo como una carta con una dirección pues contiene IP ADDRESS y MAC ADDRESS del Origen y Destino.
+
+### HTTP METHODS 
+
+Como usuario los ocupamos todos los días, y como desarrollador vamos a utilizar con demasiada frecuensia.
+
+>Lo he visto al momento de utilizar el framework LARAVEL de PHP para realizar el backend de proyectos.
+
+* GET --> Solicita Datos
+* POST --> Envía Datos
+* PUT --> Crea/Remplaza Datos
+* DELETE --> Borra Datos
+
+<div style="text-align: center;">
+<img src="https://www.ionos.es/digitalguide/fileadmin/DigitalGuide/Screenshots_2020/diagram-of-http-communication-process-es.png" width="550px" height="350px"/>
+</div>
+
+HTTP ha evolucionado para mejorar la seguridad mediante el protocolo HTTPS. Este protocolo asegura los datos intercambiados, protegiéndolos contra interceptaciones y ataques. Al aprender y utilizar estos métodos, los desarrolladores pueden crear aplicaciones web seguras y eficaces, con la confianza de que los datos se manejan de manera adecuada.
+
+---
