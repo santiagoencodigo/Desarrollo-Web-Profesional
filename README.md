@@ -610,3 +610,154 @@ Como usuario los ocupamos todos los días, y como desarrollador vamos a utilizar
 HTTP ha evolucionado para mejorar la seguridad mediante el protocolo HTTPS. Este protocolo asegura los datos intercambiados, protegiéndolos contra interceptaciones y ataques. Al aprender y utilizar estos métodos, los desarrolladores pueden crear aplicaciones web seguras y eficaces, con la confianza de que los datos se manejan de manera adecuada.
 
 ---
+
+## Seguridad en Internet: Diferencias entre HTTP y HTTPS
+
+Hay un protocolo nuevo en donde su enfoque es la seguridad llamado HTTPS **(Hypertext Transfer Protocol Security)** que nos ayuda demasiado debido a que hoy en día la web es muy interactiva. HTTPS es un protocolo diseñado para que nuestra conexión entre la computadora y el servidor sea completamente encriptada.
+
+la información está codificada y solo las partes involucradas en la transacción tienen la llave para descifrarla
+
+>Conexión Encriptada: Todos los datos transmitidos se cifran, asegurando así privacidad y seguridad.
+
+>Protección de Información Sensible: Si una página utiliza HTTPS, los navegadores lo señalarán, generalmente con un icono de candado, indicando que la información que compartas está resguardada.
+
+* Si queremos hacer una compra podemos poner nuestra tarjeta de credito --> Pagos en linea
+
+* Podemos recibir información que aveces puede ser muy sensible.
+
+* Inicio de cuentas personales 
+
+* Chats Privados
+
+* Evitar Suplantación o manipulación de datos 
+
+Para asegurar esa información que yo envio y recibo. Salió un protocolo llamado HTTPS siendo la evolución de HTTP con temas de seguridad por lo que **toda la información que yo envie o reciba va a ser encriptada** para que nadie pueda meterse a esa conexión y sacar esa información.
+
+Incluso como dato curioso: El navegador muestra al lado del dominio de cualquier pagina un candado o al contrario dice "No seguro" demostrando en cuando se usa [HTTPS](https://www.cloudflare.com/img/learning/security/glossary/what-is-ssl/http-vs-https.svg "Imagen de HTTP y HTTPS") y cuando no. Pues no es recomendable para nada ingresar datos sensibles en una pagina que no utilice HTTPS.
+
+>Alerta de seguridad: Los navegadores modernos muestran alertas visuales cuando una página no es segura, protegiendo a los usuarios de compartir información en sitios no encriptados.
+
+<p style = "color:green;">Entonces yo como desarrollador cuando valla a crear productos web y voy a solicitar información sensible, el uso de HTTPS no es solo una recomendación, sino una necesidad.</p>
+
+Con cada avance tecnológico, la importancia de asegurar nuestros datos en línea se intensifica. Implementar protocolos como HTTPS no solo protege a los usuarios, sino que también eleva la confianza en las plataformas digitales.
+
+La diferencia clave entre HTTP y HTTPS radica en la seguridad. Mientras que HTTP permite una conexión simple y directa entre tu computadora y el servidor, HTTPS añade una capa de seguridad encriptando esta comunicación. Así, aunque alguien intercepte la conexión, no podrá entender la información sin la llave adecuada. Normalmente, utiliza SSL o TLS para cifrar toda la comunicación entre un cliente y un servidor. 
+
+Para usar HTTPS, los sitios web deben obtener un certificado SSL/TLS que de una autoridad de certificación, que verifica su identidad y proporciona una clave pública para el cifrado.
+
+>SSL:
+
+>TLS:
+
+---
+
+## Motores de Navegadores y Estándares Web
+
+Los estándares web son fundamentales para garantizar que la información y los servicios en internet sean accesibles y fácilmente utilizables por todas las personas, sin importar qué dispositivos o navegadores usen.
+
+HTML proporciona la estructura que nosotros ahora podemos ver en las paginas que en el pasado eran paginas estaticas de sólo texto, [hoy en día tenemos más estandares](https://static.platzi.com/media/user_upload/estandares%20web-4b3e23c2-1be9-454d-abe1-e361471a51ae.jpg "Imagen de varios estandares de la web") que nos ayudan a asegurar la calidad de la experiencia de los usuarios. Para que pueda existir un navegador, este debe tener un motor de navegación y anteriormente cada navegador tenia el suyo propio, sus propios problemas y sus propias soluciones.
+
+Hoy en día casi todos los navegadores utilizan el mismo motor para tener la misma interpretación esto permitiendonos poder crear un proyecto para todos los navegadores y poder añadir con facilidad un nuevo estandar. Y asi no tener que crear un proyecto por navegador
+
+Un motor de navegador, también conocido como motor de renderizado, es el componente principal de un navegador web que se encarga de interpretar y mostrar el contenido de las páginas web. Es como el "cerebro" del navegador, responsable de traducir el código HTML, CSS y JavaScript en lo que vemos en la pantalla.
+
+### El proceso de renderizado de una página web se puede dividir en varios pasos:
+
+1. Solicitud: El usuario introduce una dirección URL en la barra de direcciones del navegador. El navegador envía una solicitud HTTP al servidor web correspondiente para obtener la página web.
+
+2. Recepción de la respuesta: El servidor web envía una respuesta HTTP al navegador, que incluye el código HTML, CSS y JavaScript de la página web.
+
+3. Análisis del HTML: El motor de navegador analiza el código HTML de la página web para identificar la estructura de la página, como los elementos HTML (encabezados, párrafos, imágenes, etc.) y su organización.
+
+4. Construcción del árbol DOM: El motor de navegador crea un árbol DOM (Document Object Model), una representación en memoria de la estructura de la página web. El árbol DOM contiene información sobre cada elemento HTML y su relación con los demás.
+
+5. Análisis del CSS: El motor de navegador analiza el código CSS de la página web para determinar el estilo de cada elemento HTML. El CSS define propiedades como el color, el tamaño de la fuente, la alineación y otros aspectos visuales.
+
+6. Aplicación de estilos: El motor de navegador aplica los estilos CSS al árbol DOM para determinar la apariencia final de cada elemento HTML.
+
+7. Presentación en pantalla: El motor de navegador utiliza el árbol DOM y los estilos CSS para generar la representación final de la página web en la pantalla del usuario.
+
+8. Ejecución de JavaScript: Si la página web contiene JavaScript, el motor de navegador también lo ejecuta. JavaScript es un lenguaje de programación que permite agregar interactividad y dinamismo a las páginas web.
+
+>Lectura en un Web Site recomendada: https://www.firefox.com/es-ES/more/browser-history/?redirect_source=mozilla-org
+
+>¿Qué navegadores usan Chromium?: Brave, Edge, Chrome.
+
+>¿Cómo se llama el motor de navegador que usa Safari?: Webkit.
+
+---
+
+<!-- Seccion HTML, CSS, JS -->
+
+## Fundamentos de HTML, CSS y JavaScript para Desarrollo Web
+
+Conocer los estándares web es esencial para todo desarrollador que desee crear productos innovadores y útiles. Tres grandes protagonistas en este universo son HTML, CSS y JavaScript. Cada uno aporta algo único al desarrollo web, conformando un engranaje perfecto que nos permite ofrecer experiencias interactivas y visualmente atractivas.
+
+1. HTML (HyperText Markup Language): hoy en día tuvo la evolución llamada HTML5 añadiendo nuevas funciones que nos ayudan a nosotros los desarrolladores a crear la estructura base como el texto y las imagenes en una pagina. Sólo la arquitectura de la información.
+
+>Texto fondo blanco y de color negro con un tamaño predeterminado
+
+2. CSS (Cascading Style Sheets): nos ayuda a construir los estilos cambiando tamaño, color, formas, etc...
+
+>Texto fondo negro, letra color verde, con un font-family consola y un font-size grande, etc...
+
+3. Javascript: Interacción con la pagina como suscribirse a un newspaper, hoy en día un producto web no es solamente para leer, es para interactuar.
+
+>Que ese texto sirva de boton y tenga alguna funcionalidad agregandole los servicios que necesite el usuario.
+
+<div style = "text-align:center;">
+<img src="https://desarrolloweb.dlsi.ua.es/cursos/2012/nuevos-estandares-desarrollo-sitios-web/images/tecnologias-web-actuales.png" width="450px" height="300px">
+</div>
+
+imagen tomada de: https://desarrolloweb.dlsi.ua.es/cursos/2012/nuevos-estandares-desarrollo-sitios-web/desarrollo-web-actual
+
+>Lectura Recomendada: https://developer.mozilla.org/es/docs/Learn_web_development/Getting_started/Web_standards/The_web_standards_model
+
+---
+
+## Introducción a WebAssembly: El nuevo estándar web
+
+Este es un nuevo estandar web que surgió en diciembre del 2019 siendo decidido por la W3C y las instituciones que rodean a esta a qué esto es un estandar. 
+
+>Todos los navegadores que lo integren deben entenderlo como un lenguaje nativo.
+
+El navegador anteriormente sólo entendía JAVASCRIPT, pero ahora ya entiende otro nuevo lenguaje de programación llamado WEB ASSEMBLY entendiendose como un lenguaje de bajo nivel y lo que hace WEB ASSEMBLY es copilar todo el codigo y traducirlo a un lenguaje que el navegador sí va a entender.
+
+Por esto mismo ahora podemos programar en C o en RUST mediante [WEB ASSEMBLY](https://storage.googleapis.com/blog-images-backup/1*4ZMcCrF95AUvVzJ4S6Lo-g.png "Imagen WEB ASSEMBLY + HTML, CSS, JS"), esto abre las puertas para desarrollar webs con logicas mas complejas a lo que estabamos acostumbrados. **Lo que hace es compilar los lenguajes de bajo nivel como C, C++, Rust y otros más a un formato binario**. Este formato sera analizado por una maquina virtual (programa que actua como una computadora fisica) en el navegador web y ya entonces modificar la web sin hacerla tan pesada por la nueva logica integrada.
+
+---
+
+## Diseño Web Multiplataforma: Mobile First y su Evolución
+
+Actualmente hay más de 4.000 millones de dispositivos conectados a internet = Más de la mitad de la humanidad.
+
+Anteriormente sólo se tenia que programar y diseñar para la versión desktop pues el consumo de información sólo era mediante cierto tipo de computador y a esto se le conoce como **Desktop only**, pero hoy en día tenemos diferentes dispositivos de diferentes formatos y tamaños.
+
+Como desde un reloj inteligente, una laptob, pc de escritorio, un celular, desde un carro, por lo que los tamaños y formatos cambian demasiados asi que si mi web site esta sólo en desktop only y un usuario valla a utilizar un smartphone para mirar esto, tendrá muy mala experiencia de usuario.
+
+Ahora tenemos que programar el diseño para dispositivos pequeños primero y de ahí empezar a hacer la experiencia de dispositivos grandes como un PC = **Mobile First** por lo que debe iniciar con el dispositio más chico y terminar con el dispositivo más grande.
+
+En la actualidad, la web ha experimentado una evolución significativa y se ha convertido en una parte integral de nuestras vidas: Web interactiva y rica en contenido, Dispositivos móviles y web responsive, Contenido multimedia y streaming, Redes sociales y colaboración, Inteligencia artificial y asistentes virtuales, Privacidad y seguridad, Web semántica y datos enlazados.
+
+---
+
+
+## Internet de las Cosas IoT y su Impacto en la Vida Cotidiana
+
+Internet Of Things: Se refiere a la interconexión de dispositivos físicos que van más allá de las computadoras y los teléfonos inteligentes, y que están equipados con sensores y capacidad de comunicación. Es un ecosistema de dispositivos conectados a internet como un carro inteligente, un reloj inteligente, un alexa, sensores en ciudades inteligentes, dispositivos en todo el mundo que estan levantando datos y que estan conectados a internet.
+
+Machine Learning: Hay gente que le tiene miedo a este tema, cuando deberia ser al contrario ya que antes ayuda a mejorar nuestra calidad de vida... Es una rama de la inteligencia artificial la cual se enfoca en desarrollar algoritmos y modelos que le permitan a las máquinas aprender y mejorar de manera automática.
+
+>En la web moderna, el aprendizaje automático se utiliza en diversas aplicaciones, como la personalización de contenidos, la detección de fraudes, el reconocimiento de voz y rostro, la traducción automática y la recomendación de productos.
+
+>Un auto inteligente puede ayudar a bajar la taza de accidentabilidad.
+
+>La resolución de preguntas es más practica con chat gpt.
+
+>Esta la posibilidad de crear robots para llevarlos en situaciones de riesgo como un incendio y no tener que arriesgar vida humana.
+
+5G: Se refiere a la quinta generación de redes móviles que abre nuevas posibilidades en términos de conectividad masiva, velocidad, ancho de banda y capacidad de respuesta a una latencia ultrabaja y aplicaciones de realidad virtual (RV) y aumentada (RA). Simplemente más velocidad de internet, por lo que no tienes que esperar a que cargue un video una vez le das a verlo.
+
+Inteligencia Artificial: Es la capacidad que tienen las máquinas de simular el comportamiento humano y realizar tareas que requieren del conocimiento humano.
+
+---
