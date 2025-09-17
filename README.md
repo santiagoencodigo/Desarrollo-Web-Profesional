@@ -1,6 +1,6 @@
 <!-- Introducción al repositorio -->
 
-<div style="text-align:center;"><h1>Introducción a la Web: Historia y Funcionamiento de Internet</h1></div>
+<div style="text-align:center;"><h1 id="main-title">Introducción a la Web: Historia y Funcionamiento de Internet</h1></div>
 
 Los seres humanos estamos cada vez más inmersos en la tecnología, utilizándola de manera cotidiana en múltiples actividades. Sin embargo, en la medida en que nos habituamos a ciertas herramientas, solemos pasar por alto su esencia y los principios que hacen posible su funcionamiento.
 
@@ -191,13 +191,13 @@ Este sistema se usa en pantallas de dispositivos electrónicos, como televisores
 
 >¿Cómo le damos numero a los colores para que se pueda traducir a codigo binario?
 
-**CODIGO RGB**: Principalmente es la combinación de tres colores: *Rojo*, *Verde* y el *azul*.
+**CODIGO RGB__: Principalmente es la combinación de tres colores: *Rojo*, *Verde* y el *azul*.
 
 >¿Cómo se convierte este color en un numero?
 
 >¿Cómo se pasa este numero a Código Binario?
 
-A los tres colores principales se les toma como tonos representados desde el numero 1 al 255, cada color RGB viene con tres unidades **(255, 0, 155)** por lo que: Rojo = (255, 0, 0) - Verde (0, 255, 0) - Azul (0, 0, 255) y de acuerdo a las tonalidades de cada uno de estos tres colores, vamos a tener un color en especifico. Para un color negro se utiliza (0, 0, 0) y el blanco al contrario se utiliza con (255, 255, 255) y ese byte, pertenecera al color de un pixel, y <u>la combinación de millones de pixeles nos va a dar practicamente la traducción de una imagen.</u>
+A los tres colores principales se les toma como tonos representados desde el numero 1 al 255, cada color RGB viene con tres unidades **(255, 0, 155)__ por lo que: Rojo = (255, 0, 0) - Verde (0, 255, 0) - Azul (0, 0, 255) y de acuerdo a las tonalidades de cada uno de estos tres colores, vamos a tener un color en especifico. Para un color negro se utiliza (0, 0, 0) y el blanco al contrario se utiliza con (255, 255, 255) y ese byte, pertenecera al color de un pixel, y <u>la combinación de millones de pixeles nos va a dar practicamente la traducción de una imagen.</u>
 
 #### RGB = RED, GREEN, BLUE
 
@@ -425,13 +425,13 @@ Al ser un proyecto grande [ARPANET](https://es.wikipedia.org/wiki/ARPANET "Wikip
 
 >¿Cómo Funciona un ISP?: Los ISP están conectados a una o más líneas de internet de alta velocidad. Los ISP más grandes tienen sus propias líneas arrendadas de alta velocidad, por lo que dependen menos de los servicios de telecomunicaciones y pueden brindar un mejor servicio a sus clientes.
 
->* Empresas: Claro, Movistar, Telmex y cualquier empresa por la que se le pague por internet. Estas empresas tuvieron que agregar infraestructura para el internet y poder agregar conectividad a la población.
+> Empresas: Claro, Movistar, Telmex y cualquier empresa por la que se le pague por internet. Estas empresas tuvieron que agregar infraestructura para el internet y poder agregar conectividad a la población.
 
->* Cable Coaxial: Utiliza los cables coaxiales de televisión por cable para ofrecer acceso a Internet.
+> Cable Coaxial: Utiliza los cables coaxiales de televisión por cable para ofrecer acceso a Internet.
 
->* Fibra Optica: Utiliza cables de fibra óptica para ofrecer acceso a Internet de alta velocidad.
+> Fibra Optica: Utiliza cables de fibra óptica para ofrecer acceso a Internet de alta velocidad.
 
->* Satélite: Utiliza satélites para ofrecer acceso a Internet en áreas rurales donde no hay otras opciones disponibles.
+> Satélite: Utiliza satélites para ofrecer acceso a Internet en áreas rurales donde no hay otras opciones disponibles.
 
 Con la irrupción de los ISP, la forma en la que el público general accedía a Internet cambió drásticamente. Hoy, gracias a los ISP, millones de personas en todo el mundo tienen acceso a Internet desde sus hogares, escuelas, y lugares de trabajo. La facilidad de conexión ha permitido un flujo constante de información y comunicación sin precedentes.
 
@@ -443,9 +443,9 @@ Arpanet dejo de existir y el gobierno le da el proyecto a empresas para que ello
 
 Con la transición de ARPANET a una infraestructura controlada por empresas privadas, Internet se abrió para permitir conexiones más personalizadas. Ahora, en vez de conectar a pocos puntos centrales de información, cualquier persona con acceso a Internet puede comunicarse con quien desee, en cualquier parte del mundo.
 
-* Descentralización: La construcción de redes de cables permitió que el acceso a Internet se volviera más descentralizado y accesible a nivel global.
++ Descentralización: La construcción de redes de cables permitió que el acceso a Internet se volviera más descentralizado y accesible a nivel global.
 
-* Masificación: Los protocolos establecidos no solo facilitaron esta conexión, sino que dieron pie al desarrollo posterior de la web, que es un tema paralelo pero separado de la tecnología fundamental del Internet.
++ Masificación: Los protocolos establecidos no solo facilitaron esta conexión, sino que dieron pie al desarrollo posterior de la web, que es un tema paralelo pero separado de la tecnología fundamental del Internet.
 
 >Podemos pensar de internet como la red de cables que interconectan las computadoras
 
@@ -453,9 +453,9 @@ Entonces empieza a haber una dificultad para enviar o recibir información de es
 
 >IP = Internet Protocol Address  -  el DNS = Domain Name System
 
-*Al haber muchos lugares digitales posibles para poder ir o acceder: se empieza a dificultar recordar todas las IP ADDRESS* por lo que:
+*Al haber muchos lugares digitales posibles para poder ir o acceder: se empieza a dificultar recordar todas las IP ADDRESS_ por lo que:
 
-La IP es un numero como: 216.58.214.174 y el DNS es como ponerle una mascara a ese numero por lo que: **216.58.214.174 = google.com** añadiendole una palabra a ese numero para que nosotros podamos entender.
+La IP es un numero como: 216.58.214.174 y el DNS es como ponerle una mascara a ese numero por lo que: __216.58.214.174 = google.com** añadiendole una palabra a ese numero para que nosotros podamos entender.
 
 * Identificación única: Cada computadora o dispositivo conectado en la red tiene una dirección IP única, que ayuda a dirigir la información y asegurar que llegue a su destino correcto.
 
@@ -483,17 +483,17 @@ El programo 3 Bases de la web como la conocemos hoy en día:
 
 1. El programo el lenguaje HTML, un lenguaje de marcado para darle estructura a la información 
 
-2. URL = Uniform Resource Locator que es una dirección unica que se utiliza para identificar cada recurso en la web siendo la combinación de la IP y el DNS 
+2. URL = Uniform Resource Locator que es una dirección unica que se utiliza para identificar cada recurso en la web siendo la combinación de la IP y el DNS
 
->Por lo que ingresamos a un navegador que pide una URL que contiene el DNS para descifrarlo y mirar la IP para poderse conectar a un servidor 
+>Por lo que ingresamos a un navegador que pide una URL que contiene el DNS para descifrarlo y mirar la IP para poderse conectar a un servidor
 
 3. HTTP = Hypertext Transfer Protocol. Permite la recuperación de recursos vinculados de toda la web 
 
 >Una vez yo ponga la URL en el navegador se va a hacer una petición via HTTP a un servidor u otra computadora para que me pueda enviar la información que estoy buscando
 
-**La primera pagina que se programo era el documento de postulación de Tim Berners - Lee con su propuesta de [WORLD WIDE WEB](https://i.insider.com/4e0b8f4dccd1d54255060000?width=900&format=jpeg&auto=webp "La primera pagina del mundo")** 
+**La primera pagina que se programo era el documento de postulación de Tim Berners - Lee con su propuesta de [WORLD WIDE WEB](https://i.insider.com/4e0b8f4dccd1d54255060000?width=900&format=jpeg&auto=webp "La primera pagina del mundo")__
 
->Web Site recomendada: https://info.cern.ch/hypertext/WWW/TheProject.html
+>Web Site recomendada: <https://info.cern.ch/hypertext/WWW/TheProject.html>
 
 Ademas de programar estas 3 bases de la web, realizo el primer navegador y el primer servidor.
 
@@ -509,7 +509,7 @@ La experiencia era poco amigable, ya que requería la intervención de otra pers
 
 Estas herramientas han sido los cimientos del actual ecosistema digital, a partir del Navegador que realizó Tim Berners Lee (WorldWideWeb), [empezaron a surgir más navegadores](https://static.platzi.com/media/user_upload/NAVEGADORES%20WEB-e56b5c19-d09c-4e22-8863-d19fba6251a5.jpg "Imagen Historia de los Navegadores") por lo que la experiencia de la web comenzó a mejorar mucho a beneficio de los usuarios transformándose en portales que maximizaron la experiencia del usuario y permitieron un consumo de información más interactivo.
 
-**Despues de WorldWideWeb más tarde renombrado como Nexus:**
+**Despues de WorldWideWeb más tarde renombrado como Nexus:__
 
 NCSA Mosaic (1993): Desarrollado por el National Center for Supercomputing Applications (NCSA), que gracias a este, ahora tenemos imagenes visuales y que no sea sólo texto. Demostrandole a los demas navegadores que tambien pueden aportar valor.
 
@@ -761,3 +761,157 @@ Machine Learning: Hay gente que le tiene miedo a este tema, cuando deberia ser a
 Inteligencia Artificial: Es la capacidad que tienen las máquinas de simular el comportamiento humano y realizar tareas que requieren del conocimiento humano.
 
 ---
+
+## Funcionamiento del navegador y el Critical Render Path
+
+Para la carrera de desarrollo es fundamental comprender el funcionamiento de un navegador web pues es esencial para cualquier desarrollador que busca crear experiencias exitosas en la web. Poder hacer productos funcionales en la web y para esto debemos entender:
+
+[Todo inicia con una petición HTTP](https://2.bp.blogspot.com/-uOlmIphvgkY/XAdXcA7H-aI/AAAAAAAAABw/37VkPswGS9cJzs_zy3eJdvJOlrliQSSbwCEwYBhgL/s1600/imagen%2Bfuncion.jpg "Imagen explicativa sobre petición HTTP") que es la forma en la que se conecta mi computadora con un servidor para poder obtener algo. Como que quiero ver algo en Youtube.com y necesito conectarme con el servidor de ese proyecto para poder realizar la interacción con eso. 
+
+Lleva a cabo procesos complejos para interpretar y renderizar el contenido que vemos al cargar una página
+
+Cuando Youtube.com llega a mi navegador, tiene que haber una interpretación para que pueda entregarme practicamente Youtube.com para esto tienen que pasar unos pasos --> A esto se le llama __Critical Render Path__:
+
+<div style="border:1px solid white; margin:1rem 0px 1rem 0px; padding:2rem;">
+
+    1.DOM: Se crea un árbol de nodos a partir del HTML. Ejemplo: al ingresar "Youtube.com", el navegador interpreta el HTML  para crear una estructura jerárquica que represente diferentes elementos y contenido.
+
+    2.CCSOM: Simultáneamente, se genera el árbol de estilos a partir de los archivos CSS. Ejemplo: los estilos se aplican a los elementos del DOM.
+
+    3.JS (Mientras estos procesos suceden, desde aqui es que inicia la interpretación de Javascript) Entre el CSSOM y el Render Tree, el navegador puede necesitar ejecutar scripts de JavaScript que pueden modificar contenido antes de proceder.
+
+    4.RENDER TREE: Combina el DOM y el CSSOM para definir qué se muestra y que define qué elementos aparecerán en la pantalla y cómo estarán estilizados.
+
+    5.LAYOUT: Determina la posición y tamaño de cada elemento. Ejemplo: el navegador calcula dónde y cómo dibujar cada parte de la página.
+
+    6.PAINT: Se dibuja el contenido en la pantalla. Ejemplo: los píxeles se colorean en función del render tree.
+
+    Estos pasos son cruciales para entender cómo interactúa el navegador con los archivos HTML, CSS y JavaScript para presentar una página web.
+
+</div>
+
+> Comprender el Critical Render Path no solo ayuda a mejorar nuestras habilidades de desarrollo, sino que también optimiza el rendimiento de los proyectos web: Teniendo en cuenta la Optimización del CSS y JavaScript, Uso eficiente de JavaScript, y pruebas de rendimiento con el uso de herramientas como Google Lighthouse. Se podrá identificar cuellos de botella en el renderizado de tus sitios web.
+
+---
+
+## Introducción al DOM: Estructura y Función en HTML
+
+DOM = Document Object Model: Es la forma del como el navegador va a interpretar el HTML despues de leer el HTTP Request, es como un arbol de NODOS/ELEMENTOS que tengamos en nuestro archivo de HTML, que este lenguaje de hipertexto trabaja por etiquetas (Elementos) que vamos a utilizar para darle una estructura a la información ya sea texto, imagenes, videos.
+
+```
+Es una interfaz de programación que comprende páginas web (nodos) que son etiquetas HTML como <html>, <meta>, <title>, <body> y <footer>, semánticas y no semánticas y otros objetos de nodos. El DOM, que es un estándar W3, representa las páginas web como una estructura de nodos en forma de árbol, conocida como documentos.
+```
+
+Cuando el navegador empieza a interpretar el HTML, genera un "Arbol" que es el DOM siendo el mapeo de elementos que tenemos en nuestro archivo HTML, el "Arbol" es como una estructura jerárquica, donde cada elemento web que compone el documento se puede considerar como un nodo, es decir, las etiquetas del elemento, el atributo asignado al elemento, el comentario, el contenido del texto y el documento también es un nodo. 
+
+Como desarrollador generalmente la forma de programación que se emplea es [orientada a objetos](https://static.platzi.com/media/user_upload/%C2%BFQu%C3%A9%20es%20la%20Programaci%C3%B3n%20orientada%20a%20objetos_-a1e5f7f6-c5be-4751-8bba-5cdcccf0b572.jpg "Explicación POO")
+
+Saber sobre manipulación del DOM es importante ya que permite modificar la estructura, el contenido y el estilo de los documentos HTML usando JavaScript.
+
+    1. Permite crear páginas web dinámicas e interactivas, que responden a los eventos y acciones de los usuarios.
+
+    2. Permite acceder y modificar los elementos HTML usando métodos y propiedades del DOM, como getElementById, querySelector, innerHTML, appendChild, etc.
+
+    3. Permite aplicar estilos CSS a los elementos HTML usando propiedades del DOM, como className, style, setAttribute, etc.
+
+    4. Te permite crear y eliminar elementos HTML de forma dinámica usando métodos del DOM, como createElement, removeChild, replaceChild, etc.
+
+<p style="color:green;">DOM es una herramienta indispensable que permite manipular, modificar y actualizar el contenido y la estructura de las páginas en tiempo real.</p>
+
+<div style = "text-align:center;">
+<img src="https://www.lambdatest.com/blog/wp-content/uploads/2023/01/image18-27.png" width="450px" height="300px">
+</div>
+
+>Lectura Recomendada: <https://www.lambdatest.com/blog/document-object-model>
+
+---
+
+## Modelo de Objetos CSS: Interpretación y Generación de Árboles de Estilo
+
+CSSOM = CSS OBJECT MODEL
+
+El navegador va a leer el documento de CSS  (Documento de Estilos), es un proceso preciso que ocurre casi simultáneamente con la creación del DOM despues de leer el HTML, se realiza la petición del CSS el DOM lo interpreta y lo empieza a combinar los nodos teniendo **otro ARBOL__ de todos los elementos que estaran ligados al HTML
+
+>El motor de renderizado del navegador realiza un arbol tanto para el HTML como para el CSS
+
+Finalmente llega el Mapeo y asociación: Durante la construcción del modelo, se mapean los estilos CSS a los nodos adecuados del DOM. Si un nodo en el DOM no tiene estilos específicos en el CSS, simplemente se mantiene sin cambios en el CSSOM.
+
+---
+
+## Renderizado de Árboles DOM y CSSOM en Navegadores
+
+<p style = "color:pink; text-align:center;">Render Tree = DOM + CSSOM</p>
+
+El navegador es capaz de transformar el código HTML y CSS en una representación visual que todos podemos ver y entender en la web. Este proceso complejo involucra la creación de estructuras denominadas DOM (Document Object Model) y CSSOM (CSS Object Model).
+
+Cuando el navegador combina el DOM y el CSSOM, formamos el RenderTree. Este árbol ayuda a entender qué se mostrará visualmente y cómo. El RenderTree es crucial porque:
+
++ Incorpora elementos del DOM con sus respectivos estilos CSS.
+
++ Ayuda al navegador a entender la jerarquía de los estilos CSS.
+
++ Proporciona una representación visual previa a lo que se verá directamente en la página web.
+
+La jerarquía de estilos es esencial para la correcta renderización de una página web. Por ejemplo:
+
+Estilos Heredados: Algunos estilos, como el color, pueden ser aplicados desde un elemento padre a sus hijos. Si tenemos una etiqueta Main con un color específico, todas las etiquetas de texto dentro de Main lo heredarán, a menos que se especifique otra cosa.
+
+Estilos Específicos: Elementos dentro de un mismo padre pueden tener estilos diferentes. Un h2 puede tener un tamaño de fuente distinto al de un párrafo (p), aunque ambos estén bajo el mismo elemento padre.
+
+---
+
+## Generación de Layout en HTML y CSS
+
+Al fusionarse el DOM y el CSSOM y generar un mapa de bits, empieza a generar algo llamado LAYOUT que es un MAPEO con ciertos estilos que es el cómo estan posicionadas "las cajas" que son los nodos o contenedores, o como tal tambien conocido como elementos padre, de los elementos del HTML y se les da una posición de acuerdo al estilo.
+
+Es el proceso que determina la posición y el tamaño de cada elemento en una página web. Este le permite al navegador dibujar los elementos en pantalla de forma correcta. El layout utiliza la información del Rendering Tree para determinar el diseño siguiendo estos pasos:
+
++ El navegador asigna tamaño a cada elemento en el Rendering Tree.
+
++ El navegador determina la posición de los elementos con relación a sus elementos padre y hermanos.
+
++ Se aplican reglas de posicionamiento y escalado para determinar la posición final en pantalla.
+
+**Saca el estilo final del proyecto.__
+
+>Cuando navegamos por internet, detrás de cada página web hay un intrincado proceso de construcción. Comprender cómo se produce esto puede darnos una nueva apreciación y mejorar nuestras habilidades de desarrollo web.
+
+>Aclaracion: Sólo realiza la posición mas no los colores ni estilos 100%
+
+---
+
+## Renderizado y Estilización de Páginas Web
+
+**PAINT__: Ya una vez generado el LAYOUT, tiene que inyectarle a cada "caja" un estilo y la información que contiene, texto e imagenes y que visualmente quede como lo dice el documento de estilos.
+
+Es el proceso en el que el navegador dibuja los elementos de la página en pantalla. Aquí, el navegador dibuja cada elemento en una capa de pintura independiente, luego se combinan para crear una sola imagen final que se muestra en pantalla usando el DOM, CSSOM, Render Tree y layout que creó previamente.
+
+---
+
+## Interpretación de JavaScript por el Navegador
+
+Ya siendo la ultima fase en donde vemos como el JAVASCRIPT interactua con nuestro navegador, queremos que la maquina entienda que es lo que queramos ver. Para esto se utiliza **Javascript Engine** que es el interprete de Javascript. 
+
+Nosotros utilizamos nuestro lenguaje para poder escribir en JS, pero recordemos que el lenguaje humano no es el lenguaje que utilizan las maquinas.
+
+[El motor de javascript](https://miro.medium.com/v2/resize:fit:1100/format:webp/0*HORXUXQGF32LxnaL.png) se encarga de la traducción de Javascript a MACHINECODE:
+
+1. Lee el documento JS
+
+2. Genera un arbol muy similar al DOM, pero de JS. (Funciones, Variables, Constantes)
+
+3. Va a interpretar que va a hacer la función.
+
+4. Si es codigo muy pesado, lo filtrara por Optimising Compiler.
+
+5. El navegador le envia el codigo a la computadora y asi entonces permite al usuario interactuar con el producto.
+
+>Este subsistema analiza el código en JavaScript y lo traduce a lenguaje máquina. 
+
+## Conclusión
+
+Hemos comprendido cómo los computadores se comunican con nosotros y cómo los humanos interactuamos con estos dispositivos. Ahora tenemos una visión más amplia sobre el funcionamiento de internet y la web, abarcando desde los protocolos hasta el procesamiento del navegador, incluyendo DOM, CSSOM y el motor de JavaScript.
+
+<div style="margin-top:2rem; background-color:green; display:flex; justify-content:center; border-radius:10px; padding:2rem;">
+<a href="#main-title" style="border:1px solid black; padding:1rem; color:black; background-color:white; border-radius:10px;">Gracias por leer.</a>
+</div>
