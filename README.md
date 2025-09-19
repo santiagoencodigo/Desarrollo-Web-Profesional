@@ -24,12 +24,12 @@ Este repositorio tiene como propósito:
 
 + Fundamentos de ingeniería de software. -->
 
-+ HTML y CSS (básico, práctico y definitivo): [Documentación](https://github.com/santiagoencodigo/Desarrollo-Web-Profesional/blob/main/Docs/2.%20HTML%20y%20CSS.md "Apuntes HTML y CSS by Santiagoencodigo")   -   [Proyecto]( "Proyecto HTML y CSS by Santiagoencodigo")
++ HTML y CSS (básico, práctico y definitivo): [Documentación](https://github.com/santiagoencodigo/Desarrollo-Web-Profesional/blob/main/Docs/2.%20HTML%20y%20CSS.md "Apuntes HTML y CSS by Santiagoencodigo")   -   [Proyecto](https://santiagoencodigo.github.io/Desarrollo-Web-Profesional/Pages/02.%20HTML%20y%20CSS/index.html "Proyecto HTML y CSS by Santiagoencodigo")
 
-<!-- + Fundamentos de JavaScript.
+<!-- + Fundamentos de JavaScript. -->
 
-+ Programación básica.
++ [Programación básica.](https://santiagoencodigo.github.io/Desarrollo-Web-Profesional/Pages/01.%20Programacion%20Basica/mokepon.html "Page Mokepon")
 
-+ Control de versiones con Git y GitHub. -->
+<!-- + Control de versiones con Git y GitHub. -->
 
 Este repositorio es parte de mi proceso de aprendizaje continuo, con la visión de construir proyectos reales que aporten valor y fortalezcan mis habilidades como desarrollador.
