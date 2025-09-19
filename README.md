@@ -1,5 +1,7 @@
 <div style="text-align:center;"><h1 id="main-title">Fundamentos del Desarrollo Web Profesional</h1></div>
 
+<a style="" href="https://santiagoencodigo.github.io/Desarrollo-Web-Profesional/">Haz click aqui para ingresar al MAIN page de este repositorio.</a>
+
 Bienvenido a este repositorio, un espacio dedicado a documentar y aplicar mis aprendizajes en el camino hacia el desarrollo web profesional.
 
 Aquí encontrarás resúmenes, apuntes y prácticas de cursos fundamentales que abarcan desde los conceptos básicos de informática y el funcionamiento de Internet, hasta el uso de herramientas esenciales como Terminal, Git y GitHub, y tecnologías clave para la web: HTML, CSS y JavaScript.
@@ -22,7 +24,7 @@ Este repositorio tiene como propósito:
 
 + Fundamentos de ingeniería de software. -->
 
-+ HTML y CSS (básico, práctico y definitivo).
++ HTML y CSS (básico, práctico y definitivo): [Documentación](https://github.com/santiagoencodigo/Desarrollo-Web-Profesional/blob/main/Docs/2.%20HTML%20y%20CSS.md "Apuntes HTML y CSS by Santiagoencodigo")   -   [Proyecto]( "Proyecto HTML y CSS by Santiagoencodigo")
 
 <!-- + Fundamentos de JavaScript.
 
