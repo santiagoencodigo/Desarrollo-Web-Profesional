@@ -12,22 +12,22 @@ Este repositorio tiene como propósito:
 
 + Crear una base sólida para proyectos más avanzados.
 
-Los contenidos que se desarrollan aquí están organizados en torno a los siguientes temas:
+**Los contenidos que se desarrollan aquí están organizados en torno a los siguientes temas:**
 
-+ Historia y funcionamiento de Internet.
++ [Historia y funcionamiento de Internet.](https://github.com/santiagoencodigo/Desarrollo-Web-Profesional/blob/main/Docs/1.Introducci%C3%B3n%20a%20la%20Web%20Historia%20y%20Funcionamiento%20de%20Internet.md "Documento Historia y funcionamiento de Internet.")
 
 <!-- + Computadores e informática básica.
 
 + Terminal y línea de comandos.
 
-+ Fundamentos de ingeniería de software.
++ Fundamentos de ingeniería de software. -->
 
 + HTML y CSS (básico, práctico y definitivo).
 
-+ Fundamentos de JavaScript. -->
+<!-- + Fundamentos de JavaScript.
 
 + Programación básica.
 
-<!-- + Control de versiones con Git y GitHub. -->
++ Control de versiones con Git y GitHub. -->
 
 Este repositorio es parte de mi proceso de aprendizaje continuo, con la visión de construir proyectos reales que aporten valor y fortalezcan mis habilidades como desarrollador.
