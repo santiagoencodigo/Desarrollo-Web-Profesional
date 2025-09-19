@@ -1,6 +1,6 @@
 <div style="text-align:center;"><h1 id="main-title">Fundamentos del Desarrollo Web Profesional</h1></div>
 
-<a style="" href="https://santiagoencodigo.github.io/Desarrollo-Web-Profesional/">Haz click aqui para ingresar al MAIN page de este repositorio.</a>
+<a style="color:green;"  href="https://santiagoencodigo.github.io/Desarrollo-Web-Profesional/" target="_blank">Haz click aqui para ingresar al MAIN page de este repositorio.</a>
 
 Bienvenido a este repositorio, un espacio dedicado a documentar y aplicar mis aprendizajes en el camino hacia el desarrollo web profesional.
 
