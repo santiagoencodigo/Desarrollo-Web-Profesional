@@ -2,7 +2,7 @@
     Construye un clon de Google usando HTML y CSS. Aprende a estructurar
     y estilizar un sitio web completo, desde el header hasta el footer, 
     usando técnicas de maquetación como Flexbox y Grid. Ideal para afianzar 
-    tus fundamentos. 
+    fundamentos. 
 -->
 
 <!DOCTYPE html>
@@ -51,7 +51,7 @@
         -->
 
         <nav>
-            <ul>
+            <ul class="nav-right-section"> <!-- La clase permite aplicar estilos a varios elementos a la vez y reutilizarlos en el proyecto -->
                     <!-- <ul> es una etiqueta contenedora de listas desorganizadas. -->
                     <!-- <li> "list items", la forma de escribirlo aqui es li*4 -->
                     <!-- <a> "Ancla" se compone de un href = referencia -->
@@ -61,25 +61,64 @@
                 <li>
                     <a href="">Imágenes</a>
                 </li>
-                <li>
-                    <a href="">Icon</a>
+                <li class="menu-icon">
+                    <a href=""></a>
                 </li>
                 <li>
-                    <a href="">Photo</a>
+                    <a href="">
+                        <img src="https://lh3.googleusercontent.com/ogw/AF2bZyjEz4KX3ViCDAGNnBgbTjI5YOAkN_g94FlSsXlTIXXvZ_U=s64-c-mo" alt="">
+                    </a>
                 </li>
             </ul>
         </nav>
     </header>
-    <ul>
-        <li>
-            <a href="https://github.com/santiagoencodigo/Desarrollo-Web-Profesional/blob/main/Docs/2.%20HTML%20y%20CSS.md" target="_blank">
-                Haz Click Aqui Para Ver La Documentación De Este Proyecto</a>
-        </li>
-        
-        <li>
-            <a href="../../index.html">Volver</a>
-        </li>
-    </ul>
-    
+
+    <main>
+        <!-- Esta etiqueta es para poner todo el contenido principal de nuestro proyecto.
+        Va despues del Header y antes del Footer, usualmente se separa con sections
+        -->
+        <section class="main-logo">
+            <img src="https://www.google.com/logos/doodles/2023/teachers-day-2023-nov-24-6753651837109973-2xa.gif" 
+            alt="Doodle Google">
+        </section>
+        <section class="main-input">
+            <div class="main-input-container"> <!-- Me permite separar los elementos dentro del input el cual son las imagenes -->
+                <span class="search-icon"> 
+
+                </span>
+                <input type="text">
+                <a class="micro-icon" href=""></a>
+            </div>
+        </section>
+        <section class="main-buttons">
+            <div class=""><button>Buscar con Google</button></div>
+            <div class=""><button>Me siento con Suerte</button></div>
+        </section>
+    </main>
+
+<!-- Es todo lo que esta debajo o al fin de la pagina, generalmente se utiliza para dejar vinculos. -->
+
+    <footer>    
+        <ul class="footer-left">
+            <li><a href="" target="_blank">Publicidad</a></li>
+            <li><a href="" target="_blank">Negocios</a></li>
+            <li><a href="" target="_blank">Acerca de</a></li>
+            <li><a href="" target="_blank">Cómo funciona la busqueda</a></li>
+        </ul>
+
+        <ul class="footer-center">
+            <li>
+                <a href="https://github.com/santiagoencodigo/Desarrollo-Web-Profesional/blob/main/Docs/2.%20HTML%20y%20CSS.md" target="_blank">Documentación<a>      
+            </li>
+            
+            <li><a href="../../index.html">Home</a></li>
+        </ul>
+
+        <ul class="footer-right">
+            <li><a href="" target="_blank">Privacidad</a></li>
+            <li><a href="" target="_blank">Condiciones</a></li>
+            <li><a href="" target="_blank">Configuración</a></li>
+        </ul>
+    </footer>
 </body>
 </html>
