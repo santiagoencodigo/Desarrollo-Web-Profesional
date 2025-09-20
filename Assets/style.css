@@ -37,7 +37,7 @@ p{
 
 a{
     color:black;
-    display:block;
+    /* display:block; */
     text-decoration:none;
 }
 
