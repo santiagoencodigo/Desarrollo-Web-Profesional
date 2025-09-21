@@ -1,6 +1,6 @@
 <div style="text-align:center;"><h1 id="main-title">Fundamentos del Desarrollo Web Profesional</h1></div>
 
-<a style="color:green;"  href="https://santiagoencodigo.github.io/Desarrollo-Web-Profesional/" target="_blank">Haz click aqui para ingresar al MAIN page de este repositorio.</a>
+* <a href="https://santiagoencodigo.github.io/Desarrollo-Web-Profesional/" target="_blank">Haz click aqui para ingresar al MAIN page de este repositorio.</a>
 
 Bienvenido a este repositorio, un espacio dedicado a documentar y aplicar mis aprendizajes en el camino hacia el desarrollo web profesional.
 
@@ -14,25 +14,57 @@ Este repositorio tiene como propósito:
 
 + Crear una base sólida para proyectos más avanzados.
 
-**Los contenidos que se desarrollan aquí están organizados en torno a los siguientes temas:**
+---
 
-+ [Historia y funcionamiento de Internet.](https://github.com/santiagoencodigo/Desarrollo-Web-Profesional/blob/main/Docs/1.Introducci%C3%B3n%20a%20la%20Web%20Historia%20y%20Funcionamiento%20de%20Internet.md "Documento Historia y funcionamiento de Internet.")
 
-<!-- + Computadores e informática básica.
+# Los contenidos que se desarrollan aquí están organizados en torno a los siguientes temas:
 
-+ Terminal y línea de comandos.
+## [Historia y funcionamiento de Internet.](https://github.com/santiagoencodigo/Desarrollo-Web-Profesional/blob/main/Docs/1.%20Introducci%C3%B3n%20a%20la%20Web%20Historia%20y%20Funcionamiento%20de%20Internet.md "Documento Historia y funcionamiento de Internet.")
 
-+ Fundamentos de ingeniería de software. -->
+En este apartado encontrarás apuntes estructurados sobre el funcionamiento de los computadores y la red. Se abordan conceptos fundamentales como bits, bytes, código máquina, códigos ASCII, colores RGB y Unicode, así como los orígenes de ARPANET, el funcionamiento de Internet, los principales protocolos (HTTP, HTTPS), la evolución de los navegadores, el papel del W3C, el funcionamiento de la World Wide Web y muchos otros temas relacionados.
 
-+ HTML y CSS (básico, práctico y definitivo): [Documentación](https://github.com/santiagoencodigo/Desarrollo-Web-Profesional/blob/main/Docs/2.%20HTML%20y%20CSS.md "Apuntes HTML y CSS by Santiagoencodigo")   -   [Proyecto](https://santiagoencodigo.github.io/Desarrollo-Web-Profesional/Pages/02.%20HTML%20y%20CSS/index.html "Proyecto HTML y CSS by Santiagoencodigo")
+---
 
-    El objetivo de este apartado es realizar un CLON de [GOOGLE](https://www.google.com "Page Google") utilizando HTML y CSS
-    <img src="https://static.platzi.com/media/user_upload/clon-google-01cb05b6-3c18-4dd5-a8d0-e99ae6a7922a.jpg"/>
 
-<!-- + Fundamentos de JavaScript. -->
+<!-- ## Computadores e informática básica.
 
-+ [Programación básica.](https://santiagoencodigo.github.io/Desarrollo-Web-Profesional/Pages/01.%20Programacion%20Basica/mokepon.html "Page Mokepon")
 
-<!-- + Control de versiones con Git y GitHub. -->
+## Terminal y línea de comandos.
+
+
+## Fundamentos de ingeniería de software. -->
+
+
+## HTML y CSS práctico (Clon de Google):
+
+* [Documentación](https://github.com/santiagoencodigo/Desarrollo-Web-Profesional/blob/main/Docs/2.%20HTML%20y%20CSS%20-%20Clon%20Google.md "Apuntes HTML y CSS by Santiagoencodigo")   
+
+* [Proyecto](https://santiagoencodigo.github.io/Desarrollo-Web-Profesional/Pages/02.%20HTML%20y%20CSS%20-%20Google%20Clone/index.html "Proyecto HTML y CSS by Santiagoencodigo")
+
+En esta sección se desarrolla un clon [de la página principal de Google](https://www.google.com "Page Google") empleando únicamente HTML5 y CSS3. El objetivo principal es afianzar los fundamentos de estructuración semántica con HTML y estilización con CSS, aplicando técnicas modernas de maquetación como Flexbox y Grid.
+
+### Objetivos de aprendizaje
+
+* Comprender cómo estructurar un sitio web desde cero, usando etiquetas semánticas de HTML.
+
+* Aplicar reglas de CSS para dar estilo y posición a los elementos.
+
+* Usar metodologías de organización como BEM para nombrar clases y mantener un código escalable.
+
+* Practicar con herramientas de desarrollo (DevTools) para depuración y ajustes en tiempo real.
+
+* Diferenciar cuándo aplicar Flexbox y cuándo Grid según las necesidades de maquetación.
+
+<img src="https://static.platzi.com/media/user_upload/clon-google-01cb05b6-3c18-4dd5-a8d0-e99ae6a7922a.jpg"/>
+
+
+<!-- ## Fundamentos de JavaScript. -->
+
+
+## [Programación básica.](https://santiagoencodigo.github.io/Desarrollo-Web-Profesional/Pages/01.%20Programacion%20Basica/mokepon.html "Page Mokepon")
+
+---
+
+<!-- ## Control de versiones con Git y GitHub. -->
 
 Este repositorio es parte de mi proceso de aprendizaje continuo, con la visión de construir proyectos reales que aporten valor y fortalezcan mis habilidades como desarrollador.
