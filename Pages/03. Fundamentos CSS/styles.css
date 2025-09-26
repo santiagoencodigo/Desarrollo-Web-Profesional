@@ -1,0 +1,38 @@
+/* Inicio documento CSS */
+
+h1{ /* Selector por Etiqueta */
+    color: blue;
+}
+
+h2{
+    color:green;
+}
+
+.parrafo { /* Selector por clase*/
+    color:tomato;
+}
+
+#unico {
+    background-color:rgb(134, 205, 223);
+}
+
+.contenedor{
+    border:2px solid blue;
+}
+
+.contenedor h2{ /* Selector por descendencia */
+    color:white;
+}
+
+button:hover {
+    background-color:black;
+    color:white;
+}
+
+a:link {  /*Pseudoclase para las A no abiertas*/
+    color:green;
+}
+
+a:visited { /* Pseudoclase para las A visitadas */
+    color:purple;
+}
