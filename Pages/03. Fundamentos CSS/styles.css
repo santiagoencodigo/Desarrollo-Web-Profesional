@@ -1,5 +1,11 @@
 /* Inicio documento CSS */
 
+* { /* Define los estilos de cada elemento */
+    box-sizing: content-box;
+    margin:1px;
+    padding:1px;
+}
+
 h1{ /* Selector por Etiqueta */
     color: blue;
 }
@@ -35,4 +41,35 @@ a:link {  /*Pseudoclase para las A no abiertas*/
 
 a:visited { /* Pseudoclase para las A visitadas */
     color:purple;
+}
+
+input:focus {  /* Pseudoclase para cuando clickeas un input */
+    outline:2px solid #3498db;
+    background-color: #e8f4f8;
+}
+
+li:first-child{ /* Pseudoclase para el primer elemento de algo */
+    color:green;
+    font-weight:bold;
+}
+
+li:last-child{ /* Pseudoclase para el ultimo elemento de algo */
+    color:red;
+    font-weight:bold;
+}
+
+tr:nth-child(even) {
+    background-color: gray;
+}
+
+.quote::after {
+    content:'"';
+    color:blue;
+    font-size:18px;
+}
+
+.quote::before {
+    content:'"';
+    color:blue;
+    font-size:18px;
 }
