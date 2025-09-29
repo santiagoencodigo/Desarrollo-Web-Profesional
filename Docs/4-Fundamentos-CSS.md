@@ -276,4 +276,38 @@ No es como un position, pero sirve para posicionar al frente de otros elementos 
 
 Qué contenedor o elemento necesito que se ponga delante de qué elemento o contenedor. Controla qué elemento queda por encima cuando se superponen.
 
+---
 
+## Organización BEM
+
+Es importante entender que cuando hay un proyecto cada vez más grande, hay un problema con la especificidad, por lo que existen metodologias para evitar que los estilos se pisen entre ellos.
+
+BEM en CSS te permite escalar estilos sin conflictos al nombrar clases con una estructura clara. Con bloques, elementos y modificadores bien definidos, los estilos dejan de “pisarse” y el código se vuelve predecible, mantenible y fácil de leer.
+
+BEM: Block Element Modifier
+
+Ejemplo: Tarjeta de producto
+
+    Block: <div class="card">
+    Element:    <h2 class="card__title">Laptop Pro</h2>
+    Element:    <p class="card__price">$999</p>
+    Modifier:   <button class="card__button card__button--disabled">Comprar</button>
+           <div>
+
+La idea central: cada clase indica su rol y alcance. Un bloque agrupa una pieza independiente de interfaz; un elemento es una parte del bloque; un modificador expresa un estado o variante.
+
+Bloque: representa un componente como una tarjeta, por ejemplo, card.
+
+Elemento: se nombra con doble guion bajo: card__title, card__price, card__button, card__badge.
+
+Modificador: se nombra con doble guion: card--feature, card__button--disable.
+
+>La tarjeta funciona como bloque principal. Dentro, se definen elementos para el título, el precio, los botones y un badge. Luego se aplican modificadores para estados específicos. 
+
+>Se trabaja primero el contenedor para visualizarlo con claridad: borde, espaciados y ancho máximo y se aplican estilos puntuales a cada elemento, sin afectar otros bloques.
+
+>Los modificadores expresan variaciones: uno para el bloque completo (feature) y otro para el botón deshabilitado (disable). Separar estado de estructura mantiene el CSS limpio y predecible.
+
+>max-width: 300px; es el maximo tamaño que se le define a un elemento.
+
+>cursor: not-allowed; da apariencia al boton de inactivo.
