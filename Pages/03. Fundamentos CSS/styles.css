@@ -1,12 +1,12 @@
-/* Inicio documento CSS */
+/* Apuntes CSS
 
-* { /* Define los estilos de cada elemento */
+* { Define los estilos de cada elemento
     box-sizing: content-box;
     margin:1px;
     padding:1px;
 }
 
-h1{ /* Selector por Etiqueta */
+h1{ Selector por Etiqueta
     color: blue;
 }
 
@@ -14,7 +14,7 @@ h2{
     color:green;
 }
 
-.parrafo { /* Selector por clase*/
+.parrafo { Selector por clase
     color:tomato;
 }
 
@@ -26,7 +26,7 @@ h2{
     border:2px solid blue;
 }
 
-.contenedor h2{ /* Selector por descendencia */
+.contenedor h2{ Selector por descendencia
     color:white;
 }
 
@@ -35,25 +35,25 @@ button:hover {
     color:white;
 }
 
-a:link {  /*Pseudoclase para las A no abiertas*/
+a:link {  Pseudoclase para las A no abiertas
     color:green;
 }
 
-a:visited { /* Pseudoclase para las A visitadas */
+a:visited {Pseudoclase para las A visitadas 
     color:purple;
 }
 
-input:focus {  /* Pseudoclase para cuando clickeas un input */
+input:focus {  Pseudoclase para cuando clickeas un input 
     outline:2px solid #3498db;
     background-color: #e8f4f8;
 }
 
-li:first-child{ /* Pseudoclase para el primer elemento de algo */
+li:first-child{ Pseudoclase para el primer elemento de algo
     color:green;
     font-weight:bold;
 }
 
-li:last-child{ /* Pseudoclase para el ultimo elemento de algo */
+li:last-child{ Pseudoclase para el ultimo elemento de algo
     color:red;
     font-weight:bold;
 }
@@ -72,4 +72,5 @@ tr:nth-child(even) {
     content:'"';
     color:blue;
     font-size:18px;
-}
+}  */
+

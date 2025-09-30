@@ -311,3 +311,34 @@ Modificador: se nombra con doble guion: card--feature, card__button--disable.
 >max-width: 300px; es el maximo tamaño que se le define a un elemento.
 
 >cursor: not-allowed; da apariencia al boton de inactivo.
+
+---
+
+## Unidades de medida
+
+Elegir la unidad correcta en CSS es clave para lograr un diseño responsive, accesible y controlado.
+
+Elegir bien evita comportamientos inesperados y mejora la accesibilidad.
+
+**pixel** es una unidad de medida fija, por lo que nunca va cambiar. si defines un contenedor de 200px, se mantendrá así sin importar el tamaño de pantalla.Esto puede obligar a hacer scroll si el contenido es más ancho que el viewport. (Determinante para el responsive)
+
+**%**: El porcentaje se calcula con base en el contenedor padre. Si ese padre tiene dimensiones, tu caja puede adaptarse. Por ejemplo, 50% tomará la mitad del ancho disponible del padre, y se mantendrá proporcional al redimensionar la ventana.
+
+**REM**: Un rem equivale siempre al font-size del documento base (HTML), que por defecto es 16 píxeles.recomendable principalmente para fuentes(Accesibilidad). Cambia de acuerdo al tamaño de fuente del dispositivo .
+
+**EM**: 1em = 16px(por defecto)saca su  tamaño a partir del font-size del contendor padre, puede generar problema para tener medidas exactas -  El problema: es acumulativo.
+
+vw (view width) y vh (view height) miden en función del viewport: 1vw es 1% del ancho de la pantalla; 1vh es 1% de la altura. Útiles para resolver alturas relativas antes complejas en CSS.
+
+**VW**:Será el porcentaje de la pantalla, es decir al agregar 30vw será el 30% del view width.
+
+    width:30vw;
+
+**VH**: Antes era un problema definir tamaño en height que se adaptara al tamaño de la pantalla.
+
+    height:30vh;
+
+---
+
+## Proyecto final: portafolio profesional con HTML y CSS
+

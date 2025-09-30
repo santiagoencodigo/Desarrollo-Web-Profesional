@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,11 +13,13 @@
             color:green;
         }
     </style> -->
-    <title>Fundamentos CSS</title>
+    <title>Santiagoencodigo - Portfolio</title>
+    <meta name="description" content="Portfolio personal de Santiago Muñeton. Desarrollador Web en formación aprendiendo HTML y CSS.">
 </head>
 <body>
+<!--     
     <h1>Titulo con CSS</h1>
-    <!-- Primera Forma de agregar codigo en CSS -->
+    Primera Forma de agregar codigo en CSS
     <p style="color:red;">
         Hola, soy santiagoencodigo un desarrollador junior
     </p>
@@ -37,10 +39,10 @@
     
     <a href="../../index.html">Home</a>
 
-    <!-- Focus -->
+    Focus
     <input type="text" placeholder="clickme">
 
-    <!-- :first-child, :last-child -->
+    :first-child, :last-child
     <ul>
         <li>Primer item</li>
         <li>Segundo item</li>
@@ -49,7 +51,7 @@
         <li>Quinto item</li>
     </ul>
 
-    <!-- :nth-child -->
+    :nth-child
     <table>
         <tr>
             <td>Fila 1</td>
@@ -65,6 +67,75 @@
         </tr>
     </table>
 
-    <p class="quote">Buenas buenas</p>
+    <p class="quote">Buenas buenas</p> -->
+
+    <!-- Inicio Documento HTML -->
+
+    <header class="header">
+        <div class="header__container">
+            <div class="header__brand">
+                <h1 class="header__name">Santiago Muñeton</h1>
+                <p class="header__tagline">Desarrollador Web en Formación</p>
+            </div>
+
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="#inicio" class="nav__link nav__link--active">Inicio</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#sobre-mi" class="nav__link">Sobre mí</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#proyectos" class="nav__link">Proyectos</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#habilidades" class="nav__link">Habilidades</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#contacto" class="nav__link">Contacto</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contenido Principal -->
+    <main class="main">
+        <!-- Hero Section -->
+        <section class="hero" id="inicio">
+            <div class="hero__container">
+                <h2 class="hero__title">¡Hola! Soy Santiagoencodigo</h2>
+                <p class="hero__subtitle">Desarrollador Web en Formación</p>
+                <p class="hero__description">
+                    Estoy aprendiendo HTML y CSS para crear Sitios Web hermosos 
+                    y funcionales. Mi pasión: transformar ideas en experiencias
+                    web increible
+                </p>
+
+                <div class="hero__actions">
+                    <a href="#proyectos" class = "button button--primary">Ver mis proyectos</a>
+                    <a href="#contactos" class = "button button--secundary">Contáctame</a>
+                </div>
+
+                <div class="hero__stats">
+                    <div class="stat">
+                        <span class="stat__number">6+</span>
+                        <span class="stat__label">Meses Aprendiendo</span>
+                    </div>
+
+                    <div class="stat">
+                        <span class="stat__number">3+</span>
+                        <span class="stat__label">Proyectos Completados</span>
+                    </div>
+
+                    <div class="stat">
+                        <span class="stat__number">5+</span>
+                        <span class="stat__label">Tecnologías</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 </body>
 </html>
