@@ -342,3 +342,83 @@ vw (view width) y vh (view height) miden en función del viewport: 1vw es 1% del
 
 ## Proyecto final: portafolio profesional con HTML y CSS
 
+a
+
+---
+
+## Fuentes Web
+
+Elegir y configurar fuentes web en CSS define la legibilidad y el estilo de una interfaz. 
+
+El navegador agrega una fuente por defecto siendo de la familia Serif. 
+
+Las tipografías se agrupan en cinco familias que todo navegador reconoce por defecto.
+
+1. Serif (Con remates): Con "Decoraciones" al final de los trazos. Ejemplo típico: Times New Roman. Da un aire editorial. --> Formal
+
+2. Sans-Serif (Sin remates): Sin decoraciones. Ejemplos comunes: Arial, Helvetica. Se percibe como moderno. --> Lectura para pantallas y neutro.
+
+3. Monospace (Ancho Fijo): Ancho fijo en cada carácter. Ideal para mostrar código. --> Todos los caracteres ocupan el mismo ancho.
+
+4. Cursive: Simula escritura a mano
+
+5. Fantasy: Más decorativa y expresiva.
+
+>Font Stack
+>Texto con inter de Google
+
+En el CSS se agrega con:
+
+    font-familiy: serif;
+
+Define font-size consistente para jerarquía y lectura. Se edita el tamaño del texto con:
+
+    font-size:1px;
+
+### Fallback
+
+Las fuentes son universales y se encuentran en cualquier tipo de dispositivo o sistema operativo.
+
+Pueden haber fuentes que si sean especificamente de algún sistema operativo, por lo que se toman las otras familias que se tengan en codigo (Accesibilidad)
+
+Compatibilidad: algunas fuentes existen solo en ciertos sistemas (Mac OS o iOS) y no en Windows. El fallback evita inconsistencias.
+
+Es buena practica agregar una fuente alterna. **Pues tambien se puede caer la pagina de fuentes de google**
+
+Un font stack es la lista ordenada de fuentes en font-family. El navegador intenta la primera; si no existe en el sistema, usa la siguiente.
+
+    font-family: monospace, serif, sans-serif;
+
+Ejemplo de codigo:
+
+    .serif {
+        font-family: serif;
+        font-size: 20px;
+    }
+
+    .sans {
+        font-family: sans-serif;
+        font-size:20px;
+    }
+
+    .monospace {
+        font-family: monospace;
+        font-size:20px;
+        background: #f0f0f0;
+        padding: 5px;
+    }
+
+Paginas Recomendadas:
+
++ [fonts-google.com](fonts-google.com "fonts-google.com")
+
+---
+
+## Propiedades Tipográficas
+
+Estas propiedades nos ayudan a modificar estas fuentes.
+
+font-size: Tamaño de letra
+font-weight: Grueso
+line-height: Altura de interlinea
+font-style: 
