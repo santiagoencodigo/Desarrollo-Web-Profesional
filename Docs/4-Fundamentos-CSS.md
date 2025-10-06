@@ -416,9 +416,110 @@ Paginas Recomendadas:
 
 ## Propiedades Tipográficas
 
-Estas propiedades nos ayudan a modificar estas fuentes.
+Estas propiedades nos ayudan a modificar estas fuentes. Con pequeños ajustes, el texto se vuelve más claro, cómodo y consistente en distintos dispositivos.
 
-font-size: Tamaño de letra
-font-weight: Grueso
-line-height: Altura de interlinea
-font-style: 
+font-size: Tamaño de letra/Fuente
+
+font-weight: Qué tan ancho o grueso se quiere que sea la fuente, Se puedes ir de 100 a 900, pero no todas las fuentes incluyen todos los pesos.
+
+    .light {
+        font-weight: 300;
+    }
+
+    .bold {
+        font-weight: 900;
+    }
+
+line-height: Altura de interlinea, para aumentar la legibilidad
+
+font-style: Tenemos 3 opciones que es normal, italic y oblique - Es como agregarle cursiva
+
+---
+
+## Control de Texto
+
+Controlar la tipografía con presición usando propiedades clave con CSS para alinear, transfomrar, decorar e identar texto. Es fundamental para poder modificar a gusto este tipo de elementos.
+
+¿Cómo posicionamos nuestro texto?
+
+Muchas veces en el desarrollo, actividades que debemos realizar es cambiar en donde posicionamos nuestro texto. 
+
+**Propiedad text-align:;**
+
+Por defecto todo el texto se va hacia la izquierda.
+
+Por lo que podemos acomodar el texto dependiendo de lo que estemos necesitando utilizando:
+
+    text-align: left; --> Alineación por defecto a la izquierda.
+
+    text-align: right; --> Alineación por defecto a la derecha.
+
+    text-align: center; --> Centra el texto dentro del ancho disponible.
+
+    text-align: justify; --> Distribuye espacios para ocupar el ancho completo en cada linea.
+
+**Text-Tranform**        
+
+Si deseamos hacer que un texto en nuestro HTML quede totalmente en mayuscula (uppercase), o por otro lado si queremos que quede totalmente en minuscula (lowercase), podemos editarlo desde nuestro CSS.
+
+Esto sucede cuando el contenido llega en un formato y se necesita mostrarlo en otro.
+
+    text-transform: uppercase; --> Convierte todo a mayúsculas
+
+    text-transform: lowercase; --> Convierte todo a minúsculas.
+
+Por otro lado si queremos que cada letra inicial de nuestro parrafo sea mayuscula podemos hacer:
+
+    text-transform: capitalize;
+
+**text-decoration**
+
+Si queremos agregar que el texto en un parrafo tenga un subrayado podemos utilizar la propiedad:
+
+    text-decoration:underline; --> Añade una línea inferiora a cualquier elemento.
+
+Si queremos tachar el texto en un parrafo podemos utilizar la propiedad:
+
+    text-decoration:through; --> Tacha el texto.
+
+Si al contrario no queremos nada en nuestras etiquetas, podemos utilizar la propiedad:
+
+    text-decoration:none; --> Elimina el subrayado, sirve para etiquetas <a> cuando se deasea modificarlas.
+
+**ident**
+
+Para una maquetación editorial, si queremos agregar un interlineado al inicio de nuestro parrafo, especificamente en la primera linea de este. Podemos utilizar esta propiedad.
+
+    text-ident:2rem;
+
+---
+
+<!-- Colores -->
+
+## Sistemas de Color
+
+Formatos de color
+
+HEX - Hexadecimal, generalmente se utiliza con el simbolo # y se le acompaña con F siendo el maximo valor. Estan los numeros de a pares 00 (rojo) 00 (verde) 00 (azul), es decir valores 0–9 y A–F. Dos dígitos por canal. Empieza con numeral. 000000 es negro. FFFFFF es blanco:
+
+    background-color: #ff5733;
+
+RGB - tres valores del 0 al 255 por canal. 0 apaga el canal, 255 lo lleva al máximo, teniendo 3 espacios para determinar el color:
+
+    background-color: rgb(0,0,0);
+
+HSL - Va del 0 al 360, siendo una secuencia de 3 numeros diferentes. tono en grados 0–360, saturación 0–100 %, luminosidad 0–100 %.
+
+    background-color: hsl(0, 50%, 50%);
+
+RGBA - la ultima A quiere decir ALFA, que se refiere a que trasparente queremos que sea el color. En donde 0 es totalmente trasparente y 1 es solido. Por lo que podemos hacer:
+
+    background-color: rgba(231, 76, 60, 0.25);
+
+El ultimo formato de color es en donde directamente se le agrega el nombre del color:
+
+    color: gold;
+    color: green;
+    color: white;
+
+
