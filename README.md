@@ -14,6 +14,8 @@ Este repositorio tiene como propósito:
 
 + Crear una base sólida para proyectos más avanzados.
 
+>Por ultimo, una recomendación personal para retener más toda esta información. Por cada concepto que se encuentre aqui se debe pensar en ¿Cómo se aplica esto en un proyecto real? Plantearse este tipo de preguntas refuerza la retención.
+
 ---
 
 
@@ -24,16 +26,6 @@ Este repositorio tiene como propósito:
 En este apartado encontrarás apuntes estructurados sobre el funcionamiento de los computadores y la red. Se abordan conceptos fundamentales como bits, bytes, código máquina, códigos ASCII, colores RGB y Unicode, así como los orígenes de ARPANET, el funcionamiento de Internet, los principales protocolos (HTTP, HTTPS), la evolución de los navegadores, el papel del W3C, el funcionamiento de la World Wide Web y muchos otros temas relacionados.
 
 ---
-
-
-<!-- ## Computadores e informática básica.
-
-
-## Terminal y línea de comandos.
-
-
-## Fundamentos de ingeniería de software. -->
-
 
 ## HTML y CSS práctico (Clon de Google):
 
@@ -57,14 +49,24 @@ En esta sección se desarrolla un clon [de la página principal de Google](https
 
 <img src="https://static.platzi.com/media/user_upload/clon-google-01cb05b6-3c18-4dd5-a8d0-e99ae6a7922a.jpg"/>
 
-
-<!-- ## Fundamentos de JavaScript. -->
-
+---
 
 ## [Programación básica.](https://santiagoencodigo.github.io/Desarrollo-Web-Profesional/Pages/01.%20Programacion%20Basica/mokepon.html "Page Mokepon")
 
 ---
 
-<!-- ## Control de versiones con Git y GitHub. -->
+## [Fundamentos de ingeniería de software.](https://github.com/santiagoencodigo/Desarrollo-Web-Profesional/blob/main/Docs/3-Fundamentos-Ingenieria-Software.md "Apuntes Fundamentos Ingeniería de Software by Santiagoencodigo")
+
+Aquí encontrarás apuntes sobre los fundamentos de la ingenieria de software. Incluye temas como bits y bytes, el funcionamiento de internet, las computadoras, los chips, la inteligencia artificial y los sistemas del mundo.
+
+<!-- ## Computadores e informática básica.
+
+## Terminal y línea de comandos.
+
+## Control de versiones con Git y GitHub.
+
+## Fundamentos de JavaScript. -->
+
+---
 
 Este repositorio es parte de mi proceso de aprendizaje continuo, con la visión de construir proyectos reales que aporten valor y fortalezcan mis habilidades como desarrollador.

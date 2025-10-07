@@ -2,23 +2,50 @@
 
 Cómo funciona Internet, las computadoras, los chips, la inteligencia artificial y los sistemas del mundo. Desde cero obtendrás los fundamentos de la tecnología y el software moderno.
 
+## Tabla de Contenidos
+
+- [1. Proceso de arranque y encendido de computadoras y móviles](#proceso-de-arranque-y-encendido-de-computadoras-y-móviles)
+
+- [2. Cómo Funciona un Circuito Electrónico](#cómo-funciona-un-circuito-electrónico)
+
+
 <!-- Computación Básica -->
 
 ## Proceso de arranque y encendido de computadoras y móviles
 
-Oprimes el boton de prender tu computadora, empieza a fluir energia de la bateria de la computadora pasando por medio del cable a la fuente de energia de la ciudad.
+_Oprimes el boton de prender tu computadora, empieza a fluir energia de la bateria de la computadora pasando por medio de cable a la fuente de energia de la ciudad._
 
-Esta energia fluye a traves de la tarjeta madre, la electricidad es una onda asi mismo como la luz y el sonido es una onda, esas ondas se miden en pulsos (Altos, Bajos), cuando tenemos un pulso alto es lo que nosotros consideramos un 1 y un pulso bajo es un 0, esos 1 y 0 es lo que nosotros llamamos bits.
+Esta energia fluye a traves de la tarjeta madre, la electricidad es una onda asi mismo como la luz o el sonido. Esas ondas se miden en pulsos (Altos, Bajos), cuando tenemos un pulso alto es lo que nosotros consideramos un 1 y un pulso bajo es un 0, esos 1 y 0 es lo que nosotros llamamos bits.
 
-La señal viaja del boton de encedido, hacia la tarjeta madre. Esta tarjeta madre tiene un chip especial de arranque llamado BIOS (Basic Input Output System) que es el nombre antiguo, ahora las computadoras modernas lo llaman: UEFI (Unified Extensible Firmware Interface)
+> Bit: Unidad mínima de información (0 o 1).
 
-En telefonos que tambien son computadoras esto tambien existe y se llaman Boot Loader.
+<div style="display:flex; justify-content:center;">
+<img src="https://codeguppy.com/blog/why-are-there-8-bits-in-a-byte/img/bit_byte.png" width="500px" height="150px">
+</div>
 
-Power On Computer --> Bios Perform POST --> DISK - RAM -- Boot Loader.
+<br>
 
-En android el chip inicia un proceso llamado PBL (Primary Boot Loader) 
+La señal viaja del boton de encedido, hacia la tarjeta madre. Esta tarjeta madre tiene un chip especial de arranque llamado [BIOS (Basic Input Output System)](https://es.wikipedia.org/wiki/BIOS "Wikipedia - BIOS") que es el nombre antiguo, ahora las computadoras modernas lo llaman: [UEFI (Unified Extensible Firmware Interface)](https://es.wikipedia.org/wiki/Unified_Extensible_Firmware_Interface "Wikipedia - UEFI")
 
-En Iphone este mismo proceso se llama Secure Rom. 
+En telefonos que tambien son computadoras esto tambien existe y se llama [Boot Loader.](https://es.wikipedia.org/wiki/Cargador_de_arranque "Wikipedia - Boot Loader / Gestor de Arranque")
+
+**Por lo que en resumen:**
+
+1. Power On Computer (Encendido): Al encender la computadora, la fuente de alimentación suministra energia a los componentes (CPU, RAM, placa base, etc.).
+
+2. POST (Power On Self Test): La BIOS o UEFI ejecuta el POST, un diagnóstico que verifica el hardware básico y si encuentre errores (Ej: Ram Defectuosa) emite pitidos o códigos en la pantalla.
+
+3. Bios busca en el disco (DISK): Una vez el POST es exitoso, la BIOS busca un dispositivo de arranque (disco duro, USD, USB) según el orden configurado en el Boot Priority. Todo esto para encontrar el Boot Loader.
+
+4. Carga del Boot Loader en RAM: La BIOS carga el Boot Loader (ej: Windows Boot Manager) desde el disco a la RAM, ya que la GPU solo ejecuta intrucciones desde la RAM.
+
+5. Carga del Sistema Operativo: El Boot Loader carga el nucleo (kernel) del sistema operativo desde el disco a la RAM, el sistema operativo toma control, inicializa los controladores (drivers) y lanza la interfaz de usuario.
+
+>* En [Android](https://www.android.com/intl/es_es/ "android.com") el chip inicia un proceso llamado [PBL (Primary Boot Loader)](https://en.wikipedia.org/wiki/Booting_process_of_Android_devices "Wikipedia - Booting Process of Android Device")
+
+>* En [Iphone](https://www.apple.com/co/iphone/ "apple.com/iphone") este mismo proceso se llama [Secure Rom.](https://support.apple.com/es-co/guide/security/secb3000f149/web "Explicación Proceso Arranque Iphone by Apple")
+
+<!-- Mejora de redacción -->
 
 Cuanto cualquier boton de encendido es activado (Recibe Señal Electrica) activa un procedimiento interno que esta grabado en el Harware de los transistores del chip, este proceso se llama **Post (Power On Self Test)**
 
@@ -81,7 +108,75 @@ La tecla enter envia una señal de luz en donde la CPU busca la orden dentro de 
 Todos los dispositivos o computadoras tienen estos sistemas de arranque, operativos, kerners, todos los dispositivos funcionan exactamente igual.
 
 
-Este conocieminto es totalmente importante para cualquier persona que quiera ser profesional que aspiran a desarrollar software a ser ingenieros de software, a crear codigo para contruir codigo y a crear su carrera en la industria de la tecnologia
+Este conocimiento es totalmente importante para cualquier persona que quiera ser profesional que aspiran a desarrollar software a ser ingenieros de software, a crear codigo para contruir codigo y a crear su carrera en la industria de la tecnologia
+
+<div style="display:flex; justify-content:center;">
+<img src="https://static.platzi.com/media/user_upload/upload-d6b47c52-1ce8-4559-95fc-d6aff5f59134.png" width="400px" height="500px">
+</div>
+
+---
+
+## Cómo Funciona un Circuito Electrónico
+
+[Los circuitos electronicos](https://es.wikipedia.org/wiki/Circuito "Wikipedia - Circuito Electrónico/Electrico") son la base de nuestra tecnología moderna, funcionan controlando el [flujo de la electricidad](https://es.wikipedia.org/wiki/Corriente_el%C3%A9ctrica "Wikipedia - Flujo/Corriente de la Electricidad") siendo este el movimiento de electrones en un medio conductor, como un cable.
+
+La energia se produce en plantas de energia y se transmite por cable hacia la casa de cada persona o se guarda en baterias.
+
+<div style="display:flex; justify-content:center;">
+<img src="https://electrolomas.com/wp-content/uploads/2023/02/Descubriendo-los-circuitos-electronicos-flexibles-Electrolomas.jpg" width="400px" height="300px">
+</div>
+
+>Podemos pensar del flujo de electricidad como el flujo de agua en un tubo. Y este fluye desde el polo negativo (-) hacia el polo positivo (+) 
+
+El voltaje es equivalente a la presión del agua en un tubo y mide la cantidad de energia que fluye desde la fuente, una tipica bateria AA genera 1.5 Voltios, una Bateria de 9 Voltios... Genera 9 Voltios, los enchufes de hogar generan de 110 a 220 Voltios.
+
+Amperaje es equivalente a la cantidad de agua que pasa siendo distinto a la presión, por lo que dependiendo de esta puede cargar más rápido o no una bateria. **El voltaje hace que la electricidad fluya y ese flujo es el amperaje.**
+
+La electricidad se puede convertir en luz con una lampara o tambien, con una pieza electronica llamada LED (Se pueden sobrecalentar si reciben demasiada corriente) Por lo que para controlar esa cantidad de voltaje, hay un componente electronico que podemos utilizar llamado resistencia.
+
+La resistencia reduce el amperaje y absorbe esa energia, liberandola como calor. Por lo que, cuando un dispositivo se calienta es la resistencia y otros componentes electronicos liberando un alto flujo de corriente.
+
+La resistencia mide cuanto puede reducir del amperaje con una unidad de medida de oposición al paso de la corriente llamada [Ohmios](https://es.wikipedia.org/wiki/Ohmio "Wikipedia - Ohmio")
+
+<div style="display:flex; justify-content:center;">
+<img src="https://img.freepik.com/vector-premium/led-resistencia-serie-conectados-bateria-9v-circuito-electrico-sencillo-lecciones-fisica_786898-12.jpg" width="400px" height="300px">
+</div>
+
+* Imagina un motor eléctrico básico: colocamos un imán permanente (o dos, para crear un campo magnético fuerte) y un conductor (como un anillo o bobina de metal) que lleva corriente eléctrica. Cuando la corriente fluye por el conductor, genera su propio campo magnético según la ley de Ampère, convirtiéndolo en un electroimán temporal. Este campo interactúa con el del imán permanente, produciendo una fuerza de Lorentz que causa repulsión o atracción entre ellos. Esta fuerza genera un torque (fuerza rotacional) que hace girar el anillo alrededor de un eje central. Para mantener el movimiento continuo y evitar que se detenga al alinearse los campos, usamos un conmutador (un interruptor rotatorio) que invierte la dirección de la corriente periódicamente. Así, capturamos ese movimiento circular en el eje, convirtiendo la energía eléctrica en mecánica y asi tenemos un motor eléctrico.
+
+>Lorentz force: Es un principio físico fundamental detrás del funcionamiento de un motor eléctrico. Esta fuerza describe cómo una corriente elétrica en un conductor, en presencia de un campo magnético, genera una fuerza perpendicular que produce un movimiento, como rotación.
+
+Las piezas moviles de un brazo electrico utilizan otro motor de presición llamado [SERVO](https://es.wikipedia.org/wiki/Servomotor "Wikipedia - Servomotor")
+
+<div style="display:flex; justify-content:center;">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Rotterdam_Ahoy_Europort_2011_%2814%29.JPG/1200px-Rotterdam_Ahoy_Europort_2011_%2814%29.JPG" width="400px" height="300px">
+</div>
+
+*Imagen tomada de: https://es.wikipedia.org/wiki/Motor_el%C3%A9ctrico*
+
+La electricidad se convierte en sonido cuando haces vibrar una membrana al ritmo de una onda electrica que esto se representa como un audio, a esas membranas las llamamos audifonos, parlantes, bocinas.
+
+Un tocadiscos transforma la música grabada en un disco de vinilo que tiene tallado en forma de relieve la información sonora en patrones ondulados. Un brazo movido por un servo sostiene una aguja recorre el relieve del disco y los convierte en una honda electrica, que esto mismo es lo que mueve la membrana de un parlante, a la vez un LED que se enciende cuando el dispositivo esta encendido. Asi nosotros combinamos una serie de componentes para crear un producto asi como un[tocadiscos.](https://es.wikipedia.org/wiki/Tocadiscos "Wikipedia - Tocadiscos")
+
+Un NTC/PTC  thermistor es una resistencia que puede cambiar de acuerdo a la temperatura y asi funcionan los termostatos y los termometros digitales.
+
+Para prender un dispositivo utilizamos un switch o un interruptor que une dos fragmentos de cable con un pequeño punto de metal por el que el flujo de corriente puede fluir o no. Por lo que si necesitamos determinar que componentes encender de acuerdo a ciertas condiciones, necesitamos manipular los pasos de la corriente de forma automatica y eso lo hacen los **transistores** que de acuerdo a ciertas condiciones estos deciden cuando encender o apagar otros componentes.
+
+La combinación de un monton de transistores es lo que le dan a los procesadores o microchips la capacidad de hacer operaciones matematicas.
+
+Si queremos guardar el resultado de estas operaciones, utilizamos una memoria, es un componente que almacena electricidad de forma temproal mientras halla un flujo de electricidad continua y a esto se le llama condensador.
+
+Y un grupo grande de condensadores es la forma en la que funcoina la memoria RAM de una computadora, cuando apagas al computadora esa memoria desaparece.
+
+Si queremos que la memoria persista cuando la electricidad se va, utilizamos otros componentes que usan reacciones fisicas y magneticas de ciertos materiales para guardar información sin electricidad llamados discos duros. Lo más reconocidos hoy que no tienen partes moviles se les conoce como discos de estado solido = Solid State Drive = SSD
+
+Lo que conocemos como USB, por dentro es un disco de estado solido.
+
+En las memorias cuando un condensador esta lleno se le conoce como 1 y cuando esta vacio representa un 0. Es decir que los conedensadores convierten la energia electrica en bits, estos BITS es la base del cómo representamos información de forma digital. Estos 1 y 0 cuando se organizan en conjuntos o estructuras que los procesadores entienden y los convierten en instrucciones. A esto le llamamos Software.
+
+Estos BITS almacenados en memoria viaja hacia el procesador a traves del circuito para ser ejecutado. Y como todo, entonces esto es la manipulación de flujo de electrones.
+
+
 
 
 
