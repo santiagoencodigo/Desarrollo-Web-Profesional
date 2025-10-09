@@ -277,7 +277,11 @@ Estos BITS almacenados en memoria viaja hacia el procesador a traves del circuit
 
 ### Hondas
 
-La luz es una honda que fluctoa de arriba hacia abajo como la ecuación del coseno o el seno en trigonometria dependiendo de la longitud de esa honda la podemos ver o no.
+La luz es una honda que fluctúa de arriba hacia abajo como la ecuación del coseno o el seno en trigonometría dependiendo de la longitud de esa honda la podemos ver o no.
+
+<img src="https://www.neurochispas.com/wp-content/uploads/2022/12/Diagrama-de-funcion-coseno-con-varias-soluciones-a-una-ecuacion-trigonometrica.png">
+
+*Imagen Tomada de: https://www.neurochispas.com/wiki/ejercicios-de-ecuaciones-trigonometricas/*
 
 El mapa de longitudes de honda se le llama espectro electromagentico. Las hondas de radio que utilizan los telefonos, audifonos bluetooth, el wifi o la señal del televisor, tambien es luz sólo que es invisible a nuestros ojos.
 
@@ -287,13 +291,75 @@ Para las hondas de radio que tienen una amplitud tan amplia, muchos objetos fís
 
 La humanidad descubrio que con esas vibraciones las hacemos conectar con una membrana y la hacemos vibrar, la vibración de la membrana es equivalente a sonido. Asi funcionan las radios.
 
+>Se puede observar esa honda cuando tu a un parlante le echas agua.
+
 ---
 
 ### Bits
 
 En un circuito eléctrico, los bits son 0 y 1 se representan utilizando niveles de voltaje. Un nivel alto de voltaje (5 voltios) representa un 1 y un nivel bajo de voltaje (0 voltios) representa un 0
 
-Esas transiciones atraves de niveles de voltaje van a ocurrir en intervalos de tiempo muy precisos (Segundos, Milisegundos e incluso Nanosegundos) el qué tan chiquito es este intervalo de tiempo depende de la velocidad del sistema.
+La forma de esta comunicación estuvo siendo pensada por la humanidad a medida del tiempo por lo que
+
+Esas transiciones atraves de niveles de voltaje van a ocurrir en intervalos de tiempo muy precisos (Segundos, Milisegundos e incluso Nanosegundos) el qué tan chiquito es este intervalo de tiempo depende de la velocidad del sistema. Esta misma velocidad es la velocidad de los procesadores
+
+El telegrafo fue el primer sistema de la humanidad que utiliza pulsos electricos para enviar un mensaje que en vez de 0 y 1 utilizaban una señal corta y otra más prologada, como un tono corto . y un tono largo -
+
+Todo esto con un codigo en donde cada letra correpondia a cierto grupo de tonos. A esto se le conoce como código morse
+
+En una computadora que utiliza microships para procesar voltajes precisos que se representan en 0 y 1 se decidio crear un sistema en donde una serie de numeros corresponde a una serie de letras y a esto se le llama la tabla ASCCI
+
+(Visto en la lectura de [Como Funciona Internet y las computadoras](#))
+
+>Anteriormente para escribir @ se tenia que escribir con alt + 64 pues el signo " @ " corresponde al numero 64 de la tabla ASCCI
+
+**¿Cómo tranformamos los pulsos electricos en esas letras?**
+
+Nosotros los seres humanos estamos acostumbrados a contar en base 10 porque tenemos 10 dedos en nuestras manos pues nosotros somos de escribir del 1 al 9 y una vez terminamos de llegar al 9 volvemos a contar con nuesstros dedos y llegamos al 10 y otra vez: 11, 12, 13... y luego volvemos a agregarle otro numero llegando asi al 20, 30, 40, 50 y asi infinitamente.
+
+**Esto es tan normal que no pensamos que pueden haber alternativas**
+
+En programación nosotros utilizamos varias bases por ejemplo la 
+
+HEXADECIMAL: Que son una serie de numeros que van del 0 al 15 en donde: 123456789ABCDF
+
+Binario es solamente 0 y 1, en donde a partir del orden que tenemos estos numeros podemos representar grandes cantidades de datos.
+
+Que se peude pensarlo como que en un BYTE tenemos 8 numeros diferentes en donde cada uno de los numeros podemos pensarlo como una potencia
+
+por lo que 128, 64, 32, 16, 8, 4, 2, 1 = 1, 1, 1, 1, 1, 1, 1, 1 = 255
+
+Por lo que tenemos 255 combinaciones diferentes de numeros. Por lo esos mismos con las 255 combinaciones de carácteres diferentes que se encuentran en la talba ASSCCI e incluso tambien se representan caraceteres que no son letras como el:
+
+00001101 = ENTER = Salto de interlinea en un archivo
+
+Asi mismo como estos BYTES representan letras, tambien pueden representar calculos que debe hacer el procesador y es un estandar distinto que se le conoce ocmo ASSEMBLER
+
+Por qué un conjunto de 8 numeros y no 7, 6, 9?
+
+Hay muchas razones historicas relacionadas conectadas con una de las empresas que creo la computacion moderna llamda IBM, pero en resumidas palabras los procesadores tienen 8 cables por dentro que hacen los calculos al mismo tiempo es la forma más barata y eficiente de prepararlos y esto es lo que hizo a que nos acostumbraramos a que fuerna 8.
+
+Como dato curioso los procesadores de la union sovietica en los años 70 eran de 12 bits, 18 bits, 24 bits, o aveces 48 bits, pero sus computadoras no eran compatibles con las de occidente.
+
+Los bits estan en todas partes y posiblemente esten más presentes en nuestra vida de lo que usualmente creemos por ejemplo:
+
+Una dirección IP como 192.168.1.1 que es una combinación de 4 bytes para identifar una computadora dentro de una red y como cada uno de estos numeros esta dentro de un byte, no supera el numero del 255.
+
+Una imagen es un grupo organizado de bytes en una cuadricula en donde cada punto de la cuadricula es un pixel en la pantalla. Por lo que los bytes determinan el color que tendra cada pixel y se define como la intensidad de brillo del color: Rojo, Verde y Azul que tiene cada pixel y asi se representa el color.
+
+👾👾👾 Los emogis tambien son bytes y requieren 4 de estos en la tabla ASCCI y se conoce como un estandar llamado UTF
+
+UTF = Unicode Transformation Format
+
+En donde:
+
+* UTF - 8 que requiere de 8 bits
+* UTF - 16 que requiere de 16 bits
+* UTF - 32 que requiere de 32 bits
+
+Hay un consorsio que se encarga del estandar de lo que representa el conjunto de bits que se llama UNICODE STANDART CONSORSIUM, todos los fabricantes de electrónica deben reseptarlo para que nuestros sistemas puedan interoperar por eso mismo un smile es lo mismo en un pc, un celular un iphone y no puede ser otra cosa.
+
+Cuando programas en un lenguaje de programación todas estas instrucciones se traducen a bytes de assembler que el procesador entiende para ejecutar las operaciones y eso es lo que hacen los compiladores
 
 
 
