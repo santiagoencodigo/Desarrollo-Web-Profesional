@@ -275,7 +275,25 @@ Estos BITS almacenados en memoria viaja hacia el procesador a traves del circuit
 
 ## Qué es un bit y qué es un byte
 
+### Hondas
 
+La luz es una honda que fluctoa de arriba hacia abajo como la ecuación del coseno o el seno en trigonometria dependiendo de la longitud de esa honda la podemos ver o no.
+
+El mapa de longitudes de honda se le llama espectro electromagentico. Las hondas de radio que utilizan los telefonos, audifonos bluetooth, el wifi o la señal del televisor, tambien es luz sólo que es invisible a nuestros ojos.
+
+La luz visible la detiene los objetos fisicos o la refleja un espejo a escepto del vidrio, que la traspasa por que es trasparente.
+
+Para las hondas de radio que tienen una amplitud tan amplia, muchos objetos físicos son trasparentes y los atraviesa. Asi una antena aunque este detras de una paared ve la luz que emite una señal de radio y luego en el circuito la convierte en electricidad.
+
+La humanidad descubrio que con esas vibraciones las hacemos conectar con una membrana y la hacemos vibrar, la vibración de la membrana es equivalente a sonido. Asi funcionan las radios.
+
+---
+
+### Bits
+
+En un circuito eléctrico, los bits son 0 y 1 se representan utilizando niveles de voltaje. Un nivel alto de voltaje (5 voltios) representa un 1 y un nivel bajo de voltaje (0 voltios) representa un 0
+
+Esas transiciones atraves de niveles de voltaje van a ocurrir en intervalos de tiempo muy precisos (Segundos, Milisegundos e incluso Nanosegundos) el qué tan chiquito es este intervalo de tiempo depende de la velocidad del sistema.
 
 
 
