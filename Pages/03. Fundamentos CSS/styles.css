@@ -80,7 +80,7 @@ tr:nth-child(even) {
 
 /* Inicio de Código */
 
-/* Reset Básico */
+/* 1. Reset Básico */
 
 * {
     margin:0;
@@ -97,7 +97,7 @@ body {
 }
 
 
-/* Tipografía General */
+/* 2. Tipografía General */
 
 h1,
 h2,
@@ -138,7 +138,7 @@ strong {
 }
 
 
-/* Enlaces */
+/* 3. Enlaces */
 
 a {
     color: #2563eb;
@@ -155,14 +155,14 @@ a:active {
 }
 
 
-/* Listas */
+/* 4. Listas */
 
 ul {
     list-style: none;
 }
 
 
-/* Header */
+/* 5. Header */
 
 header {
     background-color: #f8f9fa;
@@ -192,4 +192,116 @@ header {
 }
 
 
-/* Navegación */
+/* 6. Navegación */
+
+.nav {
+    text-align: center;
+}
+
+.nav__list {
+    display:inline-block;
+}
+
+.nav__item {
+    display:inline-block;
+    margin: 0 16px;
+}
+
+.nav__link {
+    padding: 8px 12px;
+
+    display: inline-block;
+
+/* Este elemento esta en la misma línea que los demás (como si fuera un inline), pero
+deja que yo pueda ajustar su tamaño, márgenes y paddings como si fuera un bloc */
+
+    color:#333333;
+    font-weight: 500;
+}
+
+.nav__link:hover {
+    color:#2563eb;
+    text-decoration:none;
+}
+
+.nav__link:active {
+    color: #2563eb;
+    font-weight: bold;
+}
+
+
+/* 7. Main Content */
+
+.main {
+    margin:0 auto;
+    max-width: 1200px;
+    padding: 0 20px;
+}
+
+
+/* 8. Hero Section */
+
+.hero {
+    padding: 64px 0;
+    text-align: center;
+    background-color: #f0f4f8;
+    margin-bottom:48px;
+}
+
+.hero__container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding:0 20px;
+}
+
+.hero__title {
+    font-size: 48px;
+    color: #1a1a1a;
+    margin-bottom:16px;
+}
+
+.hero__subtitle {
+    font-size:24px;
+    color: #2563eb;
+    margin-bottom: 24px;
+    font-weight: 600;
+}
+
+.hero__description {
+    font-size: 18px;
+    color: #666666;
+    margin-bottom: 32px;
+    max-width:600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero__actions {
+    margin-bottom: 48px;
+}
+
+.hero__stats {
+    text-align: center;
+}
+
+.stat {
+    display: inline-block;
+    margin: 0 32px;
+    text-align: center;
+}
+
+.stat__number {
+    display:block;
+    font-size: 32px;
+    font-weight: bold;
+    color: #2563eb;
+    margin-bottom: 8px;
+}
+
+.stat__label {
+    font-size: 14px;
+    color: #666666;
+}
+
+
+/* 9. Botones */
