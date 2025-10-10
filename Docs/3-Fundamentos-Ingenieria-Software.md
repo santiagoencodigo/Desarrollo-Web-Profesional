@@ -291,7 +291,7 @@ El mapa de longitudes de onda se le llama [espectro electromagéntico](https://e
 
 * La luz traspasa el vidrio porque es trasparente.
 
-Para las [ondas de radio](https://es.wikipedia.org/wiki/Ondas_de_radio "Wikipedia - Ondas de Radio"), algunas tienen una amplitud muy grande, por lo que muchos objetos resultan prácticamente físicos, permitiendo que sean atravesados. De esta manera, una antena puede captar una señal de radio incluso si está detrás de una pared, ya que estas ondas las atraviesan y luego el circuito convierte esta señal en electricidad.
+Para las [ondas de radio](https://es.wikipedia.org/wiki/Ondas_de_radio "Wikipedia - Ondas de Radio"), algunas tienen una amplitud muy grande, por lo que muchos objetos resultan prácticamente trasparentes, permitiendo que sean atravesados. De esta manera, una antena puede captar una señal de radio incluso si está detrás de una pared, ya que estas ondas las atraviesan y luego el circuito convierte esta señal en electricidad.
 
 <img src="https://conectad.es/images/2019/04/antenas-lte-4g.jpg">
 
@@ -307,57 +307,85 @@ Video Recomendado: https://www.youtube.com/watch?v=uENITui5_jU
 
 ### Bits
 
-En un circuito eléctrico, los bits son 0 y 1 se representan utilizando niveles de voltaje. Un nivel alto de voltaje (5 voltios) representa un 1 y un nivel bajo de voltaje (0 voltios) representa un 0
+En un [circuito eléctrico](#cómo-funciona-un-circuito-electrónico), los bits son 0 y 1 que se representan utilizando niveles de[ voltaje](https://es.wikipedia.org/wiki/Tensi%C3%B3n_(electricidad) "Wikipedia - Voltaje | Tensión"). Un nivel alto de voltaje (5 voltios) representa un 1 y un nivel bajo de voltaje (0 voltios) representa un 0.
 
-La forma de esta comunicación estuvo siendo pensada por la humanidad a medida del tiempo por lo que
+Este tipo de comunicación **no surgió de la nada:** fue el resultado de décadas de experimentación y comprensión de cómo controlar el flujo de electricidad.
 
-Esas transiciones atraves de niveles de voltaje van a ocurrir en intervalos de tiempo muy precisos (Segundos, Milisegundos e incluso Nanosegundos) el qué tan chiquito es este intervalo de tiempo depende de la velocidad del sistema. Esta misma velocidad es la velocidad de los procesadores
+Esas transiciones a través de niveles de voltaje van a ocurrir en intervalos de tiempo muy precisos ([Segundos](https://es.wikipedia.org/wiki/Segundo "Wikipedia - Segundo"), [Milisegundos](https://es.wikipedia.org/wiki/Milisegundo "Wikipedia - Milisegundos") e incluso [Nanosegundos](https://es.wikipedia.org/wiki/Nanosegundo "Wikipedia - Nanosegundo")) **el qué tan chiquito es este intervalo de tiempo depende de la velocidad del sistema.** Esta misma velocidad es la velocidad de los [procesadores](https://es.wikipedia.org/wiki/Unidad_central_de_procesamiento "Wikipedia - CPU | Unidad Central de Procesamiento").
 
-El telegrafo fue el primer sistema de la humanidad que utiliza pulsos electricos para enviar un mensaje que en vez de 0 y 1 utilizaban una señal corta y otra más prologada, como un tono corto . y un tono largo -
+<img src="https://upload.wikimedia.org/wikipedia/commons/d/d3/AnalogClockAnimation2_3hands_1h_in_realtime.gif">
 
-Todo esto con un codigo en donde cada letra correpondia a cierto grupo de tonos. A esto se le conoce como código morse
+*Imagen tomada de: https://es.wikipedia.org/wiki/Segundo*
 
-En una computadora que utiliza microships para procesar voltajes precisos que se representan en 0 y 1 se decidio crear un sistema en donde una serie de numeros corresponde a una serie de letras y a esto se le llama la tabla ASCCI
+El [telégrafo](https://es.wikipedia.org/wiki/Tel%C3%A9grafo "Wikipedia - Telégrafo") fue el primer sistema de la humanidad que utilizaba pulsos eléctricos para enviar un mensaje que en vez de 0 y 1, utilizaban una señal corta y otra más prologada, como un tono corto ( **.** ) y un tono largo ( **-** ) .
 
-(Visto en la lectura de [Como Funciona Internet y las computadoras](#))
+Todo esto con un código en donde cada letra correpondia a cierto grupo de tonos. A esto se le conoce como [código morse.](https://es.wikipedia.org/wiki/C%C3%B3digo_morse "Wikipedia - Código Morse")
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/e/e9/International_Morse_code.png">
+
+*Imagen Tomada de: https://es.wikipedia.org/wiki/C%C3%B3digo_morse*
+
+En una computadora que utiliza [micro chips](https://es.wikipedia.org/wiki/Micro_Chips "Wikipedia - Micro Chips") para procesar voltajes precisos que se representan en 0 y 1 se decidió crear un sistema en donde una serie de numeros corresponde a una serie de letras y a esto se le llama [la tabla ASCCI.](https://es.wikipedia.org/wiki/ASCII "Wikipedia - ASCCI")
 
 >Anteriormente para escribir @ se tenia que escribir con alt + 64 pues el signo " @ " corresponde al numero 64 de la tabla ASCCI
 
-**¿Cómo tranformamos los pulsos electricos en esas letras?**
+>Visto en la lectura: [Como Funciona Internet y las computadoras](https://github.com/santiagoencodigo/Desarrollo-Web-Profesional/blob/main/Docs/1.%20Introducci%C3%B3n%20a%20la%20Web%20Historia%20y%20Funcionamiento%20de%20Internet.md#traducci%C3%B3n-de-texto-a-binario-usando-c%C3%B3digo-ascii)
 
-Nosotros los seres humanos estamos acostumbrados a contar en base 10 porque tenemos 10 dedos en nuestras manos pues nosotros somos de escribir del 1 al 9 y una vez terminamos de llegar al 9 volvemos a contar con nuesstros dedos y llegamos al 10 y otra vez: 11, 12, 13... y luego volvemos a agregarle otro numero llegando asi al 20, 30, 40, 50 y asi infinitamente.
+**¿Cómo tranformamos los pulsos eléctricos en esas letras?**
+
+Los seres humanos contamos en base 10 por una razón muy simple: tenemos 10 dedos en las manos. Desde niños aprendemos a contar del 1 al 9, y cuando se nos acaban los dedos, empezamos otra vez, agregando un nuevo digito, Así nacen el 10, el 11, el 12... y cuando llegamos al 20, repetimos el proceso (30, 40, 50...). Este ciclo se repite infinitamente.
+
+Sin darnos cuenta, construimos todo un sistema númerico a partir de nuestras propias manos.
 
 **Esto es tan normal que no pensamos que pueden haber alternativas**
 
-En programación nosotros utilizamos varias bases por ejemplo la 
+En programación nosotros utilizamos varias bases por ejemplo:
 
-HEXADECIMAL: Que son una serie de numeros que van del 0 al 15 en donde: 123456789ABCDF
+* [Hexadecimal](https://es.wikipedia.org/wiki/Sistema_hexadecimal "Wikipedia - Hexadecimal"): Que son una serie de numeros que van del 0 al 15 en donde: 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, F = 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13,14, 15.
 
-Binario es solamente 0 y 1, en donde a partir del orden que tenemos estos numeros podemos representar grandes cantidades de datos.
+* [Binario](https://es.wikipedia.org/wiki/Sistema_binario "Wikipedia - Sistema Binario | Sistema Díatico"): es solamente 0 y 1, en donde a partir del orden que tenemos de estos numeros podemos representar grandes cantidades de datos.
 
-Que se peude pensarlo como que en un BYTE tenemos 8 numeros diferentes en donde cada uno de los numeros podemos pensarlo como una potencia
+un [BYTE](https://es.wikipedia.org/wiki/Byte "Wikipedia - Byte") es un conjunto de 8 numeros en donde cada uno de los numeros podemos pensarlo como una potencia:
 
-por lo que 128, 64, 32, 16, 8, 4, 2, 1 = 1, 1, 1, 1, 1, 1, 1, 1 = 255
+    128, 64, 32, 16, 8, 4, 2, 1 = 1, 1, 1, 1, 1, 1, 1, 1 = 255
 
-Por lo que tenemos 255 combinaciones diferentes de numeros. Por lo esos mismos con las 255 combinaciones de carácteres diferentes que se encuentran en la talba ASSCCI e incluso tambien se representan caraceteres que no son letras como el:
+Por lo que tenemos 255 combinaciones diferentes de numeros, equivalentes con las 255 combinaciones de carácteres diferentes que se encuentran en la talba ASCCI e incluso tambien se representan carácteres que no son letras como el:
 
-00001101 = ENTER = Salto de interlinea en un archivo
+    00001101 = ENTER = Salto de interlinea en un archivo
 
-Asi mismo como estos BYTES representan letras, tambien pueden representar calculos que debe hacer el procesador y es un estandar distinto que se le conoce ocmo ASSEMBLER
+Así mismo como estos BYTES representan letras, tambien pueden representar cálculos que debe hacer el procesador y es un estandar distinto que se le conoce como [Assembler | Ensamblador](https://es.wikipedia.org/wiki/Lenguaje_ensamblador "Wikipedia - Assembler | Ensamblador")
 
-Por qué un conjunto de 8 numeros y no 7, 6, 9?
+**¿Por qué un conjunto de 8 numeros y no 7, 6, 9?**
 
-Hay muchas razones historicas relacionadas conectadas con una de las empresas que creo la computacion moderna llamda IBM, pero en resumidas palabras los procesadores tienen 8 cables por dentro que hacen los calculos al mismo tiempo es la forma más barata y eficiente de prepararlos y esto es lo que hizo a que nos acostumbraramos a que fuerna 8.
+Hay muchas razones históricas relacionadas y conectadas directamente con una de las empresas que creo la computacion moderna llamada [IBM](https://www.ibm.com/mx-es "ibm.com"), pero en resumidas palabras los procesadores tienen 8 cables por dentro que hacen los calculos al mismo tiempo.
 
-Como dato curioso los procesadores de la union sovietica en los años 70 eran de 12 bits, 18 bits, 24 bits, o aveces 48 bits, pero sus computadoras no eran compatibles con las de occidente.
+* Es la forma más barata y eficiente de prepararlos y esto es lo que hizo a que nos acostumbraramos a que fueran 8.
+
+>Dato curioso: Los procesadores de la [unión soviética](https://es.wikipedia.org/wiki/Uni%C3%B3n_Sovi%C3%A9tica "Wikipedia - Unión Soviética") en los años 70 eran de 12 bits, 18 bits, 24 bits, o aveces 48 bits, [pero sus computadoras no eran compatibles con las de occidente.](https://es.wikipedia.org/wiki/Historia_de_la_inform%C3%A1tica_en_la_Uni%C3%B3n_Sovi%C3%A9tica "Wikipedia - Historia de la informática en la Unión Soviética")
+
+---
 
 Los bits estan en todas partes y posiblemente esten más presentes en nuestra vida de lo que usualmente creemos por ejemplo:
 
-Una dirección IP como 192.168.1.1 que es una combinación de 4 bytes para identifar una computadora dentro de una red y como cada uno de estos numeros esta dentro de un byte, no supera el numero del 255.
+Una [dirección IP](https://es.wikipedia.org/wiki/Direcci%C3%B3n_IP "Wikipedia - Dirección IP") como 192.168.1.1 que es una combinación de 4 bytes para identifar una computadora dentro de una red y como cada uno de estos numeros esta dentro de un byte, no supera el numero del 255.
+
+<img src="https://www.avg.com/hs-fs/hubfs/Blog_Content/Avg/Signal/AVG%20Signal%20Images/Public%20vs.%20local%20IP%20addresses%20(Signal)/Public-vs-local-IP-addresses.png?width=1320&name=Public-vs-local-IP-addresses.png">
+
+Imagen Tomada de: https://www.avg.com/es/signal/public-vs-private-ip-address*
+
+---
 
 Una imagen es un grupo organizado de bytes en una cuadricula en donde cada punto de la cuadricula es un pixel en la pantalla. Por lo que los bytes determinan el color que tendra cada pixel y se define como la intensidad de brillo del color: Rojo, Verde y Azul que tiene cada pixel y asi se representa el color.
 
-👾👾👾 Los emogis tambien son bytes y requieren 4 de estos en la tabla ASCCI y se conoce como un estandar llamado UTF
+<img src = "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Pixeles_de_telefono.jpg/250px-Pixeles_de_telefono.jpg">
+
+*Imagen Tomada de: https://es.wikipedia.org/wiki/P%C3%ADxel*
+
+---
+
+Los [emogis](https://es.piliapp.com/emoji/list/ "piliapp.com/emoji") tambien son bytes y requieren 4 de estos en la tabla ASCCI y se conoce como un estandar llamado UTF
+
+👾👾👾🛡🛡💻⌨🖱😁👨‍💻🤍🖤👨‍🎓📃🤖👽🧠
 
 UTF = Unicode Transformation Format
 
@@ -367,9 +395,13 @@ En donde:
 * UTF - 16 que requiere de 16 bits
 * UTF - 32 que requiere de 32 bits
 
-Hay un consorsio que se encarga del estandar de lo que representa el conjunto de bits que se llama UNICODE STANDART CONSORSIUM, todos los fabricantes de electrónica deben reseptarlo para que nuestros sistemas puedan interoperar por eso mismo un smile es lo mismo en un pc, un celular un iphone y no puede ser otra cosa.
+Hay un [consorsio](https://es.wikipedia.org/wiki/Consorcio "Wikipedia - Definición Consorcio") que se encarga del estandar de lo que representa el conjunto de bits que se llama [UNICODE STANDART CONSORSIUM](https://www.unicode.org/consortium/consort.html "unicode.org/consortium"), todos los fabricantes de electrónica deben respetarlo para que nuestros sistemas puedan interoperar.
 
-Cuando programas en un lenguaje de programación todas estas instrucciones se traducen a bytes de assembler que el procesador entiende para ejecutar las operaciones y eso es lo que hacen los compiladores
+por eso mismo un 😂 (smile) es el mismo en un pc, en un celular, en un iphone **y no puede ser otra cosa.**
+
+---
+
+Cuando programas en un lenguaje de programación todas estas instrucciones se traducen a bytes de assembler, que el procesador entiende para ejecutar las operaciones y eso es lo que hacen los compiladores.
 
 
 
