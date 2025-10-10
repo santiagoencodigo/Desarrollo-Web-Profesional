@@ -275,23 +275,33 @@ Estos BITS almacenados en memoria viaja hacia el procesador a traves del circuit
 
 ## Qué es un bit y qué es un byte
 
-### Hondas
+### Ondas
 
-La luz es una honda que fluctúa de arriba hacia abajo como la ecuación del coseno o el seno en trigonometría dependiendo de la longitud de esa honda la podemos ver o no.
+La luz es una onda que fluctúa de arriba hacia abajo como la ecuación del coseno o el seno en [trigonometría](https://es.wikipedia.org/wiki/Trigonometr%C3%ADa "Wikipedia - Trigonometría") dependiendo de la longitud de esa honda la podemos ver o no.
 
-<img src="https://www.neurochispas.com/wp-content/uploads/2022/12/Diagrama-de-funcion-coseno-con-varias-soluciones-a-una-ecuacion-trigonometrica.png">
+<img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/%E0%B8%A5%E0%B8%B9%E0%B8%81%E0%B8%95%E0%B8%B8%E0%B9%89%E0%B8%A1%E0%B8%98%E0%B8%A3%E0%B8%A3%E0%B8%A1%E0%B8%8A%E0%B8%B2%E0%B8%95%E0%B8%B4.gif">
 
-*Imagen Tomada de: https://www.neurochispas.com/wiki/ejercicios-de-ecuaciones-trigonometricas/*
+*Imagen Tomada de: https://es.wikipedia.org/wiki/Frecuencia*
 
-El mapa de longitudes de honda se le llama espectro electromagentico. Las hondas de radio que utilizan los telefonos, audifonos bluetooth, el wifi o la señal del televisor, tambien es luz sólo que es invisible a nuestros ojos.
+El mapa de longitudes de onda se le llama [espectro electromagéntico](https://es.wikipedia.org/wiki/Espectro_electromagn%C3%A9tico "Wikipedia - Espectro Electromagnético"). Las ondas de radio que utilizan los telefonos, los audifonos [bluetooth](https://es.wikipedia.org/wiki/Bluetooth "Wikipedia - Bluetooth"), el wifi o la señal del televisor, tambien es luz sólo que es invisible a nuestros ojos.
 
-La luz visible la detiene los objetos fisicos o la refleja un espejo a escepto del vidrio, que la traspasa por que es trasparente.
+* La luz visible la detiene los objetos físicos
 
-Para las hondas de radio que tienen una amplitud tan amplia, muchos objetos físicos son trasparentes y los atraviesa. Asi una antena aunque este detras de una paared ve la luz que emite una señal de radio y luego en el circuito la convierte en electricidad.
+* La luz la refleja un espejo
 
-La humanidad descubrio que con esas vibraciones las hacemos conectar con una membrana y la hacemos vibrar, la vibración de la membrana es equivalente a sonido. Asi funcionan las radios.
+* La luz traspasa el vidrio porque es trasparente.
 
->Se puede observar esa honda cuando tu a un parlante le echas agua.
+Para las [ondas de radio](https://es.wikipedia.org/wiki/Ondas_de_radio "Wikipedia - Ondas de Radio"), algunas tienen una amplitud muy grande, por lo que muchos objetos resultan prácticamente físicos, permitiendo que sean atravesados. De esta manera, una antena puede captar una señal de radio incluso si está detrás de una pared, ya que estas ondas las atraviesan y luego el circuito convierte esta señal en electricidad.
+
+<img src="https://conectad.es/images/2019/04/antenas-lte-4g.jpg">
+
+*Imagen Tomada de: https://conectad.es/antenas-lte-4g/*
+
+La humanidad descubrió que con esas [vibraciones](https://es.wikipedia.org/wiki/Vibraci%C3%B3n "Wikipedia - Vibraciones"), si las hacemos conectar con una membrana y la hacemos vibrar, la vibración de la membrana es equivalente a sonido. *Así mismo funcionan las radios.*
+
+Podemos observar cómo se comporta una onda cuando le colocamos agua sobre la superficie de un parlante: al reproducir sonido, las vibraciones del aire se transmiten al agua, formando patrones visibles de movimiento.
+
+Video Recomendado: https://www.youtube.com/watch?v=uENITui5_jU
 
 ---
 
