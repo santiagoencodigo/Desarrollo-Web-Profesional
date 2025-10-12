@@ -305,3 +305,134 @@ deja que yo pueda ajustar su tamaño, márgenes y paddings como si fuera un bloc
 
 
 /* 9. Botones */
+
+.button {
+    display:inline-block;
+    padding: 12px 24px;
+    margin:8px;
+    font-size: 16px;
+    font-weight:600;
+    text-align:center;
+    border: 2px solid transparent;
+    cursor:pointer;
+    text-decoration:none;
+}
+
+.button--primary {
+    background-color: #2563eb;
+    color: #ffffff;
+    border-color: #2563eb;
+}
+
+.button--primary:hover {
+    background-color: #1d4ed8;
+    color: #ffffff;
+    border-color: #1d4ed8;
+    text-decoration: none;
+}
+
+.button--secundary:hover {
+    background-color: #f0f4ff;
+    text-decoration:none;
+}
+
+.button--large {
+    padding: 16px 32px;
+    font-size: 18px;
+}
+
+
+/* 10. About Section */
+
+.about {
+    padding: 48px 0;
+}
+
+.about__container {
+    max-width:800px;
+    margin: 0 auto;
+}
+
+.about__title {
+    text-align: center;
+    color: #1a1a1a;
+    margin-bottom: 32px;
+}
+
+.about__intro {
+    font-size:20px;
+    text-align: center;
+    color: #333333;
+    margin-bottom: 24px;
+}
+
+.about__text {
+    color: #666666;
+    margin-bottom:24px;
+}
+
+
+/* 11. Quote */
+
+.quote {
+    background-color: #f8f9fa;
+    padding:24px;
+    margin:32px 0;
+    border-left: 4px solid #2563eb;
+}
+
+.quote__text {
+    font-size:18px;
+    font-style:italic;
+    color: #333333;
+    margin-bottom: 16px;
+}
+
+.quote__author {
+    color: #666666;
+    font-size:14px;
+    display:block;
+    text-align:right;
+}
+
+
+
+/* 12. Values */
+
+.values {
+    margin-top: 48px;
+}
+
+.values__title {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.values__list {
+    padding: 0px;
+}
+
+.values__item {
+    padding: 16px;
+    margin-bottom: 16px;
+    background-color: #f8f9fa;
+    border: 1px solid #e0e0e0;
+}
+
+.values__item:hover {
+    background-color: #f0f4f8;
+    border-color: #2563eb;
+}
+
+.values__icon {
+    font-size:24px;
+    margin-right: 12px;
+}
+
+.values__item strong {
+    margin-right: 8px;
+}
+
+.values__item span {
+    color: #666666;
+}
