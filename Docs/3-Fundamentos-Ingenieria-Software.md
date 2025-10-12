@@ -12,6 +12,8 @@ Cómo funciona Internet, las computadoras, los chips, la inteligencia artificial
 
 - [3. Qué es un bit y qué es un byte](#qué-es-un-bit-y-qué-es-un-byte)
 
+- [4. Qué es un procesador (CPU) y la memoria  (RAM)](#qué-es-un-procesador-cpu-y-la-memoria-ram)
+
 
 <!-- Computación Básica -->
 
@@ -403,5 +405,88 @@ por eso mismo un 😂 (smile) es el mismo en un pc, en un celular, en un iphone 
 
 Cuando programas en un lenguaje de programación todas estas instrucciones se traducen a bytes de assembler, que el procesador entiende para ejecutar las operaciones y eso es lo que hacen los compiladores.
 
+## Qué es un procesador (CPU) y la memoria (RAM)
 
+Si un dispositivo tiene software se puede programar y si se puede programar tiene una CPU.
 
+Hay CPUs en todas partes: En computadores, televisores, telefonos, cajeros, pantallas de automoviles.
+
+En todo lo que tenga una pantalla con software programable, hay una CPU
+
+CPU = UNIDAD CENTRAL DE PROCESAMIENTO es donde las computadoras procesan datos, y la información la guarda en la memoria ram
+
+* Un ejemplo claro puede ser como cuando se asignan variables y se dice que:
+
+    A = 1
+    B = 2
+    C = A + B
+
+por lo que en el momento de razonar cuanto da el resultado C se puede pensar como la CPU, y el lugar en donde se guarda esa información la podemos pensar como una RAM.
+
+De forma analogica: Cuando vas a hacer la operación en un papel, el proceso pasa por tu cabeza, y tu al escribirlo en el papel es hay donde se guarda la información y esto es equivalente a la RAM
+
+INTEL Y AMD son las empresas más famosas que fabrican CPU
+
+INTEL con los procesadores XEON, INTEL
+
+AMD con el ryzen
+
+Hay marcas de CPU moviles asi como APPLE que fabrica una CPU que se llama M1 o la A1 y la M3, M4.
+
+Hauwei tiene su propia marca de procesadores
+
+Existe una marca llamada snapdragon
+
+Hay muchas marcas de CPU
+
+---
+
+Por dentro, una CPU es una serie de transisotres, de circuitos electrónicos que ejecutan operaciones matemáticas como sumar, restar, multiplicar y tambien mueven datos de la memoria, en donde los guarda, modifica o borra información.
+
+Cada proceso pasa por un ciclo que es el paso de la eléctricidad por el circuito de la CPU y esos ciclos del procesador los llamamos **HETZ** y es de esta forma que nosotros medimos la velocidad de una procesador que son los ciclos por segundo que una CPU puede usar para ejecutar esas operaciones.
+
+Si una CPU tiene 1 Mhz quiere decir que puede usar 1.000.000 ciclos por segundo para ejecutar operaciones
+
+* M de mega = Millon
+
+Si una CPU tiene 1Ghz quiere decir que puede usar 1.000.000.000 ciclos por segundo para ejecutar operaciones
+
+* G de Giga = Mil Millones
+
+Por lo que a más Hearts más corriente electrica fluye por el procesador y a más corriente más calor.
+
+Y sí hay más calor se puede quemar el chip
+
+Cuando tienes un chip y lo pones en la tarjeta madre de tu computadora casi siempre por encima se le agrega un ventilador porque los limites térmicos del chip son los que determinan los limites de velocidad del procesador.
+
+A más caliente menos velocidad.
+
+A más frio más corriente y por ende más velocidad.
+
+---
+
+Al diseñar un chip se tienen en cuenta muchas cosas como:
+
+La estrucuta de los transistores, las instrucciones.
+
+la disipación térmica del calor para poder hacerlos más veloces, 
+
+Las CPU y en general todos los chips estan hechos del mismo atomo, el silicio.
+
+El silicio es un atomo que tiene 14 protones en el nucleo y por ende el atomo #14 en la tabla periodica y este se encuentra en toda parte porque de hecho, de silicio esta hecha la arena.
+
+Si nosotros tomamos la arena u otro tipo de arepa especializada y la limpiamos, para fundirla y luego quedar como un cristal.
+
+Ese cristal nosotros lo conocemos como Wafer de Silicio que es arena cristalizada con la que construimos chips.
+
+Para que la arena se convierta en chips, utilizamos la **herramienta más avanzada de la existencia humana**, una cosa que se llama LASERS LITROGRÁFICOS.
+
+>Laser Litografico extremo de ultravioleta
+
+>IBM RESEARCH CHANNEL
+
+El cristal de silicio en forma de circulo conocido como oblea entra a una maquina llamada Laser Litrografico extremo de ultravioleta, que esta maquina por dentro tiene un vacio como el del espacio.
+
+Una vez dentro, un laser le dispara a una pequeña microscopica gota de estaño, generando asi una serie de reflejos de luz laser.
+
+Que luego un sistema de espejos con un liso absoluto en una estructura increiblemente fina rebotan hasta llegar a un laser hiperenfocado (Esta es la parte EXTREMO ULTRAVIOLETA) que atraviesa una mascara fotografica, (Como el negativo de una fotografia vieja, en la parte de atras tiene un mapa o que tiene como plantilla o mascara, la estructura de como deben estar organizados los atomos de silicio
