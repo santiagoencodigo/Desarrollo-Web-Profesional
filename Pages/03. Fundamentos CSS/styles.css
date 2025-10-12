@@ -436,3 +436,300 @@ deja que yo pueda ajustar su tamaño, márgenes y paddings como si fuera un bloc
 .values__item span {
     color: #666666;
 }
+
+
+
+/* 13. Projects Section */
+
+.projects {
+    padding: 64px 0;
+    background-color: #f8f9fa;
+}
+
+.projects__container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.projects__title {
+    text-align:center;
+    margin-bottom: 16px;
+}
+
+.projects__description {
+    text-align: center;
+    color: #666666;
+    margin-bottom: 48px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.projects__grid {
+    padding: 0 20px;
+}
+
+
+
+/* 14. Project Card */
+
+.project {
+    background-color: #ffffff;
+    padding: 32px;
+    margin-bottom: 32px;
+    border: 1px solid #e0e0e0;
+}
+
+.project:hover {
+    border-color: #2563eb;
+}
+
+.project--featured {
+    border: 2px solid #2563eb;
+    position:relative;
+}
+
+.project__badge {
+    background-color: #2563eb;
+    color: #ffffff;
+    padding: 4px 12px;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-bottom: 16px;
+}
+
+.project__title {
+    color: #1a1a1a;
+    margin-bottom: 16px;
+}
+
+.project__description {
+    color: #666666;
+    margin-bottom: 24px;
+}
+
+.project__subtitle {
+    font-size: 16px;
+    color: #333333;
+    margin-top: 24px;
+    margin-bottom: 12px;
+}
+
+.project__learnings {
+    list-style: disc;
+    padding-left:24px;
+    margin-bottom: 24px;
+}
+
+.project__learnings li {
+    color:  #666666;
+    margin-bottom: 8px;
+}
+
+.project__techonologies {
+    margin-bottom: 24px;
+}
+
+.tag {
+    display: inline-block;
+    background-color:#e0f2fe;
+    color: #0369a1;
+    padding: 4px 12px;
+    margin-right: 8px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.project__links {
+    text-align:left;
+}
+
+.project__link {
+    display: inline-block;
+    margin-right: 16px;
+    font-weight: 600;
+}
+
+
+
+/* 15. Skills Section */
+
+.skills {
+    padding: 64px 0;
+}
+
+.skills__container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.skills__title {
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.skills__subtitle {
+    text-align: center;
+    color: #666666;
+    margin-bottom: 32px;
+}
+
+.skills__list {
+    margin-bottom: 48px;
+}
+
+.skill {
+    margin-bottom: 32px;
+}
+
+.skill__name {
+    margin-bottom:8px;
+    color: #1a1a1a;
+}
+
+.skill__bar {
+    background-color: #e0e0e0;
+    height: 24px;
+    position: relative;
+    margin-bottom: 8px;
+}
+
+.skill__progress {
+    background-color: #2563eb;
+    height: 100%;
+    position:absolute;
+    top: 0;
+    left: 0;
+}
+
+.skill__progress--html {
+    width: 75%;
+}
+
+.skill__progress--css {
+    width: 60%;
+}
+
+.skill__progress--js {
+    width:20%;
+}
+
+.skill__porcentage {
+    color: #666666;
+    font-size: 14px;
+}
+
+
+/* 16. Learnings */
+
+.learning {
+    background-color: #f8f9fa;
+    padding: 24px;
+}
+
+.learning__title {
+    margin-bottom: 16px;
+    color: #1a1a1a;
+}
+
+.learning__list {
+    list-style: disc;
+    padding-left: 24px;
+}
+
+.learning__item {
+    color: #666666;
+    margin-bottom: 8px;
+}
+
+
+
+/* 17. Contact Section */
+
+
+.contact {
+    padding: 64px 0;
+}
+
+.contact__container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align:center;
+}
+
+.contact__title {
+    margin-bottom: 16px;
+}
+
+.contact__description {
+    color: #666666;
+    margin-bottom: 48px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact__methods {
+    margin-bottom: 48px;
+}
+
+.contact__method {
+    display: inline-block;
+    margin: 0 32px 32px;
+    text-align:center;
+}
+
+.contact__method-title {
+    font-size: 18px;
+    margin-bottom: 8px;
+    color: #1a1a1a;
+}
+
+.contact__link {
+    color: #2563eb;
+    font-weight: 600;
+}
+
+
+
+/* Footer */
+
+.footer {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    padding: 48px 0;
+    text-align:center;
+}
+
+.footer__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer__nav {
+    margin-bottom: 24px;
+}
+
+.footer__link {
+    color: #ffffff;
+    margin: 0 16px;
+    display: inline-block;
+}
+
+.footer__link:hover {
+    color: #93c5fd;
+    text-decoration: none;
+}
+
+.footer__copyright {
+    color: #9ca3af;
+    margin-bottom: 8px;
+}
+
+.footer__credits {
+    color: #9ca3af;
+    font-size: 14px;
+}
