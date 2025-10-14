@@ -523,3 +523,84 @@ El ultimo formato de color es en donde directamente se le agrega el nombre del c
     color: white;
 
 
+## Variables CSS
+
+Las variables de CSS son la forma más simple y robusta de asegurar consistencia visual
+
+>Funcional para acelerar cambios globales y evitar repetir código.
+
+Son totalmente importanes cuando el proyecto empieza a ser muy grande. Podemos utilizar variables para no tener que replicar codigo y si vamos a hacer cambios, no tendriamos que realizar el cambio en cada uno de los elementos modificados si no solamente en la variable.
+
+es por medio de un pseudoselector:
+
+    :root {
+        --(nombre-de-la-variable): #2eecc61
+        --color-primary: #414144
+        --color-secundary: #3498db
+        --space: 20px;
+    }
+
+    para ejecutar estas variables:
+
+    .example { 
+        background: var(--color-secundary)
+    }
+
+    .button-primary { background: var(--color-primary); }
+
+
+## Degradados
+
+De arriba hacia abajo:
+
+    background: linear-gradient(#3498db, #9d59d6)
+
+Si queremos ajustar la dirección del color
+
+    background: linear-gradient(to right, #134940, #103494);
+
+De forma diagonal
+
+    background: linear-gradient(to bottom right, #134141, #564678);
+
+Ahora si lo quermos de forma circular
+
+    background: radial-gradient(circle, #f39c12, #e74c33);
+
+Ahora si queremos de arriba hacia la izquierda
+
+    background: radial-gradient(at top left, #912414 #415155)
+
+Pero entonce si ahora si queremos varios colores
+
+    background: linear-gradient(to right, red, green, pink, orange, blue);
+
+## Sombras y Bordes
+
+Generalmente utilizamos los bordes para mirar qué espacio estan ocupando los elementos. Las sombras y los bordes peuden tener más usos (dar un nivel visual diferente).
+
+>con min-width el elemento se hará tan chiquito a medida de la pantalla hasta cierto tamaño.
+
+Sombra Externa: 
+
+    box-shadow: 5px 5px #888;
+
+Sombra Interna:
+
+    box-shadow: inset 0 0 10px #888;
+
+¿Cómo agregarle sombra a los textos?
+
+    text-shadow: 2px 2px 5px #888;
+
+Al hacer más ciruclares algunas tarjetas y aumentar su estilo de forma moderna
+
+    border: 1px solid black;
+    border-radius:5px;
+
+    border-radius: 15px; Es más circular
+
+    border-radius: 50%; Deja el elemento totalmente circular
+
+>Usa display: inline-block para que, si hay espacio, se coloquen en línea.
+
