@@ -577,7 +577,7 @@ Pero entonce si ahora si queremos varios colores
 
 ## Sombras y Bordes
 
-Generalmente utilizamos los bordes para mirar qué espacio estan ocupando los elementos. Las sombras y los bordes peuden tener más usos (dar un nivel visual diferente).
+Generalmente utilizamos los bordes para mirar qué espacio estan ocupando los elementos. Las sombras y los bordes pueden tener más usos (dar un nivel visual diferente).
 
 >con min-width el elemento se hará tan chiquito a medida de la pantalla hasta cierto tamaño.
 
@@ -604,3 +604,43 @@ Al hacer más ciruclares algunas tarjetas y aumentar su estilo de forma moderna
 
 >Usa display: inline-block para que, si hay espacio, se coloquen en línea.
 
+---
+
+## Introducción Flexbox
+
+configura el contenedor con display: flex, centra el contenido, controla el crecimiento con flex-grow y el atajo flex, y alinea elementos con align-self.
+
+La alineación en CSS dejó de ser un dolor de cabeza. Nos ayudara a posicionar el contenido en los contenedores.
+
+Flexbox simplifica la tarea de posicionar contenido dentro de los contenedores.
+
+El primer paso para utilizar esta herramienta es activar el display flex por lo que:
+
+    display:flex;
+
+La propiedad de justify content controla la alienación y distribución del item.
+
+Controla la alineación y distribución a lo largo del eje principal del contenedor.
+
+centra los items en el eje transversal
+
+aling-items:center;
+
+---
+
+## Flexbox Avanzado
+
+text-align: centra el texto de su contenedor
+
+flex-grow permite que los items crezcan para ocuparlo. Así controlas la proporción de crecimiento entre elementos vecinos de forma simple.
+
+0: no crece para ocupar espacio extra.
+1: crece proporcionalmente al resto que también tiene 1.
+2: crece el doble respecto a los que tienen 1.
+
+    flex:1;
+    flex:2;
+    flex:3;
+
+
+align-self
