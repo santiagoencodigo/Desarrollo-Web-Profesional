@@ -644,3 +644,27 @@ flex-grow permite que los items crezcan para ocuparlo. Así controlas la proporc
 
 
 align-self
+
+---
+
+## GRID
+
+Con CSS Grid puedes posicionar contenido en dos ejes a la vez de forma clara y escalable. Activa el modelo con display: grid, define columnas con grid-template-columns usando fracciones fr, automatiza con la función repeat() y controla el espacio interno con gap. Verás un grid 2×2, cómo repartir 1fr 2fr 1fr, y cuándo preferir gap en lugar de margin.
+
+CSS Grid organiza elementos en columnas y filas simultáneamente, mientras que flexbox trabaja en un eje a la vez (horizontal o vertical). 
+
+* Grid se ocuparia para posisionar las etiquetas contenedoras como, header, main, footer.
+
+* Flex se ocuparia para posicionar el contenido que este dentro de las etiquetas contenedoras.
+
+Nos va a ayudar a posicionar de mejor forma, flex nos permitia orientar un mismo contenido
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr 1fr;
+
+>La unidad fr es exclusiva de Grid pues representa una fracción del espacio disponible del contenedor.
+
+    grid-template-columns: repeat (1,2fr);
+
+    gap

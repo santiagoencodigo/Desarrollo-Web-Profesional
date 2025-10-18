@@ -1,49 +1,78 @@
 /* Variables */
 
 :root {
-    --gray_main_color:rgb(31, 30, 30);
+    --gray_main_color:rgb(39, 38, 38);
+    --black_main_color:rgb(31, 30, 30);
+    --gray_secundary_color: rgb(67, 67, 67);
+    --orange_secundary_color:rgb(253, 166, 4);
 }
+
+
+/* Edición de Atributos Generales */
 
 *{
     margin:0px;
     padding:0px;
 }
 
-html{
+body {
     background-color:var(--gray_main_color);
 }
 
-.container{
+
+
+/* Inicio de Estilos */
+
+
+
+/* 1. Header */
+
+.header {
     display:flex;
     flex-direction:column;
-    justify-content: center;
     text-align:center;
     align-items: center;
-    padding:2rem;
 }
 
-h1{
-    margin-top:2rem;
-    font-size:4.5rem;
-    color:white;
+
+
+/* 2. Nav */
+
+.nav {
+    margin:0px;
+    width:100%;
+    background: var(--black_main_color);
 }
 
-p{
-    margin-top:3rem;
-    font-size:20px;
+.nav__section {
     display:flex;
+
+    flex-wrap:wrap;
+
     flex-direction:row;
-    color:white;
+
+    justify-content:center;
+    text-align:center;
+    
+    border-bottom:1px solid white;
+    /* background:gray; */
+
+    margin:0px;
+    padding:0;
+    height:100%;
+    width:100%;
 }
 
-#github-profile{
-    color:green;
-    cursor:pointer;
-    transition:1s;
-    margin:0px 5px 0px 5px;
+.nav__section li {
+    margin:0 0 0 0px;
+    padding:10px;
+
+    list-style: none;
+
+    height:100%;
 }
 
-a{
+.nav__section a{
     margin:0;
     color:black;
     /* display:block; */
@@ -53,9 +82,45 @@ a{
     height:100%;
 }
 
-a:hover{
+.nav__section a:hover {
+    background:var(--gray_secundary_color);
+    color: var(--orange_secundary_color);
+    height:100%;
+    padding:10px;
+}
+
+
+
+h1{
+    margin-top:2rem;
+    font-size:3rem;
     color:white;
 }
+
+.header p{
+    margin-top:3rem;
+    padding: 20px;
+    font-size:15px;
+
+    display:flex;
+    flex-direction:row;
+
+    background: radial-gradient(circle, #787878,#B8C4A9);
+    border:1px solid black;
+    border-radius: 5px;
+    color:white;
+    max-width:700px;
+}
+
+#github-profile{
+    color:green;
+    cursor:pointer;
+    transition:1s;
+    margin:0px 5px 0px 5px;
+}
+
+
+
 
 #github-profile:hover{
     border:1px solid green;
@@ -63,11 +128,11 @@ a:hover{
     padding:12px;
 }
 
-ul{
+.main__list ul{
     margin-top:3rem;
 }
 
-li{
+.main__list li{
     display:flex;
     margin:2rem;
     width:300px;
@@ -81,18 +146,15 @@ li{
     color:white;
 }
 
-li:hover{
+.main__list li:hover{
     background-color:black;
     color:white;
     transform:scale(1.1)
 }
 
 .list__item {
-    background:linear-gradient(to bottom right,rgb(254, 81, 0), rgb(237, 254, 0));
+    background:linear-gradient(to bottom right,rgb(0, 30, 254), rgb(237, 254, 0));
     transition:1s;
     max-width:1000px;
 }
 
-.list__item:hover {
-    background:linear-gradient(to bottom right, rgb(237, 254, 0) rgb(254, 81, 0));
-}
