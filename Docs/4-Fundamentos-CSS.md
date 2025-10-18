@@ -668,3 +668,69 @@ Nos va a ayudar a posicionar de mejor forma, flex nos permitia orientar un mismo
     grid-template-columns: repeat (1,2fr);
 
     gap
+
+---
+
+## Grid Avanzado
+
+Aprende a dominar CSS Grid con tres técnicas clave que simplifican la maquetación: grid areas, span y grid lines.
+
+>Con estos patrones se puede definir un layout completo
+
+    .grid-areas {
+        display: grid;
+        grid-template-areas:
+            "header header"
+            "sidebar content"
+            "footer footer";
+        grid-template-columns: 200px 1fr;
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+
+    /* Estilos base compartidos */
+        header, .sidebar, .content, footer {
+        padding: 20px;
+        text-align: center;
+        color: white;
+    }
+
+* display: grid activa el modelo de cuadrícula.
+
+* grid-template-areas dibuja el layout con nombres de áreas.
+
+* grid-template-columns define anchos (ej: 200px y 1fr).
+
+* gap y margin-bottom mejoran la separación visual.
+
+* grid-area enlaza cada bloque con su área del template.
+
+
+## ¿Qué son las grid lines y cómo posicionar por líneas?
+
+Las grid lines son las líneas delimitadoras de columnas y filas. En lugar de pensar en fracciones o span, defines desde qué línea hasta cuál colocar el elemento, tanto en columnas como en filas.
+
+    .grid-lines {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+
+    /* Posicionar por columnas: de la línea 1 a la 3 */
+
+    .box-1 {
+    grid-column: 1 / 3;
+    background: red;
+    }
+
+    /* Posicionar por filas: de la línea 1 a la 3 */
+
+    .box-2 {
+    grid-row: 1 / 3;
+    background: green;
+    }
+
+>grid-column: 1 / 3 ocupa desde la línea 1 hasta la 3 (dos columnas de ancho).
+
+>grid-row: 1 / 3 ocupa desde la línea 1 hasta la 3 (dos filas de alto).

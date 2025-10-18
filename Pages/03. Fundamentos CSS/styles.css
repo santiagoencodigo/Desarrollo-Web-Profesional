@@ -80,6 +80,32 @@ tr:nth-child(even) {
 
 /* Inicio de Código */
 
+
+
+/* Fuentes */
+
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+
+/* Variables */
+
+:root {
+    --font_color_primary: #333333;
+    --font_color_secundary: #666666;
+    --font_color_tertiary: #1a1a1a;
+
+    --font_color_white:white;
+    --font_color_lightgreen: #3c7c5a;
+
+    --main_color_primary:#691bd0; /* First Main Color Primary: #2563eb */
+    --main_color_secundary:#1d4ed8;
+
+    --background_color_lightgray: linear-gradient(to bottom right,#7600fd, #3c7c5a);
+}
+
+
+
 /* 1. Reset Básico */
 
 * {
@@ -89,10 +115,10 @@ tr:nth-child(even) {
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Work Sans", sans-serif;
     font-size: 16px;
     line-height: 1.6;
-    color: #333333;
+    color: var(--font_color_primary);
     background-color: #ffffff;
 }
 
@@ -103,10 +129,12 @@ h1,
 h2,
 h3,
 h4 {
-    font-weight: bold;
+    font-family: "Work Sans", sans-serif;
+    font-style: normal;
+    /* font-weight: bold; */
     line-height: 1.2;
     margin-bottom: 16px;
-    color: #1a1a1a;
+    color: var(--font_color_primary);
 }
 
 h1 {
@@ -141,17 +169,17 @@ strong {
 /* 3. Enlaces */
 
 a {
-    color: #2563eb;
+    color: var(--main_color_primary);
     text-decoration: none;
 }
 
 a:hover{
-    color: #1d4ed8;
+    color: var(--main_color_secundary);
     text-decoration: underline;
 }
 
 a:active {
-    color: #1e40af;
+    color: var(--main_color_secundary);
 }
 
 
@@ -187,7 +215,7 @@ header {
 }
 
 .header__tagline {
-    color: #666666;
+    color: var(--font_color_secundary);
     font-size: 14px;
 }
 
@@ -215,17 +243,17 @@ header {
 /* Este elemento esta en la misma línea que los demás (como si fuera un inline), pero
 deja que yo pueda ajustar su tamaño, márgenes y paddings como si fuera un bloc */
 
-    color:#333333;
+    color: var(--font_color_primary);
     font-weight: 500;
 }
 
 .nav__link:hover {
-    color:#2563eb;
+    color: var(--main_color_primary);
     text-decoration:none;
 }
 
 .nav__link:active {
-    color: #2563eb;
+    color: var(--main_color_primary);
     font-weight: bold;
 }
 
@@ -244,8 +272,9 @@ deja que yo pueda ajustar su tamaño, márgenes y paddings como si fuera un bloc
 .hero {
     padding: 64px 0;
     text-align: center;
-    background-color: #f0f4f8;
+    background: var(--background_color_lightgray);
     margin-bottom:48px;
+    width:100%;
 }
 
 .hero__container {
@@ -255,21 +284,22 @@ deja que yo pueda ajustar su tamaño, márgenes y paddings como si fuera un bloc
 }
 
 .hero__title {
+    font-weight: 900;
     font-size: 48px;
-    color: #1a1a1a;
+    color: var(--font_color_tertiary);
     margin-bottom:16px;
 }
 
 .hero__subtitle {
     font-size:24px;
-    color: #2563eb;
+    color: var(--font_color_white);
     margin-bottom: 24px;
-    font-weight: 600;
+    font-weight: 700;
 }
 
 .hero__description {
     font-size: 18px;
-    color: #666666;
+    color: var(--font_color_white);
     margin-bottom: 32px;
     max-width:600px;
     margin-left: auto;
@@ -294,13 +324,13 @@ deja que yo pueda ajustar su tamaño, márgenes y paddings como si fuera un bloc
     display:block;
     font-size: 32px;
     font-weight: bold;
-    color: #2563eb;
+    color: var(--font_color_tertiary);
     margin-bottom: 8px;
 }
 
 .stat__label {
     font-size: 14px;
-    color: #666666;
+    color: var(--font_color_white);
 }
 
 
@@ -319,21 +349,19 @@ deja que yo pueda ajustar su tamaño, márgenes y paddings como si fuera un bloc
 }
 
 .button--primary {
-    background-color: #2563eb;
+    background-color: var(--main_color_primary);
     color: #ffffff;
-    border-color: #2563eb;
+
+    border-radius:15px;
+    border-color: var(--font_color_white);
 }
 
 .button--primary:hover {
-    background-color: #1d4ed8;
+    background-color: var(--font_color_lightgreen);
     color: #ffffff;
-    border-color: #1d4ed8;
-    text-decoration: none;
-}
 
-.button--secundary:hover {
-    background-color: #f0f4ff;
-    text-decoration:none;
+    border-color: var(--font_color_white);
+    text-decoration: none;
 }
 
 .button--large {
@@ -355,19 +383,19 @@ deja que yo pueda ajustar su tamaño, márgenes y paddings como si fuera un bloc
 
 .about__title {
     text-align: center;
-    color: #1a1a1a;
+    color: var(--font_color_tertiary);
     margin-bottom: 32px;
 }
 
 .about__intro {
     font-size:20px;
     text-align: center;
-    color: #333333;
+    color: var(--font_color_primary);
     margin-bottom: 24px;
 }
 
 .about__text {
-    color: #666666;
+    color: var(--font_color_secundary);
     margin-bottom:24px;
 }
 
@@ -378,18 +406,18 @@ deja que yo pueda ajustar su tamaño, márgenes y paddings como si fuera un bloc
     background-color: #f8f9fa;
     padding:24px;
     margin:32px 0;
-    border-left: 4px solid #2563eb;
+    border-left: 4px solid var(--main_color_primary);
 }
 
 .quote__text {
     font-size:18px;
     font-style:italic;
-    color: #333333;
+    color: var(--font_color_primary);
     margin-bottom: 16px;
 }
 
 .quote__author {
-    color: #666666;
+    color: var(--font_color_secundary);
     font-size:14px;
     display:block;
     text-align:right;
@@ -420,8 +448,8 @@ deja que yo pueda ajustar su tamaño, márgenes y paddings como si fuera un bloc
 }
 
 .values__item:hover {
-    background-color: #f0f4f8;
-    border-color: #2563eb;
+    background: var(--background_color_lightgray);
+    border-color: var(--main_color_primary);
 }
 
 .values__icon {
@@ -434,7 +462,7 @@ deja que yo pueda ajustar su tamaño, márgenes y paddings como si fuera un bloc
 }
 
 .values__item span {
-    color: #666666;
+    color: var(--font_color_secundary);
 }
 
 
@@ -458,7 +486,7 @@ deja que yo pueda ajustar su tamaño, márgenes y paddings como si fuera un bloc
 
 .projects__description {
     text-align: center;
-    color: #666666;
+    color: var(--font_color_secundary);
     margin-bottom: 48px;
     max-width: 600px;
     margin-left: auto;
@@ -481,16 +509,16 @@ deja que yo pueda ajustar su tamaño, márgenes y paddings como si fuera un bloc
 }
 
 .project:hover {
-    border-color: #2563eb;
+    border-color: var(--main_color_primary);
 }
 
 .project--featured {
-    border: 2px solid #2563eb;
+    border: 2px solid var(--main_color_primary);
     position:relative;
 }
 
 .project__badge {
-    background-color: #2563eb;
+    background-color: var(--main_color_primary);
     color: #ffffff;
     padding: 4px 12px;
     font-size: 12px;
@@ -501,18 +529,18 @@ deja que yo pueda ajustar su tamaño, márgenes y paddings como si fuera un bloc
 }
 
 .project__title {
-    color: #1a1a1a;
+    color: var(--font_color_tertiary);
     margin-bottom: 16px;
 }
 
 .project__description {
-    color: #666666;
+    color: var(--font_color_secundary);
     margin-bottom: 24px;
 }
 
 .project__subtitle {
     font-size: 16px;
-    color: #333333;
+    color: var(--font_color_primary);
     margin-top: 24px;
     margin-bottom: 12px;
 }
@@ -524,7 +552,7 @@ deja que yo pueda ajustar su tamaño, márgenes y paddings como si fuera un bloc
 }
 
 .project__learnings li {
-    color:  #666666;
+    color:  var(--font_color_secundary);
     margin-bottom: 8px;
 }
 
@@ -572,7 +600,7 @@ deja que yo pueda ajustar su tamaño, márgenes y paddings como si fuera un bloc
 
 .skills__subtitle {
     text-align: center;
-    color: #666666;
+    color: var(--font_color_secundary);
     margin-bottom: 32px;
 }
 
@@ -586,7 +614,7 @@ deja que yo pueda ajustar su tamaño, márgenes y paddings como si fuera un bloc
 
 .skill__name {
     margin-bottom:8px;
-    color: #1a1a1a;
+    color: var(--font_color_tertiary);
 }
 
 .skill__bar {
@@ -597,7 +625,7 @@ deja que yo pueda ajustar su tamaño, márgenes y paddings como si fuera un bloc
 }
 
 .skill__progress {
-    background-color: #2563eb;
+    background-color: var(--main_color_primary);
     height: 100%;
     position:absolute;
     top: 0;
@@ -617,7 +645,7 @@ deja que yo pueda ajustar su tamaño, márgenes y paddings como si fuera un bloc
 }
 
 .skill__porcentage {
-    color: #666666;
+    color: var(--font_color_secundary);
     font-size: 14px;
 }
 
@@ -631,7 +659,7 @@ deja que yo pueda ajustar su tamaño, márgenes y paddings como si fuera un bloc
 
 .learning__title {
     margin-bottom: 16px;
-    color: #1a1a1a;
+    color: var(--font_color_tertiary);
 }
 
 .learning__list {
@@ -640,7 +668,7 @@ deja que yo pueda ajustar su tamaño, márgenes y paddings como si fuera un bloc
 }
 
 .learning__item {
-    color: #666666;
+    color: var(--font_color_secundary);
     margin-bottom: 8px;
 }
 
@@ -664,7 +692,7 @@ deja que yo pueda ajustar su tamaño, márgenes y paddings como si fuera un bloc
 }
 
 .contact__description {
-    color: #666666;
+    color: var(--font_color_secundary);
     margin-bottom: 48px;
     max-width: 600px;
     margin-left: auto;
@@ -684,11 +712,11 @@ deja que yo pueda ajustar su tamaño, márgenes y paddings como si fuera un bloc
 .contact__method-title {
     font-size: 18px;
     margin-bottom: 8px;
-    color: #1a1a1a;
+    color: var(--font_color_tertiary);
 }
 
 .contact__link {
-    color: #2563eb;
+    color: var(--main_color_primary);
     font-weight: 600;
 }
 
@@ -697,7 +725,7 @@ deja que yo pueda ajustar su tamaño, márgenes y paddings como si fuera un bloc
 /* Footer */
 
 .footer {
-    background-color: #1a1a1a;
+    background-color: var(--font_color_tertiary);
     color: #ffffff;
     padding: 48px 0;
     text-align:center;
