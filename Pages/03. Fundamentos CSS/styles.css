@@ -102,7 +102,10 @@ tr:nth-child(even) {
     --main_color_secundary:#1d4ed8;
     --main_color_tertiary:#eaeaea;
 
-    --background_color_lightgray: linear-gradient(to bottom right,#7600fd, #3c7c5a);
+    --background_color_lightgray:linear-gradient(to bottom right,#7600fd, #3c7c5a);
+    --background_color_lightgray-reverb:linear-gradient(to bottom right,#3c7c5a, #7600fd); 
+    --background_color_lightgray-left-right:linear-gradient(to left,#7600fd, #3c7c5a); 
+    
 }
 
 
@@ -493,7 +496,7 @@ deja que yo pueda ajustar su tamaño, márgenes y paddings como si fuera un bloc
 
 .projects {
     padding: 64px 0;
-    background-color: #f8f9fa;
+    background-image:url("../../Assets/img/2-cuadricula-negra.jpg");
 }
 
 .projects__container {
@@ -502,17 +505,25 @@ deja que yo pueda ajustar su tamaño, márgenes y paddings como si fuera un bloc
 }
 
 .projects__title {
+    font-size:35px;
     text-align:center;
+    font-weight:900;
+
     margin-bottom: 16px;
+    color: var(--main_color_tertiary);
 }
 
 .projects__description {
     text-align: center;
-    color: var(--font_color_secundary);
+    color: var(--main_color_tertiary);
+
     margin-bottom: 48px;
     max-width: 600px;
+
     margin-left: auto;
     margin-right: auto;
+
+    font-size:17px;
 }
 
 .projects__grid {
@@ -524,19 +535,31 @@ deja que yo pueda ajustar su tamaño, márgenes y paddings como si fuera un bloc
 /* 14. Project Card */
 
 .project {
-    background-color: #ffffff;
     padding: 32px;
     margin-bottom: 32px;
-    border: 1px solid #e0e0e0;
+
+    border: 3px solid var(--font_color_tertiary);
+    border-radius:15px;
+
+    background: var(--main_color_tertiary);
+
+    transition:1s;
 }
 
 .project:hover {
     border-color: var(--main_color_primary);
+    box-shadow: 2px 2px 15px var(--main_color_primary);
 }
 
 .project--featured {
-    border: 2px solid var(--main_color_primary);
+    border: 3px solid var(--font_color_lightgreen);
     position:relative;
+}
+
+.project--featured:hover {
+    box-shadow: 3px 3px 55px var(--font_color_lightgreen);
+    border: 3px solid var(--font_color_lightgreen);
+
 }
 
 .project__badge {
@@ -647,7 +670,7 @@ deja que yo pueda ajustar su tamaño, márgenes y paddings como si fuera un bloc
 }
 
 .skill__progress {
-    background-color: var(--main_color_primary);
+    background: var(--background_color_lightgray-left-right);
     height: 100%;
     position:absolute;
     top: 0;
@@ -710,38 +733,106 @@ deja que yo pueda ajustar su tamaño, márgenes y paddings como si fuera un bloc
 }
 
 .contact__title {
+    color: var(--font_color_tertiary);
+    text-shadow: 1px 1px 1px #888;
+
+    /* font-weight:900; */
+    font-size:28px;
     margin-bottom: 16px;
 }
 
 .contact__description {
-    color: var(--font_color_secundary);
-    margin-bottom: 48px;
-    max-width: 600px;
+    color: var(--font_color_tertiary);
+    margin-bottom: 28px;
+    max-width: 700px;
+
+    font-size: 18px;
+
     margin-left: auto;
     margin-right: auto;
 }
 
 .contact__methods {
-    margin-bottom: 48px;
-}
+    margin:48px 0 48px 0;
 
-.contact__method {
-    display: inline-block;
-    margin: 0 32px 32px;
+    display:flex;
+    flex-direction:row;
+
+    flex-wrap:wrap;
+
+    justify-content: center;
+    align-items: center;
     text-align:center;
 }
 
-.contact__method-title {
-    font-size: 18px;
-    margin-bottom: 8px;
+.contact__methods li {
+    padding: 0px;
+    margin:20px;
+
+    width:150px;
+    height:130px;
+
+    border:2px solid var(--main_color_primary);
+    border-radius:15px;
+
+    transition:1s;
+
+    overflow: hidden;
+}
+
+.contact__methods li:hover {
+    background-color: var(--main_color_primary);
+
+    border-color: var(--font_color_tertiary);
+    box-shadow:2px 2px 15px var(--main_color_primary) ;
+}
+
+.contact__methods li a {
+    display:flex;
+    flex-direction: column;
+    
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: none;
+
+    width:100%;
+    height:100%;
+
+    transition:1s;
+}
+
+.contact__methods li a:hover {
+    background: var(--main_color_tertiary);
+    border-color:var(--main_color_primary);
+    box-shadow:var(--font_color_secundary);
+
+    transform: scale(1.1);
+}
+
+.contact__methods li img {
+    width:50px;
+    height:50px;
+    position:relative;
+    transition:1s;
+}
+
+.contact__methods li:hover img {
+    transform:scale(1.08);
+}
+
+.contact__methods span {
+    display:block;
+
     color: var(--font_color_tertiary);
+    margin-bottom:10px;
+
+    transition:1s;
 }
 
-.contact__link {
-    color: var(--main_color_primary);
-    font-weight: 600;
+.contact__methods li:hover span {
+    font-weight: bold;
 }
-
 
 
 /* Footer */
@@ -767,10 +858,12 @@ deja que yo pueda ajustar su tamaño, márgenes y paddings como si fuera un bloc
     color: #ffffff;
     margin: 0 16px;
     display: inline-block;
+
+    transition:0.5s;
 }
 
 .footer__link:hover {
-    color: #93c5fd;
+    color: var(--main_color_primary);
     text-decoration: none;
 }
 
