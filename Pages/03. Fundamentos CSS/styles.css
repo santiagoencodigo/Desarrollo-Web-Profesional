@@ -92,7 +92,7 @@ tr:nth-child(even) {
 
 :root {
     --font_color_primary: #333333;
-    --font_color_secundary: #666666;
+    --font_color_secundary: #3d3d3d;
     --font_color_tertiary: #1a1a1a;
 
     --font_color_white:white;
@@ -100,6 +100,7 @@ tr:nth-child(even) {
 
     --main_color_primary:#691bd0; /* First Main Color Primary: #2563eb */
     --main_color_secundary:#1d4ed8;
+    --main_color_tertiary:#eaeaea;
 
     --background_color_lightgray: linear-gradient(to bottom right,#7600fd, #3c7c5a);
 }
@@ -119,7 +120,9 @@ body {
     font-size: 16px;
     line-height: 1.6;
     color: var(--font_color_primary);
-    background-color: #ffffff;
+    background-color: var(--main_color_tertiary);
+
+    overflow-x: hidden; /* Quitar Scroll Vertical*/
 }
 
 
@@ -192,31 +195,14 @@ ul {
 
 /* 5. Header */
 
-header {
-    background-color: #f8f9fa;
-    border-bottom:1px solid #e0e0e0;
-    padding:24px 0;
+.header {
+    background:var(--main_color_tertiary);
+    padding:20px 0 20px 0;
 }
 
 .header__container {
-    max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
-}
-
-.header__brand {
-    text-align: center;
-    margin-bottom:24px;
-}
-
-.header__name{
-    color: #1a1a1a;
-    margin-bottom: 8px;
-}
-
-.header__tagline {
-    color: var(--font_color_secundary);
-    font-size: 14px;
 }
 
 
@@ -233,22 +219,31 @@ header {
 .nav__item {
     display:inline-block;
     margin: 0 16px;
+    
+    border-radius:15px;
+
+    transition:0.7s;
 }
 
 .nav__link {
     padding: 8px 12px;
-
     display: inline-block;
 
 /* Este elemento esta en la misma línea que los demás (como si fuera un inline), pero
 deja que yo pueda ajustar su tamaño, márgenes y paddings como si fuera un bloc */
 
-    color: var(--font_color_primary);
+    color: var(--font_color_tertiary);
     font-weight: 500;
+
+    transition: 0.7s;
+    border-radius:15px;
 }
 
 .nav__link:hover {
-    color: var(--main_color_primary);
+    color: var(--font_color_white);
+    background: var(--font_color_tertiary);
+
+    border-radius:15px;
     text-decoration:none;
 }
 
@@ -262,8 +257,8 @@ deja que yo pueda ajustar su tamaño, márgenes y paddings como si fuera un bloc
 
 .main {
     margin:0 auto;
-    max-width: 1200px;
-    padding: 0 20px;
+    width:100%;
+    padding: 0 0px;
 }
 
 
@@ -274,13 +269,13 @@ deja que yo pueda ajustar su tamaño, márgenes y paddings como si fuera un bloc
     text-align: center;
     background: var(--background_color_lightgray);
     margin-bottom:48px;
-    width:100%;
+    width: 100%;
 }
 
 .hero__container {
     max-width: 800px;
     margin: 0 auto;
-    padding:0 20px;
+    padding:0px;
 }
 
 .hero__title {
@@ -349,18 +344,22 @@ deja que yo pueda ajustar su tamaño, márgenes y paddings como si fuera un bloc
 }
 
 .button--primary {
-    background-color: var(--main_color_primary);
+    background-color: var(--font_color_tertiary);
     color: #ffffff;
 
     border-radius:15px;
-    border-color: var(--font_color_white);
+    /* border-color: var(--font_color_white); */
+
+    width:10rem;
+
+    transition:0.7s;
 }
 
 .button--primary:hover {
-    background-color: var(--font_color_lightgreen);
-    color: #ffffff;
+    background-color: var(--font_color_white);
+    color: var(--font_color_tertiary);
 
-    border-color: var(--font_color_white);
+    /* border-color: var(--font_color_tertiary); */
     text-decoration: none;
 }
 
