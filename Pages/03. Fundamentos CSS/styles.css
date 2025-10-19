@@ -134,7 +134,7 @@ h3,
 h4 {
     font-family: "Work Sans", sans-serif;
     font-style: normal;
-    /* font-weight: bold; */
+    font-weight: bold;
     line-height: 1.2;
     margin-bottom: 16px;
     color: var(--font_color_primary);
@@ -197,7 +197,7 @@ ul {
 
 .header {
     background:var(--main_color_tertiary);
-    padding:20px 0 20px 0;
+    padding:10px 0 10px 0;
 }
 
 .header__container {
@@ -283,6 +283,7 @@ deja que yo pueda ajustar su tamaño, márgenes y paddings como si fuera un bloc
     font-size: 48px;
     color: var(--font_color_tertiary);
     margin-bottom:16px;
+    text-shadow: 1px 1px 1px #888;
 }
 
 .hero__subtitle {
@@ -393,30 +394,27 @@ deja que yo pueda ajustar su tamaño, márgenes y paddings como si fuera un bloc
     margin-bottom: 24px;
 }
 
-.about__text {
-    color: var(--font_color_secundary);
-    margin-bottom:24px;
-}
 
 
 /* 11. Quote */
 
 .quote {
-    background-color: #f8f9fa;
+    background-color: var(--font_color_tertiary);
     padding:24px;
     margin:32px 0;
+    border-radius:15px;
     border-left: 4px solid var(--main_color_primary);
 }
 
 .quote__text {
     font-size:18px;
     font-style:italic;
-    color: var(--font_color_primary);
+    color: var(--font_color_white);
     margin-bottom: 16px;
 }
 
 .quote__author {
-    color: var(--font_color_secundary);
+    color: var(--font_color_white);
     font-size:14px;
     display:block;
     text-align:right;
@@ -427,11 +425,12 @@ deja que yo pueda ajustar su tamaño, márgenes y paddings como si fuera un bloc
 /* 12. Values */
 
 .values {
-    margin-top: 48px;
+    margin-top: 88px;
 }
 
 .values__title {
     text-align: center;
+    color: var(--font_color_tertiary);
     margin-bottom: 32px;
 }
 
@@ -442,26 +441,50 @@ deja que yo pueda ajustar su tamaño, márgenes y paddings como si fuera un bloc
 .values__item {
     padding: 16px;
     margin-bottom: 16px;
-    background-color: #f8f9fa;
-    border: 1px solid #e0e0e0;
+    background: #f8f9fa;
+
+    border: 2px solid var(--main_color_primary);
+    border-radius:15px;
+
+    transition:1s;
 }
 
 .values__item:hover {
-    background: var(--background_color_lightgray);
+    background: var(--font_color_tertiary);
     border-color: var(--main_color_primary);
+    border: 2px solid var(--main_color_primary);
+
+
+    /* BOX SHADOW: desplazamiento x - desplazamiento y - difuminado - expansión color */
+    box-shadow:0px 4px 15px 0px var(--font_color_lightgreen);
+
+    transform:scale(1.1)
 }
 
 .values__icon {
     font-size:24px;
     margin-right: 12px;
+
+    transition:1s;
 }
 
 .values__item strong {
     margin-right: 8px;
+    transition:1s;
 }
 
+.values__item:hover strong {
+    color: var(--main_color_tertiary);
+}
+
+
 .values__item span {
-    color: var(--font_color_secundary);
+    color: var(--font_color_tertiary);
+    transition:1s;
+}
+
+.values__item:hover span {
+    color: #e0e0e0;
 }
 
 
