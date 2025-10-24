@@ -734,3 +734,143 @@ Las grid lines son las líneas delimitadoras de columnas y filas. En lugar de pe
 >grid-column: 1 / 3 ocupa desde la línea 1 hasta la 3 (dos columnas de ancho).
 
 >grid-row: 1 / 3 ocupa desde la línea 1 hasta la 3 (dos filas de alto).
+
+
+---
+
+## Media Queries / Viewport
+
+Ya empezamos con el tema de responsividad, muchas veces en el computador las vistas son buenas, pero puede que en tablets, celulares y en dispositivos con pantallas más pequeñas no se vea de la mejor forma.
+
+La idea es desarrollar interfaces que se vean bien en cualquier pantalla con responsive design en CSS.
+
+A partir de un enfoque mobile first, para priorizar contenido, usar flexbox y configurar media queries con puntos de quiebre claros para tablet y desktop. Es importante el ajuste tipografías con rem y controlar la visibilidad por dispositivo sin perder accesibilidad.
+
+No se puede navegar de la misma forma.
+
+Mobile First: Es una técnica que utilizaremos para pensar en el diseño primero para el celular y luego para desktop
+
+Metodo para agregarlo:
+
+    @media (min-width: 768px) {
+        .container {
+            flex-direction: column;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .container {
+            flex-direction: column;
+        }
+    }
+
+En donde dentro del {} se puede agregar el pedazo de código el cual queremos que se active para los dispositivos con cierto tamaño de pantalla en adelante por eso los 768px
+
+Dentro del { } principal, puedes agregar.
+
+> Responsive design: adaptar la UI al dispositivo para una buena lectura y navegación.
+
+> Mobile first: definir primero estilos base para móvil y escalar a tablet/desktop.
+
+> Viewport: ancho visible que guía cuándo activar cambios con media queries.
+
+> Accesibilidad con rem: tipografías que respetan ajustes del usuario.
+
+> Habilidades trabajadas: configurar flexbox, definir puntos de quiebre con min-width, gestionar > 
+visibilidad con display, depurar con el inspector del navegador.
+
+**La estrategia es clara:** estilos base para móvil y, con media queries, reacomodar layout y visibilidad según el tamaño del viewport. **Se usan puntos de quiebre en 768 px para tablet y 1024 px para desktop.**
+
+Un ejemplo de código puede ser: 
+
+    @media (min-width: 768px) {
+        .container { flex-direction: row; }
+        .box { flex: 1; }
+        .nav-list { flex-direction: row; }
+
+        .mobile { display: none; }
+        .tablet {
+            display: block;
+            background: #F39C12;
+            color: white;
+            padding: 10px;
+        }
+
+        .responsive.title { font-size: 2rem; }
+    }  
+
+* Ajustar jerarquía tipográfica: 1.5rem en móvil, 2rem en tablet y 3rem en desktop para el título
+
+---
+
+## Diseño Fluido
+
+Se tiene que programar de forma que dentro de los media querie se agrege un diseño flexible en donde se pueda adaptar a los diferentes tamaños dentro del rango del media querie. Por lo que a esto se le denomina diseño fluido
+
+* La pantalla movil más pequeña en el mercado es de 320px
+
+    width: 90%; respecto al body
+    max-width:
+    min-width:
+    margin: 0 auto; para que se centr automaticamente
+
+display: 
+grid; grid-template-columns: repeat (auto-fit, minmax (250px, 1fr));
+
+    .fluid-container {
+        width: 90%;
+        max-width: 1000px;
+        min-width: 320px;
+        margin: 0 auto;
+        padding: 20px;
+        background: blue;
+        color: white;
+    }
+
+Si el viewport baja de 320 px, aparece scroll horizontal. - Al superar 1000 px, el contenido queda centrado gracias a margin: 0 auto. - Entre 320 y 1000 px, el bloque usa siempre el 90% del contenedor padre.
+
+**GRID FOR RESPONSIVE**
+
+Para un layout flexible sin media queries, grid ofrece patrones adaptables y las imágenes y fuentes requieren reglas específicas para mantener foco y legibilidad.
+
+on grid-template-columns y repeat(auto-fit, minmax()) logras columnas que se reacomodan según el espacio. El mínimo asegura legibilidad; el máximo reparte el espacio disponible con 1fr.
+
+    .fluids-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        margin-bottom: 20px;
+    }
+
+> auto-fit: ajusta el número de columnas según el ancho disponible.
+
+> minmax(250px, 1fr): cada tarjeta mide mínimo 250 px y crece equitativamente.
+
+> gap: separa elementos y mejora el ritmo visual.
+
+
+**¿Cómo hacer una imagen flexible dentro de su contenedor?**
+
+Limita el contenedor con max-width y céntralo. Se debe hacer que la caja de imagen ocupe el 100% del ancho y una altura para que sea visible.
+
+    .image-contained {
+        width: 100%;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+
+**¿Cómo escalar tipografía con la función clamp?**
+
+La función clamp() define un mínimo, un valor ideal relativo y un máximo. Así el texto crece suave con el viewport y se detiene donde conviene.
+
+    .titulo_fluido {
+        font-size: clamp(1.5rem, 4vw, 3rem);
+        margin-bottom: 10px;
+    }
+
+> Mínimo: 1.5rem para móviles.
+
+> Ideal relativo: 4vw para crecer con el ancho.
+
+> Máximo: 3rem para desktop grandes.
