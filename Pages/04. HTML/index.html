@@ -1,11 +1,133 @@
+<!-- El uso de acortadores por ejemplo: ! que es un signo de admiración que abre un bloque de código HTML -->
+
 <!DOCTYPE html>
-<html lang="en">
+<!-- Por medio de !DOCTYPE html se indica que el documento es de tipo HTML5 -->
+
+<html lang="en"> 
+<!-- El atributo lang="en" indica que el idioma del documento es inglés  -->
+
+
+<!-- Head:Son las instrucciones para el navegador - El usuario no lo ve -->
 <head>
     <meta charset="UTF-8">
+    <!-- El atributo charset="UTF-8" indica que el conjunto de caracteres del documento es UTF-8 por ejemplo: ñ, á, é, í, ó, ú, etc. -->
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <!-- El atributo name="viewport" indica que el viewport del documento es de ancho de dispositivo y escala de 1.0 -->
+
+    <title>Fundamentos HTML</title>
+    <!-- El atributo title="Fundamentos HTML" indica que el título del documento es Fundamentos HTML -->
 </head>
+
+
+<!-- Todo lo que este en el body es lo que el usuario va a ver -->
 <body>
-    <a href="../../index.html">home</a>
+<!-- El cuerpo del documento -->
+
+    <h1>Fundamentos HTML</h1>
+    <!-- El elemento h1 es el encabezado principal de la página
+    
+    Es muy buena práctica solamente usar un H1 en todo el documento HTML
+    ya que el navegador le da importancia al titulo principal de la página -->
+
+
+    <p>HTML es el lenguaje de marcado estándar para crear páginas web</p>
+    <!-- El elemento p es el párrafo de la página -->
+
+
+    <a href="../../index.html">home</a> <!-- El enlace a la página de inicio -->
+
+
+    <hr><!-- El elemento hr es una línea horizontal -->
+
+
+    <h2>Encabezado 2</h2>
+    <!-- El elemento h2 es el encabezado de nivel 2 de la página 
+    Es para usarse en las diferentes secciones de la página
+    -->
+
+
+    <h3>Encabezado 3</h3>
+    <!-- El elemento h3 es el encabezado de nivel 3 de la página 
+    
+    Es para usarse en las diferentes subsecciones de las secciones hechas con el h2
+
+    Las etiquetas h1, h2, h3, h4, h5, h6 son etiquetas de encabezado y se usan para estructurar el contenido de la página. Pero realmente, por gusto personal, sólo usaremos h1, h2 hasta h3.
+    -->
+
+    <p>Esto es un texto, pero <strong>esto es un texto importante</strong></p>
+    <!-- El elemento p es el párrafo de la página -->
+    <!-- El elemento strong es para indicar que el texto es importante -->
+
+    <blockquote>
+        <p>Esto es una cita</p>
+        <footer>
+            <p>Autor: Santiagoencodigo</p>
+        </footer>
+    </blockquote>
+    <!-- El elemento blockquote es para indicar que el texto es una cita -->
+
+    <a href="https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements#contenido_del_texto">
+        Enlace a la documentación de MDN - Etiquetas para contenido de Texto
+    </a>
+
+    <hr>
+
+    <!-- 
+    <dl> (Description List) es el contenedor principal de la lista de descripción
+    <dt> (Description Term) se usa para cada término que queremos definir
+    <dd> (Description Details) contiene la definición o detalles del término precedente -->
+    <h2>Glosario de Términos Web</h1>
+
+    <dl>
+        <dt>HTML</dt>
+        <dd>HyperText Markup Language (Lenguaje de Marcado de Hipertexto). Es el lenguaje estándar para crear páginas web.</dd>
+
+        <dt>CSS</dt>
+        <dd>Cascading Style Sheets (Hojas de Estilo en Cascada). Es el lenguaje utilizado para estilizar la presentación de documentos HTML.</dd>
+
+        <dt>JavaScript</dt>
+        <dd>Lenguaje de programación que permite crear contenido dinámico e interactivo en páginas web.</dd>
+    </dl>
+
+    <hr>
+
+    <h2>Receta de Café</h2>
+
+    <!-- Uso de figure y figcaption -->
+    <figure>
+        <img src="https://hips.hearstapps.com/hmg-prod/images/cafe-solo-elle-gourmet-663a4a74b6e3f.jpg?crop=1.00xw:0.754xh;0,0.0578xh&resize=640:*" alt="Taza de café">
+        <figcaption>Una deliciosa taza de café recién preparado</figcaption>
+    </figure>
+
+    <!-- Uso de menu y ol -->
+    <menu>
+        <h3>Opciones de Preparación</h3>
+        <ol>
+            <li>Café Americano</li>
+            <li>Espresso</li>
+            <li>Cappuccino</li>
+            <li>Latte</li>
+        </ol>
+    </menu>
+
+    <!-- Uso de pre -->
+    <h3>Código de Ejemplo:</h3>
+    <pre>
+        function prepararCafe() {
+            molerGranos();
+            calentarAgua();
+            prepararFiltro();
+            servirEnTaza();
+        }
+    </pre>
+
+
+
+    <footer>
+        <p>Desarrollado por Santiagoencodigo - 2024</p>
+    </footer>
+    <!-- El elemento footer es el pie de página -->
+
 </body>
-</html>
+</html> <!-- Cierre de la etiqueta html -->
