@@ -59,6 +59,25 @@ En esta sección se desarrolla un clon [de la página principal de Google](https
 
 Aquí encontrarás apuntes sobre los fundamentos de la ingenieria de software. Incluye temas como bits y bytes, el funcionamiento de internet, las computadoras, los chips, la inteligencia artificial y los sistemas del mundo.
 
+---
+
+## HyperText Markup Language | HTML 
+
+* [Documentación]("Documentación HTML by Santiagoencodigo")
+* [Proyecto]("Proyecto HTML by Santiagoencodigo")
+
+En esta sección aprenderás a escribir código limpio, semántico y estructurado, comprendiendo la base sobre la que se construyen todas las páginas web. Exploraremos el rol de HTML en la web moderna y cómo su correcta organización afecta directamente en la accesibilidad, el SEO, y la mantenibilidad de un sitio.
+
+---
+
+## Fundamentos CSS
+
+* [Documentación](https://github.com/santiagoencodigo/Desarrollo-Web-Profesional/blob/main/Docs/4-Fundamentos-CSS.md "Documentación CSS by Santiagoencodigo")
+
+* [Proyecto](https://santiagoencodigo.github.io/Desarrollo-Web-Profesional/Pages/03.%20Fundamentos%20CSS/index.html "Proyecto Portafolio CSS by Santiagoencodigo")
+
+CSS
+
 <!-- ## Computadores e informática básica.
 
 ## Terminal y línea de comandos.
