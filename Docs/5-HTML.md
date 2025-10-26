@@ -21,19 +21,15 @@ HTML es el lenguaje que da forma a la web. En esta sección se encuentra la info
 
 1. [Maquetación web con HTML semántico y accesible](#maquetación-web-con-html-semántico-y-accesible)
 2. [Cómo funciona la web desde la URL hasta la página renderizada](#cómo-funciona-la-web-desde-la-url-hasta-la-página-renderizada)
-3. [Insertar imágenes en HTML con optimización y accesibilidad](#insertar-imágenes-en-html-con-optimización-y-accesibilidad)
-4. [Creación de listas desordenadas, ordenadas y enlaces en HTML](#creación-de-listas-desordenadas-ordenadas-y-enlaces-en-html)
-5. [Etiquetas semánticas HTML5: header, main, nav, article, footer](#etiquetas-semánticas-html5-header-main-nav-article-footer)
-6. [Formularios HTML con validación nativa del navegador](#formularios-html-con-validación-nativa-del-navegador)
-7. [Tipos de inputs HTML para formularios avanzados](#tipos-de-inputs-html-para-formularios-avanzados)
-8. [Checkbox y select en formularios HTML](#checkbox-y-select-en-formularios-html)
-9. [Validaciones en formularios HTML con atributos nativos](#validaciones-en-formularios-html-con-atributos-nativos)
-10. [Estructura de tablas HTML con thead, tbody y tfood](#estructura-de-tablas-html-con-thead-tbody-y-tfood)
-11. [Imágenes responsivas con srcset y picture para mejor rendimiento](#imágenes-responsivas-con-srcset-y-picture-para-mejor-rendimiento)
-12. [Integración de video y audio en HTML5 con controles y compatibilidad](#integración-de-video-y-audio-en-html5-con-controles-y-compatibilidad)
-13. [Atributos ARIA para accesibilidad web con lectores de pantalla](#atributos-aria-para-accesibilidad-web-con-lectores-de-pantalla)
-14. [Estructura semántica y meta tags para mejorar posicionamiento web](#estructura-semántica-y-meta-tags-para-mejorar-posicionamiento-web)
-15. [Portafolio profesional con HTML semántico y SEO](#portafolio-profesional-con-html-semántico-y-seo)
+3. [Tipos de inputs HTML para formularios avanzados](#tipos-de-inputs-html-para-formularios-avanzados)
+4. [Checkbox y select en formularios HTML](#checkbox-y-select-en-formularios-html)
+5. [Validaciones en formularios HTML con atributos nativos](#validaciones-en-formularios-html-con-atributos-nativos)
+6. [Estructura de tablas HTML con thead, tbody y tfood](#estructura-de-tablas-html-con-thead-tbody-y-tfood)
+7. [Imágenes responsivas con srcset y picture para mejor rendimiento](#imágenes-responsivas-con-srcset-y-picture-para-mejor-rendimiento)
+8. [Integración de video y audio en HTML5 con controles y compatibilidad](#integración-de-video-y-audio-en-html5-con-controles-y-compatibilidad)
+9. [Atributos ARIA para accesibilidad web con lectores de pantalla](#atributos-aria-para-accesibilidad-web-con-lectores-de-pantalla)
+10. [Estructura semántica y meta tags para mejorar posicionamiento web](#estructura-semántica-y-meta-tags-para-mejorar-posicionamiento-web)
+11. [Portafolio profesional con HTML semántico y SEO](#portafolio-profesional-con-html-semántico-y-seo)
 
 
 <!-- Start the Learning Path -->
@@ -164,36 +160,6 @@ Video recomendado: https://www.youtube.com/watch?v=bN6DE-4uFNo
 
 
 
----
-
-
-
-## Insertar imágenes en HTML con optimización y accesibilidad
-
-
----
-
-
-
-
-## Creación de listas desordenadas, ordenadas y enlaces en HTML
-
-
----
-
-
-
-
-## Etiquetas semánticas HTML5: header, main, nav, article, footer
-
-
----
-
-
-
-
-## Formularios HTML con validación nativa del navegador
-
 
 ---
 
@@ -201,6 +167,10 @@ Video recomendado: https://www.youtube.com/watch?v=bN6DE-4uFNo
 
 
 ## Tipos de inputs HTML para formularios avanzados
+
+<img src="https://static.platzi.com/media/user_upload/upload-965b02c8-12a0-4922-8253-1f8bc4aba07d.png">
+<img src="https://static.platzi.com/media/user_upload/upload-387a0608-2bf2-49c9-9ab3-8a71b5edeb82.png">
+
 
 
 ---
