@@ -874,3 +874,77 @@ La función clamp() define un mínimo, un valor ideal relativo y un máximo. As�
 > Ideal relativo: 4vw para crecer con el ancho.
 
 > Máximo: 3rem para desktop grandes.
+
+
+
+
+---
+
+
+
+
+## Mobile First
+
+Con toda la información anterior vista, ya se puede hacer un proyecto totalmente responsivo. Entonces se debe tener en cuenta los siguentes principios:
+
+**Empezar por mobile ayuda a no sobrecargar.** Los dispositivos móviles no tienen la misma potencia de cómputo que desktop, así que conviene cargar solo lo esencial y sumar elementos conforme crece el espacio hacia tablet y desktop.
+
+* Priorizar el contenido. Define el objetivo clave y muéstralo sin distracciones.
+
+* Aplicar mejoras progresivas. Agrega características según las capacidades reales de los dispositivos de tus usuarios.
+
+1. Cargar primero sólo lo de movil debido a que en el computador se puede agregar bastante contenido que no será tan facil agregarlo a movil
+2. Hay que forzar las decisiones sobre qué es lo más importante para mostrar
+3. Mejora progresiva, a medida que se va agregando tamaño de pantalla, agregarle más contenido o complejidad
+4. Touch Friendly: Las areas de touch deben ser minimo 44x44
+
+---
+
+**¿Cómo manejar la navegación progresiva?**
+
+Usar icono de hamburguesa cuando el espacio se reduce.
+* Alternar visibilidad con CSS y JavaScript: display: none / display: block.
+
+* Quitar “basura” visual en pantallas pequeñas y dejar solo lo necesario para interactuar.
+
+---
+
+**¿Cómo adaptar el hero por tamaño de pantalla?**
+
+Cambiar el layout con grid o flex según el espacio disponible.
+
+* Si en mobile la imagen del hero no aporta al objetivo, se puede omitir.
+
+* Mantener siempre visible el contenido clave con el que el usuario interactúa.
+
+---
+
+**¿Cómo adaptar cartas y formularios con CSS flexible?**
+
+El contenido debe fluir y reacomodarse según el ancho. Las cartas y los formularios son grandes candidatos para layouts que cambian cuando hay espacio suficiente.
+
+* Hacer contenido flexible.
+
+* Formularios adaptables. 
+
+* En pantallas amplias pueden ir campos lado a lado; en mobile, conviene columna para evitar toques fallidos.
+
+* Cuidar el espacio entre inputs. 
+
+* Aumenta márgenes
+
+* Separaciones para mejorar la interacción táctil.
+
+---
+
+**¿Qué tamaños y espaciados touch garantizan buena usabilidad?**
+
+* Touch targets: área mínima de 44 x 44 px para botones y elementos interactivos.
+
+* Fuentes: mínimo de 6 px (1 rem) para asegurar legibilidad.
+
+* Saltos de línea: 1.6 de interlineado para lectura cómoda en bloques de texto extensos.
+
+---
+
+
