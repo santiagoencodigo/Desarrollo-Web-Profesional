@@ -948,3 +948,68 @@ El contenido debe fluir y reacomodarse según el ancho. Las cartas y los formula
 ---
 
 
+
+
+
+## Transformaciones
+
+Las transformaciones en CSS nos permiten cambiar la forma, tamaño, posición o inclinación de un elemento sin afectar el resto de la página, con ellas podemos rotar, escalar, mover o inclinar objetos de manera muy visual y dinámica. Además, se pueden combinar varias transformaciones a la vez para crear efectos más llamativos
+
+* mover
+
+* rotar
+
+* escalar
+
+**¿Cómo suavizar cambios con transition en transform?**:Añade transition - transform 0.3s para evitar saltos bruscos pues mejora la percepción del movimiento y la interacción.
+
+¿Qué hace translateX y translateY en hover?
+
+translateX(30px) mueve 30 píxeles en horizontal.
+translateY(-30px) mueve 30 píxeles hacia arriba con valor negativo.
+
+    .translate-x:hover { transform: translateX(30px); }
+    .translate-y:hover { transform: translateY(-30px); }
+
+**¿Cómo mover en diagonal con translate?**: Pasa dos valores: x, y.
+Un ejemplo común: translate(20px, 20px) para ir a la derecha y abajo.
+
+    .translate-xy:hover { transform: translate(20px, 20px); }
+
+Recuerda: el trigger es hover, pero puedes usar otros según la interacción deseada.
+
+
+
+
+---
+
+
+
+**Cómo rotar y escalar con rotate y scale?**: rotate gira el elemento desde su centro por defecto (puedes cambiarlo con transform-origin). scale modifica el tamaño relativo sin romper el flujo.
+
+Define el ángulo en grados: 45deg, 90deg, 180deg.
+
+    .rotate-45:hover { transform: rotate(45deg); }
+
+    .rotate-90:hover { transform: rotate(90deg); }
+
+    .rotate-180:hover { transform: rotate(180deg); }
+
+
+**¿Cómo reducir o ampliar con scale?**: 
+
+* scale(0.5) reduce a la mitad.
+
+* scale(1.5) aumenta 1.5 veces.
+
+* scale(2) duplica el tamaño.
+
+    .scale-small:hover { transform: scale(0.5); }
+    .scale-medium:hover { transform: scale(1.5); }
+    .scale-2x:hover { transform: scale(2); }
+
+
+
+
+---
+
