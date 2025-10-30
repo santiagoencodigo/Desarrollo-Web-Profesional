@@ -22,14 +22,12 @@ HTML es el lenguaje que da forma a la web. En esta sección se encuentra la info
 1. [Maquetación web con HTML semántico y accesible](#maquetación-web-con-html-semántico-y-accesible)
 2. [Cómo funciona la web desde la URL hasta la página renderizada](#cómo-funciona-la-web-desde-la-url-hasta-la-página-renderizada)
 3. [Tipos de inputs HTML para formularios avanzados](#tipos-de-inputs-html-para-formularios-avanzados)
-4. [Checkbox y select en formularios HTML](#checkbox-y-select-en-formularios-html)
-5. [Validaciones en formularios HTML con atributos nativos](#validaciones-en-formularios-html-con-atributos-nativos)
-6. [Estructura de tablas HTML con thead, tbody y tfood](#estructura-de-tablas-html-con-thead-tbody-y-tfood)
-7. [Imágenes responsivas con srcset y picture para mejor rendimiento](#imágenes-responsivas-con-srcset-y-picture-para-mejor-rendimiento)
-8. [Integración de video y audio en HTML5 con controles y compatibilidad](#integración-de-video-y-audio-en-html5-con-controles-y-compatibilidad)
-9. [Atributos ARIA para accesibilidad web con lectores de pantalla](#atributos-aria-para-accesibilidad-web-con-lectores-de-pantalla)
-10. [Estructura semántica y meta tags para mejorar posicionamiento web](#estructura-semántica-y-meta-tags-para-mejorar-posicionamiento-web)
-11. [Portafolio profesional con HTML semántico y SEO](#portafolio-profesional-con-html-semántico-y-seo)
+4. [Estructura de tablas HTML con thead, tbody y tfood](#estructura-de-tablas-html-con-thead-tbody-y-tfood)
+5. [Imágenes responsivas con srcset y picture para mejor rendimiento](#imágenes-responsivas-con-srcset-y-picture-para-mejor-rendimiento)
+6. [Integración de video y audio en HTML5 con controles y compatibilidad](#integración-de-video-y-audio-en-html5-con-controles-y-compatibilidad)
+7. [Atributos ARIA para accesibilidad web con lectores de pantalla](#atributos-aria-para-accesibilidad-web-con-lectores-de-pantalla)
+8. [Estructura semántica y meta tags para mejorar posicionamiento web](#estructura-semántica-y-meta-tags-para-mejorar-posicionamiento-web)
+9. [Portafolio profesional con HTML semántico y SEO](#portafolio-profesional-con-html-semántico-y-seo)
 
 
 <!-- Start the Learning Path -->
@@ -178,23 +176,9 @@ Video recomendado: https://www.youtube.com/watch?v=bN6DE-4uFNo
 
 
 
-## Checkbox y select en formularios HTML
-
-
----
-
-
-
-
-## Validaciones en formularios HTML con atributos nativos
-
-
----
-
-
-
-
 ## Estructura de tablas HTML con thead, tbody y tfood
+
+
 
 
 ---
