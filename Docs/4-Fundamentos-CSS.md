@@ -1013,3 +1013,80 @@ Define el ángulo en grados: 45deg, 90deg, 180deg.
 
 ---
 
+
+## Transiciones
+
+Las transiciones en CSS mejoran la experiencia visual: suavizan cambios de color, tamaño y posición sin brusquedades.
+
+Se pueden hacer cosas como:
+
+* Transition a botones y cajas
+* Combinar cambios con transform
+* Controlar la velocidad con linear, ease y ease-in-out
+
+**¿Por qué usar transiciones en CSS?**
+
+Las transiciones hacen que los cambios se sientan suaves y naturales. Evitan saltos abruptos al pasar el hover y aportan claridad visual.
+
+**¿Cómo aplicar transiciones en botones con hover?**
+
+La clave está en declarar la propiedad a animar, la duración y la función de aceleración. Así, el cambio no se ve brusco.
+
+    /* Transición del color de fondo */
+
+    .button-color {
+    transition: background-color 0.3s ease;
+    }
+    .button-color:hover {
+    background-color: #E74C3C; /* rojo suave */
+    }
+
+¿Cómo hacer que el botón crezca?
+
+Si buscas un efecto de crecimiento, anima transform con scale.
+
+    /* Transición de tamaño */
+    .button-size {
+    transition: transform 0.3s ease;
+    }
+    .button-size:hover {
+    transform: scale(1.1);
+    }
+
+¿Cómo combinar color, sombra y escala en un botón?
+
+Cuando un mismo elemento cambia varias propiedades, puedes usar all para cubrirlas. Evita declarar múltiples transform separados.
+
+    /* Botón con varios cambios al hover */
+    .button-all {
+    transition: all 0.3s ease;
+    }
+    .button-all:hover {
+    background-color: #2ECC71; /* verde */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transform: scale(1.1); /* se decidió escalar y no trasladar */
+    }
+
+* No declares dos reglas de transform en el mismo selector al mismo tiempo: una pisará a la otra.
+
+    /* Variantes de timing */
+    
+    .timing-linear { transition: transform 1s linear; } -
+    .timing-ease { transition: transform 1s ease; } - 
+    .timing-ease-in-out { transition: transform 1s ease-in-out; }
+
+    /* Disparador común */
+    .box:hover { transform: translateX(200px); }
+
+linear: velocidad uniforme todo el tiempo.
+ease: aceleración natural, empieza lento y acelera.
+ease-in-out: suave al inicio y al final, rápido en medio.
+
+
+
+
+---
+
+
+
+<!-- A -->
