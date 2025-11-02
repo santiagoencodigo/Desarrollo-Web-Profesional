@@ -67,7 +67,7 @@ Aquí encontrarás apuntes sobre los fundamentos de la ingenieria de software. I
 
 * [Proyecto](https://santiagoencodigo.github.io/Desarrollo-Web-Profesional/Pages/04.%20HTML/index.html "Proyecto HTML by Santiagoencodigo")
 
-En esta sección aprenderás a escribir código limpio, semántico y estructurado, comprendiendo la base sobre la que se construyen todas las páginas web. Exploraremos el rol de HTML en la web moderna y cómo su correcta organización afecta directamente en la accesibilidad, el SEO, y la mantenibilidad de un sitio.
+En esta sección se puede ver mis apuntes sobre cómo escribir código limpio, semántico y estructurado, comprendiendo la base sobre la que se construyen todas las páginas web. Explorando el rol de HTML en la web moderna y cómo su correcta organización afecta directamente en la accesibilidad, el SEO, y la mantenibilidad de un sitio web.
 
 ---
 
@@ -77,11 +77,22 @@ En esta sección aprenderás a escribir código limpio, semántico y estructurad
 
 * [Proyecto](https://santiagoencodigo.github.io/Desarrollo-Web-Profesional/Pages/03.%20Fundamentos%20CSS/index.html "Proyecto Portafolio CSS by Santiagoencodigo")
 
-CSS
+En este apartado se encuentra cómo aplicar estilos, tipografía y colores para mejorar la legibilidad y estética de una página web. Además, conoceré el uso de layouts modernos, responsive design, efectos visuales y animaciones, desarrollando una base sólida para crear interfaces atractivas, funcionales y adaptables a cualquier dispositivo.
 
-<!-- ## Computadores e informática básica.
+<img src="./Assets/img/9. Proyecto - Portafolio - Santiagoencodigo.png">
 
-## Terminal y línea de comandos.
+---
+
+## Computadores e informática básica.
+
+* [Documentación]()
+
+En esta sección se explorarán los conceptos básicos de computación. Aquí estarán mis apuntes sobre las principales funcionalidades de una computadora, instalar y desinstalar programas, navegar por internet de forma segura, manejar archivos e identificar software malicioso.
+
+---
+
+
+<!--## Terminal y línea de comandos.
 
 ## Control de versiones con Git y GitHub.
 
