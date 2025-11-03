@@ -196,6 +196,14 @@
                     <h2 class="values__title">Conceptos que guían mi camino</h3>
                     <ul class="values__list">
                         <li class="values__item">
+                            <!-- 
+                                Tube un error al tratar de integrar la animación CSS rotate-scale-up-diag en las lineas de código 570 - 620
+                                Debido a que el icono esta dentro de una etiqueta SPAN, es decir un inline element, y la animación no se aplicaba correctamente. 
+
+                                Los elementos inline no pueden transformarse correctamente con transform ni animation, porque no generan su propio “cajón” visual.
+
+                                Solución: display: display: inline-block; en .values__icon 
+                            -->
                             <span class="values__icon">🧠</span>
                             <strong>Innovación:</strong>
                             <span>

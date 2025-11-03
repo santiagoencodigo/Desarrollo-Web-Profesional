@@ -565,12 +565,61 @@ deja que yo pueda ajustar su tamaño, márgenes y paddings como si fuera un bloc
     transform:scale(1.1)
 }
 
+
+
+
+/* Estilos del SPAN Values Icon y Animación Rotate Scale Down */
+
 .values__icon {
     font-size:24px;
     margin-right: 12px;
 
     transition:1s;
+
+    display: inline-block; /* Necesario para que la animación funcione correctamente */
 }
+
+/* Animación Iconos en Sección de Values */
+
+.values__item:hover .values__icon {
+	-webkit-animation: rotate-scale-down 0.65s linear both;
+	        animation: rotate-scale-down 0.65s linear both;
+}
+
+/* animation: rotate-scale-down */
+@-webkit-keyframes rotate-scale-down {
+    0% {
+        -webkit-transform: scale(1) rotateZ(0);
+                transform: scale(1) rotateZ(0);
+    }
+    50% {
+        -webkit-transform: scale(0.7) rotateZ(180deg);
+                transform: scale(0.7) rotateZ(180deg);
+    }
+    100% {
+        -webkit-transform: scale(1) rotateZ(360deg);
+                transform: scale(1) rotateZ(360deg);
+    }
+}
+@keyframes rotate-scale-down {
+    0% {
+        -webkit-transform: scale(1) rotateZ(0);
+                transform: scale(1) rotateZ(0);
+    }
+    50% {
+        -webkit-transform: scale(0.7) rotateZ(180deg);
+                transform: scale(0.7) rotateZ(180deg);
+    }
+    100% {
+        -webkit-transform: scale(1) rotateZ(360deg);
+                transform: scale(1) rotateZ(360deg);
+    }
+}
+/* Fin animación */
+
+
+
+
 
 .values__item strong {
     margin-right: 8px;
