@@ -507,7 +507,12 @@ deja que yo pueda ajustar su tamaño, márgenes y paddings como si fuera un bloc
 
 @keyframes quote-move {
     0%,100% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
+    50% {
+        transform: translateY(30px);
+        /* font-size:20px; */
+        font-weight:bold;
+        /* transform: scale(0.9); */
+    }
 }
 
 .quote__text {
@@ -593,8 +598,8 @@ deja que yo pueda ajustar su tamaño, márgenes y paddings como si fuera un bloc
                 transform: scale(1) rotateZ(0);
     }
     50% {
-        -webkit-transform: scale(0.7) rotateZ(180deg);
-                transform: scale(0.7) rotateZ(180deg);
+        -webkit-transform: scale(0.8) rotateZ(180deg);
+                transform: scale(0.8) rotateZ(180deg);
     }
     100% {
         -webkit-transform: scale(1) rotateZ(360deg);
@@ -607,8 +612,8 @@ deja que yo pueda ajustar su tamaño, márgenes y paddings como si fuera un bloc
                 transform: scale(1) rotateZ(0);
     }
     50% {
-        -webkit-transform: scale(0.7) rotateZ(180deg);
-                transform: scale(0.7) rotateZ(180deg);
+        -webkit-transform: scale(0.8) rotateZ(180deg);
+                transform: scale(0.8) rotateZ(180deg);
     }
     100% {
         -webkit-transform: scale(1) rotateZ(360deg);
@@ -908,6 +913,9 @@ deja que yo pueda ajustar su tamaño, márgenes y paddings como si fuera un bloc
     text-align:center;
 }
 
+
+
+/* Estilos Contact__Title y Animación tracking-in-contract */
 .contact__title {
     color: var(--font_color_tertiary);
     text-shadow: 1px 1px 1px #888;
@@ -915,7 +923,44 @@ deja que yo pueda ajustar su tamaño, márgenes y paddings como si fuera un bloc
     /* font-weight:900; */
     font-size:28px;
     margin-bottom: 16px;
+    
+    /* Anims */
+    -webkit-animation: tracking-in-contract 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+        animation: tracking-in-contract 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
 }
+
+/* Animación contact__title */
+@-webkit-keyframes tracking-in-contract {
+  0% {
+    letter-spacing: 1em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    letter-spacing: normal;
+    opacity: 1;
+  }
+}
+@keyframes tracking-in-contract {
+  0% {
+    letter-spacing: 1em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    letter-spacing: normal;
+    opacity: 1;
+  }
+}
+/* Fin de animación */
+
+
+
+
 
 .contact__description {
     color: var(--font_color_tertiary);
