@@ -229,7 +229,7 @@ ul {
 }
 
 .nav__link {
-    padding: 8px 12px;
+    padding: 6px 12px;
     display: inline-block;
 
 /* Este elemento esta en la misma línea que los demás (como si fuera un inline), pero
@@ -248,6 +248,7 @@ deja que yo pueda ajustar su tamaño, márgenes y paddings como si fuera un bloc
 
     border-radius:15px;
     text-decoration:none;
+    transform: scale(1.1);
 }
 
 .nav__link:active {
@@ -273,7 +274,17 @@ deja que yo pueda ajustar su tamaño, márgenes y paddings como si fuera un bloc
     background: var(--background_color_lightgray);
     margin-bottom:48px;
     width: 100%;
+    /* animation: transicion-background 5s ease infinite; */
 }
+
+/* @keyframes transicion-background {
+    0% {
+        background: var(--background_color_lightgray);
+    }
+    100% {
+        background: var(--background_color_lightgray-reverb);
+    }
+} */
 
 .hero__container {
     max-width: 800px;
@@ -286,8 +297,25 @@ deja que yo pueda ajustar su tamaño, márgenes y paddings como si fuera un bloc
     font-size: 48px;
     color: var(--font_color_tertiary);
     margin-bottom:16px;
-    text-shadow: 1px 1px 1px #888;
+    text-shadow: 1px 1px 1px var(--font_color_lightgreen);
+
+    /* Animación SANTIAGOENCODIGO Título */
+
+    animation: float 8s ease-in-out infinite;
 }
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+    /* text-shadow:2px 2px 2px var(--font_color_lightgreen); */
+  }
+}
+
+
+/* --- */
 
 .hero__subtitle {
     font-size:24px;
@@ -309,6 +337,45 @@ deja que yo pueda ajustar su tamaño, márgenes y paddings como si fuera un bloc
     margin-bottom: 48px;
 }
 
+/* Animación BOUNCE Button Descarga CV  */
+
+#button-cv {
+    animation: bounce-button-cv 5s infinite;
+    transition: all 0.6s ease;
+
+    animation-play-state: running; /* Inicia la animación */
+}
+
+@keyframes bounce-button-cv {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+        background: #1f1f1f;
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+#button-cv:hover {
+    animation-play-state: paused; /* Pausa suavemente la animación */
+
+    background: var(--font_color_white);
+    color: var(--font_color_tertiary);
+    transform: scale(1.1);
+    animation: none;
+}
+
+/* Al salir del hover */
+#button-cv:not(:hover) {
+    animation-play-state: running; /* Reanuda la animación */
+    transition-delay: 0.6s; /* Espera un poco antes de reanudar */
+}
+
+/* --- */
+
 .hero__stats {
     text-align: center;
 }
@@ -325,7 +392,34 @@ deja que yo pueda ajustar su tamaño, márgenes y paddings como si fuera un bloc
     font-weight: bold;
     color: var(--font_color_tertiary);
     margin-bottom: 8px;
+
+    /* Animación Números */
+    animation: pulse 4s ease-in-out infinite;
+    animation-delay: var(--delay, 0s);
 }
+
+.stat:nth-child(1) .stat__number {
+    --delay: 0s;
+}
+
+.stat:nth-child(2) .stat__number {
+    --delay: 0.2s;
+}
+
+.stat:nth-child(3) .stat__number {
+    --delay: 0.4s;
+}
+
+@keyframes pulse {
+    0% {transform: scale(1);}
+    50% {transform: scale(1.2);}
+    100% {transform: scale(1);}
+}
+
+/* Fin de Animación Stat Number */
+
+
+
 
 .stat__label {
     font-size: 14px;
@@ -407,6 +501,13 @@ deja que yo pueda ajustar su tamaño, márgenes y paddings como si fuera un bloc
     margin:32px 0;
     border-radius:15px;
     border-left: 4px solid var(--main_color_primary);
+
+    animation: quote-move 6s ease-in-out infinite;
+}
+
+@keyframes quote-move {
+    0%,100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
 }
 
 .quote__text {
@@ -675,6 +776,32 @@ deja que yo pueda ajustar su tamaño, márgenes y paddings como si fuera un bloc
     position:absolute;
     top: 0;
     left: 0;
+
+    overflow: hidden;
+}
+
+/* Efecto de brillo en las barras */
+.skill__progress::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+  animation: shimmer 3s infinite;
+  animation-delay: 3s;
+}
+
+@keyframes shimmer {
+  to {
+    left: 100%;
+  }
 }
 
 .skill__progress--html {
@@ -698,7 +825,7 @@ deja que yo pueda ajustar su tamaño, márgenes y paddings como si fuera un bloc
 /* 16. Learnings */
 
 .learning {
-    background-color: #f8f9fa;
+    background-color: var(--main_color_tertiary);
     padding: 24px;
 }
 
@@ -784,7 +911,9 @@ deja que yo pueda ajustar su tamaño, márgenes y paddings como si fuera un bloc
     background-color: var(--main_color_primary);
 
     border-color: var(--font_color_tertiary);
-    box-shadow:2px 2px 15px var(--main_color_primary) ;
+    box-shadow:2px 2px 15px var(--main_color_primary);
+
+    transform: scale(1.1);
 }
 
 .contact__methods li a {
@@ -795,6 +924,8 @@ deja que yo pueda ajustar su tamaño, márgenes y paddings como si fuera un bloc
     justify-content: center;
 
     text-decoration: none;
+
+    background: var(--main_color_tertiary);
 
     width:100%;
     height:100%;
