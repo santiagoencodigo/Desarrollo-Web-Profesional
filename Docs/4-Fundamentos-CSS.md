@@ -1089,4 +1089,125 @@ ease-in-out: suave al inicio y al final, rápido en medio.
 
 
 
-<!-- A -->
+## Animaciones 
+
+Las animaciones en CSS permiten mover, escalar y rotar elementos sin depender de un disparador como hover. Se aplican con keyframes, transform, la duración en fracciones de segundo, y finalmente la repetición.
+
+¿Cómo funcionan las animaciones en CSS y en qué se diferencian de las transiciones?
+
+A diferencia de las transiciones, que necesitan un trigger (por ejemplo, hover), las animaciones se ejecutan por sí mismas al declararlas con keyframes y aplicarlas con la propiedad animation. No hay eventos adicionales: el ciclo inicia y se repite según lo configurado.
+
+* @keyframes define estados en 0 %, intermedios y 100 %.
+
+* animation controla nombre, duración, curva de tiempo y repetición.
+
+* transform aplica efectos como scale, rotate y translateY.
+
+* Timing functions: ease-in-out suaviza inicio y final; linear mantiene velocidad constante.
+
+* Repetición: infinite mantiene la animación corriendo sin parar.
+
+    .box {
+    width: 100px;
+    height: 100px;
+    background: #3498DB;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+    border-radius: 10px;
+    }
+
+---
+
+¿Cómo crear un efecto pulse con transform: scale?
+
+    @keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+    }
+
+    .box.pulse {
+    animation: pulse 2s ease-in-out infinite;
+    }
+
+scale(1.2): aumento aproximado del 20 % del tamaño.
+ease-in-out: entrada y salida suaves.
+infinite: se repite continuamente.
+
+---
+
+¿Cómo rotar con rotate en una animación continua?
+
+    @keyframes rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+    }
+
+    .box.rotate {
+    animation: rotate 3s linear infinite;
+    }
+
+linear: velocidad uniforme durante todo el ciclo.
+360deg: vuelta completa.
+
+---
+
+¿Cómo simular un rebote con translateY?
+
+    @keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    25% { transform: translateY(-30px); }
+    50% { transform: translateY(-15px); }
+    75% { transform: translateY(-5px); }
+    }
+
+    .box.bounce {
+    animation: bounce 2s ease infinite;
+    }
+
+Secuencia con 0 %, 25 %, 50 %, 75 % y 100 %.
+translateY negativo: simula la subida del salto.
+Pasos decrecientes: sensación de amortiguación.
+
+---
+
+¿Cómo crear un spinner de loading solo con CSS?
+
+Un anillo con borde superior coloreado que rota de forma continua. Ideal para indicar carga hasta que con JavaScript ocultes el spinner y muestres el contenido.
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid #3498DB;
+  border-radius: 50%;
+  margin: 20px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+border-top coloreado: crea el efecto de giro visible.
+1s linear infinite: giro constante y fluido.
+50% de border-radius: círculo perfecto.
+
+¿Qué diferencia hay frente a un sitio estático?
+Las animaciones y transiciones básicas aportan movimiento y ritmo. El resultado es un proyecto más atractivo visualmente y con mejor lectura de estados.
+
+---
+
+## Conclusión
+
+Este documento reúne mis apuntes y prácticas del curso Fundamentos de CSS, donde aprendí a manejar la tipografía, los colores, los layouts modernos, las animaciones y el diseño responsivo. Con estos conocimientos, puedo construir interfaces visualmente atractivas, legibles y adaptables a cualquier dispositivo.
+
+Para consultar el código fuente, ejemplos y ejercicios de esta sección, visita el siguiente enlace:
+
+Repositorio - Documento CSS: [Desarrollo Web Profesional — CSS](https://github.com/santiagoencodigo/Desarrollo-Web-Profesional/blob/main/Pages/03.%20Fundamentos%20CSS/styles.css)
+
+Proyecto: https://santiagoencodigo.github.io/Desarrollo-Web-Profesional/Pages/03.%20Fundamentos%20CSS/index.html
