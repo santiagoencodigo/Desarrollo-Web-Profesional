@@ -49,17 +49,35 @@ En esta sección se desarrolla un clon [de la página principal de Google](https
 
 <img src="https://static.platzi.com/media/user_upload/clon-google-01cb05b6-3c18-4dd5-a8d0-e99ae6a7922a.jpg"/>
 
+
+
+
 ---
+
+
+
 
 ## [Programación básica.](https://santiagoencodigo.github.io/Desarrollo-Web-Profesional/Pages/01.%20Programacion%20Basica/mokepon.html "Page Mokepon")
 
+
+
+
 ---
+
+
+
 
 ## [Fundamentos de ingeniería de software.](https://github.com/santiagoencodigo/Desarrollo-Web-Profesional/blob/main/Docs/3-Fundamentos-Ingenieria-Software.md "Apuntes Fundamentos Ingeniería de Software by Santiagoencodigo")
 
 Aquí encontrarás apuntes sobre los fundamentos de la ingenieria de software. Incluye temas como bits y bytes, el funcionamiento de internet, las computadoras, los chips, la inteligencia artificial y los sistemas del mundo.
 
+
+
+
 ---
+
+
+
 
 ## HyperText Markup Language | HTML 
 
@@ -69,7 +87,13 @@ Aquí encontrarás apuntes sobre los fundamentos de la ingenieria de software. I
 
 En esta sección se puede ver mis apuntes sobre cómo escribir código limpio, semántico y estructurado, comprendiendo la base sobre la que se construyen todas las páginas web. Explorando el rol de HTML en la web moderna y cómo su correcta organización afecta directamente en la accesibilidad, el SEO, y la mantenibilidad de un sitio web.
 
+
+
+
 ---
+
+
+
 
 ## Fundamentos CSS
 
@@ -81,7 +105,13 @@ En este apartado se encuentra cómo aplicar estilos, tipografía y colores para 
 
 <img src="./Assets/img/9. Proyecto - Portafolio - Santiagoencodigo.png">
 
+
+
+
 ---
+
+
+
 
 ## Computadores e informática básica.
 
@@ -89,15 +119,39 @@ En este apartado se encuentra cómo aplicar estilos, tipografía y colores para 
 
 En esta sección se explorarán los conceptos básicos de computación. Aquí estarán mis apuntes sobre las principales funcionalidades de una computadora, instalar y desinstalar programas, navegar por internet de forma segura, manejar archivos e identificar software malicioso.
 
+
+
+
 ---
+
+
+
+
+## Fundamentos de JavaScript.
+
+* <a src="">Documentación</a> 
+
+* <a src="">Proyecto</a>
+
+En este apartado se encuentran las bases de JavaScript: variables, tipos de datos, estructuras condicionales, loops, arrays, funciones, objetos, promesas, asincronía y programación orientada a objetos en proyectos prácticos.
+
+
+
+
+---
+
 
 
 <!--## Terminal y línea de comandos.
 
-## Control de versiones con Git y GitHub.
+## Control de versiones con Git y GitHub. -->
 
-## Fundamentos de JavaScript. -->
+
+
 
 ---
+
+
+
 
 Este repositorio es parte de mi proceso de aprendizaje continuo, con la visión de construir proyectos reales que aporten valor y fortalezcan mis habilidades como desarrollador.
