@@ -1,1 +1,3 @@
-alert("a")
+console.log("A")
+
+seleccion = prompt("A")

@@ -30,3 +30,18 @@ Yo sueño con varios proyectos como:
 5.[]()
 
 ---
+
+
+
+---
+
+
+
+
+## Instalación y Configuración de JavaScript en Visual Studio Code
+
+Descargar Visual Studio Code
+desarga NODE.js
+
+
+---
