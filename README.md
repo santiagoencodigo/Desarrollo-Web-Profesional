@@ -115,7 +115,7 @@ En este apartado se encuentra cómo aplicar estilos, tipografía y colores para 
 
 ## Computadores e informática básica.
 
-* [Documentación]()
+* [Documentación](https://github.com/santiagoencodigo/Desarrollo-Web-Profesional/blob/main/Docs/6-computadores-e-informatica-basica.md "Documentación Computadores e Informática básica - REPO by Santiagoencodigo")
 
 En esta sección se explorarán los conceptos básicos de computación. Aquí estarán mis apuntes sobre las principales funcionalidades de una computadora, instalar y desinstalar programas, navegar por internet de forma segura, manejar archivos e identificar software malicioso.
 
