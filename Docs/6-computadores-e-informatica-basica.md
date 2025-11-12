@@ -12,7 +12,7 @@ En esta sección se explorarán los conceptos básicos de computación. Aquí es
 1. [Computación Básica para Principiantes en Windows](#computación-básica-para-principiantes-en-windows)
 2. [Comprensión del Sistema Binario y su Aplicación en las Computadoras](#comprensión-del-sistema-binario-y-su-aplicación-en-las-computadoras)
 3. [Partes y Funciones Básicas de una Computadora](#partes-y-funciones-básicas-de-una-computadora)
-4. []()
+4. [Componentes Externos de una Laptop: Guía Completa](#componentes-externos-de-una-laptop-guía-completa)
 5. []()
 6. []()
 7. []()
@@ -97,7 +97,19 @@ Lectura Recomendada: <a href="https://github.com/santiagoencodigo/Desarrollo-Web
 
 >Estas especificaciones se mencionan en la descripción de la computadora.
 
-**HARDWARE**
+[**HARDWARE**](https://static.platzi.com/media/user_upload/1-3b4b96c7-27c4-46ad-bcc6-68ea7cbedc72.jpg)
+
+El hardware interno es el conjunto de elementos físicos o materiales que constituyen una computadora o un sistema informático en su interior.
+
+Sus principales componentes son:
+
+* CPU (Central Processing Unit)
+* GPU (Graphics Processing Unit)
+* Almacenamiento
+* Memoria RAM (Random Access Memory)
+* Pantalla
+
+---
 
 **CPU**: Unidad Central de Procesamiento, es el cerebro de todos los dispositivos (Computadoras de mesa, Portatiles, Consolas de Videojuegos, etc...) por lo que se encarga de realizar todos los procesos en donde realiza operaciones por medio de datos de entrada para luego mostrar datos de salida.
 
@@ -105,13 +117,92 @@ El navegador de internet le envia procesos al CPU y este le dice al monitor qué
 
 Cuando necesitamos realizar una operación como por ejemplo 4 + 52, es el procesador que actua como nuestro cerebro para realizar estas operaciones. Esto es un **Ciclo de Procesamiento** por lo que se obtuvo unos datos de entrada, el cerebro realizo una operación y luego obtuvimos unos datos de salida, tambien podemos pensarlo como una respuesta o resultado.
 
-**GPU**: Es el elemento encargado del 
+Podemos pensar tambien que el navegador le da instrucciones a la **CPU** y este se encarga de decirle al apartado de video de la computadora que dibuje cierto mapa de bits o tambien lo que diriamos, descarga de imagen. Todo esto a traves de operaciones binarias 0 y 1.
 
-**Almacenamiento**:
+El número después del tipo de procesador es la generación. Las generaciones nos indican qué tan reciente es el CPU. Por ejemplo:
 
-**Memoria RAM**:
+Para Intel: Intel® Core™ i7-10710U es de décima generación porque el número 10 aparece después de i7.
+Para AMD: Ryzen 7 3700X es de tercera generación porque el número 3 aparece después de Ryzen 7.
+
+Esto sirve para no comprar una generación obsoleta de procesadores. **Se recomienda elegir un computador al menos dos generaciones por debajo de la actual** 
+
+<img src="https://img.datacentermarket.es/wp-content/uploads/2023/09/01111216/AdobeStock_178835953.jpeg">
+
+*Imagen Tomada De: https://www.datacentermarket.es/dcm-xl/cpu-unidad-central-de-procesamiento-guia-completa/*
+
+--- 
+
+**GPU**: Graphics Processing Unit Es el elemento encargado de procesar los gráficos. ¿Cómo sabe este elemento qué debe dibujar?, Este proceso es por medio de instrucciones dadas por el CPU.
+
+Una buena GPU sirve para correr video juego, para procesar videos, edición de fotografías, videos, modelados 3D por lo que si pensamos a que fueramos desarrollar un juego, este elemento es muy importante porque dependiendo de qué tipo de juego, digamos... Si se va a realizar uno para PS5 pues, el GPU es de lo más importante.
+
+Por lo que si usaremos una computadora en la cual veremos sus procesos por medio de una pantalla, como ver un video... Es fundametal e indispensable.
+
+* Hay CPU que tiene dentro GPU, se le conoce como Gráficos Integrados.
+
+* Si el CPU y el GPU estan por separado, se le conoce como Gráficos Discretos.
+
+<img src="https://hardzone.es/app/uploads-hardzone.es/2020/02/GPU.jpg">
+
+*Imagen Tomada de: https://hardzone.es/reportajes/que-es/gpu-caracteristicas-especificaciones/*
+
+Lecturas Recomendadas:
+
++ https://www.techrankup.com/es/pc-graphics-cards-ranking/nvidia/
+
++ https://www.gpucheck.com/es-eur/gpu-benchmark-graphics-card-comparison-chart
+
+---
+
+**Memoria RAM**: RANDOM ACCESS MEMORY, Para cada proceso hay que almacenar la información en nuestro equipo. Si nos ponemos ne un contexto de cuando estas redactando cualquier texto en WORD, Cuando tu ingresas información mediante tu teclado (Caracteres), es el CPU que recibe esta información inicialmente y se la da a la memoria RAM.
+
+>Anteriormente no existia el autoguardado por ende si algo sucedia con tu computadora, como si se fuera la luz y tu no habias guardado tu documento, este se perdía.
+
+>Hoy en día el autoguardado es cada vez más común.
+
+Cuando se utilizan programas más complejos como adobe premier y llenas un proyecto de mucha información la cual no cabe en la memoria RAM, esta empieza a irse para el DISCO DURO, es mucho más lento que la memoria RAM y por ende se vuelve lento el proceso.
+
+Por lo que como reflexión, debes pensar bien que es lo que vas a realizar antes de comprar una computadora ya que de acuerdo a esto es que vas a necesitar tus componentes.
+
+Por ende, digamos que si sólo vas a manejar documentos de sólo texto y vas a medianamente navegar por internet, unas 4GB te pueden servir perfectamente.
+
+Si necesitas cargar videos pesados y editarlos en tu computadora, necesitas que tu memoria RAM sea mucho más grande y por eso hay computadoras que se compran con 128GB de RAM, hay computadoras que tienen 64, computadoras que tienen 32, otras 16, otras 8.
+
+Por lo que el CPU agarra toda la información, la procesa, la guarda en RAM y de la RAM a la tarjeta de video.
+
+<img src="https://compubit.com.co/wp-content/uploads/2023/04/Porque-es-importante-la-memoria-RAM-2-3-1024x535.jpg">
+
+*Imagen Tomada De: https://compubit.com.co/que-son-las-memorias-ram/*
+
+---
+
+**Almacenamiento**: DISCO DURO, cuando guardas tu información, tu proyecto o archivo... Digamos esto es lo que sucede despues del proceso con la RAM ya una vez se decide guardar la información y asi tendrás una copia permanente.
+
+Por ende podemos pensar de la memoria RAM como memoria temporal y del disco duro como la memoria permanente.
+
+¿Por qué el disco duro no remplaza la memoria ram?
+
+Todo es por cuestiones de velocidad, la RAM es mucho más rápida, intercambia información. El disco duro es una memoria lenta para persistir información y vienen en tamaños de 500gb, 1000gb, 120gb, 250gb. 
+
+Lo recomendable es minimo 500gb para tener buen almacenamiento.
+
+Los discos duros o HDD (Hard Drive Disk) son unidades de almacenamiento mecánico que utilizan literalmente un disco que de manera magnética que guarda la información. Estas unidades poseen capacidades altas a menor costo. Sin embargo, al guardar los datos de manera mecánica, a largo plazo el computador se vuelve lento y disminuye el rendimiento, o puede ser dañada por una caída o un golpe físico.
+
+Las unidades de estado sólido o SSD (Solid State Drive) son unidades de almacenamiento mediante microchips con memorias interconectadas. Estas unidades son más rápidas, pero su desventaja es que son más costosas que las unidades de disco duro.
+
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuf0kQodGIt7QB-RQTFb5i_Kg4JWLX9hRhbA&s">
+
+*Imagen Tomada De: https://www.administracionderedes.com/sistemas-informaticos/disco-duro/*
+
+---
+
+
+
+## Componentes Externos de una Laptop: Guía Completa
 
 **Tipo de pantalla**:
+
+
 
 
 
