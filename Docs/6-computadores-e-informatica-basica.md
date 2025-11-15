@@ -268,6 +268,84 @@ Hay computadoras que son 4K, que vienen 4 veces más pixeles que vienen en una p
 
 ## Cómo elegir la computadora ideal según tus necesidades
 
+Es un error terrible comprar la computadora más cara que encuentres a ciegas sin mirar qué componentes tiene o análizar qué uso le vas a dar.
+
+Como por ejemplo: Comprarse la computadora más cara cuando lo unico que se va a usar el word.
+
+**Lo más importante es pensar ¿Qué aplicación/uso le vas a dar a la computadora?**
+
+---
+
+**Tipos de Usos de una Computadora**
+
+1. **Uso General y de Ofimática:** Tu trabajo consiste en presentar informes, reportes, powerpoints. Es una trampa comprarse el computador más caro sin realmente la necesidad e incluso es negativo para nuestras finanzas personales. (Hay es para irse por un procesador de una gama relativamente "normal"
+
+* Nomenclatura CPUs INTEL: Gama Baja-Intel I3, Gama Media-Intel-I5, Gama Alta-Intel-I7, Gama Super Alta-Intel-I9.
+
+* Nomenclaruta CPUs AMD:  Gama Baja-ryzen 3, Gama Media-ryzen 5, Gama Alta-ryzen 7, Gama Super Alta-ryzen 9.
+
+* Nomenclatura CPUs Apple: Apple genera sus propios procesadores por lo que para una gama "relativamente normal" es recomendable una MacBook Air M1 
+
+>Intel se encuentra al día 15/11/2025 en la 14ª generación de procesadores con los chips de la línea "Raptor Lake Refresh".
+
+>AMD se encuentra al día 15/11/2025 en la novena generación de procesadores Ryzen, que se lanzó en 2024 con la serie 9000
+
+* Respecto a GigasRam lo recomendable es que como minímo se deben tener 4Gb Ram, pero lo optimo si vas a tener muchas pestañas abiertas al mismo tiempo, 8Gb Ram.
+
+* Respecto a Memoria, lo necesario para guardar una buena cantidad de información son 512Gb.
+
+> A los computadores se les puede ir cambiando los componentes, pero a los portatiles no se les puede quitar el procesador.
+
+---
+
+2. **Uso de Estudiante:** Se le conoce como genero Umbrella o Genero Sombrilla porque hay estudiantes de todo tipo.
+
+* Un estudiante de diseño requiere una tarjeta de video decente como por ejemplo una NVIDIA 1600, una NVIDIA 1050 TI, un procesador Ryzen 7 o un I7, e incluso una 3070 si es posible. Esto lo hace bastante costoso.
+
+* Un estudiante de programación puede sobrevivir con una computadora de uso general ya que lo que ocupa la programación es memoria RAM y al compilar, pues la CPU se va a demorar un poco más en el proceso. Pero esto es totalmente lograble.
+
+* Si el computador es muy viejo es probable que contenga un disco duro mecanico y por ende la computadora será muy lenta. (Por eso se demora en abrir windows, al abrir un programa cuando se ejecuta) Eso se esta dejando de usar casi por completo y actualmente sólo se usa para grandes cantidades de información. De un HHD a un SSD la diferencia es muy grande, tanto como para decir que el cambio hará "volar" la computadora por su velocidad.
+
+---
+
+3. **PC de uso de Trabajo:** Es cuando ya se esta ganando un salario, ya hay un gusto definido como realizar musica, edición de video, fotografía, modelado 3D, jugar video juegos, etc... Aqui es importante reflexionar. **¿Qué uso le damos?** 
+
+* Los desarrolladores de Software generalmente utilizan MAC, porque son sistemas probados con ecosistemas estables, son más caras como por ejemplo la [Mac Book Pro.](https://www.apple.com/co/macbook-pro/ "Mac Book Pro by Apple") Son computadores que estan a otro nivel.
+
+>Ya descubrí posiblemente, que me quiero comprar de aqui a largo plazo. Cuesta 5000 USD, bastante costoso.
+
+* Cuando se editan videos es 100% obligatorio una tarjeta discreta. 
+
+* Flujo de trabajo acelerado: Es un concepto interesante ya que cuando compilas tu código hay un tiempo de espera, entonces si no tienes un procesador tan potente tendrás que esperar más y por ende a lo largo del día el tiempo se acumula. Por lo que tener un mejor CPU genera un flujo de trabajo acelerado.
+
+* Cualquier computador podría servir para programar, sólo que cambia en cuanto tiempo puedes realizar determinados trabajos por lo que depende de qué gráficos discretos y de qué CPU contenga el dispositivo.
+
+---
+
+4. **Cuando se trabaja con diseño/audiovisual:** Necesitas una tarjeta gráfica discreta que te ayude a realizar todo el trabajo, a resolver los vectores que estes realizando, el arte que estes dibujando. Por ende una medio alta es lo recomendable.
+
+---
+
+5. **Hobby (gaming):** Depende de lo que vallas a jugar pues dependiendo de los gráficos del juego necesitaras tu tarjeta de video, pero si quieres los más modernos, más nuevos. Vas a necesitar de una ryzen 7 o ryzen 9, una tarjeta de video 3070 o 3080 que son la gama alta de NVIDIA. Hoy en día conseguir una tarjeta de video es muy escaso y se estan pagando casi que al triple del precio.
+
+**Es recomendable conseguirse una computadora previamente ensamblada y conseguirse una laptop en la cual no tienes que pelear con la tarjeta de video.**
+
+Video recomendado: https://www.youtube.com/watch?v=vb3O5QDeUK4
+
+Video recomendado: https://www.youtube.com/watch?v=MoFh-2-dyV8
+
+Lectura Recomendada: https://es.ifixit.com/Gu%C3%ADa/Reemplazo+de+disco+duro+Dell+Vostro+15+3568/105931
+
+Video Recomendado: https://www.youtube.com/watch?v=R4k1vyQaVIE
+
+<img src="https://tecnologia-informatica.com/wp-content/uploads/2018/07/tipos-de-computadoras-1.jpeg">
+
+*Imagen Tomada De: https://tecnologia-informatica.com/tipos-de-computadoras/*
+
+---
+
+
+
 
 
 
