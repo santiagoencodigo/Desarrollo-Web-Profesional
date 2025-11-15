@@ -13,7 +13,7 @@ En esta sección se explorarán los conceptos básicos de computación. Aquí es
 2. [Comprensión del Sistema Binario y su Aplicación en las Computadoras](#comprensión-del-sistema-binario-y-su-aplicación-en-las-computadoras)
 3. [Partes y Funciones Básicas de una Computadora](#partes-y-funciones-básicas-de-una-computadora)
 4. [Componentes Externos de una Laptop: Guía Completa](#componentes-externos-de-una-laptop-guía-completa)
-5. []()
+5. [Cómo elegir la computadora ideal según tus necesidades](#cómo-elegir-la-computadora-ideal-según-tus-necesidades)
 6. []()
 7. []()
 8. []()
@@ -200,9 +200,73 @@ Las unidades de estado sólido o SSD (Solid State Drive) son unidades de almacen
 
 ## Componentes Externos de una Laptop: Guía Completa
 
-**Tipo de pantalla**:
+Los dispositivos cuentan con diferentes puertos y elementos externos, cada uno con funciones específicas.
+
+Cable Ethernet: Permite conectar la laptop a internet mediante cable, ofreciendo mayor estabilidad y velocidad que el Wi-Fi.
+
+HDMI: Puerto que transmite video y audio en alta definición hacia monitores, televisores o proyectores.
+
+Puertos USB: Conector universal para periféricos como mouse, teclado, memorias USB, discos externos, adaptadores o lectores SD.
+
+Puerto de Audio: Entrada combinada para audífonos y micrófono. El ícono indica si soporta tanto salida de audio como entrada de micrófono.
+
+Lector de tarjetas SD: Ranura utilizada para leer tarjetas SD, comúnmente usadas en cámaras fotográficas y dispositivos de almacenamiento portátil.
+
+Elemento de Ventilación: Rejillas que permiten la salida del aire caliente generado por los componentes internos, evitando el sobrecalentamiento.
+
+Puerto de carga: Conector destinado exclusivamente a suministrar energía y recargar la batería del equipo.
+
+Lector de CDs (no común | reliquia): Unidad óptica para leer CDs o DVDs, presente solo en laptops antiguas o modelos especiales.
+
+Elementos indicadores: Pequeñas luces LED que muestran el estado del equipo: encendido, carga, actividad del disco, Wi-Fi, entre otros.
+
+Kensington (candado): Ranura de seguridad estandarizada para anclar la laptop mediante un candado Kensington y evitar robos.
+
+Trackpad: Una especie de mouse que controlas con tus dedos
+
+Camara: Generalmente en el centro superior del portatil en el bisel y usualmente al lado tienen los microfonos
+
+<img src="https://blog.neobyte.com.co/wp-content/uploads/2021/07/comprar-notebook-2.jpg">
+
+*Imagen Tomada De: https://blog.neobyte.com.co/que-funcion-cumple-cada-conector-de-la-computadora/*
+
+---
+
+**Pantalla**
+
+Las pantallas se miden en diagonal y es desde donde inicia la pantalla, es decir sin contar con el marco o bisel.
+
+>El bisel es el marco que rodea la pantalla de un dispositivo, como un teléfono, monitor o televisor, y sirve para proteger la pantalla, albergar componentes como cámaras y sensores, y mejorar el diseño.
+
+Generalmente las computadoras más caras tienen un bisel casi invisible y muchas veces pueden ser de elementos más livianos, duraderos con más tiempo de vida util.
+
+Hay computadoras que contienen fibra de carbono alrededor de su teclado.
+
+Los tamaños que existen van de 12 pulgadas, hay laptops de 17 pulgadas y es importante pensar ¿Para qué la vas a ocupar? **siempre es más comodo tener más pantalla** porque tienes más espacio para visualizar los elementos, pero a cambio <u>debes llevar una computadora más grande</u>
+
+¿Qué buscas con tu portatil?
+
+* Portabilidad
+* Algo más poderoso y grande
+
+**Resolución**
+
+Es importantisimo mirar qué resolución son las pantallas, un HD ya no es recomendado, es mucho mejor encontrar una computadora FULL HD que es el estandar de 1920px de largo por 1080 de alto.
+
+Hay computadoras que son 4K, que vienen 4 veces más pixeles que vienen en una pantalla. Esto es por la densidad de pixeles. **Requiere de una GPU Potente**
+
+<img src="https://static.platzi.com/media/articlases/Images/pantalla.PNG">
+
+*Imagen Tomada de: https://platzi.com/cursos/computacion-basica/que-es-el-hardware-externo-y-tipos-de-puertos/* 
 
 
+
+
+---
+
+
+
+## Cómo elegir la computadora ideal según tus necesidades
 
 
 
