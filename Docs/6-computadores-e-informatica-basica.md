@@ -2,7 +2,7 @@
 
 En esta sección se explorarán los conceptos básicos de computación. Aquí estarán mis apuntes sobre las principales funcionalidades de una computadora, instalar y desinstalar programas, navegar por internet de forma segura, manejar archivos e identificar software malicioso.
 
->Estos son mis apuntes personales de aprendizaje sobre los computadores e informática básica, el contenido está basado en mi estudio. El contenido del curso puede ser muy básico. Pues se presenta como algo muy básico e incluso se puede saltar si ya se tiene experiencia con los computadores
+>Estos son mis apuntes personales de aprendizaje sobre los computadores e informática básica, el contenido está basado en mi estudio.
 
 >Profesor: <a href="https://www.linkedin.com/in/ricardo-celis-santiago/">Ricardo </a> <a href="https://x.com/celismx">Celis</a>
 
@@ -15,7 +15,7 @@ En esta sección se explorarán los conceptos básicos de computación. Aquí es
 4. [Componentes Externos de una Laptop: Guía Completa](#componentes-externos-de-una-laptop-guía-completa)
 5. [Cómo elegir la computadora ideal según tus necesidades](#cómo-elegir-la-computadora-ideal-según-tus-necesidades)
 6. [Tipos de Software: Aplicación, Sistema y Libre](#tipos-de-software-aplicación-sistema-y-libre)
-7. []()
+7. [Tipos de Sistemas Operativos: macOS, Windows y Linux](#tipos-de-sistemas-operativos-macos-windows-y-linux)
 8. []()
 9. []()
 10. []()
@@ -417,6 +417,39 @@ Lectura Recomendadas:
 
 ---
 
+## Tipos de Sistemas Operativos: macOS, Windows y Linux
+
+Sobre los software de sistema corren las aplicaciones, si tu computadora la compraste de apple pues tu sistema operativo es macOS, si compraste computadoras ASUS, HP, ACER, DELL, Lenovo.. Van a tener un sistema operativo windows. Si ya eres un usuario con experiencia puede que tengas una computadora a la cual le instalaste linux o ubuntu.
+
+Por lo que:
+
+* [macOS](https://www.apple.com/co/os/macos/)
+* [Windows](https://www.microsoft.com/es-co/windows?r=1)
+
+Linux:
+
+* [Ubuntu](https://ubuntu.com/download)
+* [Archlinux](https://archlinux.org/)
+* [Debian](https://www.debian.org/index.es.html)
+* [Redhat](https://www.redhat.com/es)
+
+El software de sistema es la comunicación entre el hardware y la aplicación que estes utilizando.
+
+Si un computador no tiene nada, lo único que se puede hacer con el es instalarle un sistema operativo para instalarle programas o utilizar los que ya tiene por defecto.
+
+* Utilizar windows pirata es un acto peligroso debido a que para usar este software, requiere entonces de un tercero. Por ende puede ser peligroso ya que pueden haber dobles intenciones con que tu descargues el software pirata.
+
+**¿Por qué tener el sistema operativo actualizado?**
+
+El sistema operativo es un software, y el software puede tener errores pequeños y hay gente que dedica su vida a buscar estos errores, que los podemos definir como **exploits**. Para ellos utilizarlo a su favor como por ejemplo: Conectarse a tu windows y mirar literalmente todo lo que haces.
+
+Por ende empresas como apple o windows actualizan constantemente sus sistemas para ir quitando vulnerabilidades.
+
+Video Recomendado: https://www.youtube.com/watch?v=gwEq0-ACUr8
+
+Video Recomendado: https://www.youtube.com/watch?v=gjV6wbEipW4
+
+---
 
 
 
