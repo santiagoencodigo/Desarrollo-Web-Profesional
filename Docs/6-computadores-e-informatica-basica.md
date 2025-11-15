@@ -14,7 +14,7 @@ En esta sección se explorarán los conceptos básicos de computación. Aquí es
 3. [Partes y Funciones Básicas de una Computadora](#partes-y-funciones-básicas-de-una-computadora)
 4. [Componentes Externos de una Laptop: Guía Completa](#componentes-externos-de-una-laptop-guía-completa)
 5. [Cómo elegir la computadora ideal según tus necesidades](#cómo-elegir-la-computadora-ideal-según-tus-necesidades)
-6. []()
+6. [Tipos de Software: Aplicación, Sistema y Libre](#tipos-de-software-aplicación-sistema-y-libre)
 7. []()
 8. []()
 9. []()
@@ -341,6 +341,79 @@ Video Recomendado: https://www.youtube.com/watch?v=R4k1vyQaVIE
 <img src="https://tecnologia-informatica.com/wp-content/uploads/2018/07/tipos-de-computadoras-1.jpeg">
 
 *Imagen Tomada De: https://tecnologia-informatica.com/tipos-de-computadoras/*
+
+---
+
+
+
+## Tipos de Software: Aplicación, Sistema y Libre
+
+Software es el termino informático que se le da a un programa o a un conjunto de programas, procedimientos que van a ocurrir dentro de nuestra computadora, dentro de nuestro hardware.
+
+**Aplicación:** Lo más probable para que tu estes leyendo esto, es que estes Un software de aplicación como Chrome, Brave, Opera o cualquier navegador. Algunos software de aplicación reeconocidos son Adobe, Word, Excel, Minecraft
+
+<img src="https://togrowagencia.com/wp-content/uploads/2022/07/software-de-aplicacion-tipos.jpg">
+
+*Imagen Tomada De: https://togrowagencia.com/software-de-aplicacion-que-es/*
+
+---
+
+**Malicioso:** Tambien conocido como Malware, esperemos nunca nos toque lidiar con un software de este tipo ya que busca obtener algo de nuestro equipo que no necesariamente va a ser algo positivo. Puede ser un virus que no haga nada más que cerrar ventanas, hay [software keylogger](https://es.wikipedia.org/wiki/Keylogger "Keylogger - Wikipedia") que guarda todo lo que registras en tu teclado, otro software reconocido de este tipo de el [spyware](https://www.fortinet.com/lat/resources/cyberglossary/spyware)
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/c/c4/Keylogger-software-logfile-example.jpg">
+
+*Imagen Tomada De: https://es.wikipedia.org/wiki/Keylogger*
+
+---
+
+**Libre:** Open Source es un termino con el que nos podemos tomar demasiado, es software de código abierto que es algo muy agradable de internet y de la tecnologia en general. Son hechos por personas que programan por pasión, o por necesidad realizan programas públicos. Por lo que estas personas realizan código y lo suben a repositorios o a lugares en internet que quede libre para cualquier persona que quiera usarlo como aplicación sino escribir más código, modificarlo, meterlo en su propio programa. 
+
+* El motor que se encarga de interpretar la información en el navegador todo lo que es MOTOR V8 que esta hecho por GOOGLE y es de código abierto. Eso significa que se puede modificar o reutilizar siempre y cuando se respeten las licensias de google.
+
+>Chrome que es la aplicación que utiliza por dentro V8, y este no es abierto.
+
+* Ubuntu y muchas distribuciones de linux son de código abierto.
+
+>Hay bastantes personas que tienen una mentalidad de compartir, dar, ayudar, que el conocimiento se extienda y es gran parte de lo que el código abierto busca.
+
+COmo ventaja competitiva puede que halla una persona que halla encontrado algún error en el código y corregirlo y contribuir sin necesidad de que se le halla pagado algún dinero.
+
+<img src="https://ing.software/blog/wp-content/uploads/2025/01/software-libre.png">
+
+*Imagen Tomada De: https://ing.software/blog/introduccion-al-software-libre/*
+
+Lectura Recomendadas:
+ 
+* Programa Open Source: https://www.gimp.org/ - Código: https://github.com/GNOME/gimp
+
+* Programa Open Source: https://www.mysql.com/ - Código: https://github.com/mysql/mysql-server
+
+---
+
+**Propietario:** El software propietario es aquel cuyo código fuente no está disponible para el usuario. No se puede modificar y normalmente requiere licencia paga o viene incluido con el sistema. Un claro ejemplo de este tipo de software es [Windows](https://www.microsoft.com/es-co/windows?r=1 "Windows by Microsoft"), MACos, Office, Adobe, Steam, etc...
+
+<img src="https://i.pinimg.com/originals/0e/7a/df/0e7adf021494362d2419bebf4c29e87d.jpg">
+
+*Imagen Tomada De: https://co.pinterest.com/cecy24mendozaa03/software-libre-y-propietario/*
+
+---
+
+**De Sistema:** Un claro ejemplo de este es el Sistema Operativo de un dispositivo y Los Drivers como controladores, que se enfoca en que tu windows sepa que conectaste algo a un puerto como un teclado. Se encargan de la comunicación entre un dispositivo y un hardware
+
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYv8oD7zAQQlL2ksDQFWIgDG5BxkePcwwQsQ&s">
+
+*Imagen Tomada De: https://tecnomagazine.net/software-de-sistema/*
+
+---
+
+
+**De Programación:** Para entender este, es fundamental la pregunta ¿Cómo se programo el software de aplicación, libre, propietario, malware y demás? Esto es atraves de software de programación que se les conoce como Ambientes de Desarrollo Integrado o (IDLE) que son herramientas especificas para crear atraves de código, hay demasiados con propositos para moviles, para escritorio, videojuegos y mucho más.
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/d/d7/Python%27s_IDLE.png">
+
+*Imagen Tomada De: https://en.wikipedia.org/wiki/IDLE*
+
+>¿Qué software utilizas día a día?
 
 ---
 
