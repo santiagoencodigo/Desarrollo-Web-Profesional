@@ -423,15 +423,22 @@ Sobre los software de sistema corren las aplicaciones, si tu computadora la comp
 
 Por lo que:
 
+macOS, desarrollado por Apple, se distingue por su interfaz amigable, diseño intuitivo y estabilidad, y se utiliza principalmente en computadoras Mac, siendo muy apreciado en entornos de diseño y creatividad.
+
 * [macOS](https://www.apple.com/co/os/macos/)
+
+Windows, de Microsoft, es el sistema operativo más popular y versátil, compatible con una amplia variedad de programas y hardware. Es ampliamente usado tanto en entornos domésticos como empresariales debido a su facilidad de uso y soporte masivo.
+
 * [Windows](https://www.microsoft.com/es-co/windows?r=1)
 
-Linux:
+Linux es un sistema operativo libre y de código abierto, conocido por su seguridad, estabilidad y personalización. Es muy utilizado en servidores, programación y entornos técnicos, aunque también cuenta con versiones para uso doméstico.
 
 * [Ubuntu](https://ubuntu.com/download)
 * [Archlinux](https://archlinux.org/)
 * [Debian](https://www.debian.org/index.es.html)
 * [Redhat](https://www.redhat.com/es)
+
+>En resumen, macOS destaca por diseño y estabilidad, Windows por compatibilidad y popularidad, y Linux por flexibilidad, seguridad y control.
 
 El software de sistema es la comunicación entre el hardware y la aplicación que estes utilizando.
 
