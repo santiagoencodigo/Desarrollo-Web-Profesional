@@ -17,7 +17,7 @@ En esta sección se explorarán los conceptos básicos de computación. Aquí es
 6. [Tipos de Software: Aplicación, Sistema y Libre](#tipos-de-software-aplicación-sistema-y-libre)
 7. [Tipos de Sistemas Operativos: macOS, Windows y Linux](#tipos-de-sistemas-operativos-macos-windows-y-linux)
 8. [Tipos de Archivos Comunes en Windows y su Uso](#tipos-de-archivos-comunes-en-windows-y-su-uso)
-9. []()
+9. [Seguridad en Cuentas: Contraseñas y Verificación en Dos Pasos](#seguridad-en-cuentas-contraseñas-y-verificación-en-dos-pasos)
 10. []()
 11. []()
 12. []()
@@ -603,3 +603,44 @@ Lectura Recomendada: https://fileinfo.com/
 ---
 
 
+
+## Seguridad en Cuentas: Contraseñas y Verificación en Dos Pasos
+
+La seguridad de una contraseña depende principalmente de su longitud, variedad de caracteres y nivel de aleatoriedad.
+A mayor cantidad de caracteres, existe un crecimiento exponencial en el tiempo que tomaría descifrarla mediante ataques de fuerza bruta o diccionario.
+
+Ejemplos aproximados de tiempo para descifrar contraseñas:
+
+* 6 caracteres solo letras minúsculas → segundos
+
+* 8 caracteres con mayúsculas + minúsculas → minutos
+
+* 10 caracteres con números y letras → horas
+
+* 12 caracteres con letras, números y símbolos → años
+
+* 14+ caracteres con alta aleatoriedad → prácticamente irrompible con tecnología actual
+
+Esto ocurre porque cada carácter añadido multiplica la cantidad de combinaciones posibles.
+Por eso, una contraseña larga y diversa siempre será más segura que una breve, aunque incluya símbolos.
+
+<img src="https://static.platzi.com/media/user_upload/280055061_10160123400471971_8213544544357456219_n-89d8900f-df22-4cad-a208-3c6ac62c5ba0.jpg">
+
+Incluso una contraseña fuerte puede ser comprometida mediante phishing, malware o reutilización.
+La Autenticación en Dos Pasos (2FA) añade una segunda capa de seguridad que requiere algo adicional además de la contraseña.
+
+Este segundo factor puede ser:
+
+* Código de verificación recibido por SMS.
+
+* Código temporal (TOTP) generado por apps como Google Authenticator, Authy o Microsoft Authenticator.
+
+* Notificaciones push para aprobar el inicio de sesión.
+
+* Llaves de seguridad físicas (YubiKey, Titan).
+
+Con 2FA activo, aunque alguien obtenga tu contraseña, no podrá acceder a la cuenta sin el segundo factor.
+
+>La combinación de contraseñas robustas y autenticación en dos pasos es actualmente la forma más efectiva de asegurar cuentas personales y corporativas.
+
+---
