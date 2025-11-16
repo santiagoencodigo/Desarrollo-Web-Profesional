@@ -16,7 +16,7 @@ En esta sección se explorarán los conceptos básicos de computación. Aquí es
 5. [Cómo elegir la computadora ideal según tus necesidades](#cómo-elegir-la-computadora-ideal-según-tus-necesidades)
 6. [Tipos de Software: Aplicación, Sistema y Libre](#tipos-de-software-aplicación-sistema-y-libre)
 7. [Tipos de Sistemas Operativos: macOS, Windows y Linux](#tipos-de-sistemas-operativos-macos-windows-y-linux)
-8. []()
+8. [Tipos de Archivos Comunes en Windows y su Uso](#tipos-de-archivos-comunes-en-windows-y-su-uso)
 9. []()
 10. []()
 11. []()
@@ -26,7 +26,6 @@ En esta sección se explorarán los conceptos básicos de computación. Aquí es
 15. []()
 16. []()
 17. []()
-18. []()
 
 
 
@@ -461,5 +460,146 @@ Video Recomendado: https://www.youtube.com/watch?v=gjV6wbEipW4
 
 
 
+## Tipos de Archivos Comunes en Windows y su Uso
+
+Los tipos de archivos son estándares para el manejo de diferentes archivos y que así pueda manejar tu computador esta información.
+
+Los archivos son diferenciados mediante su extensión. La extensión está después del nombre del archivo y precesido por un punto, por ejemplo: “.jpg”, “.doc”, “.mp3”.
+
+**Tipos de archivos por extensiones.**
+
+Documentos
+
+    .txt → Texto plano sin formato.
+
+    .doc / .docx → Documentos editables de Microsoft Word.
+
+    .pdf → Documento portátil no editable, estándar para compartir.
+
+    .odt → Documento de texto de LibreOffice Writer.
+
+    .rtf → Texto enriquecido con formato básico.
+
+    .md → Markdown, usado para documentación con formato ligero.
+
+Hojas de Cálculo
+
+    .xls / .xlsx → Hojas de Excel, datos en celdas, fórmulas y gráficos.
+
+    .csv → Texto separado por comas; datos simples, muy usado en bases de datos.
+
+    .ods → Hoja de cálculo de LibreOffice Calc.
+
+Presentaciones
+
+    .ppt / .pptx → Presentaciones de PowerPoint.
+
+    .odp → Presentaciones de LibreOffice Impress.
+
+Imágenes
+
+    .jpg / .jpeg → Imagen comprimida, ideal para fotos.
+
+    .png → Imágenes sin fondo, transparencia y buena calidad.
+
+    .gif → Animaciones cortas y gráficos simples.
+
+    .bmp → Imagen sin compresión, muy pesada.
+
+    .svg → Imagen vectorial, no pierde calidad.
+
+    .webp → Formato moderno, ligero y de alta calidad.
+
+Audio
+
+    .mp3 → Audio comprimido, el más común.
+
+    .wav → Audio sin compresión, calidad alta.
+
+    .aac → Alternativa al MP3 con mejor calidad y menor peso.
+
+    .flac → Audio sin pérdida, usado por audiófilos.
+
+Video
+
+    .mp4 → Video estándar, compatible con casi todo.
+
+    .avi → Video antiguo, buena calidad pero pesado.
+
+    .mkv → Contenedor de video flexible (subtítulos, múltiples audios).
+
+    .mov → Video de Apple QuickTime.
+
+    .wmv → Video de Microsoft.
+
+Archivos Comprimidos
+
+    .zip → Comprimido estándar universal.
+
+    .rar → Comprimido de alto nivel, requiere WinRAR.
+
+    .7z → Compresión eficiente, creado por 7-Zip.
+
+    .tar / .gz → Comunes en Linux para empaquetar proyectos.
+
+Sistemas / Programa
+
+    .exe → Ejecutable en Windows.
+
+    .msi → Instalador de software en Windows.
+
+    .apk → Instalador de aplicaciones Android.
+
+    .dmg → Instalador de macOS.
+
+    .iso → Imagen de disco (copias de CD/USB).
+
+    .bat → Script por lotes para Windows.
+
+    .sh → Script de shell en Linux/macOS.
+
+Desarrollo y Programación
+
+    .html → Estructura de páginas web.
+
+    .css → Estilos para páginas web.
+
+    .js → Código JavaScript.
+
+    .php → Código de servidor en PHP.
+
+    .py → Archivos de Python.
+
+    .java → Código Java.
+
+    .c / .cpp → Código en C / C++.
+
+    .json → Formato estándar de datos para APIs.
+
+    .xml → Formato estructurado para datos.
+
+    .sql → Consultas o scripts de bases de datos.
+
+    .yml / .yaml → Configuraciones para servidores, apps y contenedores.
+
+    .env → Variables de entorno (claves, rutas, configs).
+
+Bases de Datos
+
+    .db → Base de datos general.
+
+    .sqlite / .sqlite3 → Base de datos SQLite.
+
+    .mdb / .accdb → Bases de datos de Microsoft Access.
+
+>Cada vez más se esta ignorando las extensiones sino mas bien se le da atención al tipo de archivo debido a que en los dispositivos moviles o incluso en computadores sin la configuración de ver extensiones en las vistas del explorador del archivo: No muestran estas extensiones.
+
+Lectura Recomendada: https://fileinfo.com/
+
+<img src="https://www.muycomputer.com/wp-content/uploads/2020/09/Extensiones-de-archivos_2.jpg">
+
+*Imagen Tomada De: https://www.muycomputer.com/2020/09/21/extensiones-de-archivos-windows/*
+
+---
 
 
