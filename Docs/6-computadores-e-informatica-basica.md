@@ -18,7 +18,7 @@ En esta sección se explorarán los conceptos básicos de computación. Aquí es
 7. [Tipos de Sistemas Operativos: macOS, Windows y Linux](#tipos-de-sistemas-operativos-macos-windows-y-linux)
 8. [Tipos de Archivos Comunes en Windows y su Uso](#tipos-de-archivos-comunes-en-windows-y-su-uso)
 9. [Seguridad en Cuentas: Contraseñas y Verificación en Dos Pasos](#seguridad-en-cuentas-contraseñas-y-verificación-en-dos-pasos)
-10. []()
+10. [ Tipos de virus informáticos y cómo prevenirlos](#tipos-de-virus-informáticos-y-cómo-prevenirlos)
 11. []()
 12. []()
 13. []()
@@ -644,3 +644,52 @@ Con 2FA activo, aunque alguien obtenga tu contraseña, no podrá acceder a la cu
 >La combinación de contraseñas robustas y autenticación en dos pasos es actualmente la forma más efectiva de asegurar cuentas personales y corporativas.
 
 ---
+
+
+
+
+## Tipos de virus informáticos y cómo prevenirlos
+
+Cuando estas conectado a internet estas exponiendo tus datos, tu información.
+
+Un virus esta diseñado para generar algo en nuestro sistema, que como los virus que llegan a los seres vivos los afecta negativamente.
+
+Un virus informática son lineas de programación con intención de replicar o dañar información que viajan en archivos que pueden parecer fotos, PDFs, video y cualquier elemento de internet.
+
+---
+
+### Tipos de Virus
+
+* **De Gusano**: Malware que se replica automáticamente y se propaga a través de redes o dispositivos sin necesidad de intervención del usuario, consumiendo recursos y ralentizando sistemas.
+
+<img src="https://static.platzi.com/media/articlases/Images/virus01.PNG">
+
+*Imagen Tomada De: https://platzi.com/cursos/computacion-basica/que-es-un-virus-informatico/*
+
+>Si te fijas “AnnaKournikova.jpg.vbs” parece una imagen por su extensión JPG acerca de la deportista Anna Kournikova. Sin embargo, si observas atentamente al final está otra extensión “.vbs” que es el formato para un archivo del lenguaje de programación Visual Basic Script de Microsoft.
+
+* **Adware**: Software que muestra anuncios no deseados en el equipo. Su objetivo principal es generar ingresos mediante publicidad, aunque puede recopilar datos sin permiso.
+
+<img src="https://mi.certerus.com/images/articulos/adware/adware.png">
+
+*Imagen Tomada De: https://mi.certerus.com/knowledgebase/52/Adware.html*
+
+* **Spyware**: Programa diseñado para espiar al usuario, recopilar información personal, hábitos de navegación o credenciales sin su conocimiento.
+
+* **Ransomware**: Malware que bloquea o cifra los archivos del sistema y exige un pago (rescate) para recuperarlos. Es una de las amenazas más peligrosas en la actualidad.
+
+<img src="https://www.incibe.es/sites/default/files/images/ransomware/cabecera-ransomeware.png">
+
+*Imagen Tomada De: https://www.incibe.es/sites/default/files/images/ransomware/cabecera-ransomeware.png*
+
+* **Troyanos**: Se hacen pasar por programas legítimos para engañar al usuario. Una vez instalados, permiten acceso remoto, robo de datos o instalación de más malware.
+
+<img src="https://www.kaspersky.es/content/es-es/images/repository/isc/2017-images/what-is-a-trojan-virus.jpg">
+
+*Imagen Tomada De: https://www.kaspersky.es/resource-center/threats/trojans*
+
+* **Botnet**: Red de equipos infectados (bots) que son controlados de forma remota por un atacante. Se utilizan para enviar spam, realizar ataques DDoS o minar criptomonedas.
+
+---
+
+
