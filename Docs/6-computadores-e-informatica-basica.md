@@ -20,7 +20,7 @@ En esta sección se explorarán los conceptos básicos de computación. Aquí es
 9. [Seguridad en Cuentas: Contraseñas y Verificación en Dos Pasos](#seguridad-en-cuentas-contraseñas-y-verificación-en-dos-pasos)
 10. [ Tipos de virus informáticos y cómo prevenirlos](#tipos-de-virus-informáticos-y-cómo-prevenirlos)
 11. [Seguridad en equipos: Evitar software pirata y actualizar Windows](#seguridad-en-equipos-evitar-software-pirata-y-actualizar-windows)
-12. []()
+12. [Navegación segura en internet y Prevención del Phishing](#navegación-segura-en-internet-y-prevención-del-phishing)
 13. []()
 14. []()
 15. []()
@@ -726,3 +726,47 @@ Su función principal es bloquear accesos no autorizados, protegiendo el equipo 
 
 ---
 
+
+
+
+## Navegación segura en internet y Prevención del Phishing
+
+Este es un tema fundamental!
+
+>Yo personalmente lo que más hago en un computador es navegar por internet.
+
+A continuación diferentes casos:
+
+**Publicidad forzada en el navegador:** Publicidad invasiva que aparece sin permiso e intenta vender software no solicitado; suele ser señal de adware o páginas poco confiables.
+
+**Descargar software de la página oficial:** Siempre es más seguro obtener programas desde el sitio oficial del desarrollador, evitando versiones modificadas o infectadas por terceros.
+
+**Correos SPAM y verificación del remitente:** El SPAM contiene mensajes engañosos o maliciosos; es esencial revisar cuidadosamente el nombre y dirección del correo que lo envía.
+
+**Phishing:** Es una técnica de engaño para robar datos haciéndose pasar por una entidad legítima. Muchas veces puede aparecer como un correo que imita a tu banco y pide “verificar tu cuenta”. Y puede generar robo de identidad, acceso a cuentas personales y pérdida de información. *Imagina que roben tu identidad para sacar un credito.*
+
+>Un caso muy común de Pishing es que te envían un correo de tu banco indicando que te pagan tu sueldo y debes dar algún dato para validar o recibir el pago. Generalmente ponen un valor bajo a lo que gana una persona promedio y por esto muchas personas caen porque les interesa entrar a ver cuanto les pagaron.
+
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROv0nQClp5hg946u6qFAGYFlgiw36gcrXG3g&s">
+
+*Imagen Tomada De: https://www.retarus.com/blog/es/el-phishing-continua-siendo-la-principal-puerta-de-entrada-para-los-ciberdelincuentes/*
+
+**Cuidado con los links que llegan:** Nunca abrir enlaces sospechosos o enviados por desconocidos; pueden dirigir a sitios falsos o descargar malware.
+
+**Sospechas y pensamiento crítico:** Si algo parece extraño, demasiado bueno o fuera de contexto, es mejor dudar y analizar antes de hacer clic o descargar.
+
+**Sitios no seguros (HTTP vs HTTPS):** El navegador advierte cuando un sitio usa HTTP, que no cifra la información; un atacante podría interceptar formularios y ver datos enviados.
+Con HTTPS, la información viaja cifrada y protegida contra robo.
+
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8Pe4ojPPCRhL4iq6fu4sHnh-3gSN7yPVqLA&s">
+
+*Imagen Tomada De: https://www.fuegoyamana.com/certificado-ssl-que-es-y-como-instalarlo/*
+
+**Certificados del sitio web:** Cuando un sitio usa HTTPS, su certificado muestra quién lo administra y garantiza que la conexión es auténtica y segura.
+
+**Certificado SSL:** Es el certificado digital que permite cifrar la comunicación entre el navegador y el sitio web, protegiendo datos sensibles.
+
+
+Video Recomendado: https://www.youtube.com/watch?v=4gvHSnk6hiQ
+
+---
