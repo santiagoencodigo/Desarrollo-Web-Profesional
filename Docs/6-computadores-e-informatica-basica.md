@@ -19,7 +19,7 @@ En esta sección se explorarán los conceptos básicos de computación. Aquí es
 8. [Tipos de Archivos Comunes en Windows y su Uso](#tipos-de-archivos-comunes-en-windows-y-su-uso)
 9. [Seguridad en Cuentas: Contraseñas y Verificación en Dos Pasos](#seguridad-en-cuentas-contraseñas-y-verificación-en-dos-pasos)
 10. [ Tipos de virus informáticos y cómo prevenirlos](#tipos-de-virus-informáticos-y-cómo-prevenirlos)
-11. []()
+11. [Seguridad en equipos: Evitar software pirata y actualizar Windows](#seguridad-en-equipos-evitar-software-pirata-y-actualizar-windows)
 12. []()
 13. []()
 14. []()
@@ -690,6 +690,39 @@ Un virus informática son lineas de programación con intención de replicar o d
 
 * **Botnet**: Red de equipos infectados (bots) que son controlados de forma remota por un atacante. Se utilizan para enviar spam, realizar ataques DDoS o minar criptomonedas.
 
+
+
 ---
 
+
+
+## Seguridad en equipos: Evitar software pirata y actualizar Windows
+
+<img src="https://static.platzi.com/media/user_upload/upload-efbbef6a-7d68-4a86-ae3c-f2a8b8cfaad1.png">
+
+Hay muchas buenas prácticas para evitar problemas, una de esas es no usar software pirata porque nos exponemos bastante. Cuando descargamos original tenemos todas las garantias del fabricante, sabemos quienes fueron los encargados de programarlo.
+
+Al usar software pirata, usamos un producto creackeado por otra persona y a más escala del producto más probabilidad de tener algún virus. Digamos... con un Windows casi esta garantizado. 
+
+Si se quiere utilizar microsoft office, se debe pagarlo o utilizar alguna alternativa.
+
+Si se opta por descargar alguna versión pirata, es bueno mirar las reseñas para evitar problemas porque aun asi no es recomendado.
+
+Una buena práctica tambien es actualizar constantemente tu sistema operativo.
+
+<img src="https://static.platzi.com/media/user_upload/upload-d4077dc9-06d8-4134-ba43-283c3e8c1289.png">
+
+---
+
+**Windows Defender**
+
+Windows Defender depende de las definiciones de virus, que son listas de comportamientos y firmas que identifican amenazas. (Estas definiciones muchas veces con las actualizaciones en nuestro sistema)
+
+**Firewall de windows**
+
+El Firewall es una barrera de seguridad que controla qué aplicaciones, conexiones y puertos pueden comunicarse con el sistema o con Internet.
+
+Su función principal es bloquear accesos no autorizados, protegiendo el equipo de ataques externos.
+
+---
 
