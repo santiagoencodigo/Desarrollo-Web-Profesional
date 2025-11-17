@@ -21,11 +21,7 @@ En esta sección se explorarán los conceptos básicos de computación. Aquí es
 10. [ Tipos de virus informáticos y cómo prevenirlos](#tipos-de-virus-informáticos-y-cómo-prevenirlos)
 11. [Seguridad en equipos: Evitar software pirata y actualizar Windows](#seguridad-en-equipos-evitar-software-pirata-y-actualizar-windows)
 12. [Navegación segura en internet y Prevención del Phishing](#navegación-segura-en-internet-y-prevención-del-phishing)
-13. []()
-14. []()
-15. []()
-16. []()
-17. []()
+13. [Conclusión](#conclusión)
 
 
 
@@ -766,7 +762,19 @@ Con HTTPS, la información viaja cifrada y protegida contra robo.
 
 **Certificado SSL:** Es el certificado digital que permite cifrar la comunicación entre el navegador y el sitio web, protegiendo datos sensibles.
 
-
 Video Recomendado: https://www.youtube.com/watch?v=4gvHSnk6hiQ
 
 ---
+
+
+## Conclusión
+
+Este temario brinda una base completa para comprender el funcionamiento de una computadora, los principales tipos de software y archivos, y las prácticas esenciales de seguridad en Windows. Con estos conocimientos, cualquier principiante puede navegar, instalar programas, reconocer riesgos y utilizar su equipo de manera más eficiente y protegida.
+
+También exploramos conceptos clave como los tipos de archivos, las diferencias entre sistemas operativos, y las prácticas indispensables de ciberseguridad: contraseñas seguras, verificación en dos pasos, prevención de virus, navegación protegida y medidas para evitar software malicioso.
+
+[Haz click aqui, para ir al inicio de esta sección](#computadores-e-informática-básica)
+
+[Haz click aqui, para ir a la sección principal de este repositorio](https://github.com/santiagoencodigo/Desarrollo-Web-Profesional)
+
+[¿Quieres mirar la página de este repo?](https://santiagoencodigo.github.io/Desarrollo-Web-Profesional/)
