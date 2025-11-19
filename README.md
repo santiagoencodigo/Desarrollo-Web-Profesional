@@ -127,6 +127,24 @@ En esta sección se explorarán los conceptos básicos de computación. Aquí es
 
 
 
+---
+
+
+
+
+## Terminal y línea de comandos.
+
+* <a src="">Documentación</a> 
+
+En esta sección se encuentra cómo utilizar la terminal y la línea de comandos (Terminal BASH) para navegar el sistema operativo, manipular archivos y directorios, comprender permisos y procesos, y usar herramientas como grep y curl. Integra alias y personaliza tu shell para optimizar el flujo de trabajo.
+
+
+
+---
+
+
+
+
 ## Fundamentos de JavaScript.
 
 * <a src="">Documentación</a> 
@@ -137,14 +155,16 @@ En este apartado se encuentran las bases de JavaScript: variables, tipos de dato
 
 
 
-
 ---
 
 
 
-<!--## Terminal y línea de comandos.
 
-## Control de versiones con Git y GitHub. -->
+## Control de versiones con Git y GitHub.
+
+
+
+---
 
 
 
