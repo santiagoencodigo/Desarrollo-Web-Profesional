@@ -25,8 +25,8 @@ También cómo crear alias, personalizar shell y optimizar el flujo de trabajo p
 ## Tabla de Contenido
 
 1. [Ventajas de Dominar la Terminal de Comandos para Profesionales](#ventajas-de-dominar-la-terminal-de-comandos-para-profesionales)
-2. []()
-3. []()
+2. [Qué es una Terminal y Cómo Funciona con Comandos Básicos](#qué-es-una-terminal-y-cómo-funciona-con-comandos-básicos)
+3. [Instalación de terminal Bash en Windows usando WSL](#instalación-de-terminal-bash-en-windows-usando-wsl)
 4. []()
 5. []()
 6. []()
@@ -86,4 +86,57 @@ Lectura Recomendada: https://labex.io/linuxjourney
 
 ## Qué es una Terminal y Cómo Funciona con Comandos Básicos
 
+¿Qué es una terminal? Es una pregunta que vamos a ir resolviendo a lo largo de todo este documento.
 
+La terminal es la que solemos ver usualmente en las peliculas de hacker donde escriben código y cosas magicas empiezan a suceder. (No esta muy alejado de la realidad.)
+
+La terminal es una **Interfaz de Usuario** en la que se escribe una serie de comandos que nos va a permitir comunicarnos con el sistema operativo, es decir: Darle instrucciones a nuestra computadora a traves de comandos.
+
+Las terminales pueden aparecer en varios lados, en un programa, en la web, pueden aparecer asi sin más... sin ni siquiera interfaz de usuario e incluso podría aparecer en nuestro celular si nos conectamos de una forma adecuada.
+
+Para poder ejecutar la terminal debemos hacerlo mediante un programa llamado **SHELL** pues la que realmente hará la interpretación de estos comandos es la Shell, es un programa (normalmente compilado) que actúa como interfaz entre el usuario y el sistema operativo (Se encarga de la traducción). Por lo que permite al usuario interactuar con el sistema operativo a traves de comandos de texto.
+
+Como por ejemplo: Copia un archivo, elimina un archivo, configuraciones de crear un proceso.
+
+Aunque la mayoría de las terminales están asociadas con sistemas Linux y Unix, es posible emplearlas también en Windows mediante herramientas específicas como PowerShell o Bash a través del sistema WSL. La elección de la terminal dependerá del sistema operativo y del entorno de trabajo.
+
+>Veremos la powershell
+
+Como en mi dispositivo tengo un sistema Windows se utilizará un sistema emulado llamado **WSL** | Windows Subsystem Linux.
+
+**La diferencia entre la terminal y la shell.**
+
+>Si tambien tienes windows, oprime la tecla windows y busca "Powershell", ejecuta "Windows Powershell"
+
+>Si vas al Visual Studio Code y oprimes el atajo Control + Ñ te abrira la terminal.
+
+Una vez dentro de Powershell o en la terminal de VSCODE escribes: **dir**
+
+<img src="https://static.platzi.com/media/user_upload/upload-c7a8f22f-a45d-49b4-abd4-f90bfed8c2ff.png">
+
+Te mostrara todos los directorios que tengas en tu dispositivo, shell tiene sus propios comandos, pero no son tan utilizados a nivel global. La terminal que se utiliza globalmente y en todas partes es **BASH** que es la que se va a estar utilizando a lo largo de todos estos apuntes.
+
+    En la mayoria de servidores windows se utiliza esta powershell
+
+* PowerShell es una terminal específica para Windows que ofrece comandos únicos para este sistema operativo. Es utilizada principalmente en servidores Windows.
+
+* la terminal Bash, frecuente en Linux y sistemas Unix, es ampliamente utilizada a nivel global y será explorada mediante emulación WSL en este repo.
+
+El funcionamiento de una terminal se apoya en un programa llamado shell. Este programa interpreta los comandos que introduces y los traduce en instrucciones que el sistema operativo puede entender y ejecutar. La shell convierte estos comandos escritos en acciones concretas visibles en tu equipo.
+
+Lo que conocemos por Terminal realmente involucra 3 conceptos clave: Terminal (interfaz), Shell y Línea de comandos.
+
+<img src="https://www.cs.cornell.edu/courses/cs1110/2021sp/resources/images/example-powershell.png">
+
+*Imagen Tomada De: https://www.cs.cornell.edu/courses/cs1110/2021sp/resources/shell-windows.html*
+
+
+
+
+---
+
+
+
+## Instalación de terminal Bash en Windows usando WSL
+
+a
