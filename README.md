@@ -134,7 +134,7 @@ En esta sección se explorarán los conceptos básicos de computación. Aquí es
 
 ## Terminal y línea de comandos.
 
-* <a src="">Documentación</a> 
+* <a src="https://github.com/santiagoencodigo/Desarrollo-Web-Profesional/blob/main/Docs/7-Terminal-y-linea-de-comandos.md">Documentación</a> 
 
 En esta sección se encuentra cómo utilizar la terminal y la línea de comandos (Terminal BASH) para navegar el sistema operativo, manipular archivos y directorios, comprender permisos y procesos, y usar herramientas como grep y curl. Integra alias y personaliza tu shell para optimizar el flujo de trabajo.
 
