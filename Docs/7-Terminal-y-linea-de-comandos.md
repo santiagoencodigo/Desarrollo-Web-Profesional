@@ -27,7 +27,7 @@ También cómo crear alias, personalizar shell y optimizar el flujo de trabajo p
 1. [Ventajas de Dominar la Terminal de Comandos para Profesionales](#ventajas-de-dominar-la-terminal-de-comandos-para-profesionales)
 2. [Qué es una Terminal y Cómo Funciona con Comandos Básicos](#qué-es-una-terminal-y-cómo-funciona-con-comandos-básicos)
 3. [Instalación de terminal Bash en Windows usando WSL](#instalación-de-terminal-bash-en-windows-usando-wsl)
-4. []()
+4. [Comandos básicos de terminal para principiantes](#comandos-básicos-de-terminal-para-principiantes)
 5. []()
 6. []()
 7. []()
@@ -139,4 +139,38 @@ Lo que conocemos por Terminal realmente involucra 3 conceptos clave: Terminal (i
 
 ## Instalación de terminal Bash en Windows usando WSL
 
-a
+Ya que la mayoria de personas que inician en el mundo de tecnología lo hacen con un sistema operativo windows.
+
+Estos seran los pasos para instalar una terminal BASH en windows usando un sistema llamado Windows Subsystem for Linux.
+
+Por lo que vamos a instalar un sistema operativo emulado a traves de una terminal especial llamada AWL.
+
+Sigue el enlace, haz la lectura y sigue los pasos: https://learn.microsoft.com/es-es/windows/wsl/install
+
+>Cuando ejecutas la powershell con administrador, la dirección será PS C:\Windows\system32>
+
+El comando wsl --install va a instalar WSL para luego instalar una distribución de linux llamada UBUNTU, la más usada del mundo.
+
+Ubuntu es una distribución de linux basada en DEBIAN que ya trae por defecto la SHELL de BASH
+
+>Estamos descargando ubuntu.
+
+Si quieres administrar las distribuciones de linux que tienes, puedes usar el comando wsl -l
+
+Con esto ejecutamos WSL (oprime tecla windows y busca WSL) y se debe crear un usuario con nombre y contraseña.
+
+De hay ya tenemos BASH, ¿Cómo sabemos que tenemos BASH? basta con usar el comando echo $SHELL y debe aparecer algo como /bin/bash - Con esto sabemos que tenemos BASH en nuestra terminal con ubuntu mediante WSL
+
+>Mac tiene su propia terminal con BASH, pero puede que hallan algunos comandos que no los tome porque no es un sistema linux completo sino mas bien UNIX
+
+
+
+
+
+---
+
+
+
+
+## Comandos básicos de terminal para principiantes
+
