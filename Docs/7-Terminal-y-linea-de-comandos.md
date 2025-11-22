@@ -28,7 +28,7 @@ También cómo crear alias, personalizar shell y optimizar el flujo de trabajo p
 2. [Qué es una Terminal y Cómo Funciona con Comandos Básicos](#qué-es-una-terminal-y-cómo-funciona-con-comandos-básicos)
 3. [Instalación de terminal Bash en Windows usando WSL](#instalación-de-terminal-bash-en-windows-usando-wsl)
 4. [Comandos básicos de terminal para principiantes](#comandos-básicos-de-terminal-para-principiantes)
-5. []()
+5. [Navegación entre directorios en Linux con Comandos de Terminal](#navegación-entre-directorios-en-linux-con-comandos-de-terminal)
 6. []()
 7. []()
 8. []()
@@ -139,11 +139,13 @@ Lo que conocemos por Terminal realmente involucra 3 conceptos clave: Terminal (i
 
 ## Instalación de terminal Bash en Windows usando WSL
 
-Ya que la mayoria de personas que inician en el mundo de tecnología lo hacen con un sistema operativo windows.
+La mayoría de personas que comienzan en el mundo de la tecnología lo hacen desde un sistema operativo Windows. Por eso, en esta sección aprenderemos a instalar una terminal Bash en Windows utilizando WSL (Windows Subsystem for Linux).
 
 Estos seran los pasos para instalar una terminal BASH en windows usando un sistema llamado Windows Subsystem for Linux.
 
-Por lo que vamos a instalar un sistema operativo emulado a traves de una terminal especial llamada AWL.
+WSL permite ejecutar un sistema operativo Linux dentro de Windows, sin máquinas virtuales ni configuraciones complejas. Gracias a esto, podemos usar una terminal real de Linux directamente desde nuestro equipo.
+
+A continuación, instalaremos WSL y una distribución de Linux (en este caso Ubuntu) que incluye la shell Bash por defecto.
 
 Sigue el enlace, haz la lectura y sigue los pasos: https://learn.microsoft.com/es-es/windows/wsl/install
 
@@ -174,3 +176,85 @@ De hay ya tenemos BASH, ¿Cómo sabemos que tenemos BASH? basta con usar el coma
 
 ## Comandos básicos de terminal para principiantes
 
+A continuación encontrarás los comandos más básicos y a la vez más útiles para empezar a explorar el sistema operativo desde la terminal. Con ellos podrás navegar, analizar información, listar archivos y entender mejor cómo funciona Bash.
+
+> La mayoría de los comandos suelen ser abreviaciones de palabras completas.
+
+* **whoami:** Muestra el nombre del usuario con el que estás actualmente autenticado.
+
+* **pwd = print working directory:** Indica la ruta exacta del directorio en el que te encuentras.
+
+> Cada usuario tiene su propio directorio home.
+
+* **ls = list:** Lista el contenido del directorio actual.
+
+> La mayoria de comandos reciben algo llamado options
+
+* **ls (list):** Lista el contenido del directorio actual.
+
+* ls -a: Le indicará al comando que muestre todos los archivos ya que pueden haber archivos visibles y no visibles, porque suelen haber archivos ocultos que normalmente son archivos de configuración.
+
+    .bashrc es de configuración de la terminal de bash
+
+### Opciones de los comandos (Flags)
+
+* **ls -a:** Muestra todos los archivos, incluyendo los ocultos (los que empiezan con .), por ejemplo: .bashrc → Archivo de configuración de Bash.
+
+* ls -l: Muestra los archivos en una lista detallada (permisos, tamaño, propietario, etc.). Solo incluye archivos visibles.
+
+
+
+**Tambien podemos combinar las opciones.**
+
+*** ls -la:** Lista todos los archivos (incluyendo ocultos) con información detallada. 
+
+> (El orden de las opciones no importa.)
+
+* **ls -al:** (Mostrara lo mismo que ls -la)
+
+* **clear:** Cuando contamos con bastante información en nuestra pantalla y no nos interesa verla podemos utilizar este comando para "limpiar" la terminal. **Se puede oprimir tambien el atajo CONTROL + L**
+
+> Con la flecha ↑ puedes navegar por el historial de comandos ya ejecutados.
+
+* **echo:** Si yo quiero guardar algún texto en mi terminal como por ejemplo echo "hola mundo" que se usa usualmente para temas de scripting
+
+* **--help:** Podemos visualizar que opciones tiene un comando pues la mayoria de comandos y sobre todo lo más utilizados suelen utilizar algo llamado --help. Se les conoce como flask en donde se pueden escribir sin ningún valor y otras veces pueden contener un valor. Por lo que otros comandos pueden recibir parametros para realizar actividades especificas y complejas.
+
+**ls --help**
+
+Entonces eso permitira mirar todos los comandos con los que se puede jugar mediante ls -- para luego combinarlos como por ejmeplo
+
+    ls -lah
+
+> Importante tener en cuenta que en la terminal todo texto que sea blanco son archivos
+
+> Todo lo que venga con una d al inicio suelen ser directorios y generalmente los veras de color azul
+
+---
+
+A continuación **Comandos que son de utilidad en el sistema**
+
+* uname -a: Para mirar la descripción del entorno donde se esta trabajando
+
+* date: Para mirar la fecha
+
+* man: viene de la palabra manual que nos permite el manual de cualquier comando como por ejemplo:
+
+    man echo
+
+Estos son solo los primeros comandos básicos. Aún quedan por explorar comandos de red, compresión, manipulación avanzada de archivos, y algunos incluso… para dibujar dragones 🐉
+
+<img src="https://i.sstatic.net/cqags.png">
+
+*Imagen Tomada De: https://askubuntu.com/questions/1389080/how-to-get-to-the-windows-desktop-in-wsl*
+
+Lectura Recomendada: https://www.geeksforgeeks.org/linux-unix/linux-commands-cheat-sheet/
+
+
+
+
+---
+
+
+
+## Navegación entre directorios en Linux con Comandos de Terminal
