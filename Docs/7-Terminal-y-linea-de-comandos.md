@@ -29,7 +29,7 @@ También cómo crear alias, personalizar shell y optimizar el flujo de trabajo p
 3. [Instalación de terminal Bash en Windows usando WSL](#instalación-de-terminal-bash-en-windows-usando-wsl)
 4. [Comandos básicos de terminal para principiantes](#comandos-básicos-de-terminal-para-principiantes)
 5. [Navegación entre directorios en Linux con Comandos de Terminal](#navegación-entre-directorios-en-linux-con-comandos-de-terminal)
-6. []()
+6. [Comandos para Explorar y Manipular Archivos de Texto en Terminal](#comandos-para-explorar-y-manipular-archivos-de-texto-en-terminal)
 7. []()
 8. []()
 9. []()
@@ -311,4 +311,32 @@ usar el comando cd / nos posiciona directamente en el directorio raíz del siste
 * home 
 
 
+
+
+
 ---
+
+
+
+## Comandos para Explorar y Manipular Archivos de Texto en Terminal
+
+Ahora empezando a ver usos más especificos de los comandos de la terminal y es que en cualquier sistema operativo existe una gran cantidad de archivos de texto plano y cuando estamos procesando analisis de datos o estamos descargando cierto tipo de archivos y no tenemos una interfaz gráfica. **Existen comandos que nos van a permitir explorar el contenido de estos archivos.
+
+* **cat [nombre archivo]:** Por medio de cat se pueden mirar diferentes archivos de texto
+
+* **less:** Para mirar de forma más pausada el archivo.
+
+* **head:** Si quiero mostrar el contenido inicial de mis archivos pues... con head lo puedo realizar
+
+* **tail:** Si quiero mostrar el contenido final de mis archivos pues... con tail lo puedo realizar
+
+    Tanto Head como Tail tienen la opción -n que será la cantidad de lineas que puedo mostrar como por ejemplo: head -n 20 [nombre del archivo] para imprimir 20 lineas de ese archivo.
+
+* **nl:** Sirve para saber cuantas lineas de texto contiene este archivo.
+
+* **wc = word count:** Si se desea sabes cuantas palabras contiene ese archivo y si queremos ver que opciones tiene este, podemos poner man wc y entre una de las opciones esta wc --byte para que cuente cuantos bytes pesa. y puede ser por numero de caracteres, de líneas, númerm maximo de líneas.
+
+* **awk:** Sirve para determinar diferentes elementos, y entre ellos puede ser imprimir ciertas columnas en archivos csv como por ejemplo por medio de awk '{print $1}' [nombre archivo] para imprimir sólamente la primera columna. O tal vez por medio de awk -F ',' 'print{$1, $3}' [nombre del archivo] 
+
+Lectura Recomendada: https://dn790008.ca.archive.org/0/items/pdfy-MgN0H1joIoDVoIC7/The_AWK_Programming_Language.pdf
+
