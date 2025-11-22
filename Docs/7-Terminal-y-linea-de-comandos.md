@@ -258,3 +258,57 @@ Lectura Recomendada: https://www.geeksforgeeks.org/linux-unix/linux-commands-che
 
 
 ## Navegación entre directorios en Linux con Comandos de Terminal
+
+¿Cómo movernos entre directorios? ¿Cómo movernos al rededor de la terminal?
+
+Es fundamental recordar que lo que hace una shell o en general la terminal es permitirnos interactuar con el sistema operativo simplemente con comandos. Sin importar qué sistema operativo tenga el dispositivo (Windows, Mac, Linux, Android) va a tener carpetas y dentro de estas archivos. Para navegar entre estos elementos solemos dar clicks en una biblioteca/explorador de archivos y eso mismo **se puede hacer a traves de la terminal**
+
+### CD / Change Directory
+
+Todos los sistemas linux inician a traves de una ruta absoluta que la podemos iniciar con el simbolo slash o " / ", este simbolo representa lo que es el inicio de lo que es un sistema operativo linux.
+
+* Un truco interesante puede ser: Cuando se quiere ingresar a un directorio y analizar las diferentes opciones a las que se puede ingresar, escriba cd / y oprima la tecla de tabulación.
+
+Ahora por medio de la tabulación, vamos a tener un autocompletado. 
+
+Si entonces vamos hacia la carpeta cd /home/ lo unico que habra dentro de esta es el usuario.
+
+Para volver al lugar original que es el directorio principal, basta con escribir cd [nombre de usuario] /
+
+**A lo visto anteriormente se le conoce como navegación entre rutas fijas**
+ 
+* rutas relativa: Es decirle al sistema operativo que se regruese una o dos carpeta hacia atras.
+
+La forma de ir hacia una el directorio principal de nuestro usuario es escribiendo: **cd ~**
+
+### pushd .
+
+Guarda una variable de un lugar a donde quisieramos volver de la forma más sencilla en donde se guarda y para ir hay nuevamente se puede escribir **popd**
+
+Podemos pensar de la busqueda y navegación de archivos como un arbol. En Linux para visualizar la estructura de directorios de forma jerárquica, es como si fuera un árbol.
+
+Como por ejemplo: 
+
+<img src="https://static.platzi.com/media/user_upload/upload-3fe5cc12-ff90-457a-9f81-d3c529078f38.png">
+
+Y por otro lado:
+
+* .   Directorio actual
+* ..  Directorio superior
+* /   Raiz
+* ~   Directorio home del usuario
+
+usar el comando cd / nos posiciona directamente en el directorio raíz del sistema Linux, que aloja importantes carpetas del sistema tales como:
+
+* bin 
+
+* dev 
+
+* lib64 
+
+* root 
+
+* home 
+
+
+---
