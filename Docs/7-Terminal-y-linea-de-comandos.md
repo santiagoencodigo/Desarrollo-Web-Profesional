@@ -31,8 +31,8 @@ También cómo crear alias, personalizar shell y optimizar el flujo de trabajo p
 5. [Navegación entre directorios en Linux con Comandos de Terminal](#navegación-entre-directorios-en-linux-con-comandos-de-terminal)
 6. [Comandos para Explorar y Manipular Archivos de Texto en Terminal](#comandos-para-explorar-y-manipular-archivos-de-texto-en-terminal)
 7. [Uso de Wildcards para Búsquedas Masivas en la Terminal](#uso-de-wildcards-para-búsquedas-masivas-en-la-terminal)
-8. []()
-9. []()
+8. [Comandos GREP y FIND para búsquedas avanzadas en linux](#comandos-grep-y-find-para-búsquedas-avanzadas-en-linux)
+9. [Tipos de comandos en Linux y cómo identificarlos](#tipos-de-comandos-en-linux-y-cómo-identificarlos)
 10. []()
 
 
@@ -399,4 +399,114 @@ Las wild cards son de esas cosas que hacen una diferencia enorme cuando usamos l
 
 > Cada shell tiene su forma de wildcards y su forma de interpretar por lo que son ligeramente diferentes de unas a las otra.
 
+<img src="https://hablemoslinux.wordpress.com/wp-content/uploads/2012/03/tabla.png?w=1180">
 
+*Imagen Tomada De: https://hablemoslinux.wordpress.com/2012/03/04/486/*
+
+
+
+
+
+---
+
+
+
+
+## Comandos GREP y FIND para búsquedas avanzadas en linux
+
+A lo largo de este documento hemos explorado diferentes comandos para listar, buscar archivos y en general ver información acerca de nuestro dispositivo. Existen comandos que nos permiten buscar archivos por extensión, contenido, por tamaño e incluso por ubicación. En resumen son dos comandos: **GREP** y **FIND**
+
+Estos dos comandos son de busqueda general que usan expresiones regulares (Especie de patron que hará match con una serie de carácteres) para encontrar patrones.
+
+### GREP
+
+Digamos que vamos a querrer buscar ciertos nombres en un archivo CSV que contiene una gran cantidad de datos... Podemos usar **GREP** como digamos... grep '[palabra que estamos buscando]' [nombre del archivo] y aparecerá toda la información que contenga esto. 
+
+Por otro lado este comando es case sensitive por lo que se debe tener cuidado del cómo se escribe o debe agregar un -i antes de la palabra que se esta buscando es decir: grep -i 'spider' marvel base de datos.csv
+
+Y se puede saber esta palabra en cuantos elementos aparece agregando una c despues de la -i por lo que:
+
+    grep -ic 'spider' marvel base de datos.csv
+
+Esta es una herramienta muy poderosa para la busqueda en donde le podemos integrar diferentes opciones para buscar por contenido por lo que nos permite encontrar las ocurrencias en un documento de texto lo que sea que estemos buscando. **Porque GREP nos permite buscar por contenido**
+
+Tambien podemos hacer exclusiones!
+
+Si deseamos que nos muestre toda la información a excepto de ciertos carácteres se puede por medio de: v - Es decir que: grep -v 'palabra' documento por lo que un ejemplo podría ser
+
+    - grep -iv 'spider' marvel base de datos.csv
+ 
+que es muy importante si se esta haciendo un análisis de datos.
+
+<img src="https://www.web24.com.au/wp-content/uploads/2016/10/grep-small-500x295.png">
+
+*Imagen Tomada De: https://www.web24.com.au/tutorials/use-grep-command-linux*
+
+
+
+## FIND 
+
+A diferencia de GREP que busca por contenido, FIND que busca por patrones de tipo de archivo dentro de una carpeta de una manera especifica, permite buscar por nombre o patrones de archivo.
+
+El . se refiere a la misma carpeta en la que se esta en PWD y se usa la opción -type en donde podemos separarlo en si queremos encontrar un directorio un dir = **d**, o si por el otro lado queremos encontrar un archivo, un file = **f**.
+Y se le agrega un -name  en donde podriamos agregar un "*" para que sin importar el nombre, lo liste.
+
+    find . -type d -name "*"
+
+Tambien se puede hacer busqueda por tamaño de archivo como por ejemplo:
+    
+    find . -type f -size +1M
+
+**A continuación diferentes elementos de interes:**
+
+* -name: Busca por nombre de archivo (acepta wildcards)
+
+* -type: Busca por tipo (f=archivo, d=directorio)
+
+* -size: Busca por tamaño
+
+* -mtime: Busca por tiempo de modificación
+
+* -user: Busca por propietario
+
+* -exec: Ejecuta un comando sobre los archivos encontrados
+
+* -not, -and, -or: Operadores lógicos
+
+---
+
+* Buscar archivos por nombre: find /home -name "*.txt"
+
+* Buscar directorios: find /var -type d -name "log*"
+
+* Buscar archivos modificados en los últimos 7 días: find /home -mtime -7
+
+* Buscar archivos grandes: find /var -size +10M
+
+* Ejecutar comando en archivos encontrados: find . -name "*.tmp" -exec rm {} \\;
+
+* Buscar archivos con permisos específicos: find /etc -perm 644
+
+
+---
+
+**¿Para qué sirven GREP y FIND?**
+
+* GREP: Busca contenido dentro de archivos.
+
+* FIND: Busca archivos o carpetas por nombre, tipo o tamaño.
+
+<img src="https://b1490832.smushcdn.com/1490832/wp-content/uploads/2019/03/find_simple.png?lossy=2&strip=1&webp=1">
+
+*Imagen Tomada De: https://www.fosslinux.com/8661/how-to-find-files-using-command-line-in-the-linux-terminal.htm*
+
+
+
+
+---
+
+
+
+## Tipos de comandos en Linux y cómo identificarlos
+
+A
