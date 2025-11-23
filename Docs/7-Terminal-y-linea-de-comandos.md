@@ -33,7 +33,21 @@ También cómo crear alias, personalizar shell y optimizar el flujo de trabajo p
 7. [Uso de Wildcards para Búsquedas Masivas en la Terminal](#uso-de-wildcards-para-búsquedas-masivas-en-la-terminal)
 8. [Comandos GREP y FIND para búsquedas avanzadas en linux](#comandos-grep-y-find-para-búsquedas-avanzadas-en-linux)
 9. [Tipos de comandos en Linux y cómo identificarlos](#tipos-de-comandos-en-linux-y-cómo-identificarlos)
-10. []()
+10. [Redirecciones de terminal en Linux con operadores básicos](#redirecciones-de-terminal-en-linux-con-operadores-básicos)
+11. []()
+12. []()
+13. []()
+14. []()
+15. []()
+16. []()
+17. []()
+18. []()
+18. []()
+19. []()
+20. []()
+
+
+
 
 
 
@@ -509,4 +523,48 @@ Tambien se puede hacer busqueda por tamaño de archivo como por ejemplo:
 
 ## Tipos de comandos en Linux y cómo identificarlos
 
-A
+A esta altura ya habrás utilizado varios comandos para listar, buscar y revisar archivos. Pero surge una pregunta importante: **¿qué es realmente un comando?**  
+Cuando ejecutamos algo en la terminal, un comando puede ser distintos tipos de elementos.
+
+> En Linux solemos usar comandos sin reflexionar sobre su naturaleza y origen.
+
+Un comando puede ser:
+
+- **Un script**
+- **Una utilidad del sistema**
+- **Un archivo binario ejecutable**
+- **Un alias del sistema** (un “apodo” que simplifica un comando más largo)
+
+---
+
+## Cómo identificar qué tipo de comando es
+
+Linux incluye herramientas que permiten saber exactamente qué estamos ejecutando.
+
+### `type` — Identificar el tipo de comando
+
+Permite determinar si algo es un alias, un script, un binario o una función del shell.
+
+Ejemplo:
+
+```bash
+type ls
+
+
+Qué significa que “todo en Linux o en una shell son binarios”
+```
+
+Cuando decimos que “todo en Linux son binarios”, no significa que todo sea solo unos y ceros visibles. Lo que significa es que casi todos los programas o comandos que ejecutas en Linux son archivos ejecutables compilados — llamados binarios — porque están hechos de código binario (0s y 1s) que la computadora puede entender directamente.
+
+<img src="https://static.platzi.com/media/user_upload/upload-a9c6ef4b-6595-4116-afb3-849938bd583e.png">
+
+
+
+
+
+---
+
+
+
+
+## Redirecciones de terminal en Linux con operadores básicos
