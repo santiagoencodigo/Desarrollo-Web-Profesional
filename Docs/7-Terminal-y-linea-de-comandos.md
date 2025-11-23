@@ -30,7 +30,7 @@ También cómo crear alias, personalizar shell y optimizar el flujo de trabajo p
 4. [Comandos básicos de terminal para principiantes](#comandos-básicos-de-terminal-para-principiantes)
 5. [Navegación entre directorios en Linux con Comandos de Terminal](#navegación-entre-directorios-en-linux-con-comandos-de-terminal)
 6. [Comandos para Explorar y Manipular Archivos de Texto en Terminal](#comandos-para-explorar-y-manipular-archivos-de-texto-en-terminal)
-7. []()
+7. [Uso de Wildcards para Búsquedas Masivas en la Terminal](#uso-de-wildcards-para-búsquedas-masivas-en-la-terminal)
 8. []()
 9. []()
 10. []()
@@ -339,4 +339,64 @@ Ahora empezando a ver usos más especificos de los comandos de la terminal y es 
 * **awk:** Sirve para determinar diferentes elementos, y entre ellos puede ser imprimir ciertas columnas en archivos csv como por ejemplo por medio de awk '{print $1}' [nombre archivo] para imprimir sólamente la primera columna. O tal vez por medio de awk -F ',' 'print{$1, $3}' [nombre del archivo] 
 
 Lectura Recomendada: https://dn790008.ca.archive.org/0/items/pdfy-MgN0H1joIoDVoIC7/The_AWK_Programming_Language.pdf
+
+
+
+
+
+---
+
+
+
+
+## Uso de Wildcards para Búsquedas Masivas en la Terminal
+
+Un wildcard es un carácter especial utilizado como comodín para hacer coincidir múltiples archivos en base a un patrón determinado. Principalmente, es útil con comandos como:
+
+* ls (listar archivos)
+
+* cp (copiar archivos)
+
+* mv (mover archivos)
+
+* rm (eliminar archivos)
+
+
+
+¿Cuáles son los principales tipos de wildcards?
+
+* Asterisco (*): representa cualquier combinación de caracteres.
+
+* Signo de interrogación (?): coincide específicamente con un único carácter.
+
+* Corchetes [ ]: agrupan caracteres específicos.
+
+* Llaves { }: agrupan patrones o palabras.
+
+> Ya vamos para un tema más avanzados -Como superpoderes.
+
+* Touch: Al momento de usar touch file1.txt file2.txt fileA.txt fileB.md data.log archivo.csv se crearon esos archivos
+
+
+
+**A continuación las wildcards**
+
+1. "*" Conciste en señalar todo y despues se le puede agregar el nombre de la extensión, como por ejemplo: *.txt y nuevamente podemos seguir usando lo de combinar diferentes comandos para mostrarlos: ls -la *.txt
+
+2. Si deseamos buscar por nombre, se le agrega un nombre inicial antes del * es decir: ls -la file*
+
+3. Si deseamos buscar por ultimo caracter, se le cambia el * por un ? debido a que ? sólo acepta un sólo carácter. Entonces ls -la file?.txt
+
+4. Ahora si deseamos buscar solamente por ultimas letras se le agrega [AB] (las letras que se desean buscar) como por ejemplo: ls -la  * [AB]. * = Me va a mostrar todos los archivos que finalicen con la letra A o la letra B.
+
+5. Ahora si deseamos buscar solamente por una seguimos haciendo uso de [] y entonces escribimos algo como: ls -la * [o] .*
+
+6. Si deseamos encontrar por dos tipos de extensiones diferentes podemos hacer uso de { } y escribir cosas como ls -la *.{md,log}
+
+* **MV = Move:** Para mover y desplazar archivos se puede mediante mv, en donde se puede desplazar por tipo de extensiones como: mv *.txt ./backup/
+
+Las wild cards son de esas cosas que hacen una diferencia enorme cuando usamos la terminal porque nos permite agrupar grandes cantidades de archivos.
+
+> Cada shell tiene su forma de wildcards y su forma de interpretar por lo que son ligeramente diferentes de unas a las otra.
+
 
