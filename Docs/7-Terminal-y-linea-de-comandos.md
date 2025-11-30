@@ -568,3 +568,84 @@ Cuando decimos que “todo en Linux son binarios”, no significa que todo sea s
 
 
 ## Redirecciones de terminal en Linux con operadores básicos
+
+Preguntas a responder en esta sección:
+
+* ¿Cómo usar las redirecciones del sistema?
+
+* ¿Cómo usar los operadores "<", ">"?
+
+* ¿Cómo usar el pipe operator?
+
+
+---
+
+¿Para qué sirven las redirecciones en nuestro sistema?
+
+Cada uno de los comandos que nosotros ejecutamos un comando, se suelta una información en la interfaz del sistema. ¿Cómo hacemos cuando queremos guardar la información de nuestro comando ls o nuestro comando find la quisieramos guardar en un archivo de texto?
+
+Y para esto es que sirven las redirecciones.
+
+>Las redirecciones del sistema son una herramienta esencial para manejar eficientemente la información que generan los comandos en la terminal de Linux. 
+
+>operadores básicos: mayor que (>), menor que (<), doble mayor que (>>) y pipe operator (|), con estos operadores podemos redirigir salidas, entradas y errores hacia diferentes destinos, ampliando así las posibilidades de nuestro trabajo en terminal.
+
+Para realizar un pequeño ejercicio de esto tendremos que instalar una serie de comandos a traves del manejador de paquetes que tiene ubuntu llamado apt.
+
+>apt Sólo funciona en distribuciones basadas en debian en este caso, [yo estoy utilizando ubuntu] por lo que si se esta utilizando otro tipo de distribución como puede ser fedora... En ese caso su manejador de paquete puedel llamarse dnf y si estas utilizando archlinux tendras que usar el manejador de paquete llamado packman, en caso de macos no existe un manejador como tal y el paquete se llama brup
+
+---
+
+
+Se va a escribir en la terminal:
+
+    sudo apt install lolcat
+
+
+Datos Interesantes:
+
+1. sudo: Es un ejecutador, es decir que se le pide que ejecute como super administrador.
+2. apt: Es el manejador de paquetes del sistema operativo que estemos utilizando que en mi caso es ubuntu.
+3. install: Instalar... En donde a continuación de aqui se escriben los paquetes
+4. lolcat y cowsay son dos paquetes distintos.
+
+    ```sudo apt install cowsay```
+
+---
+
+
+
+Redirecciones
+
+Como por ejemplo utilizar primero
+
+    echo "hola mundo"
+
+lo que hace es imprimir y mostrarnos la salida "hola mundo" que de forma estandar se le conoce como output, por el contrario cuando un comando recibe información se le conoce por el estandar input. Pero existe un tercer estado cuando manipulamos comandos en la terminal que se le conoce como estandar error.
+
+Un ejemplo de error es cuando ingresas ls y el nombre de un archivo que no existe.
+
+    ls asjldlaskdjlñasdj
+
+Ahora, si nosotros al output lo redireccionamos a un archivo de texto mediante > archivo
+
+    echo "santiagoencodigo" > archivohola.txt
+
+y lo ejecutamos mediante
+
+    cat archivohola.txt
+
+y ahora si queremos ingresar otra línea de texto a este documento se puede hacer mediante >> archivo, a esto se le conoce como concatenar porque si cuenta con contenido, pues se lo agrega hasta el final
+
+    echo "hola mundo" >> archivohola.txt
+
+---
+
+
+
+Ahora vamos a trabajar con un input.
+
+¿Cómo hacemos que un estandar output de un comando sea el estandar input de otro comando?, para esto existe el pipe operator
+
+
+
