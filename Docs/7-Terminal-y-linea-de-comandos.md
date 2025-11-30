@@ -34,7 +34,7 @@ También cómo crear alias, personalizar shell y optimizar el flujo de trabajo p
 8. [Comandos GREP y FIND para búsquedas avanzadas en linux](#comandos-grep-y-find-para-búsquedas-avanzadas-en-linux)
 9. [Tipos de comandos en Linux y cómo identificarlos](#tipos-de-comandos-en-linux-y-cómo-identificarlos)
 10. [Redirecciones de terminal en Linux con operadores básicos](#redirecciones-de-terminal-en-linux-con-operadores-básicos)
-11. []()
+11. [Operadores de Control para Encadenar Comandos Linux](#operadores-de-control-para-encadenar-comandos-linux)
 12. []()
 13. []()
 14. []()
@@ -584,6 +584,11 @@ Preguntas a responder en esta sección:
 
 Cada uno de los comandos que nosotros ejecutamos un comando, se suelta una información en la interfaz del sistema. ¿Cómo hacemos cuando queremos guardar la información de nuestro comando ls o nuestro comando find la quisieramos guardar en un archivo de texto?
 
+* Puedes almacenar resultados que normalmente aparecen en pantalla directamente en archivos.
+
+* Facilita el envío de datos entre comandos en una cadena o flujo.
+
+
 Y para esto es que sirven las redirecciones.
 
 >Las redirecciones del sistema son una herramienta esencial para manejar eficientemente la información que generan los comandos en la terminal de Linux. 
@@ -645,7 +650,130 @@ y ahora si queremos ingresar otra línea de texto a este documento se puede hace
 
 Ahora vamos a trabajar con un input.
 
-¿Cómo hacemos que un estandar output de un comando sea el estandar input de otro comando?, para esto existe el pipe operator
+¿Cómo hacemos que un estandar output de un comando sea el estandar input de otro comando?, para esto existe el pipe operator    
+
+Como por ejemplo:
+
+    lolcat "hola"
+
+Lolcat recibe estandar input por lo que no va a realizar nada, pero al momento de:
+
+    echo "saludo colorido" | lolcat
+
+* El signo | es el pipe operator y sirve para redireccionar a otro comando.
+
+* Lolcat será el comando que va a recibir el output de ese echo.
+
+> No entendí muy bien, hace que se ponga de colores el texto solamente
+
+---
 
 
 
+Ahora sí utilizamos cowsay, aparecera una vaca dibujada mediante simbolos y despues entre " " podemos agregar el texto que queremos que diga la vaca.
+
+    cowsay "hello world"
+
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrz-PpPy5p1z-wm-eH_uB68NH-dzoMO9m0dw&s">
+
+*Imagen Tomada De: https://www.sauveconsulting.com.au/cowsay*
+
+---
+
+Ahora si... 
+
+    cowsay "hello world" | lolcat
+
+hará aparecer esa vaca, pero en colores.
+
+Como por ejemplo:
+
+<img src="https://think.unblog.ch/wp-content/uploads/2020/08/lolcat_kitty.png">
+
+*Imagen Tomada De: https://think.unblog.ch/en/lolcat-for-more-color-in-the-terminal/*
+
+---
+
+Ahora si deseamos agregarle un animal o formato diferente, lo podemos hacer mediante -f [formato]
+
+    cowsay -f dragon "santiagoencodigo" | lolcat
+
+<img src="https://cdn.osxdaily.com/wp-content/uploads/2014/07/lolcat-rainbow-cowsay-output-terminal.jpg">
+
+*Imagen Tomada De: https://osxdaily.com/2014/07/03/lolcat-rainbow-terminal-command-output/*
+
+Si se desea mirar qué elementos se pueden dibujar mediante formatos de cowsay, se puede mediante:
+
+    cowsay -l
+
+> los comandos LOLCAT o Cowsay usados habitualmente en ejercicios educativos
+
+---
+
+
+
+Ahora ya sabiendo que cuando ingresamos algún comando erroneo o una sintaxis erronea... La terminal nos manda un error, ¿Cómo podemos capturar ese error?
+
+Se puede mediante el signo > definiendo qué queremos capturar.
+
+la forma de capturar en linux, es hacer referencia al elemento a capturar mediante el numero 2, es decir:
+
+    ls asmdask 2> error.logs
+
+ahora si se desea concatenar, se puede mediante el doble signo >>
+
+    ls asmdask 2>> error.logs
+
+que ahora si probamos
+
+sudo apt install neovim 2>&1 info-install.log
+
+* el paquete neovim es para edición de texto
+
+* 2>&1: capturar los errores 2>, como que tambien capture lo que salga bien &1 
+
+* info-install.log es el nombre que decidí agregarle, pero es modificable
+
+---
+
+En pocas palabras, nosotros podemos pensar: 
+
+
+Redirige el input de un comando hacia un archivo.
+
+    comando < archivo
+
+
+Redirige la salida de un comando a un archivo. El mismo sobrescribe el contenido del archivo a donde se redirige la salida.
+
+    comando > archivo
+
+
+Concatena la salida de un comando a un archivo. Si no existe el archivo lo crea.
+
+    comando >> archivo
+
+
+Redirige la salida de error de un comando a un archivo.
+
+    comando 2> archivo
+
+Redirige la salida de un comando, que se ejecuto satisfactoriamente o un comando que presento errores, a un archivo.
+
+comando > archivo 2>&1
+
+---
+
+Los manejadores de paquetes varían según el sistema operativo:
+
+* Ubuntu (basado en Debian): APT
+
+* Fedora (basado en Red Hat): DNF
+
+* Arch Linux: PacMan
+
+* macOS: Brew (se instala, no viene por defecto)
+
+---
+
+## Operadores de Control para Encadenar Comandos Linux
