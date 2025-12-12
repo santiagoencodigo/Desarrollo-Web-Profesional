@@ -401,37 +401,68 @@ Hay un [consorsio](https://es.wikipedia.org/wiki/Consorcio "Wikipedia - Definici
 
 por eso mismo un 😂 (smile) es el mismo en un pc, en un celular, en un iphone **y no puede ser otra cosa.**
 
+Cuando programas en un lenguaje de programación todas estas instrucciones se traducen a bytes de assembler, que el procesador entiende para ejecutar las operaciones y eso es lo que hacen los compiladores.
+
+
+
+
+
+
 ---
 
-Cuando programas en un lenguaje de programación todas estas instrucciones se traducen a bytes de assembler, que el procesador entiende para ejecutar las operaciones y eso es lo que hacen los compiladores.
+
+
+
+
+
 
 ## Qué es un procesador (CPU) y la memoria (RAM)
 
-Si un dispositivo tiene software se puede programar y si se puede programar tiene una CPU.
+**Si un dispositivo tiene software se puede programar**, y si se puede programar tiene una CPU. Hay CPUs en todas partes: En computadores, televisores, telefonos, cajeros, pantallas de automoviles.
 
-Hay CPUs en todas partes: En computadores, televisores, telefonos, cajeros, pantallas de automoviles.
+> En todo lo que tenga una pantalla con software programable, hay una CPU.
 
-En todo lo que tenga una pantalla con software programable, hay una CPU
+<img src="https://static.platzi.com/media/user_upload/image-6402ac31-034f-4d21-9019-11e9784fbc9b.jpg">
 
-CPU = UNIDAD CENTRAL DE PROCESAMIENTO es donde las computadoras procesan datos, y la información la guarda en la memoria ram
+CPU = Unidad Central De Procesamiento
 
-* Un ejemplo claro puede ser como cuando se asignan variables y se dice que:
+Es donde las computadoras procesan datos, y la información la guarda en la memoria ram, un ejemplo claro puede ser como cuando se asignan variables y se desea realizar una operacion matemática:
 
     A = 1
     B = 2
     C = A + B
 
-por lo que en el momento de razonar cuanto da el resultado C se puede pensar como la CPU, y el lugar en donde se guarda esa información la podemos pensar como una RAM.
+Al momento de razonar cuanto da el resultado C es el proceso que realiza tu cerebro, lo mismo se puede pensar como la CPU en un computador, y el lugar en donde se guarda esa información la podemos pensar como una RAM.
 
-De forma analogica: Cuando vas a hacer la operación en un papel, el proceso pasa por tu cabeza, y tu al escribirlo en el papel es hay donde se guarda la información y esto es equivalente a la RAM
+> De forma analogica: Cuando vas a hacer la operación en un papel, el proceso pasa por tu cabeza, y tu al escribirlo en el papel es hay donde se guarda la información y esto es equivalente a la RAM
 
-INTEL Y AMD son las empresas más famosas que fabrican CPU
+son las empresas más famosas que fabrican CPU: 
 
-INTEL con los procesadores XEON, INTEL
 
-AMD con el ryzen
 
-Hay marcas de CPU moviles asi como APPLE que fabrica una CPU que se llama M1 o la A1 y la M3, M4.
+[INTEL](https://www.intel.la/content/www/xl/es/homepage.html) Con procesadores como: INTEL con los procesadores [Xeon](https://www.intel.la/content/www/xl/es/products/details/processors/xeon.html), [Intel Core i7](https://www.intel.la/content/www/xl/es/products/sku/230490/intel-core-i713700-processor-30m-cache-up-to-5-20-ghz/specifications.html)
+
+[AMD](https://www.amd.com/es.html "Home Page AMD"): Con procesadores [Ryzen](https://www.amd.com/es/products/processors/desktops/ryzen.html "Ryzen Processors by AMD")
+
+
+
+---
+
+
+
+**Tambien marcas de CPU moviles**
+
+> Muy recomendable abrir cada uno de los vinculos a continuación, hay todo un mundo por explorar pues existe demasiada historia por leer.
+
+* [Apple](https://www.apple.com/co/ "Apple.com") fabrica CPUs que tienen nombres como [M1](https://www.apple.com/co/newsroom/2020/11/apple-unleashes-m1/ "Newsroom M1 by Apple") o la A1 y la [M2](https://www.apple.com/co/newsroom/2022/06/apple-unveils-m2-with-breakthrough-performance-and-capabilities/ "Newsroom M2 by Apple"), [M3](https://www.apple.com/co/newsroom/2023/10/apple-unveils-m3-m3-pro-and-m3-max-the-most-advanced-chips-for-a-personal-computer/ "Newsroom M3 by Apple"), M4.
+
+> Me pareció interesante que al buscar me encontre con un nuevo concepto: **Microarquitectura**
+
+<img src = "https://www.apple.com/newsroom/images/live-action/wwdc-2022/Apple-WWDC22-M2-chip-M1-chip-2up-220606_big.jpg.large_2x.jpg">
+
+*Imagen Tomada De: https://www.apple.com/co/newsroom/2022/06/apple-unveils-m2-with-breakthrough-performance-and-capabilities/*
+
+> Se me genera una serie de dudas: ¿Cual será el grupo de trabajo que se encarga de descubrir nuevas versiones?, ¿Será un grupo de cientificos de la computación?, ¿Cómo es su proceso para crear nueva tecnología?, ¿Cómo programaron/crearon esas maquinas litograficas?, ¿Quienes seran los personajes influyentes en este topico?
 
 Hauwei tiene su propia marca de procesadores
 
