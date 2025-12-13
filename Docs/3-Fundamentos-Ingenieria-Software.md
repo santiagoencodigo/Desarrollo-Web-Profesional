@@ -15,6 +15,27 @@ Cómo funciona Internet, las computadoras, los chips, la inteligencia artificial
 - [4. Qué es un procesador (CPU) y la memoria  (RAM)](#qué-es-un-procesador-cpu-y-la-memoria-ram)
 
 
+
+
+
+
+
+
+
+
+
+---
+
+
+
+
+
+
+
+
+
+
+
 <!-- Computación Básica -->
 
 
@@ -178,7 +199,27 @@ Todos los dispositivos o computadoras tienen estos sistemas de arranque, operati
 <img src="https://static.platzi.com/media/user_upload/upload-d6b47c52-1ce8-4559-95fc-d6aff5f59134.png" width="400px" height="500px">
 </div>
 
+
+
+
+
+
+
+
+
+
+
 ---
+
+
+
+
+
+
+
+
+
+
 
 ## Cómo Funciona un Circuito Electrónico
 
@@ -273,7 +314,27 @@ Estos BITS almacenados en memoria viaja hacia el procesador a traves del circuit
 
 *Imagen tomada de:https://centros.edu.xunta.gal/cafi/aulavirtual/mod/page/view.php?q=aulavirtual2%2fmod%2fpage%2fview%2ephp&id=24983*
 
+
+
+
+
+
+
+
+
+
+
 ---
+
+
+
+
+
+
+
+
+
+
 
 ## Qué es un bit y qué es un byte
 
@@ -408,7 +469,16 @@ Cuando programas en un lenguaje de programación todas estas instrucciones se tr
 
 
 
+
+
+
+
+
 ---
+
+
+
+
 
 
 
@@ -420,29 +490,33 @@ Cuando programas en un lenguaje de programación todas estas instrucciones se tr
 
 **Si un dispositivo tiene software se puede programar**, y si se puede programar tiene una CPU. Hay CPUs en todas partes: En computadores, televisores, telefonos, cajeros, pantallas de automoviles.
 
-> En todo lo que tenga una pantalla con software programable, hay una CPU.
+> En todo lo que tenga una pantalla con software programable, hay una CPU. Estos protagonistas tecnológicos permiten ejecutar operaciones matemáticas, almacenar y gestionar información gracias a transistores y circuitos electrónicos.
 
 <img src="https://static.platzi.com/media/user_upload/image-6402ac31-034f-4d21-9019-11e9784fbc9b.jpg">
 
 CPU = Unidad Central De Procesamiento
 
-Es donde las computadoras procesan datos, y la información la guarda en la memoria ram, un ejemplo claro puede ser como cuando se asignan variables y se desea realizar una operacion matemática:
+Las computadoras procesan datos mediante la CPU (Unidad Central de Procesamiento), y almacenan la información temporalmente en una memoria RAM, un ejemplo claro de esto ocurre cuando asignamos variables y realizamos una operación matemática:
 
     A = 1
     B = 2
     C = A + B
 
-Al momento de razonar cuanto da el resultado C es el proceso que realiza tu cerebro, lo mismo se puede pensar como la CPU en un computador, y el lugar en donde se guarda esa información la podemos pensar como una RAM.
+Cuando razonamos cuanto vale la variable C, nuestro cerebro realiza un proceso mental para sumar los valores de A y B, de forma similar se puede pensar como la CPU en un computador, y el lugar en donde se guarda esa información la podemos pensar como una RAM.
 
 > De forma analogica: Cuando vas a hacer la operación en un papel, el proceso pasa por tu cabeza, y tu al escribirlo en el papel es hay donde se guarda la información y esto es equivalente a la RAM
 
-son las empresas más famosas que fabrican CPU: 
+
+---
+
+
+Las empresas más famosas que fabrican CPU: 
 
 
 
-[INTEL](https://www.intel.la/content/www/xl/es/homepage.html) Con procesadores como: INTEL con los procesadores [Xeon](https://www.intel.la/content/www/xl/es/products/details/processors/xeon.html), [Intel Core i7](https://www.intel.la/content/www/xl/es/products/sku/230490/intel-core-i713700-processor-30m-cache-up-to-5-20-ghz/specifications.html)
+* [INTEL](https://www.intel.la/content/www/xl/es/homepage.html) Con procesadores como: INTEL con los procesadores [Xeon](https://www.intel.la/content/www/xl/es/products/details/processors/xeon.html), [Intel Core i7](https://www.intel.la/content/www/xl/es/products/sku/230490/intel-core-i713700-processor-30m-cache-up-to-5-20-ghz/specifications.html)
 
-[AMD](https://www.amd.com/es.html "Home Page AMD"): Con procesadores [Ryzen](https://www.amd.com/es/products/processors/desktops/ryzen.html "Ryzen Processors by AMD")
+* [AMD](https://www.amd.com/es.html "Home Page AMD"): Con procesadores [Ryzen](https://www.amd.com/es/products/processors/desktops/ryzen.html "Ryzen Processors by AMD")
 
 
 
@@ -450,7 +524,7 @@ son las empresas más famosas que fabrican CPU:
 
 
 
-**Tambien marcas de CPU moviles**
+**Tambien hay marcas de CPU moviles**
 
 > Muy recomendable abrir cada uno de los vinculos a continuación, hay todo un mundo por explorar pues existe demasiada historia por leer.
 
@@ -468,7 +542,7 @@ son las empresas más famosas que fabrican CPU:
 
 * Existe una marca llamada [Snapdragon](https://www.xataka.com/componentes/qualcomm-snapdragon-8-elite-caracteristicas-precio-ficha-tecnica "Ficha Técnica Snapdragon Elite 7 by Xataka")
 
-> Exxisten muchas marcas de CPUs
+> Existen muchas marcas de CPUs
 
 
 
@@ -506,15 +580,17 @@ A más frio más corriente y por ende más velocidad.
 
 
 
-Al diseñar un chip se tienen en cuenta muchas cosas como:
+**Al diseñar un chip se tienen en cuenta muchas cosas como:**
 
-* La estrucuta de los transistores, las instrucciones.
+* La estructura de los transistores
 
-* la disipación térmica del calor para poder hacerlos más veloces, 
+* Las instrucciones.
 
-Las CPU y en general todos los chips estan hechos del mismo atomo, el silicio.
+* La disipación térmica del calor para poder hacerlos más veloces.
 
-El silicio es un atomo que tiene 14 protones en el nucleo y por ende el atomo #14 en la tabla periodica y este se encuentra en toda parte porque de hecho, de silicio esta hecha la arena.
+Las CPU y en general todos los chips estan hechos del mismo átomo, el silicio.
+
+El silicio es un átomo que tiene 14 protones en el nucleo y por ende el átomo #14 en la tabla periodica y este se encuentra en toda parte porque de hecho, de silicio esta hecha la arena.
 
 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSdTL-FF0b1CUCkihXYlSwr_rKvt37YFzgxw&s">
 
@@ -522,23 +598,33 @@ El silicio es un atomo que tiene 14 protones en el nucleo y por ende el atomo #1
 
 Si nosotros tomamos la arena del arena u otro tipo de arena especializada y la limpiamos, para fundirla en un sólo cristal. A Ese cristal nosotros lo conocemos como **Wafer de Silicio** que es arena cristalizada con la que construimos chips.
 
-Para que la arena se convierta en chips, utilizamos la **herramienta más avanzada de la existencia humana**, una cosa que se llama LASERS LITROGRÁFICOS.
+Para que la arena se convierta en chips, utilizamos la *herramienta más avanzada de la existencia humana*: **Lasers Litográficos**
 
-> Laser Litografico extremo de ultravioleta - Parece de ciencia ficción
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQq4OZVW4_5G0QGpDxPold1GRZC3EPSTpzgjw&s">
 
-> IBM RESEARCH CHANNEL
+*Imagen Tomada De: https://heidelberg-instruments.com/es/tecnologias-basicas/litografia-laser-sin-mascara/*
 
-El cristal de silicio en forma de circulo conocido como oblea entra a una maquina llamada Laser Litrografico extremo de ultravioleta, que esta maquina por dentro tiene un vacio, vacio como el del espacio.
+> [Laser Litográfico extremo ultravioleta](https://www.youtube.com/watch?v=St6i1zcvPZ8 "") - Parece de ciencia ficción
 
-Una vez dentro, un laser le dispara a una pequeña microscopica gota de estaño, generando asi una serie de reflejos de luz laser.
+El cristal de silicio en forma de circulo conocido como oblea/wafer de silicio entra a una maquina llamada Laser Litrográfico extremo de ultravioleta, que esta maquina por dentro tiene un vacio, vacio como el del espacio.
 
-Que luego un sistema de espejos con un liso absoluto en una estructura increiblemente fina rebotan hasta llegar a un laser hiperenfocado (Esta es la parte EXTREMO ULTRAVIOLETA) que atraviesa una mascara fotografica, (Como el negativo de una fotografia vieja, en la parte de atras tiene un mapa o que tiene como plantilla o mascara) que es la estructura de como deben estar organizados los atomos de silicio para convertirse en transistores de electricidad que componen un circuito.
+Una vez dentro, un laser le dispara a una pequeña microscopica gota de [estaño](https://es.wikipedia.org/wiki/Esta%C3%B1o "Estaño By Wikipedia"), generando asi una serie de reflejos de luz laser.
+
+Que luego un sistema de espejos con un liso absoluto en una estructura increiblemente fina rebotan hasta llegar a un laser hiperenfocado (Esta es la parte Extremo Ultravioleta) que atraviesa una mascara fotográfica, (Como el negativo de una fotografia vieja, en la parte de atras tiene un mapa o que tiene como plantilla o mascara) que es la estructura de como deben estar organizados los atomos de silicio para convertirse en transistores de electricidad que componen un circuito.
+
+<img src="https://www.mrjlaser.com/Content/uploads/2023138497/20230531110728ebc38f0dd401422ab28c5e46b2e07c22.png?size=678x0">
+
+*Imagen Tomada De: https://www.mrjlaser.com/news/asml-s-euv-lithography-the-world-s-only-laser-68059321.html*
 
 La mascara refleja sobre la oblea y durante varias pasadas, el laser empieza a dejar una marca de la mascara de la estructura de transistores, luego se le pasa por unos quimicos que limpian todos los residuos del proceso como si estuvieran relevando una fotografia y eso va construyendo las estructuras átomicas como si fueran un edificio que terminan componiendo miles de millones de transistores que hacen posible una CPU.
 
 Por lo que en una CPU moderna la distancia de transistor entre transistor es de 25 atomos de silicio, por lo que **la humanidad es capaz de mover distancias atomicas**
 
 Y no es un circuito plano, es un circuito tridimencional como si fuera un rasca cielos gigantesco de transistores, en donde de esa forma se peuden empacar más transistores en una CPU. Por eso, pese a que sea pequeño puede ser incluso algo pesado para su tamaño.
+
+<img src="https://i.blogs.es/9a98dc/transistor/650_1200.jpeg">
+
+*Imagen Tomada De: https://www.xataka.com/componentes/transistores-pequenos-jamas-creados-estas-soluciones-para-miniaturizar-electronica-alla-2-nanometros*
 
 Esos millones de transistores dentro de un chip es lo que hace posible que correr navegadores como en el que estas viendo mis apuntes en este momento, video juegos, videos o inteligencia artificial.
 
@@ -551,11 +637,15 @@ Esos millones de transistores dentro de un chip es lo que hace posible que corre
 
 Muchas empresas construyen estas maquinas, pero sólo una construye la más avanzada: El laser extremo ultravioleta y toda su integración que la hace una compañia de holanda llamada ASML.
 
+Pagina de ASML: https://www.asml.com/en
+
 Lectura Recomendable: https://es.wikipedia.org/wiki/ASML
 
 ---
 
-Sabiendo esto, ¿Qué es lo qué hace que una CPU sea más veloz?: Una forma es agregarle muchos más transistores por lo que si quiero meterle más transistores, debo hacerlos más chiquitos, eso quiere decir que necesito laseres mucho más enfocados y con más contraste y eso es lo que hace ASML y por eso es tan importante la distancia que hay entre atomo y atomo.
+Sabiendo esto, **¿Qué es lo qué hace que una CPU sea más veloz?**
+
+Una forma es agregarle muchos más transistores por lo que si quiero meterle más transistores, debo hacerlos más chiquitos, eso quiere decir que necesito laseres mucho más enfocados, con más contraste y eso es lo que hace [ASML](https://www.asml.com/en "asml.com"), por eso es tan importante la distancia que hay entre átomo y átomo.
 
 Otra forma es hacerle pasar más corriente al circuito, más electricidad, el problema es que a más corriente, más calor, entonces hay que hacer un diseño que tenga una disipación termica más efectiva o colocarle mejor enfriamiento.
 
@@ -565,13 +655,23 @@ En un WAFER/OBLEA no todos los chips quedan bien, pues muchas veces estos proces
 
 * El intel core i3, intel core i7, y el intel core i5 son el mismo chip... lo que sucede es que en los i3, algunos nucleos fallaron. Y en los i7 ningún nucleo falló... y es de esa forma como venden las CPUs dependiendo de qué tanto falla o triunfa el proceso litografico del laser.
 
-Los transistores de los proceasdores ejecutan operaciones matemáticas, pero esos datos necesitan guardarlos en algún lugar como una memoria. Cuando diseñas un procesador tienes que balancear ¿Le pongo memoria o le pongo más procesamiento? Necesitamos un minimo de memoria asi que la memoria chiquita que un procesador tiene por dentro se le conoce como registros o cache y son pequeños pedacitos de memoria que estan ahí, pero no es suficiente para cargar un sistema operativo pues para eso necesitas una memoria grande.
+<img src="https://acf.geeknetic.es/imgw/imagenes/auto/2021/1/1/sgs-intel-core-i7-11700k-geekbench.jpg?f=webp">
+
+*Imagen Tomada De: https://www.geeknetic.es/Noticia/20833/El-Intel-Core-i7-11700K-supera-en-IPC-a-cualquier-AMD-hasta-la-fecha-segun-una-filtracion-en-Geekbench.html*
+
+Los transistores de los procesadores ejecutan operaciones matemáticas, pero esos datos necesitan guardarlos en algún lugar como una memoria. Cuando diseñas un procesador tienes que balancear **¿Le pongo memoria o le pongo más procesamiento?** 
+
+Necesitamos un minimo de memoria asi que la memoria chiquita que un procesador tiene por dentro se le conoce como registros o cache y son pequeños pedacitos de memoria que estan ahí, pero no es suficiente para cargar un sistema operativo pues para eso necesitas una memoria grande.
 
 ---
 
-A esta memoria se le conoce como Memoria de Acceso Aleatorio o Random Access Memory = **RAM**
+En la imagen a continuación se presenta la Memoria de Acceso Aleatorio o Random Access Memory = **RAM**
 
 Estas se borran en el momento que el computador se reinicia y solamente funcionan cuando el computador tiene electricidad, la ventaja es que pueden ser muy veloces por lo que cuando la CPU necesita guardar datos, las guarda aqui.
+
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCpiDvNZ_UMVXwmgA-CducSTuo1ema2bGNAQ&s">
+
+*Imagen Tomada De: https://compubit.com.co/que-son-las-memorias-ram/*
 
 Las memorias tienen una jerarquia a partir de cuan veloces son. Para que la cpu pueda acceder a un dato que se encuentra en el cache o en los registros que es la memoria que va dentro del chip del CPU, tomar ese dato toma de 1 a 20 nanosegundos a la CPU para acceder. Para dimensionar la cantidad de tiempo, **en un segundo hay mil millones de nano segundos.** 
 
@@ -579,39 +679,55 @@ Las memorias tienen una jerarquia a partir de cuan veloces son. Para que la cpu 
 
 Para que la CPU tome un dato de la memoria RAM, le toma 70 nanosegundos por lo que puede ser de 2 a 3 veces más lenta que la memoria que se encuentra en la CPU. Toma mucho tiempo tomar de un disco duro un dato, pues si quieres tomar un archivo de un disco duro, lo que hace la CPU para interpretarlo es pasarlo del disco duro a la RAM.
 
+<img src = "https://static.wikia.nocookie.net/wikihdd/images/d/dc/Jerarquia_almacenamiento.png/revision/latest?cb=20160317074959">
+
+*Imagen Tomada De: https://wikihdd.fandom.com/wiki/Jerarquia_de_memorias*
+
 ---
 
 La organización entre todos los componentes entre las instrucciones preprogramadas que tiene, su capacidad de realizar operaciones matemáticas, la memoria interna, los nucleos y la estructura de los transistores se le llama arquitectura.
 
 Hay tres grandes arquitecturas que son la forma en la que diseñamos los procesadores:
 
-* X86
+* [X86](https://www.xataka.com/componentes/arquitectura-x86-una-historia-imprescindible-de-la-informatica "X86 Concept By Xataka")
 
-* RISC
+* [RISC](https://es.wikipedia.org/wiki/Reduced_instruction_set_computing "Rics Concept By Wikipedia")
 
-* ARM
+* [ARM](https://cloud.google.com/discover/what-are-arm-based-processors?hl=es-419 "ARM Concept By Google")
 
-Los diseñadores de procesadores se dieron cuenta que los programadores repiten mucho los mismos procesos: Abrir archivos, borrar archivos, hacer ciertas operaciones matemáticas. Se les ocurrió que en vez de hacer transistores de proposito general que puedieran hacer cualquier tipo de instrucciones, seria más veloz si ciertas acciones repetitivas se realizaran en transistores especificamente diseñados para esas acciones que en vez de expresarlas en código y procesarlas en cada uno de los transistores genericos. A esto se le conoce como instrucciones, que estas mismas determinan una arquitectura.
+Los diseñadores de procesadores se dieron cuenta que los programadores repiten mucho los mismos procesos:
+
+Abrir archivos, borrar archivos, hacer ciertas operaciones matemáticas. Se les ocurrió que en vez de hacer transistores de proposito general, seria más veloz si ciertas acciones repetitivas se realizaran en transistores especificamente diseñados para esas acciones que en vez de expresarlas en código y procesarlas en cada uno de los transistores genericos. A esto se le conoce como instrucciones, que estas mismas determinan una arquitectura.
 
 Por ejemplo:
 
-Los procesadores **X86** casi siempre estan corriendo windows que esta almacenado en transistores programados(se les define como quemados) en la estructura de transistores de un chip, a medida que los chips fue avanzando en complejidad de insturcciones, empezamos a notar que para ciertos casos de uso como por ejemplo correr muchos chips en servidores que realizan muchas operaciones distintas, era mejor tener chips más simples.
+Los procesadores **X86** casi siempre estan corriendo windows que esta almacenado en transistores programados (se les define como quemados) en la estructura de transistores de un chip, a medida que los chips fue avanzando en complejidad de instrucciones, empezamos a notar que para ciertos casos de uso como por ejemplo correr muchos chips en servidores que realizan muchas operaciones distintas, era mejor tener chips más simples.
 
 Esto dio nacimiento a cierto tipo de arquitectura que trinfuo mucho a medida de los 90 y 2000 conocida como **RISC = Reduce Instructions Set Computer** que es básicamente un chip con instrucciones más genericas mucho más versatil.
 
 Con la explosión de la telefonia movil que es en esencia un computador en nuestros bolsillos nos dimos cuenta de que necesitabamos un chip que gastara mucho menos electricidad con una más alta capacidad de procesamiento y que se calentara mucho menos porque de esa manera la bateria dura mucho más, la arquitectura más conocida para esta se le conoce como **ARM**
 
-El tipo de procesador que se produce más es el X86 que se van produciendo lentamente cada vez menos porque cada vez más las personas tienen laptobs, computadoras portatiles en vez de tener computadoras de escritorio pues ARM es el caso ideal para estas computadoras, aun asi X86 sigue siendo muy popular en donde INTEL y AMD son los principales productores de este tipo de arquitectura.
+El tipo de procesador que se produce más es el X86 que se van produciendo lentamente cada vez menos porque cada vez más las personas tienen computadoras portatiles en vez de tener computadoras de escritorio pues ARM es el caso ideal para estas computadoras, aun asi X86 sigue siendo muy popular en donde [INTEL](https://www.intel.la/content/www/xl/es/homepage.html) y [AMD](https://www.amd.com/es/support/download/drivers.html) son los principales productores de este tipo de arquitectura.
 
 * Los dispositivos ANDROID y IPHONE son los que más consumen chips ARM
 
-Un detalle muy interesante de los CHIPS es la **Ejecución Especulativa** o tambien conocida como **Ejecución Predictiva** que consisten en que para ahorrar bateria y hacer más efectivos los procesadores, los procesadores tratan de predecir el código que van a correr, como por ejemplo: Si todos los días buscas una canción en spotify y la reproduces y pones a descodificar una canción, el procesador puede predecir eso y prepararse.
+Un detalle muy interesante de los CHIPS es la **[Ejecución Especulativa](https://es.wikipedia.org/wiki/Ejecuci%C3%B3n_especulativa)** o tambien conocida como Ejecución Predictiva que consisten en que para ahorrar bateria y hacer más efectivos los procesadores, los procesadores tratan de predecir el código que van a correr, como por ejemplo: Si todos los días buscas una canción en spotify y la reproduces y pones a descodificar una canción, el procesador puede predecir eso y prepararse.
 
-Esta ejeccución predictiva ha tenido muchas vulnerabilidades de seguridad informática y este ha sido la frontera para el diseño de un chip, es muy controversial.
+[Esta ejecución predictiva ha tenido muchas vulnerabilidades](https://support.apple.com/es-co/101886 "Acerca de las vulnerabilidades de la ejecución especulativa en las CPU con Intel y basadas en ARM By Apple") de seguridad informática y este ha sido la frontera para el diseño de un chip, es muy controversial.
 
-Parte de la arquitectura de un procesador es el lenguaje de ensamble que es una serie de instrucciones que le explican al ser humano en un lenguaje muy cercano al humano en letras y numeros como pedirle a la CPU como hacer operaciones matemáticas. Es el lenguaje original con el que se hace el software, y cuando uno escribe código en lenguajes de programación normales y se hace un proceso de compilación, la compilación es convertir ese código en el lenguaje de ensamblado de la arquitectura de la CPU.
+Parte de la arquitectura de un procesador es el lenguaje de ensamble que es una serie de instrucciones que le explican al ser humano en un lenguaje muy cercano al humano; en letras y numeros... Cómo pedirle a la CPU hacer operaciones matemáticas. Es el lenguaje original con el que se hace el software, y cuando uno escribe código en lenguajes de programación normales y se hace un proceso de compilación, la compilación es convertir ese código en el lenguaje de ensamblado de la arquitectura de la CPU.
 
-En el pasado antes de los lenguajes de programación y la memoria, la forma de programar las CPU antes de las memorias  era por medio de unas tarjetas a las que se les hacia unos huecos en donde al hueco representaba una instrucción en el lenguaje de ensamble o datos binarios como por ejemplo información númerica.
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Motorola_6800_Assembly_Language.png/500px-Motorola_6800_Assembly_Language.png">
+
+*Imagen Tomada De: https://es.wikipedia.org/wiki/Lenguaje_ensamblador* 
+
+En el pasado antes de los lenguajes de programación y la memoria, la forma de programar las CPU antes de las memorias era por medio de unas tarjetas a las que se les hacia unos huecos en donde al hueco representaba una instrucción en el lenguaje de ensamble o datos binarios como por ejemplo información númerica.
+
+<img src="https://i.blogs.es/e625db/punch1/450_1000.jpg">
+
+*Imagen Tomada De: https://www.xataka.com/historia-tecnologica/ser-programador-60-era-pequena-pesadilla-costaba-dinero-no-picabas-codigo-sino-que-usabas-tarjetas-perforadas*
+
+A continuación un ejemplo:
 
     A = 1 
     B = 2
@@ -621,7 +737,9 @@ En el pasado antes de los lenguajes de programación y la memoria, la forma de p
     1, 2 son valores
     A + B es un proceso
 
-La CPU calcula el numero 1 como un BYTE y asigna a la memoria RAM un espacio a las que se accede por medio de "Direcciones de memoria", por lo que al asignar 2 valores, se dejan esas dos variables en dos espacios de almacenamiento en la RAM por lo que estoy asignado que a ese espacio de almacenamiento que se va a llamar A o que se va a llamar B y que por dentro hay un 1 y un 2. Cuando declaro C, antes de hacer la operación matemática... reservo una dirección en la memoria a las que se les conoce como puntero o apuntadores. Por lo que se le solicita a la RAM cual es el valor de A y B en la posición de los apuntadores y en la CPU se suman los dos numeros para dar como resultado 3, que una vez generado se envia a la dirección de memoria que corresponde a la variable C. 
+La CPU calcula el numero 1 como un BYTE y asigna a la memoria RAM un espacio a las que se accede por medio de **Direcciones de memoria**, por lo que al asignar 2 valores, se dejan esas dos variables en dos espacios de almacenamiento en la RAM por lo que estoy asignado que a ese espacio de almacenamiento que se va a llamar A o que se va a llamar B y que por dentro hay un 1 y un 2. 
+
+Cuando declaro C, antes de hacer la operación matemática... reservo una dirección en la memoria a las que se les conoce como puntero o apuntadores. Por lo que se le solicita a la RAM cual es el valor de A y B en la posición de los apuntadores y en la CPU se suman los dos numeros para dar como resultado 3, que una vez generado se envia a la dirección de memoria que corresponde a la variable C. 
 
 > Esto mismo ocurre cuando compilo cualquier lenguaje de programación a assembly language. ¿Cuanta información tiene que transcribirse?
 
@@ -631,6 +749,15 @@ Casi todos los chips funcionan asi, aunque hay algunos chips que son especializa
 
 > Quedo fascinado y me abruma un poco la cantidad de información a la cual hay que estudiar. Son tantos temas e historia por entender.
 
+En un pequeño parrafo: La CPU, internamente, está compuesta por transistores, circuitos que realizan operaciones básicas como sumas, restas y multiplicaciones. Estos transistores también se encargan de mover, almacenar y modificar información.
+
+Video Recomendados:
+
+* https://www.youtube.com/watch?v=u71Du3nabXI
+
+* https://www.youtube.com/watch?v=dX9CGRZwD-w
+
+* https://www.youtube.com/watch?v=9RZreu5z_Gc
 
 
 
