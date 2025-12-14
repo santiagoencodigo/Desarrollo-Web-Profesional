@@ -14,6 +14,8 @@ Cómo funciona Internet, las computadoras, los chips, la inteligencia artificial
 
 - [4. Qué es un procesador (CPU) y la memoria  (RAM)](#qué-es-un-procesador-cpu-y-la-memoria-ram)
 
+- [5. Qué es un Sistema Operativo](#qué-es-un-sistema-operativo)
+
 
 
 
@@ -763,3 +765,260 @@ Video Recomendados:
 
 
 
+
+
+
+
+
+
+---
+
+
+
+
+
+
+
+
+
+
+
+## Qué es un Sistema Operativo
+
+Un sistema operativo (SO) actúa como ese intermediario clave en tu computadora o dispositivo móvil, traduciendo las instrucciones de las aplicaciones (software) al lenguaje que el hardware entiende.
+
+Exiten muchos dispositivos que solo tienen una función, como por ejemplo unos audifonos... Que igualmente es un dispositivo complejo, se conecta vía [bluetooth](https://es.wikipedia.org/wiki/Bluetooth "Bluetooth Concept By Wikipedia") a un telefono, un televisor, a una computadora... Pero solo cumplen con una función y es ser audifonos, no necesitan software para programarse entonces sus funciones estan quemadas en el chip.
+
+Por otro lado:
+
+Un televisor, una computadora, un telefono e incluso un reloj inteligente van a tener diferentes funciones debido a las aplicaciones que corren... Eso quiere decir que hay Software que le habla al Hardware, cuando eso ocurren en el medio debe haber un traductor que gestione esas diferencias y le permite al desarrollador de software hablar con el hardware sin tener que crear funciones especificas para tener que hablar con cada entidad de hardware...
+
+Es como pensar que un teclado es un hardware, pero hay una cantidad de teclados diferentes... Como el sensor de un reloj, siempre habrá un sensor diferente por cada reloj por lo que **necesitamos una forma estandar de comunicar el software con el hardware**.
+
+Un sistema operativo es el intermediario fundamental entre el hardware y el software que **crea estándares** para que los programadores no tengan que preocuparse por las especificaciones técnicas de cada dispositivo físico. Su función principal es permitir que las aplicaciones se comuniquen con los componentes físicos de manera uniforme, independientemente de la variedad de hardware existente.
+
+<img src ="https://preview.redd.it/esses-s%C3%A3o-todos-os-mouses-que-usei-nesses-3-anos-ama-v0-kmaudh9srhje1.png?width=640&crop=smart&auto=webp&s=ad242e6ccd137bfc762116eb49b4c643ebe530f3">
+
+*Imagen Tomada De: https://www.reddit.com/r/hardwarebrasil/comments/1iqqum4/esses_s%C3%A3o_todos_os_mouses_que_usei_nesses_3_anos/?tl=es-419*
+
+Cuando desarrollamos una aplicación que necesita acceder a la cámara, el teclado o cualquier otro dispositivo, no necesitamos programar específicamente para cada modelo de hardware gracias al sistema operativo.
+
+Por lo que necesitamos que lo que el hardware detecta del mundo real, se envie en una versión de bits y bytes (Electronica Digital) al software. 
+
+La comunicación entre software y hardware se realiza a través de dos componentes esenciales:
+
+Esas aplicaciones que permiten comunicar el software con el hardware se llaman **[Drivers](https://es.wikipedia.org/wiki/Controlador_de_dispositivo "Drivers Concept by Wikipedia")** y la traen por defecto los sistemas operativos. Los sistemas operativos hablan con el software a traves de una conexión estandar preacordada de diferentes mecanismos de comunicación que se llaman **[APIs = Application Program Interface](https://aws.amazon.com/es/what-is/api/ "API Concept by AWS")**
+
+> Drivers: son aplicaciones que vienen por defecto en los sistemas operativos y permiten la comunicación con hardware específico.
+
+> APIs (Application Program Interface): son mecanismos estandarizados que permiten al software comunicarse con el sistema operativo.
+
+> Entonces como buen software engineer, debo entender bien este tema: Drivers, APIs. Aunque al parecer es sencillo de manejar pues los actuales lenguajes de programación abstraen estos conceptos y hace que esto sea facil de procesar.
+
+Como ejemplo práctico: Cuando se reproduce una canción en spotify al descodificar la canción, hay una API que envia cómo debe sonar o vibrar la membrana del parlante del dispositivo.
+
+<img src="https://appmaster.io/api/_files/PqV7MuNwv89GrZvBd4LNNK/download/">
+
+*Imagen Tomada De: https://appmaster.io/es/blog/apis-para-principiantes-como-utilizar-una-api-una-guia-completa*
+
+Por otro lado el Sistema Operativo tambien gestiona como se usan los recursos del computador, pues generalmente se tienen varias aplicaciones abiertas y hay bastantes procesos que ocurren al tiempo como de mensajeria, musica o algo más que tengas conectado. Por lo que estos sistemas definen a quien debe enviar qué recursos por lo que el sistema operativo determina a quien le permite más recursos como por ejemplo:
+
+    Abrir al tiempo un navegador, excel y word: El sistema operativo distribuye de manera equitativa los recursos para abrir estos 3 programas al tiempo.
+
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZCiixdtv5Px0jx9oPpA5yxcHcVnhwgopl1A&s">
+
+*Imagen Tomada de: https://www.xataka.com/basics/administrador-tareas-task-manager-windows-que-como-sacarle-maximo-partido*
+
+---
+
+Los sistemas operativos tienen la crucial tarea de administrar eficientemente los recursos disponibles entre múltiples aplicaciones que se ejecutan simultáneamente. Esta gestión incluye:
+
+* Asignación de CPU
+
+* Gestión de memoria RAM
+
+* Manejo de interrupciones
+
+* Recolección de basura
+
+Las CPU ejecutan una sola cosa al tiempo por lo que el sistema operativo determina el corto lapso de tiempo que le dedica un poco a todo el proceso completo de algún trabajo. *"Un poco a este, un poco a este, otro poco a este..."* a una velocidad muy rápida que incluso se siente que se estuviera trabajando en esos procesos al mismo tiempo.
+
+> En el caso de la multitarea, el sistema operativo distribuye los recursos entre diferentes aplicaciones, dando un poco de prioridad a cada una según sea necesario, creando la ilusión de que todas funcionan simultáneamente.
+
+Cuando abres muchas pestañas en el navegador o cuando abres muchos archivos al tiempo, la computadora se pone lenta porque el sistema operativo empieza a ejecutar cada uno de estos archivos en la memoria RAM y aveces esta memoria se llena... Que sabemos que es muy rápida, pero si se llena igualmente tenemos que ejecutar lo que se esta buscando ejecutar por lo que el sistema operativo no se rinde por lo que abre un pedazo del disco duro que es más lento, para usarlo como memoria ram, a este concepto se le conoce como: **Memoria Virtual en Disco = SWAP**
+
+<img src="https://empiezoinformatica.wordpress.com/wp-content/uploads/2015/05/swap.png?w=523">
+
+*Imagen Tomada de: https://empiezoinformatica.wordpress.com/2015/05/08/swap-in-swap-outintercambio/*
+
+Incluso haciendo esto puede que el sistema operativo se llene de procesos porque un proceso esta ocupando todo el espacio, en ese momento es cuando se traba la computadora y se cuelga, en ese caso el sistema operativo puede enviar una señal de cancelación total para "matar" el proceso porque esta "Matando" todo.
+
+    Esto es en parte, las funciones de un sistema operativo.
+
+Estos mecanismos de control se llaman Interrupciones y a veces son muy simples como por ejemplo: El funcionamiento del mouse nunca para. **Porque existe una jerarquia de procesos** y lo que tiene que ver con teclado y mouse, estan en el punto más alto de esta jerarquia porque eso te da la sensación de que la computadora va muy rápido. Porque aunque se rompa una aplicación, no se rompe el sistema operativo.
+
+<img src="https://sistemasoperativos1web.wordpress.com/wp-content/uploads/2016/04/300px-figura11.jpg">
+
+*Imagen Tomada de: https://sistemasoperativos1web.wordpress.com/2016/04/21/cuales-son-los-niveles-de-un-sistema-operativo/*
+
+---
+
+Tambien pasa que hay aplicaciones que dejan elementos en memoria, por lo que el sistema operativo tambien tiene como función verificar qué espacio de memoria lleva tiempo sin ser accedido por una aplicación y simplemente la elimina o en ocaciones la mueve al disco duro. Por esto a veces cuando buscas abrir una app que hace bastante tiempo no usabas, puede que tome un poco más de tiempo en arrancar que lo normal porque debe volver a traer información a la memoria RAM.
+
+Esto es una serie de elementos que actualmente los programadores ya no tenemos que pensar porque el sistema operativo se encarga de esto de forma totalmente autonoma e independiente.
+
+[Garbage Collection (Recolección de Basura)](https://en.wikipedia.org/wiki/Garbage_collection_(computer_science) "GC concept by Wikipedia"): Nivel más alto de privilegio: Donde se ejecuta el nucleo del sistema (KERNEL) con acceso total al hardware y recursos.
+
+Tambien hay procesos que toman total control de todos los recursos de la computadora como por ejemplo los Videojuegos en donde tu quieres tener acción a tiempo real y que tengan maximo nivel de prioridad incluso teniendo multiples aplicaciones abiertas. Porque el sistema operativo gestiona mecanismos de multitarea en donde le da una prioridad estilo "Un poco a este, otro poquito a este y otro poco a este."
+
+<img src="https://i.ytimg.com/vi/bNK0ahcdvqU/maxresdefault.jpg">
+
+*Imagen Tomada De: https://www.youtube.com/watch?v=bNK0ahcdvqU*
+
+---
+
+Además de gestionar la estructura de almacenamiento, el sistema operativo implementa capas de seguridad que incluyen:
+
+* Permisos de usuario
+
+* Cifrado de archivos
+
+* Gestión de llaves de seguridad
+
+En la forma que se guarda la información en los discos duros, en la memoria permanente tambien depende del sistema operativo: Los diferentes sistemas operativos utilizan diferentes formatos y estructuras de almacenamiento:
+
+* [Apple utiliza APFS](https://es.wikipedia.org/wiki/Apple_File_System "APFS concept by Wikipedia"): Optimizado para SSD, Cifrado Nativo, Spanshots.
+
+* [Windows utiliza NTFS](https://es.wikipedia.org/wiki/NTFS "NTFS concept by Wikipedia"): Optimizado para Journaling, Compresión, Cifrado BitLocker.
+
+* [Linux utiliza ext 3/4](https://es.wikipedia.org/wiki/Ext4 "ext 3/4 concept by Wikipedia"): Alta Escalabilidad, Journaling, extents.
+
+La estructura de almacenamiento la decide el sistema operativo y tambien les agrega una capa de permisos porque el sistema operativo es donde tu guardas tus llaves de acceso; Tu nombre de usuario, tu contraseña, la forma en la que esa contraseña abre y cierra, la cabecera de tu sistema de archivos que tienes en tu pedacito de disco duro.
+
+De esa forma se protegen tus archivos para que otros usuarios del mismo computador no puedan acceder y tu tampoco puedes acceder a los archivos de otros usuarios en tu computadora.
+
+---
+
+Algunos sistemas operativos son capaces de abrir archivos de otros sistemas operativos diferentes, para lograrlo deben tener preinstalado las reglas de estructura de archivos y del disco duro de ese otro sistema operativo, que eso asi como lo hemos hablado antes es un **Driver**, un software que tiene las reglas de interacción con otro tipo de hardware o otro tipo de archivo.
+
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIcvfld3V6eQdvMutM9Ol5W1UcEusdR-yCJg&s">
+
+*Imagen Tomada De: https://www.instagram.com/p/DP31RJKiJDn/*
+
+La seguridad de archivos no solo depende de si el sistema permita o no darte acceso a un archivo aparte de tu nombre de usuario y contraseña, en ocaciones los sistemas de archivos tambien cifran el contenido de los archivos usando el nombre de usuario y contraseña en el sistema operativo, estos algoritmos de cifrado lo que hacen es que si no existe una presencia de una llave, de un password, entonces no se puede acceder a la estructura del sistema de archivos.
+
+Por lo que si saco y me llevo tu disco duro y lo inserto en otro computador, no lo puedo abrir, porque esta cifrado, tiene encriptación en donde los sistemas operativos gestionan esta encriptación
+
+Sistemas de Cifrados:
+
+* [Filevault](https://support.apple.com/es-co/guide/mac-help/mh11785/mac "Filevault by Apple")
+
+* [Bitlocker](https://support.microsoft.com/es-es/windows/buscar-la-clave-de-recuperaci%C3%B3n-de-bitlocker-6b71ad27-0b89-ea08-f143-056f5ab347d6 "Bitlocker by Microsoft")
+
+* [LUKS](https://docs.redhat.com/es/documentation/red_hat_enterprise_linux/8/html/security_hardening/encrypting-block-devices-using-luks_security-hardening "Cifrado Lucks by Redhat")
+
+
+Hay otras llaves de seguridad que los sistemas operativos gestionan, cuando tu abres tu banco porque tu quieres acceder al sitio web del banco o a la aplicación del banco en un telefono. Ese banco envia al sistema operativo una llave pública para que cifre los datos y tu le envias tu llave publica para que el banco cifre los datos.
+
+Esas llaves se tienen que guardar en algún lado y un gestor típico de las llaves públicas y de tus propias llaves para el cifrado es el **sistema operativo**.
+
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCg9QXOLpWQeJ_J461FoR27BX9pqfAPdbiQg&s">
+
+*Imagen Tomada De: https://es.wikipedia.org/wiki/Cifrado_%28criptograf%C3%ADa%29*
+
+---
+
+Los sistemas operativos modernos utilizan una **[arquitectura de anillos](https://es.wikipedia.org/wiki/Anillo_(seguridad_inform%C3%A1tica))** de seguridad para restringir el acceso:
+
+* La memoria y el acceso al chip, al hardware, a los transistores de la CPU se restringe en el primer anillo de seguridad que es el **anillo 0 = ring 0** que es el nivel de privilegio más alto en la arquitectura de protección de un sistema operativo, donde se ejecuta el núcleo del sistema (kernel) con acceso directo al hardware y control total sobre todos los recursos del sistema
+
+* Hay un segundo anillo en el cual históricamente se le conoce por correr las aplicaciones de los usuarios llamado **ring 1**.
+
+
+**En el mundo moderno hay actualmente una arquitectura de 4 anillos en donde:**
+
+1. El primer anillo es el kernel, el nucleo del sistema operativo que es el único que le puede hablar al hardware
+
+2. luego tenemos el anillo 1 y 2 que es donde carga el software que traduce entre el hardware y las aplicaciones, esos son los anillos de dispositivos
+
+3. Luego tenemos el anillo 3 que es donde carga el software normal; Excel, Word, Navegador, Juegos, Aplicaciones... En donde si una aplicación desea ingresar al hardware como por ejemplo spotify poner musica y que la musica suene en el parlante de tu dispositivo. Spotify en el anillo 3 tiene que hablarle al kernel en el anillo 0 a traves de los APIs que corren en el anillo 1 o 2 que en estos dos es donde se encuentran los drivers.
+
+4. Entonces la API del sistema operativo recibe la señal de spotify ("Reproduzca esta musica), el sistema operativo le envia esta señal al kernel, en donde el kernel corre las instrucciones al parlante asi transformando esa señal digital en la vibración del parlante y asi es como escuchamos una canción.
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Priv_rings.svg/500px-Priv_rings.svg.png">
+
+*Imagen Tomada De: https://es.wikipedia.org/wiki/Anillo_(seguridad_inform%C3%A1tica)*
+
+---
+
+Las [maquinas virtuales](https://es.wikipedia.org/wiki/M%C3%A1quina_virtual "Maquina Virtual concept by Wikipedia") son una nueva técnica para que no solo tengas diferentes usuarios en un sistema operativo sino para que en una computadora puedan correr multiples sistemas operativos de manera independiente como si fuera una computadora virtual.
+
+> [Oracle VM VirtualBox Manager](https://www.oracle.com/es/virtualization/technologies/vm/downloads/virtualbox-downloads.html): es un software de virtualización gratuito y de código abierto que permite crear y ejecutar máquinas virtuales (VMs) dentro de un sistema operativo anfitrión (como Windows, macOS o Linux).
+
+La forma en la que funciona es que en el anillo 0 sigue cargando el kernel del sistema operativo de la computadora y en el anillo 1 se encuentra una memoria virtual reservada que le hace creer a un sistema operativo que hay arranca el anillo 0 y tu puedes tener tantos de estos sistemas operativos como tu memoria ram o la memoria de tu disco duro puedan sostener.
+
+> La virtualización permite optimizar recursos, ya que puedes utilizar solo una fracción de una computadora si es todo lo que necesitas, o expandirte a múltiples máquinas si requieres más capacidad.
+
+A cada una de estas maquinas virtuales le es imposible acceder a la otra maquina virtual.
+
+Esto es muy util en servidores, cuando tu tienes una computadora "en la nube" o cuando compras servidores en la "nube" realmente es una computadora de toda la vida, gigante metida en un [data center](https://es.wikipedia.org/wiki/Centro_de_procesamiento_de_datos "Data Center concept by Wikipedia") que lo que hace es dividirse en espacios virtuales para poder rentarte ese espacio y sí necesitas más aumenta la capacidad de recursos que usas de la computadora e incluso puede reclutar los recursos de otras computadoras y si depronto utilizas menos, puede que user una quinta parte de la computadora.
+
+<img src ="https://upload.wikimedia.org/wikipedia/commons/a/a0/Datacenter-telecom.jpg">
+
+*Imagen Tomada De: https://es.wikipedia.org/wiki/Centro_de_procesamiento_de_datos*
+
+Casi toda la nube y casi todo el negocio de los servidores funciona con maquinas virtuales.
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/VirtualBox2.png/500px-VirtualBox2.png">
+
+*Imagen Tomada De: https://es.wikipedia.org/wiki/M%C3%A1quina_virtual*
+
+---
+
+La estética de la interfaz gráfica tambien es dependiente de un sistema operativo.
+
+Los botones en mac se ven diferente a los de windows y a los de linux, un iphone y un android tienen aplicaciones cuya interfaz gráfica se ve diferente, esas interfaces de usuario las define el sistema operativo aunque los desarrolladores de aplicaciones pueden hacer lo que quieran.
+
+Por detras de las interfaces gráficas existen interfaces de línea de comandos o interfaces que son sólo texto, asi fue como empezaron los sistemas operativos, ONIX, OS y eventualmente linux. Estos se llaman **[CLI o Command Line Interfaces](https://es.wikipedia.org/wiki/Infraestructura_de_lenguaje_com%C3%BAn "CLI concept by Wikipedia")** 
+
+<img src="https://i.blogs.es/ef71ca/comandos-diagnostico/650_1200.jpg">
+
+*Imagen Tomada De: https://www.xataka.com/basics/comandos-basicos-para-dar-tus-primeros-pasos-consola-windows-cmd*
+
+> Es un conocimiento fundamental para un Ingeniero de Software.
+
+---
+
+Hay todo tipo de sistemas operativos en el mundo de apple los MacBook, los IMAC corren con macOS, pero el iphone y el ipad corren con Ios, los relojes inteligentes corren con [Watch OS](https://www.apple.com/co/os/watchos/ "Watch OS by Apple").
+
+Android es un tipo de linux, y linux puede ser un sistema operativo de escritorio, de servidores, asi como windows es un sistema operativo de escritorio o de servidores.
+
+En el mundo de la realidad virtual (prácticamente un telefono), cuando uno se lo pone tiene una versión modificada de [Android](https://www.android.com/intl/es_es/ "Android.com") que fue fabricada por META, conocida como [Horizon OS](https://www.meta.com/es-es/help/quest/562419235163295/ "Horizon OS by META").
+
+En apple, las apple vision pro usa [VisionOS](https://www.apple.com/os/visionos/ "VisionOS by Apple") y los dispositivos de android que usan realidad aumentada, tienen un sistema operativo llamado [android XR](https://www.android.com/intl/es_es/xr/ "Android XR by Android").
+
+<img src="https://www.androidauthority.com/wp-content/uploads/2024/12/Android-XR-YouTube-TV-Interface-840w-472h.png.webp">
+
+*Imagen Tomada De: https://www.androidauthority.com/android-xr-ui-first-look-3508760/*
+
+---
+
+Por ultimo estan los sistemas operativos especializados por ejemplo en sistemas medicos o en las pantallas de los automoviles corre un sistema operativo llamado [QNX](https://es.wikipedia.org/wiki/QNX "QNX concept by Wikipedia"), tambien usamos sistemas operativos para los cohetes que van al espacio, mientras use software que corre con el hardware de manera general hay un sistema operativo en medio.
+
+En la actualidad los sistemas operativos determinan que aplicaciones pueden correr o no a traves de reglas, permisos e incluso **sistemas de verificación y aplicación**, en android o en [iOS](https://es.wikipedia.org/wiki/IOS "iOS concept by Wikipedia") usan las tiendas de aplicación en donde iOS tiene la [appstore](https://www.apple.com/co/app-store/ "appstore.com") y android tiene la [playstore](https://play.google.com/store/games?hl=es_CO "playstore.com").
+
+<img src="https://www.enriquedans.com/wp-content/uploads/2019/07/App-Store-and-Play-Market-icons-768x476.jpg">
+
+*Imagen Tomada De: https://www.enriquedans.com/2019/07/la-crisis-del-modelo-de-las-tiendas-de-aplicaciones.html*
+
+> En los android de china, un telefono puede tener **quince tiendas diferentes tiendas de aplicaciones** mientras que el mundo occidental casi siempre hay una; La de google o la de Apple.
+
+En los sistemas de escritorio como Mac o Window tambien hay tiendas de aplicaciones, pero en estos sistemas se puede correr cualquier tipo de aplicación que instales, sin embargo cuando empiezas a ejecutar tus propias aplicaciones es posible que el sistema operativo mande advertencias en donde la aplicación no tiene una llave de seguridad o no tiene una firma, o no tiene un certificado.
+
+<img src="https://www.java.com/jcom/images/trusted_expired,0(5).jpg">
+
+*Imagen Tomada De: https://www.java.com/es/download/help/appsecuritydialogs.html*
+
+Esto sucede porque ahora los vendedores de sistemas operativos como [apple](https://www.apple.com/co/ "apple.com") y [microsoft](https://www.microsoft.com/es-co "microsoft.com") les pide a los desarrolladores de software que pasen un proceso de verificación para tener una llave de cifrado que les permite ejecutar una aplicación, eso antes no pasaba, este proceso hace que sea más seguro el desarrollo de una aplicación y sistemas. Porque entonces un virus no tiene esa llave y antes de ejecutarse, va a salir esa advertencia "Esta aplicación no está autorizada".
+
+Ahora si quieres desarrollar una aplicación tienes que pedirle permiso a los desarrolladores de sistemas operativos y esto hace un poco más canson el desarrollo de aplicaciones de escritorio, pero mucho, mucho más seguro.
