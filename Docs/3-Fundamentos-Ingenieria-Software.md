@@ -16,6 +16,8 @@ Cómo funciona Internet, las computadoras, los chips, la inteligencia artificial
 
 - [5. Qué es un Sistema Operativo](#qué-es-un-sistema-operativo)
 
+- [6. Cómo Funciona Internet](#cómo-funciona-internet)
+
 
 
 
@@ -1022,3 +1024,280 @@ En los sistemas de escritorio como Mac o Window tambien hay tiendas de aplicacio
 Esto sucede porque ahora los vendedores de sistemas operativos como [apple](https://www.apple.com/co/ "apple.com") y [microsoft](https://www.microsoft.com/es-co "microsoft.com") les pide a los desarrolladores de software que pasen un proceso de verificación para tener una llave de cifrado que les permite ejecutar una aplicación, eso antes no pasaba, este proceso hace que sea más seguro el desarrollo de una aplicación y sistemas. Porque entonces un virus no tiene esa llave y antes de ejecutarse, va a salir esa advertencia "Esta aplicación no está autorizada".
 
 Ahora si quieres desarrollar una aplicación tienes que pedirle permiso a los desarrolladores de sistemas operativos y esto hace un poco más canson el desarrollo de aplicaciones de escritorio, pero mucho, mucho más seguro.
+
+
+
+
+
+
+
+
+
+
+---
+
+
+
+
+
+
+
+
+
+
+## Cómo Funciona Internet
+
+Cuando envias un mensaje por [whatsapp](https://www.whatsapp.com/?lang=es "whatsapp.com") pasan muchas cosas más que solamente pasar un mensaje de un teléfono a otro teléfono pues ese mensaje:
+
+1. se debe transformar en un [paquete (packet)](https://es.wikipedia.org/wiki/Paquete_de_red "Paquete de Red concept by Wikipedia")
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/WiFiMacLayerFrameLayOut.jpg/500px-WiFiMacLayerFrameLayOut.jpg">
+
+*Imagen Tomada De: https://es.wikipedia.org/wiki/Paquete_de_red*
+
+2. Ese paquete llega a una antena
+
+3. El mensaje en la antena llega a un provedor de Interent (ISP - Internet Service Provider) que se conecta a unos cables submarinos en donde los distrubuyen en servidores
+
+4. Durante todo este proceso el mensaje debe ir cifrado, se hace trazamiento mediante unos elementos llamados IP - Protocolo de Internet
+
+<img src="https://nocrd.com/images/2024/07/17/Network-Peering_large.png">
+
+*Imagen Tomada De: https://nocrd.com/es/component/content/article/8-noticias/238-explicacion-que-es-el-peering-de-internet*
+
+Debemos razonar que ese mensaje que se envia de un telefono a otro telefono es realmente de una computadora a otra computadora.
+
+> Un telefono en esencia una computadora. 
+
+Para que ese mensaje se pueda enviar debe primero transformarse en lenguaje que entienden las maquinas, lenguaje binario... Es decir bytes, conjuntos de 8 bits. En donde cada elemento de bit es 1 o es un 0 y estos elementos en conjunto se transmiten a traves de internet.
+
+<img src="https://www.ionos.com/es-us/digitalguide/fileadmin/_processed_/a/d/csm_diversas-unidades-de-almacenamiento-en-relacion-con-el-bit_9be530a014.webp">
+
+*Imagen Tomada De: https://www.ionos.com/es-us/digitalguide/paginas-web/desarrollo-web/que-es-un-bit/*
+
+Pero internet no es simplemente de computadora a computadora, algo debe pasar para que entre cada una de estas computadoras se conecte a internet.
+
+> Se vuelve a invitar a pensar de los celulares como unas computadoras porque en esencia lo son.
+
+Tu computadora se conecta a internet mediante un sistema, un protocolo, una serie de reglas para mandar mensajes de manera inalambrica llamada wifi.
+
+<img src="https://ccnadesdecero.es/wp-content/uploads/2023/05/Ejemplo-Diagrama-Red-Modem-Router.png">
+
+*Imagen Tomada De: https://ccnadesdecero.es/ejemplo-diagrama-red-domestica/*
+
+Si tu telefono no esta cerca de una red llamada wifi, se conectará a otra red llamada 4G y antes de 4G existia 3G, 2G que son otro tipo de redes, estos especificamente son redes de telefonia a los que se les agrego capacidad de transmitir datos digitales que es lo que conocemos como [internet](https://www.cloudflare.com/es-es/learning/network-layer/how-does-the-internet-work/ "Internet concept by Wikipedia").
+
+<img src="https://www.movilzona.es/app/uploads-movilzona.es/2022/02/bandas-frecuencia-moviles.jpg">
+
+*Imagen Tomada De: https://www.movilzona.es/tutoriales/conexiones/bandas-frecuencias-moviles/*
+
+Pero si depronto tu computadora es de trabajo o tal vez en tu casa la computadora la conectan por medio de un cable, muy probablemente ese cable sea un cable de red que es conocido popularmente como un cable [ethernet](https://es.wikipedia.org/wiki/Ethernet "Ethernet concept by Wikipedia").
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/10baseT_jack.png">
+
+*Imagen Tomada De: https://es.wikipedia.org/wiki/Ethernet*
+
+Sea como sea, sin importar si es una red de wifi, por cable... Todos estos son los medios por los cuales se va a llegar a una caja (internet) que se le llama un [módem](https://es.wikipedia.org/wiki/M%C3%B3dem "Módem concept by wikipedia")/[router](https://es.wikipedia.org/wiki/R%C3%BAter "Router concept by Wikipedia").
+
+> Un módem y router no son lo mismo, aunque a menudo se combinan en un solo dispositivo (un "gateway") que tu proveedor de internet te entrega; el módem trae la señal de internet a tu casa desde tu ISP, mientras que el router toma esa señal y la comparte (vía Wi-Fi o cable) con todos tus dispositivos (PC, móviles, tablets). 
+
+<img src="https://www.adslzone.net/app/uploads-adslzone.net/2020/02/Modem-router-e1726047677232.jpg?x=480&quality=80">
+
+*Imagen Tomada De: https://www.adslzone.net/reportajes/internet/modem-vs-router/*
+
+Este módem traduce todas las señales internas de la red privada de tu casa, que es la que tiene wifi o ethernet a las señales que tiene internet público del mundo y eso lo hace enviando la señal por un cable, que antes era el cable de telefono, pero hoy en día es casi siempre cables de **[fibra óptica](https://concables.cl/que-es-y-para-que-sirve-el-cable-de-fibra-optica/ "Fibra Óptica concept by concables")**.
+
+La fibra óptica es una pequeña fibra de vidrio altamente elástica por la que un rayo laser va modulando un mensaje, que es el mensaje que envia todas las señales de internet en el mundo, pero esto no significa que de alguna u otra forma la computadora tuya se conecte con la computadora de tu amigo en el momento que envias un mensaje.
+
+<img src="https://concables.cl/wp-content/uploads/2021/08/fiber-optic-cable-768x284.jpg">
+
+*Imagen Tomada De: https://concables.cl/que-es-y-para-que-sirve-el-cable-de-fibra-optica/*
+
+Para que ese mensaje llegue, debe saber cómo llegar y además de eso debe llegar de manera privada, entonces necesita un servidor intermedio que se acuerde que "Esta persona tiene en sus contactos a esta persona" y el mensaje debe ir cruzado. Estos servidores no son más que computadoras, grandes computadoras escondidas en lugares que nosotros llamamos datacenters que son edificios llenos de computadoras de una compañia para poder hacer esa transmisión.
+
+Whatsapp es un producto creado por la misma empresa que creó facebook, esta empresa se llama meta. Por ende cuando tu envias un mensaje por whatsapp... Realmente estos llegan a los servidores de meta. 
+
+<img src="https://assets-blog.hostgator.mx/wp-content/uploads/2021/06/Emisor.webp">
+
+*Imagen Tomada De: https://www.hostgator.mx/blog/protocolo-tcp/*
+
+Por otro lado tu no quieres que los mensajes que envias sean vistos por terceros, entonces existen tecnologías que se llaman [cifrado o encriptación](https://www.cloudflare.com/es-es/learning/ssl/what-is-encryption/ "Encriptación concept by Cloudfare"). 
+
+Lo que hace estas tecnologías es que hacen el mensaje, secreto. Haciendolo indecifrable en tu computadora o en tu teléfono. En donde llega al servidor en donde este no sabe realmente qué es, sólo sabe que va para tu amiga (dirección receptora), en donde tu amiga lo recibe y por ende solamente la única persona que lo puede descifrar... Como si entre los dos tuvieran una contraseña secreta que sólo los dos conocen mandandose mensajes.
+
+A estas tecnologías se les conoce como:
+
+* **LLaves Públicas**
+* **Llaves Privadas**
+
+Ambas son una técnica de cifrado que usa matemáticas para agarrar un mensaje y tomando ese mensaje, se transforma en algo indescifrable. Esto lo que hace que sea indescifrable es lo que hace que sea tu llave pública en donde la puedes compartir con otros en donde esa llave pública sólo te corresponde a ti (Dirección Locutora), esta se guarda de manera secreta en tu computadora.
+
+La Llave Privada solo sirve para descifrar mensajes que fueron cifrados con tu llave pública.
+
+Cuando usas Whatsapp o cualquier sistema de mensajeria moderno. Lo que haces es que cuando guardas el contacto de una persona: Internamente y de manera automática le envia tu llave pública a tus contactos y cada contacto que te tiene a ti, te guardan en sus llaves públicas. 
+
+Por ende cuando mires tu contactos en la aplicación de whatsapp tambien estas mirando una lista de cada una de tus llaves públicas para cifrar un mensaje con ellos por medio de esa llave y asi sólo enviar mensajes y recibir mensajes de ellos. 
+
+Este intercambio de llaves públicas es a través del servidor, pero las llamas privadas no estan en los servidores de whatsapp, estas estan solamente en tu computadora.
+
+De esta manera recibes y descifras mensajes en tu teléfono, siendo asi que no se pueda mirar en el servidor cual es el mensaje haciendo asi que el servidor solamente vea para quien es el mensaje.
+
+El contenido del mensaje son los datos (El mensaje en si como por ejemplo: "Hola, cómo estas?"), pero la información extra del mensaje con los metadatos (Fecha y hora de envio, Fecha y hora de recibido).
+
+<img src="https://www.redeszone.net/app/uploads-redeszone.net/2019/11/emisor-receptor.jpg">
+
+*Imagen Tomada De: https://www.redeszone.net/tutoriales/seguridad/diferencias-cifrado-clave-publica-privada/*
+
+Lectura Recomendada: https://es.wikipedia.org/wiki/Criptograf%C3%ADa_asim%C3%A9trica
+
+---
+
+Un mensaje cifrado es como meter un mensaje en una caja, en donde tu llave pública es la que cierra la caja y todo el mundo que te envie un mensaje tiene esa llave pública, la llave privada es la única que puede abrir esa caja y esa solamente tu la tienes.
+
+El mensaje que tu envias tiene que convertirse en una cajita que será enviada en internet en donde a esta caja se le conoce como paquete y es un formato especial binario que guarda el mensaje y los metadatos.
+
+Estos mensajes empaquetados son los que entienden los protocolos de comunicación como el 4G de las antenas de celular, el wifi, el ethernet.
+
+Cada sistema de conexión a internet funciona de maneras ligeramente diferentes:
+
+<img src="https://es.digi.com/getattachment/Blog/post/Private-Network-vs-Public-Network-5-Key-Difference/private_network_diagram-1200w.png?lang=en-US">
+
+*Imagen Tomada De: https://es.digi.com/blog/post/private-network-vs-public-network*
+
+Los estandares de telefonía como 4G son muchas antenas al rededor de todo el planeta que estan constantemente escuchando con señales de radio donde estan los teléfonos, por lo que probablemente tu teléfono constantemente esta viendo al rededor de 3, 4, 5 antenas al rededor del barrio donde vives porque siempre debe estar conectado a multiples antenas de tal manera que si vas conduciendo o caminando el teléfono va saltando de antena en antena para no perder conexión: Se puede pensar como una conexión a nivel wifi, pero a toda la ciudad.
+
+<img src="https://www.wradio.com.co/resizer/v2/https%3A%2F%2Fcloudfront-us-east-1.images.arcpublishing.com%2Fprisaradioco%2FYGVYN4JMSND45HZOTLDFFQFLPM.jpg?auth=289cc4f1f8ceffc35a835ab6c88e640f6ae7cc1e3adebebbf67938c0c9c0f349&height=800&width=1200&quality=70&smart=true">
+
+*Imagen Tomada De: https://www.wradio.com.co/2024/03/06/cobertura-5g-zonas-de-bogota-donde-ya-esta-disponible-como-activarla-en-su-dispositivo/*
+
+En tu casa probablemente tienes un router/enrutador wifi que transformar esa señal de radio que es donde estan los empaquetadores de internet a una señal de cable que se conecta a un moden.
+
+Esos paquetes llegan al módem o la antena 4g, estas dos los envian a un proveedor de internet, que es el proveedor de internet al cual tu le pagas. [(ISP -Internet Service Provider)](https://mintic.gov.co/micrositios/operadores-comunitarios-internet-isp/819/w3-channel.html "ISP concept by Ministerio de las TIC Colombia")
+
+Hay demasiados de estos ISP y todos se conectan entre si a traves de cables gigantescos que estan alrededor de todo el planeta.
+
+<img src="https://en.vcenter.ir/wp-content/uploads/2018/08/isp-internet-service-provider-definition.jpg">
+
+*Imagen Tomada De: https://en.vcenter.ir/internet/isp-internet-service-provider-definition/*
+
+Estos cables son una red gigante cables, que muchos de estos van por el oceano y nosotros estamos totalmente rodeados por estos cables. Son conocidos como cable submarino, aunque muchas veces tambien puede ir por tierra mediante tuneles en tubos como tuberia del agua o en postes de luz.
+
+Toda esa red de cables al rededor de todo el mundo es lo que nosotros conocemos como internet, no son satelites, aunque algo de internet ocurre en satelites, la verdadera conexión ocurre entre estos cables.
+
+<img src="https://content.nationalgeographic.com.es/medio/2019/03/12/cables-marinos_238e1e2a_1280x688.png">
+
+*Imagen Tomada De: https://www.nationalgeographic.com.es/ciencia/internet-red-miles-cables-submarinos_13997*
+
+Pero no es como si estos ISP se conecten directamente entre ellos, tienden a usar unos sistemas que centralizan la llegada de los cables y que distribuyen estos cables al rededor de un país, de un continente y del planeta entero se conocen como [IXP = Internet Exchange Point](https://www.cloudflare.com/es-es/learning/cdn/glossary/internet-exchange-point-ixp/ "IXP concept by Cloudflare").
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Internet_Connectivity_Distribution_%26_Core.svg/500px-Internet_Connectivity_Distribution_%26_Core.svg.png">
+
+*Imagen Tomada De: https://es.wikipedia.org/wiki/Punto_neutro*
+
+Lo que son es [datacenters](https://es.wikipedia.org/wiki/Centro_de_procesamiento_de_datos "Datacenters concept by Wikipedia"), edificios gigantescos llenos de computadoras que reciben todas las señales de cables, de las antenas, señales de satelite, pero sobre todo los cables submarinos y las redestribuyen para donde tienen que ir.
+
+<img src="https://i.blogs.es/342f42/high-res-utah-data-center/450_1000.jpeg">
+
+*Imagen Tomada De: https://www.xataka.com/pro/asi-cinco-cpds-grandes-mundo*
+
+---
+
+**¿Cómo Sabe un IXP a donde tiene que ir un paquete?**
+
+En esos [metadatos](https://es.wikipedia.org/wiki/Metadatos "Metadatos concept by wikipedia") viene la dirección del servidor al que tengo que ir, cuando yo le envio un mensaje de whatsapp, yo digo este mensaje es para [whatsapp.com/](https://www.whatsapp.com/)...
+
+Todo lo que tenga un .com, como por ejemplo [google.com](https://www.google.com/ "google.com"), [youtube.com](https://www.youtube.com/ "youtube.com"), [spotify.com](https://open.spotify.com/intl-es/ "spotify.com"), a todo esto se le conoce como el [dominio](https://es.wikipedia.org/wiki/Dominio_de_internet "Dominio concept by Wikipedia"): Es el nombre en texto que nosotros le ponemos a una dirección de un servidor. 
+
+Pero las direcciones de los servidores no funcionan con nombres sino con números asi como que en la calle halla una dirección como la carrera 13 con calle 63 o la casa 143 en la avenida oregon, en internet tenemos un sistema de numeros que a partir de verlo nos indica por donde tiene que ir el paquete para encontrar su destino. 
+
+Asi mismo entonces: Saber como sale desde tu computadora, va a cual proveedor de internet, a cual IXP, a cual proveedor de internet y a cual lugar.
+
+Estos numeros se les conoce como direcciones de internet o direcciones IP: Protocolo de Internet / Internet Protocol
+
+<img src="https://kinsta.com/es/wp-content/uploads/sites/8/2018/05/qu%C3%A9-es-dns.png">
+
+*Imagen Tomada De: https://kinsta.com/es/blog/que-es-dns/*
+
+Lectura Recomendada: https://aws.amazon.com/es/route53/what-is-dns/
+
+---
+
+**¿Cómo hacen las computadoras para tener una dirección IP a la cual enviar y recibir?**
+
+La humanidad decidió sentarse y acordar una serie de estandares y entre todos acordaron que el estandar se iba a llamar [DNS = Domain Name System/ Sistema de Nombres de Dominio](https://www.ibm.com/mx-es/think/topics/dns "DNS concept by IBM").
+
+Estas son bases de datos gigantescas en donde hay un monton de nombres como por ejemplo: whatsapp.com, google.com, youtube.com y por cada uno de estos nombres estan asignadas unas IP diciendo asi "Este nombre de dominio corresponde a esta dirección de ip" y estas bases de datos las clonan/copian por cada una de las IXP/ Internet Exchange Point, en ocasiones tambien estan copiadas en los ISP, en los servidores intermedios de corporaciones y muy probablemente en tu computadora y en tu teléfono hay una copia local de esa base de datos y cuando esa base de datos se actualiza, envia una señal a cada uno de los computadores que tiene una copia para que actualice a esa versión.
+
+<img src="https://www.indusface.com/wp-content/uploads/2024/10/DNS-lookup-process-.png">
+
+*Imagen Tomada De: https://www.indusface.com/learning/what-is-dns/*
+
+Gracias a esos servidores de DNS y a esa distribución de bases de datos es como nosotros sabemos donde esta todo lo que hay en internet.
+
+Una computadora normal no tiene que saber cuales son todas las direcciones de internet, sólo tiene que recordar las más comunes.
+
+Entonces como por ejemplo: Si tienes que enviar un mensaje mediante whatsapp para que le llegue al otro telefono de tu conocido, en tu computadora cuando le das enter:
+
+1. Ese mensaje se transforma en un paquete
+
+2. Ese paquete se cifra con una llave pública
+
+3. Ese paquete se va para el router wifi.
+
+4. Del router/antena va para los datacenter del ISP que contrataste
+
+5. El ISP sabe por el DNS del mensaje por donde enviar ese paquete y ese paquete fluira por internet hacia un IXP.
+
+6. El IXP busca donde se encuentra el servidor, en este caso el servidor de whatsapp, siendo meta.
+
+7. El servidor busca "¿Este paquete para quien es?" 
+
+8. El servidor envia para quien es al IXP.
+
+9. El IXP lo envia al ISP que contrató la persona a la cual tu enviaste el mensaje
+
+10. El ISP envia el mensaje al módem/router o empresa de telefonía de esa persona
+
+11. LLegando asi el mensaje a esa persona y aparecer como una notificación.
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/e/ef/ArchitectureCloudLinksSameSite.png">
+
+*Imagen Tomad De: https://es.wikipedia.org/wiki/Comunicaci%C3%B3n_entre_procesos*
+
+---
+
+Cuando tu envias mensajes y usas ciertos comandos (Terminal y Línea de Comandos) se van a ver una serie de numeros IP, cuando un mensaje se envia pasa por una serie de numeros IP y a esto se le conoce como una [traza de ruta](https://www.xataka.com/basics/tracert-traceroute-que-como-funciona-como-se-utiliza "Traza de ruta IP concept by Xataka")
+
+<img src="https://i.blogs.es/ef0fbb/trazado/450_1000.jpg">
+
+*Imagen Tomada De: https://www.xataka.com/basics/tracert-traceroute-que-como-funciona-como-se-utiliza*
+
+* Imagen de tabla de enrutamiento por enviar un mensaje. (Direcciones IP por las que un mensaje tuvo que viajar a la velocidad de la luz)
+
+El tiempo que se demora un mensaje o un paquete de salir de una computadora y llegar a la otra se le conoce como [PING](https://es.wikipedia.org/wiki/Ping "PING concept by Wikipedia"), aunque hay algunos casos especiales por ejemplo si dos computadoras se encuentran en la misma red porque estan en la misma ciudad, en el mismo barrio... El mensaje no tiene que viajar a internet, muchas veces sólo rebota en el proveedor de internet local.
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/Cmd-ping.png">
+
+*Imagen Tomada De: https://es.wikipedia.org/wiki/Archivo:Cmd-ping.png*
+
+O cuando miras un video en youtube, no estas llendo a los servidores de youtube de estados unidos exclusivamente, youtube que es muy inteligente al igual que muchas compañias genera copias de los videos en los servidores más cercanos dentro de cada país asi en vez de que el mensaje vuele por todo internet y que tenga que pasar por todos los protocolos de intercambio y por los IXP, solamente estan la red de internet local de la ciudad y a estos se les conoce como servidores de cache.
+
+<img src="https://kinsta.com/wp-content/uploads/2020/03/How-Web-Cache-Works.png">
+
+*Imagen Tomada De: https://kinsta.com/es/blog/que-es-la-cache/*
+
+---
+
+El internet satelital no es magia sino basicamente lo mismo, cuando una antena satelital se conecta a un satelite para conectarse a internet lo que realmente esta pasando es que esa antena satelital envia una señal de radio al satelite, pero el satelite esta conectado a un ISP en tierra, probablemente el más cercano a tu casa y ese ISP se encarga de enrutar el paquete en el internet de toda la vida.
+
+Asi funciona [starlink](https://starlink.com/co).
+
+<img src="https://i.blogs.es/abb225/starlink-satelites/650_1200.jpg">
+
+*Imagen Tomada De: https://www.xataka.com/basics/que-starlink-como-funciona-cuanto-cuesta*
+
+Lectura Recomendada: https://es.wikipedia.org/wiki/Starlink
+
+> Internet es mucho más que esto, hay más protocolos, reglas, cifrado, técnicas especiales para el correo, las IP tienen ciertas reglas, ¿Por qué una IP tiene 4 números? ¿Por qué no 5 o por qué no 3?, ¿Por qué las IP van del 0 al 255?, ¿Cual es la diferencia entre IPv4 y la IPv6?, un DNS tiene muchas más cosas que simeplemente un nombre y una IP
+
+---
