@@ -1300,4 +1300,111 @@ Lectura Recomendada: https://es.wikipedia.org/wiki/Starlink
 
 > Internet es mucho más que esto, hay más protocolos, reglas, cifrado, técnicas especiales para el correo, las IP tienen ciertas reglas, ¿Por qué una IP tiene 4 números? ¿Por qué no 5 o por qué no 3?, ¿Por qué las IP van del 0 al 255?, ¿Cual es la diferencia entre IPv4 y la IPv6?, un DNS tiene muchas más cosas que simeplemente un nombre y una IP
 
+
+
+
+
+
+
+
+
+
 ---
+
+
+
+
+
+
+
+
+
+
+## Cómo las computadoras guardan datos
+
+Hay dos tipos de datos que existen en una computadora, los datos persistentes y los volátiles.
+
+Un dato persistente es cuando apagas la computadora y el dato sigue ahí, que estos datos son los que se encuentran en el disco duro.
+
+Un dato volátil es que al apagarse desaparece el dato. Como cuando hay un archivo no guardado al apagar la computadora y estos se encuentran en la memoría RAM.
+
+* Dato Guardado en el Disco Duro
+
+* Dato en Acción en la Memoria RAM
+
+> La memoria RAM no es la única memoria de tipo volatil sino que es la más común y más grande.
+
+Dentro de las CPU hay memoria volátil que se llama cache o registros que son pequeñas memorias muy veloces dentro de la series de transistores que se encuentran en un chip de CPU.
+
+Un disco duro es el formato de memoria persistente más común, que es cuando el dato se mantiene una vez se apaga la computadora. Pero no es la única, pues en las computadoras la BIOS que es el chip que permite al sistema arrancar es una memoria persistente.
+
+Dentro de los CHIPS existen pequeñas herramientas de software que arrancan el chip que se conocen como el firmware.
+
+---
+
+Hay dos tipos de unidades para guardar información de tipo persistente. 
+
+1. Los discos duros mecánicos
+
+2. Los discos realmente no son discos sino unidades de estado sólido.
+
+    Los discos duros mecánicos son mecánicos porque tienen un disco por dentro que son básicamente discos magneticos que van dando vueltas y una cabeza de lectura los va leyendo.
+    Estos platos mecánicos que son leidos por una cabeza de lectura se parecen a los vinilos y a los toca discos. 
+    La lectura de estos discos depende totalmente de la velocidad de la rotación de estos platos.
+
+    Un disco de estado solido realmente no es un disco se les conoce como unidades de estado sólido porque no tienen partes mecánicas.
+    Por dentro el disco tiene unos chips que se les conoce como celdas de memoria en donde la velocidad de estos discos es la velocidad con que la luz se mueve al rededor del circuito por eso son mucho más veloces sin partes mecánicas.
+
+En inglés se les conoce como:
+
+* Disco Duro = Hard Drive 
+
+* Disco Sólido = SSD = Solid State Drive
+
+En español casi no usamos DRIVE como palabra de unidad. Le llamamos disco a pesar de que por dentro no hay ningún disco.
+
+---
+
+Los discos duros guardan en su memoria los datos en un sistema de bloques, y ese formato del cómo se organizan los bloques se les conoce como formatos de memoria.
+
+Hay 4 formatos de memoría (Lo más Reconocidos por que hay muchos más):
+
+* FAT 32: era el formato original de windows hace muchos años, hoy en día todavia se utiliza en algunas memorias USB, tiene ciertas limitaciones como que los archivos no pueden pesar más de 4GB (Tamaño máximo del bloque de tamaño), los archivos no tienen ningún tipo de seguridad y permisos. Todo el mundo lo soporta, se utiliza en cualquier lado y por eso es tan común en las memorias USB
+
+* NTFS: Es el sistema que utilizan los sistemas windows modernos (2025), es más veloz, tiene seguridad y tiene permisos para acceder a los archivos
+
+* APFS
+
+En linux hay una infinidad de sistemas de archivos, pero los más populares son:
+
+* Ext3 o Ext4: Se definen con más altos o bajos sistemas de seguridad y permisos, para que de esa forma en la computadora un usuario no pueda ingresar a la información del otro usuario: Esto es muy importante si estas en un servidor
+
+---
+
+
+Como un disco es tan grande, el sistema operativo necesita una forma como un indice para saber de donde en el disco, empieza y termina un archivo
+
+(tabla de particiones gpt o MBR)
+
+<img src="https://www.diskpart.com/screenshot/es/others/estructura-de-mbr-gpt.png">
+
+*Imagen Tomada De: https://www.diskpart.com/es/articles/que-es-gpt-y-sus-ventajas.html*
+
+Esta imagen es una cabezera de un mapa de archivos, en donde esta al inicio de los discos porque al acceder a esa cabezera, ese indice: Te muestran las carpetas: El sistema de archivos de una computadora.
+
+<img src="https://support.microsoft.com/images/es-es/8d0f220d-c531-4601-b931-8e9d36d9b7f5?format=avif&w=640">
+
+*Imagen Tomada De: https://support.microsoft.com/es-es/windows/explorador-de-archivos-en-windows-ef370130-1cca-9dc5-e0df-2f7416fe1cb1* 
+
+---
+
+¿Qué pasa cuando borras un archivo? Pues ese espacio se libera: En el indice de la cabezera del disco, se borra el apuntador a ese bloque declarando a ese bloque como libre el cual se puede reescribir (los datos siguen hay), sólo que ya no estan correlacionados con el nombre de un archivo, siendo asi datos huerfanos para cuando entonces en la proxima un software o algún programa que estes utilizando y necesita dejar algo, busca esos bloques vacios.
+
+Luego llega un momento en donde todos los bloques empiezan a desorganizarse debido a los archivos que se van moviendo y transcribiendo haciendo que el disco duro tenga los bloques separados. Esto hace que un disco duro se vuelva más lento.
+
+En el pasado existia un proceso de defragmentación: En donde la defragmentación de un disco consistia en organizar los bloques para que estuvieran pegaditos archivo por archivo y hacer de sa forma el disco duro mucho más veloz.
+
+---
+
+En un disco duro solido esto no sucede porque debido a la velocidad de la luz el proceso de defragmentación ocurre de manera automatica ya que no necesita de mover una pieza mecánica.
+
