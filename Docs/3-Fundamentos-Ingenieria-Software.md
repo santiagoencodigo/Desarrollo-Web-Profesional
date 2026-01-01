@@ -1360,16 +1360,24 @@ Dentro de los CHIPS existen pequeñas herramientas de software que arrancan el c
 
 Hay dos tipos de unidades para almacenar información de tipo persistente. 
 
-1. Los discos duros mecánicos
+1. [Los discos duros mecánicos](https://es.wikipedia.org/wiki/Unidad_de_disco_duro "Hard Disk Drive concept by Wikipedia")
 
-2. Los discos realmente no son discos sino unidades de estado sólido.
+2. [Los discos realmente no son discos sino unidades de estado sólido](https://es.wikipedia.org/wiki/Unidad_de_estado_s%C3%B3lido "Solid State Drive concept by Wikipedia")
 
     Los discos duros mecánicos son mecánicos porque tienen un disco por dentro que son básicamente discos magneticos que van dando vueltas y una cabeza de lectura los va leyendo.
     Estos platos mecánicos que son leidos por una cabeza de lectura se parecen a los vinilos y a los toca discos. 
     La lectura de estos discos depende totalmente de la velocidad de la rotación de estos platos.
 
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Hard_drive-es.svg/500px-Hard_drive-es.svg.png">
+
+*Imagen Tomada De: https://es.wikipedia.org/wiki/Unidad_de_disco_duro*
+
     Un disco de estado solido realmente no es un disco se les conoce como unidades de estado sólido porque no tienen partes mecánicas.
     Por dentro el disco tiene unos chips que se les conoce como celdas de memoria en donde la velocidad de estos discos es la velocidad con que la luz se mueve al rededor del circuito por eso son mucho más veloces sin partes mecánicas.
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/MDL-MKNSSDCR120GB%2C_SN-MKN1139A0000025359%2C_FW-3.3.0.jpg/500px-MDL-MKNSSDCR120GB%2C_SN-MKN1139A0000025359%2C_FW-3.3.0.jpg">
+
+*Imagen Tomada De: https://es.wikipedia.org/wiki/Unidad_de_estado_s%C3%B3lido*
 
 En inglés se les conoce como:
 
@@ -1379,34 +1387,39 @@ En inglés se les conoce como:
 
 En español casi no usamos DRIVE como palabra de unidad. Le llamamos disco a pesar de que por dentro no hay ningún disco.
 
+<img src="https://compubit.com.co/wp-content/uploads/2023/09/62d97da689bf557dde504b8b-1-1024x576.jpg">
+
+*Imagen Tomada De: https://compubit.com.co/diferencias-entre-discos-mecanicos-y-discos-solidos/*
+
 ---
 
 Los discos duros guardan en su memoria los datos en un sistema de bloques, y ese formato del cómo se organizan los bloques se les conoce como formatos de memoria.
 
+Lectura Recomendada: https://www.kingston.com/es/blog/personal-storage/understanding-file-systems
+
 Hay 4 formatos de memoría (Lo más Reconocidos porque hay muchos más):
 
-* FAT 32: era el formato original de windows hace muchos años, hoy en día todavia se utiliza en algunas memorias USB, tiene ciertas limitaciones como que los archivos no pueden pesar más de 4GB (Tamaño máximo del bloque de tamaño), los archivos no tienen ningún tipo de seguridad y permisos. Todo el mundo lo soporta, se utiliza en cualquier lado y por eso es tan común en las memorias USB
+* [FAT 32](https://www.ionos.com/es-us/digitalguide/servidores/know-how/fat32/ "FAT 32 concept by ionos"): era el formato original de windows hace muchos años, hoy en día todavia se utiliza en algunas memorias USB, tiene ciertas limitaciones como que los archivos no pueden pesar más de 4GB (Tamaño máximo del bloque de tamaño), los archivos no tienen ningún tipo de seguridad y permisos. Todo el mundo lo soporta, se utiliza en cualquier lado y por eso es tan común en las memorias USB.
 
-* NTFS: Es el sistema que utilizan los sistemas windows modernos (2025), es más veloz, tiene seguridad y tiene permisos para acceder a los archivos
+* [NTFS](https://es.wikipedia.org/wiki/NTFS "NTFS concept by Wikipedia"): Es el sistema que utilizan los sistemas windows modernos (2025), es más veloz, tiene seguridad y tiene permisos para acceder a los archivos.
 
-* APFS: De apple
+* [APFS (Apple File System)](https://es.wikipedia.org/wiki/Apple_File_System "APFS concept by Wikipedia"): es el sistema de archivos moderno de Apple diseñado para unidades de estado sólido (SSD), optimizando rendimiento, seguridad y eficiencia en dispositivos Apple como Mac, iPhone, iPad y Apple Watch.
 
 En linux hay una infinidad de sistemas de archivos, pero los más populares son:
 
-* Ext3 o Ext4: Se definen con más altos o bajos sistemas de seguridad y permisos, para que de esa forma en la computadora un usuario no pueda ingresar a la información del otro usuario: Esto es muy importante si estas en un servidor (No te gustaria que fueran a tus archivos)
+* [Ext3](https://es.wikipedia.org/wiki/Ext3 "EXT3 concept by Wikipedia") o [Ext4](https://es.wikipedia.org/wiki/Ext4): Se definen con más altos o bajos sistemas de seguridad y permisos, para que de esa forma en la computadora un usuario no pueda ingresar a la información del otro usuario: Esto es muy importante si estas en un servidor (No te gustaria que fueran a tus archivos)
 
 ---
 
-
 Como un disco es tan grande, el sistema operativo necesita una forma como un indice para saber de donde en el disco, empieza y termina un archivo
 
-(tabla de particiones gpt o MBR)
+>tabla de particiones GPT o MBR
 
 <img src="https://www.diskpart.com/screenshot/es/others/estructura-de-mbr-gpt.png">
 
 *Imagen Tomada De: https://www.diskpart.com/es/articles/que-es-gpt-y-sus-ventajas.html*
 
-Esta imagen es una cabezera de un mapa de archivos, en donde esta al inicio de los discos porque al acceder a esa cabezera, ese indice: Te muestran las carpetas: El sistema de archivos de una computadora.
+Esta imagen es una cabezera de un mapa de archivos, en donde esta al inicio de los discos porque al acceder a esa cabezera, ese indice te muestra las carpetas: El sistema de archivos de una computadora.
 
 <img src="https://support.microsoft.com/images/es-es/8d0f220d-c531-4601-b931-8e9d36d9b7f5?format=avif&w=640">
 
@@ -1414,11 +1427,41 @@ Esta imagen es una cabezera de un mapa de archivos, en donde esta al inicio de l
 
 ---
 
-¿Qué pasa cuando borras un archivo? Pues ese espacio se libera: En el indice de la cabezera del disco, se borra el apuntador a ese bloque declarando a ese bloque como libre el cual se puede reescribir (los datos siguen hay), sólo que ya no estan correlacionados con el nombre de un archivo, siendo asi datos huerfanos para cuando entonces en la proxima un software o algún programa que estes utilizando y necesita dejar algo, busca esos bloques vacios.
+**Tabla de particiones GPT o MBR**
+
+Como un disco es tan grande, el sistema operativo necesita una forma como un indice para saber de donde en el disco, empieza y termina un archivo.
+
+Para esto, el disco cuenta inicialmente con una tabla de particiones (MBR o GPT), ubicada al inicio del disco. Esta tabla no contiene archivos, sino información sobre cómo está dividido el disco en particiones.
+
+Dentro de cada partición se encuentra un sistema de archivos (como NTFS, FAT32 o ext4), que actúa como un índice de archivos y carpetas. Gracias a este sistema, el sistema operativo puede localizar, leer y escribir datos de forma eficiente.
+
+<img src="https://www.diskpart.com/screenshot/es/others/estructura-de-mbr-gpt.png">
+
+*Imagen Tomada De: https://www.diskpart.com/es/articles/que-es-gpt-y-sus-ventajas.html*
+
+Esta imagen es una cabezera de un mapa de archivos, en donde esta al inicio de los discos porque al acceder a esa cabezera, ese indice te muestra las carpetas: El sistema de archivos de una computadora.
+
+<img src="https://support.microsoft.com/images/es-es/8d0f220d-c531-4601-b931-8e9d36d9b7f5?format=avif&w=640">
+
+*Imagen Tomada De: https://support.microsoft.com/es-es/windows/explorador-de-archivos-en-windows-ef370130-1cca-9dc5-e0df-2f7416fe1cb1* 
+
+> Primero: tabla de particiones (GPT o MBR), Después: dentro de cada partición, el sistema de archivos (NTFS, FAT32, ext4, etc.)
+
+> El OS son los archivos.
+
+---
+
+**¿Qué pasa cuando borras un archivo?**
+
+Pues ese espacio se libera: En el indice de la cabezera del disco, se borra el apuntador a ese bloque declarando a ese bloque como libre el cual se puede reescribir en donde los datos siguen hay, sólo que ya no estan correlacionados con el nombre de un archivo, siendo asi datos huérfanos para cuando entonces en la proxima un software o algún programa que estes utilizando y necesita dejar algo, busca esos bloques vacios.
 
 Luego llega un momento en donde todos los bloques empiezan a desorganizarse debido a los archivos que se van moviendo y transcribiendo haciendo que el disco duro tenga los bloques separados. Esto hace que un disco duro se vuelva más lento.
 
-En el pasado existia un proceso de defragmentación: En donde la defragmentación de un disco consistia en organizar los bloques para que estuvieran pegaditos archivo por archivo y hacer de sa forma el disco duro mucho más veloz.
+En el pasado existia un proceso de defragmentación: En donde la defragmentación de un disco consistia en organizar los bloques para que estuvieran pegaditos archivo por archivo y hacer de esa forma el disco duro mucho más veloz.
+
+<img src="https://hardzone.es/app/uploads-hardzone.es/2018/03/desfragmentacion-1024x640.jpeg">
+
+*Imagen Tomada De: https://hardzone.es/2018/03/09/desfragmentacion-hdd/*
 
 ---
 
@@ -1444,13 +1487,25 @@ Entendiendo que la nube son computadoras en un data center de una empresa gigant
 
 Lo que se hace es copiar archivos de tu computadora a esas computadoras en un data center.
 
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Datacenter_de_ARSAT.jpg/2560px-Datacenter_de_ARSAT.jpg">
+
+*Imagen Tomada De: https://en.wikipedia.org/wiki/Data_center*
+
 ---
 
 Expertos en seguridad informática conocidos como forenses son capaces de utilizar software especializado para hacer un mapa estadistico de los bytes dentro de una computadora y reconstruir "Archivos Borrados" cuando no fueron realmente re escritos sino que simplemente se perdió su indice.
 
+Lectura Recomendada: https://www.ibm.com/es-es/think/topics/computer-forensics
+
 Asi es como en criminologia se pueden recuperar los datos borrados de los discos de criminales.
 
 Ahora que entendemos la memoria programamos programas más veloces aprovechando la jerarquia de la memoria.
+
+<img src="https://www.lazarus.com.ve/wp-content/uploads/2023/01/data-forensics-digital-forensic-investigator-at-MGNHQU3-1170x658-1-768x432.jpg">
+
+*Imagen Tomada De: https://www.lazarus.com.ve/desafios-de-la-informatica-forense-y-manejo-de-las-evidencias-electronicas/
+
+---
 
 Entonces recordemos todos los temas vistos:
 
@@ -1470,7 +1525,11 @@ Un disco duro mecanico es 70 veces más lento que un disco de estado solido/SSD
 
 ---
 
-Cuando el sistema operativo intenta abrir un archivo o una serie de archivos que son más grandes de lo que cabe en la memoria RAM, lo que hacen es crear un espacio en el disco duro en donde usan el DISCO DURO como una memoria RAM virtual y a este proceso se le conoce como SWAP y es claramente lento asi que es mejor no hacerlo.
+Cuando el sistema operativo intenta abrir un archivo o una serie de archivos que son más grandes de lo que cabe en la memoria RAM, lo que hacen es crear un espacio en el disco duro en donde usan el DISCO DURO como una [memoria RAM virtual](https://es.wikipedia.org/wiki/Memoria_virtual "RAM Virtual concept by Wikipedia") y a este proceso se le conoce como [SWAP](https://es.wikipedia.org/wiki/Espacio_de_intercambio "SWAP concept by Wikipedia") y es claramente lento asi que es mejor no hacerlo.
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Virtual_address_space_and_physical_address_space_relationship.svg/500px-Virtual_address_space_and_physical_address_space_relationship.svg.png">
+
+*Imagen Tomada De: https://es.wikipedia.org/wiki/Memoria_virtual
 
 > ¿Cómo es el tema de esos anuncios que mencionan una RAM virtual?
 
@@ -1478,12 +1537,32 @@ Una RAM no se llena exclusivamente cuando se ocupa con archivos muy grandes sino
 
 Si estas programando un software y utilizas grandes archivos y luego cuando el usuario no los necesita y no le dices a la CPU que libere ese espacio en la RAM, la RAM se empieza a llenar de basura.
 
-Los procesadores modernos y algunos lenguajes de programación modernos crean un proceso automático para detectar cuando una información no es necesaria para borrarla la cual se llama recolección de basura o garbage collection.
+Los procesadores modernos y algunos lenguajes de programación modernos crean un proceso automático para detectar cuando una información no es necesaria para borrarla la cual se llama [recolección de basura o garbage collection](https://es.wikipedia.org/wiki/Recolector_de_basura).
 
 La mayoria de ingenieros de software no necesitan pensar en esto hoy en día, pero cuando desarrollas sistemas más complejos tienes que pensar en la **recolección de tu basura**.
 
+<img src="https://upload.wikimedia.org/wikipedia/commons/3/3b/Garbage_collection.gif">
+
+*Imagen Tomada De: https://es.wikipedia.org/wiki/Recolector_de_basura
+
 ---
 
-La tecnología avanza todo el tiempo: hay un nuevo tipo de componente electrico que descubrimos y lo empezamos a comercializar hace menos de dos decadas que se llama el **Memristor** que es un transistor que puede hacer operaciones matemáticas y una memoria a la vez en donde puede guardar datos siendo asi una misma pieza eléctrica.
+La tecnología avanza todo el tiempo: hay un nuevo tipo de componente electrico que descubrimos y lo empezamos a comercializar hace menos de dos decadas que se llama el **[Memristor](https://es.wikipedia.org/wiki/Memristor)** que es un transistor que puede hacer operaciones matemáticas y una memoria a la vez en donde puede guardar datos siendo asi una misma pieza eléctrica.
 
-Estos componentes electronicos todavia siguen en su infancia y no se producen a gran escala, lo más cercano a esto son unos chips de intel que se llaman OPTANE asi que por ahora no es una opción y no tenemos que pensar en ello, pero hay que tener presente que en el futuro muy posiblemente la CPU y la memoria RAM muy probablemente van a ser un sólo CHIP, ya hay otras clases de chips que intentan integrar otros chips por dentro en diferentes nucleos y se llaman System on a Chip y esto es lo que tienen por dentro los telefonos
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Two-terminal_non-linear_circuit_elements-es.png/500px-Two-terminal_non-linear_circuit_elements-es.png">
+
+*Imagen Tomada De: https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Two-terminal_non-linear_circuit_elements-es.png/500px-Two-terminal_non-linear_circuit_elements-es.png*
+
+Estos componentes electrónicos todavia siguen en su infancia y no se producen a gran escala, lo más cercano a esto son unos chips de intel que se llaman [OPTANE](https://www.lenovo.com/co/es/glosario/optane-memoria/) asi que por ahora no es una opción y no tenemos que pensar en ello, pero hay que tener presente que en el futuro muy posiblemente la CPU y la memoria RAM muy probablemente van a ser un sólo CHIP.
+
+<img src="https://co-media.hptiendaenlinea.com/magefan_blog/Memoria_Intel_Optane_Qu_es_y_Por_Qu_la_Necesitas.jpg">
+
+*Imagen Tomada De: https://www.hp.com/co-es/shop/tech-takes/memoria-intel-optane-que-es-y-por-que-la-necesitas*
+
+Ya hay otras clases de chips que intentan integrar otros chips por dentro en diferentes nucleos y se llaman [System on a Chip](https://en.wikipedia.org/wiki/System_on_a_chip) y esto es lo que tienen por dentro por ejemplo: Celulares
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Samsung-Exynos-4412-Quad_SoC_used_in_I9300.jpg/500px-Samsung-Exynos-4412-Quad_SoC_used_in_I9300.jpg">
+
+*Imagen Tomada De: https://en.wikipedia.org/wiki/System_on_a_chip*
+
+---
