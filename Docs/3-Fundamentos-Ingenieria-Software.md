@@ -18,6 +18,8 @@ Cómo funciona Internet, las computadoras, los chips, la inteligencia artificial
 
 - [6. Cómo Funciona Internet](#cómo-funciona-internet)
 
+- [7. Cómo las Computadoras Guardan Datos](#cómo-las-computadoras-guardan-datos)
+
 
 
 
@@ -1322,11 +1324,21 @@ Lectura Recomendada: https://es.wikipedia.org/wiki/Starlink
 
 ## Cómo las computadoras guardan datos
 
-Hay dos tipos de datos que existen en una computadora, los datos persistentes y los volátiles.
+Hay dos tipos de datos que existen en una computadora, los [datos persistentes](https://www.purestorage.com/la/knowledge/what-is-persistent-data.html "Datos Persistentes concept by purestorage.com") y los [volátiles](https://es.wikipedia.org/wiki/Memoria_vol%C3%A1til "Memoria Volátil by Wikipedia").
 
 Un dato persistente es cuando apagas la computadora y el dato sigue ahí, que estos datos son los que se encuentran en el disco duro.
 
-Un dato volátil es que al apagarse desaparece el dato. Como cuando hay un archivo no guardado al apagar la computadora y estos se encuentran en la memoría RAM.
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuf0kQodGIt7QB-RQTFb5i_Kg4JWLX9hRhbA&s">
+
+*Imagen Tomada De: https://www.administracionderedes.com/sistemas-informaticos/disco-duro/*
+
+Un dato volátil es que al apagarse la computadora desaparece el dato. Como cuando hay un archivo no guardado al apagar la computadora y estos se encuentran en la memoría RAM.
+
+<img src ="https://gqinformatica.com/wp-content/uploads/2024/04/memoria-ram-2-gb-scaled.webp">
+
+*Imagen Tomada De: https://gqinformatica.com/blog/informatica/memorias-ram-todo-lo-que-necesitas-saber/*
+
+Por lo que: 
 
 * Dato Guardado en el Disco Duro
 
@@ -1334,15 +1346,19 @@ Un dato volátil es que al apagarse desaparece el dato. Como cuando hay un archi
 
 > La memoria RAM no es la única memoria de tipo volatil sino que es la más común y más grande.
 
-Dentro de las CPU hay memoria volátil que se llama cache o registros que son pequeñas memorias muy veloces dentro de la series de transistores que se encuentran en un chip de CPU.
+Dentro de las CPU hay memoria volátil que se llama [cache o registros](https://es.wikipedia.org/wiki/Cach%C3%A9_(inform%C3%A1tica) "Cache concept by Wikipedia") que son pequeñas memorias muy veloces dentro de la series de transistores que se encuentran en un chip de CPU.
 
-Un disco duro es el formato de memoria persistente más común, que es cuando el dato se mantiene una vez se apaga la computadora. Pero no es la única, pues en las computadoras la BIOS que es el chip que permite al sistema arrancar es una memoria persistente.
+Un disco duro es el formato de memoria persistente más común, que es cuando el dato se mantiene una vez se apaga la computadora. Pero no es la única, pues en las computadoras la [BIOS](https://es.wikipedia.org/wiki/BIOS "BIOS concept by Wikipedia") que es el chip que permite al sistema arrancar es una memoria persistente.
 
-Dentro de los CHIPS existen pequeñas herramientas de software que arrancan el chip que se conocen como el firmware.
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWyGLBkvK709CzLn6KRFtDS8BIaYxHg-7XIw&s">
+
+*Imagen Tomada De: https://es.wikipedia.org/wiki/BIOS*
+
+Dentro de los CHIPS existen pequeñas herramientas de software que arrancan el chip que se conocen como el [firmware](https://es.wikipedia.org/wiki/Firmware "Firmware concept by Wikipedia").
 
 ---
 
-Hay dos tipos de unidades para guardar información de tipo persistente. 
+Hay dos tipos de unidades para almacenar información de tipo persistente. 
 
 1. Los discos duros mecánicos
 
@@ -1367,17 +1383,17 @@ En español casi no usamos DRIVE como palabra de unidad. Le llamamos disco a pes
 
 Los discos duros guardan en su memoria los datos en un sistema de bloques, y ese formato del cómo se organizan los bloques se les conoce como formatos de memoria.
 
-Hay 4 formatos de memoría (Lo más Reconocidos por que hay muchos más):
+Hay 4 formatos de memoría (Lo más Reconocidos porque hay muchos más):
 
 * FAT 32: era el formato original de windows hace muchos años, hoy en día todavia se utiliza en algunas memorias USB, tiene ciertas limitaciones como que los archivos no pueden pesar más de 4GB (Tamaño máximo del bloque de tamaño), los archivos no tienen ningún tipo de seguridad y permisos. Todo el mundo lo soporta, se utiliza en cualquier lado y por eso es tan común en las memorias USB
 
 * NTFS: Es el sistema que utilizan los sistemas windows modernos (2025), es más veloz, tiene seguridad y tiene permisos para acceder a los archivos
 
-* APFS
+* APFS: De apple
 
 En linux hay una infinidad de sistemas de archivos, pero los más populares son:
 
-* Ext3 o Ext4: Se definen con más altos o bajos sistemas de seguridad y permisos, para que de esa forma en la computadora un usuario no pueda ingresar a la información del otro usuario: Esto es muy importante si estas en un servidor
+* Ext3 o Ext4: Se definen con más altos o bajos sistemas de seguridad y permisos, para que de esa forma en la computadora un usuario no pueda ingresar a la información del otro usuario: Esto es muy importante si estas en un servidor (No te gustaria que fueran a tus archivos)
 
 ---
 
@@ -1406,5 +1422,68 @@ En el pasado existia un proceso de defragmentación: En donde la defragmentació
 
 ---
 
-En un disco duro solido esto no sucede porque debido a la velocidad de la luz el proceso de defragmentación ocurre de manera automatica ya que no necesita de mover una pieza mecánica.
+En un disco duro solido esto no sucede porque debido a la velocidad de la luz el proceso de defragmentación ocurre de manera automatica ya que no necesita de mover una pieza mecánica de lado a lado para organizar los archivos.
 
+> El sistema operativo no hace que esos espacios sin relación a algún archivo se conviertan en bits con valor cero debido a que eso toma tiempo, mucho más que simplemente borrar la referencia en el indice de la cabezera del disco.
+
+Estos discos se van degradando a medida del tiempo pues el proceso eléctrico que les permite guardar 0 y 1 de manera persistente no dura para toda la vida.
+
+Cada vez que escribes y lees estas degradando un poco más tu disco, entre menos escritura hagas, más probable que dure tu disco duro.
+
+Pero en otras palabras: **Todos los discos mueren**, ningún disco es para toda la vida y por ende hay que copiar en otros lados.
+
+---
+
+La información en un disco puede ser cifrada, es decir que se crea un algoritmo de encriptación o cifrado haciendo asi que los datos sean accesibles solamente por medio de una llave (Nombre de usuarios y contraseña en el OS)
+
+Windows, MacOS, Linux, Android: Tienen mecanismos de cifrado de sus discos.
+
+Entonces ¿Qué pasa cuando subes un archivo a la nube?
+
+Entendiendo que la nube son computadoras en un data center de una empresa gigantesca.
+
+Lo que se hace es copiar archivos de tu computadora a esas computadoras en un data center.
+
+---
+
+Expertos en seguridad informática conocidos como forenses son capaces de utilizar software especializado para hacer un mapa estadistico de los bytes dentro de una computadora y reconstruir "Archivos Borrados" cuando no fueron realmente re escritos sino que simplemente se perdió su indice.
+
+Asi es como en criminologia se pueden recuperar los datos borrados de los discos de criminales.
+
+Ahora que entendemos la memoria programamos programas más veloces aprovechando la jerarquia de la memoria.
+
+Entonces recordemos todos los temas vistos:
+
+Todos los datos tienen que ser procesados por una CPU y la CPU tiene una memoria chiquita que es llamada cache o registros, a esa memoria se accede en un tiempo de 1 a 20 nanosegundos.
+
+La RAM es muchismo más grande en su capacidad de almacenar datos que una CPU y a la CPU le toma 70 nanosegundos acceder a la memoria RAM
+
+A la CPU acceder a un disco de estado solido/SSD le toma de 100 a 500 microsegundos, es decir de 100k a 500k nanosegundos.
+
+Siendo asi a la memoria RAM 7000 veces más rápida que una SSD.
+
+Un disco duro mecanico es 70 veces más lento que un disco de estado solido/SSD
+
+1 Minutos = 60.000.000.000 Nanosegundos
+
+1 Minutos = 60.000.000 Microsegundos
+
+---
+
+Cuando el sistema operativo intenta abrir un archivo o una serie de archivos que son más grandes de lo que cabe en la memoria RAM, lo que hacen es crear un espacio en el disco duro en donde usan el DISCO DURO como una memoria RAM virtual y a este proceso se le conoce como SWAP y es claramente lento asi que es mejor no hacerlo.
+
+> ¿Cómo es el tema de esos anuncios que mencionan una RAM virtual?
+
+Una RAM no se llena exclusivamente cuando se ocupa con archivos muy grandes sino tambien cuando no se libera la memoria RAM.
+
+Si estas programando un software y utilizas grandes archivos y luego cuando el usuario no los necesita y no le dices a la CPU que libere ese espacio en la RAM, la RAM se empieza a llenar de basura.
+
+Los procesadores modernos y algunos lenguajes de programación modernos crean un proceso automático para detectar cuando una información no es necesaria para borrarla la cual se llama recolección de basura o garbage collection.
+
+La mayoria de ingenieros de software no necesitan pensar en esto hoy en día, pero cuando desarrollas sistemas más complejos tienes que pensar en la **recolección de tu basura**.
+
+---
+
+La tecnología avanza todo el tiempo: hay un nuevo tipo de componente electrico que descubrimos y lo empezamos a comercializar hace menos de dos decadas que se llama el **Memristor** que es un transistor que puede hacer operaciones matemáticas y una memoria a la vez en donde puede guardar datos siendo asi una misma pieza eléctrica.
+
+Estos componentes electronicos todavia siguen en su infancia y no se producen a gran escala, lo más cercano a esto son unos chips de intel que se llaman OPTANE asi que por ahora no es una opción y no tenemos que pensar en ello, pero hay que tener presente que en el futuro muy posiblemente la CPU y la memoria RAM muy probablemente van a ser un sólo CHIP, ya hay otras clases de chips que intentan integrar otros chips por dentro en diferentes nucleos y se llaman System on a Chip y esto es lo que tienen por dentro los telefonos
