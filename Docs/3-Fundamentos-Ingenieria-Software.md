@@ -22,6 +22,8 @@ Cómo funciona Internet, las computadoras, los chips, la inteligencia artificial
 
 - [8. Cómo se Organizan los Archivos](#cómo-se-organizan-los-archivos)
 
+- [9. Teléfonos y sus "System on a Chip" o SOC](#teléfonos-y-su-system-on-a-chip-o-soc)
+
 
 
 
@@ -1794,6 +1796,219 @@ Esto sucede porque es un gran negocio para las empresas de OS escondiendo cada v
 
 *Imagen Tomada De: https://es.wikipedia.org/wiki/ICloud*
 
+
+
+
+
+
+
+
+
+
+
 ---
 
 
+
+
+
+
+
+
+
+
+
+## Teléfonos y su System on a Chip o SOC
+
+
+[Los circuitos integrados = los chips](https://es.wikipedia.org/wiki/Circuito_integrado).  La forma en la que funciona la electrónica moderna, empezaron con unos [tubos de vacio](https://es.wikipedia.org/wiki/V%C3%A1lvula_termoi%C3%B3nica) que ocupaban inmensas cantidades de espacio y asi iniciaron las primeras computadoras, los primeros televisores y muchas otras mecánicas de la forma en la que se construía la electrónica moderna.
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/5C3Ss.jpg/500px-5C3Ss.jpg">
+
+*Imagen Tomada De: https://es.wikipedia.org/wiki/V%C3%A1lvula_termoi%C3%B3nica*
+
+Lentamente estos dispositivos se fueron haciendo cada vez más pequeños y más pequeños y más pequeños.
+
+Porque empezamos a empacar transistores en formas más cortas y porque el consumidor queria dispositivos más pequeños y que usaran menos electricidad y a su vez que fueran más portatiles.
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/07R01.jpg/500px-07R01.jpg">
+
+*Imagen Tomada De: https://es.wikipedia.org/wiki/Circuito_integrado*
+
+La electricidad funcionaba inicialmente con baterías AA, AAA e incluso de 9 Voltios, con las mismas que podiamos usar en una grabadora de [cassete](https://es.wikipedia.org/wiki/Casete), de las que llamaban [boombox](https://www.unocero.com/gadgets/que-es-boombox/) o un [walkman](https://es.wikipedia.org/wiki/Stereo_personal) y tantos otros dispositivos que quemaban esas baterias a una gran velocidad, que a su vez estas eran costosas por lo que habia un incentivo natural para los fabricantes de reducir el uso de las baterias.
+
+Luego llegaron los smartphones, teléfonos moviles y muchas otras cosas.
+
+La necesidad de reducir el gasto de electricidad y reducir el espacio empezó hacer que los chips se volvieran más y más especializados.
+
+La computación hizo que las computadoras cupieran en una caja gigante y luego en un laptop.
+
+---
+
+Despues surgió una gran pregunta: **¿Por qué tenemos chips para todo?**
+
+¿Por qué hay un chip que es la CPU y otra tarjeta distinta es la tarjeta gráfica y otra tarjeta distinta es la tarjeta de sonido?... **¿Por qué a medida de que especializamos todo, no pegamos todo en un sólo chip?**
+
+Y eso es conocido como **System on a Chip**.
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Samsung-Exynos-4412-Quad_SoC_used_in_I9300.jpg/500px-Samsung-Exynos-4412-Quad_SoC_used_in_I9300.jpg">
+
+*Imagen Tomada De: https://en.wikipedia.org/wiki/System_on_a_chip*
+
+Los dos problemas más grandes son de electricidad y de espacio. 
+
+1. Entre más chips hay, más gastan bateria porque más largo es el viaje de los [electrones](https://es.wikipedia.org/wiki/Electr%C3%B3n) dentro de la tarjeta en cada uno de los ciclos que nos permiten jugar un videojuego en el teléfono o atender una llamada.
+
+2. El segundo problema es que los teléfonos era un ladrillo gigante y queríamos que fueran cada vez más pequeños. Y no solo eran teléfonos, eran cámaras digitales, eran iPods, walkmans, televisores. Todo eso que ahora es un teléfono.
+
+<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjsR0R93qGxiPoYmml2KjMNz7gBKEPkMhPPZj5D9KgUxT1TPB8MO8Rha0qcg5r5XSI2OA3jm7NG-FLQaiwwTFFc3gY-Pb3fKt79G8JCyt0JrBfhDpAZ8UhdOQ1ErN-AArg7MozrjK7n3H_y/s320/Manual-de-usuario-iPhone-5+%25281%2529.jpg">
+
+*Imagen Tomada De: https://comofuncionanloscelulares1.blogspot.com/2016/08/que-es-un-smartphone-y-sus.html*
+
+> Tan acostumbrado estoy, debido al tiempo en el que nací en el mundo... Que jamas habia pensado en esto: Antes no tenias todo en un sólo lugar, tenias una camara, un dispositivo para escuchar musica y otro para mirar videos (TV)... Ahora todo lo tengo en el mismo lugar todo el tiempo (Mi bolsillo). Ni siquiera lo habia pensado en algún momento hasta ahora.
+
+---
+
+En otras palabras: Antes era todo tipo de dispositivos, así que empezamos a pensar **¿Qué podemos integrar?**
+
+Por ejemplo un teléfono es básicamente una pantalla gigante por lo que necesita un procesador gráfico que sea muy eficiente y que no sea lento... Pues si el teléfono se siente lento no se puede utilizar. 
+
+Los humanos somos conscientes y aceptamos que una computadora se pone lenta, pero no aceptamos que un teléfono se ponga lento.
+
+Necesitamos el procesamiento normal de una computadora para el celular para poder navegar por internet, enviar mensajes, correos, jugar jeugos, etc...
+
+Asi que necesitamos una CPU y una GPU en un mismo lugar, combinar en un mismo lugar estos elementos fue el primer paso de un System on a Chip.
+
+El mismo CHIP no es el GPU y el CPU al mismo tiempo con los mismos transistores, realmente es que en la OBLEA de Silicio en el Wafer en donde hacen el chip, ponen a un ladito los Transistores que funcionan como CPU y en otro lado muy cerca, en el mismo circuito integrado rodeado de baquelita, lo chips de la gpu.
+
+<img src="https://microcontrollerslab.com/wp-content/uploads/2020/10/system-on-chip-SoC.gif">
+
+*Imagen Tomada De: https://microcontrollerslab.com/system-on-chip-soc-introduction/*
+
+Y asi empezaron a pensar en otros chips porque un celular es un computador completo.
+
+Cuando uno arma una computadora uno tenia sus tabletas de memoria en donde una era la memoria RAM o Discos Duros Externos. ¿Por qué no pegamos la memoria ram hay tambien?
+
+Y ¿Por qué no pegamos el Modem Tambien? porque cuando uno hace una llamada, los teléfonos tienen internamente un chip que es un módem que es el que tiene que hablar con la central electrónica y procesar la llamada. 
+
+Este módem se conecta a las antenas [3G](https://es.wikipedia.org/wiki/Telefon%C3%ADa_m%C3%B3vil_3G) y [4G](https://es.wikipedia.org/wiki/4G), y los chips tambien tienen que conectarse a WIFI entonces esto tambien, **es otro modulo**... Que anteriormente tambien era un circuito aparte en un chip aparte.
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Antena_Ugar.jpg/500px-Antena_Ugar.jpg">
+
+*Imagen Tomada De: https://es.wikipedia.org/wiki/4G*
+
+Como los teléfonos estandarizaron y todos los teléfonos tienen que procesar video a traves de la camara, capturar audio del micrófono, generar imagenes. Todas esas funciones estandar que anteriormente eran perifericos adicionales siendo asi creadas en un solo chip.
+
+Otra ventaja es que estos dispositivos mantenian el mismo hardware constantemente, si tienes una computadora tu puedes conectarme mil marcas de webcam, pero en tu teléfono tu marca como samsung, apple, google... Tu sabes que el lente y qué camara, qué microfono y qué parlante.
+
+Esto hace que los chips sean mucho más sencillos.
+
+Hauwei es la primera marca en crear un módem de tecnología 5G en un chip. [El hauwei Kirin 990 5G](https://consumer.huawei.com/ae-en/campaign/kirin-990-series/)
+
+> La innovación viene de todas partes.
+
+---
+
+Cuanto tu compras tu teléfono y lo enciedes, tu dedo oprime el boton de encendido el cual conecta dos contactos que hacen un paso de electricidad al circuito que llega a una señal en el system on a chip siendo asi, el primer circuito del chip la [BIOS](https://es.wikipedia.org/wiki/BIOS), es ese sistema de arranque que por ejemplo en el caso de [iPod](https://es.wikipedia.org/wiki/IPod) y dispositivos de Apple como el iPhone, se llama [iBoot](https://en.wikipedia.org/wiki/IBoot).
+
+Lo mismo que habría en la BIOS de un computador normal, solo que aqui esta en el chip.
+
+> Siendo asi: Dentro del chip arranca todo.
+
+Ese pedazito de chip prende la CPU, la CPU va a la [memoria flash](https://es.wikipedia.org/wiki/Memoria_flash), memoria permanente equivalente al disco duro y aun asi distinto porque tienen un tamaño de circuito diferente (Uno más grande que otro) y de una quimica diferente.
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Flash_memory_cards_size.jpg/500px-Flash_memory_cards_size.jpg">
+
+*Imagen Tomada De: https://es.wikipedia.org/wiki/Memoria_flash*
+
+De ahí van y buscan el código del OS y el resto es igual que una computadora. Pero en vez de estar viajando entre diferentes chips, todo esta viajando en el mismo chip: La CPU y la GPU estan muy cerca. La CPU arranca el computador en cuanto su OS y la GPU arranca los píxeles de la pantalla, trabajando en conjunto y compartiendo memoria siendo asi, esta una de las cosas únicas de un System on a Chip.
+
+En una computadora la GPU tiene su propia memorIa y es la memoria que utiliza para representar cosas en pantalla o para hacer calculos paralelos como cálculos de [criptomonedas](https://es.wikipedia.org/wiki/Criptomoneda) o AI y la CPU usa la memoria RAM para ejecutar los computadoras.
+
+en un SOC particularmente en la arquitectura que creo Apple, se utiliza una memoria unificada que lo comparten todas las necesidades del OS, donde carga el kernel, los drivers que prenden los perifericos, pero un periferico que normalmente seria un circuito con sus mecanismos químicos y mecánicos. Como la membrana de un micrófono, como los sensores de luz que tiene una camara que es todo lo que es Hardware, el circuito: Toda la operación está metida en ese SOC.
+
+Esto hace que todo sea más sencillo, mucho más eficiente, con menos generación de calor, menor gasto de batería.
+
+Por eso un teléfono que tiene 8GB de RAM y una CPU muy pequeña hace muchas más cosas que una computadora con una CPU más grande y los mismos 8 GB de RAM.
+
+<img src="https://www.notebookcheck.org/fileadmin/Notebooks/News/_nc3/Apple_M2_Pro_0.png">
+
+*Imagen Tomada De: https://www.notebookcheck.org/Apple-El-SoC-M2-Pro-podria-fabricarse-en-el-nodo-N5P-de-TSMC-en-lugar-del-proceso-N3-inicialmente-rumoreado.642288.0.html*
+
+---
+
+Un teléfono es básicamente un experimento de física pues por dentro un teléfono tiene un [barómetro](https://concepto.de/barometro/) que detecta la presión ambiental, hay un [termómetro](https://es.wikipedia.org/wiki/Term%C3%B3metro) en donde a veces el teléfono te avisa si esta muy calienta y depronto se apaga. Todos estos son mecanismos físicos que usando electrónica, mecánica y química hacen que llegue una señal digital al procesador, pero en vez de tener chips individuales, le delegan el procesamiento de chips a ese SOC, que tiene los transistores necesarios para que funcione. 
+
+Lectura Recomendada: https://www.infobae.com/tecno/2023/02/20/los-5-sensores-que-tiene-un-celular-y-que-pocos-conocen-para-que-sirven/
+
+Como son tan similares, entonces muchas de las marcas no tienen que programar sus teléfonos para soportar un montón de drivers como si le toca a hacer microsoft con windows a una computadora, o a apple con su Mac e incluso a los OS Linux. Todo eso apoya a la eficiencia de estos sistemas.
+
+* Dato Curioso: la cámara de los teléfonos modernos, ¿Le ha pasado que aunque este temblando al tomar una foto, la camara se mantiene estable? Hay una estabilización que sirve con software, pero hay ciertas cámaras de los teléfonos más costosos donde el lente está flotando en un tipo de aciete (SuperOIS) que hace que cuando se este moviendo el celular, el lente se mantenga fijo. En otros casos esta flotando con electroimanes que lo mantienen fijo o con pequeños sistemas de resortes, es fascinante. Super pequeño.
+
+<img src="https://cronica.tech/wp-content/uploads/2023/08/realme-11-pro-plus-especificaciones.jpg">
+
+*Imagen Tomada De: https://cronica.tech/tecnologia/hardware/llega-el-realme-11-pro-a-colombia-precio-y-especificaciones/*
+
+Muy recomendado ver este video: https://www.youtube.com/watch?v=D2bcButZx8g
+
+---
+
+Has notado que a los telefonos generalmente les dura 24 horas la batería a pesar de que la tecnología crece y crece, ¿Por qué será? Pues las baterías si estan mejorando respecto a tecnología, pero están limitadas por los límites químicos de lo que hemos descubierto que es la mayor cantidad de densidad de electricidad que podemos meter en una batería de un teléfono moderno.
+
+Primero, en el mercado nosotros los humanos aceptamos que los teléfonos duren un día, pero no aceptamos teléfonos que duren 6 horas y no recompensamos tanto a nivel financiero los teléfonos que duran 2 días porque ese es mercado es más pequeño, existe. Pero los teléfonos son más grandes. Como el [iPhone Pro](https://support.apple.com/es-co/111879), como el [Samsung Galaxy Note o Ultra](https://www.samsung.com/co/smartphones/galaxy-s24-ultra/), etc....
+
+> Este mercado existe, pero no es tan grande.
+
+Los fabricantes de chips son muy conscientes de que cada generación de chip nuevo tiene que gastar menos electricidad y aveces tienen saltos espectaculares, por eso el MacBook Pro desde la generación de los Chips Apple M: m1, m2, m3, m4. han ido aumentando de una manera fuerte la duración de la batería de los laptops y ahora es normal que la batería de un laptop dure doce horas. 
+
+Los teléfonos siguen exigiendose cada vez más porque las Apps son cada vez más complejas y sotisficadas, pero esa es parte de la razón del por qué la batería tiende a durar esto.
+
+El uso intensivo del telefóno lo calienta, y el calor al estar tan cerca de la batería puede causar un efecto de explosión y a **esto le paso a una marca Galaxy Note que básicamente se convertian en granadas en el bolsillo.**
+
+<img src="https://c.files.bbci.co.uk/13BDB/production/_90995808_burntnotearielgonzalez.jpg">
+
+*Imagen Tomada De: https://www.bbc.com/mundo/noticias-37361044*
+
+**Asi que los fabricantes de los teléfonos deben tener mucho cuidado con no pasarse de cierta cantidad de flujo eléctrico para que no se caliente el teléfono y no explote.**
+
+> Al día de hoy esto casi no es un problema.
+
+---
+
+Volviendo al tema de la arquitectura de Chips X86, RISC, ARM.
+
+[ARM](https://es.wikipedia.org/wiki/Arquitectura_ARM) domina la arquitectura de los chips de los teléfonos y los SOC, ARM una empresa que fue adquirida por una empresa japonesa: [SoftBank](https://www.softbank.jp/en// "Softbank.jp") y en la cual ese diseño es en el que estan basados los chips de apple, la tecnología hoy en día está mudando casi todo a un System on a Chip debido a que son más eficientes.
+
+Pues en un teléfono inteligente o en un iWatch o Reloj inteligente, en anillos sensores de salud, en el automovil del sistema de entretenimiento hay un SOC.
+
+Muchas veces en estos sistemas de SOC, agregan cosas completamente nuevas que no existen en la computación de escritorio como [las unidades de procesamiento neuronal: las NPUs o Neural Processing Units.](https://www.xataka.com/basics/npu-que-sirve-este-tipo-procesador)
+
+Apple es el pionero de esto, pero ahora todos los fabricantes lo hacen.
+
+Es un chip que como la [GPU](https://es.wikipedia.org/wiki/Unidad_de_procesamiento_gr%C3%A1fico) hace procesamiento paralelo. Recordemos que GPU quiere decir Graphics Processing Unit, es decir que es una unidad de procesamiento gráfico, no fue diseñada para eso, hay nuevos chips inicialmente inventados de google, llamados [TPU - Tensor Processing Units](https://docs.cloud.google.com/tpu/docs/system-architecture-tpu-vm?hl=es-419), que tambien se estan colocando dentro de los celulares porque ahora los teléfonos estan haciendo uso de la IA como por ejemplo: Cuando haces un dictado de voz, cuando usas asistentes, estas haciendo uso de machine learning, cuando el celular te coloca filtros por medio de [Snapchat](https://www.snapchat.com/es) o [Instagram](https://www.instagram.com/), el celular utiliza estas NPUs que vienen integradas en el CHIP completo.
+
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnGZFtSh0clR_Uyz1cmX9k2aYaAy51AbMw_w&s">
+
+Las CPUs que están dentro de un System on a Chip son muy similares a la CPU a la de una computadora normal, el mismo procesamiento por Gigahertz, las mismas unidades, e incluso tienen nucleos. Hoy en día es normal es más normal ver multinucleos en el chip de una celular que en el chip de una computadora.
+
+Los SOC tienden a tener 16 nucleos donde tipicamente en las computadoras de arquitectura x86 veaimos de cuatro a ocho nucleos.
+
+---
+
+A medida de que la inteligencia artificial captura todo el planeta, empezamos a tener una hiperoptimización de cosas distintas. La inteligencia artificial está conectada  directamente a plantas de energia nuclear por lo que el problema de la energia no es el problema que creemos, nuestro problema es más de memoría y velocidad de procesamiento en donde los SOC tambien son ideales para esto. 
+
+Porque en el modelo anterior la GPU y la memoria estaban aparte y en el modelo nuevo, el procesador de un Iphone comparte la memoria entre la CPU, GPU, NPU 
+
+NPU = Procesador Neuronal de IA
+
+Cuando el OS no necesita tanta RAM, esa RAM la puede aprovechar completamente la IA **haciendo estos sistemas mucho más eficientes.**
+
+Durante 2025, china le gano en un momento a OpenAI aprovechandose de esta característica para poder crear modelos de inteligencia artificial que corran en local en laptops y es en parte de que Apple a pesar de estar atrás en la carrera de IA sigue constantemente liderando el desarrollo de IA local por los SOC y su arquitectura de memoria unificada.
+
+> Esto sucedió mediante DeepSeek 2025
+
+> Unified Memory Architecture by Apple
+
+<img src="https://media.igeeksblog.com/wp-content/uploads/2025/07/Unified-memory-architecture.jpg.webp">
+
+---
