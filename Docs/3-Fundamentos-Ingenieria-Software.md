@@ -20,6 +20,8 @@ Cómo funciona Internet, las computadoras, los chips, la inteligencia artificial
 
 - [7. Cómo las Computadoras Guardan Datos](#cómo-las-computadoras-guardan-datos)
 
+- [8. Cómo se Organizan los Archivos](#cómo-se-organizan-los-archivos)
+
 
 
 
@@ -1565,4 +1567,233 @@ Ya hay otras clases de chips que intentan integrar otros chips por dentro en dif
 
 *Imagen Tomada De: https://en.wikipedia.org/wiki/System_on_a_chip*
 
+
+
+
+
+
+
+
+
+
 ---
+
+
+
+
+
+
+
+
+
+
+## Cómo se Organizan los Archivos
+
+Cuando la gente joven y la gente muy vieja van a un curso de desarrollo de software se estrellan con el [sistema de archivos](https://es.wikipedia.org/wiki/Sistema_de_archivos).
+
+Un pequeño porcentaje de personas estan acostumbrados al sistema de carpetas.
+
+Otras personas no estan acostumbrados a este sistema pues en un celular no existe un sistema de archivos ya que tu no miras las fotos como archivos sino que las encuentras en una galeria.
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/FilesAndFolders.png/330px-FilesAndFolders.png">
+
+*Imagen Tomada De: https://es.wikipedia.org/wiki/Sistema_de_archivos*
+
+Realmente todos los elementos (archivos) dependen de una app y generalmente si algo abre en una app, no abre en otra app.
+
+Pero la computación nunca fue asi, pues la computación funciona con archivos que se pueden abrir en diferentes sistemas y que se pueden mover de una aplicación a otra aplicación.
+
+De hecho, casi todos los sistemas educativos del mundo incluyendo la **[OCDE](https://www.oecd.org/en.html)** consideran que mover datos de una aplicación a otra aplicación como los fundamentos básicos minimos necesarios del [alfabetismo tecnológico](https://es.wikipedia.org/wiki/Alfabetismo_digital "Concept by Wikipedia"). 
+
+> Es decir: Lo mínimo que necesitas para utilizar tecnología.
+
+Tu has visto una estructura de carpetas en un sistema operativo siendo la forma en la que el OS organiza, guarda y accede a cada uno de los diferentes archivos.
+
+> Unidad(C:) > Users > Santiago > Documents > Archivo
+
+Unidad A: para el primer drive de diskettes de 5¼ o 3½ pulgadas
+
+Unidad B: para un segundo drive de diskettes, a menudo de diferente tamaño (si la A: era de 5¼", la B: podía ser de 3½", o viceversa)
+
+Unidad C: para el disco duro con el sistema operativo
+
+Unidad D: típicamente asignada a unidades de CD/DVD cuando estas se volvieron comunes.
+
+---
+
+Probablemente tambien habrás visto algo como:
+
+c:\Documentos\...
+
+<img src="https://corderoinformaticos.com/wp-content/uploads/2022/06/direccion.png">
+
+*Imagen Tomada De: https://corderoinformaticos.com/tutoriales/el-explorador-de-archivos-de-windows/* 
+
+
+
+Siendo una dirección que indica donde encontrar el archivo para esto, tenemos que pensar **¿Cómo las computadoras guardan y piensan los archivos?**
+
+Los piensan como si fuera una estructura de arbol siendo la raiz del arbol, dependiendo del sistema operativo: "Una cosa u otra"
+
+**Por ejemplo:**
+
+En Windows es **C:** Esto es la raiz del disco duro siendo C el nombre del disco duro el cual le puso windows (Tipicamente asi se llama.)
+
+En los windows viejos existia A: siendo una unidad reservada para el discket que anteriormente era la forma estandar de pasar archivos entre computadoras siendo una tarjeta de plástico que básicamente ya no existe a excepto del boton de guardar 💾 siendo reconocido asi... Pues evidentemente por su historia. 
+
+> Ya no utilizamos [disquete](https://es.wikipedia.org/wiki/Disquete)
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Floppy_disk_2009_G1.jpg/500px-Floppy_disk_2009_G1.jpg">
+
+*Imagen Tomada De: https://es.wikipedia.org/wiki/Disquete*
+
+Curiosamente lo mismo nos pasaba con los [CD = Compact Disc](https://es.wikipedia.org/wiki/Disco_compacto)
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/OD_Compact_disc.svg/330px-OD_Compact_disc.svg.png">
+
+*Imagen Tomada De: https://es.wikipedia.org/wiki/Disco_compacto*
+
+La unidad de CD o de DVD tendia a llamarse D: o E: porque es lo que sigue despues de la C
+
+> un CD y un DVD no son lo mismo, aunque tienen el mismo tamaño físico. La principal diferencia es que un DVD tiene mucha mayor capacidad de almacenamiento (4.7 GB o más) que un CD (700 MB), permitiéndole guardar videos y datos más grandes, mientras que el CD es ideal para audio, debido a que los DVDs usan un láser de diferente frecuencia y una estructura de capas más compleja para leer más información. 
+
+---
+
+En los sistemas de tipo [UNIX](https://es.wikipedia.org/wiki/Unix "unix concept by wikipedia") como por ejemplo [Linux](https://es.wikipedia.org/wiki/GNU/Linux "linux concept by wikipedia"), [Mac](https://es.wikipedia.org/wiki/Macintosh "mac concept by wikipedia"), [Android](https://es.wikipedia.org/wiki/Android "android concept by wikipedia"), [iOS](https://es.wikipedia.org/wiki/IOS "iOS concept by wikipedia") (Lo más comunes), la raiz no es el disco duro sino la raiz de los arhivos del sistema operativo y se le sconoce con un slash = /
+
+<img src="https://rsg-ecuador.github.io/HerrCompBioinfo/_images/Linux_file_system.jpg">
+
+*Imagen Tomada De: https://github.com/RSG-Ecuador/Grupo-De-Estudio-Linux-Bash/tree/main*
+
+Siendo asi que todos los sistemas Derivados de Unix es el / en donde esta todo siendo asi pro ejemplo: La raiz de un disco en linux no es / sino /mnt/c o tambien puede ser /mnt/disco1 en donde el nombre del disco se puede cambiar.
+
+mnt significa [MOUNT](https://tldp.org/LDP/Linux-Filesystem-Hierarchy/html/mnt.html "mnt concept by tldp.org") que es donde se monta el disco y es una particularidad de linux.
+
+---
+
+Entonces sea como sea, casi todos los OS funcionan asi:
+
+Hay una raiz y tres tipos de carpetas:
+
+1. Carpetas de Usuario: Hay una carpeta por cada usuario que el computador tenga
+
+2. Carpetas de OS: Estan las subcarpetas de lo que necesita el sistema operativo para funcionar
+
+3. Carpetas de Apps: Hay una carpeta por cada aplicación que instalas.
+
+<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiHsCE_CyVYsc7ErRRPk8X6uvAxdSdeu-tsHh_8V1v2CczUJZXtzM_EK70vufOs2h885WF82gHMq_wrma3JNDgqJZGv9DWyhPRTI1QPyTZUSFBxoD1qSVhotiN8w4CxNsmz_0H4_G2GpE9M/w1200-h630-p-k-no-nu/ubicacion-carpetas-sistema-windows.jpg">
+
+*Imagen Tomada De: https://adminformaticos.blogspot.com/2015/04/directorios-principales-de-windows.html*
+
+---
+
+Especificamente pa carpeta del sistema operativo tiene a tener 3 cosas.
+
+Los [drivers](https://es.wikipedia.org/wiki/Controlador_de_dispositivo "drivers concept by wikipedia") que es la carpeta donde estan todas las aplicaciones de software, todos los sistemas que me permiten interactuar con el hardware por lo que cuando instalas una impresora, esto va a los drivers.
+
+Tambien se encuentra la configuración de todo el sistema operativo: Que si le gusta que sea de tema del sistema sea negro o blanco, Cuales son los usuarios con los que arranca, qué es lo que aplica a todos los usuarios.
+
+<img src="https://i.blogs.es/4771fa/mojave2/450_1000.jpg">
+
+*Imagen Tomada De: https://www.xataka.com/moviles/modo-oscuro-nuestros-moviles-ordenadores-tiene-sus-pegas-no-oro-todo-que-no-reluce*
+
+Y finalmente otros archivos de carga natural del sistema operativo (Archivos del nucleo) siendo asi donde el contenido del OS esta.
+
+---
+
+En las carpetas de usuario, hay una carpeta por cada usuario. Cada carpeta de usuario tiene una estructura parecida siendo asi una carpeta para el contenido del escritorio, para documentos, para descargas, videos y otras carpetas en las que casi no pensamos donde se guarda la configuración del OS y de aplicaciones que usamos que son solo relevantes para el usuario.
+
+Esta información, el contenido de la carpeta del usuario es solamente accesible cuando tengo mi nombre de usuario y contraseña.
+
+**Asi los otros usuarios del dispositivo no pueden acceder a los contenidos de esa carpeta.**
+
+Si yo estoy en linux, mac o cualquier sistema tipo UNIX y tengo una foto en la carpeta llamada camara, dentro del usuario Santiago muy probablemente valla a estar en /home/santiago/camara/foto.png siendo asi el / la raiz en donde voy a una carpeta.
+
+Si estoy en windows va a ser C: aunque si hay otros discos en el dispositivo pueden haber otras letras. 
+
+Por lo que: C:User/Santiago/camara/foto.png
+
+---
+
+¿Qué quiere decir [.png](https://es.wikipedia.org/wiki/Portable_Network_Graphics ".png concept by wikipedia")? 
+
+Se ha ido generando un problema a medida de que los ultimos años, los OS han ido escondiendo las ultimas cuatro letras de los archivos siendo asi:
+
+nombre_de_archivo.xxxx (Despues del . viene el tipo de archivo) lo que puede ser entonces por ejemplo:
+
+* Un documento WORD tiende a terminar en [.doc](https://es.wikipedia.org/wiki/Doc_(inform%C3%A1tica) ".doc concept by Wikipedia") o en .docx
+
+* Un documento EXCEL tienda a terminar en [.xls](https://www.adobe.com/es/acrobat/resources/document-files/spreadsheet-files/xls.html ".xls concept by Adobe") o .xlsx
+
+* Las paginas web principalmente son archivos HTML en donde puede ser .htm o [.html](https://es.wikipedia.org/wiki/HTML)
+
+<img src="https://blog.beep.es/wp-content/uploads/2022/08/extensiones-archivo-1024x554.jpg">
+
+*Imagen Tomada de: https://blog.beep.es/que-es-una-extension-de-archivo/*
+
+---
+
+¿Pór qué aveces tienen 3 letras y otras veces 4 letras?
+
+Son razones históricas pues en Sistemas OS viejos habia una limitación en la estructura de la cabezera de los discos duros para cuantos bytes se pueden guardar para la extensión y solamente se podian guardar 3 bytes por lo que entonces sólo habia espacio para 3 letras.
+
+En los sistemas OS modernos esto no importa, entonces con pasar el tiempo se han ido extendiendo el nombre de las extensiones, pero como esto es confuso y requiere que los usuarios normales se guarden en la cabeza .xls significa excel, .docx significa word los OS lo han ido abstrayendo y ahora no lo ves... Ahora simplemente ves un archivo que es de tipo word, pero internamente sigue funcionando.
+
+Esto se puede ver en las direcciones web porque cuando accedes a un servidor en internet accedes a su sistema de archivos de toda la vida. 
+
+Siendo asi, imaginese una imagen llamada 2-cuadricula-negra.jpg y la URL es:
+
+    https://github.com/santiagoencodigo/Desarrollo-Web-Profesional/blob/main/Assets/img/2-cuadricula-negra.jpg
+
+Siendo asi:
+
+[https](https://es.wikipedia.org/wiki/Protocolo_seguro_de_transferencia_de_hipertexto "https concept by wikipedia"): indica comunicación segura con cifrado [SSL](https://www.cloudflare.com/es-es/learning/ssl/what-is-ssl/)/[TLS](https://es.wikipedia.org/wiki/Seguridad_de_la_capa_de_transporte "TLS concept by wikipedia")
+
+* **github.com**: Nombre del servidor que se resuelve a una [dirección IP](https://es.wikipedia.org/wiki/Direcci%C3%B3n_IP "IP concept by Wikipedia")
+
+* **/santiagoencodigo/Desarrollo-Web-Profesional/blob/main/Assets/img/**: Es la estructura de directorios en el servidor. 
+El primer nombre /santiagoencodigo/ no es el nombre de la raiz del servidor, sino la raiz de lo que github configura en el servidor que le va a permitir observar al usuario siendo asi una raiz de archivos públicos siendo asi /santiagoencodigo/Desarrollo-Web-Profesional/blob/main/Assets/img/ el nombre de cada una de las carpetas separandose por un /
+
+* 2-cuadricula-negra.jpg: Es el nombre del archivo con el recurso especifico solicitado y su extensión siendo el tipo de archivo como por ejemplo .jpg se tiende a ser para imagenes como fotografia.
+
+> .png es tambien para imagenes pero en esta no se puede perder calidad y se tiene que ver de la misma forma siempre, se tiende a usar en ilustraciones  
+
+---
+
+[HTTP](https://es.wikipedia.org/wiki/Protocolo_de_transferencia_de_hipertexto "HTTP concept by Wikipedia") y este significa protocolo de transferencia de hipertexto: Hypertext Transfer Protocol y eso es el protocolo que transfiere los archivos [HTML = Hyper Text Markup Language](https://es.wikipedia.org/wiki/HTML), es el lenguaje con el que escribimos las paginas web y http es el protocolo de internet por donde lo transimitimos.
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/3/35/HTML_file_type_mimetype_icon.png">
+
+*Imagen Tomada De: https://es.wikipedia.org/wiki/HTML*
+
+La S significa secure lo que significa que el navegador intercambia con el servidor una llave de cifrado pública y prviada para que la transferencia nadie la vea y asi de esa forma es como puedes obtener los datos de tu banco sin que una persona, un atacante, pueda ver la transeferencia de datos en internet y observe por ejemplo: Cuanto dinero tienes en el banco.
+
+Existen otros protocolos pues no todo es HTTPS tambien existe el protocolo WSS que significa [WebSocket](https://en.wikipedia.org/wiki/WebSocket) que son un tipo de transferencia de datos que ocurre en tiempo real como por ejemplo asi es como funciona un chat.
+
+Por lo que:
+
+    WSS://chat.servidor.com/chat2/415
+
+Siendo asi el servidor de chat con un subdominio que se llama chat en donde dentro /chat2 es la aplicación y el 415 es el identificador del chat.
+
+Siendo asi las rutas las mismas en internet que en tu computadora.
+
+---
+
+Cuando estas usando un iPad, un iphone, un android, no estas usando una computadora completa porque no estas observando esto e incluso cuando utilizas windows o mac no ves las extensiones.
+
+> Es momento de activar la visibilidad de extensiones y rutas en tu computadora.  
+
+Esto sucede porque es un gran negocio para las empresas de OS escondiendo cada vez la ruta en mac por ejemplo el escritorio recorre en la nube y simplemente dice [icloud](https://www.icloud.com/) escritorio en vez de decirle al usuario que puede guardar datos en su disco duro, le estan diciendo que simplemente guardelos en la nube y asi cuando cambie de computadoras simplemente pasa de un lado a otro. 
+
+> Esto te quita autonomia: No se puede permitir que porque un OS trate de hacer todo más facil, impida el aprendizaje.
+
+> Necesito saber como un OS funciona por dentro.
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/ICloud_logo.svg/500px-ICloud_logo.svg.png">
+
+*Imagen Tomada De: https://es.wikipedia.org/wiki/ICloud*
+
+---
+
+
