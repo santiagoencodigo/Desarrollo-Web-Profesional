@@ -24,6 +24,8 @@ Cómo funciona Internet, las computadoras, los chips, la inteligencia artificial
 
 - [9. Teléfonos y sus "System on a Chip" o SOC](#teléfonos-y-su-system-on-a-chip-o-soc)
 
+- [10. GPUs: Procesadores Gráficos y de AI](#gpus-procesadores-gráficos-y-de-ai)
+
 
 
 
@@ -2011,4 +2013,169 @@ Durante 2025, china le gano en un momento a OpenAI aprovechandose de esta caract
 
 <img src="https://media.igeeksblog.com/wp-content/uploads/2025/07/Unified-memory-architecture.jpg.webp">
 
+
+
+
+
+
+
+
+
+
+
 ---
+
+
+
+
+
+
+
+
+
+
+
+## GPUs: Procesadores Gráficos y de AI
+
+Las primeras computadoras no tenian pantalla, pues su funcionalidad era que cuando tu le dabas datos y hacias calculos de computo, te imprimian los calculos.
+
+Las primeras pantallas no eran de realmente computadoras, eran un instrumento electrónico para ver las ondas electromagnéticas llamada osciloscopio y unos ingenieros encontraron cómo usar la imagen del oscioloscopio para colocar dos palitos y una bolita que rebotaba y asi nace el primer juego de la historia **PONG**.
+
+Desde ese momento los videojuegos empezaron a usar la computación para empujar cada vez más lo que era posible a nivel gráfico siendo asi:
+
+* Primero hubo gráficos de vidoejuego antes de que hubieran sistemas operativos gráficos.
+
+En sistemas UNIX o en DOS uno podia jugar juegos como Tetris, Mario Bros, Prince of Persia sin necesidad de todavia tener ventanas porque cargaban cada una de estas pantallas y eran juegos muy sencillos que llevaban al máximo la capacidad de chips.
+
+> Si no fuera por los videojuegos no habriamos llevado los chips a su maximo nivel.
+
+Gracias a esto, empezó a existir una industria que creaba chips específicamente para poner a correr esos gráficos para diseño gráfico, para producción audiovisual de efectos especiales, pero sobre todo para video juegos.
+
+Esos chips se llaman Unidades de Procesamiento Gráfico = Graphics Processing Unit = GPU
+
+---
+
+**¿Cual es la diferencia entre la CPU y una GPU?**
+
+Las CPUs procesan de maneria serial la información a través de ciclos. Y tienen millones de transistores que hacen cálculos matemáticos hipercomplejos porque eso es lo que se necesita para correr una hoja de calculo en excel, se necesitan para los calculos que se necesita para navegar una pagina web y todo eso que hacemos en una computadora normal.
+
+Una GPU realmente son muchísimos núcleos de procesadores chiquitos por ende hacen muchos menos cálculos con mucho menos poder, pero como son muchísimos núcleos, los hacen al mismo tiempo.
+
+Representar una imagen en pantalla es representar un cálculo de una matriz de millones de puntos de luz, conocida como pixeles. Pues cada uno de esos puntos debe calcular el punto de brillo que tienen a partir de prender el rojo, verde o azul. (Red, Green, Blue = RGB) y ese brillo tiene que calcularse al mismo tiempo.
+
+Anteriormente en el pasado una imagen cargaba como una linea luego de otra linea de pixeles y eso es procesamiento serial, lo que haría una CPU. Que la imagen de repente cargue y valla cambiando dinámicamente es procesamiento paralelo, esa es la magia de una GPU.
+
+> Tu puedes ver los pixeles, los de un telefono, sobre tod un telefono moderno... Son muy chiquitos porque son microscópicos, por más que acerques el ojo no lo alcanzas a ver, pero si tienes un monitor de toda la vida sin tanta resolución, puedes acercar los ojos a la pantalla.... Podras ver las lineas de rojo, verde y azul con tus ojos humanos.
+
+---
+
+NVIDIA y ATI, que luego fue adquirida por AMD, crearon esta industria de las tarjetas gráficas, de hecho si no fuera por esta industria, no habria crecido la industria de los video juegos, una consola de videojuegos en esencia es una computadora que tiene todas las partes de una computadora por dentro, pero cuyo su sistema operativo esta especificamente optimizado para la reproduccción de videojuegos.
+
+Y sus chips incluyen GPUs por supuesto.
+
+Cuando hablamos de [Sistemas Operativos](#qué-es-un-sistema-operativo), vimos un poco sobre interrupciones: Mecanismos del OS para darle prioridad de unos procesos contra otros por eso cuando tu computadora esta muy colgada haciendo un proceso muy complejo tu mouse se puede mover a alta velocidad porque el mouse tiene una alta prioridad en la jerarquia.
+
+Cuando se procesa una pantalla imaginate que la GPU se cuelgue y solamente tengas imagen en el 75% de la pantalla y el resto se quede quieto, seria raro ¿No?
+
+Asi que las gpuS fueron originalmente diseñadas para que toda la pantalla tenga la misma prioridad a traves de un sistema llamado pipelines que en resumen, los primeros circuitos de GPU eran sencillos donde simplemente estaban encargados de sectores en la pantalla en donde todos los sectores de la pantalla tienen la misma prioridad y todos deben presentar una imagen.
+
+No eran versátiles de programar, pero por la ley de moore a medida de que aumentaba exponencialmente la complejidad de los transistores empezaron a emerger caracteristicas como la de generación de texturas, se programaron shaders, luces y cálculos de física porque todo lo que necesitaba procesamiento paralelo, como pasa mucho en los video juegos se podia pasar en estos cientos de miles de núcleos que hacen cálculos paralelos de alta velocidad.
+
+Entonces asi, emergió un nuevo tipo de computación paralela que es la forma en la que funciona toda la industria de los efectos especiales, de los video juegos, de la animación.
+
+Pero como necesitan nunca trabarse, no puede usar la memoria ram tradicional que en una computadora esta muy lejos del chip (Esto es mucho antes de los System on a Chip que tienen todo integrado.)
+
+Asi que las GPUs son tarjetas que, además de tener estos procesadores gráficos tienen una memoria especial independiente y esa memoria se le conoce como VRAM y es la memoria de RAM de Video. 
+
+Una memoria volátil especialmente para esa computación paralela. Asi que cuando uno empieza a jugar videojuegos, uno carga datos en la VRAM asi que ahí es donde se cargan las texturas de tu videojuego, los polígonos y todos esos cálculos de física que vas a usar cuadno estás jugando un juego tridimensional.
+
+---
+
+**¿Qué otras cosas requieren procesamiento paralelo?**
+
+Por ejemplo: El mundo.
+
+Cuanto tú quieres modelar el sistema de las nubes para poder predecir el clima. Necesitas el procesamiento paralelo para predecir el clima y asi entonces un procesamiento paralelo de muchísimas variables al mismo tiempo.
+
+Siendo asi las GPUs ideales para simulación.
+
+Hubo una época en las que investigadores que creaban supercomputadoras para simulaciones de física, de estrellas, agujeros negros, etc...
+
+> Esto me hace pensar entonces qué: ¿Qué uso le das a tu computadora en tu día a día? Pues teniendo en cuenta lo hablado, por medio de las matemáticas y la computación se pueden realizar diferentes modelos computacionales para hacer predicciones. ¿Te imaginas una predicción sobre el desarrollo humano? Da miedo con pensarlo.
+
+Se dieron cuenta que el Chip de la PlayStation 3 un chip reado por IBM que combinaba CPU y GPU para los videojuegos de PS3 era increiblemente eficiente y como en el ps3 se puede instalar linux de toda la vida empezaron a comprar PS3 en masa y a crear clústeres de PlayStation con Linux para hacer simulaciones y fabricar supercomputadoras mucho más barato de lo que cuesta una supercomputadora porque a la final del día **Un videojuego es una simulación del mundo real** asi que sirve perfectamente para la física.
+
+Porque el dinero: Sony, Microsoft con el Xbox, Nintendo (Nintendo si hace dinero con las consolas). Sony y Microsoft no hacen dinero con sus consolas pues lo venden a perdida y ganan dinero con la venta de video juegos.
+
+PS3 era vendido a perdida.
+
+Asi que playStation estaba perdiendo dinero haciendo todas estas consolas para las que nunca se iban a comprar videojuegos porque las estaban usando científicos, por lo que dejaron de permitir esto.
+
+> La computación científica corría en PlayStation.
+
+La inteligencia artificial también es procesamiento paralelo pues cuando tu utilizas un lenguaje de inteligencia artificial para generar un texto el modelo de lenguaje empieza a recorrer un arbol gigantesco de la esctructura del lenguaje huano con el que fue entrenado.
+
+Asi mismo trata de encontrar diferentes caminos para responder una pregunta. La que tu le haces a ChatGPT o a DeepSekk, a Cloud o a Gemini o a cualquier modelo que utilices.
+
+El punto es que el procesamiento paralelo ocurre con GPUs originalmente, eventualmente empezamos a utilizar chips más especializados.
+
+Inicialmente los primeros modelos de AI antes de la superinteligencia, fueron entrenados en GPUs.
+
+---
+
+Los autos autónomos como los Tesla o Waymo de Google usan GPUs, porque asi una GPU tiene que procesar cada píxel de una pantalla, un automóvil usa las cámaras y los radares que tiene en el marco del automóvil en su estructura para capturar imágenes del mundo exterior.
+
+Todo esto tiene que ser procesado en tiempo real para convertirla en los polígonos tridiomensionales que le permiten a un algoritmo de inteligencia artificial decidir si el auto va a frenar, acelarar o moverse.
+
+Sin GPUs, ese procesamiento paralelo de alta velocidad, de cálculos relativamente simples, pero **Millones al mismo tiempo** no sería posible.
+
+---
+
+Las CPUs normales se programan con un lenguaje ensamblador. Ese lenguaje es el que arranca el kernel y el que abre el OS.
+
+Las aplicaciones que se programan en lenguajes como C++, Python, Visual Basic entre otros... Todos esos lenguajes compilan al lenguaje ensamblador de la CPU, las GPUs tienen algo muy parecido.
+
+Y fabricantes como NVIDIA han creado lenguajes intermedios para que los programadores le hablen al metal para asi poder programar el chip de la GPU, el más popular en este momento se llamad CUDA de NVIDIA, inicialmente pensada para videojuegos.
+
+CUDA es parte de la razón por la que la revolución de la AI es posible pues permite hacer estos cálculos masivos reprogramando el comportamiento de chips que originalmente fueron pensados para mover pixeles.
+
+Las GPUs también se programan y se diseñan a nivel físico de hardware con consideraciones distintas: La CPU que es el procesador que arranca el OS está en el corazón de la tarjeta madre de una computadora o de la tarjeta central de un teléfono, pero la GPU se conecta a alta velocidad a través de un puerto que se llama PCI-E.
+
+Una serie de muesquintas que se conectan directamente a la electrónica de la tarjeta madre, en un telefóno o en un computador de apple que utilice System on a Chip, la GPUs estan directamente pagadas a la CPU en el SOC.
+
+En una computadora normal, la CPU tiene un ventilador o un sistema de refrigeramiento por agua que enfría la CPU, pero las GPUs también se calientan, así que tienen sus propios sistemas de enfriamiento paralelo.
+
+Sus propios ventiladores o su propia refrigreración de agua, en algunos casos como en las computadoras de videojuegos más poderosas, o en las computadoars de render de efectos especiales, o en las superocmputadoras de simulación para efectos científicos, llegan a enfriarlas con aceite, el aceite no conduce electricidad asi que hay computadoras que se hunden en aceite para que el aceite disipe el calor. 
+
+---
+
+Codecs: Codificadores de Codificadores. Un tipo de algoritmo de compresión y descompresión que es por ejemplo, la forma en la que funciona el video. Anteriormente los videos eran súper pesados y ahora son mucho más livianos. Antes teniamos blu-rays y ahora tenemos youtube y netfix.
+
+Esos algoritmos gastan muchísimo el chip, antes utilizaban la GPU, y mucho más antes la CPU. Ahora usan transistores especializados dentro de la GPU como instrucciones que solamente se encargan de codificar y descodificar el video. Usando mucho menos electricidad.
+
+Lo mismo apsa con la simulación de ciertos video juegos
+
+> Blakc Myth Wukong RTX ON.
+
+Los videojuegos empezaron a simular el comportamiento de los fotones del mundo real, el comportamiento de la luz con una técnica llamada ray tracing que inicialmente se programaba en código, pero ahora se crean en el transistor, en los chips y la GPU tiene unidades especificas diseñadas para ray tracing.
+
+Con la inteligencia artificial para lo mismo. Pues la AI es en esencia multiplicación de matrices y recorrido de árboles, eso se puede programar en el chip y es la esencia de las unidades de procesamiento neural.
+
+NVIDIA por ejemplo, tiene chips que solamente hacen eso.
+
+---
+
+Antes de que la AI consumiera grandes cantidades de chips gráficos, lo hizo las criptomonedas: Bitcoin y cada moneda de BlockChain requiere hacer un cálculo matemático muy particular para que el blockchain funcione de manera cifrada. Ese cálculo es más amigable en procesamiento paralelo que en procesamiento serial. Asi que aprovecha las GPUs y como Bitcoin recompensa con Criptomonedas a las personas que hacen este proceso de ejecutar las ecuaciones matemáticas llamado Criptomineria, se creó toda una industria de minería de Bitcoin que es poner a correr estas GPUs al maximo en grandes granjas de servidores pegadas a granjas de hirdroeléctricas, plantas de energia nuclear, energia basada en gas, etc...
+
+Hay paises enteros que tienen cosas asi, como por ejemplo El Salvador, eso hizo que la demanda de Chips aumentara justo antes de que llegara la inteligencia artificial.
+
+---
+
+No es como que las GPUs hayan abandonado la industria de los videojuegos úes todavia hay mucha innovación.
+
+VALVE: La empresa detrás de juegos como Portal, Half Life y el Sistema STEAM, tiene un sistema operativo llamado SteamOS que reemplaza el OS que corres en tu computadora para maximiar el uso de recursos para un videojuego de tal manera que tu computadora se vuelve en esencia una consola de videojuegos.
+
+Tambien la realidad aumentada y la realidad virtual han aumentado la necesidad de proceasdores gráficos porque en cada ojo estas procesando dos pantallas distintas para crear esa sensación de tridimensionalidad y presencia que tiene la realidad virtual asi que aun sigue habiendo mucha innovación gráfica sólo que la IA lo absorbió mucho y todavía tenemos mucho de procesamiento científico que hacer.
+
+Las GPUs son un procesador revolucionario que avanzó la ciencia humana.
+
