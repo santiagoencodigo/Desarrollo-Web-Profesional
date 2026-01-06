@@ -2037,57 +2037,116 @@ Durante 2025, china le gano en un momento a OpenAI aprovechandose de esta caract
 
 ## GPUs: Procesadores Gráficos y de AI
 
-Las primeras computadoras no tenian pantalla, pues su funcionalidad era que cuando tu le dabas datos y hacias calculos de computo, te imprimian los calculos.
+Las primeras computadoras no tenían pantalla, pues su funcionalidad era que cuando tu le dabas datos y hacias [calculos de computo](https://en.wikipedia.org/wiki/Computation), te imprimian los calculos.
 
-Las primeras pantallas no eran de realmente computadoras, eran un instrumento electrónico para ver las ondas electromagnéticas llamada osciloscopio y unos ingenieros encontraron cómo usar la imagen del oscioloscopio para colocar dos palitos y una bolita que rebotaba y asi nace el primer juego de la historia **PONG**.
+<img src="https://upload.wikimedia.org/wikipedia/commons/e/e5/ENIAC-changing_a_tube.jpg">
 
-Desde ese momento los videojuegos empezaron a usar la computación para empujar cada vez más lo que era posible a nivel gráfico siendo asi:
+*Imagen Tomada De: https://es.wikipedia.org/wiki/Computadora#/media/Archivo:ENIAC-changing_a_tube.jpg*
 
-* Primero hubo gráficos de vidoejuego antes de que hubieran sistemas operativos gráficos.
+**Las primeras pantallas no eran de realmente computadoras**, eran un instrumento electrónico para ver las ondas electromagnéticas llamada osciloscopio y unos ingenieros encontraron cómo usar la imagen del osciloscopio para colocar dos palitos y una bolita que rebotaba y asi nace el primer juego de la historia **PONG**.
 
-En sistemas UNIX o en DOS uno podia jugar juegos como Tetris, Mario Bros, Prince of Persia sin necesidad de todavia tener ventanas porque cargaban cada una de estas pantallas y eran juegos muy sencillos que llevaban al máximo la capacidad de chips.
+<img src="https://upload.wikimedia.org/wikipedia/commons/a/a6/Osciloscopio_locomotora.jpg">
+
+*Imagen Tomada De: https://es.wikipedia.org/wiki/Osciloscopio*
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/6/62/Pong_Game_Test2.gif">
+
+*Imagen Tomada De: https://es.wikipedia.org/wiki/Pong*
+
+Encontré que el juego, tiene su propia pagina por ende si se desea jugar ingrese al siguente link: https://www.ponggame.org/
+
+Desde ese momento los [videojuegos](https://es.wikipedia.org/wiki/Videojuego) empezaron a usar la computación para empujar cada vez más lo que era posible a nivel gráfico siendo asi:
+
+* Primero hubo gráficos de [videojuego](https://es.wikipedia.org/wiki/Videojuego) antes de que hubieran sistemas operativos gráficos.
+
+En sistemas [UNIX](https://es.wikipedia.org/wiki/Unix) o en [DOS](https://es.wikipedia.org/wiki/DOS) uno podia jugar juegos como [Tetris](https://es.wikipedia.org/wiki/Tetris), [Mario Bros](https://es.wikipedia.org/wiki/Mario_Bros.), [Prince of Persia](https://es.wikipedia.org/wiki/Prince_of_Persia_(videojuego_de_1989)) sin necesidad de todavia tener ventanas porque cargaban cada una de estas pantallas y eran juegos muy sencillos que llevaban al máximo la capacidad de chips.
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/2/28/Prince_of_Persia_1_-_MS-DOS_-_Gameplay_-_Potion.gif">
+
+*Imagen Tomada De: https://es.wikipedia.org/wiki/Prince_of_Persia_(videojuego_de_1989)*
 
 > Si no fuera por los videojuegos no habriamos llevado los chips a su maximo nivel.
 
-Gracias a esto, empezó a existir una industria que creaba chips específicamente para poner a correr esos gráficos para diseño gráfico, para producción audiovisual de efectos especiales, pero sobre todo para video juegos.
+Gracias a esto, empezó a existir una industria que creaba chips específicamente para poner a correr esos gráficos para diseño gráfico, para [producción audiovisual](https://es.wikipedia.org/wiki/Producci%C3%B3n_audiovisual "Producción Audiovisual concept by Wikipedida") de [efectos especiales](https://es.wikipedia.org/wiki/Efectos_especiales "Efectos Especiales concept by Wikipedia"), pero sobre todo para videojuegos.
 
-Esos chips se llaman Unidades de Procesamiento Gráfico = Graphics Processing Unit = GPU
+Esos chips se llaman [Unidades de Procesamiento Gráfico = Graphics Processing Unit = GPU](https://es.wikipedia.org/wiki/Unidad_de_procesamiento_gr%C3%A1fico "GPU concept by Wikipedia")
+
+Lecturas Recomendadas:
+
+1. Qué es una GPU by AWS: https://aws.amazon.com/es/what-is/gpu/
+
+2. Qué es una GPU by IBM: https://www.ibm.com/mx-es/think/topics/gpu
+
+3. Qué es una GPU by NVIDIA: https://www.nvidia.com/es-la/drivers/what-is-gpu-computing/
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/6600GT_GPU.jpg/330px-6600GT_GPU.jpg">
+
+*Imagen Tomada De: https://es.wikipedia.org/wiki/Unidad_de_procesamiento_gr%C3%A1fico*
 
 ---
 
 **¿Cual es la diferencia entre la CPU y una GPU?**
 
-Las CPUs procesan de maneria serial la información a través de ciclos. Y tienen millones de transistores que hacen cálculos matemáticos hipercomplejos porque eso es lo que se necesita para correr una hoja de calculo en excel, se necesitan para los calculos que se necesita para navegar una pagina web y todo eso que hacemos en una computadora normal.
+Las CPUs procesan de manera serial la información a través de ciclos. Y tienen millones de transistores que hacen cálculos matemáticos hipercomplejos porque eso es lo que se necesita para correr una hoja de calculo en [excel](https://www.microsoft.com/es-es/microsoft-365/excel), se necesitan para los calculos que se necesita para navegar una pagina web y todo eso que hacemos en una computadora normal.
 
 Una GPU realmente son muchísimos núcleos de procesadores chiquitos por ende hacen muchos menos cálculos con mucho menos poder, pero como son muchísimos núcleos, los hacen al mismo tiempo.
 
-Representar una imagen en pantalla es representar un cálculo de una matriz de millones de puntos de luz, conocida como pixeles. Pues cada uno de esos puntos debe calcular el punto de brillo que tienen a partir de prender el rojo, verde o azul. (Red, Green, Blue = RGB) y ese brillo tiene que calcularse al mismo tiempo.
+* Lectura Recomendada: https://es.wikipedia.org/wiki/Computaci%C3%B3n_paralela
 
-Anteriormente en el pasado una imagen cargaba como una linea luego de otra linea de pixeles y eso es procesamiento serial, lo que haría una CPU. Que la imagen de repente cargue y valla cambiando dinámicamente es procesamiento paralelo, esa es la magia de una GPU.
+Representar una imagen en pantalla es representar un cálculo de una matriz de millones de puntos de luz, conocida como [pixeles](https://es.wikipedia.org/wiki/P%C3%ADxel). Pues cada uno de esos puntos debe calcular el punto de brillo que tienen a partir de prender [el rojo, verde o azul. (Red, Green, Blue = RGB)](https://es.wikipedia.org/wiki/RGB) y ese brillo tiene que calcularse al mismo tiempo.
 
-> Tu puedes ver los pixeles, los de un telefono, sobre tod un telefono moderno... Son muy chiquitos porque son microscópicos, por más que acerques el ojo no lo alcanzas a ver, pero si tienes un monitor de toda la vida sin tanta resolución, puedes acercar los ojos a la pantalla.... Podras ver las lineas de rojo, verde y azul con tus ojos humanos.
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Pixeles_de_telefono.jpg/330px-Pixeles_de_telefono.jpg">
+
+*Imagen Tomada De: https://es.wikipedia.org/wiki/P%C3%ADxel*
+
+Anteriormente en el pasado una imagen cargaba como una línea, luego de otra linea de pixeles y eso es procesamiento serial, lo que haría una CPU. Que la imagen de repente cargue y valla cambiando dinámicamente es [procesamiento paralelo](https://www.ibm.com/es-es/think/topics/parallel-computing), esa es la magia de una GPU.
+
+> Tu puedes ver los pixeles: los de un teléfono, sobre todo un telefono moderno... Son muy chiquitos porque son microscópicos, por más que acerques el ojo no lo alcanzas a ver, pero si tienes un monitor de toda la vida sin tanta resolución, puedes acercar los ojos a la pantalla.... Podras ver las lineas de rojo, verde y azul con tus ojos humanos.
+
+Video Recomendado: https://www.youtube.com/watch?v=cId5PMLKEK8
 
 ---
 
-NVIDIA y ATI, que luego fue adquirida por AMD, crearon esta industria de las tarjetas gráficas, de hecho si no fuera por esta industria, no habria crecido la industria de los video juegos, una consola de videojuegos en esencia es una computadora que tiene todas las partes de una computadora por dentro, pero cuyo su sistema operativo esta especificamente optimizado para la reproduccción de videojuegos.
+[NVIDIA](https://www.nvidia.com/es-la/) y [ATI](https://es.wikipedia.org/wiki/ATI_Technologies), que luego fue adquirida por [AMD](https://www.amd.com/es.html), crearon esta industria de las [tarjetas gráficas](https://es.wikipedia.org/wiki/Tarjeta_gr%C3%A1fica "Tárjeta Gráfica concept by Wikipedia"), de hecho si no fuera por esta industria, no habria crecido la industria de los videojuegos, una consola de videojuegos en esencia es una computadora que tiene todas las partes de una computadora por dentro, pero cuyo su sistema operativo esta especificamente optimizado para la reproduccción de videojuegos.
 
 Y sus chips incluyen GPUs por supuesto.
 
-Cuando hablamos de [Sistemas Operativos](#qué-es-un-sistema-operativo), vimos un poco sobre interrupciones: Mecanismos del OS para darle prioridad de unos procesos contra otros por eso cuando tu computadora esta muy colgada haciendo un proceso muy complejo tu mouse se puede mover a alta velocidad porque el mouse tiene una alta prioridad en la jerarquia.
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Sapphire-Radeon-HD-5570-Video-Card.jpg/500px-Sapphire-Radeon-HD-5570-Video-Card.jpg">
+
+*Imagen Tomada De: https://es.wikipedia.org/wiki/Tarjeta_gr%C3%A1fica*
+
+---
+
+Cuando hablamos de [Sistemas Operativos](#qué-es-un-sistema-operativo), vimos un poco sobre [interrupciones](https://es.wikipedia.org/wiki/Interrupci%C3%B3n): Mecanismos del OS para darle prioridad de unos procesos contra otros por eso cuando tu computadora esta muy colgada haciendo un proceso muy complejo, tu mouse se puede mover a alta velocidad porque el mouse tiene una alta prioridad en la jerarquia.
 
 Cuando se procesa una pantalla imaginate que la GPU se cuelgue y solamente tengas imagen en el 75% de la pantalla y el resto se quede quieto, seria raro ¿No?
 
-Asi que las gpuS fueron originalmente diseñadas para que toda la pantalla tenga la misma prioridad a traves de un sistema llamado pipelines que en resumen, los primeros circuitos de GPU eran sencillos donde simplemente estaban encargados de sectores en la pantalla en donde todos los sectores de la pantalla tienen la misma prioridad y todos deben presentar una imagen.
+Asi que las GPUs fueron originalmente diseñadas para que toda la pantalla tenga la misma prioridad a traves de un sistema llamado [pipelines](https://en.wikipedia.org/wiki/Graphics_pipeline) que en resumen, los primeros circuitos de GPU eran sencillos... donde simplemente estaban encargados de sectores en la pantalla en donde todos los sectores de la pantalla tienen la misma prioridad y todos deben presentar una imagen.
 
-No eran versátiles de programar, pero por la ley de moore a medida de que aumentaba exponencialmente la complejidad de los transistores empezaron a emerger caracteristicas como la de generación de texturas, se programaron shaders, luces y cálculos de física porque todo lo que necesitaba procesamiento paralelo, como pasa mucho en los video juegos se podia pasar en estos cientos de miles de núcleos que hacen cálculos paralelos de alta velocidad.
+No eran versátiles de programar, pero por la [ley de moore](https://es.wikipedia.org/wiki/Ley_de_Moore) a medida de que aumentaba exponencialmente la complejidad de los transistores empezaron a emerger características como la de generación de texturas, se programaron shaders, luces y cálculos de física porque es todo lo que necesitaba procesamiento paralelo, como pasa mucho en los videojuegos se podia pasar en estos cientos de miles de núcleos que hacen cálculos paralelos de alta velocidad.
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/9/90/Ley_de_Moore.png">
+
+*Imagen Tomada De: https://es.wikipedia.org/wiki/Ley_de_Moore*
 
 Entonces asi, emergió un nuevo tipo de computación paralela que es la forma en la que funciona toda la industria de los efectos especiales, de los video juegos, de la animación.
 
-Pero como necesitan nunca trabarse, no puede usar la memoria ram tradicional que en una computadora esta muy lejos del chip (Esto es mucho antes de los System on a Chip que tienen todo integrado.)
+> Es interesante pensar entonces, de los ivdeojuegos como una simulación de la vida real en donde hay unos cálculos físicos que se estan realizando todo el tiempo.
 
-Asi que las GPUs son tarjetas que, además de tener estos procesadores gráficos tienen una memoria especial independiente y esa memoria se le conoce como VRAM y es la memoria de RAM de Video. 
+Video Recomendado para Analizar el Mundo de un Juego (Es un juego como tal, pero se puede analizar desde perspectivas computacionales las cuales simulan la física): 
+**BLACK MYTH WUKONG Gameplay Walkthrough FULL GAME 100% (4K 60FPS) No Commentary** - https://www.youtube.com/watch?v=_R5IdnlZ0R4
+
+Pero como necesitan nunca trabarse, no puede usar la memoria RAM tradicional que en una computadora esta muy lejos del chip (Esto es mucho antes de los System on a Chip que tienen todo integrado.)
+
+Asi que las GPUs son tarjetas que, además de tener estos procesadores gráficos tienen una memoria especial independiente y esa memoria se le conoce como [VRAM y es la memoria de RAM de Video. ](https://www.lenovo.com/co/es/glosario/memoria-de-video/ "VRAM concept by Leonovo")
 
 Una memoria volátil especialmente para esa computación paralela. Asi que cuando uno empieza a jugar videojuegos, uno carga datos en la VRAM asi que ahí es donde se cargan las texturas de tu videojuego, los polígonos y todos esos cálculos de física que vas a usar cuadno estás jugando un juego tridimensional.
+
+A continuación una imagen de Drake (Uncharted 2: El reino de los ladrones, Playstation 3 - 30.000 Poligonos)
+
+<img src="https://mediamaster.vandal.net/i/620x395/4-2014/201441116398_1.jpg">
+
+*Imagen Tomada De: https://mediamaster.vandal.net/i/620x395/4-2014/201441116398_1.jpg*
 
 ---
 
@@ -2097,11 +2156,27 @@ Por ejemplo: El mundo.
 
 Cuanto tú quieres modelar el sistema de las nubes para poder predecir el clima. Necesitas el procesamiento paralelo para predecir el clima y asi entonces un procesamiento paralelo de muchísimas variables al mismo tiempo.
 
+<img src="https://services.meteored.com/img/article/-247062-hasta-cuantos-dias-de-antelacion-se-puede-predecir-el-tiempo--136281-6_1280.jpg">
+
+*Imagen Tomada De: https://www.tiempo.com/ram/247062/hasta-cuantos-dias-de-antelacion-se-puede-predecir-el-tiempo/*
+
 Siendo asi las GPUs ideales para simulación.
 
 Hubo una época en las que investigadores que creaban supercomputadoras para simulaciones de física, de estrellas, agujeros negros, etc...
 
-> Esto me hace pensar entonces qué: ¿Qué uso le das a tu computadora en tu día a día? Pues teniendo en cuenta lo hablado, por medio de las matemáticas y la computación se pueden realizar diferentes modelos computacionales para hacer predicciones. ¿Te imaginas una predicción sobre el desarrollo humano? Da miedo con pensarlo.
+La física que rige estrellas, galaxias, agujeros negros, materia oscura, energía oscura o la expansión cósmica implica ecuaciones extremadamente complejas (como las de la relatividad general, termodinámica de gas, dinámica de fluidos, campos magnéticos, etc.).
+
+Estas ecuaciones no tienen soluciones simples y requieren calcular millones o billones de interacciones simultáneas.
+
+Eso sólo es posible con supercomputadoras de alto rendimiento (HPC), capaces de realizar billones de cálculos por segundo para aproximar la realidad física.
+
+Lectura Recomendada:
+
+* Frontier - La simulación computacional del universo: https://www.universetoday.com/articles/a-superfast-supercomputer-creates-the-biggest-simulation-of-the-universe-yet
+
+* Stampede2 - Utilizadas para simular sombras y entornos alrededor de agujeros negros, incluyendo los discos de gas turbulentos que los rodean: https://www.universetoday.com/articles/researchers-simulate-what-a-black-hole-shadow-look-like 
+
+> Esto me hace pensar entonces qué: **¿Qué uso le das a tu computadora en tu día a día?** Pues teniendo en cuenta lo hablado, por medio de las matemáticas y la computación se pueden realizar diferentes modelos computacionales para hacer predicciones. ¿Te imaginas una predicción sobre el desarrollo humano? Da miedo con pensarlo.
 
 Se dieron cuenta que el Chip de la PlayStation 3 un chip reado por IBM que combinaba CPU y GPU para los videojuegos de PS3 era increiblemente eficiente y como en el ps3 se puede instalar linux de toda la vida empezaron a comprar PS3 en masa y a crear clústeres de PlayStation con Linux para hacer simulaciones y fabricar supercomputadoras mucho más barato de lo que cuesta una supercomputadora porque a la final del día **Un videojuego es una simulación del mundo real** asi que sirve perfectamente para la física.
 
