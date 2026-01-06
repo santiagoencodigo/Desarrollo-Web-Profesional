@@ -2168,19 +2168,42 @@ La física que rige estrellas, galaxias, agujeros negros, materia oscura, energ�
 
 Estas ecuaciones no tienen soluciones simples y requieren calcular millones o billones de interacciones simultáneas.
 
-Eso sólo es posible con supercomputadoras de alto rendimiento (HPC), capaces de realizar billones de cálculos por segundo para aproximar la realidad física.
+Eso sólo es posible con [supercomputadoras de alto rendimiento (HPC)](https://www.ibm.com/es-es/think/topics/hpc "HPC concept by IBM"), capaces de realizar billones de cálculos por segundo para aproximar la realidad física.
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/The_catalyst_high_performance_computing_%28HPC%29.jpg/1200px-The_catalyst_high_performance_computing_%28HPC%29.jpg">
+
+*Imagen Tomada De: https://es.wikipedia.org/wiki/Archivo:The_catalyst_high_performance_computing_%28HPC%29.jpg*
 
 Lectura Recomendada:
 
 * Frontier - La simulación computacional del universo: https://www.universetoday.com/articles/a-superfast-supercomputer-creates-the-biggest-simulation-of-the-universe-yet
 
+* La Supercomputadora FRONTIER presenta la simulación del universo más gramde jamás realizada: https://www.youtube.com/watch?v=WpUZmXpVIDA
+
 * Stampede2 - Utilizadas para simular sombras y entornos alrededor de agujeros negros, incluyendo los discos de gas turbulentos que los rodean: https://www.universetoday.com/articles/researchers-simulate-what-a-black-hole-shadow-look-like 
+
+* New NASA Black Hole Visualization Takes Viewers Beyond the Brink: https://science.nasa.gov/universe/black-holes/supermassive-black-holes/new-nasa-black-hole-visualization-takes-viewers-beyond-the-brink/
 
 > Esto me hace pensar entonces qué: **¿Qué uso le das a tu computadora en tu día a día?** Pues teniendo en cuenta lo hablado, por medio de las matemáticas y la computación se pueden realizar diferentes modelos computacionales para hacer predicciones. ¿Te imaginas una predicción sobre el desarrollo humano? Da miedo con pensarlo.
 
-Se dieron cuenta que el Chip de la PlayStation 3 un chip reado por IBM que combinaba CPU y GPU para los videojuegos de PS3 era increiblemente eficiente y como en el ps3 se puede instalar linux de toda la vida empezaron a comprar PS3 en masa y a crear clústeres de PlayStation con Linux para hacer simulaciones y fabricar supercomputadoras mucho más barato de lo que cuesta una supercomputadora porque a la final del día **Un videojuego es una simulación del mundo real** asi que sirve perfectamente para la física.
+> ¿Cómo será la vida de un trabajador de la [NASA](https://www.nasa.gov/ "www.nasa.gov")? Y quienes serán los ejecutivos de esta gran organización? Pienso que en cualquier lado de forma universal se le puede reconocer aunque no se tenga tanto conocimiento de esta.
 
-Porque el dinero: Sony, Microsoft con el Xbox, Nintendo (Nintendo si hace dinero con las consolas). Sony y Microsoft no hacen dinero con sus consolas pues lo venden a perdida y ganan dinero con la venta de video juegos.
+Se dieron cuenta que el Chip de la [PlayStation 3](https://www.playstation.com/es-co/playstation-history/2007-ps3-ps-vita/) [un chip reado por IBM que combinaba CPU y GPU](https://www.xataka.com/videojuegos/procesador-cell-utilizado-sony-playstation-3-pequeno-prodigio-tecnologia-que-hoy-asombra-su-potencia "Chip de PS3 creado por IBM - Explicación by Xataka") para los videojuegos de PS3 era increiblemente eficiente, y como en el ps3 se puede instalar linux de toda la vida empezaron a comprar PS3 en masa y a crear [clústeres](https://www.salesforce.com/mx/blog/clusteres/ "Explicación Clústeres by SalesForce") de PlayStation con Linux para hacer simulaciones y fabricar supercomputadoras mucho más barato de lo que cuesta una supercomputadora porque a la final del día **Un videojuego es una simulación del mundo real** asi que sirve perfectamente para la física.
+
+Video Recomendado - La PS3 usaba el procesador Cell Broadband Engine: https://www.dailymotion.com/video/x9gtlqe
+
+Lectura Recomendadas:
+
+* https://en.wikipedia.org/wiki/PlayStation_3_cluster
+
+* https://www.infobae.com/tecno/2025/02/26/construyen-una-supercomputadora-con-1760-playstation-esta-es-la-historia-que-dejo-a-muchos-sorprendidos/
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/CondorCluster.png/500px-CondorCluster.png">
+
+*Imagen Tomada De: https://en.wikipedia.org/wiki/PlayStation_3_cluster*
+
+
+Porque el dinero: [Sony](https://www.sony.com.co/homepage), [Microsoft con el Xbox](https://www.xbox.com/es-CO/), [Nintendo](https://www.nintendo.com/es-es/) (Nintendo si hace dinero con las consolas). Sony y Microsoft no hacen dinero con sus consolas pues lo venden a perdida y ganan dinero con la venta de videojuegos.
 
 PS3 era vendido a perdida.
 
@@ -2188,9 +2211,19 @@ Asi que playStation estaba perdiendo dinero haciendo todas estas consolas para l
 
 > La computación científica corría en PlayStation.
 
-La inteligencia artificial también es procesamiento paralelo pues cuando tu utilizas un lenguaje de inteligencia artificial para generar un texto el modelo de lenguaje empieza a recorrer un arbol gigantesco de la esctructura del lenguaje huano con el que fue entrenado.
+La inteligencia artificial también es procesamiento paralelo pues cuando tu utilizas un lenguaje de inteligencia artificial para generar un texto el modelo de lenguaje empieza a recorrer un arbol gigantesco de la esctructura del lenguaje humano con el que fue entrenado.
 
-Asi mismo trata de encontrar diferentes caminos para responder una pregunta. La que tu le haces a ChatGPT o a DeepSekk, a Cloud o a Gemini o a cualquier modelo que utilices.
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Colored_neural_network_es.svg/500px-Colored_neural_network_es.svg.png">
+
+*Imagen Tomada De: https://es.wikipedia.org/wiki/Red_neuronal_artificial*
+
+Lectura Recomendada: https://www.ibm.com/es-es/think/topics/deep-learning
+
+Asi mismo trata de encontrar diferentes caminos para responder una pregunta. La que tu le haces a [ChatGPT](https://chatgpt.com/ "https://chatgpt.com/") o a [DeepSeek](https://chat.deepseek.com/ "https://chat.deepseek.com/"), a [claude](https://claude.ai/ "https://claude.ai/") o a [Gemini](https://gemini.google.com/ "https://gemini.google.com/") o a cualquier modelo que utilices.
+
+<img src="https://planetachatbot.com/wp-content/uploads/2023/12/2.png">
+
+*Imagen Tomada De: https://planetachatbot.com/estudio-exhaustivo-de-grandes-modelos-lenguaje/*
 
 El punto es que el procesamiento paralelo ocurre con GPUs originalmente, eventualmente empezamos a utilizar chips más especializados.
 
@@ -2198,59 +2231,132 @@ Inicialmente los primeros modelos de AI antes de la superinteligencia, fueron en
 
 ---
 
-Los autos autónomos como los Tesla o Waymo de Google usan GPUs, porque asi una GPU tiene que procesar cada píxel de una pantalla, un automóvil usa las cámaras y los radares que tiene en el marco del automóvil en su estructura para capturar imágenes del mundo exterior.
+[Los autos autónomos](https://www.mapfre.com.co/seguros-carros/preguntas-frecuentes/que-son-los-vehiculos-autonomos/ "Autos Autónomos concept by Mapfre") como los [Tesla](https://www.tesla.com/es_co) o [Waymo de Google](https://waymo.com/intl/es/) usan GPUs, porque asi una GPU tiene que procesar cada píxel de una pantalla, un automóvil usa las cámaras y los radares que tiene en el marco del automóvil en su estructura para capturar imágenes del mundo exterior.
 
 Todo esto tiene que ser procesado en tiempo real para convertirla en los polígonos tridiomensionales que le permiten a un algoritmo de inteligencia artificial decidir si el auto va a frenar, acelarar o moverse.
+
+<img src="https://storage.googleapis.com/waymo-prod-cdn/uploads/6766134c37d8067dbd109f39419595db-16-9-timeline-gif.gif">
+
+*Imagen Tomada De: https://waymo.com/blog/2023/01/why-i-ride-with-waymo-maya
 
 Sin GPUs, ese procesamiento paralelo de alta velocidad, de cálculos relativamente simples, pero **Millones al mismo tiempo** no sería posible.
 
 ---
 
-Las CPUs normales se programan con un lenguaje ensamblador. Ese lenguaje es el que arranca el kernel y el que abre el OS.
+Las CPUs ejecutan instrucciones en lenguaje máquina, y el software de bajo nivel que las inicializa suele escribirse en lenguaje ensamblador. Este código es el encargado de iniciar el proceso de arranque (boot), cargar el kernel y dar comienzo al sistema operativo.
 
-Las aplicaciones que se programan en lenguajes como C++, Python, Visual Basic entre otros... Todos esos lenguajes compilan al lenguaje ensamblador de la CPU, las GPUs tienen algo muy parecido.
+Las aplicaciones que se programan en lenguajes como [C++](https://es.wikipedia.org/wiki/C%2B%2B), [Python](https://www.python.org/), [Visual Basic](https://es.wikipedia.org/wiki/Visual_Basic) entre otros... Todos esos lenguajes compilan al lenguaje ensamblador de la CPU, las GPUs tienen algo muy parecido.
 
-Y fabricantes como NVIDIA han creado lenguajes intermedios para que los programadores le hablen al metal para asi poder programar el chip de la GPU, el más popular en este momento se llamad CUDA de NVIDIA, inicialmente pensada para videojuegos.
+Y fabricantes como [NVIDIA](https://www.nvidia.com/es-la/) han creado lenguajes intermedios para que los programadores le hablen al metal para asi poder programar el chip de la GPU, el más popular en este momento se llama [CUDA de NVIDIA](https://es.wikipedia.org/wiki/CUDA), inicialmente pensada para videojuegos.
 
 CUDA es parte de la razón por la que la revolución de la AI es posible pues permite hacer estos cálculos masivos reprogramando el comportamiento de chips que originalmente fueron pensados para mover pixeles.
 
-Las GPUs también se programan y se diseñan a nivel físico de hardware con consideraciones distintas: La CPU que es el procesador que arranca el OS está en el corazón de la tarjeta madre de una computadora o de la tarjeta central de un teléfono, pero la GPU se conecta a alta velocidad a través de un puerto que se llama PCI-E.
+Lectura Recomendada: https://www.lenovo.com/co/es/glosario/cuda-toolkit/
 
-Una serie de muesquintas que se conectan directamente a la electrónica de la tarjeta madre, en un telefóno o en un computador de apple que utilice System on a Chip, la GPUs estan directamente pagadas a la CPU en el SOC.
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Nvidia_CUDA_Logo.jpg/406px-Nvidia_CUDA_Logo.jpg">
 
-En una computadora normal, la CPU tiene un ventilador o un sistema de refrigeramiento por agua que enfría la CPU, pero las GPUs también se calientan, así que tienen sus propios sistemas de enfriamiento paralelo.
+*Imagen Tomada De: https://es.wikipedia.org/wiki/CUDA*
 
-Sus propios ventiladores o su propia refrigreración de agua, en algunos casos como en las computadoras de videojuegos más poderosas, o en las computadoars de render de efectos especiales, o en las superocmputadoras de simulación para efectos científicos, llegan a enfriarlas con aceite, el aceite no conduce electricidad asi que hay computadoras que se hunden en aceite para que el aceite disipe el calor. 
+Las GPUs también se programan y se diseñan a nivel físico de hardware con consideraciones distintas: La CPU que es el procesador que arranca el OS está en el corazón de la tarjeta madre de una computadora o de la tarjeta central de un teléfono, pero la GPU se conecta a alta velocidad a través de un puerto que se llama [PCI-E](https://es.wikipedia.org/wiki/PCI_Express "PCI-E concept by Wikipedia").
+
+Una serie de muesquintas que se conectan directamente a la electrónica de la tarjeta madre, en un telefóno o en un computador de apple que utilice System on a Chip, la GPUs estan directamente pegadas a la CPU en el SOC.
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/PCI-Express-Bus-1-lane.jpg/500px-PCI-Express-Bus-1-lane.jpg">
+
+*Imagen Tomada De: https://es.wikipedia.org/wiki/PCI_Express*
+
+En una computadora normal, [la CPU tiene un ventilador o un sistema de refrigeramiento por agua que enfría la CPU](https://es.wikipedia.org/wiki/Enfriamiento_de_computadoras "Enfriamiento de Computadoras by Wikipedia"), pero las GPUs también se calientan, así que tienen sus propios sistemas de enfriamiento paralelo.
+
+Lectura Recomendada: https://www.sciencedirect.com/science/article/abs/pii/S0306261917310541
+
+Sus propios ventiladores o su propia refrigreración de agua, en algunos casos como en las computadoras de videojuegos más poderosas, o en las computadoras de render de efectos especiales (VFX), o en las supercomputadoras de simulación para efectos científicos, llegan a enfriarlas con aceite, el aceite no conduce electricidad asi que hay computadoras que se hunden en aceite para que el aceite disipe el calor. 
+
+Lectura Recomendada: https://www.kingston.com/es/blog/gaming/mineral-oil-cooling-pc-builds
+
+<img src="https://www.profesionalreview.com/wp-content/uploads/2021/03/PC-refrigerado-por-inmersion.jpg">
+
+*Imagen Tomada De: https://www.profesionalreview.com/2021/03/14/refrigeracion-por-inmersion/*
+
+<img src="https://i.blogs.es/159ef2/aceite_refrigerantepc/1366_2000.jpg">
+
+*Imagen Tomada De: https://www.xataka.com/ordenadores/refrigeracion-por-aceite*
 
 ---
 
-Codecs: Codificadores de Codificadores. Un tipo de algoritmo de compresión y descompresión que es por ejemplo, la forma en la que funciona el video. Anteriormente los videos eran súper pesados y ahora son mucho más livianos. Antes teniamos blu-rays y ahora tenemos youtube y netfix.
+**Codecs**
+
+Im Codificador-Decodificador. Un tipo de algoritmo de compresión y descompresión que es por ejemplo, la forma en la que funciona el video. Anteriormente los videos eran súper pesados y ahora son mucho más livianos. Antes teniamos [blu-rays](https://es.wikipedia.org/wiki/Disco_Blu-ray) y ahora tenemos youtube y netfix.
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/BluRayDiscBack.png/500px-BluRayDiscBack.png">
+
+*Imagen Tomada De: https://es.wikipedia.org/wiki/Disco_Blu-ray*
 
 Esos algoritmos gastan muchísimo el chip, antes utilizaban la GPU, y mucho más antes la CPU. Ahora usan transistores especializados dentro de la GPU como instrucciones que solamente se encargan de codificar y descodificar el video. Usando mucho menos electricidad.
 
-Lo mismo apsa con la simulación de ciertos video juegos
+Lo mismo pasa con la simulación de ciertos video juegos.
 
-> Blakc Myth Wukong RTX ON.
+---
 
-Los videojuegos empezaron a simular el comportamiento de los fotones del mundo real, el comportamiento de la luz con una técnica llamada ray tracing que inicialmente se programaba en código, pero ahora se crean en el transistor, en los chips y la GPU tiene unidades especificas diseñadas para ray tracing.
+Los videojuegos empezaron a simular el comportamiento de los [fotones](https://es.wikipedia.org/wiki/Fot%C3%B3n) del mundo real, el comportamiento de la luz con una técnica llamada [ray tracing](https://es.wikipedia.org/wiki/Trazado_de_rayos "Ray Tracing by Wikipedia") que inicialmente se programaba en código, pero ahora se crean en el transistor, en los chips y la GPU tiene unidades especificas diseñadas para [ray tracing](https://www.lenovo.com/co/es/glosario/ray-tracing/ "Ray Tracing by Lenovo").
 
-Con la inteligencia artificial para lo mismo. Pues la AI es en esencia multiplicación de matrices y recorrido de árboles, eso se puede programar en el chip y es la esencia de las unidades de procesamiento neural.
+> Black Myth: Wukong RTX ON.
+
+Video Recomendado: Gameplay sin comentarios de Black Myth Wukong - https://www.youtube.com/watch?v=T4DFKOlrXCQ
+
+<img src="https://i.blogs.es/0bc8f8/black-myth-wukong-fondos-pantalla-2049705/650_1200.jpeg">
+
+*Imagen Tomada De: https://www.xataka.com/videojuegos/black-myth-wukong-arrastra-a-steam-su-exito-masivo-plataforma-ha-batido-su-record-historico-jugadores*
+
+Con la inteligencia artificial para lo mismo. Pues la AI es en esencia multiplicación de matrices y recorrido de árboles, eso se puede programar en el chip y es la esencia de las [unidades de procesamiento neural](https://www.xataka.com/basics/npu-que-sirve-este-tipo-procesador).
 
 NVIDIA por ejemplo, tiene chips que solamente hacen eso.
 
 ---
 
-Antes de que la AI consumiera grandes cantidades de chips gráficos, lo hizo las criptomonedas: Bitcoin y cada moneda de BlockChain requiere hacer un cálculo matemático muy particular para que el blockchain funcione de manera cifrada. Ese cálculo es más amigable en procesamiento paralelo que en procesamiento serial. Asi que aprovecha las GPUs y como Bitcoin recompensa con Criptomonedas a las personas que hacen este proceso de ejecutar las ecuaciones matemáticas llamado Criptomineria, se creó toda una industria de minería de Bitcoin que es poner a correr estas GPUs al maximo en grandes granjas de servidores pegadas a granjas de hirdroeléctricas, plantas de energia nuclear, energia basada en gas, etc...
+Antes de que la AI consumiera grandes cantidades de chips gráficos, lo hizo las [criptomonedas](https://www.bancosantander.es/glosario/criptomoneda "Criptomonedas by Banco Santander"): Bitcoin y cada moneda de [BlockChain](https://www.blockchain.com/es/) requiere hacer un cálculo matemático muy particular para que el blockchain funcione de manera cifrada. Ese cálculo es más amigable en procesamiento paralelo que en procesamiento serial. Asi que aprovecha las GPUs y como Bitcoin recompensa con Criptomonedas a las personas que hacen este proceso de ejecutar las ecuaciones matemáticas llamado [Criptomineria](https://es.wikipedia.org/wiki/Miner%C3%ADa_de_bitcoin "Criptomineria by Wikipedia"), se creó toda una industria de minería de Bitcoin que es poner a correr estas GPUs al maximo en grandes granjas de servidores pegadas a granjas de hirdroeléctricas, plantas de energia nuclear, energia basada en gas, etc...
 
 Hay paises enteros que tienen cosas asi, como por ejemplo El Salvador, eso hizo que la demanda de Chips aumentara justo antes de que llegara la inteligencia artificial.
 
+Lectura Recomendada: 
+
+* https://www.c3controls.com/es/documento-tecnico/planificacion-de-una-operacion-de-criptomineria
+
+* https://bitcoin.org/bitcoin.pdf
+
+* https://www.xataka.com/servicios/bitcoin-la-tecnologia-detras-de-la-moneda-p2p
+
+> Interesante paginas como https://www.coinbase.com/es-la
+
+> Un rig de criptominería puede entenderse como un pequeño clúster de GPUs,
+donde cada GPU ejecuta cálculos de [hashing](https://www.ionos.com/es-us/digitalguide/paginas-web/desarrollo-web/hashing/) de forma independiente,
+un ejemplo clásico de computación masivamente paralela.
+
+<img src="https://static.eldiario.es/clip/a25a5f72-f95d-434b-b2b6-c866ba4f200f_16-9-discover-aspect-ratio_default_0.webp">
+
+*Imagen Tomada De: https://www.eldiario.es/tecnologia/fiebre-criptominera-reduce-precios-tarjetas-graficas-ordenadores_1_9289500.html*
+
 ---
 
-No es como que las GPUs hayan abandonado la industria de los videojuegos úes todavia hay mucha innovación.
+No es como que las GPUs hayan abandonado la industria de los videojuegos pues todavia hay mucha innovación.
 
-VALVE: La empresa detrás de juegos como Portal, Half Life y el Sistema STEAM, tiene un sistema operativo llamado SteamOS que reemplaza el OS que corres en tu computadora para maximiar el uso de recursos para un videojuego de tal manera que tu computadora se vuelve en esencia una consola de videojuegos.
+[VALVE](https://www.valvesoftware.com/es/): La empresa detrás de juegos como Portal, Half Life y el Sistema STEAM, tiene un sistema operativo llamado [SteamOS](https://store.steampowered.com/steamos?l=spanish) que reemplaza el OS que corres en tu computadora para maximiar el uso de recursos para un videojuego de tal manera que tu computadora se vuelve en esencia una consola de videojuegos.
 
-Tambien la realidad aumentada y la realidad virtual han aumentado la necesidad de proceasdores gráficos porque en cada ojo estas procesando dos pantallas distintas para crear esa sensación de tridimensionalidad y presencia que tiene la realidad virtual asi que aun sigue habiendo mucha innovación gráfica sólo que la IA lo absorbió mucho y todavía tenemos mucho de procesamiento científico que hacer.
+Lectura Recomendada: 
 
-Las GPUs son un procesador revolucionario que avanzó la ciencia humana.
+* https://es.wikipedia.org/wiki/Valve_Corporation
+
+* https://es.wikipedia.org/wiki/SteamOS
+
+
+Tambien la realidad aumentada y la realidad virtual han aumentado la necesidad de procesadores gráficos porque en cada ojo estas procesando dos pantallas distintas para crear esa sensación de tridimensionalidad y presencia que tiene la realidad virtual, asi que aun sigue habiendo mucha innovación gráfica sólo que la IA lo absorbió mucho y todavía tenemos mucho procesamiento científico que hacer.
+
+<img src="https://a.storyblok.com/f/102932/600x338/b2c03b0823/apple-vision-pro-gif.gif">
+
+*Imagen Tomada De: https://creative.salon/articles/features/apple-vision-pro-and-adland*
+
+> la Realidad Virtual (RV) te sumerge en un mundo completamente digital y te aísla del real (ej. cascos que bloquean tu vista), mientras que la Realidad Aumentada (RA) superpone elementos digitales como las Apple Vision Pro
+
+**Las GPUs son un procesador revolucionario que avanzó la ciencia humana.**
+
+---
 
