@@ -26,6 +26,8 @@ Cómo funciona Internet, las computadoras, los chips, la inteligencia artificial
 
 - [10. GPUs: Procesadores Gráficos y de AI](#gpus-procesadores-gráficos-y-de-ai)
 
+- [11. Qué es un Algoritmo y Qué es un Lenguaje de Programación](#qué-es-un-algoritmo-y-qué-es-un-lenguaje-de-programación)
+
 
 
 
@@ -2358,5 +2360,128 @@ Tambien la realidad aumentada y la realidad virtual han aumentado la necesidad d
 
 **Las GPUs son un procesador revolucionario que avanzó la ciencia humana.**
 
+
+
+
+
+
+
+
+
+
+
 ---
 
+
+
+
+
+
+
+
+
+
+
+## Qué es un Algoritmo y Qué es un Lenguaje de Programación
+
+Un algoritmo es un conjunto de pasos logicos claramente definidos de una manera no ambigua para resolver un problema o lograr un objetivo.
+
+Como por ejemplo: 
+
+Imaginemos un sistema de aire acondicionado. Que de forma simplificada es un sistema que hace dos cosas: Calientan o enfrían el aire.
+
+Pero una vez el aire esta caliente o frio, el siguente paso es distribuirlo al rededor del área que quieres condicionar asi que tienes que ventilar el aire.
+
+Y si el aire ya está a la temperatura deseada por el usuario, tienes que dejar de ventilar el aire sino vas a perder esa temperatura.
+
+Entonces para eso, los aires acondicionados utilizan un termostato el cual esta constantemente midiendo la temperatura del aire comparada con la que el usuario tiene.
+
+**¿Cómo entonces expresamos todas estas funciones de una manera algoritmica?**
+
+1. Tenemos que definir nuestras variables por lo que, al tener nuestro termostato... Este sabe dos cosas: La temperatura actual, definida como **Temperatura** y la temperatura que el usuario quiere definida como **Usuario**.
+
+Vamos a asumir que el lugar donde estamos esta a veinte grados y que la temperatura que el usuario quiere es de 24 grados.
+
+2. Tenemos que definir si tenemos que calentar o enfriar, asi que debemos crear una condición en donde si la temperatura es menor = *si (temperatura < usuario)* que la que el usuario quiere ¿Qué tenemos que hacer?.
+Por lo que teniendo en cuenta lo que hemos asumido si (20 < 24) significa que está más frio asi que tenemos que activar el aire acondicionado en modo calentador. Es decir, calentar el aire.
+
+¿En qué logramos parar de ventilar?, Digamos que la ventilación es un proceso que ocurre cada segundo y digamos que nuestro sistema está corriendo un ciclo cada segundo.
+
+Por ende podemos expresar de forma algoritmica que en cada ciclo se esta evaluando el sistema, por ende si la temperatura es menor que la que pide el usuario, calentamos y sino lo que deberiamos hacer es enfriar.
+
+Por ende, ¿Siempre deberiamos estar ventilando? No. ¿Qué pasa si la temperatura está perfecta? o Si (temperatura = usuario) pues ventilar sería un problema para el usuario por ende sólo vamos a ventilar cuando la temperatura sea distinta.
+
+Por ende, hagamos que el ciclo cada vez que se repita pregunte si la temperatura es igual a la del usuario = *temperatura != usuario*.
+
+Por ende: 
+
+> Ciclo
+
+    MIENTRAS (temperatura != usuario) 
+
+>hacemos la condición 
+
+    Si (temp < usuario) 
+        calendar ()
+    Sino
+        Enfriar ()
+
+    Ventilar ()
+
+> Este ciclo sólo va a ocurrir en el momento que la temperatura sea diferente a la que desea el usuario y sino la sacamos. Esto ocurre en cada segundo en el ciclo de un aire acondicionado.
+
+---
+
+Hay algoritmos más simples. Como un hervidor que tiene que hervir el agua hasta los 100 grados centigrados lo que hace una vez este lleno de agua, al oprimir el boton... Muy probablemente la electrónica de tu hervidor dice: Mientras el Agua sea de Menor Temperatura a 100 Grados manten el elemento de calor calentando de tal manera que, cuando sea mayor de cien grados ese mientras deja de funcionar y al terminar de funcionar el ciclo se apaga.
+
+O en otras palabras, más técnicas y algoritmicas.
+
+    Mientras temperatura_actual < 100 Hacer
+        activarElementoCalor()
+        esperar(1 segundo)
+        temperatura_actual < medirTemperatura()
+    Fin Mientras
+
+    ApagarElementoCalor()
+
+Siendo asi este, un algoritmo.
+
+---
+
+Entonces un algoritmo es una serie de instrucciones, una expresión matemática de las ordenes que se le puede dar a un sistema.
+
+Un lenguaje de programación no es necesariamente un algoritmo, los lenguajes de programación son lenguajes los cuales los algoritmos se expresan.
+
+Pero tu puedes expresar un algoritmo como quieras.
+
+Cuando te den una serie de instrucciones para completar una tarea, una serie de procesos que te den para tu trabajo... Eso es un algoritmo para que tú ejecutes y tu no eres un lenguaje de programación.
+
+Los lenguajes de programación son mecanismos escritos típicamente en un lenguaje inglés adaptado, como por ejemplo: Javascript, Python, C++, Visual Basic, etc...
+
+Que transforman estas instrucciones en el lenguaje de la máquina, siendo este el lenguaje que usan los chips para hacer estas operaciones matemáticas y este es conocido como Assembler o Lenguaje de Ensamblado o Lenguaje Ensamblador.
+
+---
+
+En nuestra era moderna, los lenguajes corren en el chip de dos maneras.
+
+Hay un tipo de lenguajes como por ejemplo Java o C o C++ que cuando se transforman al lenguaje de máquina pasan por un proceso de compilación que es transformar ese lenguaje legible por humanos en el lenguaje de ceros y unos de la CPU.
+
+El resultado de la compilación es un archivo ejecutable. En Windows son los archivos que tienen la extensión .EXE, en linux o en mac son los archivos que tienen permisos de ejecución y son los ejecutables, las aplicaciones arrancan como una app, que corren como un mecanismo del sistema.
+
+El otro mecanismo son los lenguajes interpretados o interpretación. Cuando tu corres Javascript en el navegador o cuando usas algunos lenguajes de scripting como por ejemplo Python, estos lenguajes son interpretados sobre la marcha... Es decir que se leen línea a línea y en la memoria RAM, la computadora y su interprete (Interprete de Javascript o JS) por ejemplo, el navegador.
+
+El interprete de python es el sistema de ejecución en tiempo real de Python, que se llama Python.
+
+Ellos lo que hacen es transformar línea a línea el código a código que corre en el chip, pero sin compilarlo.
+
+---
+
+Existe una técnica interesante que se llama JIT Just in Time Compiler que lo que hace es compilar justo antes de ejecutar corriendolo todo en la memoria RAM de una manera segura.
+
+Aprender cualquier lenguaje de programación conviene mucho, no hay que casarse con un lenguaje de programación porque estos cambian... No hay un lenguaje de programación mejor que otro, no porque sepas uno, dos, tres, cinco o diez lenguajes te hace mejor o peor ingeniero. Lo importante es lo que haces con los lenguajes.
+
+Aprender lenguajes es trivial, realmente trivial. En el momento que domines dos lenguajes, puedes dominar tres, cuatro, cinco o diez, los que se deseen aprender.
+
+No se trata de aprender muchos lenguajes y no hay lenguajes que paguen mejor que otros. Es simplemente que sepas cómo solucionar cualquier problema a través de algoritmos y que esos que esos algoritmos sepas expresarlos en diferentes lenguajes.
+
+> Curiosidad Intelectual y no te Cases con Ningún Lenguaje. 
