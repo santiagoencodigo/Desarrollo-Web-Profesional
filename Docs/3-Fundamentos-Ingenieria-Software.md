@@ -6,6 +6,8 @@ Cómo funciona Internet, las computadoras, los chips, la inteligencia artificial
 
 ## Tabla de Contenidos
 
+### Computación Básica
+
 - [1. Proceso de arranque y encendido de computadoras y móviles](#proceso-de-arranque-y-encendido-de-computadoras-y-móviles)
 
 - [2. Cómo Funciona un Circuito Electrónico](#cómo-funciona-un-circuito-electrónico)
@@ -27,6 +29,10 @@ Cómo funciona Internet, las computadoras, los chips, la inteligencia artificial
 - [10. GPUs: Procesadores Gráficos y de AI](#gpus-procesadores-gráficos-y-de-ai)
 
 - [11. Qué es un Algoritmo y Qué es un Lenguaje de Programación](#qué-es-un-algoritmo-y-qué-es-un-lenguaje-de-programación)
+
+### Redes e Internet
+
+- [12. Direcciones IP y el protocolo de Internet](#direcciones-ip-y-el-protocolo-de-internet)
 
 
 
@@ -50,7 +56,15 @@ Cómo funciona Internet, las computadoras, los chips, la inteligencia artificial
 
 
 
-<!-- Computación Básica -->
+# Computación Básica
+
+
+
+
+
+
+
+
 
 
 ## Proceso de arranque y encendido de computadoras y móviles
@@ -2574,4 +2588,44 @@ A continuación ilustración animada del proceso de un algoritmo de ordenación 
 
 *Imagen Tomada De: https://es.wikipedia.org/wiki/Algoritmo*
 
+
+
+
+
+
+
+
+
+
 ---
+
+
+
+
+
+
+
+
+
+
+# Redes e Internet
+
+
+
+
+
+
+
+
+
+## Direcciones IP y el protocolo de Internet
+
+Asi como tu casa tiene uan dirección como carrera 1, 2, 3... de la calle 8. Todas las computadoras en internet en una red local tienen una dirección. Estas se conocen como direcciones IP y vienen tipicamente como 4 grupos de números como por ejemplo: 128.10.2.5
+
+¿Por qué son 4 números y no 5 u otro número? ¿Por qué cada uno de estos números va del 0 al 255 y no más allá?, ¿Por qué no podemos usar 4 números fuera de una red local?, ¿Porque en internet necesitamos utilizar otros tipo de números?
+
+Recordando que en una computadora todos los números son ceros y unos. Siendo un cero o un uno un bit. Y un grupo de esos bits es un byte.
+
+Entonces: Un byte es un grupo de 8 bits.
+
+Y hasta ahora asi funcionan las computadoras. En un Número/Dirección IP, IP significa Internet Protocol o protocolo de internet, lo que haciamos era
