@@ -2620,12 +2620,178 @@ A continuación ilustración animada del proceso de un algoritmo de ordenación 
 
 ## Direcciones IP y el protocolo de Internet
 
-Asi como tu casa tiene uan dirección como carrera 1, 2, 3... de la calle 8. Todas las computadoras en internet en una red local tienen una dirección. Estas se conocen como direcciones IP y vienen tipicamente como 4 grupos de números como por ejemplo: 128.10.2.5
+Asi como tu casa tiene una dirección como carrera 1, 2, 3... de la calle 8. Todas las computadoras en internet en una [red local](https://www.godaddy.com/resources/latam/tecnologia/que-es-una-red-lan "LAN concept by godaddy") tienen una dirección. Estas se conocen como [direcciones IP](https://www.lenovo.com/co/es/glosario/direccion-ip/ "Direcciones IP concept by Lenovo") y vienen tipicamente como 4 grupos de números como por ejemplo: 128.10.2.5
 
-¿Por qué son 4 números y no 5 u otro número? ¿Por qué cada uno de estos números va del 0 al 255 y no más allá?, ¿Por qué no podemos usar 4 números fuera de una red local?, ¿Porque en internet necesitamos utilizar otros tipo de números?
+<img src="https://www.cloudflare.com/resources/images/slt3lc6tev37/78rJr5URxwDD9uyxKNpsiJ/d220f31e4b59c89290f04eed689ab5bb/what_is_LAN_diagram.png">
+
+*Imagen Tomada De: https://www.cloudflare.com/es-es/learning/network-layer/what-is-a-lan/*
+
+Lecturas Recomendadas:
+
+* https://www.cloudflare.com/es-es/learning/network-layer/what-is-a-lan/
+
+* https://www.avast.com/es-es/c-what-is-lan
+
+* https://www.ibm.com/docs/es/cics-ts/5.5.0?topic=concepts-ip-addresses
+
+* https://www.hostinger.com/co/tutoriales/que-es-una-direccion-ip
+
+¿Por qué son 4 números y no 5 u otro número? ¿Por qué cada uno de estos números va del 0 al 255 y no más allá?, ¿Por qué no podemos usar 4 números fuera de una red local Porque en internet necesitamos utilizar otros tipo de números?
 
 Recordando que en una computadora todos los números son ceros y unos. Siendo un cero o un uno un bit. Y un grupo de esos bits es un byte.
 
 Entonces: Un byte es un grupo de 8 bits.
 
-Y hasta ahora asi funcionan las computadoras. En un Número/Dirección IP, IP significa Internet Protocol o protocolo de internet, lo que haciamos era
+Y hasta ahora asi funcionan las computadoras.
+
+En un Número/Dirección IP, IP significa Internet Protocol o protocolo de internet, lo que haciamos fue organizar estos números en grupos de 4 numeros teniendo diferente significado, pero principalmente son: ¿Donde está ubicada nuestra computadora?
+
+¿Por qué son entonces estos números?
+
+¿Por qué son 4 bytes, 4 números de 8 bits?
+
+Con 8 bits ¿Cual es el máximo número que podemos representar?
+
+Es el 255, en los bytes podemos tener 256 números siendo asi del 0 al 255 y por eso tenemos ese máximo número dentro de una IP.
+
+Si nosotros tomamos esos 4 bytes y los expandiéramos solamente a ceros y unos , ¿Cuantos ceros y unos tendríamos? Si son entonces 4 grupos, cada uno tiene 8 bits, quiere decir que es 8 por 4, es decir que tendriamos 32 bits por lo que las direcciones IP tienen un máximo de 32 bits siendo asi 32 ceros y unos.
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Ipv4_address_Spanish.svg/500px-Ipv4_address_Spanish.svg.png">
+
+*Imagen Tomada De: https://es.wikipedia.org/wiki/Direcci%C3%B3n_IP*
+
+> Me encontré con este documento: https://datatracker.ietf.org/doc/html/rfc791
+
+Que visualmente agrupamos en 4 números decimales normales expresados por su valor en bytes devididos por un punto. Están separados cada uno por un .
+
+Todo esto ocurrió cuando internet todavía era un experimento militar de una organización que es [la Agencia para el Desarrollo y de Investigación Avanzado de la Defensa, conocida como DARPA](https://www.darpa.mil/ "www.darpa.mil").
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/DARPA_Logo_2010.png/330px-DARPA_Logo_2010.png">
+
+*Imagen Tomada De: https://es.wikipedia.org/wiki/Agencia_de_Proyectos_de_Investigaci%C3%B3n_Avanzados_de_Defensa*
+
+Lecturas Recomendadas:
+
+* https://www.innovaciondigital360.com/iot/darpa-que-es-como-esta-organizada-y-que-hace-la-agencia-estadounidense/
+
+* https://www.esade.edu/es/articulos/por-que-europa-necesita-una-darpa
+
+DARPA se inventa esta estructura, como estructura de prueba para internet, pero luego internet se vuelve super popular y simplemente lo mantienen hasta que los números se acaban que... Con 32 bits ¿Cuanto es la cantidad de números que podemos guardar? Son 4.300.000.000 de números y como cada dispositivo conectado a internet tiene que tener un número único... Porque ya hace mucho tiempo que ya tenemos más de 4.300.000.000 Dispositivos, porque eso significa cada servidor, cada computador, cada teléfono, cada reloj, cada dispositivo, todo requiere de una dirección IP única.  
+
+Y en internet esas direcciones IP no simplemente cuando apago un computador tengo una dirección ip y cuando prendo el computador tengo otra.
+
+Y algunas sobre todo cuando son servidores, tienen que ser únicas y persistentes, ese es parte del problema por lo que entonces, se nos acabaron esas direcciones.
+
+El problema de que se nos van a acabar las direcciones se conoce desde 1998 porque se encontró que habia la necesidad de crear otro estandar siendo asi el IPv6 asi como el anterir que era IPv4 de 4 bytes y ahora tenemos 6. No exactos, pero los hay.
+
+Sabiendo que esto era un problema, desarrollamos este estándar siendo este ratificado en el 2017.
+
+---
+
+El estandar IPv6 fue diseñado para tener muchos ordenes de magnitud, más espacio. Porque en vez de tener 32 bits, lo cuadruplicamos y ahora tenemos 128 bits. 
+
+Lecturas Recomendadas:
+
+* https://www.xataka.com/basics/ipv6-que-sirve-que-ventajas-tiene
+
+* https://www.ibm.com/docs/es/power10/9028-21B?topic=networking-ipv6
+
+* https://www.ionos.es/digitalguide/servidores/know-how/ipv6-los-beneficios-del-nuevo-protocolo-de-internet/
+
+* https://docs.oracle.com/cd/E24842_01/html/820-2981/ipv6-overview-8.html
+
+Al tener muchos 2 bits 4 veces más tenemos una mayor cantidad de números porque es un número mucho más grande.
+
+128 bits representan muchos numeros más allá afuera. Y las direcciones tambien se ven distintas.
+
+Una dirección IPv6 que es la nueva versión tiene 8 grupos de números que se representan con 4 dígitos hexadecimales.
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/1/1a/Ipv6_address-es.svg">
+
+*Imagen Tomada De: https://es.wikipedia.org/wiki/Direcci%C3%B3n_IPv6
+
+> Los números hexadecimales son una base numérica asi como nosotros tenemos la base binaria que son solo 0 o 1, o la base decimal tiene dígitos del 0 al 9 y la hexadecimal tiene del 0 a la f.
+
+> Base Hexadecimal: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, A, B, C, D, E, F 
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Hexadecimal-counting.jpg/412px-Hexadecimal-counting.jpg">
+
+*Imagen Tomada De: https://es.wikipedia.org/wiki/Sistema_hexadecimal
+
+En IPv6 o en la versión 6 de las direcciones IP pasa algo curioso y es que aveces esos números son tan grandes que hay pedazos del grupo de esos numeros que no se usan que son puros ceros.
+
+Ejemplo:
+
+IPV6 Dirección Completa: **6cca:31e3:2399:0000:0715:0000:2880:a942**
+
+Cuando pasa eso, tendemos a comprimir la dirección colocando 2 puntos (**:**) entre esos grupos asi comprimiendolos y no tener que mostrar todos esos números 0.
+
+Ejemplo con la misma dirección IPV6: 6cca:31e3_2399::0715::2880:a942
+
+---
+
+Darpa no creia que fuera a ser internet tan popular y nunca cambiaron la configuración de los números IP hasta que empezamos a tener demasiadas computadoras conectadas.
+
+A lo largo de los años se han construido varias organizaciones y autoridades que se dedican a regular internet una de estas es [IANA = The Internet Assigned Numbers Authority o la Autoridad de Asignación de Números de Internet](https://www.iana.org/).
+
+Lecturas Recomendadas:
+
+* https://es.wikipedia.org/wiki/Internet_Assigned_Numbers_Authority
+
+* https://www.ionos.es/digitalguide/servidores/know-how/iana-que-es-y-cual-es-su-funcion/
+
+Esta autoridad es la que termina asignando las direcciones IP permanentes de diferentes computadoras en el mundo. 
+
+Todo dispositivo que se conecte a internet es por definición una computadora. En ocasiones necesitamos que estos números IP sean fijos para que siempre apunten al mismo lugar. Estos numeros se pueden comprar y diferentes organizaciones los compran para que a partir de ahí, los tengan de una manera fija. 
+
+Como por ejemplo cuando se ingresa a google.com pues este siempre va a tener la misma dirección IP. 
+
+> Diferentes computadoras tienen diferentes direcciones IPs en internet.
+
+---
+
+Hay una diferencia entre tener números IP en internet y tener números IP en tu red local. Internet es una red global asi como la conexión local de tu casa la cual se conecta a tu router WiFi y ambas redes usan números IP de una manera distinta.
+
+Las conexiones de red de tu casa se conectan al internet de allá afuera, al global donde estan los servidores, las redes sociales, sistemas de mensajeria, paginas web a todo lo que tu te conectas.
+
+Pero internamente en tu casa te conectas a WiFi. Tu teléfono, tu computadora, tu televisor, cada dispositivo que se conecta a internet debe contener una dirección IP unica.
+
+La IP de tu red local es distinta a la IP de Internet, por lo que en tu red local puedes tener una dirección ip que en otra red local sea exactamente igual, pero como solamente ocurre dentro del dominio o ambito de tu red local, es el lugar donde realmente importa ese número, asi que tu estas corriendo una IP local. 
+
+Por lo que probablemente tu habras visto una IP que dice: 127.0.0.1 la cual es internacionalmente estandarizada como la dirección IP de tu propio dispositivo tambien conocida como Local Host. Esto es básicamente un apuntador de dirección de internet que sin importar en la computadora la cual tu estes siempre apunta hacia tu misma computadora desde donde estas usando ese 127.0.0.1
+
+Lecturas Recomendadas: 
+
+* https://www.freecodecamp.org/news/what-is-localhost/
+
+* https://blog.hubspot.com/website/what-is-localhost
+
+* https://www.hostinger.com/tutorials/what-is-localhost
+
+* https://www.godaddy.com/resources/latam/stories/que-es-localhost-ip127001
+
+<img src="https://www.freecodecamp.org/news/content/images/2022/06/ss3-6.png">
+
+*Imagen Tomada De: https://www.freecodecamp.org/news/what-is-localhost/*
+
+Sin importar las diferentes direcciones IP que tenga tu red local cuando tu teléfono o tu computadora necesitan conectarse a internet usan sus direcciones de IP local para ir al Router WiFi de tu casa y al módem que se conecta a internet y eso transforma la petición en la ip de internet de tu casa. Ese paquete de la IP de tu casa sale a internet, recupera el dato y tu router WiFi sabe de donde vino la petición de ese paquete y lo redirecciona a la IP de tu casa.
+
+Esto lo hace internamente a través de algo llamado un NAT.
+
+[NAT = Network Address Translation](https://es.wikipedia.org/wiki/Traducci%C3%B3n_de_direcciones_de_red "NAT concept by Wikipedia") y es una tecnología interna de todos los enrutadores o routers para transformar las peticiones de una red local hacia las peticiones de otra red externa que tipicamente es internet.
+
+<img src="https://pandorafms.com/wp-content/uploads/2024/04/NAT-blog-1.png">
+
+*Imagen Tomada De: https://pandorafms.com/es/it-topics/que-es-nat/*
+
+Es importante cuanto estas desarrollando software entiendas los numeros IP porque asi entiendes de donde viene un mensaje, si tienes un problema del desarrollo de software, y simplemente es concoimiento básico de depuración y entendimiento de sistemas conectados que hoy en día son la gran mayoría de sistemas que programamos.
+
+Por otro lado nosotros cuando programamos casi no usamos las direcciones IP sino que a cada IP le asignamos un nombre. Esto se conoce como nombre de Dominio.
+
+Lecturas Recomendadas: 
+
+* https://es.wikipedia.org/wiki/Traducci%C3%B3n_de_direcciones_de_red
+
+* https://www.fortinet.com/lat/resources/cyberglossary/network-address-translation
+
+* https://www.xataka.com/basics/que-nat-ventajas-desventajas-tipos-cual-se-usa-cada-caso
