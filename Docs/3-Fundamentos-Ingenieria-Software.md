@@ -36,6 +36,8 @@ Cómo funciona Internet, las computadoras, los chips, la inteligencia artificial
 
 - [13. Nombres de Dominio, DNS y cómo obtener un .com](#nombres-de-dominio-dns-y-cómo-obtener-un-com)
 
+- [14. Modelo Cliente/Servidor: ¿Cómo funciona un sitio web?](#modelo-clienteservidor-cómo-funciona-un-sitio-web)
+
 
 
 
@@ -2959,5 +2961,181 @@ Esto es una computadora conectada a internet que es lo que la gente llama la nub
 <img src="https://www.gravel2gavel.com/files/2024/09/GettyImages-1451308764.jpg">
 
 *Imagen Tomada De: https://www.gravel2gavel.com/what-is-data-center/
+
+
+
+
+
+
+
+
+
+
+---
+
+
+
+
+
+
+
+
+
+
+## Modelo Cliente/Servidor: ¿Cómo funciona un sitio web?
+
+Estás en tu computadora y en tu navegador escribes youtube.com, al momento de darle enter tu navegador es el cliente.
+
+El cliente manda [youtube.com](https://www.youtube.com/) al router que lo transforma en una IP, esa es la IP del servidor youtube.com y allá esta el servidor donde estan los datos de [youtube.com](https://www.youtube.com/)
+
+<img src="https://www.ionos.com/es-us/digitalguide/fileadmin/_processed_/9/c/csm_ES-browser-work_8ea4b6cc54.webp">
+
+*Imagen Tomada De: https://www.ionos.com/es-us/digitalguide/paginas-web/desarrollo-web/que-es-un-navegador/*
+
+Siendo asi el cliente envía ese dato a youtube.com siendo asi "Mándeme la página web de youtube", el servidor recibe la petición y responde con los datos de youtube.com que los envía por [HTTP = Hypertext Transfer Protocol o el protocolo de transferencia de hipertexto](https://developer.mozilla.org/es/docs/Web/HTTP "HTTP concept by developer.mozilla"). Y como vivimos en el futuro ahora es el protocolo [HTTPS](https://www.cloudflare.com/es-es/learning/ssl/what-is-https/ "HTTPS concept by Cloudflare"), donde la S significa seguro, es decir que cifra los datos.
+
+Los datos cifrados llegan a tu computadora que es el cliente, eso es todo el modelo cliente-servidor, pero por detrás no solamente pasa esto.
+
+Lecturas Recomendadas: 
+
+* https://www.ionos.com/es-us/digitalguide/servidores/know-how/modelo-cliente-servidor/
+
+* https://www.akamai.com/es/glossary/what-is-the-client-server-model
+
+* https://www.lenovo.com/mx/es/glosario/red-cliente-servidor/
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Cliente-Servidor.png/461px-Cliente-Servidor.png">
+
+*Imagen Tomada De: https://es.wikipedia.org/wiki/Cliente-servidor*
+
+Por ejemplo: ¿Cómo le hacen los sitios web para mostrarte versiones de teléfonos moviles y versiones de computadoras de escritorio?
+
+Esto sucede porque cuando escribes una [URL](https://developer.mozilla.org/es/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL "URL concept by developer.mozilla.org") o le das click a una página web, el cargarla hace que tu computadora envíe en la petición datos de quién eres tú. Uno de esos datos es cuál es tu navegador, tu sistema operativo y tu computadora. Algo asi como "Yo soy un iphone, yo soy un android, una laptop", el tamaño de tu pantalla y entre otros datos que le permiten al servidor enviarte los datos correctos.
+
+Estos datos van invisibles al usuario en la capa de protocolo que envía la petición del cliente. Tú al servidor. Esto va en [los headers de conexión o en los headers HTTP o en la cabecera HTTP](https://developer.mozilla.org/es/docs/Web/HTTP/Reference/Headers "HTTP headers concept by developer.mozilla.org").
+
+Como por ejemplo información como [Agende de Usuario o User-Agent](https://developer.mozilla.org/es/docs/Web/HTTP/Reference/Headers/User-Agent) 
+
+<img src="https://assets.bytebytego.com/diagrams/0231-http-header.png">
+
+*Imagen Tomada De: https://bytebytego.com/guides/important-things-about-http-headers-you-may-not-know/*
+
+Como por ejemplo cuando tu vas a [gmail.com](https://mail.google.com/mail/u/0/) no siempre tienes que colocar tu nombre de usuario y contraseña. Porque el servidor ya sabe quién eres tu y carga exactamente tus emails debido a que en la ultima vez que te logueaste el servidor dejó unos datos en tu computadora que indican e identifican que tú eres tú.
+
+Estos datos se llaman [cookies o galletas](https://policies.google.com/technologies/cookies?hl=es "Cookies concept by google"). Son unos datos que quedan guardados en tu computadora asignados al dominio de la petición estas haciendo como: google.com, youtube.com, gmail.com y esas cookies siempre viajan en la cabecera del protocolo cuando vas a pedirle algo.
+
+<img src="https://i.workana.com/wp-content/uploads/2020/01/cookies-glosario-workana-850x400.jpg">
+
+*Imagen Tomada De: https://i.workana.com/glosario/que-son-las-cookies/
+
+Lectura Recomendada: https://es.wikipedia.org/wiki/Cookie_(inform%C3%A1tica)*
+
+Asi entonces, cuando ingresas a youtube.com y ya eres un usuario de youtube, youtube.com lo sabe porque en las cookies están tus datos de identificación de la ultima vez colocaste tu nombre de usuario y contraseña.
+
+---
+
+Pero no responde inmediatamente con todo. Primero envía el código [HTML = Hypertext Markup Language o Lenguaje de etiquetas de hipertexto](https://developer.mozilla.org/es/docs/Web/HTML "HTML concept by MDN")  que es la estructura de datos de una página web. Es texto plano, puro texto. Y en este texto hay referencias a otros archivos por ejemplo, las referencias a cargar [las hojas de estilo o CSS = Cascade Style Sheets = Hojas de estilo en cascada](https://developer.mozilla.org/es/docs/Web/CSS "CSS concept by MDN"), esto es un lenguaje que define el diseño gráfico del sitio web. 
+
+<img src="https://www.dptotres.es/wp-content/uploads/2020/11/primeraweb-scaled.jpg">
+
+*Imagen Tomada De: https://www.dptotres.es/la-primera-pagina-web-del-mundo/*
+
+Entonces el navegador va y lo carga y eso es lo que carga el diseño web de toda la página web, pero tambien necesitas componentes interactivos, lo que hace que los botones reaccionen al dar click, lo que mueve todo el sitio web.
+
+A este código se le llama [JavaScript](https://developer.mozilla.org/es/docs/Web/JavaScript "JavaScript concept by MDN") y también está referenciado al HTML y estas son peticiones adicionales al servidor que regresan al navegador y es lo que va construyendo la representación de una página web, sea en el navegador del teléfono o en los navegadores de escritorio, o donde sea.
+
+<img src="https://geoinnova.org/wp-content/uploads/2021/08/logos.png">
+
+*Imagen Tomada De: https://geoinnova.org/blog-territorio/html-css-y-javascript-lenguajes-para-el-desarrollo-de-paginas-web/*
+
+---
+
+**?search**: Significa que va a enviarle variables al servidor a través de un método llamado el método get, que son variables que viajan por la URL.
+
+Lecturas Recomendadas:
+
+* https://www.ionos.com/es-us/digitalguide/paginas-web/desarrollo-web/get-vs-post/
+
+* https://www.ibm.com/docs/es/was-nd/8.5.5?topic=SSAW57_8.5.5/com.ibm.websphere.wim.doc/get.htm
+
+* https://developer.mozilla.org/es/docs/Web/HTTP/Reference/Methods
+
+Tu contraseña y usuario no lo puedes enviar por GET porque esto queda en el historial del navegador, así que seria un problema de seguridad porque estaría en texto plano en el historial del navegador.
+
+<img src="https://aprendelibvrefiles.blob.core.windows.net/aprendelibvre-container/course/como_usar_chrome/image/chrome_02_p05b_xl.png"
+
+*Imagen Tomada De: https://edu.gcfglobal.org/es/como-usar-chrome/historial-de-navegacion-de-google-chrome/1/*
+
+Hay un metodo para enviar estas variables de forma escondida, empaquetada en la cabecera de los envios de tal manera que nadie lo pueda ver por medio del historial.
+
+Porque imagina si estuvieras en un cafe internet o algo por ese estilo.
+
+Entonces si tu tienes un formulario que tiene usuario y contraseña y le das al boton de login y esto va en un metodo POST el cual se encapsula en un paquetico que va en el header similar al user-agent, los datos del navegador.
+
+Asi el servidor se da cuenta del nombre de usuario y contraseña por lo que el servidor da una respuesta exclusiva para el nombre de usuario y contraseña que el servidor obtuvo.
+
+Los servidores pueden dar diferentes tipos de respuesta dependiendo de la petición que hagas, la respuesta más tipica es que todo está bien, siendo unos numeros que van en la cabecera siendo este 200 OK en donde todo esta bien, pero seguro tambien habras visto 404 not found que aparece cuando intentas acceder a un sitio web que no existe, a una dirección dentro del servidor que no existe, los servidores HTTP tienden a responder con not found o no existe o 404.
+
+<img src="https://i.blogs.es/f35966/404/650_1200.jpg">
+
+*Imagen Tomada De: https://www.xataka.com/basics/errores-404-500-502-504-y-mas-en-paginas-web-que-significan
+
+Si el servidor está ocupado o el servidor está trabado, o hay un error de configuración el error típico de esto es el 500
+
+Y cuando vas a una dirección existia y ya no existe, pero apunta a un nuevo lugar y a esto se le llama una redirección y le corresponde el numero 300.
+
+**Lectura Recomendada: https://developer.mozilla.org/es/docs/Web/HTTP/Reference/Status**
+
+---
+
+Todo esto fue para páginas web, pero ¿cómo funcionan con las APIs? ¿Cómo funciona el mover archivos?, ¿Cómo funciona el enviar un correo?
+
+Todo esto es con diferentes protocolos.
+
+Estos son los protocolos [SMTP o Simple Message Transfer Protocol](https://aws.amazon.com/es/what-is/smtp/ "SMTP concept by AWS") que realmente esta en desuso, o el [protocolo POP3 o Post Office Protocol 3](https://developer.mozilla.org/es/docs/Glossary/POP "POP3 concept by MDN") y por ultimo el protocolo IMAP o el [internet Message Access Protocol.](https://mihosting.com/ayuda/glosario/imap-internet-message-access-protocol/)
+
+Lecturas Recomendadas:
+
+* https://www.cloudflare.com/es-es/learning/email-security/what-is-smtp/
+
+* https://www.ionos.es/ayuda/correo/microsoftr-outlook/que-es-pop3/
+
+* https://www.cloudflare.com/es-es/learning/email-security/what-is-imap/
+
+<img src="https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img,w_768/https://kb.rolosa.com/wp-content/uploads/2019/05/01-768x384.png">
+
+*Imagen Tomada De: https://kb.rolosa.com/eml-diferencia-entre-pop3-imap/*
+
+Estos son protocolos de formato de envio y recepción del correo electronico. Hoy en día muy pocas empresas manejan sus propios servidores de correo electrónico. Solo las empresas más grandes lo pueden hacer porque el correo se ha vuelvo increíblemente complejo y la gran mayoría de las compañias le delegan la gestión de sus correos electrónicos a dos empresas.
+
+A [microsoft](https://www.microsoft.com/) con [Outlook](https://www.microsoft.com/es-co/microsoft-365/outlook/email-and-calendar-software-microsoft-outlook) o a [Google](https://about.google/intl/es_ALL/products/) con [Gmail](https://mail.google.com/mail/u/0/).
+
+---
+
+¿Qué pasa entonces cuando tengo un teléfono movil y una aplicación móvil tiene que cargarme unos datos? Para que los datos de esta app en este teléfono lleguen y sean representados, tengo que ir al servidor y buscar esos datos, pero las aplicaciones no usan HTML, CSS, ni JS. Usan lenguajes propios de aplicaciones nativas. En el caso de Android usan [Java](https://www.java.com/es/) o [Kotlin](https://kotlinlang.org/) y en el caso de iOS usan [Swift](https://www.apple.com/co/swift/) o [Objective C](https://www.godaddy.com/resources/latam/desarrollo/objective-c-que-es "Objective C concept by godaddy") por lo que cuando cargan los datos no necesitan cargar los típicos datos HTML, usan otras cosas, usan estructuras de datos entre servidor y aplicación que se conocen con JSON o XML.
+
+<img src="https://developer.android.com/static/images/kotlin/choose-template.png?hl=es-419">
+
+*Imagen Tomada De: https://developer.android.com/kotlin/add-kotlin?hl=es-419*
+
+[JSON significa Java Script Object Notation y es una forma de guardar datos. ](https://www.oracle.com/latam/database/what-is-json/)
+
+<img src="https://cdn-wcsm.alura.com.br/2025/04/147291500-402b5260-4d61-41eb-a9ff-b38957abd81f.png">
+
+*Imagen Tomada De: https://www.aluracursos.com/blog/que-es-json*
+
+[XML significa Extensible Markup Language](https://aws.amazon.com/es/what-is/xml/) que es parecido a HTML, pero en vez de expresas etiquetas de representación de información visual como títulos, cabeceras, parrafos y demás, sólo expresa estructuras de datos normal.
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/XML.svg/500px-XML.svg.png">
+
+*Imagen Tomada De: https://es.wikipedia.org/wiki/Extensible_Markup_Language*
+
+Sólo ten en cuenta que si es XML, JSON, HTML, JS, CSS o lo que sea, sigue siendo lo mismo, un cliente, una app, o un navegador haciendo una petición a través de un protocolo, generalmente un protocolo HTTP con la S de seguro por lo que intercambiaron llaves de cifrado.
+
+Que envia entiende los datos y los devuelve de regreso al cliente, siendo asi el modelo de cliente-servidor.
+
+<img src="https://infimg.com/bimg/2019/02/diagrama-cliente-servidor.jpeg.webp">
+
+*Imagen Tomada De: https://blog.infranetworking.com/modelo-cliente-servidor/*
 
 ---
