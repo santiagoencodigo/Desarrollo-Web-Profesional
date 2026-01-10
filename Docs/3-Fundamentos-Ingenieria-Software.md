@@ -2820,21 +2820,41 @@ Lecturas Recomendadas:
 
 ## Nombres de Dominio, DNS y cómo obtener un .com
 
-Como todos las computadoras que estan conectadas a internet tienen un número IP y ese número es una larga cantidad de números que nadie se acuerda. Necesitamos una base de datos donde ponerles nombre. Asi esos números que pertenecen a una dirección IP les asignamos un nombre especifico.
+Como todas las computadoras que estan conectadas a internet tienen un número IP y ese número es una larga cantidad de números que nadie se acuerda. Necesitamos una base de datos donde ponerles nombre. Asi esos números que pertenecen a una dirección IP les asignamos un nombre específico.
 
 Esos nombres generalmente venian en un archivo que se compartía en los diferentes proveedores de internet, un archivo llamado host.
 
+Lecturas Recomendadas: 
+
+* https://www.adobe.com/es/acrobat/resources/document-files/text-files/hosts-file.html
+
+* https://www.ionos.com/es-us/digitalguide/servidores/configuracion/archivo-hosts/
+
+<img src="https://www.ionos.com/es-us/digitalguide/fileadmin/DigitalGuide/Screenshots_2018/hosts-datei-aufbau.png">
+
+*Imagen Tomada De: https://www.ionos.com/es-us/digitalguide/servidores/configuracion/archivo-hosts/* 
+
 Pero eso no escala porque ahora tenemos millones y millones de estos nombres. Asi que construimos una base de datos distribuida que está dominada por una serie de estándares y mecanismos internacionales.
 
-Esa base de datos se le conoce como nombres de dominio o DNS = Domain Name System.
+Esa base de datos se le conoce como [nombres de dominio o DNS = Domain Name System.](https://www.shopify.com/es/blog/dns?term=sistema%20de%20nombres%20de%20dominio&adid=565882055162&campaignid=15436645087&bucket=domain_ES&gad_campaignid=15436645087 "DNS concept by shopify.com")
 
-DNS es lo que permite que un número practicamente aleatorio con las reglas de IPV4 o IPV6 sea exactamente equivalente como a youtube.com.
+Lecturas Recomendadas:
+
+* https://www.cloudflare.com/es-es/learning/dns/what-is-dns/
+
+* https://aws.amazon.com/es/route53/what-is-dns/
+
+DNS es lo que permite que un número practicamente aleatorio con las reglas de IPV4 o IPV6 sea exactamente equivalente como a youtube.com
 
 Los nombres de dominio siguen algunas reglas, tipicamente permiten letras del idioma inglés, aunque ultimamente se pueden agregar Ñ o tildes aunque muy poca gente lo usa. Tipicamente no inicia con un número, inicia con una letra (En ocasiones es posible) y por ultimo los nombres de dominio no distinguen entre mayúsculas y minúsculas.
 
 En ese sentido son relativamente similares al os nombres de variable en varios lenguajes de programación.
 
-Una vez tienes tu nombre de dominio necesitas un TLD o Top Level Domain que es el sufijo que se le agrega a estos dominios, que son generalmente .com, .org, .net, y existen algunos sufijos o top level domains que son de uso exclusivo como:
+<img src="https://kinsta.com/es/wp-content/uploads/sites/8/2018/10/nombre-de-dominio.png">
+
+*Imagen Tomada De: https://kinsta.com/es/blog/elegir-nombre-dominio/*
+
+Una vez tienes tu nombre de dominio necesitas un [TLD o Top Level Domain](https://www.hostinger.com/co/tutoriales/como-usar-sftp-17 "TLD concept by hostinger") que es el sufijo que se le agrega a estos dominios, que son generalmente .com, .org, .net, y existen algunos sufijos o top level domains que son de uso exclusivo como:
 
 * .gov: goverment - Tiende a ser usado por gobiernos. Y en america latina esta como .gob
 
@@ -2852,17 +2872,21 @@ Luego hay TLD que son exclusivos de países como:
 
 Cada país lo usa de manera distintas como por ejemplo en Inglaterra es .co.uk, en el caso de españa es .es y en colombia es .com.co
 
+<img src="https://mimercadopopular.gov.co/_next/static/media/gov-co.c92cd7b6.png">
+
+*Imagen Tomada De: https://mimercadopopular.gov.co/transparencia/informacion-publica*
+
 ¿Cual es la diferencia? Y qué determina si usa uno o usa otro?... Esto es aleatorio, depende de cada país y cada uno tiene toma decisiones respecto a como lo quiere usar.
 
 ---
 
 Debido a los ultimos años debido a la liberación de posibilidades de los top level domains han empezado aparecer TLD larguisimos como el .promo, .info, .love, entre muchos... muchos otros.
 
-En negocios uno tiende a respetar mucho más los dominios .com
+**En negocios uno tiende a respetar mucho más los dominios .com**
 
 Antes habian dominios que no tenian mucho valor, pero ahora como por ejemplo el .AI
 
-> Colombia hizo una gran campaña para decir que el .CO era un remplazo del .com y en vez de referirse a estos dominios como un dominoi colombiano son simplemente una alternativa al COM mucho más interesante que el .org
+> Colombia hizo una gran campaña para decir que el .CO era un remplazo del .com y en vez de referirse a estos dominios como un dominio colombiano, son simplemente una alternativa al com mucho más interesante que el .org
 
 ---
 
@@ -2872,27 +2896,39 @@ Sin tener un dominio, no puedes tener una pagina web.
 
 Hoy en día internet esta tan maduro que casi no existe nombres de dominio .com y muchas personas tienen que comprar nombres alternativos.
 
-Esto es todo un negocio, hay personas que tienen que pagarles a personas para comprar su DNS... Pues existen personas que compran muchos DNS para luego revenderlos.
+Esto es todo un negocio, hay personas que tienen que pagarles a personas para comprar su DNS... Pues **existen personas que compran muchos DNS para luego revenderlos.**
 
 Uno de los dominios más caros fue Business.com que fue vendido por 345.000.000 de USD y en 2015 un exempleado de Google se dio cuenta de que el dominio de google.com estaba apunto de expirar y lo compro por 12 USD, por el precio normal... En donde menos mal fue un empleado el cual devolvió el dominio y le dieron un bono de 10.000 USD como recompensa por haber encontrado este problema. 
 
 No porque tengas un dominio lo puedes revender. Por ejemplo: Una persona comprando google.com.ar en vez de recibir una recompensa, recibio una demanda porque tambien aplican leyes de copyright y de marcas registrada.
 
-Y si tu como empresa, eres dueño de una marca registrad pueeds ir a la corte para obtener tu .com
+Y si tu como empresa, eres dueño de una marca registrada puedes ir a la corte para obtener tu .com
 
 ---
 
-Vamos a comprar dominios... Hay varios sitios web, como por ejemplo namecheap.com
+Para comprar dominios... Hay varios sitios web, como por ejemplo [namecheap.com](https://www.namecheap.com/)
+
+<img src="https://ayudahosting.online/wp-content/uploads/2017/05/Captura1-8-1024x521.png">
+
+*Imagen Tomada De: https://ayudahosting.online/como-apuntar-dns-dominio-namecheap/*
 
 > godaddy.com no es recomendable debido a que tiene malas practicas, en la que cuando tú empiezas a buscar un dominio, godaddy se va a dar cuenta y si ese dominio está disponible, godaddy lo va a automáticamente a comprar de tal manera que si decides comprarlo luego, te lo va cobrar mucho más caro, porque automáticamente se va a apropiar del dominio y no te va a permitir comprar en otro lado. Siendo este perseguido por estas mismas malas practicas, no es recomendable usarlo.
 
-Registrar un dominio es tan simple como colocarle el nombre que quieras
+Registrar un dominio es tan simple como colocarle el nombre que quieras.
 
 Sistemas como Google usan la longevidad del dominio para determinar qué tan serio es un sitio web, por lo que si quieres proyectar seriedad compra dominios a 10 años que puede 
 
-> llegar a costar 150 USD...
+> Puede una longevidad de 10 años costar 150 USD...
 
 Un dominio debe corresponder a una persona por lo que piden código postal.
+
+Paginas para Comprar un Dominio:
+
+* https://www.namecheap.com/
+
+* https://www.hostinger.com/
+
+* https://www.spaceship.com/es/
 
 ---
 
@@ -2908,10 +2944,20 @@ Por medio de estos subdominios podemos apuntar a servidores totalmente distintos
 
 TXT Records: Variables de texto que yo agrego como señal a otros sitios web
 
----
+Videos sobre como comprar un dominio:
 
-Una vez tienes tu dominio y le está apuntando a una IP, ahora necesitas tener una IP. El solo hecho de tener un dominio no significa tener una pagina web, pues una pagina web es una computadora en internet a la que tu dominio le apunta sirviendo un servicio generalmente un sitio web.
+* https://www.youtube.com/watch?v=1JJrXWQ-7OE
+
+* https://www.youtube.com/watch?v=1_-wEukySLI&t
+
+* https://www.youtube.com/watch?v=BLYizqaM11w
+
+Una vez que tienes un dominio y este apunta a una dirección IP, el siguiente paso es contar con un servidor en esa IP. Tener únicamente un dominio no significa que ya tengas una página web. Una página web es, en esencia, una computadora conectada a Internet que ofrece un servicio —generalmente un sitio web— y a la cual tu dominio funciona como un nombre fácil de recordar que dirige las solicitudes hacia esa máquina.
 
 Esto es una computadora conectada a internet que es lo que la gente llama la nube, la nube es rentar una computadora en un data center de otra empresa o puede ser tu propia computadora en tu propia conexión, pero eso es un poco complicado.
+
+<img src="https://www.gravel2gavel.com/files/2024/09/GettyImages-1451308764.jpg">
+
+*Imagen Tomada De: https://www.gravel2gavel.com/what-is-data-center/
 
 ---
