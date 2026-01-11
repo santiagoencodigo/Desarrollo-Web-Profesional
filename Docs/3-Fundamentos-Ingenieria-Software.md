@@ -38,6 +38,10 @@ Cómo funciona Internet, las computadoras, los chips, la inteligencia artificial
 
 - [14. Modelo Cliente/Servidor: ¿Cómo funciona un sitio web?](#modelo-clienteservidor-cómo-funciona-un-sitio-web)
 
+### Sistemas Operativos y Almacenamiento
+
+- [15. Diferencias entre Windows, Linux, MacOS](#diferencias-entre-windows-linux-macos)
+
 
 
 
@@ -3137,5 +3141,266 @@ Que envia entiende los datos y los devuelve de regreso al cliente, siendo asi el
 <img src="https://infimg.com/bimg/2019/02/diagrama-cliente-servidor.jpeg.webp">
 
 *Imagen Tomada De: https://blog.infranetworking.com/modelo-cliente-servidor/*
+
+
+
+
+
+
+
+
+
+
+---
+
+
+
+
+
+
+
+
+
+
+# Sistemas Operativos y Almacenamiento
+
+
+
+
+
+
+
+
+
+
+## Diferencias entre Windows, Linux, MacOS
+
+Las primeras computadoras no tenian sistemas operativos pues tu llegabas con tu programa que era una serie de tarjetas perforadas en donde cada hueco significaba algo en el [lenguaje ensambalador](https://msmk.university/el-lenguaje-assembler/) de la unidad de procesamiento central o CPU.
+
+<img src="https://i.blogs.es/781cdb/1366_2000/1366_2000.jpeg">
+
+*Imagen Tomada De: https://www.xataka.com/historia-tecnologica/hoy-dia-programadores-tienen-a-ia-hace-60-anos-tenian-que-picar-codigo-literalmente-tarjetas-perforadas*
+
+La insertabas en un escaner que escaneaba los datos, los procesaba y luego entregaba el resultado en una impresora de matriz de punto.
+
+<img src="https://i.blogs.es/9ec3b6/picar-codigo/1200_800.jpeg">
+
+*Imagen Tomada De: https://www.xataka.com/historia-tecnologica/hoy-dia-programadores-tienen-a-ia-hace-60-anos-tenian-que-picar-codigo-literalmente-tarjetas-perforadas*
+
+Lecturas Recomendadas: 
+
+* https://es.wikipedia.org/wiki/Historia_de_los_sistemas_operativos
+
+* https://www.sutori.com/es/historia/generaciones-de-sistemas-operativos--cZsZ2B3u4FGirm8DxDvmoFYF
+
+* https://www.fib.upc.edu/retro-informatica/historia/so.html
+
+Luego pasó que estas computadoras querian poder correr múltiples diferentes programas, así que empezó la primera generación de sistemas operativos.
+
+* El inicio de todo: Entrada del Panel de Código Máquina e Instrucciones de programa con Tarjetas / Cintas de Papel.
+
+* La primera generación en 1950: Cargador / Loader, un sistema operativo de un sólo usuario y un sólo programa.
+
+* La segunda generación en 1960: Sistema operativo por lotes y varios programas a la vez por lotes.
+
+* La tercera generación en 1970: Con sistema operativo multi-usuario, multi-funcional. Debido a la necesidad de correr programas en paralelo o que se pudieran acceder con su propio nombre de usuario y tener su propia definición de permisos y esto fue lo que fue construyendo el concepto que hoy en día conocemos como sistema operativo.
+
+<img src="https://concepto.de/wp-content/uploads/2019/07/generaciones-de-las-computadoras-eniac-e1563970917833.jpg">
+
+*Imagen Tomada De: https://concepto.de/generaciones-de-las-computadoras/*
+
+---
+
+La historia de los sistemas operativos empieza en varios diferentes lugares del mundo y realmente en varias compañias.
+
+<img src="https://www.laranja.org/wp-content/uploads/2021/07/os-evolution.jpg">
+
+Los primeros sistemas operativos evolucionaron de algo llamado [UNIX](https://es.wikipedia.org/wiki/Unix "Unix concept by Wikipedia") que fue uno de los primeros grandes sistemas operativos del lado del servidor.
+
+Toda la computación inicia en [servidores](https://es.wikipedia.org/wiki/Servidor "Servidor concept by Wikipedia") porque anteriormente las computadoras eran cosas gigantescas que debian ser guardadas en edificios grandísimos y que ocupaban múltiples cuartos. 
+
+<img src="https://ascentoptics.com/blog/wp-content/uploads/2023/08/network-server.png">
+
+*Imagen Tomada De: https://ascentoptics.com/blog/es/everything-you-need-to-know-about-network-servers/*
+
+Unix es un sistema que permitia tener múltiples diferentes usuarios y que divide las cosas en un Kernel, en un sistema de archivos y en un sistema de usuarios.
+
+Lecturas Recomendadas:
+
+* https://www.lenovo.com/co/es/glosario/unix/
+
+* https://www.ionos.com/es-us/digitalguide/servidores/know-how/unix-el-sistema-operativo-que-cambio-la-informatica/
+
+Estos unix se fueron fragmentando y teniendo diferentes mecanismos. Uno de los mecanismos más populares de unix lo conocemos como BSD que tiene el icono de un diablito.
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Daemon-phk.svg/1024px-Daemon-phk.svg.png">
+
+*Imagen Tomada De: https://es.wikipedia.org/wiki/Berkeley_Software_Distribution
+
+Video Recomendado: BSD - La historia Oculta de Onix Olvidado - https://www.youtube.com/watch?v=RJYe_uRVJi4
+
+Pagina Recomendada: https://www.freebsd.org/
+
+[Los sistemas BSD](https://docs.freebsd.org/es/articles/explaining-bsd/ "Qué es BSD by BSD") que inicialmente fueron sistemas de investigación en la [universidad de Berkeley](https://www.elabedu.eu/es/universidad-california-berkeley/ "https://www.elabedu.eu/es/universidad-california-berkeley/"). Fueron creciendo y aumentando llevando a empresas como son [Micro Systems](https://es.wikipedia.org/wiki/Sun_Microsystems "Sun Microsystems company by wikipedia") o a sistemas gratuitos como FreeBSD, con el pasar del tiempo de aqui es de donde sale el sistema operativo que hoy conocemos como [Mac OS](https://es.wikipedia.org/wiki/MacOS "MacOS by wikipedia"):
+
+> Evolución: [NEXTSTEP](https://es.wikipedia.org/wiki/NEXTSTEP "nextstep by wikipedia"), [Darwin OS](https://es.wikipedia.org/wiki/Darwin_(sistema_operativo)), [iOS](https://www.apple.com/co/os/ios/), [MacOS](https://www.apple.com/co/os/macos/) 
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/NeXTSTEP_Nethack.png/500px-NeXTSTEP_Nethack.png">
+
+*Imagen Tomada De: https://es.wikipedia.org/wiki/NEXTSTEP*
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/GNOME_2_running_on_openDarwin_%282004%29.png/330px-GNOME_2_running_on_openDarwin_%282004%29.png">
+
+*Imagen Tomada De: https://es.wikipedia.org/wiki/Darwin_(sistema_operativo)*
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/2010-01-21_MacBook_Pro_Mac_OS_X_Snow_Leopard_with_Earth_background.jpg/500px-2010-01-21_MacBook_Pro_Mac_OS_X_Snow_Leopard_with_Earth_background.jpg">
+
+*Imagen Tomada De: https://es.wikipedia.org/wiki/MacOS*
+
+---
+
+Luego por otro lado tenemos otra rama de UNIX que es la rama que se volvió LINUX, UNIX como sistema creó una serie de reglas que luego varios investigadores entre ellos Linux Torvalds crearon y construyeron de una manera de software completamente abierto, montado sobre una teoría de que el software tenía que ser gratuito, abierto y completamente libre para todo el mundo creado por alguien llamado Richard Stallmann en una fundación llamada GNU, con una licensia especial llamada la Licencia GPL: Siendo una licensia de software libre.
+
+Lecturas Recomendadas:
+
+* https://www.redhat.com/es/topics/linux
+
+* https://www.ibm.com/mx-es/think/topics/linux
+
+* https://www.gnu.org/home.es.html
+
+De aqui sale toda una revolución que termina creando LINUX, el sistema operativo más popular de la tierra. La gran mayoria de servidores usan Linux. La gran mayoria de desarrolladores de software profesionales terminan usando linux o UNIX de alguna manera en sus carreras. 
+
+A partir de linux nacen un montón de compañias muy grandes como: [Red Hat](https://www.redhat.com/), [Gentoo Linux](https://www.gentoo.org/), [Archlinux](https://archlinux.org/).
+
+* de Red Hat sale [Fedora](https://fedoraproject.org/es/) y luego [CentOS](https://www.centos.org/)
+
+* De [Debian](https://www.debian.org/index.es.html) sale [ubuntu](https://ubuntu.com/).
+
+Y probablemente la versión de linux más popular del mundo: [Android](https://www.android.com/intl/es_es/) que es la que corre la gran mayoria de los teléfonos del planeta.
+
+<img src="https://www.redeszone.net/app/uploads-redeszone.net/2015/12/Distribuciones-Linux-2015-696x337.png">
+
+*Imagen Tomada De: https://www.redeszone.net/2015/12/12/las-distribuciones-linux-mas-buscadas-de-2015/*
+
+---
+
+Mac viene de un lugar muy unico, en los años 70 había un laboratorio en Silicon Valley llamado laboratorio XEROX PARC, en palo alto. [Palo alto](https://es.wikipedia.org/wiki/Palo_Alto) es un pueblito al sur de san francisco.
+
+Lecturas Recomendadas: 
+
+* https://www.semana.com/tecnologia/articulo/que-es-el-silicon-valley-y-por-que-es-importante-en-la-industria-de-la-tecnologia/202117/
+
+* https://es.wikipedia.org/wiki/Silicon_Valley
+
+Hoy conocemos a [XEROX](https://www.xerox.com/es-co) como la empresa que hace impresoras, pero en esos tiempos XEROX tenia los laboratorios de computación más avanzados del mundo.
+
+En ese laboratorio ellos construyeron la primera computadora con interfaces basada en ventanas y crearon el concepto que hoy en día todos usamos, llamado el mouse.
+
+Le dieron un paseo a una persona que estaba construyendo en las primeras empresas de computación personal en la epoca: [Steve Jobs](https://es.wikipedia.org/wiki/Steve_Jobs).
+
+Ellos vieron lo que estaba haciendo xerox y básicamente se lo robaron. Crearon una versión del sistema operativo de xerox de distribución masiva siendo esta la [computadora LISA](https://www.xataka.com/ordenadores/el-software-del-lisa-el-legendario-y-fracasado-ordenador-de-apple-volvera-en-2018-gratis-y-en-codigo-abierto "Computadora Lisa by Xataka").
+
+<img src="https://i.blogs.es/82bf58/lisa-00/1366_2000.jpg">
+
+*Imagen Tomada De: https://www.xataka.com/ordenadores/el-software-del-lisa-el-legendario-y-fracasado-ordenador-de-apple-volvera-en-2018-gratis-y-en-codigo-abierto*
+
+[Lisa](https://es.wikipedia.org/wiki/Apple_Lisa) no fue un exito comercial, pero las teorias de lisa luego se aplicaron con mucho exito comercial en la [Macintosh o Mac](https://es.wikipedia.org/wiki/Macintosh "Macintosh o Mac concept by Wikipedia"), que es la primera computadora con interfaz gráfica de distribución masiva en el planeta.
+
+Al tiempo que el laboratorio [Xerox Parc](https://es.wikipedia.org/wiki/PARC "Xerox Parc concept by Wikipedia") había creado este sistema operativo visual. Otra empresa creó un sistema operativo basado completamente en texto y controlado por disquetes, discos de plastico. Un sistema conocido como [CPM: Control Program Monitor](https://en.wikipedia.org/wiki/CP/M "CP/M concept by Wikipedia")
+
+Video Recomendado: https://www.youtube.com/watch?v=HSx0LV7pkSI
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/CP%E2%81%84M_Ad%2C_InfoWorld%2C_November_29%2C_1982.jpg/499px-CP%E2%81%84M_Ad%2C_InfoWorld%2C_November_29%2C_1982.jpg">
+
+*Imagen Tomada De: https://en.wikipedia.org/wiki/CP/M*
+
+Fue construido por una empresa llamada [Digital Research.](https://es.wikipedia.org/wiki/Digital_Research "Digital Research concept by Wikipedia")
+
+Lectura Recomendada: https://parceladigital.com/articulo/digital-research-una-leyenda-derrotada-en-los-despachos
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Digital_Research_logo_1974.svg/500px-Digital_Research_logo_1974.svg.png">
+
+*Imagen Tomada De: https://es.wikipedia.org/wiki/Digital_Research*
+
+Ellos desarrollan esta teoría de los sistemas operativos basados en texto controlados por disquete en paralelo distinto a Unix.
+
+**Unix tambien era controlado por texto, por una terminal y línea de comandos**... Pero este estaba hecho para servidores.
+
+<img src="https://computernewage.com/wp-content/uploads/2014/06/terminal-de-linux-fundamentos.png?w=1024">
+
+*Imagen Tomada De: https://computernewage.com/2013/04/04/primeros-pasos-con-la-terminal-de-linux/*
+
+CP/M es el padre de los sistemas operativos basados en computadoras.
+
+Otra persona decidió crear una versión de este sistema operativo, conocido como [DOS](https://www.ionos.com/es-us/digitalguide/servidores/know-how/dos-que-es-un-sistema-operativo-de-disco/ "DOS concept by ionos"), famosamente [Bill Gates](https://es.wikipedia.org/wiki/Bill_Gates "Bill Gates by Wikipedia") a través de la conexión que su mamá tenía como asistente del CEO de [IBM](https://www.ibm.com/), le vende a IBM la idea de que ellos ya tienen un sistema operativo. Pero no la tenían, fueron le compraron DOS a otra persona y esa persona que les mende DOS se convierte en la persona que les vende [Microsoft DOS](https://es.wikipedia.org/wiki/MS-DOS "MSDOS by Wikipedia"), que por 50.000 contruye una semilla de los imperios más grandes de la historia: Microsoft.
+
+Video Recomendado: https://www.youtube.com/watch?v=-L6WAO2_EEs
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Msdos-icon.svg/330px-Msdos-icon.svg.png">
+
+*Imagen Tomada De: https://es.wikipedia.org/wiki/MS-DOS*
+
+Similar a cuanto Xerox Parc le dió un paseo a Steve Jobs, Steve Jobs en apple le dió un paseo a Bill Gates y a gente de Microsoft, cuando microsoft se dió cuenta de lo que Apple estaba haciendo con Mac. 
+
+Se fueron a la empresa a desarrollar en alta velocidad a desarrollar un clon de este sistema operativo para computadoras IBM y para computadoras de escritorio genéricas que otros fabricantes pudieran fabricar.
+
+Mac, Apple fabricaba su propia computadora y su propio sistema operativo.
+
+Microsoft sólo fabricaba el sistema operativo pues el negocio de las computadoras se los dejaba a [Compaq](https://es.wikipedia.org/wiki/Compaq), a IBM y a otros fabricantes. Ellos solo hacian sistemas operativos y con lo que aprendieron del Mac, crearon un sistema operativo gráfico clonando las ideas que habian extraido del Mac y esto lo llamaron Windows.
+
+De hay nace Windows 3, y luego más reconocido el Windows 3.1, Windows 95, Windows Millenium, Windows 2000, Windows NT, entre muchos, muchos otros.
+
+Esto da inicio a una de las guerras de la época que fue la guerra de los sistemas operativos.
+
+Lecturas Recomendadas: https://www.xatakamovil.com/sistemas-operativos/la-guerra-de-los-sistemas-operativos
+
+---
+
+Hoy en día tenemos 3 grandes sistemas operativos que dominan nuestra computación:
+
+* Windows que lo usa la gran mayoría de las personas.
+
+* Linux que es la gran mayoría de los servidores.
+
+* MacOS
+
+Estos 3 sistemas operativos compiten y tienen diferentes uso.
+
+Windows es el OS de Microsoft y es la interfaz gráfica por excelencia, es el que más usan los gamers, es el más común.
+
+Linux es el sistema operativo más usado por desarrolladores de software profesionales, seguido de Mac. Que tambien al ser sistema UNIX, se parece mucho a Linux y son sistemas que tienen filosofías muy similares. Siendo su diferencia que linux es un OS Abierto donde Mac a pesar de que usa el núcleo abierto del BSD es un sistema cerrado.
+
+<img src="https://www.nitro-pc.es/blog/wp-content/uploads/2023/10/linux-mac-windows-blog.png">
+
+*Imagen Tomada De: https://www.nitro-pc.es/blog/windows-vs-mac-vs-linux/*
+
+---
+
+En sistemas operativos de Móviles tambien hay dos grandes sistemas operativos.
+
+iOS de Iphone, en donde internamente tiene el mismo núcleo de un Mac, un sistema Unix como BSD.
+
+* hay una sola versión de iOS, porque es de Apple.
+
+Luego está Android que internamente es un linux
+
+* hay diferentes versiones de android dependiendo del teléfono que compres.
+
+<img src="https://i.blogs.es/5aea99/android-ios/840_560.jpg">
+
+*Imagen Tomada De: https://www.xatakamovil.com/aplicaciones/android-recibe-cada-ano-el-doble-de-apps-que-ios-pero-el-iphone-siendo-la-primera-opcion-para-muchos-desarrolladores*
+
+Cualquier sistema operativo que utilices, la recomendación es que aprendas LINUX.
+
+Los desarrolladores de software profesionales usan Linux, por lo menos en algún punto de sus vidas.
+
+Todas las supercomputadoras del planeta usan Linux, todos los servidores del planeta usan una versión de Linux.
+
+Lectura Recomendada: https://ed.team/blog/la-historia-completa-de-unix-como-un-sistema-operativo-cambio-el-mundo
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Unix_history-simple_es.svg/1280px-Unix_history-simple_es.svg.png">
+
+*Imagen Tomada De: https://es.wikipedia.org/wiki/Unix-like*
 
 ---
