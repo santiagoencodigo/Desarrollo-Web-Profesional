@@ -42,6 +42,8 @@ Cómo funciona Internet, las computadoras, los chips, la inteligencia artificial
 
 - [15. Diferencias entre Windows, Linux, MacOS](#diferencias-entre-windows-linux-macos)
 
+- [16. Permisos, niveles de procesos y privilegios de ejecución](#permisos-niveles-de-procesos-y-privilegios-de-ejecución)
+
 
 
 
@@ -3403,4 +3405,178 @@ Lectura Recomendada: https://ed.team/blog/la-historia-completa-de-unix-como-un-s
 
 *Imagen Tomada De: https://es.wikipedia.org/wiki/Unix-like*
 
+
+
+
+
+
+
+
+
+
 ---
+
+
+
+
+
+
+
+
+
+
+## Permisos, niveles de procesos y privilegios de ejecución
+
+Es normal que tengamos archivos en servidores o en computadoras que no son nuestras, que estamos compartiendo con otras personas.
+
+<img src="https://www.ionos.com/es-us/digitalguide/fileadmin/_processed_/0/9/csm_client-server-modell-us_2f314afbee.webp">
+
+*Imagen Tomada De: https://www.ionos.com/es-us/digitalguide/servidores/know-how/que-es-un-servidor-un-concepto-dos-definiciones/*
+
+Por ejemplo:
+
+Cuando tú compras un [Hosting Service](https://www.hostinger.com/co/tutoriales/que-es-un-hosting "Hosting Service concept by Hostinger") de [Digital Ocean](https://www.digitalocean.com/), [Linode](https://www.linode.com/es/), [AWS](https://aws.amazon.com/es/) o donde sea lo que realmente estás comprando es un pedacito de un computador que estás compartiendo con 10, 100.000 o 1.000.000 de otros usuarios. 
+
+Asi que necesitas una forma de gestionar los permisos, los accesos, los privilegios de ejecución, entre muchas otras cosas.
+
+Digamos, con un archivo "Nomina.html" y ese archivo queremos que tu como administrador tengas permiso para todo: Leer, Escribir, Compartir, Copiar, Eliminar. Es decir, cualquier cosa.
+
+> El administrador es el dueño de la computadora. Es el usuario que tiene el nombre de usuario y contraseña del Administrador, el cual tiene acceso a toda la computadora.
+
+Lecturas Recomendadas: 
+
+* https://support.microsoft.com/es-es/windows/administrar-cuentas-de-usuario-en-windows
+
+* https://www.lenovo.com/mx/es/glosario/administrador-de-dispositivos/
+
+* https://es.wikipedia.org/wiki/Usuario_(inform%C3%A1tica)
+
+Luego tienes grupos de usuarios, entonces imagina que tienes un grupo de desarrolladores que llamas devs los cuales pueden leer y escribir el archivo, pero no eliminarlo.
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/User_icon_2.svg/500px-User_icon_2.svg.png">
+
+*Imagen Tomada De: https://es.wikipedia.org/wiki/Usuario_(inform%C3%A1tica)*
+
+y luego está el público general, quienes deberían acceder al archivo.
+
+¿Qué deberia poder hacer el público?
+
+Leer el archivo, pero no lo pueden modificar, no lo pueden borrar, no lo pueden volver un ejecutable; Es decir que cuyo código pueda correr en la CPU.
+
+En los sistemas tipo Unix, como Linux, Mac, etc... típicamente hay 3 grandes permisos.
+
+1. El permiso de lectura - R
+
+2. El permiso de Escritura - W
+
+3. El permiso de Ejecución - X
+
+La ejecución es la capacidad de que el contenido de ese archivo corra como un archivo ejecutable, como una aplicación. 
+
+<img src="https://s3.amazonaws.com/cloudxlab/static/images/aha/permissions.png">
+
+*Imagen Tomada De: https://cloudxlab.com/assessment/displayslide/64/permissions-numeric
+
+Lectura Recomendada: https://ed.team/blog/entender-los-permisos-en-linux-2da-parte
+
+Por ejemplo: En windows esto se logra cambiando la extensión del archivo a una .exe que cuando tu la corres te va a sacar un anuncio del sistema operativo de microsoft windows el cual dice, ¿Estás seguro de que quieres correr esta aplicación? 
+
+Lecturas Recomendadas:
+
+* https://es.wikipedia.org/wiki/EXE_(inform%C3%A1tica)
+
+* https://www.ionos.com/es-us/digitalguide/servidores/know-how/archivos-exe/
+
+<img src="https://www.ionos.com/es-us/digitalguide/fileadmin/_processed_/f/6/csm_exe-file_26f65a1da5.webp">
+
+*Imagen Tomada De: https://www.ionos.com/es-us/digitalguide/servidores/know-how/archivos-exe/*
+
+Algunos desarrolladores de software le piden permiso a microsoft para que les dé una llave especial de cifrado que las pueden pegar a sus aplicaciones, de tal manera que esa advertencia no ocurra.
+
+En Mac pasa lo mismo con Apple cuando por ejemplo: Se corre una aplicación descargada de la tienda de aplicaciones de Mac, la [App Store](https://es.wikipedia.org/wiki/App_Store_(iOS)).
+
+Lecturas Recomendadas:
+
+* https://www.apple.com/co/app-store/
+
+* https://play.google.com/
+
+En los dispositivos móviles como Android o iPhone, esto no es necesario porque tanto Google como Apple revisaron las aplicacoines antes de que salieran a la luz.
+
+Pero en Linux esto se hace agregandole la X a los permisos del archivo.
+
+¿Cómo Funciona Esto?
+
+En el sistema operativo, cuando estas en la terminal y línea de comandos vas a ver que en la lista de los archivos a veces salen las letras:
+
+RWX en diferentes grupos.
+
+Entonces yo podría decir que el administrador tiene permisos RWX para el archivo nomina.html, es decir que lo puede Leer, Escribir y volver un Ejecutable.
+
+Pero el equipo DEVS solo tiene permiso RW, de lectura y escritura.
+
+Por último el equipo del público, cualquier persona que accede al servidor lo puede leer, pero nada más.
+
+Existen diferentes comandos de Linux o de Unix que permiten hacer este cambio.
+
+Uno de los comandos más populares es el comando CHMOD = Change Mode. Es un comando el cual yo le puedo agregar números los cuales representan el RWX. 
+
+    chmod 754 nomina.html
+
+Lecturas Recomendadas:
+
+* https://www.freecodecamp.org/espanol/news/comando-chmod-como-cambiar-permisos-de-archivo-en-linux/
+
+* https://www.ionos.com/es-us/digitalguide/servidores/know-how/asignacion-de-permisos-de-acceso-con-chmod/
+
+> Todos estos permisos los da el administrador.
+
+En los sistemas Unix o Linux los permisos de administrador se pueden invocar en cualquier momento cuando antes de la ejecución con el comando sudo, por lo que si utilizas sudo y despues algún comando, el sistema siempre te va a preguntar la contraseña del administrador.
+
+<img src="https://genuinocloud.com/wp-content/uploads/2023/01/Cuales-son-las-diferencias-entre-sudo-y-su.png">
+
+*Imagen Tomada De: https://genuinocloud.com/blog/diferencia-sudo-su/*
+
+Por lo que cada vez que ejecutes sudo y despues un comando, ese comando se va a ejecutar como administrador.
+
+Lecturas Recomendadas:
+
+* https://www.ionos.com/es-us/digitalguide/servidores/configuracion/linux-sudo/
+
+Siendo asi una forma de ejecutar comandos como administrador sin entrar al usuario de administrador, desde cualquier usuario. En windows o en Mac lo puedes hacer en la interfaz gráfica pues al darle click derecho a un archivo le das a información y encontrarás información de los tipos de permisos y privilegios que tiene el archivo.
+
+<img src="https://www.solvetic.com/uploads/monthly_08_2016/tutorials-7463-0-55315400-1470401959.jpg">
+
+*Imagen Tomada De: https://www.solvetic.com/tutoriales/article/2934-como-pasar-de-usuario-estandar-a-administrador-en-mac/
+
+Un privilegio es poder ejecutarse como aplicación  o el no ejecutarse, el poder editarlo o solamente poder acceder en modo de lectura.
+
+---
+
+Los archivos típicamente son de un dueño, el dueño es el usuario que creó el archivo. Por lo si los devs crearon el archivo, el dueño van a ser los devs. Y si tenemos otro tipo de usuario que creó un archivo pues ese va a ser el dueño.
+
+Dependiendo del dueño del archivo es la capacidad de acceso al archivo. Y va a depender de quién tenga el usuario y contraseña dentro del OS que acceda al archivo.
+
+Es posible cambiar los dueños de los archivos, el Linux se hace con chown, en windows y en mac se hace mediante la interfaz gráfica dandole click derecho al archivo y cambiando sus propiedades.
+
+    chown nuevodueno nomina.html
+
+    sudo chmod 777 nomina.html
+
+Lecturas Recomendadas:
+
+* https://www.hostinger.com/co/tutoriales/comando-chown-linux
+
+* https://www.ionos.com/es-us/digitalguide/servidores/configuracion/comando-chown-de-linux/
+
+Como práctica general de seguridad, uno debería asegurarse que los archivos siempre tengan la mínima cantidad de permisos y privilegios. Entre más permisos y privilegios tenga un archivo más problemas de seguridad puede traer ese archivo.
+
+Aqui la única excepción es Windows porque uno le puede dar click derecho a un archivo y decirle correr el archivo como administrador siendo equivalente al comando sudo en linux o en Mac.
+
+En windows casi nada ocurre en la terminal y casi todo ocurre en la interfaz gráfica, además de que los ejecutables deben tener un formato especial como el .exe donde en Linux o en Mac tú puedes tener un script de Python el cual se puede volver un ejecutable perfectamente a pesar de que internamente sea un archivo de texto.
+
+<img src="https://thepythoncode.com/media/articles/organize-files-by-extension-in-python.jpg">
+
+*Imagen Tomada De: https://thepythoncode.com/article/organize-files-by-extension-with-python*
+
+> Todo esto va a depender mucho del formato interno del archivo.
