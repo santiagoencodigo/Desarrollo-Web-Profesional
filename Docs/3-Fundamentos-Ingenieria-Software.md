@@ -46,6 +46,10 @@ Cómo funciona Internet, las computadoras, los chips, la inteligencia artificial
 
 - [17. Archivos: Metadatos, cabeceras y extensiones](#archivos-metadatos-cabeceras-y-extensiones)
 
+###  Archivos y estructuras de datos
+
+- [18. Qué son las Bases de Datos](#qué-son-las-bases-de-datos)
+
 
 
 
@@ -3796,5 +3800,269 @@ Lectura Recomendada: https://es.wikipedia.org/wiki/Esteganograf%C3%ADa
 <img src="https://www.cisinformatica.cat/wp-content/uploads/2024/09/que-es-la-esteganografia.jpg">
 
 *Imagen Tomada De: https://www.cisinformatica.cat/es/que-se-la-esteganografia-en-ciberseguridad/*
+
+
+
+
+
+
+
+
+
+
+
+---
+
+
+
+
+
+
+
+
+
+
+
+# Archivos y estructuras de datos
+
+
+
+
+
+
+
+
+
+
+
+## Qué son las Bases de Datos
+
+Las bases de datos, muchos creen que son como tablas de excel. Asi como una tabla que tiene 5 campos donde esta Nombre, Cargo, Edad, Salario y País y esto sería igual que un archivo de excel en donde cada uno de los campos se llenan.
+
+<img src="https://i.ytimg.com/vi/qtuElizNx9g/maxresdefault.jpg">
+
+*Imagen Tomada De: https://www.youtube.com/watch?v=qtuElizNx9g*
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/OOo-2.0-Base-ca.png/960px-OOo-2.0-Base-ca.png">
+
+*Imagen Tomada De: https://es.wikipedia.org/wiki/Base_de_datos*
+
+Lecturas Recomendadas:
+
+* https://www.oracle.com/latam/database/what-is-database/
+
+* https://aws.amazon.com/es/what-is/database/
+
+* https://www.ibm.com/mx-es/think/topics/database
+
+Para la gran mayoría de las personas allá afuera, las bases de datos son simplemente tablas de excel. Pero excel no es una base de datos, pues excel es una hoja cuadriculada donde coloco cualquier cosa.
+
+Las bases de datos son estrictas respecto a los datos que guardan. Son variables de tipos especificos que tienen reglas.
+
+La regla más importante en las BD es que no deben tener [redundancia](https://es.wikipedia.org/wiki/Redundancia_(ling%C3%BC%C3%ADstica) "Redundancia concept by Wikipedia"), los datos tienen que ser únicos para mantener integridad, esto es importante porque las BD es de lo que depende un negocio.
+
+**Entonces por ejemplo:**
+
+No pueden haber diferentes tipos de transacción cuando mueves dinero de un banco a otro. No pueden haber diferentes tipos de contraseña o de usuarios cuando estás guardando tu nombre de usuario o contraseña para un sistema único.
+
+No pueden haber diferentes formatos de vuelo cuando estás guardando los vuelos de un avión.
+
+Estos sistemas requieren ser estrictos, características estrictas de almacenamiento de los datos y para eso son las bases de datos.
+
+Para evitar redundancia, las bases de datos se estructuran pensando en cuáles son las tablas necesarias para representar cada catergoría de datos y luego se conectan entre sí.
+
+**Por ejemplo:**
+
+Imaginemos que vamos a hacer la tabla de una red social, entonces en una red social tú tienes uan serie de Post en el timeline y esos post que son creados por usuarios necesitan tener su nombre de usuario, quién lo creó como contenido y por dentro puede tener comentarios, el post puede tener likes y los comentarios tambien pueden tener likes.
+
+<img src="https://img.freepik.com/vector-gratis/plantilla-publicacion-instagram-notificaciones_23-2147838119.jpg">
+
+*Imagen Tomada De: https://www.freepik.es/fotos-vectores-gratis/cuadricula-instagram-mockup*
+
+Por lo que un Post contiene: El Post, Los comentarios, Los likes, Los likes de los comentarios, el nombre de usuario que lo creó.
+
+Pensemos en la forma más simple en la que esta base de datos ocurriría. ¿Qué es lo primero que necesitamos entender? Probablemente lo primero que necesitamos entender es que hay usuarios. 
+
+Los usuarios tienen un nombre de usuario y por supuesto para poder entrar y ser identificados de una manera unica, necesitan una contraseña.
+
+En una base de datos esto no es lo único que se necesita. Tambien necesitamos un número único que los identifique porque los números son variables muy simples asi como por ejemplo, cuando un país te asigna un número que te identifica como ciudadano de ese país, como la cédula, el documento de votación, el pasaporte, entre otros.
+
+Y es una buena idea que guardemos la fecha en la que este usuario se registro.
+
+Por lo que para el usuario tenemos 4 varaibles con 3 tipos de datos distintos.
+
+---
+
+### Tabla Usuarios
+
+* [PK] usuario_id - int = número entero
+
+* nombre_usuario - string = texto
+
+* contrasena - string = texto
+
+* fecha_registro - date = fecha
+
+---
+
+Si estuvieramos en excel esto seria una hoja aparte y ahora que tenemos esta tabla, ahora necesitamos guardar todos los Post que hacen diferentes usuarios. Entonces, imagina que tenemos un post como los de toda la vida.
+
+Los post son creados por usuarios, entonces necesitamos el ID del usuario que creó el Post, y solo necesito el ID del usuario porque por medio de ese ID puedo encontrar la información de ese usuario en esa tabla siendo asi: No necesito agregar el nombre del usuario. 
+
+Porque lo puedo buscar a traves del ID de usuario que estoy guardando en la tabla de los Post, pero cada Post es único por lo que voy a necesitar un ID del Post, un número que identifique cada uno de estos Post.
+
+Necesitaremos tambien una descripción del contenido siendo una variable de tipo string = texto, una fecha de publicación y entonces eso es una variable de tipo fecha.
+
+Y si le vamos a poner likes, necesitamos una variable númerica siendo asi un contador de los likes que tiene y tambien, si quiero agregarle comentarios necesito un contador de estos comentarios siendo asi una variable de tipo entero.
+
+Por lo que siendo asi:
+
+---
+
+### Tabla Post
+
+* [PK] post_id - int
+
+* [FK] usuario_id - int
+
+* contenido - string
+
+* fecha_publicacion - string
+
+* contador_me_gusta - int
+
+* contador_comentarios - int
+
+---
+
+Ahora:
+
+[PK significa Primary Key o LLave Primaria](https://www.ibm.com/think/topics/primary-key "PK concept by IBM") de esa tabla siendo asi, el identificador único de cada uno de los registros de la tabla.
+
+Siendo esta llave primaria la que me conecta con la tabla de post siendo asi que en la tabla post, la llave primaria sea post_id
+
+y tambien tengo una llave especial única de otra tabla que me conecta con los datos de esa tabla, siendo asi que en la tabla post, me conecta con la tabla usuarios. 
+
+Esa se llama una [llave foránea o Foreing Key](https://www.ibm.com/docs/en/db2-for-zos/12.0.0?topic=integrity-defining-foreign-key "FK concept by IBM") y es la llave primaria en otra tabla. Que me puede traer esos datos que son únicos, en este caso es único saber quién es el tipo de usuario que colocó un Post.
+
+<img src="https://images.ctfassets.net/00voh0j35590/2K1mVD8aEwDgRcE0eEuCR8/279085dae1b34b30e32d43c9641b7df3/what_is_a_foreign_key_visual_explanation.jpg">
+
+*Imagen Tomada De: https://www.cockroachlabs.com/blog/what-is-a-foreign-key/
+
+---
+
+**Ahora ¿Donde guardo los comentarios?**
+
+Los comentarios son otra cosa aparte que guardaría en una tabla llamada comentarios, ¿Qué necesitaria para esta tabla?
+
+    [PK] comentarios_id - int
+
+    [FK] usuario_id     - int
+
+    [FK] post_id        - int
+
+    contenido         - string
+
+    fecha_comentario  - date
+
+    contador_me_gusta
+
+---
+
+Siendo asi tenemos toda una tabla de comentarios y toda una conexión en una base de datos. Una BD es mucho más compleja que esto, pero es un muy buen ejemplo. 
+
+Siendo asi, visible los componentes básicos de una base de datos. Hay diferentes herramientas de Software que construyen esas bases de datos:
+
+* Hoy en día casi ya no se usa, pero [Access de Microsoft](https://www.microsoft.com/es-co/microsoft-365/access) sirve para eso.
+
+* Existen programaciones que se llaman [SQL Lite o SQLite. ](https://sqlite.org/)
+
+* la base de datos más común usada en el mundo es [MySQL](https://www.mysql.com/).
+
+<img src="https://kinsta.com/wp-content/uploads/2019/04/logo-mysql-1.svg">
+
+*Imagen Tomada De: https://kinsta.com/es/blog/que-es-mysql/*
+
+* Tambien existe SQL Server del lado de Microsoft 
+
+[ORACLE](https://www.oracle.com/latam/database/) a nivel profesional.
+
+* La gran mayoría de los grandes y profesionales proyectos utilizan una base de datos de alto rendimiento que se llama [PostgreSQL](https://www.postgresql.org/).
+
+Todos estos sistemas son conocidos como motores de bases de datos. 
+
+Lecturas Recomendadas:
+
+* https://es.wikipedia.org/wiki/Motor_de_base_de_datos
+
+* https://ed.team/blog/6-motores-de-bases-de-datos-sql
+
+Los motores de bases de datos son pequeños servidores, herramientas de software que en el disco duro almacenan en diferentes archivos estas estructuras.
+
+Las bases de datos no son un archivo porque en una gran compañia, miles de personas y en ocasiones millones de personas, tienen que acceder a leer, editar y modificar estas bases de datos **en tiempo real** y eso requiere reglas especificas.
+
+También existe un lenguaje de programación construido especificamente para consultar la base de datos. Este lenguaje es conocido como SQL.
+
+SQL = Structured Query Language
+
+Lecturas Recomendadas:
+
+* https://aws.amazon.com/es/what-is/sql/
+
+* https://www.ibm.com/mx-es/think/topics/structured-query-language
+
+* https://universidadeuropea.com/blog/lenguaje-programacion-sql/
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Sql_data_base_with_logo.svg/500px-Sql_data_base_with_logo.svg.png">
+
+*Imagen Tomada De: https://es.wikipedia.org/wiki/SQL*
+
+Cuando hay personas que le dicen "My sequel" en vez de "My SQL" es porque una de las perimas bases de datos del mundo se llamaba Secuela o Sequel. Por lo que se volvió parte de la industria llamarle Sequel a SQL, pero realmente es SQL: Structured Query Language.
+
+Este lenguaje por ejemplo, si quisiéramos seleccionar todos los comentarios de usuarios cuyo nombre de usuario empiece por la letra F escribimos un código como este:
+
+    SELECT * FROM COMENTARIOS c
+    JOIN USUARIOS u ON c.usuario_id = u.usuario_id
+    WHERE u.nombre_usuario LIKE 'F%';
+
+<img src="https://www.astera.com/wp-content/uploads/2024/01/SQL-ETL-code-for-data-transformation.png">
+
+*Imagen Tomada De: https://www.astera.com/es/type/blog/sql-etl-tools/*
+
+Es un código distinto al código de programación normal. Algo asi se ve el lenguaje que hace consultas a bases de datos. Y esto es toda una profesión muy bien pagada.
+
+Lecturas Recomendadas:
+
+* https://aws.amazon.com/es/what-is/data-science/
+
+* https://www.coursera.org/mx/articles/what-does-a-data-analyst-do-a-career-guide
+
+* https://www.datacamp.com/es/blog/how-to-become-a-data-analyst
+
+---
+
+Las bases de datos se conectan con los lenguajes de programación y con las aplicaciones que haces de una manera distinta a los archivos pues un archivo se abre, se puede escribir, se puede guardar, pero las bases de datos tienen reglas específicas para guardar, editar, etc...
+
+Es la forma más facil de manejar datos dentro de una aplicación y es lo más común que tú aprendes cuando aprendes un lenguaje de backend o un lenguaje de desarrollo de aplicaciones móviles, etc...
+
+Es extremadamente común y necesario para cualquier empleado de desarrollo de software.
+
+existen otro tipo de bases de datos que no son relacionales, se conocen como NoSQL, la más común son las bases de datos documentales que son como tablas de excel que tienen diferentes variables que van cambiando. También existen bases de datos que son gráficos o grafos y bases de datos que son llave valor, que simplemente guardan una variable con un valor. 
+
+Lecturas Recomendadas:
+
+* https://aws.amazon.com/es/nosql/
+
+* https://www.ibm.com/es-es/think/topics/nosql-databases
+
+* https://www.oracle.com/latam/database/nosql/what-is-nosql/
+
+* https://www.mongodb.com/es/resources/basics/databases/nosql-explained
+
+Tipicamente cuando uno hace caché, que es guardar en memoria RAM los datos de algo que uno usa constantemente, uno usa una base de datos llave valor, la más común de ellas se llama [Redis](https://redis.io/) o [MongoDB](https://www.mongodb.com/).
+
+<img src="https://kinsta.com/es/wp-content/uploads/sites/8/2023/05/redis-vs-mongodb.jpg">
+
+*Imagen Tomada De: https://kinsta.com/es/blog/redis-vs-mongodb/*
 
 ---
