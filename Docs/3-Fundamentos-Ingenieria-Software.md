@@ -44,6 +44,8 @@ Cómo funciona Internet, las computadoras, los chips, la inteligencia artificial
 
 - [16. Permisos, niveles de procesos y privilegios de ejecución](#permisos-niveles-de-procesos-y-privilegios-de-ejecución)
 
+- [17. Archivos: Metadatos, cabeceras y extensiones](#archivos-metadatos-cabeceras-y-extensiones)
+
 
 
 
@@ -3580,3 +3582,219 @@ En windows casi nada ocurre en la terminal y casi todo ocurre en la interfaz gr�
 *Imagen Tomada De: https://thepythoncode.com/article/organize-files-by-extension-with-python*
 
 > Todo esto va a depender mucho del formato interno del archivo.
+
+
+
+
+
+
+
+
+
+
+
+---
+
+
+
+
+
+
+
+
+
+
+
+## Archivos: Metadatos, cabeceras y extensiones
+
+Los formatos de archivo son la forma en la que dentro de los sistemas operativos se identifica qué es lo que es un archivo.
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Audio_formats.jpg/500px-Audio_formats.jpg">
+
+*Imagen Tomada De: https://es.wikipedia.org/wiki/Formato_de_archivo*
+
+Lecturas Recomendadas:
+
+* https://es.wix.com/blog/tipos-de-archivos-y-como-utilizarlos
+
+* https://www.adobe.com/es/acrobat/resources/document-files.html
+
+Porque algunos son una [imagen](https://es.wikipedia.org/wiki/Imagen), [word](https://es.wikipedia.org/wiki/Microsoft_Word), [excel](https://es.wikipedia.org/wiki/Microsoft_Excel), [video](https://es.wikipedia.org/wiki/Video), un [pdf](https://www.adobe.com/co/acrobat/about-adobe-pdf.html), [un archivo de texto](https://es.wikipedia.org/wiki/Archivo_de_texto), y no es necesariamente claro.
+
+Existen multiples mecanismos para definir qué es un tipo de archivo por dentro.
+
+El más común es usar la extensión del archivo pues si al final del nombre del archivo aparece un .txt es un texto. 
+
+* Si aparece .doc es un documento de Word
+
+* Si aparece .html es un archivo HTML
+
+<img src="https://www.adobe.com/es/acrobat/resources/document-files/web-files/media_1555bfde6cf361e67f66923d2d937c6da6a259755.jpg?width=2000&format=webply&optimize=medium">
+
+*Imagen Tomada De: https://www.adobe.com/es/acrobat/resources/document-files/web-files/html.html*
+
+Sin embargo esto no es un metodo muy efectivo, en los ultimos años los OS están escondiendo las extensiones de los sistemas de archivos, hay que trabajar para poder mostrarlas
+
+> Recomendación: Activa desde ya la vista hacia el nombre de extensión, aunque esto no se puede hacer en un teléfono. Pero sí se puede hacer en Linux, Windows o en Mac.
+
+Lecturas Recomendadas:
+
+* https://support.apple.com/es-co/guide/mac-help/mchlp2304/mac
+
+---
+
+La segunda forma de lograrlo de saber cómo esta estructurado un archivo por dentro es leyendo las primeras 4 letras del archivo. Cuando uno abre un archivo, si es un archivo de texto es muy probable que las primeras 4 letras sean un texto cualquiera por lo que en ese caso el sistema operativo simplemente asume que esto es texto o "No sé qué es".
+
+Pero con archivos estructurados como imágenes, como PDFs, las primeras 4 letras tienden a ser una definición de lo que el archivo es.
+
+¿Cómo un archivo binario se ve por dentro?
+
+<img src="https://learn.microsoft.com/es-es/cpp/mfc/media/vcbinaryeditor2.gif?view=msvc-170">
+
+*Imagen Tomada De: https://learn.microsoft.com/es-es/cpp/windows/binary-editor?view=msvc-170*
+
+Del lado derecho se ve un texto que es medio ilegible que es la representación [ASCII](https://elcodigoascii.com.ar/) o la reprsentación en texto normal del archivo binario.
+
+<img src="https://elcodigoascii.com.ar/codigo-americano-estandar-intercambio-informacion/codigo-ascii.png">
+
+*Imagen Tomada De: https://elcodigoascii.com.ar/
+
+En el centro está la representación [hexadecimal](https://es.wikipedia.org/wiki/Sistema_hexadecimal). Cada byte se expresa como un par de números hexadecimales (2 numeros de 16 dígitos) puedo expresar un byte.
+
+Por lo que al mirar del lado izquierdo de la imagen se va a encontrar el nombre de la extensión en los primeros 4 bytes pues esos primeros 4 caracteres con la cabecera del archivo. Siendo asi, indican que tipo de archivo es.
+
+Lectura Recomendada: https://es.wikipedia.org/wiki/Volcado_hexadecimal
+
+<img src="https://i.sstatic.net/iVINZ.png">
+
+*Imagen Tomada De: https://stackoverflow.com/questions/69447266/converting-a-aspose-words-hex-to-pdf*
+
+---
+
+En los servidores web existen tipos y subtipos de archivos por lo que los
+
+Tipos pueden ser:
+
+* Texto
+
+* Imagen
+
+* Aplicación
+
+Y los subtipos pueden ser:
+
+* Texto Plano, Texto CSV
+
+* Imagen PNG, Imagen JPG
+
+* Aplicación PDF
+
+A estos se les conoce como [tipos MIME o MIME types](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/MIME_types "Mime Types concept by MDN") que son una forma para que los servidores sepan cual es el tipo de archivo que estas sirviendo.
+
+Lectura Recomendada: https://www.ibm.com/docs/es/sc-and-ds/8.5.0?topic=guide-mime-types
+
+Es una base de datos interna donde ciertas extensiones o ciertas cabeceras equivalen a cierto tipo de archivo.
+
+El servidor tiene que saber cuál es cada tipo de archivo y no es tan perfecto.
+
+La forma más común en la que los sistemas operativos definen un archivo es atraves de los primeros 4 bytes y de la estructura de la cabecera.
+
+Un archivo de texto plano es texto, el HTML o Javascript o Python son archivos de texto plano cuyas extensiones .py, .js, .html indican "Esto es texto plano, pero por dentro hay una estructura lógica siendo la estructura HTML, Javascript o Python.
+
+Existe una estructura de texto plano que me permite expresar datos como si fueran una tabla y esa estructura se llama CSV o Comma Separated Values.
+
+Lecturas Recomendadas:
+
+* https://es.wikipedia.org/wiki/Valores_separados_por_comas
+
+* https://www.adobe.com/es/acrobat/resources/document-files/text-files/csv-file.html
+
+<img src="https://www.profesionalreview.com/wp-content/uploads/2020/05/C%C3%B3mo-abrir-un-archivo-csv-02.png">
+
+*Imagen Tomada De: https://www.profesionalreview.com/2020/06/06/como-abrir-un-archivo-csv/*
+
+En donde si tu lo abres por medio de un editor de código o texto podrás verlo como si fuera texto separado por comas, pero si lo abres desde un excel lo verás como si fuera una tabla.
+
+En donde excel es una forma muy simple de mostrar datos separados por comas, como si fueran datos estructurados en una tabla.
+
+---
+
+<img src="https://i.ytimg.com/vi/W22wnNUXqGM/hq720.jpg?sqp=-oaymwE7CK4FEIIDSFryq4qpAy0IARUAAAAAGAElAADIQj0AgKJD8AEB-AG-B4AC0AWKAgwIABABGBsgRyh_MA8=&rs=AOn4CLC7iQDn9kBgXLbZj8-ISOfp5yj7Qg">
+
+*Imagen Tomada De: https://www.youtube.com/watch?v=W22wnNUXqGM*
+
+Cuando abrimos un archivo de word, un .docx vamos a encontrar que su cabecera esta llema de ceros porque esa cabecera es el espacio donde se guardan metadatos del archivo. Y luego abajo tengo la estructura.
+
+Por lo que puedes tener varios PDF, pero la estructura inicial de bytes es muy similar porque eso indica que tipo de archivo es y bajo qué mecanismo fue realizado. Y despues de la primera linea o renglon ya todo cambia.
+
+Es por medio de un editor hexadecimal que se puede mirar archivo binarios.
+
+Lecturas Recomendadas:
+
+* https://es.wikipedia.org/wiki/Editor_hexadecimal
+
+* https://mh-nexus.de/en/hxd/
+
+Esto es algo que generalmente no se estudia a no ser que se valla a ser el programador que va a programar una estructura de estos datos. Estas estructuras son arbitrarias, alguien las decidió porque sí, porque encontró que esa era la forma más eficiente de guardar los archivos.
+
+---
+
+Hay muchos tipos de archivo y alguna veces esos archivos por dentro tienen datos escondidos que se pueden ver en sistemas operativos como por ejemplo, los videos tienden a tener por dentro cuando fueron grabados, su tamaño, cual es el codec que usan.
+
+Lecturas Recomendadas: 
+
+* https://www.ibm.com/es-es/think/topics/metadata
+
+* https://www.avast.com/es-es/c-what-is-metadata
+
+* https://helpx.adobe.com/co/acrobat/desktop/edit-documents/edit-pdf-properties/pdf-properties.html
+
+Lo mismo sucede con las imagenes en donde actualmente se encuentra: Con qué dispositivo se tomo la foto, dimensión original del archivo, la última fecha en la que fue abierta, etcétera.
+
+<img src="https://i.blogs.es/27ab89/ver-metadatos/450_1000.jpg">
+
+*Imagen Tomada De: https://www.xataka.com/basics/que-metadatos-archivo-que-informacion-muestran-como-se-borran*
+
+Los PDF guardan muchos metadatos pues si le dan click derecho y miran sus metadatos van a ver el título original del archivo de donde vino, porque la mayoria de PDF no fueron un PDF originalmente sino que fueron construidos en otro lugar como por ejemplo en Adobe Illustrator o en Word.
+
+> Hay que tener mucho cuidado con el primer nombre que tuvo un archivo, debido a que por medio de los metadatos muchas veces se puede encontrar detalles tal vez no esperados.
+
+Los metadatos muchas veces en archivos también te explican cuál es la versión mínima de una aplicación para poder abrirlo o los archivos que necesitas para poder ejecutarlo.
+
+Por ejemplo los archivos son comprimidos y descomprimidos con unas técnicas especiales que se llaman codecs. Eso tiende a estar incluido en la cabecera  de los archivos de video, incluyendo su resolución, qué formato tienen, la calida, etc.
+
+Tambien existen otro tipo de archivos en donde están aglomerados otros datos, por ejemplo:
+
+Un archivo .zip, un archivo comprimido en los metadatos y en la cabecera del archivo está la lista de los archivos que por dentro tiene el .zip antes de ser descomprimida.
+
+Lecturas Recomendadas:
+
+* https://www.lenovo.com/mx/es/glosario/archivo-comprimido/
+
+* https://es.wikipedia.org/wiki/Formato_de_compresi%C3%B3n_ZIP
+
+* https://www.dropbox.com/es/resources/what-is-a-zip-file
+
+<img src="https://www.7-zip.org/7ziplogo.png">
+
+*Imagen Tomada De: https://www.7-zip.org/*
+
+Cuando los archivos se dañan en la parte arriba cuando uno le cambian las cabeceras es completamente posible que se vuelvan ilegibles y que ya no se puedan volver a abrir a no ser que se reparen por medio de técnicas muy avanzadas que rara vez son utilizadas.
+
+Tambien para archivos que se descarga mal, uno los puede verificar, existen mecanismos de verificación como el check zoom.
+
+Lo más importante para recordar son dos cosas:
+
+1. Un archivo no es una base de datos, un archivo puede tener datos y puede ser una base de datos, pero típicamente no es una BD pues esto es un concepto totalmente diferente. 
+
+2. Existe una técnica avanzada de informática para esconder datos dentro de archivos, se llama esteganografía que por ejemplo: Imagina que tienes una iamgen JPG que por dentro guarda un archivo de Excel de manera secreta. Esto es porque se sabe la estructura de la imagen JPG y de esa manera se esconde el Excel dentro del JPG, siendo está técnica muy común en distribución de virus, en el mundo de inteligencia militar, entre otros universos.
+
+Lectura Recomendada: https://es.wikipedia.org/wiki/Esteganograf%C3%ADa
+
+> Es curioso entonces que por medio de la Esteganografía existen las "firmas digitales" que se podían ocultar en documentos y archivos. Lo pueden usar las empresas entregando a sus trabajadores archivos a cada uno con una firma diferente y si se filtra información se puede saber quien lo filtro debido a esa "firma oculta".
+
+<img src="https://www.cisinformatica.cat/wp-content/uploads/2024/09/que-es-la-esteganografia.jpg">
+
+*Imagen Tomada De: https://www.cisinformatica.cat/es/que-se-la-esteganografia-en-ciberseguridad/*
+
+---
