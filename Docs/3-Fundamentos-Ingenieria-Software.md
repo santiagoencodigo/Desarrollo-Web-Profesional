@@ -50,6 +50,8 @@ Cómo funciona Internet, las computadoras, los chips, la inteligencia artificial
 
 - [18. Qué son las Bases de Datos](#qué-son-las-bases-de-datos)
 
+- [19. Cómo funciona el formato JPG](#cómo-funciona-el-formato-jpg)
+
 
 
 
@@ -4064,5 +4066,179 @@ Tipicamente cuando uno hace caché, que es guardar en memoria RAM los datos de a
 <img src="https://kinsta.com/es/wp-content/uploads/sites/8/2023/05/redis-vs-mongodb.jpg">
 
 *Imagen Tomada De: https://kinsta.com/es/blog/redis-vs-mongodb/*
+
+
+
+
+
+
+
+
+
+
+---
+
+
+
+
+
+
+
+
+
+
+## Cómo funciona el formato JPG
+
+El ojo humano no puede ver todos los colores. Hay varias cosas que son imperceptibles en nuestro ojo. Pero cuando tomamos una [fotografía](https://es.wikipedia.org/wiki/Fotograf%C3%ADa "Fotografía concept by Wikipedia") los [sensores fotográficos](https://es.wikipedia.org/wiki/Sensor_de_imagen "Sensores Fotográficos concept by Wikipedia") guardan mucho más detalle en los formatos normales.
+
+En 1992, un grupo llamado [Join Photographic Experts Group](https://en.wikipedia.org/wiki/Joint_Photographic_Experts_Group "JPEG by Wikipedia") o JPEG, creo el formato JPG: Un formato especial de compresión de imágenes que aprovecha esta característica del ojo humano para comprimir las fotos.
+
+Lecturas Recomendadas:
+
+* https://www.freecodecamp.org/news/how-jpg-works-a4dbd2316f35/
+
+* https://www.adobe.com/es/creativecloud/file-types/image/raster/jpeg-file.html
+
+* https://jpeg.org/about.html
+
+Video Recomendado: https://www.youtube.com/watch?v=_OF3LKJkYC8
+
+Hay que entender la diferencia entre una pantalla y el medio impreso, cuando tu [imprimes](https://es.wikipedia.org/wiki/Impresi%C3%B3n "Imprimir concept by Wikipedia") una foto, cuando tu ves una foto en el mundo real esta foto esta dividida en 4 grandes colores, 4 tintas que son las 4 tintas que tipícamente tiene una impresora: **[CMYK](https://www-figma-com.translate.goog/resource-library/what-is-cmyk/ "CMYK concept by Figma")**
+
+* Cian
+
+* Magenta
+
+* Amarillo
+
+* Negro
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/CMYK_color_swatches.svg/500px-CMYK_color_swatches.svg.png">
+
+*Imagen Tomada De: https://es.wikipedia.org/wiki/Modelo_de_color_CMYK*
+
+La combinación CMYK da la combinación de todos los colores que se pueden expresar en un papel, en un medio impreso.
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/CMYK_color_wheel-es.png/500px-CMYK_color_wheel-es.png">
+
+*Imagen Tomada De: https://es.wikipedia.org/wiki/Modelo_de_color_CMYK*
+
+Pero en una pantalla esto funciona distinto, la luz tiene total color, que es el blanco u ausencia absoluta de color que es el negro.
+
+Entonces, ¿Cómo hacemos los puntos intermedios? 
+
+Una pantalla tiene una serie de puntos que se llaman píxeles, cada uno de estos píxeles tiene 3 colores:[ El rojo, el verde y el azul - RGB](https://developer.mozilla.org/es/docs/Glossary/RGB "RGB by MDN")
+
+<img src="https://www.ionos.com/es-us/digitalguide/fileadmin/_processed_/2/3/csm_que-es-un-pixel-la-disposicion-de-los-subpixeles_44d751808c.webp">
+
+*Imagen Tomada De: https://www.ionos.com/es-us/digitalguide/paginas-web/diseno-web/que-es-un-pixel/*
+
+Son 3 lamparas de luz, de estos 3 colores el cual dependiendo de su intencidad de brillo hay total rojo, total verde, total azul o ausencia de alguno de ellos. Siendo asi esta intensidad de brillo el color en nuestras pantallas.
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Synthese%2B.svg/500px-Synthese%2B.svg.png">
+
+*Imagen Tomada De: https://es.wikipedia.org/wiki/RGB*
+
+La mayoria de formatos de captura de imagen completos, como los mapas de bits conocidos como BMP o como los PNGs, que son otro formato de compresión guardan toda la información de cada píxel siendo asi: En cada punto, cúal es su total a rojo, verde y azul (Su intensidad de brillo)
+
+Lecturas Recomendadas:
+
+* https://www.crehana.com/blog/estilo-vida/que-es-mapa-bits/
+
+* https://es.wikipedia.org/wiki/Imagen_de_mapa_de_bits
+
+* https://learn.microsoft.com/es-es/dotnet/desktop/winforms/advanced/types-of-bitmaps
+
+<img srC="https://learn.microsoft.com/es-es/dotnet/desktop/winforms/advanced/media/aboutgdip03-art02.gif">
+
+*Imagen Tomada De: https://learn.microsoft.com/es-es/dotnet/desktop/winforms/advanced/types-of-bitmaps*
+
+Lo primero que hace JPG es transformarlo a otro formato que se llama [YCbCR](https://es.wikipedia.org/wiki/YCbCr "YCBCr concept by Wikipedia") siendo asi:
+
+* Y = La cantidad de luz
+
+* CBCR = Un plano cartesiano en un eje x y un eje y que muestra todo el arcoiris de color que existe dependiendo de un punto en el plano cartesiano, esto es porque el ojo humano es menos sensible al color que a la luz.
+
+* Cb representa el croma azul
+
+* Cr representa el croma rojo
+
+De esa manera: Guardando la luminancia de una fotografía, es más fácil poder comprimir el resto de los datos de su posición de color.
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YCbCr.GIF">
+
+*Imagen Tomada De: https://es.wikipedia.org/wiki/YCbCr*
+
+Por lo que lo primero que hace JPG es agarrar una foto, pasarla al plano de iluminación mostrando asi la cantidad de brillo de cada uno de los puntos y luego tengo un plano del croma azul y otro plano del croma rojo construyendo asi todos los colores dependiendo del plano.
+
+Asi ha funcionado la fotografia, la impresión y muchos otros medios gráficos por mucho tiempo.
+
+Son estándares.
+
+Teniendo asi, la imagen dividida en estas 3 opciones:
+
+1. Plano de iluminación
+
+2. Croma Azul
+
+3. Croma Rojo
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Barns_grand_tetons_YCbCr_separation.jpg/500px-Barns_grand_tetons_YCbCr_separation.jpg">
+
+*Imagen Tomada De: https://es.wikipedia.org/wiki/YCbCr*
+
+---
+
+Lo siguente es crear bloques, cuadritos de la imagen, porque en ocasiones no necesitamos tanto detalle a nivel de pixel por lo que vamos a fragmentar la imagen en mini cuadritos. 
+
+Típicamente en JPG cada uno de estos cuadritos es de 8 x 8 píxeles, pero los cuadritos pueden ser mucho más grandes o mucho más pequeños dependiendo de la calidad de exportación del JPG.
+
+Entre más pequeños estos cuadritos, más resolución y más detalle y entre más grandes los cuadritos, más perdida de calidad.
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Resolution_illustration.png">
+
+*Imagen Tomada De: https://es.wikipedia.org/wiki/Resoluci%C3%B3n_de_imagen*
+
+El JPG reduce mas o menos una cuarta parte la cantidad de detalle en los canales de color sin remover la iluminación porque al ojo humano no le importa el color tanto como la iluminación.
+
+Sin ir a tanto detalle, se aplica una onda de coseno y la transformada al [coseno](https://es.wikipedia.org/wiki/Teorema_del_coseno "Coseno concept by Wikipedia") y lo que hace es ir a la frecuencia de cada uno de los bloques de 8 píxeles y convertirlo en una expresión matemática mucho más simple en una matriz.
+
+<img src="https://cdn.pruebat.org/video/lbhrnM2DpQk/portada.png">
+
+*Imagen Tomada De: https://pruebat.org/SaberMas/MiClase/inicia/33350/*
+
+De toda la resolución de información matemática de cada uno de los píxeles de cada uno de los bloques de 8x8, se convierte en una ecuación matemática de onda de coseno para expresarlo en menos bytes, luego se aplican diferentes mecanismos matemáticos de algebra lineal para comprimir los datos que ya existen, estos mecanismos se conocen como cuantización.
+
+Uno de ellos por ejemplo: Es que se va a ir en zigzag por los diferentes componentes de los pixeles para ir agrupando cada uno de los elementos de la matriz.
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/1/1f/JPEG_example_zigzag.png">
+
+*Imagen Tomada De: https://es.wikipedia.org/wiki/Archivo:JPEG_example_zigzag.png*
+
+Hacemos esto en grupos de 8 bloques para la iluminación, el croma azul, el croma rojo y luego agarramos esos 3 componentes que han sido comprimidos matemáticamente, los volvemos a convertir a RGB y eso, lo volvemos a meter en un solo archivo y asi tienes tu imagen JPG.
+
+JPG elimina las cosas que el ojo humano no puede ver, cambia el formato rojo, verde, azul a un formato iluminancia, croma azul, croma rojo. Luego vuelve la imagen en pequeños bloques de 8 pixeles por 8 píxeles donde busca una especie de promedio de los colores expresados matemáticamente para luego expresarlo más chiquito en un archivo más pequeño con menos necesidad de bytes y volverlo a combinar y comprimir en un archivo RGB final, que termina siendo la imagen JPG.
+
+<img src="https://static.platzi.com/media/user_upload/upload-66d7f485-1bca-4f1f-b138-9f9c5271fc0f.png">
+
+JPG no es el único formato, existe un formato llamado PNG o Portable Network Graphics que no comprime las imagenes como las comprime JPG, pues este formato retiene la calidad y funciona de una forma completamente distinta, por lo que tiende a tener formatos de archivo más grandes por eso.
+
+Lecturas recomendadas: 
+
+* https://www.adobe.com/co/creativecloud/file-types/image/raster/png-file.html
+
+* https://es.wikipedia.org/wiki/Portable_Network_Graphics
+
+PNG viene en 2 "sabores":
+
+* **PNG 8**: Tiene pocos colores porque solamente es de 8 bits, tambien puede ser transparente, pero tiene un solo color para esto y por ende se ve como un hueco pixelado.
+
+* **PNG 32**: Tiene millones de colores y puede tener transparencias perfectas donde los archivos JPG no tienen la capacidad de ser transparentes. Tiene todo el arcoiris de transparencia incluyendo bordes completamente suaves.
+
+> Notese la transparencia de la siguente imagen.
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/4/47/PNG_transparency_demonstration_1.png">
+
+*Imagen Tomada De: https://upload.wikimedia.org/wikipedia/commons/4/47/PNG_transparency_demonstration_1.png*
 
 ---
