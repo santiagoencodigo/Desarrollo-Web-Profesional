@@ -52,6 +52,8 @@ Cómo funciona Internet, las computadoras, los chips, la inteligencia artificial
 
 - [19. Cómo funciona el formato JPG](#cómo-funciona-el-formato-jpg)
 
+- [20. Videos: Contenedores, Codecs y Protocolos](#videos-contenedores-codecs-y-protocolos)
+
 
 
 
@@ -4240,5 +4242,201 @@ PNG viene en 2 "sabores":
 <img src="https://upload.wikimedia.org/wikipedia/commons/4/47/PNG_transparency_demonstration_1.png">
 
 *Imagen Tomada De: https://upload.wikimedia.org/wikipedia/commons/4/47/PNG_transparency_demonstration_1.png*
+
+
+
+
+
+
+
+
+
+
+---
+
+
+
+
+
+
+
+
+
+
+## Videos: Contenedores, Codecs y Protocolos
+
+Si [JPEG](https://es.wikipedia.org/wiki/Joint_Photographic_Experts_Group "JPEG concept by Wikipedia") fue creado para comprimir imágenes porque guardar cada uno de los pixeles de la pantalla crea un archivo enorme, imaginese cuánto pesa guardar una película entera. Porque una [película](https://es.wikipedia.org/wiki/Pel%C3%ADcula "Película concept by Wikipedia") no es más que una serie de imágenes, una detras de otra, tomadas en sucesión.
+
+<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEinK_9ZgKpFGMmvnmdgzxmqLnVUgavb2KsRxi5e3vh9SyJAUa3tjyTJoQF0LGa8DCK99NTW3Zhphmn3kAijcFbjxpnYmKyNs5HrkvtbRxSR83kcVIxI-HKuR99dWXVZ0VGmx36C-4-vI2mq/s1600/53669fa18ce0dd5ed7c83251fcd3b60d.gif">
+
+*Imagen Tomada De: https://plasticabrian23.blogspot.com/2014/04/gif.html*
+
+Una película típicamente tiene 24 imágenes por cada segundo que se graba, de ahí vienen los 24 frames por segundo. Asi que la compresión sería super difícil.
+
+Los algoritmos de compresión de video funcionan de una manera muy interesante.
+
+Imaginese una imagen a lo largo del tiempo y esa imagen, es un video de una persona corriendo. 
+
+<img src="https://www.gifsanimados.org/data/media/169/correr-imagen-animada-0051.gif">
+
+*Imagen Tomada De: https://www.gifsanimados.org/cat-correr-169.htm*
+
+Si una persona esta corriendo, digamos que corriendo a través del frame lo único que va cambiando es la persona, el resto del fondo no cambia. Así que los códecs, los compresores de video, buscan en el tiempo cuáles son esos pedazos que no cambian y los vuelven bloques.
+
+Bloques tridimensionales que no se mueven en el tiempo hasta que no cambia por completo la escena, esta es la esencia.
+
+Lecturas Recomendadas: 
+
+* https://es.wikipedia.org/wiki/C%C3%B3dec_de_video
+
+* https://www.lenovo.com/co/es/glosario/codec/
+
+* https://www.cloudflare.com/es-es/learning/video/video-encoding-formats/
+
+* https://platzi.com/blog/codec-para-video/
+
+Los videos digitales modernos tienen que estar guardados en un contenedor siendo este el formato de archivo donde va el video. Típicamente estos archivos se encuentran como [.mp4](https://www.cloudflare.com/es-es/learning/video/what-is-mp4/ ".mp4 concept by Cloudflare"), [.mkv](https://es.wikipedia.org/wiki/Matroska "Matroska concept by Wikipedia"), [.avi](https://www.lenovo.com/co/es/glosario/avi/ ".avi concept by Wikipedia"), [.mov](https://www.cloudflare.com/es-la/learning/video/mov-vs-mp4/ ".mov concept by Cloudflare"), etc... Estos no son el compresor ni el descompresor sino simplemente el contenedor.
+
+Por dentro del contenedor el video son muchas cosas.
+
+Los videos tienden a ser:
+
+* [Video](https://es.wikipedia.org/wiki/Video "Video concept by Wikipedia")
+
+* [Audio](https://es.wikipedia.org/wiki/Audio_digital "Audio concept by Wikipedia")
+
+* [Subtítulo](https://es.wikipedia.org/wiki/Subt%C3%ADtulos_cerrados "Subtítulos concept by Wikipedia")
+
+Y a veces contienen múltiples tracks de audio, múltiples tracks de subtítulos y en algunos casos múltiples tracks de video.
+
+Por lo que vamos primero con el video:
+
+El contenedor es simplemente el formato de archivo, ¿De qué depende? De la compatibilidad de las computadoras, del sistema donde lo estés usando, etc...
+
+En este momento los más populares del planeta son .mp4, si tú descargas anime por ejemplo, o peliculas extrañas de lugares medio dudosos, probablemente encontrarás un formato que se llama MKV o Matrioshka Video donde mp4 es parte de un estándar internacional que se conoce como el consorcio H264.
+
+Lecturas Recomendadas: 
+
+* https://docs.fileformat.com/es/video/h264/
+
+* https://en.wikipedia.org/wiki/Advanced_Video_Coding
+
+* https://www.cloudflare.com/es-es/learning/video/what-is-h264-avc/
+
+La televisión digital tiende a estar transmitida a través de este formato. Estos son formatos que guardan video por dentro.
+
+<img src="https://digiday.com/wp-content/uploads/sites/3/2023/11/revamp-tv-digiday.gif">
+
+*Imagen Tomada De: https://digiday.com/future-of-tv/future-of-tv-briefing-how-telemundo-is-using-tv-digital-and-streaming-originals-to-program-its-live-24-7-fast-channel/*
+
+Los videos por dentro se graban en un formato nativo de los [sensores de las cámaras](https://es.wikipedia.org/wiki/Sensor_de_imagen "Sensor de camaras concept by Wikipedia") y luego chips en la camara: Esto incluye tu teléfono, una cámara de video, entre cualquier dispositivo que pueda grabar video. El chip automáticamente lo comprime a través de un sistema llamado el [Codificador Decodificador = CODEC = Compresor Descompresor.](https://www.dacast.com/es/blog-es/que-es-un-codec-de-video/ "CODEC concept by dacast.com")
+
+Estos son algoritmos de compresión de video que funcoinan de maneras distintas y tienen diferentes compatibilidades.
+
+Entre más chiquito es el video, más CPU o GPU necesitas para descomprimirlo a tiempo real.
+
+Hoy en día los chips son extremadamente avanzados y no te va a mucho tiempo descomprimir un video. Pero si toma bastante tiempo comprimirlo porque requiere de operaciones matemáticas extremadamente complejas para guardar el video.
+
+De hecho, hoy en día las tablets, las computadoras y los teléfonos tienen chips especializados en el SOC = System on a Chip, cuyo único trabajo es comprimir y descomprimir ciertos códecs, como el codec H264.
+
+> Tu televisor sin duda tiene un chip dedicado simplemente a comprimir y descomprimir video.
+
+Los algoritmos más comunes de compresión y descompresión hoy en día son H264, hay uno nuevo que se llama [H265](https://es.wikipedia.org/wiki/H.265 "H.265 concept by Wikipedia"), muy popular en los iPhones, existe uno de Google que se llama [VP9](https://es.wikipedia.org/wiki/VP9 "VP9 concept by Wikipedia"), y existe otro llamado [AV1](https://es.wikipedia.org/wiki/AV1 "AV1 concept by Wikipedia").
+
+Los algoritmos tardan tiempo es distribuirse porque a pesar de que sean mejores o más comprimidos, necesitan actualizaciones de hardware debido a lo intensos que son.
+
+Si un algoritmo es nuevo y tu teléfono o tu televisor o tu computadora no tienen un chip especializado para comprimir y descomprimirlo, este trabajo se le manda a la CPU o a la GPU por lo que requiere más energia y por ende más batería y puede hacer el proceso más lento.
+
+En la práctica el códec más común que te vas a encontrar será el H264.
+
+H264 tiene un problema muy grande es que es un códec propietario dueño de un consorcio, el [consorcio MPEGLA](https://en.wikipedia.org/wiki/MPEG_LA "MPEG LA concept by Wikipedia"). Siendo este consorcio múltiples empresas, entre ellas está [Sony Music](https://es.wikipedia.org/wiki/Sony_Music "Sony Music concept by Wikipedia"), [Apple](https://es.wikipedia.org/wiki/Apple "Apple concept by Wikipedia"), [Microsoft](https://es.wikipedia.org/wiki/Microsoft "Microsoft concept by Wikipedia"), entre otros. Y le cobran a los fabricantes por cada una de las veces que en sus dispositivos se usa el códec, en respuesta a ello, Google se compró una empresa llamada [ON2 technologies](https://es.wikipedia.org/wiki/On2_Technologies "On2 Technologies concept by Wikipedia") de donde sale el CODEC BP9, pero no es tan popular.
+
+<img src="https://upload.wikimedia.org/wikipedia/en/thumb/9/92/MPEG_LA_logo.png/500px-MPEG_LA_logo.png">
+
+*Imagen Tomada De: https://en.wikipedia.org/wiki/MPEG_LA*
+
+Ellos no solamente se compraron esa empresa sino que hicieron el CODEC completamente abierto y la comunidad de software abierto tambien desarrolló un sistema automático abierto y gratuito de descompresión de los videos H264 que se conoce como [X264](https://es.wikipedia.org/wiki/X264 "X264 concept by Wikipedia").
+
+Pero eso es video sin incluir el audio en donde este es un monstruo distinto.
+
+<img src="https://media.tenor.com/b3pZMIW1I-UAAAAM/audio-beat.gif">
+
+*Imagen Tomada De: https://tenor.com/search/audio-wave-gifs*
+
+---
+
+La compresión y descompresión de audio tiene una revolución muy grande en los noventas con la llegada del algoritmo [MP3](https://es.wikipedia.org/wiki/MP3 "MP3 concept by Wikipedia") que funciona muy parecido al JPG. Así como JPG elimina los componentes que el ojo no puede ver, mp3 elimina los componentes en la onda de audio que el oido no puede escuchar.
+
+Lectura Recomendada: https://es.wikipedia.org/wiki/Algoritmo_de_compresi%C3%B3n_con_p%C3%A9rdida
+
+Hay personas que dicen que lo pueden escuchar todo y depronto sí, es toda una industria que se llama los [audiófilos](https://audio46.com/es/blogs/audio46-guidepost/what-is-an-audiophile), que son personas obsesionadas con los parlantes más costosos del planeta tierra.
+
+* Parlantes KEF LS 50: https://lflaudio.com/producto/kef-ls50
+
+Puede que hallan parlantes que puedan mostrar más sonidos de una misma honda, pero el cambio no va a ser tan perceptible.
+
+Existen varios códecs de audio, está [AAC](https://es.wikipedia.org/wiki/Advanced_Audio_Coding "AAC concept by Wikipedia"), [MP3](https://es.wikipedia.org/wiki/MP3 "MP3 concept by Wikipedia"), [OPUS](https://es.wikipedia.org/wiki/Opus_(c%C3%B3dec) "OPUS codec concept by Wikipedia"), entre otros. Allá afuera te vas a encontrar casi siempre con el códec AAC que es muy común conectarlo con H264 y meterlo en el contenedor MP4 o con el CODEC MP3.
+
+Con el contenedor códec de video y códec de audio ya tengo un video completo, pero no es suficiente para transmitirlo por internet.
+
+En internet tengo un problema y es que a veces yo tengo que abrir un archivo de video en la mitad del video. Imagina que entro a youtube y quiero verlo en el minuto 3 o en el minuto 5 o justo en el final.
+
+Entonces no puedo tener el primer segmento del video, y en la cabecera del archivo, los metadatos son muy importantes. 
+
+En la cabecera del contenedor hay mucha información que se necesita para reproducir el video, por ejemplo: 
+
+* Resolución del video: Que tengo que preparar para que el reproductor de video tenga la forma correcta.
+
+* [Framerate](https://es.wikipedia.org/wiki/Fotogramas_por_segundo "FPS concept by Wikipedia"): Cuántos frames por segundo tiene el video, de esa manera el video se reproduce en la velocidad correcta.
+
+* Codec de compresión de video
+
+* Codec de compresión de audio
+
+* Otros datos...
+
+Si yo estoy transmitiendo un video por internet y lo abro en un punto aleatorio del video o por ejemplo si estoy haciendo streaming en vivo, pues no tengo el header. ¿Qué hago?
+
+<img src="https://mastersofmedia.hum.uva.nl/wp-content/uploads/2019/10/Twitch-Chat-Gif.gif">
+
+*Imagen Tomada De: https://mastersofmedia.hum.uva.nl/2019/10/unfolding-twitch-vernaculars-through-emotes/*
+
+Existen protocolos de transmisión que así como existe HTTP para mandar archivos HTML o Archivos de texto por internet, estos son protocolos de transmisión específicamente diseñados para enviar video.
+
+Hoy en día, el más popular es [HLS o Http Live Streaming](https://www.cloudflare.com/es-es/learning/video/what-is-http-live-streaming/ "HLS concept by Cloudflare"), hay otro que se llama [mpeg-DASH](https://en.wikipedia.org/wiki/Dynamic_Adaptive_Streaming_over_HTTP "MPEG DASH concept by Wikipedia"), y hay uno muy viejo de la época de Flash, conocido como [RTMP o Real Time Message Protocol](https://wave.video/es/blog/rtmp-guide/ "RTMP concept by wave.video").
+
+Estos 3 protocolos usan técnicas distintas para hacer más o menos lo mismo. 
+
+Agarrar los videos desde su contenedor, romperlos en pedacitos, y en cada uno de esos pedacitos incluir en la cabecera de tal forma que si yo salto a un punto aleatorio del video, salto al pedacito de video que estoy buscando junto con la cabecera y tengo los datos que necesito sin importar el momento en el video en el que lo estoy obteniendo.
+
+Los servidores modernos de video también están constantemente midiendo cuánto ancho de banda hay entre el usuario y el servidor. Y de esa manera mandan versiones distintas de los videos que tienen otros tipos diferentes de compresión.
+
+La forma en la que intermanente esto funciona, es que la mayoria de los videos cuando son subidos a un servidor de video, son recomprimidos en diferentes tamaños y en diferentes bitrates.
+
+Un [bitrate](https://es.wikipedia.org/wiki/Tasa_de_bits "bitrate concept") es cuántos bits le puedo colocar a un video por cada segundo de video. Por ejemplo: Un video que tenga un bit rate de un megabit por segundo tiene 1.000.000 de bits de información por cada segundo de video que yo estoy enviando.
+
+Entre más bits tenga más calidad, pero más ancho de banda necesita.
+
+Entre menos bits tengo menos calidad y menos ancho de banda necesito.
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Bandwidth.svg/500px-Bandwidth.svg.png">
+
+*Imagen Tomada De: https://es.wikipedia.org/wiki/Ancho_de_banda*
+
+Existe un mito en el que bitrate y resolución es lo mismo, porque la mayoría de las personas observa esto a través de youtube y uno puede convertir o cambiar la calidad en: 144p, 240p, 360p, 480p, 720p, 1080p
+
+Pero no es asi, pues se puede enviar un video de 1080p en un megabit de 1 MB/s o de 512 KB/s o de 100 KB/s, se van a ver más feos pero es posible.
+
+> Por lo que la idea de bitrate y que la resolución esten conectadas es falso.
+
+Hay servidores avanzados que usando procesadores muy complejos recomprimen en tiempo real los videos. Asi funciona por ejemplo: [Netflix](https://www.netflix.com/ "Netflix.com") o [Twitch](https://www.twitch.tv/).
+
+Hoy en día la gran mayoría de los navegadores, teléfonos y computadoras son compatibles con la gran mayoría de los códecs, pero hace muy pocos años era muy difícil lograr compatibilidad.
+
+Ten mucho cuidado cuando estés exportando y sí quieres asegurarte en maxima compatibilidad lo mejor es que uses mp4 como contenedor, h264 como codec y AAC como codec de audio.
+
+Los subtítulos tambien tienen estándares. Los 2 estándares más comunes son [.SRT](https://mailchimp.com/es/resources/what-is-an-srt-file/ ".srt concept by mailchimp.com") o [.VTT](https://filext.com/es/extension-de-archivo/VTT "VT concept by filext.com") que son básicamente archivos de texto con un código interno donde para un tiempo específico del video sale un tipo de texto.
+
+Tanto las imágenes como los videos tienen interamente en esencia mecanismos de compresión de los bytes, del contenido.
 
 ---
