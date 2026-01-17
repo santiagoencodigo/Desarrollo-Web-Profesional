@@ -54,6 +54,8 @@ Cómo funciona Internet, las computadoras, los chips, la inteligencia artificial
 
 - [20. Videos: Contenedores, Codecs y Protocolos](#videos-contenedores-codecs-y-protocolos)
 
+- [21. Cómo funciona un archivo .zip](#cómo-funciona-un-archivo-zip)
+
 
 
 
@@ -4438,5 +4440,229 @@ Ten mucho cuidado cuando estés exportando y sí quieres asegurarte en maxima co
 Los subtítulos tambien tienen estándares. Los 2 estándares más comunes son [.SRT](https://mailchimp.com/es/resources/what-is-an-srt-file/ ".srt concept by mailchimp.com") o [.VTT](https://filext.com/es/extension-de-archivo/VTT "VT concept by filext.com") que son básicamente archivos de texto con un código interno donde para un tiempo específico del video sale un tipo de texto.
 
 Tanto las imágenes como los videos tienen interamente en esencia mecanismos de compresión de los bytes, del contenido.
+
+
+
+
+
+
+
+
+
+
+
+---
+
+
+
+
+
+
+
+
+
+
+
+## Cómo funciona un archivo .zip
+
+> La compresión de archivos es un proceso fascinante que utilizamos a diario sin entender realmente cómo funciona.
+
+Detrás de cada archivo ZIP hay una serie de algoritmos matemáticos que permiten reducir significativamente el tamaño de nuestros datos sin perder información.
+
+Los archivos .zip son conocidos como archivos comprimidos y la forma en la que comprimen se puede entender: Vamos a comprimir una palabra para entender matemáticamente esa palabra cómo se comprime.
+
+Vamos a comprimir:
+
+    MANZANAS_AMARILLAS_DE_ANA
+
+Solo tendremos mayusculas, aunque en la practica tambien podriamos tener minusculas.
+
+Debemos entender primero en la palabra cuántas letras tiene, y cuales son las letras más frecuentes de esta palabra.
+
+La letra más frecuente es la letra A
+
+* La letra A aparece 8 veces
+
+* La letra N aparece 3 veces
+
+* La letra _ aparece 3 veces
+
+* La letra M aparece 2 veces
+
+* La letra S aparece 2 veces
+
+* La letra L aparece 2 veces
+
+* Z = 1
+
+* R = 1
+
+* I = 1
+
+* D = 1
+
+* E = 1
+
+Entendiendo ahora la frecuencia de las letras puedo empezar a comprimir. Sabiendo que las letras dentro de una computadora son bytes, es decir ocho bits, 8 grupos de 0 y 1.
+
+Y estos representan un número, que es en la forma de la que se guarda en el computador cada una de las letras.
+
+Los números corresponden a la tabla ASCCI en donde por ejemplo:
+
+    La letra M
+
+    Decimal: 77
+
+    Hexadecimal: 0x4D
+
+    Binario: 01001101
+
+y por otro lado:
+
+    A
+
+    Decimal: 65
+
+    Hexadecimal: 0x41
+
+    Binario: 01000001
+
+Asi es como entiende internamente una computadora cada letra.
+
+La palabra MANZANAS_AMARILLAS_DE_ANA son 25 letras, por lo que se almacenan 25 bytes de información en la computadora, siendo asi cada byte 8 bits por lo que son un total de datos que tiene la palabra son 200 bits.
+
+La idea de la compresión es que necesitemos la menor cantidad de bits para expresar las letras más comunes de las palabras que están en un archivo.
+
+Entonces en nuestro caso donde la letra A es la que más se representa por ende debe haber una forma en la que representemos esa letra en 8 bits, la representemos en 1 bits.
+
+Nosotros podemos crear un árbol binario. Es una estructura de datos que tiene una raíz en donde si agarro a la derecha tengo un 1 o si voy a la izquierda tengo 0  y cada uno de estos nodos tiene máximo dos caminos.
+
+Por eso se llaman árboles binarios, porque cada punto o cada nodo del arbol solamente agarra hacia dos lados. 
+
+Esta es la representación gráfica de una estructura matemática.
+
+La raiz siempre donde agarra es el inicio del archivo, vamos a imginar que cuando en mi raíz voy para la derecha es un 1 y cuando voy para la izquierda es un 0 y vamos a asumir que cada que digo uno es una letra y que cada vez que digo 0 estoy bajando en mi árbol.
+
+Entonces la letra que más frecuencia tiene en mi archivo la voy a colocar en la primera ramita que tiene un uno siendo este la letra A.
+
+Luego voy un cero a la izquierda del primer nodo y luego hago otro nodo de uno siendo la segunda letra más frecuente: N
+
+Vuelvo a hacer otro 0, voy al uno del siguente nodo siendo asi la siguente letra más frecuente que es el espacio o _
+
+Otro 0 y otro 1 que es la letra M
+
+Otro 0 y otro 1 que es la letra S
+
+Otro 0 y otro 1 que es la letra L
+
+Otro 0 y otro 1 que es la letra Z
+
+Otro 0 y otro 1 que es la letra R
+
+0, 1 - D
+
+0, 1 - E
+
+Lo que se hizo fue organizarlos de mayor a menor frecuencia de acuerdo a la tabla de frecuencias
+
+Ahora que tengo el arbol organizado, donde yo siempre sé que cero significa moverme a la izquierdo, bajar un nivel en mi árbol y que uno significa encontrar una letra, ahora voy a tratar de representar la palabra MANZANAS_AMARILLAS_DE_ANA expresada como los bits a donde llego a cada letra.
+
+Por ejemplo, la primera letra es la M
+
+en donde M se encuentra bajando 3 veces en el árbol y llendo a la derecha una sola vez. Por lo que si fuera a expresarlo en movimientos de ceros y unos.
+
+La M sería 0001 
+
+La letra A de "MANZANAS" que sigue despues de la letra M sería simplemente un 1, porque es la primera letra de la raíz del árbol hacia abajo por lo que solo necesité 1 bit para expresar A
+
+Cuantos bits necesito para expresar N? 2. Lo que seria un 0 y un 1 de acuerdo al árbol por lo que ya vamos "MAN"
+
+Despues Z es la letra que esta más lejos por lo que será 0000001 
+
+---
+
+por lo que:
+
+    M = 0001
+
+    A = 1
+
+    N = 01
+
+    Z = 0000001
+
+    A = 1
+
+    N = 01
+
+    A = 1
+
+    S = 00001
+
+    _ = 001
+
+    A = 1
+
+    M = 001
+
+    A = 1
+
+    R = 00000001
+
+    I = 000000001
+
+    L = 000001
+
+    L = 000001
+
+    A = 1
+
+    S = 00001
+
+    _ = 001
+
+    D = 0000000001
+
+    E = 00000000001
+
+    _ = 001
+
+    A = 1
+
+    N = 01
+
+    A = 1
+
+---
+    
+Entonces vemos que tenemos algunos números grandes y otros pequeños, de hecho hay algunos más pesados que un byte como por ejemplo la letra D en donde son 10 bits y la letra E tiene 11 bits.
+
+Sin embargo si contamos cuantos bits tiene la palabra en total de esta forma, son 98 bits. Por lo que la estructura original me hubiera costado 25 bytes/200 bits, organizada con nuestro árbol se comprimió en más del 50% siendo 98 bits. Y si la palabra hubiera sido más larga, se habría logrado comprimir aún más.
+
+Porque entre más letras se comporten con alta frecuencia, entonces más fácil va a ser comprimir y esto es todo lo que se tuvo que hacer para comprimir el archivo.
+
+Ahora, si tomamos los números de la estructura del árbol binario y lo organizamos como bytes:
+
+    00011010 00000111 01100001 00001001 10001100 00000100 00000010 00001000 00110000 10010000 00000100 00000000 10011011
+
+Teniendo asi 12.25 bytes, pero para completarlo le agregamos varios 0 siendo asi un total de 13 bytes.
+
+Por eso cuando abres un archivo .zip tiene un monton de letras que no tienen sentido, porque si yo convierto esto en una letra para poder guardarlo en mi disco duro, voy a encontrar que cada uno de estos números corresponde a una letra en la tabla ASCCI, pero son números aleatorios que simplemente se ven como basura.
+
+Sin embargo, si yo agarro todos estos ceros y unos que son noventa y ocho bits y tambien tengo por ejemplo, en la cabecera del archivo guardado de algún formato, mi arbol donde tengo la estructura a qué letra corresponde cada uno de los movimientos yo puedo descomprimir el archivo y volver a recrearlo y tener una vez más MANZANAS_AMARILLAS_DE_ANA
+
+Siendo algo asi, el proceso del cómo se comprime y descomprime un archivo. No es el único algoritmo, hay varios algoritmos de compresión y descompresión. Pero esta es una de las técnicas.
+
+Por lo que esto recuerda a que en nuestra computadora todo tipo de datos, podemos acceder bit por bit a cada uno de ellos lenguajes de programación.
+
+---
+
+Hay que programar este algoritmo en cualquier lenguaje de programación.
+
+Github Repositorio de alguien que lo hizo: https://github.com/MrDonkey08/huffman
+
+Para usarlo se necesita instalar el paquete BitVector: pip install BitVector
+
+* https://colab.research.google.com/drive/1FFyo5QFofbE8RZoJOPxK3j_A3rrnjong?usp=sharing
 
 ---
