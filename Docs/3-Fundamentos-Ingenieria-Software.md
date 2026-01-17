@@ -4469,6 +4469,12 @@ Tanto las imágenes como los videos tienen interamente en esencia mecanismos de 
 
 Detrás de cada archivo ZIP hay una serie de algoritmos matemáticos que permiten reducir significativamente el tamaño de nuestros datos sin perder información.
 
+Lecturas Recomendadas:
+
+* https://es.wikipedia.org/wiki/Formato_de_compresi%C3%B3n_ZIP
+
+* https://es.wikipedia.org/wiki/Compresi%C3%B3n_de_datos
+
 Los archivos .zip son conocidos como archivos comprimidos y la forma en la que comprimen se puede entender: Vamos a comprimir una palabra para entender matemáticamente esa palabra cómo se comprime.
 
 Vamos a comprimir:
@@ -4527,6 +4533,10 @@ y por otro lado:
 
     Binario: 01000001
 
+<img src="https://elcodigoascii.com.ar/codigo-americano-estandar-intercambio-informacion/codigo-ascii.png">
+
+*Imagen Tomada De: https://elcodigoascii.com.ar/*
+
 Asi es como entiende internamente una computadora cada letra.
 
 La palabra MANZANAS_AMARILLAS_DE_ANA son 25 letras, por lo que se almacenan 25 bytes de información en la computadora, siendo asi cada byte 8 bits por lo que son un total de datos que tiene la palabra son 200 bits.
@@ -4535,13 +4545,17 @@ La idea de la compresión es que necesitemos la menor cantidad de bits para expr
 
 Entonces en nuestro caso donde la letra A es la que más se representa por ende debe haber una forma en la que representemos esa letra en 8 bits, la representemos en 1 bits.
 
-Nosotros podemos crear un árbol binario. Es una estructura de datos que tiene una raíz en donde si agarro a la derecha tengo un 1 o si voy a la izquierda tengo 0  y cada uno de estos nodos tiene máximo dos caminos.
+Nosotros podemos crear un [árbol binario](https://es.wikipedia.org/wiki/%C3%81rbol_binario "Árbol Binario concept by Wikipedia"). Es una estructura de datos que tiene una raíz en donde si agarro a la derecha tengo un 1 o si voy a la izquierda tengo 0  y cada uno de estos nodos tiene máximo dos caminos.
 
 Por eso se llaman árboles binarios, porque cada punto o cada nodo del arbol solamente agarra hacia dos lados. 
 
 Esta es la representación gráfica de una estructura matemática.
 
-La raiz siempre donde agarra es el inicio del archivo, vamos a imginar que cuando en mi raíz voy para la derecha es un 1 y cuando voy para la izquierda es un 0 y vamos a asumir que cada que digo uno es una letra y que cada vez que digo 0 estoy bajando en mi árbol.
+<img src="https://upload.wikimedia.org/wikipedia/commons/3/36/Binary_tree_%28oriented_digraph%29.png">
+
+*Imagen Tomada De: https://es.wikipedia.org/wiki/%C3%81rbol_binario*
+
+La raiz siempre donde agarra es el inicio del archivo, vamos a imaginar que cuando en mi raíz voy para la derecha es un 1 y cuando voy para la izquierda es un 0 y vamos a asumir que cada que digo uno es una letra y que cada vez que digo 0 estoy bajando en mi árbol.
 
 Entonces la letra que más frecuencia tiene en mi archivo la voy a colocar en la primera ramita que tiene un uno siendo este la letra A.
 
@@ -4655,6 +4669,10 @@ Siendo algo asi, el proceso del cómo se comprime y descomprime un archivo. No e
 
 Por lo que esto recuerda a que en nuestra computadora todo tipo de datos, podemos acceder bit por bit a cada uno de ellos lenguajes de programación.
 
+<img src="https://gutl.jovenclub.cu/wp-content/uploads/2019/04/dwm-img-01-e1556095346814.png">
+
+*Imagen Tomada De: https://gutl.jovenclub.cu/parchear-archivo-binario-de-dwm-con-xxd-y-ht-editor/*
+
 ---
 
 Hay que programar este algoritmo en cualquier lenguaje de programación.
@@ -4665,4 +4683,24 @@ Para usarlo se necesita instalar el paquete BitVector: pip install BitVector
 
 * https://colab.research.google.com/drive/1FFyo5QFofbE8RZoJOPxK3j_A3rrnjong?usp=sharing
 
+
+
+
+
+
+
+
+
+
 ---
+
+
+
+
+
+
+
+
+
+
+## 
