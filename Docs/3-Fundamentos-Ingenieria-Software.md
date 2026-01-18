@@ -5020,3 +5020,5 @@ Plataformas de NFTs
 Esto es muy grande que fluctua mucho con el precio, pero que desde una perspectiva tecnológica es fascinante.
 
 ---
+
+## 
