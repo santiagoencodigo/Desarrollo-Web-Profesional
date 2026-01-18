@@ -56,6 +56,10 @@ Cómo funciona Internet, las computadoras, los chips, la inteligencia artificial
 
 - [21. Cómo funciona un archivo .zip](#cómo-funciona-un-archivo-zip)
 
+### Introducción a Blockchain e Inteligencia Artificial
+
+- [22. Arquitectura y funcionamiento interno de Blockchain](#arquitectura-y-funcionamiento-interno-de-blockchain)
+
 
 
 
@@ -4703,4 +4707,316 @@ Para usarlo se necesita instalar el paquete BitVector: pip install BitVector
 
 
 
-## 
+# Introducción a Blockchain e Inteligencia Artificial
+
+
+
+
+
+
+
+
+
+
+
+## Arquitectura y funcionamiento interno de Blockchain
+
+Pagina Recomendada para Revisar: https://bitcoin.org/es/
+
+Documental Recomendadisismo (Me encanto): https://www.youtube.com/watch?v=qb4M1lfDJSA
+
+Uno entiende el [dinero](https://es.wikipedia.org/wiki/Dinero "Dinero concept by Wikipedia") porque si tienes 10 dólares y se los quieres dar a un amigo, simplemente se los entregas. Y si tu le envías ese dinero de tu banco al banco de esa persona, tú das un click y ese dinero se resta de tu cuenta y se suma a la cuenta de la otra persona.
+
+<img src="https://cdn-icons-gif.flaticon.com/15579/15579001.gif">
+
+*Imagen Tomada De: https://www.flaticon.es/icono-animado-gratis/transaccion_15579001*
+
+Es momento de pensar:
+
+Cuanto tú envías 10 dólares de tu [banco](https://es.wikipedia.org/wiki/Banco "Banco concept by Wikipedia") al banco de otra persona, no hubo una transacción de [billetes hechos de papel de algodón](https://es.wikipedia.org/wiki/Papel_moneda "Papel Moneda concept by Wikipedia").
+
+Lo que pasó fue que una variable en la base de datos de un banco restó 10 y una variable en la base de datos de otro banco sumó 10.
+
+<img src="https://gifgifs.com/animations/other-animations/money/money-printing.gif">
+
+*Imagen Tomada De: https://gifgifs.com/es/other-animations/money/35094-money-printing.html*
+
+---
+
+**¿Entonces qué es el dinero?**
+
+Porque esos 10 dólares no están soportados por [oro](https://es.wikipedia.org/wiki/Oro "Oro concept by Wikipedia") en una bóveda ni por ninguna otra cosa. Siendo asi esos 10 dólares la suma en una base de datos y la resta en otra base de datos.
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Gold_bullion_bars.jpg/500px-Gold_bullion_bars.jpg">
+
+*Imagen Tomada De: https://es.wikipedia.org/wiki/Oro*
+
+Producto de que el gobierno de un país confía en el sistema bancario a través de mecanismos de verificación, donde el gobierno le hace auditoría a estos bancos, incluyendo mecanismos como los bancos centrales, para mantener un balance de la cantidad total de dinero que hay.
+
+Los gobiernos pueden elegir que haya más dinero al imprimir dinero, y eso crea inflación reduciendo el valor de ese dinero.
+
+Lecturas Recomendadas:
+
+* https://datos.bancomundial.org/indicador/FP.CPI.TOTL.ZG
+
+* https://www.bbva.es/finanzas-vistazo/ef/finanzas-personales/que-es-la-inflacion-y-como-se-calcula.html
+
+* https://www.ecb.europa.eu/ecb-and-you/explainers/tell-me-more/html/what_is_inflation.es.html
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/World_Inflation_Rate_2019.png/960px-World_Inflation_Rate_2019.png">
+
+*Imagen Tomada De: https://es.wikipedia.org/wiki/Inflaci%C3%B3n*
+
+El dinero es simplemente una historia que contamos, sostenida por las leyes y mecanismos de control de un gobierno, no es nada más.
+
+Así que si yo quisiera enviarle dinero a alguien, pero no tener un gobierno, a un banco u otra institución central lidiando con ese dinero, sino que sea un proceso confiable, mundial, global y descentralizado, lo que necesitaria es tener la misma base de datos donde una variable resta 10 y otra variable suma 10.
+
+Pero que esa base de datos fuera de todos y no de una sóla persona.
+
+---
+
+A diferencia de los sistemas fiduciarios tradicionales, donde la emisión y validación monetaria dependen de una autoridad central (como los [Bancos Centrales](https://es.wikipedia.org/wiki/Banco_central "Banco Central concept by Wikipedia") , Bitcoin opera bajo un modelo de descentralización absoluta. En el sistema financiero convencional, las instituciones centrales poseen la facultad discrecional de ejecutar políticas monetarias e imprimir circulante.
+
+En contraste, Bitcoin se rige por un protocolo de código abierto y una red de nodos distribuidos. Al no existir un ente rector, la seguridad y la integridad del sistema no dependen de la confianza en una institución, sino en la verificación criptográfica y el consenso de la red. Esta arquitectura elimina los puntos únicos de falla y garantiza una política monetaria predecible y resistente a la censura.
+
+<img src="https://wiki.lemon.me/public/wp-content/uploads/2022/04/la-historia-de-bitcoin-2.gif">
+
+*Imagen Tomada De: https://wiki.lemon.me/es-pe/bitcoin/que-es-bitcoin-btc*
+
+---
+
+Una base de datos así necesita ciertas características, la base de datos tendría que estar copiada en múltiples computadores, tantos como uno quiera. Y todas las copias tienen que ser iguales.
+
+Es decir que cada vez que halla una transacción, todas las copias de la base de datos se tienen que actualizar y como no hay un banco central o un gobierno que determine la fuente de verdad, necesito un mecanismo matemático que me permita confirmar entre todas las personas que tienen una copia de la base de datos que la base de datos es legítima y esto tiene que ocurrir cada vez que la base de datos cambie.
+
+¿Cuando cambia la base de datos?
+
+Cuando se resta una variable para sumarle a otra variable = Cuando hay una transacción.
+
+<img src="https://cdn.pixabay.com/animation/2024/02/21/06/39/06-39-56-211_512.gif">
+
+*Imagen Tomada De: https://pixabay.com/es/gifs/transferencia-de-dinero-11086/*
+
+El dinero para que tenga valor tiene que ser finito.
+
+Hay una cantidad máxima de pesos colombianos, hay una cantidad máxima de pesos peruanos, hay una cantidad máxima de dólares estadounidenses.
+
+Así que tiene que haber una cantidad finita máxima de la moneda digital que estamos construyendo. 
+
+Esto se puede expresar en ecuaciones matemáticas en las que todos los miembros de la red que son las computadoras que tienen una copia de la base de datos, de las transacciones estén de acuerdo.
+
+---
+
+**¿Y cómo sé cuáles de esos números son míos y cuáles de esas transacciones son de otras personas?**
+
+En el mundo real yo tengo una cuenta bancaria y mi acceso a esa cuenta bancaria es con usuarios, contraseñas, con mi rostro biométricos, con mis datos oficiales de gobierno.
+
+En el mundo digital yo necesitaría lo mismo, usuarios, contraseñas, pero sobre todo llaves de cifrado, una forma criptográfica de acceder a estos datos.
+
+**¿Y cual es el mecanismo cuando quiero que otros encripten mensajes que me envíen a mí y yo pueda encriptar mensajes que envíen a otros?**
+
+Cuando miramos hace un rato, en este mismo archivo markdown un tema sobre WhatsApp aprendimos que existen llaves públicas y llaves privadas, hagamos un repaso:
+
+Si yo tengo dos personas a las que les quiero enviar un mensaje encriptados sin que los intermediarios de internet, como WhatsApp se enteren del contenido del mensaje, lo que yo hago es que tengo 2 llaves.
+
+Tengo una llave pública que se la envió a quien me va a enviar un mensaje, esa llave pública cifra, entonces a mi amigo yo le digo "Ciframe ese mensaje con mi llave pública."
+
+Mi amigo tiene mi llave pública que le envié por internet normal que se puede interceptar, pero esa llave solamente sirve para cifrar el mensaje.
+
+Con la llave pública el amigo cifra el mensaje y me envia el mensaje cifrado a mi.
+
+Y yo tengo una llave privada que yo no envié por internet, que solo vive en mi computadora.
+
+Con esa llave privada, lo único que puedo hacer es descifrar los mensajes que fueron cifrados con la llave pública.
+
+Como nadie tiene esa llave privada, solo yo puedo ver el contenido de ese mensaje.
+
+Entonces todo el mundo puede cifrar mensajes para mí, cuando tienen mi llave pública. Pero solo yo tengo mi llave privada. Siendo asi que esos mensajes cifrados solo yo los puedo ver.
+
+Por lo que si yo quiero enviarle un mensaje cifrado a mi amigo, él me manda su llave pública, yo lo cifro, se lo envió y el sólo lo puede descifrar con la llave privada que ni yo ni nadie tiene acceso a excepto de él.
+
+<img src="https://cdn-icons-png.flaticon.com/512/3957/3957993.png">
+
+*Imagen Tomada De: https://www.flaticon.es/icono-gratis/el-intercambio-de-datos_3957993*
+
+---
+
+Pues en nuestra red puede funcionar exactamente igual.
+
+Acceder a una red de dinero descentralizado haría que yo tenga que crear una llave privada y una llave pública.
+
+La llave pública se la doy a todo el mundo para que me envién dinero. Y la llave privada es la única forma en la que yo accedo al dinero que yo tengo (Bloques/Monedas) Además de eso, yo tendría un número especial en la base de datos de transacciones donde guardo mis transacciones. 
+
+Lecturas Recomendadas:
+
+* https://es.wikipedia.org/wiki/Cadena_de_bloques
+
+* https://www.blockchain.com/es/
+
+* https://www.xataka.com/especiales/que-es-blockchain-la-explicacion-definitiva-para-la-tecnologia-mas-de-moda
+
+* https://www.ibm.com/es-es/think/topics/blockchain
+
+* https://aws.amazon.com/es/what-is/blockchain/
+
+<img src="https://www.bbva.com/wp-content/uploads/2022/06/BBVA-blockchain-apertura-1920x1181.jpg">
+
+*Imagen Tomada De: https://www.bbva.com/es/innovacion/que-es-blockchain-como-ha-impulsado-la-descentralizacion/*
+
+Ese número especial se podría llamar billetera, sería el equivalente a una cuenta bancaria. Y esa dirección de billetera es donde estan todas mis transacciones.
+
+Pero, entonces ¿Qué es el dinero?
+
+El dinero son las transacciones.
+
+Esto es lo más dificil de entender.
+
+<img src="https://substackcdn.com/image/fetch/$s_!WUHm!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F861c99d3-3d4d-4d91-8a46-f32bcfc16d4a_629x329.gif">
+
+*Imagen Tomada De: https://businessanalytics.substack.com/p/blockchain-and-analytics
+
+Hay una cantidad máxima de numeritos de dinero, una cantidad máxima de billetes y las transacciones que hay entre esos billetes, es decir: Los dueños de esos números, eso es el dinero.
+
+Cuando yo le resto a mi variable de números y le sumo a otro lado, estoy moviendo dinero, pero el dinero es un número finito. Todo esta información se encuentra en el paper de Blockchain y Bitcoin creado por [Satoshi Nakamoto](https://en.wikipedia.org/wiki/Satoshi_Nakamoto "Who is Satoshi Nakamoto - by Wikipedia") que construyó el protocolo que hoy conocemos como bitcoin.
+
+Dato Curioso: Al día de hoy nadie sabe quién es Satoshi Nakamoto.
+
+Quizás sea una persona, quizás sea un grupo de personas, quizás fue una inteligencia artificial, no lo sabemos.
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/a/a3/LenSassaman-Bitcoin-Tribute.png">
+
+*Imagen Tomada De: https://en.wikipedia.org/wiki/Satoshi_Nakamoto*
+
+Pero en el año 2009 una persona anónima publicó este paper. Entonces, ¿Por qué Bitcoin vale dinero? ¿Por qué sabemos que un Bitcoin vale 10.000, 15.000, 50.000, 100.000?
+
+Porque alguien lo intercambio por dolares. Esa es la única respuesta. Las cosas valen porque alguien más les da valor. En el año 2009 hubo una persona que con un Bitcoin compro una pizza.
+
+Y de ahí, a lo largo de los años han habido diferentes personas que han intercambiado las llaves privadas de estas direcciones por dólares del gobierno, y esto ha creado un mercado que terminó construyendo el valor de BitCoin expresado en dinero de gobierno.
+
+---
+
+¿Pero por qué se llama Block Chain = Cadena de Bloques?
+
+La base de datos distribuida de las transacciones realmente son varios pequeños bloques de transacciones como si fueran libros de contabilidad digitales
+
+> A día de hoy 17/01/2025: Actualmente, el número de bitcoins que hay en circulación es, aproximadamente, de 19.5 millones, aunque es importante que no se olvide el hecho de que este número varía (como se ha indicado, con cada bloque o cada movimiento realizado). Según https://www.bbva.es/finanzas-vistazo/ef/criptoactivos/cuantos-bitcoins-hay.html#:~:text=Actualmente%2C%20el%20n%C3%BAmero%20de%20bitcoins,bloque%20o%20cada%20movimiento%20realizado).
+
+Y esos libros a día de hoy tienen una cantidad máxima de transacciones y una cantidad máxima de bitcoin.
+
+Los bitcoin se dividen en fracciones conocidas como satoshis, estos bloques son descubiertos.
+
+¿Cómo así que descubiertos?
+
+Parte del problema de las criptomonedas es que tiene que haber un límite máximo de la cantidad de dinero que se puede crear, que se puede emitir.
+
+Lo que se inventó Satoshi Nakamoto es unas ecuaciones matemáticas que hacen un uso muy intensivo del procesador y de energía eléctrica para descubrir unos números cifrados únicos.
+
+Esas estructuras matemáticas numéricas únicas es lo que compone los bloques de bitcoin.
+
+Y en esencia un bloque de bitcoin es como imprimir un montón de billetes de papel de algodón = es plata.
+
+Parte del proceso de minar bitcoin, de generar estas ecuaciones matemáticas, es insertar en las diferentes bases de datos las transacciones. Y el paper determina que hay una cantidad máxima de transacciones que cada bloque puede tener.
+
+Link del WhitePaper en Español: https://bitcoin.org/files/bitcoin-paper/bitcoin_es.pdf
+
+¿Qué pasa cuando un bloque se llenó? y ya descubrí todo el tamaño del bloque? Pues lo cierro y construyo otro bloque. Pero necesito hacer que cada bloque esté relacionado entre sí.
+
+Ahí entra otro proceso matemático que se conoce como [HASHING](https://www.ionos.com/es-us/digitalguide/paginas-web/desarrollo-web/hashing/ "Hashing concept by Wikipedia") - [HASH](https://brave.com/es/glossary/hashing/ "Hash concept by Brave")
+
+Un Hash es una ecuación matemática que lee el contenido de un archivo y genera un código único para cada uno de esos archivos. Entonces, un archivo puede pesar un megabyte o 30 gigabytes o 100 gigabytes o 300 bytes, no importa. Cada uno de esos va a tener un código único, como si fuera una firma digital, una huella. Esa huella son unos pequeños caracteres que pueden tener 10 caracteres, 50 caracteres, 30 caracteres, pero es único, esoo es un hash.
+
+Los HASH o huellas son súper importantes porque garantizan la intergridad del contenido del archivo, si el archivo cambia, el hash cambia.
+
+Por lo que entonces fue manipulado. De esa manera, cada ves que calculas el hash de un bloque, estás verificando que ese bloque es legítimo y su movimiento de transacciones no cambió.
+
+Eso signfica que en cada uno de los bloques de bitcoin quedan registrados desde el inicio de la red todos los movimientos del inicio de la historia humana de bitcoin en adelante, las diferentes transferencias de dinero que hubo, porque nadie puede cambiar los bloques porque entonces tendrían que cambiar el hash.
+
+La magia es que el hash de un bloque anterior va en el bloque siguente, en su estructura. Entonces el siguente bloque va y busca si el anterior bloque tiene ese mismo hash y de esa manera sabe que están interconectados de una manera legítima.
+
+Esa cadena de bloques conectado por hash es el BlockChain.
+
+<img src="https://i.blogs.es/b5ce90/blockchain2/650_1200.jpg">
+
+*Imagen Tomada De: https://www.xataka.com/especiales/que-es-blockchain-la-explicacion-definitiva-para-la-tecnologia-mas-de-moda*
+
+Las operaciones matemáticas de la minería es lo que calcula las transacciones de la red, lo que distribuye copias de la base de datos de esa red a otros computadores de minería, esa es la red de bitcoin, porque tienen diferentes copias del BlockChain, que son las transacciones. Y lo que descubre nuevos bloques a través de estos procesamientos matemáticos.
+
+Videos Recomendados:
+
+* Cómo Funciona la Minería de Bitcoin (Explicado con Números Reales) by Andres Garza: https://www.youtube.com/watch?v=d2tlmRQiErU
+
+* Estoy Ganando $104,68 Al Día Minando Criptomonedas by Adrián Sáenz: https://www.youtube.com/watch?v=U07Rq40Jeuo
+
+* CÓMO FUNCIONA 💰⛏️ LA MINERÍA DE CRIPTOMONEDAS by Xataka: https://www.youtube.com/watch?v=GjOs_W3wilc
+
+Ese procesamiento matemático con un gasto energético muy fuerte se conoce como POW o Prove of Work, pero otras redes como Ethereum que tambien es un tipo de criptomoneda, usan otro sistema llamado Prove of Stake.
+
+Lecturas Recomendadas:
+
+* https://finst.com/es/learn/articles/what-is-proof-of-work
+
+* https://academy.bit2me.com/que-es-proof-of-stake-pos/
+
+Prove of Stake es muy interesante porque usa mucha menos electricidad. En vez de hacer cálculos matemáticos muy compejos, lo que hace es que genera una apuesta.
+
+Varios miembros de la red de Ethereum apuestan algunas de sus monedas y de manera aleatoria se gana uno de ellos se gana el derecho a construir el próximo bloque. Lo que gasta mucha menos energía.
+
+El resto pierden las monedas que apostaron y se las queda el que le quedó la generación del nuevo bloque.
+
+Es distinto, una filosofia diferente.
+
+Al día de hoy la más popular, es la más segurda y que es la que genera la mayor cantidad de gasto energetico, que es la Prove of Work como la que tiene Blockchain de Bitcoin.
+
+Lo más importante es que todos estos mecanismos criptográficos hacen que toda la red se pueda verificar entre sí, sin necesidad de tener un mecanismo central de criptografía o llaves, sino simplemente una distribución del trabajo de CPU o de GPUs y una verificación de la integridad de los datos.
+
+<img src="https://cloudfront-us-east-1.images.arcpublishing.com/bloomberglinea/K7AZ2MR5TNF4ZFJYBGGPFG3BR4.jpg">
+
+*Imagen Tomada De: https://www.bloomberglinea.com/2023/12/11/agua-y-bitcoin-el-impacto-de-la-mineria-cripto-en-el-ambiente-crece-cada-ano/*
+
+De esta manera, tenemos un algoritmo que hace el trabajo que haría un banco central o los sistemas de confianza de los bancos regulados.
+
+Parte de la razón por la que Bitcoin es tan poderoso es porque, para hackearlo necesitarías tener más poder de cómputo que toda la red de minería. Necesitarías tener un 51% por ciento más de poder de cómputo que la red de minería para recalcular los bloques y tener un voto más fuerte en el consenso que distribuye la versión actualizada de las transacciones.
+
+Esto ha pasado en criptomonedas más pequeñas que bitcoin, pero con [bitcoin](https://bitcoin.org/es/ "Bitcoin.org"), [ethereum](https://aws.amazon.com/es/web3/what-is-ethereum/ "Ethereum by AWS"), [solana](https://solana.com/es), las monedas grandes: Es prácticamente imposible.
+
+<img src="https://www.profesionalreview.com/wp-content/uploads/2017/06/Qu%C3%A9-son-y-para-qu%C3%A9-sirven-las-criptomonedas-01.png">
+
+*Imagen Tomada De: https://www.profesionalreview.com/2017/06/07/que-son-y-para-que-sirven-las-criptomonedas/*
+
+Parte del problema de la inflación, bitcoin lo controla haciendo que en la ecuación matemática de bitcoin como criptomoneda, existe un limite en donde el bitcoin tiene un limite de 21.000.000 (veintun millones de bitcoins) que a la fecha de hoy todavia no hemos llegado.
+
+Otro de los problemas para no poder hackear bitcoin es la cantidad de energia que necesitarías, para tener una idea: Al día de hoy la red de bitcoin utiliza 130 terawatts por hora de energía. Esto es equivalente a la energía entera de [suecia](https://es.wikipedia.org/wiki/Suecia "Suecia concept by Wikipedia").
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Sweden_in_European_Union.svg/500px-Sweden_in_European_Union.svg.png">
+
+*Imagen Tomada De: https://es.wikipedia.org/wiki/Suecia*
+
+Algunos protocolos de criptomonedas, aparte del sistema de transacciones, los wallets, las llaves privadas, agregan la capacidad de ejecutar órdenes de código de programación bajo ciertas condiciones como por ejemplo:
+
+Si estos servidores tienen estos datos o si estos usuarios colocan estas llaves en una configuarción particular, entonces dispara las transacciones de esta forma o de esta otra forma.
+
+Esto significa que contratos legales u otro tipo de mecanismos de compañia se pueden expresar en código y distribuir de manera descentralizada. Esto es lo que permiten redes como Ethereum o Solana y es lo que ha permitido la creación de lo que se llama: Tokenización.
+
+Es convertir ciertos activos del mundo real en expresiones de criptomonedas. Los [NFTs](https://es.wikipedia.org/wiki/Token_no_fungible "NTFs concept by Wikipedia") por ejemplo: Son una expresión de este estilo.
+
+Lecturas Recomendadas:
+
+* https://brave.com/es/web3/what-are-nfts/
+
+* https://www.xataka.com/basics/que-nft-como-funcionan
+
+Plataformas de NFTs
+
+* https://opensea.io/es
+
+* https://magiceden.io/
+
+* https://blur.io/
+
+Áun ninguno ha triunfado en el mundo real. Pero es muy prometedor y probablemente inevitable para el futuro.
+
+> Cómo programar nuestras propias redes, cómo ser minero?, Cómo tener una granja de bitcoin?, ¿Cómo hacer Ethereum, Solana?
+
+Esto es muy grande que fluctua mucho con el precio, pero que desde una perspectiva tecnológica es fascinante.
+
+---
