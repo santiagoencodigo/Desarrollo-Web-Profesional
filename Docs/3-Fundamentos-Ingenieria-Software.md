@@ -5019,6 +5019,92 @@ Plataformas de NFTs
 
 Esto es muy grande que fluctua mucho con el precio, pero que desde una perspectiva tecnológica es fascinante.
 
+
+
+
+
+
+
+
+
+
 ---
 
-## 
+
+
+
+
+
+
+
+
+
+## Qué es una red neuronal
+
+Para entender qué es una red neuronal, vamos a convertir números dibujados a mano en números digitales. Como un sistema de reconocimiento óptico de carateres.
+
+Así que primero, imagina que dibujas a mano un número tres y ese número lo conviertes a una imagen digital. 
+
+Para efectos de este ejercicio, imagina que lo convertimos a una imagen de 20px x 20px. Por lo que tenemos en total 400 píxeles y cada píxel es básicamente una representación de un porcentaje de cero a cien que determina la cantidad de brillo de cada uno de estos puntos.
+
+Así que para poder representar matemáticamente este número tres en una cuadricula de 20 x 20, necesitamos 400 números.
+
+Y esos 400 números son un porcentaje de brillo de cada número.
+
+Creamos una matriz de esos 400 números, y esa matriz serían mis neuronas de entrada.
+
+Estas neuronas de entrada son los datos de Input que yo le doy a una red neuronal.
+
+En este momento, una neurona no es más que un dato. En las neuronas de entrada, la neurona es un número, un dato: En este caso el dato representa cada uno de los píxeles que componen esas imágenes, que pueden ser un número cualquiera dibujado a mano alzada.
+
+Las otras neuronas, que estan al final de mi red neuronal son la capa de salida, siendo la capa de salida también simplemente: Datos.
+
+En este caso estoy construyendo una red neuronal que me va a generar al final del proceso la probabilidad de cuál es el número digital que corresponde del 1 al 9 al dibujo que corresponde al que yo dibujé a mano alzada. 
+
+Como solamente hay 10 números del 0 al 9, necesito 10 neuronas. Y cada una de ellas me va a representar un número entre el cero al nueve.
+
+Las neuronas que se van a prender son las neuronas que corresponden al número y se van a prender con con una probabilidad.
+
+Que en la práctica esto quiere decir que las neuronas no solamente van a decir "Esto es un 3" o "Esto es un 8" Porque por ejemplo: el 3 y el 8 se parecen.
+
+Entonces el 3 tiene que tener una probabilidad muy alta, de pronto se prende un 90% y el ocho un 84%, esto son probabilidades que se colocan en números decimales entre cero y 1.
+
+Un 0.5 = 50%
+
+Un 0.7 = 70%
+
+Esa generación de probabilidad es como funciona tanto la inteligencia humana la inteligencia artificial y se expresa en esta capa de salida.
+
+En estos números de probabilidad de las neuronas finales. Pero ¿Cómo la capa de entrada que tiene estos 400 números que son los 400 píxeles que corresponda con la capa de salida? Siendo estos ultimos 10 números que son el output, la salida.
+
+Pues tenemos internamente una serie de neuronas que no son simplemente números: Son unas operaciones matemáticas que emergen los patrones de los datos. 
+
+Patrones a través de los cuales se interpreta la información. 
+
+Esas neuronas intermedias se interpretan como la capa oculta. Y usan una serie de operaciones matemáticas que vamos a entender brevemente para extrapolar esos patrones de la información que al final del día son la inteligencia.
+
+En esta red neuronal: Elegí crear 3 capas ocultas.
+
+Y en cada una de estas capas ocultas tengo 15 neuronas, la verdad es que el número es arbitrario, pues pueden ser 2 capas ocultas o pueden ser 5, pueden ser 10 o pueden ser 100 y pueden ser 10 neuronas, 20 o 30...
+
+¿Cómo sabes cuántas poner? Cada problema matemático y cada problema de neuronas de inteligencia artificial, dependiendo de los datos que quieras entrenar. Va a hacer variar la cantidad de neuronas que necesites.
+
+Por ejemplo: Para un gran modelo de lenguaje vas a usar una cantidad de capas ocultas distinta y una cantidad de neuronas distinta.
+
+A mayor cantidad de neuronas distintas, a mayor cantidad de capas más uso de procesadores y de memoria.
+
+Y como esto va a usar una cantidad de datos masivos, necesitas la menor cantidad de neuronas y la menor cantidad de capas para generar los mejores resultados.
+
+Y estadísticamente, a veces, demasiadas capas generan menos inteligencia. Asi como cuando las personas están demasiado especializadas en un conocimiento, es muy dificil para ellos aprender cosas nuevas. "Porque estan demasiado metidos en la caja."
+
+En esencia, lo que estas capas van a hacer es encontrar los patrones estadísticos que tiene un dato.
+
+Por ejemplo
+
+Los números tienden a tener líneas, el 9 tiene una línea, el 1 tiene una línea, el 7 tiene una serie de líneas. Pero tambien tienen círculos: El nueve es un circulo, el seis es un círculo en otra posición. El 3 es 2 medios círculos.
+
+El 4 son tres líneas en ciertos ordenes diagonales. Estos patrones tienden a emerger, pero en programación clásica: Nosotros habemos programado una serie de condiciones preagregándole a cada uno de esos patrones.
+
+Sim embargo, nuestros cerebros aprenden a partir de observar masivas cantidades de información e inferir de una manera casi inconsciente en nuestro entrenamiento de observar el mundo cada uno de esos patrones: Encontrar los bordes y las formas.
+
+La idea es que en estas capas creamos un procedimiento estadístico donde le mostramos a estas diferentes capas muchos muchos muchos de estos patrones.
