@@ -62,6 +62,8 @@ Cómo funciona Internet, las computadoras, los chips, la inteligencia artificial
 
 - [23. Qué es una Red Neuronal](#qué-es-una-red-neuronal)
 
+- [24. Cómo funcionan los LLMs](#cómo-funcionan-los-llms)
+
 
 
 
@@ -5300,4 +5302,305 @@ Simulación a tiempo real en 2D (Más recomendable y entendible al ser principia
 
 Link de Github: https://github.com/aharley/nn_vis
 
+
+
+
+
+
+
+
+
+
+
 ---
+
+
+
+
+
+
+
+
+
+
+
+## Cómo funcionan los LLMs
+
+Videos Recomendados: 
+
+* Breve explicación de los modelos extensos de lenguaje (LLM) by 3Blue1Brown: https://www.youtube.com/watch?v=LPZh9BOjkQs
+
+* Live Bases matemáticas de inteligencia artificial by Platzi :https://www.youtube.com/watch?v=v6tk0CxaVU8
+
+Lecturas Recomendadas:
+
+* https://www.ibm.com/es-es/think/topics/large-language-models
+
+* https://www.oracle.com/latam/artificial-intelligence/large-language-model/
+
+* https://www.hostinger.com/co/tutoriales/modelos-grandes-de-lenguaje-llm
+
+* https://es.wikipedia.org/wiki/Modelo_extenso_de_lenguaje
+
+* https://aws.amazon.com/es/what-is/large-language-model/
+
+* https://www.cloudflare.com/es-es/learning/ai/what-is-large-language-model/
+
+Si yo te digo que "el gato maúlla y el perro ...", ¿El perro qué hace? El razonamiento más común aqui es, "Y el perro ladra", pero de pronto no: De pronto el gato maúlla y el perro se asusta, depronto el gato maúlla y el perro no maúlla.
+
+Todas son opciones completamente válidas. Pero nuestra [inteligencia](https://es.wikipedia.org/wiki/Inteligencia "Inteligencia by Wikipedia") nos dice que la forma en la que este acertijo se resuelve es que el gato maúlla y el perro ladra. ¿Cómo hicimos esto?
+
+Esto lo hacemos con algo que se llama la atención. Le ponemos atención a ciertas palabras y a otras no. Esto se puede expresar matemáticamente en la **ecuación de la atención.**
+
+Lectura Recomendada: https://medium.com/@weidagang/demystifying-the-attention-formula-8f5ad602546f
+
+<img src="https://i.ytimg.com/vi/n7JOBTS85ts/maxresdefault.jpg">
+
+*Imagen Tomada De: https://www.youtube.com/watch?v=n7JOBTS85ts*
+
+Entonces vamos a entender los componentes de la ecuación porque es la forma en la que funcionan los grandes modelos de lenguaje, la inteligencia artificial moderna.
+
+Lo primero que tenemos que hacer es agarrar todo el cuerpo de lenguaje de la cultura humana y romperlo en pedacitos. 
+
+Vamos a romper todas las palabras, todas las letras, todo lo que existe en la cultura humana en letras, sílabas y palabras.
+
+Se puede pensar que esto, puede tener una cantidad de variaciones infinita, pero el lenguaje no es infinito: Efectivamente existen permutaciones casi infinitas de las letras, pero la realidad es que cuando uno todos los libros escritos, todo el internet, todos los emails, todo lo que esta en Google, todo lo que está en Wikipedia, todo lo que esta en redes, foros, etc...
+
+Uno se da cuenta de que por ejemplo: En el caso del lenguaje inglés hay una más o menos cantidad de 50.000 Tokens.
+
+Si le agregamos otros lenguajes, lenguajes de programación u otros tipos de texto, el número aumenta bastante.
+
+    Alfabeto Ruso
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Russian_Cyrillic_19th.png/500px-Russian_Cyrillic_19th.png">
+
+*Imagen Tomada De: https://es.wikipedia.org/wiki/Alfabeto_ruso*
+
+    Alfabeto Klingon
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/f/f4/KLI_pIqaD.png">
+
+*Imagen Tomada De: https://es.wikipedia.org/wiki/Idioma_klingon*
+
+    BrainFuck Language
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Hello_World_Brainfuck.png/330px-Hello_World_Brainfuck.png">
+
+*Imagen Tomada De: https://en.wikipedia.org/wiki/Brainfuck* 
+
+Típicamente los sistemas de traducción, por ejemplo: Usan entre cuarenta mil a cincuenta mil tokens.
+
+Y los grandes modelos de lenguaje como [GPT-4](https://openai.com/es-419/index/gpt-4/ "GPT-4 by openai.com"), [LLaMA](https://www.llama.com/ "llama by Meta"), y los otros grandes modelos que existen, pueden usar hasta 256.000 Tokens en sus tokens del vocabulario del lenguaje.
+
+Pero por ahora ten en mente que lo que hacemos es que agarramos las palabras y las dividimos en pedacitos. Entonces, por ejemplo: La palabra "satisfacción" tiene la palabra "Acción" y esta palabra es un token. Pero entonces tambien la letra F puede ser otro token y la palabra "is" de sat**IS**facción tambien es un token. Y por ultimo el "sat" tambien es otro token.
+
+Lecturas Recomendadas: 
+
+* https://www.ionos.com/es-us/digitalguide/paginas-web/desarrollo-web/tokens-de-ia/
+
+* https://www.datacamp.com/es/blog/what-is-tokenization
+
+<img src="https://miro.medium.com/v2/resize:fit:720/format:webp/1*e3kY5h25iAyqNGzkr_IxKw.png">
+
+*Imagen Tomada De: https://medium.com/data-science-collective/the-invisible-building-blocks-of-ai-what-you-need-to-know-about-tokenization-acadd86a63ba*
+
+Y ahora que tengo cada uno de esos tokens, lo siguente que tengo que hacer es evaluar la correlación que existe entre token y token.
+
+Entonces, imagine que tengo el token "gato" y quiero buscar la palabra "gato" qué tan cercana esta en todo el lenguaje está a otros conceptos.
+
+Entonces, por ejemplo: Hay que imaginar como si esto fuera un plano cartesiano que va de cero hasta N donde N es el número de tokens que existe.
+
+> Vector Space | Embedding Space
+
+<img src="https://d2908q01vomqb2.cloudfront.net/77de68daecd823babbb58edb1c8e14d7106e83bb/2023/08/02/WhyLabs-ML-Embeddings-1.png">
+
+*Imagen Tomada De: https://aws.amazon.com/what-is/embeddings-in-machine-learning/* 
+
+Entonces la palabra "gato" en el eje animal, estaria muy cerca al cero. Entonces yo pongo que "gato" en su correlación animal es un cero. Imagina que tengo una segunda dimensión como si fuera un eje X-Y y estuviera la palabra "automóvil" por lo que entonces "gato" respecto a "automóvil" muy probablemente está tan arriba como sea posible porque "gato" no esta cercano a la palabra "automóvil".
+
+Ahora imagina que tengo una tercera dimensión donde tengo el eje "amor". Uno ama a los gatos, pero uno no ama a los gatos más que a los bebés. Entonces "gato" no va a estar en el cero de la palabra "amor", pero depronto si va a estar en el 10 y asi lo hago entonces, para todas las palabras que existen, de todos los tokens que existen: A partir de qué tan cercanas están las palabras con otras palabras en el lenguaje.
+
+Esto es ubicarlo en un espacio N dimensional. Visualmente, los humanos solamente podemos ver 3 dimensiones, pero un computador no tiene problemas en guardar las trescientas mil millones de dimensiones de GPT-3 (300.000.000.000) o de todas las 50.000 dimensiones que requiere un traductor.
+
+Entonces cada palabra tiene un vector o un número de números que muestra la cercanía entre otras palabras y se ubican de manera multidimensional. Y eso es tokenizar el lenguaje.
+
+<img src="https://towardsdatascience.com/wp-content/uploads/2025/03/image-45.png">
+
+*Imagen Tomada De: https://towardsdatascience.com/neural-network-embeddings-explained-4d028e6f0526/*
+
+Esto crea un efecto muy interesante. Y es que palabras similares van a estar en estos espacios multidimensionales muy cerca de otra palabras similares.
+
+    Entonces por ejemplo las palabras: "gato", "perro" y "lobo" van a estar muy cerca entre si porque son mamíferos, porque están en español, porque son animales.
+
+    Las palabras: Banano, Manzana tambien van a estar muy cerca entre si.
+
+El otro fenómeno interesante que tiene esto es que las palabras pueden tener vectores: Un vector es una dirección en ese plano cartesiano multidimensional: que se parece mucho una con la otra.
+
+Entonces rey y reina tienen una conexión muy similar a hombre y mujer, y ese vector muy probablemente es el vector de la palabra "género".
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Word_vector_illustration.jpg/250px-Word_vector_illustration.jpg">
+
+*Imagen Tomada De: https://en.wikipedia.org/wiki/Latent_space*
+
+O por ejemplo la palabra "caminé" y "caminar" va a estar muy similar a "nadé" y "nadar" porque el vector de tiempo presente o pasado los hace estar muy cerca.
+
+O entonces diferentes países y sus capitales: Italia - Roma, Rusia - Moscu, China - Pekín, Turquía - Angora, Peru - Lima. El vector, la coordenada, la serie de coordenadas que apuntan entre país y ciudad capital van a ser muy similares.
+
+Y si yo agarro los números que corresponden al vector entre italia y roma y los llevo a colombia muy probablemente me va a apuntar muy cerca o exactamente hacia Bogotá.
+
+Esto es convertir las palabras en expresiones matemáticas que se pueden sumar o restar.
+
+Y eso nos permite hacer cosas increíbles. Por ejemplo: "Mamá" menos "Género" probablemente me da "Pariente"
+
+Entonces:
+
+    Pariente + Masculino = Padre
+
+    Regente + Mujer = Reina
+
+    Regente + Hombre = Rey
+
+Lo siguente que tengo que hacer... Es crear una red de pesos de probabilidad estadística donde las palabras estén estadísticamente conectadas entre sí. Los tokens realmente.
+
+Asi como usamos el lenguaje de toda la cultura humana para crear nuestros tokens, ahora necesitamos usar todo el lenguaje de la cultura humana para agregar la probabilidad de conexión entre cada uno de ellos.
+
+Con el lenguaje tokenizado, el siguente paso es tratar de encontrar la probabilidad en la que una palabra ocurré despues de otra.
+
+Como nosotros tenemos todo el lenguaje de la cultura humana en libros, internet, en las redes sociales, en wikipedia y en tantos otros lugares.
+
+Las empresas de inteligencia artificial toman esta fuente de datos [*La cultura humana y todos los textos que hemos escrito*] y buscan expresar de una manera matemática de que una letra va despues de otra letra, que una palabra vaya después de cierta otra palabra.
+
+Esto se conoce como el **[Corpus del Lenguaje](https://es.wikipedia.org/wiki/Corpus_ling%C3%BC%C3%ADstico)** = Es el conjunto de textos con los que se entrena el modelo para aprender a generar respuestas y comprender el lenguaje.
+
+y entonces tomo esto y lo separo en dos partes: un 70% del conjunto de datos para que sea [Training Data](https://es.wikipedia.org/wiki/Conjuntos_de_datos_de_entrenamiento,_validaci%C3%B3n_y_prueba "Training Data by Wikipedia") de la red neuronal y el otro 30% para [Testing Data](https://en.wikipedia.org/wiki/Test_data "Test Data concept by Wikipedia").
+
+En donde si me da lo mismo y se comporta igual, es que el entrenamiento quedó bien.
+
+Recordemos que una red neuronal es un mecanismo estadístico para encontrar los patrones escondidos entre los datos.
+
+Nosotros sabemos que hay una conexión entre adverbios, sílabas, adjetivos, sustantivos y muchos otros patrones que emergen simplemente de la posición de las letras, las sílabas y las palabras: Lo que nosotros llamamos tokens.
+
+Así que una red neuronal es un proceso que tiene una capa de entrada, unas capas escondidas y una capa de salida.
+
+* La capa de entrada: Son todos los tokens que corresponden al vocabulario de entrenamiento (La representación vectorial de los tokens del texto).
+
+* Las capas intermedias/ocultas: Son funciones matemáticas de interconexión que detectan estos patrones y que van modificando unos números estadísticos para cambiar la capa de salida.
+
+* La capa de salida: Es exactamente lo mismo que la capa de entrada en donde la ídea es predecir a partir de unas palabras de entrada cuál sería la palabra de salida.
+
+<img src="https://www.ibm.com/docs/es/SS3RA7_sub/modeler_mainhelp_client_ddita/clementine/images/nn.jpg">
+
+*Imagen Tomada De: https://www.ibm.com/docs/es/spss-modeler/saas?topic=networks-neural-model*
+
+Estos patrones se van ajustando en el periodo de entrenamiento. A medida de que nuestra red neuronal lee todo el cuerpo del lenguaje de la cultura humana va entendiendo que probablemente despues de la palabra "Yo" puede seguir la palabra "Amo", que muy probablemente despues de la palabra "Mi mamá" siga la palabra "Me".
+
+Y todo ese ajuste de entendimiento de patrones del lenguaje, como el patron de rimar, el patrón de programar, el patrón de escribir lenguaje de marketing, se va expresando matemáticamente para generar esta estructura final que se vuelve una red neuronal de un gran modelo de lenguaje.
+
+Estos son miles de millones de parámetros, que son los pesos de cada una de estas letras que nosotros llamamos neuronas. Estos miles de millones de parametros toman muchisimo tiempo y es en parte porque la inteligencia artificial se demoró tanto en llegar.
+
+Porque aunque estos algoritmos son viejos (Nacieron en los años 50, se fueron optimizando en los 90) es hasta ahora que tenemos suficientes chips y suficiente memoria RAM para entrenar una red neuronal de este este estilo.
+
+Esto es mucho más complejo y tiene otras ecuaciones matemáticas.
+
+Con sólo entrenar una red neuronal y tener todos los tokens, puedo programar por ejemplo: Un traductor, pero no puedo hacer que el gato maúlle o que el perro ladre.
+
+Todavía no he logrado completar todos los datos que necesito para generar un sistema de predicción efectivo.
+
+En general, la razón por la que no se puede es porque tendría que multiplicar por cada una de las letras, por cada uno de los tokens, por cada una de las palabras y sílabas que tengo acá expresadas, todas las variaciones siendo este un problema N a la N que tomaría una cantidad de memoria RAM, de CPU, de GPU y de chips ingente.
+
+Pero no necesito hacerlo para todas, solamente necesito hacerlo para las palabras más importantes. 
+
+Cuando tú dices: El gato maúlla y el perro "hmm" hay una palabra particular a la que le pones más atención, probablemente es la palabra "maúlla". Y hay otra palabra a la que probablemente le pones atención "gato". Así funciona tu mente. Tú no leiste todo el texto, solo te enfocas en los elementos más importantes para predecir la siguente palabra y de esta manera completar el texto.
+
+Esto se le conoce como [Modelo de Atención](https://es.wikipedia.org/wiki/Atenci%C3%B3n_(aprendizaje_autom%C3%A1tico)#:~:text=En%20las%20redes%20neuronales%20artificiales,entrada%20mientras%20que%20disminuye%20otras. "Modelo de Atención by Wikipedia") y funciona de la siguente manera:
+
+Existe:
+
+Query = Consulta 
+
+Key = Llave
+
+Value = Valor
+
+Esto que tenemos aqui:
+
+    El gato maulla y el perro ******
+
+Esto es un prompt, el prompt que tú escribes en ChatGPT o en donde sea. El prompt lo que hace es mirar el ultimo token, la última palabra en donde en este caso es "perro" y a partir de este token va a evaluar a lo largo de todo el resto del prompt todo lo que se ha escrito, cuáles son los tokens de mayor significancia = Que están más cercan del último
+
+¿Cómo saben que está más cerca?
+
+Porque esta en el plano cartesiano del espacio n-dimensional de tokens, entonces la palabra "perro" esta muy cerca de la palabra "maulla" y esta palabra esta definivamente cerca a la palabra "gato".
+
+Estas palabras que son cercanas a la palabra perro las volvemos la llave y luego la V es el valor. Ese valor es una ecuación matemática que multiplica y mueve las matrices de los números de puntería de la palabra "perro" y la palabra "maulla" y "gato" a través de una función de activación. Lo importante es que esa V termina siendo un vector que usando la palabra "maúlla" y la palabra "gato" junto con la palabra "perro" que es la última palabra del prompt apunta a la probabilidad más alta de una palabra que continué.
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Vector_01.svg/500px-Vector_01.svg.png">
+
+*Imagen Tomada De: https://es.wikipedia.org/wiki/Vector*
+
+Esto genera otro vector de probabilidades que genera una serie de palabras. Porque puede que el perro ladre, que el perro es, que el perro llora o que el perro no.
+
+Esta probabilidad es lo que termina siendo eventualmente eligamos la palabra ladra porque tiene el mayor porcentaje. Pero los grandes modelos de lenguaje no solamente eligen la palabra con mayor probabilidad. 
+
+Los modelos de lenguaje tienen algo que se llama [temperatura](https://gpt.space/blog_es/temperatura-mundo-ia-guia-usar-parametro-temperatura-openai-respuestas-chatgpt-gpt-3-gpt-4 "Temperatura concept by   gpt.space"), porque la creatividad no funciona siendo siempre lo mismo. Para que halla un nivel de inteligencia tiene que haber un cierto nivel de creatividad, por ende a veces tengo que elegir la segundao  tercera opción. Los grandes modelos de elnguaje a veces de manera aleatorio, eligen la segunda o tercera opción y es por esto que no son deterministas que no generan el mismo texto todo el tiempo.
+
+Pero generan textos muy similares. Sin embargo esto sólo sirve para autocompletar. Los primeros GPTS o Generative Pretrained Transformers que son estos modelos que integran la red neuronal, los tokens, el espacio unidimensional, la atención.
+
+Lecturas Recomendadas:
+
+* https://www.xataka.com/basics/gpts-que-sirve-como-se-usa-quien-puede-utilizarlo-para-crear-tu-propio-chatgpt
+
+* https://es.wikipedia.org/wiki/GPTs
+
+* https://aws.amazon.com/es/what-is/gpt/
+
+* https://azure.microsoft.com/es-es/resources/cloud-computing-dictionary/what-is-gpt
+
+* https://www.ibm.com/es-es/think/topics/gpt
+
+* https://openai.com/es-419/index/introducing-gpts/
+
+Uno les colocaba un texto y tenían que completarlo.
+
+No se comportaban como un chat.
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/GPT2-talks-about-GPT2.png/500px-GPT2-talks-about-GPT2.png">
+
+*Imagen Tomada De: https://es.wikipedia.org/wiki/GPT-2*
+
+Lectura Recomendada: https://openai.com/index/gpt-2-1-5b-release/
+
+Lo que hizo OpenAI, es que contrato a 6.000 personas en África para hablar con el modelo y regañarlo cuando el modelo no se comportaba como un chat y recompensarlo cuando el modelo se comportaba como un chat.
+
+Lecturas Recomendadas:
+
+* https://www.muycomputerpro.com/2023/01/19/openai-mejoro-chatgpt-pagando-trabajadores-kenia
+
+* https://time.com/6247678/openai-chatgpt-kenya-workers/
+
+* https://en.wikipedia.org/wiki/ChatGPT
+
+Esto recalibró las neuronas del modelo para enseñarle al modelo a responder como un chat o como no un chat.
+
+Esto se conoce como RLHF = Reinforcement Learning with Human Feedback
+
+Lecturas Recomendadas:
+
+* https://aws.amazon.com/what-is/reinforcement-learning-from-human-feedback/
+
+* https://www.ibm.com/think/topics/rlhf
+
+* https://www.coursera.org/articles/rlhf
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/RLHF_diagram.svg/500px-RLHF_diagram.svg.png">
+
+*Imagen Tomada De: https://en.wikipedia.org/wiki/Reinforcement_learning_from_human_feedback*
+
+Y de esta forma es como los modelos aprenden a hablar como un chat. Esto incluye aprender cuándo dejar de hablar, cuándo dejar de generar resultados. Es por eso que muchas veces CHAT GPT responde en listas de viñetas o por la que Anthropic [Claude](https://claude.ai/) y [Gemini](https://gemini.google.com/app) tienen respuestas tan diferentes en su personalidad.
+
+<img src="https://planetachatbot.com/wp-content/uploads/2023/12/2-1024x472.png">
+
+*Imagen Tomada De: https://www.linkedin.com/pulse/oportunidades-en-el-uso-de-large-language-models-llms-diego-branca/*
+
+> Procesamiento de Lenguaje Natural
+
