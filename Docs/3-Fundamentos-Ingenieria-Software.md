@@ -5627,7 +5627,7 @@ Esta infraestructura local se expande mediante Internet, donde el protocolo IP, 
 
 **Gracias por haber visto este documento.**
 
-Si quieres ir al inicio del documento de este documento: [Haz click aqui.](#curso-de-fundamentos-de-ingeniería-de-software)
+Si quieres ir al inicio del documento: [Haz click aqui.](#curso-de-fundamentos-de-ingeniería-de-software)
 
 Si quieres mirar la pagina de este repositorio: https://santiagoencodigo.github.io/Desarrollo-Web-Profesional/index.html
 
