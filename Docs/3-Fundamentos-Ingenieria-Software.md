@@ -5604,3 +5604,31 @@ Y de esta forma es como los modelos aprenden a hablar como un chat. Esto incluye
 
 > Procesamiento de Lenguaje Natural
 
+
+
+
+
+
+
+
+
+
+---
+
+## Conclusión
+
+Ya entonces, nosotros podemos entender en este documento readme que la tecnología desde su base física hasta la abstracción de la Inteligencia Artificial. Todo comienza con circuitos electrónicos procesando bits y bytes a través de la CPU, RAM y GPUs, orquestados por un Sistema Operativo que organiza el almacenamiento y los archivos.
+
+Esta infraestructura local se expande mediante Internet, donde el protocolo IP, DNS y el modelo Cliente/Servidor permiten el flujo de datos y bases de datos globales. Sobre esta red, la complejidad aumenta hacia estructuras descentralizadas como Blockchain y modelos avanzados de IA. Finalmente, entendemos que los LLMs y las Redes Neuronales no son magia, sino el resultado de procesar metadatos y algoritmos sobre la misma arquitectura fundamental que enciende nuestro computador.
+
+<img src="https://media3.giphy.com/media/v1.Y2lkPTZjMDliOTUyMTI0MDE0cmozdWYwbGgzdG5zbzdyeHU1bXEya293ZjJ3c2NybHJmdCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/DBW3BniaWrFo4/source.gif">
+
+*Imagen Tomada De: https://giphy.com/explore/computadoras*
+
+**Gracias por haber visto este documento.**
+
+Si quieres ir al inicio del documento de este documento: [Haz click aqui.](#curso-de-fundamentos-de-ingeniería-de-software)
+
+Si quieres mirar la pagina de este repositorio: https://santiagoencodigo.github.io/Desarrollo-Web-Profesional/index.html
+
+Link del repositorio: https://github.com/santiagoencodigo/Desarrollo-Web-Profesional/tree/main
