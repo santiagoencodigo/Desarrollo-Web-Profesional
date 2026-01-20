@@ -60,6 +60,8 @@ Cómo funciona Internet, las computadoras, los chips, la inteligencia artificial
 
 - [22. Arquitectura y funcionamiento interno de Blockchain](#arquitectura-y-funcionamiento-interno-de-blockchain)
 
+- [23. Qué es una Red Neuronal](#qué-es-una-red-neuronal)
+
 
 
 
@@ -5039,13 +5041,33 @@ Esto es muy grande que fluctua mucho con el precio, pero que desde una perspecti
 
 
 
-## Qué es una red neuronal
+## Qué es una Red Neuronal
+
+> Una red neuronal es un modelo matemático inspirado en el cerebro humano.
+
+<img src="https://static.platzi.com/media/user_upload/upload-a5923ae7-d9e1-49a6-a002-b039dd678e12.png">
+
+Playlist de Youtube Recomendada (Serie de 9 videos explicando lo que es una Red Neuronal a profundidad by 3Blue1Brown): https://www.youtube.com/watch?v=aircAruvnKk&list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi&index=2
+
+Lecturas Recomendadas:
+
+* https://aws.amazon.com/es/what-is/neural-network/
+
+* https://www.ibm.com/es-es/think/topics/neural-networks
+
+* https://www.fortinet.com/lat/resources/cyberglossary/neural-network
+
+* https://www.cloudflare.com/es-es/learning/ai/what-is-neural-network/
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Colored_neural_network_es.svg/500px-Colored_neural_network_es.svg.png">
+
+*Imagen Tomada De: https://es.wikipedia.org/wiki/Red_neuronal_artificial*
 
 Para entender qué es una red neuronal, vamos a convertir números dibujados a mano en números digitales. Como un sistema de reconocimiento óptico de carateres.
 
 Así que primero, imagina que dibujas a mano un número tres y ese número lo conviertes a una imagen digital. 
 
-Para efectos de este ejercicio, imagina que lo convertimos a una imagen de 20px x 20px. Por lo que tenemos en total 400 píxeles y cada píxel es básicamente una representación de un porcentaje de cero a cien que determina la cantidad de brillo de cada uno de estos puntos.
+Para efectos de este ejercicio, imagina que lo convertimos a una imagen de 20px * 20px. Por lo que tenemos en total 400 píxeles y cada píxel es básicamente una representación de un porcentaje de cero a cien que determina la cantidad de brillo de cada uno de estos puntos.
 
 Así que para poder representar matemáticamente este número tres en una cuadricula de 20 x 20, necesitamos 400 números.
 
@@ -5057,23 +5079,27 @@ Estas neuronas de entrada son los datos de Input que yo le doy a una red neurona
 
 En este momento, una neurona no es más que un dato. En las neuronas de entrada, la neurona es un número, un dato: En este caso el dato representa cada uno de los píxeles que componen esas imágenes, que pueden ser un número cualquiera dibujado a mano alzada.
 
-Las otras neuronas, que estan al final de mi red neuronal son la capa de salida, siendo la capa de salida también simplemente: Datos.
+Las otras neuronas, que estan al final de mi red neuronal son la capa de salida, siendo también simplemente: Datos.
 
 En este caso estoy construyendo una red neuronal que me va a generar al final del proceso la probabilidad de cuál es el número digital que corresponde del 1 al 9 al dibujo que corresponde al que yo dibujé a mano alzada. 
 
 Como solamente hay 10 números del 0 al 9, necesito 10 neuronas. Y cada una de ellas me va a representar un número entre el cero al nueve.
 
-Las neuronas que se van a prender son las neuronas que corresponden al número y se van a prender con con una probabilidad.
+Las neuronas que se van a aprender son las neuronas que corresponden al número y se van a aprender con con una probabilidad.
 
 Que en la práctica esto quiere decir que las neuronas no solamente van a decir "Esto es un 3" o "Esto es un 8" Porque por ejemplo: el 3 y el 8 se parecen.
 
-Entonces el 3 tiene que tener una probabilidad muy alta, de pronto se prende un 90% y el ocho un 84%, esto son probabilidades que se colocan en números decimales entre cero y 1.
+<img src="https://adamharley.com/nn_vis/images/fc_flat_480.png">
 
+*Imagen Tomada De: https://adamharley.com/nn_vis/*
+
+Entonces el 3 tiene que tener una probabilidad muy alta, de pronto se prende un 90% y el ocho un 84%, esto son probabilidades que se colocan en números decimales entre cero y 1.
+ 
 Un 0.5 = 50%
 
 Un 0.7 = 70%
 
-Esa generación de probabilidad es como funciona tanto la inteligencia humana la inteligencia artificial y se expresa en esta capa de salida.
+Esa generación de probabilidad es como funciona tanto la inteligencia humana como la inteligencia artificial y se expresa en esta capa de salida.
 
 En estos números de probabilidad de las neuronas finales. Pero ¿Cómo la capa de entrada que tiene estos 400 números que son los 400 píxeles que corresponda con la capa de salida? Siendo estos ultimos 10 números que son el output, la salida.
 
@@ -5081,7 +5107,7 @@ Pues tenemos internamente una serie de neuronas que no son simplemente números:
 
 Patrones a través de los cuales se interpreta la información. 
 
-Esas neuronas intermedias se interpretan como la capa oculta. Y usan una serie de operaciones matemáticas que vamos a entender brevemente para extrapolar esos patrones de la información que al final del día son la inteligencia.
+Esas neuronas intermedias se conocen como la capa oculta. Y usan una serie de operaciones matemáticas que vamos a entender brevemente para extrapolar esos patrones de la información que al final del día son la inteligencia.
 
 En esta red neuronal: Elegí crear 3 capas ocultas.
 
@@ -5108,3 +5134,170 @@ El 4 son tres líneas en ciertos ordenes diagonales. Estos patrones tienden a em
 Sim embargo, nuestros cerebros aprenden a partir de observar masivas cantidades de información e inferir de una manera casi inconsciente en nuestro entrenamiento de observar el mundo cada uno de esos patrones: Encontrar los bordes y las formas.
 
 La idea es que en estas capas creamos un procedimiento estadístico donde le mostramos a estas diferentes capas muchos muchos muchos de estos patrones.
+
+Y ellos van ajustando la relación matemática entre cada una de las capas para que a medida que cada uno de los 400 números de entrada que pasan por la capa de entrada, vallan atravesando capa por capa terminen generando a nivel númerico los porcentajes de probabilidad de la capa de salida que genere un número correcto.
+
+Las ecuaciones matemáticas son básicamente unos números que cada una de estas capas tienen. Y esos números son la fuerza de la relación entre la neurona de una capa y todas las neuronas de la otra capa.
+
+Entonces ciertas capas se conectan de una manera muy fuerte u muy débil con otras neuronas y esos números se les conoce como pesos. (La relación o conexión)
+
+<img src="https://cometelared.es/storage/2023/06/Red1.webp">
+
+*Imagen Tomada De: https://cometelared.es/el-peso-en-las-redes-neuronales/*
+
+Suena muy extraño o muy arbitrario, pero es simplemente un mecanismo matemático.
+
+Las conexiones entre las diferentes neuronas en una red neuronal se arrancan de manera aleatoria.
+
+Es un número aleatorio que tú colocas como quieras y luego a medida que vas entrenando... El sistema, el número se va ajustando para eventualmente corresponder a esos patrones.
+
+---
+
+**El entrenamiento**
+
+Lecturas Recomendadas:
+
+* https://es.wikipedia.org/wiki/Aprendizaje_autom%C3%A1tico
+
+* https://www.ibm.com/es-es/think/topics/machine-learning
+
+* https://aws.amazon.com/es/what-is/machine-learning/
+
+* https://www.bbva.com/es/innovacion/machine-learning-que-es-y-como-funciona/
+
+* https://www.oracle.com/latam/artificial-intelligence/machine-learning/what-is-machine-learning/
+
+Lo primero es inicializar todos los pesos, todas las conexiones entre neuronas en números aleatorios. Lo que haces que tienes una gran cantidad de datos de entrenamiento, es decir que tendríamos que tener una gran cantidad de imágenes de números dibujados a mano alzada entre el cero y el nueve.
+
+Que corresponden a su número correcto y los empiezas a pasar por la red. Como son números aleatorios te va a dar errores constantemente. 
+
+* Un error es cuando la red neuronal te va a decir que un cuatro es un cinco, o que un cero es un uno, etc...
+
+Cada vez que halla un error, le reportas el error a la neurona y la neurona empieza a revisar matemáticamente cuáles fueron las neuronas que estaban mal ajustadas porque dieron el error mal.
+
+Y usando una serie de ecuaciones matemáticas
+
+> (Aqui no las vemos. Pero, estaria interesante aprender eventualmente una función que se llama sigmoide u otra función que se llama ReLu, y la derivada de esas funciones: Esto es [cálculo vectorial](https://es.wikipedia.org/wiki/C%C3%A1lculo_vectorial "Cálculo Vectorial concept by Wikipedia") - [cálculo diferencial](https://es.wikipedia.org/wiki/C%C3%A1lculo_diferencial "Cálculo Diferencial concept by Wikipedia").).
+
+se encuentra una diferencia entre cada uno de estos pesos y lo van corrigiendo. Eso se hace en una retropropagación: Generar el error y luego regresas para entender donde cometiste el error y ajustas las neuronas para saber donde cometiste el error y ajustar las conexiones entre las neuronas a partir de los datos con los que entrenaste.
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Derivative.svg/500px-Derivative.svg.png">
+
+*Imagen Tomada De: https://es.wikipedia.org/wiki/C%C3%A1lculo_diferencial*
+
+A medida que ajustas los pesos mostrándole los diferentes ejemplos en el entrenamiento y los devuelves. Eso es el entrenamiento.
+
+Cuando tienes una base de datos de entrenamiento, digamos que diez mil números, el completar el entrenamiento con esos diez mil números se conoce como una época o epoch.
+
+Y no solamente con completar el entrenamiento una vez es suficiente. Como la red neuronal empieza de manera aleatoria, es posible que con una sola época no sea suficiente para entrenar por completo la red neuronal.
+
+Muy probablemente necesites entrnarla múltiples veces hasta que tu red quede muy ajustada. Y luego tienes que probar con una base, de esa red de entrenamiento que guardaste para probar a ver si esta dando los resultados correctos.
+
+Asi sabes si tu red neuronal quedó bien entrenada o no. El resultado final de entrenamiento es que depronto:
+
+* la capa oculta número uno detecta las formas que son una rayita.
+
+* La capa oculta número dos detecta las formas que son una curva.
+
+* La capa oculta número tres detecta cuál es la conexión entre ambas.
+
+Y eso termina haciendo que la capa de salida final me genere una serie de números de probabilidad, una matriz de 10 números de probabilidad desde el 100% hasta el 0% donde a mayor probabilidad de que un número específico corresponda a una de esas neuronas. Esa neurona tiene un porcentaje más alto = Una activación más grande.
+
+Lo que significa que en una red bien entrenada, los cuatrocientos píxeles de entrada, que equivale al número tres, me deberia generar una activación de muy alto porcentaje comparado a las otras neuronas en el número correspondiente al número 3.
+
+---
+
+En este ejemplo, en la capa de entrada, creamos cuatrocientas neuronas que equivalen a cada uno de los píxeles. Pero imagina que en vez de usar píxeles, usamos tokens.
+
+Un token es forma de expresar texto. El texto se puede romper en palabras, sílabas o letras.
+
+Eso sería tokenizar el lenguaje. 
+
+Lecturas Recomendadas:
+
+* https://www.datacamp.com/es/blog/what-is-tokenization
+
+* https://www.ibm.com/mx-es/think/topics/tokenization
+
+Y por ejemplo, el lenguaje inglés tiene en total 50.000 tokens, 50.000 permutaciones de palabras, sílabas y letras para expresar lenguaje. Incluyendo puntuación, etc...
+
+<img src="https://www.ionos.com/es-us/digitalguide/fileadmin/_processed_/d/2/csm_tokenizer-openai-ejemplo_30a4b71739.webp">
+
+*Imagen Tomada De: https://www.ionos.com/es-us/digitalguide/paginas-web/desarrollo-web/tokens-de-ia/*
+
+Si agregáramos esos cincuenta mil neuronas y las pusiéramos en la entrada y pusiéramos otras cincuenta mil neuronas en la salida podríamos crear la estructura de la red neuronal para un gran modelo de lenguaje como ChatGPT o como un traductor. 
+
+Una red neuronal no es suficiente para generar un traductor o para generar un autocompletador como chatGPT.
+
+Necesitaríamos una arquitectura matemática que se conoce como transformador y un modelo especial o mecanismos llamado "Atención"  para generar ese resultado.
+
+Lecturas Recomendadas: 
+
+* https://www.ibm.com/es-es/think/topics/attention-mechanism
+
+* https://es.wikipedia.org/wiki/Atenci%C3%B3n_(aprendizaje_autom%C3%A1tico)
+
+* https://www.datacamp.com/es/blog/attention-mechanism-in-llms-intuition
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Attention-qkv.png/1280px-Attention-qkv.png">
+
+*Imagen Tomada De: https://es.wikipedia.org/wiki/Atenci%C3%B3n_(aprendizaje_autom%C3%A1tico)*
+
+> Hay que aprender los Fundamentos de LLMs y Matemáticas de AI, álgebra Lineal Aplicada para Machine Learning, Deep Learning con [TensorFlow](https://www.tensorflow.org/ "tensorflow.org") y [Keras](https://keras.io/ "keras.io") (Las librerías más usadas para crear este tipo de mecanismos.)
+
+Todo esto es básciamente álgebra lineal, vectores, matrices y un poco de cálculo diferencial.
+
+Estas matrices se expresan en una estructura de datos que se conocen como vectores, hay mucha multiplicación de vectores y también existe un tipo de dato especial llamado tensor para hacer más fácil estas multiplicaciones, sumas, etc...
+
+Y por ultimo, mucho de esto ya está expresado en librerías existentes que hacen relativamente sencilla su implementación como:
+
+* [PyTorch](https://pytorch.org/ "pytorch.org")
+
+* [TensorFlow](https://www.tensorflow.org/ "tensorflow.org")
+
+**¿Cómo funciona un gran modelo de lenguaje por dentro?**
+
+---
+
+Dijo una persona: En el colegio, yo me acuerdo que habia un Aplicativo que descargabas en la playstore llamado Photomath, este aplicativo permitia tomar fotos de operaciones matematicas escritas a mano y te daba la solucion paso a paso. Como reconocer numeros para una AI es tan avanzado (complicado), si el reconocimeinto de numeros escritos a mano, ya existia desde hace mucho mucho antes de la creacion de la AI ?
+
+Glosario: 
+
+* Pesos: determinan la fuerza de conexión entre neuronas (cuánto influye una sobre otra).
+
+* Retropropagación: técnica que ajusta los pesos cuando la red comete errores.
+
+* Época: una pasada completa de entrenamiento con todos los datos.
+
+* Token: unidad mínima de texto (puede ser una palabra, sílaba o letra). Es la forma en que la IA “entiende” y procesa el lenguaje.
+
+**Y en otras palabras para el proceso de entrenamiento paso a paso:**
+
+1. Inicializar los pesos de manera aleatoria. 
+
+2. Pasar los datos de entrenamiento a través de la red. 
+
+3. Calcular el error entre la predicción y el resultado esperado. 
+
+4. Ajustar los pesos mediante retropropagación. 
+
+5. Repetir el proceso hasta completar una o más épocas.
+
+
+> El video a continuación es interesante porque es de hace 8 años, el tema que para mi es totalmente nuevo asi como conocer a chatgpt despues del 2020 (Cuarentena): Es una reflexión importante porque es un tema que ya tenia tiempo que se estaba desarrollando.
+
+Video Recomendado: Qué es una Red Neuronal by Platzi (Freddy Vega): https://www.youtube.com/watch?v=Es7HAzFsW1M
+
+La red neuronal: vamos a convertir números dibujados a mano en números digitales es - https://adamharley.com/nn_vis/
+
+<img src="https://www.popsci.com/wp-content/uploads/2019/03/18/QAGMAJQKZC3WRPWNB5DBYZ7VQM.png">
+
+*Imagen Tomada De: https://www.popsci.com/gaze-inside-mind-artificial-intelligence/*
+
+Simulación a tiempo real en 3D: https://adamharley.com/nn_vis/mlp/3d.html
+
+Simulación a tiempo real en 2D (Más recomendable y entendible al ser principiante.): https://adamharley.com/nn_vis/cnn/2d.html
+
+Link de Github: https://github.com/aharley/nn_vis
+
+---
