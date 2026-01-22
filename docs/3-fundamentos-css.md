@@ -1,6 +1,14 @@
 # Fundamentos de CSS
 
-Domina CSS para transformar ideas en interfaces modernas, legibles, responsivas y escalables con Flexbox y Grid. Aplica tipografía, color y variables para un diseño visual consistente, y organiza tu código con buenas prácticas que te preparan para construir proyectos web profesionales en la industria.
+Para consultar el código fuente, ejemplos y ejercicios de este documento, visita los siguientes enlaces:
+
+Repositorio - Documento CSS: https://github.com/santiagoencodigo/Desarrollo-Web-Profesional/blob/main/pages/02-fundamentos-css/styles.css
+
+Repositorio - Documento HTML: https://github.com/santiagoencodigo/Desarrollo-Web-Profesional/blob/main/pages/02-fundamentos-css/index.html
+
+Proyecto: https://santiagoencodigo.github.io/Desarrollo-Web-Profesional/pages/02-fundamentos-css/index.html
+
+Dominar CSS para transformar ideas en interfaces modernas, legibles, responsivas y escalables con Flexbox y Grid. Aplica tipografía, color y variables para un diseño visual consistente, y organiza tu código con buenas prácticas que te preparan para construir proyectos web profesionales en la industria.
 
 ## De la idea al estilo con CSS
 
@@ -1206,8 +1214,6 @@ Las animaciones y transiciones básicas aportan movimiento y ritmo. El resultado
 
 Este documento reúne mis apuntes y prácticas del curso Fundamentos de CSS, donde aprendí a manejar la tipografía, los colores, los layouts modernos, las animaciones y el diseño responsivo. Con estos conocimientos, puedo construir interfaces visualmente atractivas, legibles y adaptables a cualquier dispositivo.
 
-Para consultar el código fuente, ejemplos y ejercicios de esta sección, visita el siguiente enlace:
+Resultado:
 
-Repositorio - Documento CSS: [Desarrollo Web Profesional — CSS](https://github.com/santiagoencodigo/Desarrollo-Web-Profesional/blob/main/Pages/03.%20Fundamentos%20CSS/styles.css)
-
-Proyecto: https://santiagoencodigo.github.io/Desarrollo-Web-Profesional/Pages/03.%20Fundamentos%20CSS/index.html
+<img src="../assets/img/9. Proyecto - Portafolio - Santiagoencodigo.png">

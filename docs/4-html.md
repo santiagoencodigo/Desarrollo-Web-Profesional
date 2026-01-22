@@ -1,5 +1,11 @@
 # Fundamentos HTML
 
+* Codigo HTML con Apuntes (comentarios): https://github.com/santiagoencodigo/Desarrollo-Web-Profesional/blob/main/pages/03-html/index.html
+
+* Codigo HTML maquetación profesional de portfolio web: https://github.com/santiagoencodigo/Desarrollo-Web-Profesional/blob/main/pages/03-html/maquetacion_profesional.html
+
+* Proyecto: https://santiagoencodigo.github.io/Desarrollo-Web-Profesional/pages/03-html/index.html
+
 >Estos son mis apuntes personales de aprendizaje sobre el desarrollo web, el contenido está basado en mi estudio y práctica por lo que irá evolucionando a traves del tiempo.
 
 HTML es el lenguaje que da forma a la web. En esta sección se encuentra la información sobre cómo crear estructuras claras y semánticas, aprendiendo a escribir código ordenado y funcional. En esta lectura tambien se entenderá por qué una buena organización en HTML mejora la accesibilidad, el SEO y mantenibilidad de cualquier sitio.
@@ -7,10 +13,6 @@ HTML es el lenguaje que da forma a la web. En esta sección se encuentra la info
 >HTML: (HyperText Markup Language) es el lenguaje que define la estructura básica de todas las páginas web. Funciona mediante etiquetas (tags) que organizan el contenido como texto, imagenes, enlaces y más elementos para que el navegador pueda mostrarlos correctamente.
 
 >SEO: (Search Engine Optimization) es el conjunto de prácticas que ayudan a que una página web sea más visible en los motores de búsqueda como Google
-
-* [Repositorio](https://github.com/santiagoencodigo/Desarrollo-Web-Profesional "Repositorio Desarrollo Web by Santiagoencodigo")
-
-* [Proyecto](https://santiagoencodigo.github.io/Desarrollo-Web-Profesional/Pages/04.%20HTML/index.html "Proyecto HTML by Santiagoencodigo")
 
 
 ---
@@ -193,5 +195,9 @@ Este documento resume las bases y principios del desarrollo web utilizando HTML,
 
 Para consultar ejemplos de código, estructuras, etiquetas y elementos HTML desarrollados durante el estudio, visita el siguiente enlace del repositorio:
 
-https://github.com/santiagoencodigo/Desarrollo-Web-Profesional/tree/main/Pages/04.%20HTML
+https://github.com/santiagoencodigo/Desarrollo-Web-Profesional/tree/main/pages/03-html
+
+Resultado:
+
+<img src="../assets/img/10-fundamentos-html.PNG">
 

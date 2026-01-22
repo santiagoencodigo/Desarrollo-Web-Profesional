@@ -2,7 +2,7 @@
 
 <h1 id ="Clon-Google-Title" style="text-align:center;">Curso Práctico de HTML y CSS</h1>
 
-* [Proyecto](https://santiagoencodigo.github.io/Desarrollo-Web-Profesional/Pages/02.%20HTML%20y%20CSS%20-%20Google%20Clone/index.html "Clon de Google By Santiagoencodigo")
+* [Proyecto](https://santiagoencodigo.github.io/Desarrollo-Web-Profesional/pages/01-html-y-css-google-clone/index.html "Clon de Google By Santiagoencodigo")
 
 * [Readme Principal](https://github.com/santiagoencodigo/Desarrollo-Web-Profesional "Repo Desarrollo Web")
 
