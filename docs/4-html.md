@@ -1,10 +1,10 @@
 # Fundamentos HTML
 
-* Codigo HTML con Apuntes (comentarios): https://github.com/santiagoencodigo/Desarrollo-Web-Profesional/blob/main/pages/03-html/index.html
+* [Codigo HTML con Apuntes (comentarios)](https://github.com/santiagoencodigo/Desarrollo-Web-Profesional/blob/main/pages/03-html/index.html)
 
-* Codigo HTML maquetación profesional de portfolio web: https://github.com/santiagoencodigo/Desarrollo-Web-Profesional/blob/main/pages/03-html/maquetacion_profesional.html
+* [Codigo HTML maquetación profesional de portfolio web](https://github.com/santiagoencodigo/Desarrollo-Web-Profesional/blob/main/pages/03-html/maquetacion_profesional.html)
 
-* Proyecto: https://santiagoencodigo.github.io/Desarrollo-Web-Profesional/pages/03-html/index.html
+* [Proyecto](https://santiagoencodigo.github.io/Desarrollo-Web-Profesional/pages/03-html/index.html)
 
 >Estos son mis apuntes personales de aprendizaje sobre el desarrollo web, el contenido está basado en mi estudio y práctica por lo que irá evolucionando a traves del tiempo.
 
@@ -199,5 +199,5 @@ https://github.com/santiagoencodigo/Desarrollo-Web-Profesional/tree/main/pages/0
 
 Resultado:
 
-<img src="../assets/img/10-fundamentos-html.PNG">
+<img src="../Assets/img/1. Clon de Google.PNG">
 

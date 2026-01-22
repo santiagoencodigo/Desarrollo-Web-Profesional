@@ -2,11 +2,11 @@
 
 Para consultar el código fuente, ejemplos y ejercicios de este documento, visita los siguientes enlaces:
 
-Repositorio - Documento CSS: https://github.com/santiagoencodigo/Desarrollo-Web-Profesional/blob/main/pages/02-fundamentos-css/styles.css
+* [Repositorio - Documento CSS](https://github.com/santiagoencodigo/Desarrollo-Web-Profesional/blob/main/pages/02-fundamentos-css/styles.css) 
 
-Repositorio - Documento HTML: https://github.com/santiagoencodigo/Desarrollo-Web-Profesional/blob/main/pages/02-fundamentos-css/index.html
+* [Repositorio - Documento HTML](https://github.com/santiagoencodigo/Desarrollo-Web-Profesional/blob/main/pages/02-fundamentos-css/index.html)
 
-Proyecto: https://santiagoencodigo.github.io/Desarrollo-Web-Profesional/pages/02-fundamentos-css/index.html
+* [Proyecto](https://santiagoencodigo.github.io/Desarrollo-Web-Profesional/pages/02-fundamentos-css/index.html)
 
 Dominar CSS para transformar ideas en interfaces modernas, legibles, responsivas y escalables con Flexbox y Grid. Aplica tipografía, color y variables para un diseño visual consistente, y organiza tu código con buenas prácticas que te preparan para construir proyectos web profesionales en la industria.
 
@@ -1216,4 +1216,4 @@ Este documento reúne mis apuntes y prácticas del curso Fundamentos de CSS, don
 
 Resultado:
 
-<img src="../assets/img/9. Proyecto - Portafolio - Santiagoencodigo.png">
+<img src="../Assets/img/9. Proyecto - Portafolio - Santiagoencodigo.png">

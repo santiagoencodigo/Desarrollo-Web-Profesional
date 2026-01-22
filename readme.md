@@ -32,9 +32,11 @@ Este repositorio tiene como propósito:
 
 ## Historia y funcionamiento de Internet.
 
-[Documentación](https://github.com/santiagoencodigo/Desarrollo-Web-Profesional/blob/main/Docs/1.%20Introducci%C3%B3n%20a%20la%20Web%20Historia%20y%20Funcionamiento%20de%20Internet.md "Documento Historia y funcionamiento de Internet.")
+[Documentación](https://github.com/santiagoencodigo/Desarrollo-Web-Profesional/blob/main/docs/1-introducci%C3%B3n-a-la-web-historia-y-funcionamiento-de-internet.md "Documento Historia y funcionamiento de Internet.")
 
 En este apartado encontrarás apuntes estructurados sobre el funcionamiento de los computadores y la red. Se abordan conceptos fundamentales como bits, bytes, código máquina, códigos ASCII, colores RGB y Unicode, así como los orígenes de ARPANET, el funcionamiento de Internet, los principales protocolos (HTTP, HTTPS), la evolución de los navegadores, el papel del W3C, el funcionamiento de la World Wide Web y muchos otros temas relacionados.
+
+<img src="./Assets/img/docs-11-fundamentos-web-historia-y-funcionamiento-de-internet.PNG">
 
 
 
@@ -50,9 +52,9 @@ En este apartado encontrarás apuntes estructurados sobre el funcionamiento de l
 
 ## HTML y CSS práctico (Clon de Google):
 
-* [Documentación](https://github.com/santiagoencodigo/Desarrollo-Web-Profesional/blob/main/Docs/2.%20HTML%20y%20CSS%20-%20Clon%20Google.md "Apuntes HTML y CSS by Santiagoencodigo")   
+* [Documentación](https://github.com/santiagoencodigo/Desarrollo-Web-Profesional/blob/main/docs/2-html-y-css-clon-google.md "Apuntes HTML y CSS by Santiagoencodigo")   
 
-* [Proyecto](https://santiagoencodigo.github.io/Desarrollo-Web-Profesional/Pages/02.%20HTML%20y%20CSS%20-%20Google%20Clone/index.html "Proyecto HTML y CSS by Santiagoencodigo")
+* [Proyecto](https://santiagoencodigo.github.io/Desarrollo-Web-Profesional/pages/01-html-y-css-google-clone/index.html "Proyecto HTML y CSS by Santiagoencodigo")
 
 En esta sección se desarrolla un clon [de la página principal de Google](https://www.google.com "Page Google") empleando únicamente HTML5 y CSS3. El objetivo principal es afianzar los fundamentos de estructuración semántica con HTML y estilización con CSS, aplicando técnicas modernas de maquetación como Flexbox y Grid.
 
@@ -68,7 +70,7 @@ En esta sección se desarrolla un clon [de la página principal de Google](https
 
 * Diferenciar cuándo aplicar Flexbox y cuándo Grid según las necesidades de maquetación.
 
-<img src="https://static.platzi.com/media/user_upload/clon-google-01cb05b6-3c18-4dd5-a8d0-e99ae6a7922a.jpg"/>
+<img src="./Assets/img/1. Clon de Google.PNG"/>
 
 
 
@@ -84,9 +86,9 @@ En esta sección se desarrolla un clon [de la página principal de Google](https
 
 ## Fundamentos CSS
 
-* [Documentación](https://github.com/santiagoencodigo/Desarrollo-Web-Profesional/blob/main/Docs/4-Fundamentos-CSS.md "Documentación CSS by Santiagoencodigo")
+* [Documentación](https://github.com/santiagoencodigo/Desarrollo-Web-Profesional/blob/main/docs/3-fundamentos-css.md "Documentación CSS by Santiagoencodigo")
 
-* [Proyecto](https://santiagoencodigo.github.io/Desarrollo-Web-Profesional/Pages/03.%20Fundamentos%20CSS/index.html "Proyecto Portafolio CSS by Santiagoencodigo")
+* [Proyecto](https://santiagoencodigo.github.io/Desarrollo-Web-Profesional/pages/02-fundamentos-css/index.html "Proyecto Portafolio CSS by Santiagoencodigo")
 
 En este apartado se encuentra cómo aplicar estilos, tipografía y colores para mejorar la legibilidad y estética de una página web. Además, conoceré el uso de layouts modernos, responsive design, efectos visuales y animaciones, desarrollando una base sólida para crear interfaces atractivas, funcionales y adaptables a cualquier dispositivo.
 
@@ -106,11 +108,13 @@ En este apartado se encuentra cómo aplicar estilos, tipografía y colores para 
 
 ## HyperText Markup Language | HTML 
 
-* [Documentación](https://github.com/santiagoencodigo/Desarrollo-Web-Profesional/blob/main/Docs/5-HTML.md "Documentación HTML by Santiagoencodigo")
+* [Documentación](https://github.com/santiagoencodigo/Desarrollo-Web-Profesional/blob/main/docs/4-html.md "Documentación HTML by Santiagoencodigo")
 
-* [Proyecto](https://santiagoencodigo.github.io/Desarrollo-Web-Profesional/Pages/04.%20HTML/index.html "Proyecto HTML by Santiagoencodigo")
+* [Proyecto](https://santiagoencodigo.github.io/Desarrollo-Web-Profesional/pages/03-html/index.html "Proyecto HTML by Santiagoencodigo")
 
 En esta sección se puede ver mis apuntes sobre cómo escribir código limpio, semántico y estructurado, comprendiendo la base sobre la que se construyen todas las páginas web. Explorando el rol de HTML en la web moderna y cómo su correcta organización afecta directamente en la accesibilidad, el SEO, y la mantenibilidad de un sitio web.
+
+<img src="./Assets/img/10-fundamentos-html.PNG">
 
 
 
@@ -126,9 +130,11 @@ En esta sección se puede ver mis apuntes sobre cómo escribir código limpio, s
 
 ## Computadores e informática básica.
 
-* [Documentación](https://github.com/santiagoencodigo/Desarrollo-Web-Profesional/blob/main/Docs/6-computadores-e-informatica-basica.md "Documentación Computadores e Informática básica - REPO by Santiagoencodigo")
+* [Documentación](https://github.com/santiagoencodigo/Desarrollo-Web-Profesional/blob/main/docs/5-computadores-e-informatica-basica.md "Documentación Computadores e Informática básica - REPO by Santiagoencodigo")
 
 En esta sección se explorarán los conceptos básicos de computación. Aquí estarán mis apuntes sobre las principales funcionalidades de una computadora, instalar y desinstalar programas, navegar por internet de forma segura, manejar archivos e identificar software malicioso.
+
+<img src="./Assets/img/docs-12-computadores-e-informatica-basica.PNG">
 
 
 
@@ -144,9 +150,11 @@ En esta sección se explorarán los conceptos básicos de computación. Aquí es
 
 ## Fundamentos de ingeniería de software.
 
-* [Documentación](https://github.com/santiagoencodigo/Desarrollo-Web-Profesional/blob/main/Docs/3-Fundamentos-Ingenieria-Software.md "Apuntes Fundamentos Ingeniería de Software by Santiagoencodigo")
+* [Documentación](https://github.com/santiagoencodigo/Desarrollo-Web-Profesional/blob/main/docs/6-fundamentos-ingenieria-software.md "Apuntes Fundamentos Ingeniería de Software by Santiagoencodigo")
 
-Aquí encontrarás apuntes sobre los fundamentos de la ingenieria de software. Incluye temas como bits y bytes, el funcionamiento de internet, las computadoras, los chips, la inteligencia artificial y los sistemas del mundo.
+Aquí encontrarás apuntes sobre los fundamentos de la ingeniería de software. Incluye temas como bits y bytes, el funcionamiento de internet, las computadoras, los chips, la inteligencia artificial y los sistemas del mundo.
+
+<img src="./Assets/img/docs-13-fundamentos-de-ingenieria-de-software.PNG">
 
 
 
@@ -163,6 +171,8 @@ Aquí encontrarás apuntes sobre los fundamentos de la ingenieria de software. I
 ## Programación básica.
 
 * [Proyecto](https://santiagoencodigo.github.io/Desarrollo-Web-Profesional/Pages/01.%20Programacion%20Basica/mokepon.html "Page Mokepon")
+
+> En proceso
 
 
 
@@ -181,6 +191,8 @@ Aquí encontrarás apuntes sobre los fundamentos de la ingenieria de software. I
 * <a src="https://github.com/santiagoencodigo/Desarrollo-Web-Profesional/blob/main/Docs/7-Terminal-y-linea-de-comandos.md">Documentación</a> 
 
 En esta sección se encuentra cómo utilizar la terminal y la línea de comandos (Terminal BASH) para navegar el sistema operativo, manipular archivos y directorios, comprender permisos y procesos, y usar herramientas como grep y curl. Integra alias y personaliza tu shell para optimizar el flujo de trabajo.
+
+> En proceso
 
 
 
@@ -202,6 +214,8 @@ En esta sección se encuentra cómo utilizar la terminal y la línea de comandos
 
 En este apartado se encuentran las bases de JavaScript: variables, tipos de datos, estructuras condicionales, loops, arrays, funciones, objetos, promesas, asincronía y programación orientada a objetos en proyectos prácticos.
 
+> Pendiente
+
 
 
 
@@ -217,6 +231,8 @@ En este apartado se encuentran las bases de JavaScript: variables, tipos de dato
 ## Control de versiones con Git y GitHub.
 
 * <a src="">Documentación</a> 
+
+> Pendiente
 
 
 
