@@ -16,16 +16,37 @@ Este repositorio tiene como propósito:
 
 >Por ultimo, una recomendación personal para retener más toda esta información. Por cada concepto que se encuentre aqui se debe pensar en ¿Cómo se aplica esto en un proyecto real? Plantearse este tipo de preguntas refuerza la retención.
 
+
+
+
+
+
 ---
+
+
+
+
 
 
 # Los contenidos que se desarrollan aquí están organizados en torno a los siguientes temas:
 
-## [Historia y funcionamiento de Internet.](https://github.com/santiagoencodigo/Desarrollo-Web-Profesional/blob/main/Docs/1.%20Introducci%C3%B3n%20a%20la%20Web%20Historia%20y%20Funcionamiento%20de%20Internet.md "Documento Historia y funcionamiento de Internet.")
+## Historia y funcionamiento de Internet.
+
+[Documentación](https://github.com/santiagoencodigo/Desarrollo-Web-Profesional/blob/main/Docs/1.%20Introducci%C3%B3n%20a%20la%20Web%20Historia%20y%20Funcionamiento%20de%20Internet.md "Documento Historia y funcionamiento de Internet.")
 
 En este apartado encontrarás apuntes estructurados sobre el funcionamiento de los computadores y la red. Se abordan conceptos fundamentales como bits, bytes, código máquina, códigos ASCII, colores RGB y Unicode, así como los orígenes de ARPANET, el funcionamiento de Internet, los principales protocolos (HTTP, HTTPS), la evolución de los navegadores, el papel del W3C, el funcionamiento de la World Wide Web y muchos otros temas relacionados.
 
+
+
+
+
+
 ---
+
+
+
+
+
 
 ## HTML y CSS práctico (Clon de Google):
 
@@ -52,45 +73,11 @@ En esta sección se desarrolla un clon [de la página principal de Google](https
 
 
 
----
-
-
-
-
-## [Programación básica.](https://santiagoencodigo.github.io/Desarrollo-Web-Profesional/Pages/01.%20Programacion%20Basica/mokepon.html "Page Mokepon")
-
-
 
 
 ---
 
 
-
-
-## [Fundamentos de ingeniería de software.](https://github.com/santiagoencodigo/Desarrollo-Web-Profesional/blob/main/Docs/3-Fundamentos-Ingenieria-Software.md "Apuntes Fundamentos Ingeniería de Software by Santiagoencodigo")
-
-Aquí encontrarás apuntes sobre los fundamentos de la ingenieria de software. Incluye temas como bits y bytes, el funcionamiento de internet, las computadoras, los chips, la inteligencia artificial y los sistemas del mundo.
-
-
-
-
----
-
-
-
-
-## HyperText Markup Language | HTML 
-
-* [Documentación](https://github.com/santiagoencodigo/Desarrollo-Web-Profesional/blob/main/Docs/5-HTML.md "Documentación HTML by Santiagoencodigo")
-
-* [Proyecto](https://santiagoencodigo.github.io/Desarrollo-Web-Profesional/Pages/04.%20HTML/index.html "Proyecto HTML by Santiagoencodigo")
-
-En esta sección se puede ver mis apuntes sobre cómo escribir código limpio, semántico y estructurado, comprendiendo la base sobre la que se construyen todas las páginas web. Explorando el rol de HTML en la web moderna y cómo su correcta organización afecta directamente en la accesibilidad, el SEO, y la mantenibilidad de un sitio web.
-
-
-
-
----
 
 
 
@@ -108,7 +95,31 @@ En este apartado se encuentra cómo aplicar estilos, tipografía y colores para 
 
 
 
+
+
 ---
+
+
+
+
+
+
+## HyperText Markup Language | HTML 
+
+* [Documentación](https://github.com/santiagoencodigo/Desarrollo-Web-Profesional/blob/main/Docs/5-HTML.md "Documentación HTML by Santiagoencodigo")
+
+* [Proyecto](https://santiagoencodigo.github.io/Desarrollo-Web-Profesional/Pages/04.%20HTML/index.html "Proyecto HTML by Santiagoencodigo")
+
+En esta sección se puede ver mis apuntes sobre cómo escribir código limpio, semántico y estructurado, comprendiendo la base sobre la que se construyen todas las páginas web. Explorando el rol de HTML en la web moderna y cómo su correcta organización afecta directamente en la accesibilidad, el SEO, y la mantenibilidad de un sitio web.
+
+
+
+
+
+
+---
+
+
 
 
 
@@ -122,12 +133,45 @@ En esta sección se explorarán los conceptos básicos de computación. Aquí es
 
 
 
+
+
+---
+
+
+
+
+
+
+## Fundamentos de ingeniería de software.
+
+[Documentación](https://github.com/santiagoencodigo/Desarrollo-Web-Profesional/blob/main/Docs/3-Fundamentos-Ingenieria-Software.md "Apuntes Fundamentos Ingeniería de Software by Santiagoencodigo")
+
+Aquí encontrarás apuntes sobre los fundamentos de la ingenieria de software. Incluye temas como bits y bytes, el funcionamiento de internet, las computadoras, los chips, la inteligencia artificial y los sistemas del mundo.
+
+
+
+
+
+
 ---
 
 
 
 
+
+
+## Programación básica.
+
+[Proyecto](https://santiagoencodigo.github.io/Desarrollo-Web-Profesional/Pages/01.%20Programacion%20Basica/mokepon.html "Page Mokepon")
+
+
+
+
+
+
 ---
+
+
 
 
 
@@ -140,7 +184,12 @@ En esta sección se encuentra cómo utilizar la terminal y la línea de comandos
 
 
 
+
+
+
 ---
+
+
 
 
 
@@ -155,21 +204,29 @@ En este apartado se encuentran las bases de JavaScript: variables, tipos de dato
 
 
 
+
+
+
 ---
+
+
 
 
 
 
 ## Control de versiones con Git y GitHub.
 
+* <a src="">Documentación</a> 
+
+
+
+
+
 
 
 ---
 
 
-
-
----
 
 
 
