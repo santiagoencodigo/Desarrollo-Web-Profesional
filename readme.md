@@ -144,7 +144,7 @@ En esta sección se explorarán los conceptos básicos de computación. Aquí es
 
 ## Fundamentos de ingeniería de software.
 
-[Documentación](https://github.com/santiagoencodigo/Desarrollo-Web-Profesional/blob/main/Docs/3-Fundamentos-Ingenieria-Software.md "Apuntes Fundamentos Ingeniería de Software by Santiagoencodigo")
+* [Documentación](https://github.com/santiagoencodigo/Desarrollo-Web-Profesional/blob/main/Docs/3-Fundamentos-Ingenieria-Software.md "Apuntes Fundamentos Ingeniería de Software by Santiagoencodigo")
 
 Aquí encontrarás apuntes sobre los fundamentos de la ingenieria de software. Incluye temas como bits y bytes, el funcionamiento de internet, las computadoras, los chips, la inteligencia artificial y los sistemas del mundo.
 
@@ -162,7 +162,7 @@ Aquí encontrarás apuntes sobre los fundamentos de la ingenieria de software. I
 
 ## Programación básica.
 
-[Proyecto](https://santiagoencodigo.github.io/Desarrollo-Web-Profesional/Pages/01.%20Programacion%20Basica/mokepon.html "Page Mokepon")
+* [Proyecto](https://santiagoencodigo.github.io/Desarrollo-Web-Profesional/Pages/01.%20Programacion%20Basica/mokepon.html "Page Mokepon")
 
 
 
