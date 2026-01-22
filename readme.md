@@ -170,7 +170,15 @@ Aquí encontrarás apuntes sobre los fundamentos de la ingeniería de software. 
 
 ## Programación básica.
 
-* [Proyecto](https://santiagoencodigo.github.io/Desarrollo-Web-Profesional/Pages/01.%20Programacion%20Basica/mokepon.html "Page Mokepon")
+* [Proyecto](https://santiagoencodigo.github.io/Desarrollo-Web-Profesional/pages/04-programacion-basica/mokepon.html "Desarrollo Web Profesional - Mokepon")
+
+* [Documentación](https://github.com/santiagoencodigo/Desarrollo-Web-Profesional/blob/main/docs/7-programacion-basica.md "Apuntes Programación Básica by Santiagoencodigo")
+
+Esta sección representa un punto de partida dentro de la ruta de Desarrollo Web Profesional, ya que consolida los fundamentos esenciales para comprender la lógica detrás del desarrollo de aplicaciones web.
+
+En este módulo se trabajan los principios de programación utilizando JavaScript, HTML y CSS, fortaleciendo el pensamiento lógico, el uso de estructuras de control, la manipulación del DOM y la aplicación práctica de conceptos clave mediante el desarrollo de un videojuego desde cero. Este bloque establece las bases necesarias para abordar posteriormente áreas más avanzadas del desarrollo frontend y backend.
+
+<img src="./Assets/img/code-1-mokepon.PNG">
 
 > En proceso
 
@@ -211,8 +219,6 @@ En esta sección se encuentra cómo utilizar la terminal y la línea de comandos
 * <a src="">Documentación</a> 
 
 * <a src="">Proyecto</a>
-
-En este apartado se encuentran las bases de JavaScript: variables, tipos de datos, estructuras condicionales, loops, arrays, funciones, objetos, promesas, asincronía y programación orientada a objetos en proyectos prácticos.
 
 > Pendiente
 
