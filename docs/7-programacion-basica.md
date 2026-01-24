@@ -45,9 +45,11 @@ Lecturas Recomendadas:
 
 * [5. Estructura y funcionamiento básico de HTML y JavaScript](#estructura-y-funcionamiento-básico-de-html-y-javascript)
 
-* [06. Instalación y uso básico de Visual Studio Code para programar](#instalación-y-uso-básico-de-visual-studio-code-para-programar)
+* [6. Instalación y uso básico de Visual Studio Code para programar](#instalación-y-uso-básico-de-visual-studio-code-para-programar)
 
-* [07. Declaración y Uso Básico de Variables en JavaScript](#declaración-y-uso-básico-de-variables-en-javascript)
+* [7. Declaración y Uso Básico de Variables en JavaScript](#declaración-y-uso-básico-de-variables-en-javascript)
+
+* [8. Programación de Piedra, Papel o Tijera en JavaScript](#programación-de-piedra-papel-o-tijera-en-javascript)
 
 
 
@@ -578,4 +580,126 @@ Lectura Recomendada:
 
 * parseINT en JS by MDN: https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/parseInt
 
+
+
+
+
+
+
+
+
+
+
 ---
+
+
+
+
+
+
+
+
+
+
+
+## Programación de Piedra, Papel o Tijera en JavaScript
+
+Si quiere ver el trabajo de esta sección puede acceder a los siguentes vinculos:
+
+* [Proyecto]()
+
+* [Código HTML]()
+
+* [Código JavaScript]()
+
+Piedra, Papel o Tijera es un juego basado en reglas circulares donde cada opción vence a una y pierde contra otra. Tijera corta papel, papel envuelve piedra y piedra rompe tijera, lo que permite establecer condiciones lógicas para determinar un resultado.
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Rock-paper-scissors.svg/langes-500px-Rock-paper-scissors.svg.png">
+
+*Imagen Tomada De: https://es.wikipedia.org/wiki/Piedra,_papel_o_tijera*
+
+La programación de Piedra, Papel o Tijera consiste en traducir las reglas del juego a instrucciones lógicas que permitan comparar elecciones y tomar decisiones de forma automática mediante condicionales.
+
+Para simplificar la lógica, cada opción del juego se representa con un valor numérico. Por ejemplo, 1 para piedra, 2 para papel y 3 para tijera, facilitando la comparación dentro del código.
+
+Para ejecutar el juego, se crea un documento HTML con su estructura básica, utilizando las etiquetas html, head y body, lo que permite integrar contenido y lógica de programación en una página web.
+
+**Lectura Recomendada:** [Estructura Básica de un Documento HTML](#estructuras-básica-de-un-documento-html)
+
+La etiqueta !DOCTYPE html indica al navegador que el documento utiliza el estándar HTML5. Su uso garantiza una correcta interpretación del código y compatibilidad con los navegadores modernos.
+
+**Lecturas Recomendadas:**
+
+* Definición de DOCTYPE html by MDN: https://developer.mozilla.org/es/docs/Glossary/Doctype
+
+* ¿Qué es la declaración DOCTYPE en HTML by freecodecamp: https://www.freecodecamp.org/espanol/news/que-es-la-declaracion-en-html/
+
+La etiqueta script permite incluir código JavaScript dentro de un documento HTML. A través de esta etiqueta se define la lógica que controla el comportamiento del juego.
+
+* https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/script
+
+Se utilizan variables como let jugador y let pc para almacenar las elecciones realizadas por el usuario y la computadora. Estas variables permiten gestionar los datos necesarios para evaluar el resultado del juego.
+
+* https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Statements/let
+
+El operador = se utiliza para asignar un valor a una variable, mientras que == se emplea para comparar dos valores dentro de una condición. Confundir estos operadores puede generar errores lógicos en el programa.
+
+* https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Expressions_and_operators#asignacion
+
+* https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Expressions_and_operators#comparacion
+
+Un comentario es una línea de texto que no es ejecutada por el programa. Su función es documentar el código y facilitar su comprensión. En JavaScript, los comentarios se escriben utilizando //.
+
+* https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Lexical_grammar
+
+<img src="https://i.ytimg.com/vi/8cu8YQmJeys/sddefault.jpg">
+
+*Imagen Tomada De: https://www.youtube.com/watch?v=8cu8YQmJeys*
+
+---
+
+La opción Word Wrap permite ajustar visualmente las líneas largas de código para que se adapten al ancho del editor. Esta herramienta mejora la legibilidad sin modificar el contenido del archivo.
+
+* Documentación VS CODE - Word Wrap: https://learn.microsoft.com/es-es/visualstudio/ide/reference/how-to-manage-word-wrap-in-the-editor?view=visualstudio
+
+* Video Recomendado: https://www.youtube.com/watch?v=Pg8iVar_-0M
+
+<img src="https://i.sstatic.net/9AEGO.png">
+
+*Imagen Tomada De: https://stackoverflow.com/questions/31025502/how-can-i-switch-word-wrap-on-and-off-in-visual-studio-code*
+
+---
+
+La función prompt se utiliza para solicitar al jugador que elija una opción. El valor ingresado se almacena en la variable jugador, permitiendo registrar la decisión del usuario.
+
+* https://developer.mozilla.org/es/docs/Web/API/Window/prompt
+
+La concatenación permite unir texto con el valor de una variable. En la expresión alert("Elegiste " + jugador), se combina un string con el valor almacenado en la variable para mostrar un mensaje comprensible al usuario.
+
+El espacio incluido dentro del string "Elegiste " es necesario para **separar visualmente el texto del valor** de la variable, garantizando que el mensaje sea legible y tenga sentido gramatical.
+
+---
+
+Un condicional es una estructura lógica que permite ejecutar diferentes bloques de código según se cumpla o no una condición determinada. Es fundamental para la toma de decisiones en programación.
+
+Lecturas Recomendadas: 
+
+* Condicionales (Programación) by Wikipedia: https://en.wikipedia.org/wiki/Conditional_(computer_programming)
+
+* Toma decisiones de tu código mediante condicionales by MDN: https://developer.mozilla.org/es/docs/Learn_web_development/Core/Scripting/Conditionals
+
+La estructura if se utiliza para ejecutar un bloque de código cuando una condición específica se evalúa como verdadera.
+
+El operador == se emplea para comparar valores en una condición. Por ejemplo, if (jugador == 1) evalúa si el valor almacenado en la variable jugador es igual a 1.
+
+Las llaves {} delimitan un bloque de código. Todo lo que se encuentre dentro de ellas se ejecutará únicamente si la condición asociada es verdadera.
+
+La estructura else if permite evaluar condiciones adicionales cuando la condición inicial no se cumple. Se utiliza para manejar múltiples posibles escenarios.
+
+El bloque else se ejecuta cuando ninguna de las condiciones anteriores es verdadera. Generalmente se utiliza para manejar casos no contemplados o entradas inválidas.
+
+La combinación de if, else if y else permite determinar si la opción elegida corresponde a piedra, papel o tijera. Esta estructura evalúa cada posibilidad y define un comportamiento específico según el valor ingresado por el jugador.
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/If-Then-Else-diagram.svg/250px-If-Then-Else-diagram.svg.png">
+
+*Imagen Tomada De: https://en.wikipedia.org/wiki/Conditional_(computer_programming)*
