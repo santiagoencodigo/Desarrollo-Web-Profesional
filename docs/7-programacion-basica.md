@@ -363,3 +363,75 @@ El atajo Ctrl + R se utiliza para recargar una página web en el navegador. Este
 
 
 ## Estructura y funcionamiento básico de HTML y JavaScript
+
+Un documento HTML está compuesto por una estructura definida que permite al navegador interpretar y renderizar correctamente el contenido. Esta estructura establece la organización general de los elementos que conforman una página web.
+
+<img src="https://disenowebakus.net/imagenes/articulos/estructura-basica-de-una-pagina-web-en-html.jpg">
+
+*Imagen Tomada De: https://disenowebakus.net/domine-html-y-dhtml-primeros-pasos.php*
+
+HTML se organiza como un árbol jerárquico de etiquetas. En esta estructura, **html** actúa como la raíz principal, dentro de la cual se encuentran **head** y body. A su vez, **head** puede contener elementos como **title**, mientras que **body** incluye etiquetas visibles como **h1** y **p**, formando una jerarquía clara y ordenada.
+
+Dentro de la etiqueta **head** puede incluirse la etiqueta **script**, la cual se utiliza para cargar código escrito en JavaScript. Este código puede integrarse directamente en el documento HTML o referenciarse desde un archivo externo, permitiendo separar la lógica de programación de la estructura del contenido.
+
+Lecturas Recomendadas:
+
+* etiqueta html by MDN: https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/html
+
+* etiqueta head by MDN: https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/head
+
+* etiqueta title by MDN: https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/title
+
+* etiqueta script by MDN: https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/script
+
+* etiqueta body by MDN: https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/body
+
+* etiqueta header by MDN: https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/header
+
+* etiqueta p by MDN: https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/p
+
+La indentación mediante la tecla TAB se utiliza para organizar visualmente el código y facilitar su lectura. Aunque no es obligatoria en HTML, JavaScript o CSS, se considera una buena práctica. En lenguajes como Python, la indentación sí es obligatoria para el correcto funcionamiento del código.
+
+<img src="https://miro.medium.com/v2/resize:fit:1096/1*somdTHK2pIj1EfIpzEC5sw.png">
+
+*Imagen Tomada De: https://medium.com/@sthefany/qu%C3%A9-es-la-indentaci%C3%B3n-c9471f3ae84f*
+
+Lectura Recomendada
+
+* Identación python by freecodecamp: https://www.freecodecamp.org/espanol/news/indentacion-en-python-con-ejemplos/
+
+En JavaScript, la forma en que se evalúan las expresiones depende del tipo de datos involucrados. Cuando se utiliza la expresión **alert("El valor de a+b es " + a + b)**, los valores se concatenan como texto, produciendo el resultado 12, ya que los valores numéricos se interpretan como strings al combinarse con texto.
+
+Al agregar paréntesis en una operación, como en **alert("El valor de a+b es " + (a + b))**, JavaScript evalúa primero la suma de los valores numéricos. Esto permite obtener el resultado matemático correcto antes de concatenarlo con el texto.
+
+Lectura Recomendada:
+
+* Expresiones y Operadores en Javascript by Freecodecamp: https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Expressions_and_operators
+
+En JavaScript, los espacios entre variables y operadores no afectan la ejecución del código. Expresiones como **a+b** y **a + b** son interpretadas de la misma manera por el lenguaje, lo que permite flexibilidad en la escritura sin afectar el resultado.
+
+<img src="https://cdn1.gnarususercontent.com.br/6/413612/8e2fbf5a-23d8-45d2-821b-dc514530ecb1.png">
+
+*Imagen Tomada De: https://app.aluracursos.com/forum/topico-string-y-entero-javascript-concatenacion-108481*
+
+---
+
+Las variables pueden almacenar distintos tipos de valores. Entre los más comunes se encuentran los valores numéricos, utilizados para operaciones matemáticas, y los valores textuales, empleados para representar cadenas de caracteres.
+
+Lecturas Recomendadas:
+
+* Gramática y tipos en Javascript by MDN: https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Grammar_and_types
+
+* Variables de Javascript by w3schools: https://www.w3schools.com/js/js_variables.asp
+
+Video Recomendado - JavaScript - Variables - W3Schools.com: https://www.youtube.com/watch?v=7xStNKTM3bE&list=PLP9IO4UYNF0WWmZpE3W33vVPRl2GvjEqz
+
+La concatenación es el proceso mediante el cual se unen valores, generalmente strings, para formar una sola cadena de texto. En JavaScript, este proceso se realiza comúnmente utilizando el operador +.
+
+Es posible escribir código utilizando editores de texto simples como el bloc de notas. Sin embargo, existen herramientas especializadas como [Visual Studio Code](https://code.visualstudio.com/ "code.visualstudio.com/") o [Cursor](https://cursor.com/ "cursor.com"), que ofrecen funcionalidades adicionales como resaltado de sintaxis, autocompletado y herramientas de depuración que mejoran la experiencia de desarrollo.
+
+<img src="https://i.ytimg.com/vi/H7LwUj2zlhA/maxresdefault.jpg">
+
+*Imagen Tomada De: https://www.youtube.com/watch?v=H7LwUj2zlhA*
+
+---
