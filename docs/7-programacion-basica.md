@@ -51,6 +51,8 @@ Lecturas Recomendadas:
 
 * [8. Programación de Piedra, Papel o Tijera en JavaScript](#programación-de-piedra-papel-o-tijera-en-javascript)
 
+* [9. Algoritmo Avanzado de Piedra, Papel o Tijera en JavaScript](#algoritmo-avanzado-de-piedra-papel-o-tijera-en-javascript)
+
 
 
 
@@ -606,11 +608,11 @@ Lectura Recomendada:
 
 Si quiere ver el trabajo de esta sección puede acceder a los siguentes vinculos:
 
-* [Proyecto]()
+* [Proyecto](https://santiagoencodigo.github.io/Desarrollo-Web-Profesional/pages/04-programacion-basica/01-piedra-papel-o-tijera/piedra-papel-o-tijera.html "Proyecto - Piedra Papel o Tijera")
 
-* [Código HTML]()
+* [Código HTML](https://github.com/santiagoencodigo/Desarrollo-Web-Profesional/blob/main/pages/04-programacion-basica/01-piedra-papel-o-tijera/piedra-papel-o-tijera.html "Código HTML - Piedra Papel o Tijera")
 
-* [Código JavaScript]()
+* [Código JavaScript](https://github.com/santiagoencodigo/Desarrollo-Web-Profesional/blob/main/pages/04-programacion-basica/01-piedra-papel-o-tijera/piedra-papel-o-tijera.js "Código JS - Piedra Papel o Tijera")
 
 Piedra, Papel o Tijera es un juego basado en reglas circulares donde cada opción vence a una y pierde contra otra. Tijera corta papel, papel envuelve piedra y piedra rompe tijera, lo que permite establecer condiciones lógicas para determinar un resultado.
 
@@ -703,3 +705,123 @@ La combinación de if, else if y else permite determinar si la opción elegida c
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/If-Then-Else-diagram.svg/250px-If-Then-Else-diagram.svg.png">
 
 *Imagen Tomada De: https://en.wikipedia.org/wiki/Conditional_(computer_programming)*
+
+
+
+
+
+
+
+
+
+
+---
+
+
+
+
+
+
+
+
+
+
+## Algoritmo Avanzado de Piedra, Papel o Tijera en JavaScript
+
+Un algoritmo es una secuencia ordenada de pasos lógicos que permiten resolver un problema o realizar una tarea específica. En programación, un algoritmo define qué decisiones debe tomar el programa según diferentes situaciones.
+
+**Lectura Recomendada:**
+
+* Algoritmo by Wikipedia: https://es.wikipedia.org/wiki/Algoritmo
+
+En este caso, el algoritmo permite determinar si el jugador gana, pierde o empata frente a la computadora en el juego de Piedra, Papel o Tijera.
+
+**Las reglas básicas del juego son:**
+
+* Piedra gana a tijera
+
+* Tijera gana a papel
+
+* Papel gana a piedra
+
+El resultado depende exclusivamente de la opción elegida por el jugador y la opción elegida por la computadora.
+
+
+<img src="https://static.platzi.com/media/user_upload/BeFunky-design-0fdd9b4f-64c4-40db-8f26-733a0c226ee4.jpg">
+
+*Imagen Tomada De: https://platzi.com/cursos/programacion-basica/algoritmo-avanzado-de-piedra-papel-o-tijera/*
+
+En nuestra mente, el proceso funciona así:
+
+1. El jugador elige una opción
+
+2. La computadora elige una opción aleatoria
+
+> En el siguente título desarrollamos este apartado.
+
+3. Se comparan ambas elecciones
+
+4. Según las reglas, se determina el resultado
+
+En programación, este proceso debe traducirse en condiciones claras y explícitas, ya que el programa no interpreta reglas implícitas como lo hace un humano.
+
+Un programa debe contemplar todas las posibles combinaciones entre las elecciones del jugador y la computadora.
+Si una condición no se programa, el sistema no sabrá qué hacer en ese caso.
+
+> Si no esta programado, el prompt simplemente sigue y no pasará nada.
+
+---
+
+Existe un empate cuando el jugador y la computadora eligen la misma opción.
+Este es el primer caso que se evalúa, ya que es el más directo.
+
+**El jugador gana en los siguientes casos:**
+
+* El jugador elige piedra y la computadora tijera
+
+* El jugador elige papel y la computadora piedra
+
+* El jugador elige tijera y la computadora papel
+
+Estas condiciones se evalúan mediante operadores comparativos **==** y el operador lógico **&&**
+
+**Lecturas Recomendadas:**
+
+* Comparación (==) en JS by MDN: https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Operators/Equality
+
+* Operador Lógico AND (&&) en JS by MDN: https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Operators/Logical_AND
+
+Si no se cumple ninguna de las condiciones de empate o victoria, el resultado será una derrota.
+Este caso se maneja con una estructura else.
+
+Se pueden utilizar emojis para representar las opciones del juego usando el comando:
+
+    Windows + .
+
+Esto mejora la experiencia visual y hace el juego más intuitivo.
+
+**Lectura Recomendada:** 
+
+* Como escribir emojis by Xakata: https://www.xataka.com/basics/como-escribir-emojis-en-windows-10
+
+Se reutilizan las condicionales ya existentes para el PC, asignando valores numéricos a cada opción:
+
+    1 = piedra
+
+    2 = papel
+
+    3 = tijera
+
+Esto facilita las comparaciones y hace el código más limpio y ordenado.
+
+---
+
+Por lo que en conclusión:
+
+if: para verificar el empate
+
+else if junto con &&: para todas las condiciones donde el jugador gana
+
+else: para los casos donde el jugador pierde
+
+---

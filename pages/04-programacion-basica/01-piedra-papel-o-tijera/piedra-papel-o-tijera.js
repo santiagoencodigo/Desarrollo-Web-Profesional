@@ -14,20 +14,51 @@ alert("Elegiste: " + jugador)
 
 // Condicional if
 if (jugador == 1) {
-    alert("Elegiste Piedra.")
+    alert("Elegiste Piedra. 🥌")
 }
 
 // Condicionales else if
 
 else if (jugador == 2) {
-    alert("Elegiste Papel.")
+    alert("Elegiste Papel. 📄")
 }
 else if (jugador == 3) {
-    alert("Elegiste Tijera.")
+    alert("Elegiste Tijera. ✂️")
 }
 
 // condición else
 
 else {
     alert("Elección inválida.")
+}
+
+// Condicionales del PC
+
+if (pc == 1) {
+    alert("PC elige Piedra. 🥌")
+}
+else if (pc == 2) {
+    alert("PC elige Papel. 📄")
+}
+else {
+    alert("PC elige Tijera. ✂️")
+}
+
+
+// Combate
+
+if (jugador == pc) {
+    alert("Empate!")
+}
+else if (jugador == 1 && pc == 3) {
+    alert("Ganaste")
+}
+else if (jugador == 2 && pc == 1) {
+    alert("Ganaste")
+}
+else if (jugador == 3 && pc == 2) {
+    alert("Ganaste")
+}
+else {
+    alert("Perdiste")
 }
