@@ -434,4 +434,76 @@ Es posible escribir código utilizando editores de texto simples como el bloc de
 
 *Imagen Tomada De: https://www.youtube.com/watch?v=H7LwUj2zlhA*
 
+
+
+
+
+
+
+
+
+
 ---
+
+
+
+
+
+
+
+
+
+
+## Instalación y básico de Visual Studio Code para programar
+
+Un editor de código es una herramienta diseñada para escribir y mantener código fuente de manera eficiente. Existen múltiples opciones como [Visual Studio Code](https://code.visualstudio.com/ "https://code.visualstudio.com/"), [Sublime Text](https://www.sublimetext.com/ "https://www.sublimetext.com/") y [Notepad++](https://notepad-plus-plus.org/ "https://notepad-plus-plus.org/"), cada una con características orientadas al desarrollo de software.
+
+Lecturas Recomendadas:
+
+* Editor vs IDE by EDTeam: https://ed.team/blog/editor-vs-ide-que-usar-para-programar
+
+* Editor de Código Fuente by Wikipedia: https://es.wikipedia.org/wiki/Editor_de_c%C3%B3digo_fuente
+
+* Editores de Código by MDN: https://developer.mozilla.org/es/docs/Learn_web_development/Getting_started/Environment_setup/Code_editors
+
+Aplicaciones de redacción de texto como Microsoft Word no son adecuadas para programar, ya que modifican el contenido con formato invisible y no respetan la sintaxis ni la estructura requerida por los lenguajes de programación.
+
+Los editores de código identifican distintos elementos del lenguaje y los muestran con colores específicos para facilitar la lectura y comprensión. Estas ayudas visuales no afectan el funcionamiento del código y pueden variar entre editores.
+
+Visual Studio Code es un editor de código multiplataforma que permite escribir, ejecutar y depurar programas. Su instalación es sencilla y, una vez configurado, ofrece herramientas como resaltado de sintaxis, gestión de archivos y extensiones que mejoran la productividad.
+
+<img src="https://kinsta.com/es/wp-content/uploads/sites/8/2019/11/fragmento-codigo-html.jpg">
+
+*Imagen Tomada De: https://kinsta.com/es/blog/editores-html-gratuitos/*
+
+Existen diferentes editores y entornos de desarrollo que cumplen funciones similares. La elección del editor depende de las preferencias del desarrollador, ya que todos permiten trabajar con los mismos archivos de código.
+
+El sistema operativo no condiciona el proceso de programación, ya que el código fuente es texto. Un mismo archivo puede ser creado y ejecutado en distintos sistemas siempre que se utilicen las herramientas adecuadas.
+
+La extensión de un archivo indica al editor y al sistema cómo debe interpretarse su contenido. Usar la extensión correcta es fundamental para que el editor reconozca el lenguaje y aplique las reglas de sintaxis correspondientes.
+
+Las carpetas permiten estructurar y organizar los archivos de un proyecto. Una correcta organización facilita el mantenimiento, la navegación y la comprensión del código.
+
+El PATH es una variable del sistema que indica dónde buscar programas ejecutables. Su correcta configuración permite que la terminal y editores como Visual Studio Code ejecuten comandos y herramientas desde la línea de comandos sin especificar rutas completas.
+
+Visual Studio Code utiliza colores para diferenciar elementos del código, como etiquetas HTML, símbolos y texto. Estos colores son arbitrarios y no forman parte del código en sí; su función es servir como apoyo visual para el desarrollador.
+
+Los errores en el código suelen resaltarse en color rojo dentro del editor. Esta funcionalidad permite identificar problemas de sintaxis o estructura de forma rápida durante el desarrollo.
+
+<img src="https://raw.githubusercontent.com/usernamehw/vscode-error-lens/master/img/demo.png">
+
+*Imagen Tomada De: https://marketplace.visualstudio.com/items?itemName=usernamehw.errorlens*
+
+---
+
+La etiqueta **charset** define la codificación de caracteres utilizada en un documento HTML. Permite al navegador interpretar correctamente el texto contenido en la página.
+
+UTF-8 es un estándar de codificación de caracteres ampliamente utilizado en la web. Permite representar una gran variedad de símbolos y alfabetos, garantizando compatibilidad entre distintos sistemas y navegadores.
+
+Los atributos son propiedades adicionales que se asignan a las etiquetas HTML para modificar su comportamiento o proporcionar información extra. Se escriben dentro de la etiqueta de apertura y siguen una estructura clave-valor.
+
+Lecturas Recomendadas:
+
+* Contenido de Metadatos by MDN: https://developer.mozilla.org/es/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata
+
+* Atributos en HTML: https://developer.mozilla.org/es/docs/Web/HTML/Reference/Attributes
