@@ -53,6 +53,8 @@ Lecturas Recomendadas:
 
 * [9. Algoritmo Avanzado de Piedra, Papel o Tijera en JavaScript](#algoritmo-avanzado-de-piedra-papel-o-tijera-en-javascript)
 
+* [10. Generación de Números Aleatorios con JavaScript](#generación-de-números-aleatorios-con-javascript)
+
 
 
 
@@ -824,4 +826,166 @@ else if junto con &&: para todas las condiciones donde el jugador gana
 
 else: para los casos donde el jugador pierde
 
+
+
+
+
+
+
+
+
+
+
 ---
+
+
+
+
+
+
+
+
+
+
+
+## Generación de Números Aleatorios con JavaScript
+
+En muchos programas es necesario que la computadora tome decisiones de forma aleatoria, como en el juego de Piedra, Papel o Tijera, donde la PC debe elegir una opción sin intervención del usuario.
+
+Aleatoriedad by Wikipedia: https://es.wikipedia.org/wiki/Aleatoriedad
+
+En JavaScript (y en la mayoría de lenguajes), los números aleatorios no se generan directamente en rangos personalizados.
+Por defecto, se generan números decimales entre 0 y 1, por ejemplo:
+
+* 0.6
+
+* 0.20
+
+* 0.49999
+
+Estos valores funcionan como si fueran porcentajes.
+
+Ejemplos prácticos:
+
+* 20 × 0.5 = 10 → representa el 50% de 20
+
+* 20 × 0.10 = 2 → representa el 10% de 20
+
+Este principio se utiliza para convertir números aleatorios decimales en valores dentro de un rango específico.
+
+Para adaptar esos porcentajes a rangos definidos (por ejemplo, del 1 al 3), se usan fórmulas matemáticas, combinando multiplicación, suma y funciones de JavaScript.
+
+La consola del navegador permite probar expresiones y funciones en tiempo real, lo cual es ideal para entender cómo funcionan herramientas como Math.floor.
+
+**Lectura Recomendada:**
+
+* Math en JS by MDN: https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Math
+
+Math es un objeto especial (a veces explicado como una clase) que contiene métodos matemáticos integrados, como:
+
+* Math.random(): https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Math/random
+
+* Math.floor(): https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Math/floor
+
+* Math.round(): https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Math/round
+
+El método .floor redondea un número hacia abajo, eliminando los decimales.
+
+Ejemplo:
+
+* Math.floor(2.9) → 2
+
+* Math.floor(0.99) → 0
+
+Math.floor se utiliza para convertir números decimales en números enteros, algo esencial cuando trabajamos con selecciones como 1, 2 o 3.
+
+* Una clase define comportamiento y estructura.
+
+* Un objeto especial es una herramienta ya creada por el lenguaje para resolver tareas comunes.
+
+**Math es un objeto especial que proporciona funciones matemáticas listas para usar.**
+
+Math.random() genera un número decimal aleatorio entre 0 (incluido) y 1 (excluido).
+
+Ejemplo:
+
+* 0.234
+
+* 0.87
+
+* 0.009
+
+---
+
+Para que la computadora elija entre piedra, papel o tijera, es necesario transformar ese número decimal en un valor entero entre 1 y 3.
+
+<img src="https://www.bighero6challenge.com/images/thumbs/Piedra,-papel-o-tijera-0003318_1584.jpeg">
+
+*Imagen Tomada De: https://www.bighero6challenge.com/actividad/piedra-papel-o-tijera-71.aspx*
+
+Se definen los límites del rango:
+
+* let min = 1
+
+* let max = 3
+
+Esto indica las opciones posibles del juego.
+
+La fórmula utilizada es:
+
+    Math.floor(Math.random() * (max - min + 1) + min)
+
+Esta fórmula permite generar un número entero entre min y max.
+
+JavaScript respeta el orden matemático y ejecuta primero lo que está más dentro de los paréntesis.
+Por eso, la estructura de la fórmula es fundamental para obtener el resultado correcto.
+
+Esto se puede comprobar fácilmente desde la consola.
+
+---
+
+**Ejemplo aplicado**
+
+let min = 1
+
+let max = 3
+
+Luego:
+
+* let pc = Math.floor(Math.random() * (max - min + 1) + min)
+
+Esto asigna a la variable pc un valor aleatorio entre 1 y 3.
+
+La programación es exacta y sensible a mayúsculas y minúsculas.
+
+* Math.random() → correcto
+
+* math.random() → error
+
+**Un pequeño cambio en el nombre rompe completamente la operación.**
+
+---
+
+Una función es un bloque de código reutilizable que realiza una tarea específica y puede ejecutarse cuando se necesite.
+
+* Funciones en JS by MDN: https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Functions
+
+Los parámetros son valores que se envían a una función para que trabaje con datos variables.
+
+* Paramentros en JS by MDN: https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Functions/Default_parameters
+
+Se puede encapsular la fórmula en una función que reciba min y max como parámetros, **facilitando la reutilización del código.**
+
+La palabra return permite que una función devuelva un valor al lugar donde fue llamada.
+
+* Return en JS by MDN: https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Statements/return
+
+Por ejemplo en:
+
+* let pc = aleatorio(1, 3)
+
+Aquí se obtiene el número aleatorio generado por la función.
+
+Invocar una función significa ejecutarla, escribiendo su nombre seguido de paréntesis y los valores necesarios.
+
+> Será muy interesante hacer una calculadora web.

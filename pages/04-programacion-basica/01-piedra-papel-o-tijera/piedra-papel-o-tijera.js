@@ -1,16 +1,43 @@
 // Algoritmo de Piedra, Papel o Tijera
 
+
+
+
+
+// Función Aleatoriedad
+
+function aleatorio(min,max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min
+}
+
 // Declaración de Variables jugador y PC
 let jugador = 0
 
-let pc = 2
+// Declaración de Minimo - Maximo
+    // let min = 1
+    // let max = 3
+
+// Número Aleatorio para PC
+let pc = aleatorio(1, 3)
+
+
+
+
 
 // Prompt
-
 jugador = prompt("Elige: 1 para Piedra, 2 para Papel, 3 para Tijera")
 
+
+
+
 // Alert por elección del jugador
-alert("Elegiste: " + jugador)
+// alert("Elegiste: " + jugador)
+
+
+
+// Condicionales
+
+
 
 // Condicional if
 if (jugador == 1) {
