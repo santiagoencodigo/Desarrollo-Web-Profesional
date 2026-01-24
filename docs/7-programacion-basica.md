@@ -45,6 +45,10 @@ Lecturas Recomendadas:
 
 * [5. Estructura y funcionamiento básico de HTML y JavaScript](#estructura-y-funcionamiento-básico-de-html-y-javascript)
 
+* [06. Instalación y uso básico de Visual Studio Code para programar](#instalación-y-uso-básico-de-visual-studio-code-para-programar)
+
+* [07. Declaración y Uso Básico de Variables en JavaScript](#declaración-y-uso-básico-de-variables-en-javascript)
+
 
 
 
@@ -98,7 +102,7 @@ Google Chrome como entorno de exploración y aprendizaje, se puede hacer uso dir
 
 *Imagen Tomada De: https://platzi.com/cursos/programacion-basica/51978-como-aprender-programacion/*
 
-Lecturas Recomendadas: 
+**Lecturas Recomendadas:**
 
 * Developer Tools - AWS: https://aws.amazon.com/es/what-is/developer-tools/
 
@@ -118,7 +122,7 @@ El navegador funciona como un entorno de ejecución que, al acceder a un dominio
 
 *Imagen Tomada De: https://web.dev/articles/critical-rendering-path/render-tree-construction?hl=es-419*
 
-Lecturas Recomendadas:
+**Lecturas Recomendadas:**
 
 * Qué es el DOM - Freecodecamp: https://www.freecodecamp.org/espanol/news/que-es-el-dom-el-significado-del-modelo-de-objeto-de-documento-en-javascript/
 
@@ -126,7 +130,7 @@ Lecturas Recomendadas:
 
 A través de la consola se pueden explorar conceptos como la declaración y asignación de variables, el uso de operaciones matemáticas, y la ejecución de funciones integradas del lenguaje, como alert() o prompt(). Estas funciones deben ser escritas con exactitud sintáctica, respetando el uso de minúsculas y la estructura correcta de paréntesis, ya que la programación exige precisión absoluta y no admite ambigüedades en su interpretación.
 
-Lecturas Recomendadas:
+**Lecturas Recomendadas:**
 
 * Variable (Programación) - Wikipedia: https://es.wikipedia.org/wiki/Variable_(programaci%C3%B3n)
 
@@ -158,7 +162,7 @@ La memoria RAM es el espacio donde se almacenan temporalmente los datos que un p
 
 Un string es un tipo de dato utilizado para representar texto. Está compuesto por una secuencia de caracteres y se define comúnmente entre comillas. Los strings se emplean para manejar información textual como mensajes, nombres, valores de entrada del usuario y contenido dinámico dentro de una aplicación.
 
-Lecturas Recomendadas: 
+**Lecturas Recomendadas:**
 
 * https://developer.mozilla.org/es/docs/Glossary/String
 
@@ -216,9 +220,9 @@ Resumen sobre las Extensiones de Archivos - IONOS: https://www.ionos.com/es-us/d
 
 Un archivo HTML es un documento de texto que define la estructura de una página web. Contiene etiquetas que indican al navegador cómo debe organizar y mostrar el contenido.
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/3/35/HTML_file_type_mimetype_icon.png">
+<img src="https://lenguajehtml.com/html/documento/estructura-documento-html/estructura-documento-html.png">
 
-*Imagen Tomada De: https://es.wikipedia.org/wiki/HTML*
+*Imagen Tomada De: https://lenguajehtml.com/html/documento/estructura-documento-html/*
 
 HTML es fundamental para el funcionamiento de Internet, ya que es el lenguaje base con el que se construyen las páginas web. Sin HTML, los navegadores no tendrían una forma estándar de interpretar y presentar información al usuario.
 
@@ -254,7 +258,7 @@ La etiqueta <strong></strong> se utiliza para resaltar texto con un énfasis sem
 
 La etiqueta <h1></h1> representa el encabezado principal de una página web. Se utiliza para definir el título más importante del contenido y cumple un papel clave en la estructura y accesibilidad del documento.
 
-Lecturas Recomendadas:
+**Lecturas Recomendadas:**
 
 * Etiqueta Strong en HTML - MDN: https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/strong
 
@@ -328,7 +332,7 @@ La etiqueta **body** contiene todos los elementos visibles de la página web. De
 
 El uso eficiente de atajos de teclado es una práctica común entre programadores experimentados. Estos atajos permiten aumentar la productividad y reducir el tiempo dedicado a tareas repetitivas.
 
-Lecturas Recomendadas:
+**Lecturas Recomendadas:**
 
 * https://es.wikipedia.org/wiki/Atajo_de_teclado
 
@@ -374,7 +378,7 @@ HTML se organiza como un árbol jerárquico de etiquetas. En esta estructura, **
 
 Dentro de la etiqueta **head** puede incluirse la etiqueta **script**, la cual se utiliza para cargar código escrito en JavaScript. Este código puede integrarse directamente en el documento HTML o referenciarse desde un archivo externo, permitiendo separar la lógica de programación de la estructura del contenido.
 
-Lecturas Recomendadas:
+**Lecturas Recomendadas:**
 
 * etiqueta html by MDN: https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/html
 
@@ -396,7 +400,7 @@ La indentación mediante la tecla TAB se utiliza para organizar visualmente el c
 
 *Imagen Tomada De: https://medium.com/@sthefany/qu%C3%A9-es-la-indentaci%C3%B3n-c9471f3ae84f*
 
-Lectura Recomendada
+**Lectura Recomendada:**
 
 * Identación python by freecodecamp: https://www.freecodecamp.org/espanol/news/indentacion-en-python-con-ejemplos/
 
@@ -404,7 +408,7 @@ En JavaScript, la forma en que se evalúan las expresiones depende del tipo de d
 
 Al agregar paréntesis en una operación, como en **alert("El valor de a+b es " + (a + b))**, JavaScript evalúa primero la suma de los valores numéricos. Esto permite obtener el resultado matemático correcto antes de concatenarlo con el texto.
 
-Lectura Recomendada:
+**Lectura Recomendada:**
 
 * Expresiones y Operadores en Javascript by Freecodecamp: https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Expressions_and_operators
 
@@ -454,11 +458,11 @@ Es posible escribir código utilizando editores de texto simples como el bloc de
 
 
 
-## Instalación y básico de Visual Studio Code para programar
+## Instalación y uso básico de Visual Studio Code para programar
 
 Un editor de código es una herramienta diseñada para escribir y mantener código fuente de manera eficiente. Existen múltiples opciones como [Visual Studio Code](https://code.visualstudio.com/ "https://code.visualstudio.com/"), [Sublime Text](https://www.sublimetext.com/ "https://www.sublimetext.com/") y [Notepad++](https://notepad-plus-plus.org/ "https://notepad-plus-plus.org/"), cada una con características orientadas al desarrollo de software.
 
-Lecturas Recomendadas:
+**Lecturas Recomendadas:**
 
 * Editor vs IDE by EDTeam: https://ed.team/blog/editor-vs-ide-que-usar-para-programar
 
@@ -502,8 +506,76 @@ UTF-8 es un estándar de codificación de caracteres ampliamente utilizado en la
 
 Los atributos son propiedades adicionales que se asignan a las etiquetas HTML para modificar su comportamiento o proporcionar información extra. Se escriben dentro de la etiqueta de apertura y siguen una estructura clave-valor.
 
-Lecturas Recomendadas:
+**Lecturas Recomendadas:**
 
 * Contenido de Metadatos by MDN: https://developer.mozilla.org/es/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata
 
 * Atributos en HTML: https://developer.mozilla.org/es/docs/Web/HTML/Reference/Attributes
+
+
+
+
+
+
+
+
+
+
+
+---
+
+
+
+
+
+
+
+
+
+
+
+## Declaración y Uso Básico de Variables en JavaScript
+
+En JavaScript, una variable se declara utilizando la palabra clave let. Esta instrucción permite crear un espacio en memoria donde se almacenará un valor que puede cambiar durante la ejecución del programa.
+
+**Lecturas Recomendadas:**
+
+* Let en JS by MDN: https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Statements/let
+
+* Let en JS by w3schools: https://www.w3schools.com/js/js_let.asp
+
+* Diferencias entre var, let y const en JS by freecodecamp: https://www.freecodecamp.org/espanol/news/var-let-y-const-cual-es-la-diferencia/
+
+* Cómo se declara una variable by EDteam: https://ed.team/blog/que-es-y-como-se-declara-una-variable
+
+Al declarar una variable, el sistema asigna un espacio en la memoria RAM para almacenar su valor. Este almacenamiento es temporal y existe únicamente mientras el programa se encuentra en ejecución.
+
+Una variable es un contenedor que almacena datos para ser utilizados posteriormente en el código. Permite guardar información, reutilizarla y modificarla según la lógica del programa.
+
+El signo = se utiliza para asignar un valor a una variable. No representa una comparación, sino una instrucción que indica que el valor ubicado a la derecha debe almacenarse en la variable definida a la izquierda.
+
+Las comillas dobles (" ") se utilizan para definir cadenas de texto en JavaScript. Todo valor contenido dentro de comillas es interpretado como texto y no como un valor numérico o una expresión lógica.
+
+**Lectura Recomendada:**
+
+* Strings en JS by MDN: https://developer.mozilla.org/es/docs/Learn_web_development/Core/Scripting/Strings
+
+<img src="https://www.apinem.com/wp-content/uploads/2024/08/ejemplo-redeclaracion-variable-var-javascript.png">
+
+*Imagen Tomada De:  https://www.apinem.com/variables-en-javascript/*
+
+prompt es una función integrada de JavaScript que permite solicitar información al usuario mediante una ventana emergente. El valor ingresado por el usuario es devuelto al programa para su posterior uso.
+
+**Lectura Recomendada:**
+
+* Prompt en JS by MDN: https://developer.mozilla.org/es/docs/Web/API/Window/prompt
+
+El valor retornado por la función prompt puede ser asignado a una variable. Esto permite almacenar la información ingresada por el usuario y utilizarla dentro de la lógica del programa.
+
+Por defecto, los valores obtenidos mediante prompt son tratados como cadenas de texto. Para realizar operaciones numéricas, es necesario convertir explícitamente estos valores a tipos numéricos, ya que trabajar con datos sin validar o convertir correctamente puede generar errores lógicos y representar un riesgo de seguridad.
+
+Lectura Recomendada: 
+
+* parseINT en JS by MDN: https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/parseInt
+
+---
