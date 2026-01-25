@@ -63,6 +63,8 @@ Lecturas Recomendadas:
 
 * [14. Manejo de Rutas y Archivos en Sistemas Operativos y Desarrollo Web](#manejo-de-rutas-y-archivos-en-sistemas-operativos-y-desarrollo-web)
 
+* [15. Manipulación del DOM y Eventos en JavaScript para Juegos Web](#manipulación-del-dom-y-eventos-en-javascript-para-juegos-web)
+
 
 
 
@@ -1335,4 +1337,117 @@ Esto facilita la reutilización del código y mantiene el HTML más limpio y est
 
 * Enlazar un JS con un HTML by freecodecamp: https://www.freecodecamp.org/espanol/news/como-enlazar-a-un-documento-javascript-en-html/
 
+> Los proyectos en programación no suelen ser programados en una sola tecnología, es decir, no solamente veras algo hecho 100% en HTML o 100% hecho en JavaScript, rara vez, por lo general se usa una familia de tecnologías en conjunto para crear un producto
+
+
+
+
+
+
+
+
+
+
+
+
+
 ---
+
+
+
+
+
+
+
+
+
+
+
+
+
+## Manipulación del DOM y Eventos en JavaScript para Juegos Web
+
+Cuando se ingresa a un sitio web, ocurren múltiples procesos internos.
+Antes de mostrarse el contenido, el navegador interpreta el código y prepara la estructura visual y lógica de la página.
+
+Durante la carga inicial, el sitio web pasa por un estado en el que el contenido aún no es visible.
+Este proceso ocurre tan rápido que normalmente el usuario no percibe la transición desde una pantalla en blanco.
+
+Durante la carga inicial, el sitio web pasa por un estado en el que el contenido aún no es visible.
+Este proceso ocurre tan rápido que normalmente el usuario no percibe la transición desde una pantalla en blanco.
+
+**Lecturas Recomendadas:**
+
+* Introducción a los eventos en JS by MDN: https://developer.mozilla.org/es/docs/Learn_web_development/Core/Scripting/Events
+
+* Eventos en JS by w3schools: https://www.w3schools.com/js/js_events.asp
+
+* Programación Dirigida por Eventos by Wikipedia: https://es.wikipedia.org/wiki/Programaci%C3%B3n_dirigida_por_eventos
+
+Como programador, se define qué acción se ejecuta cuando ocurre un evento específico.
+Este control permite crear interactividad y comportamiento dinámico en una aplicación web.
+
+<img src="https://personales.unican.es/corcuerp/sistinf/tecweb/Slides/images/figure_3_event.png">
+
+*Imagen Tomada De: https://byspel.com/eventos-en-javascript/*
+
+El DOM es una representación estructurada del documento HTML que el navegador crea en memoria.
+Permite acceder, modificar y manipular los elementos de la página usando JavaScript.
+
+**Lecturas Recomendadas:**
+
+* Qué es el DOM by freecodecamp: https://www.freecodecamp.org/espanol/news/que-es-el-dom-el-significado-del-modelo-de-objeto-de-documento-en-javascript/
+
+* DOM by Wikipedia: https://es.wikipedia.org/wiki/Document_Object_Model
+
+* DOM by MDN: https://developer.mozilla.org/es/docs/Web/API/Document_Object_Model
+
+<img src="https://www.ionos.com/es-us/digitalguide/fileadmin/DigitalGuide/Schaubilder/representacion-grafica-de-un-dom-tree.png">
+
+*Imagen Tomada De: https://www.ionos.com/es-us/digitalguide/paginas-web/desarrollo-web/presentacion-de-document-object-model-dom/*
+
+Window es el objeto global que representa la ventana del navegador.
+Desde este objeto se puede acceder a funcionalidades del navegador y al documento cargado.
+
+* Window concept by MDN: https://developer.mozilla.org/es/docs/Web/API/Window
+
+Dentro del objeto Window se encuentra el objeto Document.
+Document representa el contenido HTML, es decir, lo que está dentro de la etiqueta (html).
+
+* Document concept by MDN: https://developer.mozilla.org/es/docs/Web/API/Document
+
+addEventListener es un método que permite escuchar eventos y ejecutar una función cuando ocurren.
+Es una forma flexible y estándar de manejar eventos en JavaScript.
+
+* addEventListener by MDN: https://developer.mozilla.org/es/docs/Web/API/EventTarget/addEventListener
+
+Si el tamaño del navegador cambia, se puede detectar este evento y ejecutar una acción específica.
+Esto es útil para adaptar el diseño o comportamiento de la página.
+
+El scaffolding o andamiaje es la estructura base de un proyecto.
+Define carpetas, archivos y organización inicial antes de desarrollar funcionalidades complejas.
+
+* Andiamaje by Wikipedia: https://es.wikipedia.org/wiki/Andamiaje_(programaci%C3%B3n)
+
+---
+
+Finalmente se crea una carpeta llamada mokepon.
+
+Se crea un documento HTML con la estructura mínima necesaria para iniciar el proyecto del juego.
+Esta base permite ir agregando elementos visuales y lógicos progresivamente.
+
+Mokepon es un juego basado en tres monstruos con habilidades de fuego, agua y tierra.
+Cada tipo tiene fortalezas y debilidades frente a los demás.
+
+---
+
+La etiqueta (button) se utiliza para crear botones interactivos en una página web.
+Estos botones son elementos clave para disparar eventos en juegos web.
+
+* https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/button
+
+Es una buena práctica colocar la etiqueta (button) dentro de una etiqueta contenedora.
+Esto mejora la organización del HTML y facilita el manejo de estilos y eventos.
+
+---
+
