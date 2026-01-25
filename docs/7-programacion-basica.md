@@ -57,6 +57,8 @@ Lecturas Recomendadas:
 
 * [11. Creación y uso de funciones en programación](#creación-y-uso-de-funciones-en-programación)
 
+* [12. Ciclos y Condiciones en Programación: Piedra, Papel o Tijera](#ciclos-y-condiciones-en-programación-piedra-papel-o-tijera)
+
 
 
 
@@ -1115,5 +1117,65 @@ Se crea una variable resultado inicializada como una cadena de texto vacía, la 
 <img src="https://static.platzi.com/media/user_upload/C%C3%B3digo%201-75dbf554-2db9-4d3e-b84c-731c749c37e8.jpg">
 
 *Imagen Tomada De: https://platzi.com/cursos/programacion-basica/refactoring-de-funciones/*
+
+
+
+
+
+
+
+
+
+
+
+---
+
+
+
+
+
+
+
+
+
+
+
+## Ciclos y Condiciones en Programación: Piedra, Papel o Tijera
+
+Un ciclo es una estructura de programación que permite repetir una acción varias veces de forma automática mientras se cumpla una condición determinada.
+Los ciclos evitan escribir el mismo código una y otra vez.
+
+Definición en general de Ciclo by Wikipedia: https://es.wikipedia.org/wiki/Ciclo
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Programmingloops.svg/500px-Programmingloops.svg.png">
+
+*Imagen Tomada De: https://es.wikipedia.org/wiki/Bucle_(programaci%C3%B3n)*
+
+En la vida diaria existen ciclos constantes, como ir a la escuela de lunes a viernes, levantarse, bañarse o cepillarse.
+Estas acciones se repiten siguiendo una rutina hasta que algo cambia esa condición.
+
+Todo ciclo debe tener una condición que lo detenga.
+Por ejemplo, el ciclo de ir al colegio termina cuando se alcanza cierta edad, cuando se cambia de etapa educativa o cuando se empieza a trabajar o cualquier otra condición que no permita ir al colegio.
+
+Un ciclo puede depender de un estado, como la energía.
+Mientras se tenga energía, se puede caminar, alternando entre el paso izquierdo y el paso derecho.
+
+Otro ejemplo de ciclo es comer:
+Mientras haya comida en el plato y exista hambre, el ciclo continúa.
+Cuando una de esas condiciones deja de cumplirse, el ciclo se detiene.
+
+<img src="https://media.tenor.com/ahzlbHy6jq4AAAAM/dragon-ball-goku.gif">
+
+*Imagen Tomada De: https://tenor.com/es-419/search/goku-eating-food-gifs*
+
+Una condición es una expresión que se evalúa como verdadera o falsa y decide si un ciclo continúa o se detiene.
+Sin una condición, un ciclo se volvería infinito.
+
+Una iteración es cada repetición individual dentro de un ciclo.
+Cada vez que el ciclo se ejecuta una vez, se considera una iteración.
+
+<img src="https://static.platzi.com/media/user_upload/code-334ffe91-bf34-4787-af0e-d304d19abb84.jpg">
+
+*Imagen Tomada De: https://platzi.com/cursos/programacion-basica/ciclos/*
 
 ---
