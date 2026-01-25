@@ -40,109 +40,289 @@
     <link rel="icon" type="image/png" href="./Assets/img/8. Mi yo creado por paint.jpg"/>
 
     <link rel="stylesheet" href="./Assets/style.css">
-    <title>Desarrollo Web Profesional</title>
+    <title>Santiago Muñeton - Desarrollo Web Profesional</title>
 </head>
 <body>
     <header class="header">
-        <nav class="nav">
-            <ul class="nav__section">
-                <li class="">
-                    <a href="" target="_blank">GitHub</a>
-                </li>
+        <div class="header__content">
+            <div class="intro">
+                <h1>Santiago Muñeton</h1>
 
-                <li class="">
-                    <a href="" target="_blank">Linkedin</a>
-                </li>
+                <p>
+                    Soy aprendiz del SENA en Análisis y Desarrollo de Software, con enfoque en desarrollo web y una formación en HTML, CSS y JavaScript. Actualmente me encuentro en proceso de fortalecimiento tanto en desarrollo frontend como backend, con énfasis en la construcción de aplicaciones web funcionales y bien estructuradas.
+                </p>
 
-                <li class="">
-                    <a href="" target="_blank">Instagram</a>
-                </li>
+                <p>
+                    Mi experiencia se centra en proyectos académicos orientados al análisis funcional, la documentación técnica y el desarrollo de soluciones de software. De forma paralela, realizo un proceso de aprendizaje autónomo mediante proyectos prácticos, con el objetivo de consolidar fundamentos técnicos y buenas prácticas de desarrollo.
+                </p>
 
-                <li class="">
-                    <a href="" target="_blank">Youtube</a>
-                </li>
+                <nav class="nav">
+                    <ul class="nav__section">
+                        <li class="">
+                            <a href="https://github.com/santiagoencodigo" target="_blank">
+                                <img src="./Assets/img/4-logo-github.png" alt="github-icon" class="icon">
+                                <span>GitHub</span>
+                            </a>
+                        </li>
 
-                <li class="">
-                    <a href="" target="_blank">X</a>
-                </li>
-            </ul>
-        </nav>
+                        <li class="">
+                            <a href="https://www.linkedin.com/in/santiago-mu%C3%B1eton-hernandez/" target="_blank">
+                                <img src="./Assets/img/6-logo-linkedin.svg" alt="linkedin-icon" class="icon">
+                                <span>Linkedin</span>
+                            </a>
+                        </li>
 
-        <div class="hero">
-            <h1>Desarrollo Web Profesional</h1>
-            <p>
-                Me apasiona el desarrollo de software porque creo que cada línea de código puede
-                transformar ideas en soluciones reales. Mi objetivo es dominar las tecnologías web para crear 
-                herramientas útiles, accesibles y con un diseño moderno.
-            </p>
-        </div>
-        
+                        <li class="">
+                            <a href="./assets/pdf/CV - Santiago Muñeton.pdf" target="_blank">
+                                <img src="./Assets/img/6-logo-cv.svg" alt="cv-icon" class="icon">
+                                <span>CV</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+            <!-- Columna Derecha -->
+            <div class="profile">
+                <img src="./Assets/img/0-santiago.png" alt="Foto de perfil de Santiago Muñeton" id="profile-image">
+
+                <p class="profile_email">
+                    <a href="mailto:www.munetonsantiago@gmail.com">
+                        <img src="./Assets/img/6-logo-correo.svg" alt="Correo-icon" class="icon">
+                        <span>www.munetonsantiago@gmail.com</span>
+                    </a>
+                </p>
+            </div>
+        </div>        
     </header>
     
     <main class="main">
-        <ul class="main__list">
-            <li class="list__item">
-                <a href ="https://github.com/santiagoencodigo/Desarrollo-Web-Profesional/blob/main/docs/1-introducci%C3%B3n-a-la-web-historia-y-funcionamiento-de-internet.md" target="_blank">
-                    <span>1. Introducción a la Web Historia y Funcionamiento de Internet</span>
-                </a>
-            </li>
+        <section class="projects-intro">
+            <h2>Desarrollo Web Profesional</h2>
+            <p>
+                Proyecto personal en desarrollo, orientado a la consolidación de fundamentos del desarrollo web a través de una ruta de formación progresiva, basada en proyectos prácticos y documentación técnica.
+            </p>
 
-            <li class="list__item">        
-                <a href="./pages/01-html-y-css-google-clone/index.html">
-                    <span>2. Curso HTML y CSS: Google Clone</span>
-                </a>
-            </li>
+            <p>
+                Actualmente el proyecto aborda:
+            </p>
 
-            <li class="list__item">        
-                <a href="./pages/02-fundamentos-css/index.html">
-                    <span>3. Fundamentos CSS: Portfolio Personal</span>
+            <ul>
+                <li>Fundamentos de la Web y funcionamiento de Internet.</li>
+                <li>Desarrollo frontend con HTML y CSS mediante proyectos prácticos.</li>
+                <li>Aplicación de fundamentos de JavaScript para la construcción de aplicaciones web interactivas.</li>
+                <li>Introducción a herramientas de desarrollo como Git, GitHub y la terminal.</li>
+                <li>Consolidación de bases de ingeniería de software y buenas prácticas.</li>
+            </ul>
+
+            <p>
+                Todo el proceso de aprendizaje, junto con la documentación y los proyectos desarrollados,
+                se encuentra disponible en el repositorio:
+                <a href="https://github.com/santiagoencodigo/Desarrollo-Web-Profesional" target="_blank" id="link-repo">
+                    github.com/santiagoencodigo/Desarrollo-Web-Profesional
                 </a>
-            </li>
+            </p>
+        </section>
+
+        <section class="projects">
+            <h2>Proyectos</h2>
             
-            <li class="list__item">        
-                <a href="https://github.com/santiagoencodigo/Desarrollo-Web-Profesional/blob/main/docs/4-html.md" target="_blank">
-                    <span>4. HTML</span>
-                </a>
-            </li>   
-            
-            <li class="list__item">        
-                <a href="https://github.com/santiagoencodigo/Desarrollo-Web-Profesional/blob/main/docs/5-computadores-e-informatica-basica.md" target="_blank">
-                    <span>5. Computación e Informática Básica</span>
-                </a>
-            </li>            
+            <article class="project-item">
+                <div class="project-image">
+                    <img src="./Assets/img/docs-11-fundamentos-web-historia-y-funcionamiento-de-internet.PNG" alt="Interfaz en GitHub de archivo markdown sobre el funcionamiento de Internet y la web">
+                </div>
 
-            <li class="list__item">        
-                <a href="https://github.com/santiagoencodigo/Desarrollo-Web-Profesional/blob/main/docs/6-fundamentos-ingenieria-software.md" target="_blank">
-                    <span>6. Fundamentos Ingenieria de Software</span>
-                </a>
-            </li>
+                <div class="project-content">
+                    <h3 class="project-title">1. Introducción a la Web Historia y Funcionamiento de Internet</h3>
 
-            <li class="list__item">        
-                <a href="./pages/04-programacion-basica/02-mokepon/mokepon.html">
-                    <span>7. Programación Básica</span>
-                </a>
-            </li>            
-
-            <li class="list__item">        
-                <a href="https://github.com/santiagoencodigo/Desarrollo-Web-Profesional/blob/main/docs/8-terminal-y-linea-de-comandos.md" target="_blank">
-                    <span>8. Introducción a la Terminal y Línea de Comandos</span>
-                </a>
-            </li>    
-                    
-            <li class="list__item">        
-                <a href="./pages/05-fundamentos-js/index.html">
-                    <span>9. Fundamentos Javascript</span>
-                </a>
-            </li>
-
-            <li class="list__item">        
-                <a href="https://github.com/santiagoencodigo/Desarrollo-Web-Profesional/blob/main/docs/10-git-y-github.md">
-                    <span>10. Git y Github</span>
-                </a>
-            </li>            
+                    <p class="project-description">
+                        Documentación técnica orientada a la comprensión de los fundamentos de la computación y el funcionamiento de Internet, abordando desde conceptos básicos como bits y bytes hasta protocolos, navegadores y la evolución de la World Wide Web.
+                    </p>
+                    <div class="project-links">
+                        <a href="https://github.com/santiagoencodigo/Desarrollo-Web-Profesional/blob/main/docs/1-introducci%C3%B3n-a-la-web-historia-y-funcionamiento-de-internet.md" target="_blank">Documentación</a>
+                    </div>
+                </div>
 
 
-        </ul>
+            </article>
+
+            <article class="project-item">
+                <div class="project-image">
+                    <img src="./Assets/img/1. Clon de Google.PNG" alt="Interfaz del clon de Google desarrollada con HTML y CSS">
+                </div>
+
+                <div class="project-content">
+                    <h3 class="project-title">2. Curso HTML y CSS: Google Clone</h3>
+
+                    <p class="project-description">
+                        Proyecto práctico enfocado en la aplicación de HTML5 y CSS3 para la construcción de interfaces web, mediante el desarrollo de un clon de la página principal de Google, utilizando maquetación moderna con Flexbox y Grid.
+                    </p>
+
+                    <div class="project-links">
+                        <a href="https://github.com/santiagoencodigo/Desarrollo-Web-Profesional/blob/main/docs/2-html-y-css-clon-google.md" target="_blank">Documentación</a>
+                        <a href="./pages/01-html-y-css-google-clone/index.html" target="_blank">Proyecto</a>
+                    </div>                
+                </div>
+
+
+            </article>
+
+            <article class="project-item">
+                <div class="project-image">
+                    <img src="./Assets/img/9. Proyecto - Portafolio - Santiagoencodigo.png" alt="Diseño de interfaz portfolio santiagoencodigo desarrollado con HTML y CSS">
+                </div>
+
+                <div class="project-content">
+                    <h3 class="project-title">3. Fundamentos CSS: Portfolio Personal</h3>
+
+                    <p class="project-description">
+                        Exploración de los principios fundamentales del diseño visual en la web, incluyendo tipografía, colores, layouts responsivos y animaciones, con el objetivo de construir interfaces atractivas, funcionales y adaptables a distintos dispositivos.
+                    </p>
+
+                    <div class="project-links">
+                        <a href="https://github.com/santiagoencodigo/Desarrollo-Web-Profesional/blob/main/docs/3-fundamentos-css.md" target="_blank">Documentación</a>
+                        <a href="./pages/02-fundamentos-css/index.html" target="_blank">Proyecto</a>
+                    </div>                
+                </div>
+
+
+            </article>
+
+            <article class="project-item">
+                <div class="project-image">
+                    <img src="./Assets/img/10-fundamentos-html.PNG" alt="Estructura semántica de una página web construida con HTML">
+                </div>
+
+                <div class="project-content">
+                    <h3 class="project-title">4. HyperText Markup Language - HTML</h3>
+
+                    <p class="project-description">
+                        Apuntes y prácticas orientadas a la escritura de código HTML semántico y estructurado, analizando su impacto en accesibilidad, SEO y mantenibilidad dentro del desarrollo web moderno.
+                    </p>
+
+                    <div class="project-links">
+                        <a href="https://github.com/santiagoencodigo/Desarrollo-Web-Profesional/blob/main/docs/4-html.md" target="_blank">Documentación</a>
+                        <a href="./pages/03-html/index.html" target="_blank">Proyecto</a>
+                    </div>                
+                </div>
+
+
+            </article>
+
+            <article class="project-item">
+                <div class="project-image">
+                    <img src="./Assets/img/docs-12-computadores-e-informatica-basica.PNG" alt="Interfaz en GitHub de archivo markdown sobre la Computación e Informática Básica">
+                </div>
+
+                <div class="project-content">
+                    <h3 class="project-title">5. Computación e Informática Básica</h3>
+
+                    <p class="project-description">
+                        Documentación introductoria sobre el funcionamiento general de los computadores, el uso seguro del sistema operativo, la gestión de archivos, la instalación de software y conceptos esenciales de ciberseguridad básica.
+                    </p>
+
+                    <div class="project-links">
+                        <a href="https://github.com/santiagoencodigo/Desarrollo-Web-Profesional/blob/main/docs/5-computadores-e-informatica-basica.md" target="_blank">Documentación</a>
+                    </div>                
+                </div>
+
+
+            </article>
+
+            <article class="project-item">
+                <div class="project-image">
+                    <img src="./Assets/img/docs-13-fundamentos-de-ingenieria-de-software.PNG" alt="Interfaz en GitHub de archivo markdown sobre los Fundamentos de Ingeniería de Software">
+                </div>
+
+                <div class="project-content">
+                    <h3 class="project-title">6. Fundamentos Ingenieria de Software</h3>
+
+                    <p class="project-description">
+                        Recopilación de conceptos clave de la ingeniería de software, abarcando desde fundamentos de computación e Internet hasta nociones generales sobre sistemas, arquitectura y tecnologías actuales.
+                    </p>
+
+                    <div class="project-links">
+                        <a href="https://github.com/santiagoencodigo/Desarrollo-Web-Profesional/blob/main/docs/6-fundamentos-ingenieria-software.md" target="_blank">Documentación</a>
+                    </div>                
+                </div>
+
+
+            </article>
+
+            <article class="project-item">
+                <div class="project-image">
+                    <img src="./Assets/img/code-1-mokepon.PNG" alt="Interfaz del proyecto Mokepon desarrollado con HTML, CSS y JavaScript">
+                </div>
+
+                <div class="project-content">
+                    <h3 class="project-title">7. Programación Básica</h3>
+
+                    <p class="project-description">
+                        Proyecto en desarrollo orientado a la consolidación de los fundamentos de la programación mediante JavaScript, HTML y CSS, aplicando lógica, estructuras de control y manipulación del DOM a través de ejercicios y desarrollo práctico.
+                    </p>
+
+                    <div class="project-links">
+                        <a href="https://github.com/santiagoencodigo/Desarrollo-Web-Profesional/blob/main/docs/7-programacion-basica.md" target="_blank">Documentación</a>
+                        <a href="./pages/04-programacion-basica/02-mokepon/mokepon.html" target="_blank">Proyecto</a>
+                    </div>                
+                </div>
+            </article>
+
+            <article class="project-item">
+                <div class="project-image">
+                    <img src="./Assets/img/docs-14-terminal-y-linea-de-comandos.PNG" alt="Interfaz en GitHub de archivo markdown sobre la Terminal y Línea de Comandos">
+                </div>
+
+                <div class="project-content">
+                    <h3 class="project-title">8. Introducción a la Terminal y Línea de Comandos</h3>
+
+                    <p class="project-description">
+                        Documentación en construcción sobre el uso de la terminal y la línea de comandos para la gestión del sistema operativo, archivos, procesos y herramientas esenciales dentro del flujo de trabajo en desarrollo de software.
+                    </p>
+
+                    <div class="project-links">
+                        <a href="https://github.com/santiagoencodigo/Desarrollo-Web-Profesional/blob/main/docs/8-terminal-y-linea-de-comandos.md" target="_blank">Documentación</a>
+                    </div>                
+                </div>                
+            </article>
+
+            <article class="project-item">
+                <div class="project-image">
+                    <img src="./Assets/img/docs-15-fundamentos-js.PNG" alt="Interfaz en GitHub de archivo markdown sobre los Fundamentos de JavaScript">
+                </div>
+
+                <div class="project-content">
+                    <h3 class="project-title">9. Fundamentos Javascript</h3>
+
+                    <p class="project-description">
+                        Sección pendiente de desarrollo, destinada al estudio de los conceptos fundamentales de JavaScript y su aplicación práctica dentro del desarrollo web.
+                    </p>
+
+                    <div class="project-links">
+                        <a href="https://github.com/santiagoencodigo/Desarrollo-Web-Profesional/blob/main/docs/9-fundamentos-js.md" target="_blank">Documentación</a>
+                        <a href="./pages/05-fundamentos-js/index.html" target="_blank">Proyecto</a>
+                    </div>                
+                </div>
+            </article>
+
+            <article class="project-item">
+                <div class="project-image">
+                    <img src="./Assets/img/docs-16-git-y-github.PNG" alt="Interfaz en GitHub de archivo markdown sobre Git y Github">
+                </div>
+
+                <div class="project-content">
+                    <h3 class="project-title">10. Git y Github</h3>
+
+                    <p class="project-description">
+                        Módulo pendiente de desarrollo enfocado en la documentación del uso de Git y GitHub como herramientas esenciales para el control de versiones y la colaboración en proyectos de software.
+                    </p>
+
+                    <div class="project-links">
+                        <a href="https://github.com/santiagoencodigo/Desarrollo-Web-Profesional/blob/main/docs/10-git-y-github.md" target="_blank">Documentación</a>
+                    </div>                
+                </div>
+            </article>
+        </section>         
     </main>
 </body>
 </html>
