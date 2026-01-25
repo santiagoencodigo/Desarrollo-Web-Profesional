@@ -170,7 +170,7 @@ Aquí encontrarás apuntes sobre los fundamentos de la ingeniería de software. 
 
 ## Programación básica.
 
-* [Proyecto](https://santiagoencodigo.github.io/Desarrollo-Web-Profesional/pages/04-programacion-basica/mokepon.html "Desarrollo Web Profesional - Mokepon")
+* [Proyecto](https://santiagoencodigo.github.io/Desarrollo-Web-Profesional/pages/04-programacion-basica/02-mokepon/mokepon.html "Desarrollo Web Profesional - Mokepon")
 
 * [Documentación](https://github.com/santiagoencodigo/Desarrollo-Web-Profesional/blob/main/docs/7-programacion-basica.md "Apuntes Programación Básica by Santiagoencodigo")
 

@@ -1,0 +1,44 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 5rem;
+    font-size: 2rem;
+    background-image: url(../../../assets/img/2-cuadricula-negra.jpg);
+    color: white;
+}
+
+section {
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+a {
+    font-size:1.5rem;
+    background-color: white;
+    padding: 20px;
+    border-radius:10px;
+    color: black;
+    text-decoration: none;
+    display: inline-block;
+    transition: 0.5s;
+    margin:10px auto;
+    max-width: 200px;
+}
+
+a:hover {
+    background-color: rgb(231, 231, 231);
+    color:rgb(2, 68, 199);
+}
+
+#btn-home {
+    background-color: rgb(2, 68, 199);
+    color: white;
+    transition: 0.5s;
+}
+
+#btn-home:hover {
+    background-color: white;
+    color: rgb(2, 68, 199);
+}
