@@ -55,6 +55,8 @@ Lecturas Recomendadas:
 
 * [10. Generación de Números Aleatorios con JavaScript](#generación-de-números-aleatorios-con-javascript)
 
+* [11. Creación y uso de funciones en programación](#creación-y-uso-de-funciones-en-programación)
+
 
 
 
@@ -989,3 +991,129 @@ Aquí se obtiene el número aleatorio generado por la función.
 Invocar una función significa ejecutarla, escribiendo su nombre seguido de paréntesis y los valores necesarios.
 
 > Será muy interesante hacer una calculadora web.
+
+
+
+
+
+
+
+
+
+
+
+---
+
+
+
+
+
+
+
+
+
+
+
+## Creación y uso de funciones en programación
+
+Muchas acciones que realizamos a diario ya no requieren que pensemos paso a paso cómo hacerlas, como caminar, mantener el equilibrio al montar bicicleta o usar cubiertos al comer.
+El cerebro crea caminos neuronales que se vuelven automáticos, funcionando como sistemas autónomos.
+
+<img src="https://i.gifer.com/W1L2.gif">
+
+*Imagen Tomada De: https://gifer.com/es/W1L2*
+
+Las funciones en programación funcionan de manera similar: encapsulan acciones que ya sabemos cómo hacer para reutilizarlas sin volver a pensar en todo el proceso cada vez.
+
+Una función es un bloque de código que cumple un propósito específico y que puede ejecutarse todas las veces que sea necesario.
+Su objetivo principal es reutilizar código, organizar la lógica y reducir errores.
+
+Antes de escribir una función, se debe tener claro:
+
+* Qué problema resuelve
+
+* Qué datos necesita
+
+* Qué resultado debe devolver (si aplica)
+
+**La función se diseña alrededor de ese propósito general.**
+
+Un parámetro es un valor que una función recibe para trabajar con datos variables.
+Permite que la misma función se comporte de forma diferente según la información que reciba.
+
+* Parametros en JS by MDN: https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Functions/Default_parameters
+
+La palabra return permite que una función devuelva un resultado.
+Cuando se ejecuta un return, la función termina y entrega ese valor a quien la llamó.
+
+* return en JS by MDN: https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Statements/return
+
+alert es un ejemplo de función que puede usarse sin parámetros o con ellos.
+Es una función ya creada por JavaScript que ejecuta una acción específica: mostrar un mensaje en pantalla.
+
+* alert en JS by MDN: https://developer.mozilla.org/es/docs/Web/API/Window/alert
+
+Es una buena práctica declarar las funciones al inicio del archivo y luego utilizarlas más abajo.
+Esto mejora la lectura del código y su mantenimiento.
+
+En lenguajes como [C++](https://es.wikipedia.org/wiki/C%2B%2B "c++ concept by Wikipedia"), [Java](https://www.java.com/es/ "https://www.java.com/es/"), [Python](https://www.python.org/ "https://www.python.org/") o [Ruby](https://www.ruby-lang.org/es/ "https://www.ruby-lang.org/es/"), una función no funciona si no ha sido definida previamente en el código.
+JavaScript es más flexible, pero seguir esta práctica es recomendable.
+
+Las funciones deben:
+
+* Usar letras minúsculas
+
+* Comenzar con una letra, no con números
+
+* Tener nombres claros y descriptivos
+
+Esto facilita la lectura y comprensión del código.
+
+**Una función puede:**
+
+* Tener parámetros (para recibir datos)
+
+* No tener parámetros, como Math.random
+
+Los parámetros se definen al crear la función y se usan al invocarla.
+
+JavaScript permite agregar espacios libremente en el código sin afectar su funcionamiento.
+Esto se usa para mejorar la legibilidad.
+
+Las llaves { } delimitan el bloque de código de una función.
+También se les conoce como:
+
+* Bloque de código
+
+* Cuerpo de la función
+
+* Scope (alcance)
+
+El uso de tab permite organizar visualmente el código y entender mejor su estructura.
+Es una buena práctica general y en lenguajes como Python es obligatorio para que el código funcione.
+
+Las variables creadas dentro de una función existen solo dentro de ella.
+Sin embargo, JavaScript es permisivo y permite acceder a variables externas, aunque no siempre es una buena práctica.
+
+**Programar implica manejar la frustración del error constante.**
+Los errores no desaparecen con la experiencia; incluso los programadores avanzados los enfrentan a diario.
+
+---
+
+Al usar funciones, se elimina el grupo de condiciones duplicadas:
+
+* Elección del jugador
+
+* Elección de la PC
+
+Esto hace el código más limpio, corto y fácil de mantener.
+
+Se crea una función eleccion que recibe como parámetro jugada, la cual representa si es jugador o si es el pc.
+
+Se crea una variable resultado inicializada como una cadena de texto vacía, la cual se usará para almacenar el mensaje final según la jugada.
+
+<img src="https://static.platzi.com/media/user_upload/C%C3%B3digo%201-75dbf554-2db9-4d3e-b84c-731c749c37e8.jpg">
+
+*Imagen Tomada De: https://platzi.com/cursos/programacion-basica/refactoring-de-funciones/*
+
+---
