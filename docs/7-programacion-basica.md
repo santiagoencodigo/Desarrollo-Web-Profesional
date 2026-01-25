@@ -61,6 +61,8 @@ Lecturas Recomendadas:
 
 * [13. Programación de Piedra, Papel o Tijera en JS: Ciclos - Gana 3 Veces](#programación-de-piedra-papel-o-tijera-en-js-ciclos---gana-3-veces)
 
+* [14. Manejo de Rutas y Archivos en Sistemas Operativos y Desarrollo Web](#manejo-de-rutas-y-archivos-en-sistemas-operativos-y-desarrollo-web)
+
 
 
 
@@ -1255,5 +1257,82 @@ Bucle Infinito by Wikipedia: https://es.wikipedia.org/wiki/Bucle_infinito
 <img src="https://cdn.pixabay.com/animation/2023/11/30/10/11/10-11-02-622_512.gif">
 
 *Imagen Tomada De: https://pixabay.com/es/gifs/circulo-cargador-azul-cargando-9360/*
+
+
+
+
+
+
+
+
+
+
+
+---
+
+
+
+
+
+
+
+
+
+
+
+## Manejo de Rutas y Archivos en Sistemas Operativos y Desarrollo Web
+
+Todos los dispositivos, incluidos los teléfonos móviles, cuentan con un sistema de archivos.
+Este sistema organiza la información en carpetas y archivos para permitir su almacenamiento y acceso.
+
+En sistemas Windows, el disco principal suele identificarse como C:.
+El símbolo :\ representa la raíz del disco, es decir, el punto de inicio de toda la estructura de carpetas.
+
+Dentro del disco principal existe la carpeta users, que contiene una carpeta por cada usuario del sistema.
+Cada carpeta de usuario almacena configuraciones, documentos y archivos personales.
+
+En Linux, toda la estructura del sistema comienza desde /.
+Este símbolo representa la raíz absoluta del sistema operativo, sin letras de unidad como en Windows.
+
+<img src="https://www.profesionalreview.com/wp-content/uploads/2017/02/estructura-sistema-de-archivos-unix.jpg">
+
+*Imagen Tomada De: https://www.profesionalreview.com/2017/02/12/se-estructura-sistema-archivos-gnulinux/*
+
+En internet, la raíz no es un disco sino un dominio.
+Dominios como [youtube.com](https://www.youtube.com/ "https://www.youtube.com/") o [github.com](https://github.com/ "https://github.com/") funcionan como la raíz de un sistema de carpetas que contiene archivos y subdirectorios accesibles desde la web.
+
+<img src="https://aprendelibvrefiles.blob.core.windows.net/aprendelibvre-container/course/creacion_de_sitios_web/image/imgscursoweb-01_xl.png">
+
+*Imagen Tomada De: https://edu.gcfglobal.org/es/creacion-de-sitios-web/que-es-una-url/1/*
+
+---
+
+Una ruta absoluta indica la ubicación completa de un archivo desde la raíz del sistema o dominio.
+No depende del contexto y siempre apunta al mismo lugar.
+
+Una ruta relativa describe la ubicación de un archivo tomando como referencia el archivo actual.
+Estas rutas dependen del punto desde el cual se accede al recurso.
+
+**Lecturas Recomendadas:**
+
+* Diferencias entre Rutas Absolutas y Relativas by redhat: https://www.redhat.com/en/blog/linux-path-absolute-relative
+
+* Rutas Informáticas by Wikipedia: https://es.wikipedia.org/wiki/Ruta_(inform%C3%A1tica)
+
+No es una buena práctica escribir el código CSS y JavaScript directamente dentro del documento HTML.
+La separación mejora la organización, el mantenimiento y la escalabilidad del proyecto.
+
+Una buena práctica en desarrollo es nombrar carpetas y archivos en minúscula.
+Esto evita errores, especialmente en sistemas donde el nombre de los archivos es sensible a mayúsculas y minúsculas.
+
+La etiqueta (script) permite ejecutar código JavaScript dentro del documento HTML.
+Sin embargo, es una mejor práctica almacenar ese código en un archivo separado con extensión .js.
+
+* Etiqueta script en HTML by MDN: https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/script
+
+El atributo src en la etiqueta (script) permite enlazar un archivo JavaScript externo.
+Esto facilita la reutilización del código y mantiene el HTML más limpio y estructurado.
+
+* Enlazar un JS con un HTML by freecodecamp: https://www.freecodecamp.org/espanol/news/como-enlazar-a-un-documento-javascript-en-html/
 
 ---
