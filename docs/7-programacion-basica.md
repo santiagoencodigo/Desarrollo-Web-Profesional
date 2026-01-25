@@ -59,6 +59,8 @@ Lecturas Recomendadas:
 
 * [12. Ciclos y Condiciones en Programación: Piedra, Papel o Tijera](#ciclos-y-condiciones-en-programación-piedra-papel-o-tijera)
 
+* [13. Programación de Piedra, Papel o Tijera en JS: Ciclos - Gana 3 Veces](#programación-de-piedra-papel-o-tijera-en-js-ciclos---gana-3-veces)
+
 
 
 
@@ -1177,5 +1179,81 @@ Cada vez que el ciclo se ejecuta una vez, se considera una iteración.
 <img src="https://static.platzi.com/media/user_upload/code-334ffe91-bf34-4787-af0e-d304d19abb84.jpg">
 
 *Imagen Tomada De: https://platzi.com/cursos/programacion-basica/ciclos/*
+
+
+
+
+
+
+
+
+
+
+
+---
+
+
+
+
+
+
+
+
+
+
+
+## Programación de Piedra, Papel o Tijera en JS: Ciclos - Gana 3 Veces
+
+El ciclo while es una estructura de control que permite ejecutar un bloque de código mientras una condición sea verdadera.
+Antes de cada iteración, la condición se evalúa y, si es true, el código se ejecuta nuevamente.
+
+Lecturas Recomendadas:
+
+* Ciclo While en JS by MDN: https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Statements/while
+
+* Ciclo While en JS by w3school: https://www-w3schools-com.translate.goog/js/js_loop_while.asp?_x_tr_sl=en&_x_tr_tl=es&_x_tr_hl=es&_x_tr_pto=tc
+
+La ejecución del ciclo while depende completamente de la condición.
+Mientras la condición sea true, el ciclo continúa; cuando se vuelve false, el ciclo se detiene automáticamente.
+
+Definición de True o False en Programación by Wikipedia: https://es.wikipedia.org/wiki/True_y_false
+
+Las variables triunfos y perdidas funcionan como contadores, permitiendo llevar el registro de cuántas veces el jugador gana o pierde.
+Estas variables son fundamentales para controlar la duración del ciclo.
+
+El ciclo while se construye evaluando si triunfos y perdidas son menores que 3.
+Mientras esta condición se cumpla, el juego continúa ejecutándose.
+
+**Dentro del bloque del ciclo while se ejecuta:**
+
+* La asignación del valor aleatorio de la computadora mediante la función aleatorio(1,3).
+
+* El prompt que permite al jugador seleccionar su jugada.
+
+* La lógica de combate entre el jugador y la computadora.
+
+Todo este proceso se repite en cada iteración del ciclo
+
+**Dentro de las condicionales del combate:**
+
+* Si el jugador gana, se incrementa triunfos = triunfos + 1.
+
+* Si el jugador pierde, se incrementa perdidas = perdidas + 1.
+
+Estos incrementos permiten modificar la condición del ciclo y acercarse a su finalización.
+
+Cuando alguno de los contadores alcanza el límite establecido, la condición del while deja de cumplirse y el ciclo se detiene.
+Al finalizar, se muestra un alert indicando cuántas veces se ganó y cuántas veces se perdió.
+
+Si se eliminan los contadores de triunfos y perdidas, o si la condición de salida no se modifica correctamente, el ciclo se convierte en un bucle infinito.
+
+Un bucle infinito provoca que el programa nunca se detenga, consumiendo recursos de la computadora.
+En casos extremos, esto puede hacer que el navegador o el sistema se bloquee y requiera ser reiniciado.
+
+Bucle Infinito by Wikipedia: https://es.wikipedia.org/wiki/Bucle_infinito
+
+<img src="https://cdn.pixabay.com/animation/2023/11/30/10/11/10-11-02-622_512.gif">
+
+*Imagen Tomada De: https://pixabay.com/es/gifs/circulo-cargador-azul-cargando-9360/*
 
 ---
