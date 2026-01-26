@@ -99,6 +99,8 @@ Si desea mirar **Mokepon** puede acceder a los siguentes vinculos (Este se empie
 
 * [17. Selección de Mascotas en HTML para Juegos Interactivos](#selección-de-mascotas-en-html-para-juegos-interactivos)
 
+* [18. Programar eventos de click en botones HTML con JavaScript](#programar-eventos-de-click-en-botones-html-con-javascript)
+
 
 
 
@@ -1658,5 +1660,93 @@ El usuario puede identificar y seleccionar fácilmente la mascota deseada.
 
 *Imagen Tomada De: https://platzi.com/cursos/programacion-basica/51993-maquetacion-elegir-mascota/*
 
+
+
+
+
+
+
+
+
+
+
+
 ---
 
+
+
+
+
+
+
+
+
+
+
+
+## Programar eventos de click en botones HTML con JavaScript
+
+Aunque los inputs y botones estén presentes en el HTML, **por sí solos no ejecutan ninguna acción.**
+Para que respondan a la interacción del usuario es necesario programar su comportamiento con JavaScript.
+
+El código JavaScript se vincula al documento HTML mediante la etiqueta (script) utilizando el atributo src.
+Esta práctica permite mantener una estructura más profesional separando la lógica del contenido.
+
+* script en HTML by w3school: https://www.w3schools.com/tags/att_script_src.asp
+
+* script by freecodecamp: https://www.freecodecamp.org/espanol/news/como-enlazar-a-un-documento-javascript-en-html/
+
+En las rutas de archivos, el símbolo . indica que el archivo se encuentra en la misma carpeta que el archivo actual.
+Es comúnmente utilizado para rutas relativas.
+
+El símbolo / se utiliza para acceder a carpetas dentro de una ruta.
+Permite navegar por la estructura de directorios del proyecto.
+
+Se crea una carpeta llamada js dentro del proyecto Mokepon.
+Dentro de esta carpeta se crea el archivo mokepon.js, donde se escribe toda la lógica del juego.
+
+Cada botón del HTML recibe un id único para poder ser identificado desde JavaScript.
+Esto incluye el botón de selección de mascota, los botones de ataque y el botón de reinicio.
+
+El objeto document representa el contenido HTML cargado en el navegador.
+Permite acceder y manipular los elementos de la página.
+
+* Document en JS by MDN: https://developer.mozilla.org/es/docs/Web/API/Document
+
+El objeto document incluye múltiples métodos para interactuar con el DOM.
+Uno de los más utilizados es getElementById.
+
+El método getElementById permite obtener un elemento del HTML a partir de su id.
+Devuelve una referencia que puede ser almacenada en una variable.
+
+* getElementById en JS by MDN: https://developer.mozilla.org/es/docs/Web/API/Document/getElementById
+
+Los elementos del DOM se almacenan en variables para facilitar su uso posterior.
+Esto permite trabajar con ellos de forma clara y organizada.
+
+Una vez identificado un elemento, se puede asignar un evento que escuche una acción específica del usuario.
+En este caso, el evento será un clic.
+
+El método addEventListener permite escuchar un evento y ejecutar una función cuando ocurre.
+Es una forma estándar y flexible de manejar interacciones.
+
+* addEventListener en JS by MDN: https://developer.mozilla.org/es/docs/Web/API/EventTarget/addEventListener
+
+La función seleccionarMascotaJugador se ejecuta cuando el usuario hace clic en el botón.
+Esta función contiene la lógica que se desea ejecutar tras la interacción.
+
+Los argumentos son valores que se envían a una función cuando es invocada.
+Permiten que la función trabaje con información externa.
+
+Cuando ocurre un error, es una buena práctica abrir la consola del navegador desde las herramientas de inspección.
+La consola permite identificar errores y entender qué está fallando en el código.
+
+Si el (script) se carga antes de que los elementos HTML existan, JavaScript no podrá encontrarlos.
+Por esta razón, se recomienda colocar la etiqueta (script) justo antes de que termine el (body).
+
+    let BotonMascotaSeleccionar = document.getElementById('boton-seccionar-mascota')
+    BotonMascotaSeleccionar.addEventListener('click', seleccionarMascota)
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Linux_kernel_INPUT_OUPUT_evdev_gem_USB_framebuffer.svg/500px-Linux_kernel_INPUT_OUPUT_evdev_gem_USB_framebuffer.svg.png">
+
+*Imagen Tomada De: https://es.wikipedia.org/wiki/Interfaz_de_usuario*
