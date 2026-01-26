@@ -1,6 +1,6 @@
 const sectionSeleccionarAtaque=document.getElementById('seleccionar-ataque')
 const sectionReiniciar=document.getElementById('section-reiniciar')
-const botonSeleccionar = document.getElementById("boton-seleccionar")
+const botonSeleccionar = document.getElementById('boton-seleccionar')
 const botonFuego = document.getElementById('boton-fuego')
 const botonAgua = document.getElementById('boton-agua')
 const botonTierra = document.getElementById('boton-tierra')

@@ -101,6 +101,8 @@ Si desea mirar **Mokepon** puede acceder a los siguentes vinculos (Este se empie
 
 * [18. Programar eventos de click en botones HTML con JavaScript](#programar-eventos-de-click-en-botones-html-con-javascript)
 
+* [19. Eventos de Carga en JavaScript: Iniciar Juego y Seleccionar Mascota](#eventos-de-carga-en-javascript-iniciar-juego-y-seleccionar-mascota)
+
 
 
 
@@ -1750,3 +1752,88 @@ Por esta razón, se recomienda colocar la etiqueta (script) justo antes de que t
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Linux_kernel_INPUT_OUPUT_evdev_gem_USB_framebuffer.svg/500px-Linux_kernel_INPUT_OUPUT_evdev_gem_USB_framebuffer.svg.png">
 
 *Imagen Tomada De: https://es.wikipedia.org/wiki/Interfaz_de_usuario*
+
+
+
+
+
+
+
+
+
+
+
+
+
+---
+
+
+
+
+
+
+
+
+
+
+
+
+
+## Eventos de Carga en JavaScript: Iniciar Juego y Seleccionar Mascota
+
+Existen distintas formas de manejar la carga de JavaScript en un documento HTML.
+Cuando el (script) se coloca en el (head), el navegador ejecuta el código JavaScript antes de que los elementos del (body) hayan sido creados.
+
+Si el JavaScript se ejecuta antes de que el HTML del (body) exista, el código no puede acceder a botones, inputs u otros elementos.
+Esto ocurre porque, en ese momento, el documento HTML aún está vacío.
+
+Para solucionar este problema, se utiliza el objeto window junto con eventos de carga.
+De esta manera, el código JavaScript se ejecuta únicamente cuando toda la página ha sido cargada.
+
+* window en JS by MDN: https://developer.mozilla.org/es/docs/Web/API/Window
+
+El método addEventListener permite escuchar eventos del navegador.
+Al usar el evento load, se garantiza que el código se ejecute solo cuando el HTML, CSS y demás recursos ya estén disponibles.
+
+* load en JS by MDN: https://developer.mozilla.org/en-US/docs/Web/API/Window/load_event
+
+Se registra un evento de carga utilizando **window.addEventListener('load', iniciarJuego)**.
+Esto indica que, cuando la página termine de cargar, se ejecutará la función iniciarJuego.
+
+<img src="https://storage.googleapis.com/hwhistlr.appspot.com/og/understanding-load.png">
+
+*Imagen Tomada De: https://samthor.au/2020/understanding-load/*
+
+* window es el objeto global que representa la ventana del navegador.
+Desde este objeto se puede acceder a eventos, dimensiones de la pantalla y al documento cargado.
+
+* El evento load se dispara cuando el navegador termina de cargar completamente la página.
+Incluye el HTML, los estilos, imágenes y scripts vinculados.
+
+En la parte superior del archivo JavaScript se define la función iniciarJuego().
+Dentro de esta función se coloca todo el código que depende de que el HTML esté completamente cargado.
+
+Dentro de iniciarJuego() se crean las variables que almacenan los botones e inputs del DOM utilizando document.getElementById.
+También se asignan los eventos correspondientes mediante addEventListener.
+
+Para saber qué mascota seleccionó el usuario, se accede a cada input de tipo radio.
+Se crean variables como inputHipodoge, inputCapipepo e inputRatigueya, cada una referenciando su respectivo input.
+
+Al hacer clic en el botón de seleccionar mascota, se evalúa cada input mediante condicionales.
+Si un input está seleccionado, se asigna el nombre de la mascota a una variable.
+
+La propiedad .checked permite saber si un input de tipo radio o checkbox está seleccionado.
+Devuelve un valor booleano que puede utilizarse directamente en una condición.
+
+* https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/input/checkbox
+
+> Booleano: False or True
+
+La propiedad .checked permite saber si un input de tipo radio o checkbox está seleccionado.
+Devuelve un valor booleano que puede utilizarse directamente en una condición.
+
+<img src="https://media.geeksforgeeks.org/wp-content/uploads/20240516103412/HTML-input-type=radio-2.gif">
+
+*Imagen Tomada De: https://www.geeksforgeeks.org/html/html-input-typeradio/*
+
+---
