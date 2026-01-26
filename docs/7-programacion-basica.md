@@ -105,6 +105,8 @@ Si desea mirar **Mokepon** puede acceder a los siguentes vinculos (Este se empie
 
 * [20. Selección de Mascota en JavaScript: Implementación y Validación](#selección-de-mascota-en-javascript-implementación-y-validación)
 
+* [21. Manipulación del DOM con JavaScript para mostrar mascota seleccionada](#manipulación-del-dom-con-javascript-para-mostrar-mascota-seleccionada)
+
 
 
 
@@ -1846,6 +1848,10 @@ Se crean variables como inputHipodoge, inputCapipepo e inputRatigueya, cada una 
 Al hacer clic en el botón de seleccionar mascota, se evalúa cada input mediante condicionales.
 Si un input está seleccionado, se asigna el nombre de la mascota a una variable.
 
+<img src="https://static.platzi.com/media/user_upload/selecciona%20una%20mascota-99ad234c-40c8-439d-999d-77161db08c3f.jpg">
+
+*Imagen Tomada De: https://platzi.com/cursos/programacion-basica/addeventlistener/*
+
 En el desarrollo de aplicaciones interactivas es fundamental ser minucioso con la lógica del programa.
 Cada posible acción del usuario debe estar contemplada para evitar comportamientos inesperados.
 
@@ -1872,5 +1878,95 @@ Devuelve un valor booleano que puede utilizarse directamente en una condición.
 <img src="https://media.geeksforgeeks.org/wp-content/uploads/20240516103412/HTML-input-type=radio-2.gif">
 
 *Imagen Tomada De: https://www.geeksforgeeks.org/html/html-input-typeradio/*
+
+
+
+
+
+
+
+
+
+
+
+
+---
+
+
+
+
+
+
+
+
+
+
+
+
+## Manipulación del DOM con JavaScript para mostrar mascota seleccionada
+
+La manipulación del DOM (Document Object Model) consiste en acceder y modificar dinámicamente los elementos HTML de una página web utilizando JavaScript.
+Esto permite actualizar el contenido, la estructura o el estilo de la interfaz sin necesidad de recargar la página.
+
+* Qué es el DOM by MDN: https://developer.mozilla.org/es/docs/Web/API/Document_Object_Model
+
+<img src="https://www.freecodecamp.org/news/content/images/2021/09/Document.jpg">
+
+*Imagen Tomada De: https://www.freecodecamp.org/espanol/news/que-es-el-dom-el-significado-del-modelo-de-objeto-de-documento-en-javascript/
+
+Para mostrar la mascota seleccionada por el jugador, se agrega una etiqueta span dentro del texto informativo:
+
+    “Tu mascota <span> tiene 3 vidas”
+
+* span en HTML by MDN: https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/span
+
+A este **span** se le asigna el identificador mascota-jugador, lo que permite acceder a él desde JavaScript y modificar su contenido dinámicamente.
+
+**Para esto se usara el método innerHTML:**
+
+innerHTML es una propiedad de los elementos del DOM que permite obtener o modificar el contenido HTML interno de un elemento.
+Mediante esta propiedad, es posible cambiar texto o insertar etiquetas HTML de forma dinámica.
+
+* innerHTML by MDN: https://developer.mozilla.org/es/docs/Web/API/Element/innerHTML
+
+En lugar de mostrar un alert, se utiliza innerHTML para actualizar directamente el contenido del span según la mascota seleccionada por el jugador.
+
+>Esto aporta mayor dinamismo y mejora la experiencia de usuario.
+
+Dentro de las condicionales que verifican qué mascota fue seleccionada, se asigna el nombre correspondiente al span:
+
+    if (inputHipodoge.checked) {
+        SpanMascotaJugador.innerHTML = 'Hipodoge'
+    } else if (inputCapipepo.checked) {
+        SpanMascotaJugador.innerHTML = 'Capipepo'
+    } else if (inputRatigueya.checked) {
+        SpanMascotaJugador.innerHTML = 'Ratigueya'
+    } else {
+        alert("Debes seleccionar tu mascota")
+    }
+
+Este enfoque permite reflejar la elección del jugador directamente en la interfaz.
+
+---
+
+MDN (Mozilla Developer Network) es una de las fuentes oficiales y más confiables de documentación para desarrollo web.
+Proporciona información detallada, ejemplos y buenas prácticas sobre HTML, CSS y JavaScript.
+
+Consultar MDN es una práctica recomendada para:
+
+* Comprender propiedades y métodos del DOM
+
+* Ver ejemplos actualizados
+
+* Aprender estándares web
+
+<img src="https://i.blogs.es/1b8066/moz_blog_header_mdn-intro/1366_2000.webp">
+
+*Imagen Tomada De: https://www.genbeta.com/desarrollo/web-referencia-mozilla-para-desarrolladores-web-se-redisena-anuncia-mdn-plus-suscripcion-servicios-extra*
+
+---
+
+La actualización dinámica del contenido mediante **innerHTML es una de las formas más comunes de manipulación del DOM**.
+En este caso, permite mostrar la mascota seleccionada según la decisión del jugador, reforzando la interacción y el control visual del estado del juego.
 
 ---
