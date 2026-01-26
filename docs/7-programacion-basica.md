@@ -103,6 +103,8 @@ Si desea mirar **Mokepon** puede acceder a los siguentes vinculos (Este se empie
 
 * [19. Eventos de Carga en JavaScript: Iniciar Juego y Seleccionar Mascota](#eventos-de-carga-en-javascript-iniciar-juego-y-seleccionar-mascota)
 
+* [20. Selección de Mascota en JavaScript: Implementación y Validación](#selección-de-mascota-en-javascript-implementación-y-validación)
+
 
 
 
@@ -1816,11 +1818,49 @@ Dentro de esta función se coloca todo el código que depende de que el HTML est
 Dentro de iniciarJuego() se crean las variables que almacenan los botones e inputs del DOM utilizando document.getElementById.
 También se asignan los eventos correspondientes mediante addEventListener.
 
+
+
+
+
+
+
+
+
+
+---
+
+
+
+
+
+
+
+
+
+
+## Selección de Mascota en JavaScript: Implementación y Validación
+
 Para saber qué mascota seleccionó el usuario, se accede a cada input de tipo radio.
 Se crean variables como inputHipodoge, inputCapipepo e inputRatigueya, cada una referenciando su respectivo input.
 
 Al hacer clic en el botón de seleccionar mascota, se evalúa cada input mediante condicionales.
 Si un input está seleccionado, se asigna el nombre de la mascota a una variable.
+
+En el desarrollo de aplicaciones interactivas es fundamental ser minucioso con la lógica del programa.
+Cada posible acción del usuario debe estar contemplada para evitar comportamientos inesperados.
+
+Cuando el usuario no selecciona ninguna mascota y aun así intenta continuar, el sistema debe responder de forma clara.
+Si no se valida este escenario, el usuario puede interpretar que la aplicación está fallando o se encuentra rota.
+
+Un mensaje de validación permite informar al usuario que debe seleccionar una mascota antes de avanzar.
+Esta retroalimentación mejora la experiencia de uso y reduce la confusión.
+
+La validación de entradas no solo previene errores lógicos, sino que también demuestra un diseño cuidadoso y profesional.
+Anticiparse a los posibles errores del usuario es parte esencial del desarrollo de software.
+
+Al exigir una selección válida, se garantiza que el flujo del juego continúe únicamente cuando se cumplan las condiciones necesarias.
+
+> Esto asegura coherencia en la lógica y estabilidad en la ejecución del programa.
 
 La propiedad .checked permite saber si un input de tipo radio o checkbox está seleccionado.
 Devuelve un valor booleano que puede utilizarse directamente en una condición.
@@ -1828,9 +1868,6 @@ Devuelve un valor booleano que puede utilizarse directamente en una condición.
 * https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/input/checkbox
 
 > Booleano: False or True
-
-La propiedad .checked permite saber si un input de tipo radio o checkbox está seleccionado.
-Devuelve un valor booleano que puede utilizarse directamente en una condición.
 
 <img src="https://media.geeksforgeeks.org/wp-content/uploads/20240516103412/HTML-input-type=radio-2.gif">
 
