@@ -97,6 +97,8 @@ Si desea mirar **Mokepon** puede acceder a los siguentes vinculos (Este se empie
 
 * [16. Maquetación de Páginas Web para Videojuegos en HTML](#maquetación-de-páginas-web-para-videojuegos-en-html)
 
+* [17. Selección de Mascotas en HTML para Juegos Interactivos](#selección-de-mascotas-en-html-para-juegos-interactivos)
+
 
 
 
@@ -1589,6 +1591,72 @@ Este botón permite volver al estado inicial sin recargar la página.
 <img src="https://i1.wp.com/css-tricks.com/wp-content/uploads/2019/06/sections-diagram.png?resize=1024%2C656&ssl=1">
 
 *Imagen Tomada De: https://css-tricks.com/how-to-section-your-html/*
+
+
+
+
+
+
+
+
+
+
+---
+
+
+
+
+
+
+
+
+
+
+## Selección de Mascotas en HTML para Juegos Interactivos
+
+El juego presenta distintas mascotas, cada una con uno o dos poderes elementales.
+Hipodoge utiliza el poder de Agua, Capipepo el poder de Tierra y Ratigueya el poder de Fuego.
+También existen combinaciones de poderes como Langostelvis (Agua y Fuego), Tucapalma (Agua y Tierra) y Pydos (Tierra y Fuego).
+
+La etiqueta (input) permite recibir información del usuario.
+Es uno de los elementos fundamentales para la interacción en páginas web.
+
+Existen diferentes tipos de (input), cada uno diseñado para un propósito específico.
+El comportamiento del input depende del valor asignado a su atributo type.
+
+El input type text es el tipo de entrada por defecto.
+Se utiliza para que el usuario ingrese texto libre.
+
+El input type checkbox permite seleccionar una o varias opciones.
+Es comúnmente usado para aceptar términos y condiciones.
+
+* input en HTML by MDN: https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/input
+
+El input type radio permite seleccionar una sola opción dentro de un grupo.
+Es ideal para elecciones exclusivas, como seleccionar una única mascota.
+
+Al asignar el mismo valor al atributo name="mascota", el navegador entiende que los inputs radio pertenecen al mismo grupo.
+Esto garantiza que solo una mascota pueda ser seleccionada a la vez.
+
+* name en inputs en HTML by MDN: https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/input#name
+
+Cada input radio recibe un id único basado en el nombre de la mascota, como Hipodoge, Capipepo o Ratigueya.
+El id permite referenciar el input de forma precisa.
+
+La etiqueta (label) se utiliza para describir un input y mejorar la accesibilidad.
+Indica visualmente a qué corresponde cada campo de selección.
+
+* label en HTML by MDN: https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/label
+
+Al agregar el atributo for al (label) con el mismo valor del id del input, ambos quedan vinculados.
+Esto permite seleccionar la opción haciendo clic sobre el texto, no solo sobre el círculo del radio.
+
+La vinculación entre (label) e (input) mejora la usabilidad y claridad del formulario.
+El usuario puede identificar y seleccionar fácilmente la mascota deseada.
+
+<img src="https://static.platzi.com/media/user_upload/Captura%20de%20pantalla%20%284%29-c01e9eb1-b05f-4758-9742-7c6eb933c127.jpg">
+
+*Imagen Tomada De: https://platzi.com/cursos/programacion-basica/51993-maquetacion-elegir-mascota/*
 
 ---
 
