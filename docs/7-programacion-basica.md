@@ -22,6 +22,34 @@ Lecturas Recomendadas:
 
 *Imagen Tomada De: https://tenor.com/es-419/search/programador-gifs*
 
+---
+
+Si desea mirar **Piedra, Papel o Tijera** puede acceder a los siguentes vinculos (De este proyecto se encuentra la documentación desde el primer título hasta el título #15 del índice que se encuentra más abajo de este mismo documento. Siendo asi: Los Fundamentos de Programación)
+
+* [Proyecto](https://santiagoencodigo.github.io/Desarrollo-Web-Profesional/pages/04-programacion-basica/01-piedra-papel-o-tijera/piedra-papel-o-tijera.html "Proyecto - Piedra Papel o Tijera")
+
+* [Código HTML](https://github.com/santiagoencodigo/Desarrollo-Web-Profesional/blob/main/pages/04-programacion-basica/01-piedra-papel-o-tijera/piedra-papel-o-tijera.html "Código HTML - Piedra Papel o Tijera")
+
+* [Código JavaScript](https://github.com/santiagoencodigo/Desarrollo-Web-Profesional/blob/main/pages/04-programacion-basica/01-piedra-papel-o-tijera/piedra-papel-o-tijera.js "Código JS - Piedra Papel o Tijera")
+
+<img src="../Assets/img/code-2-piedra-papel-o-tijera.PNG">
+
+---
+
+Si desea mirar **Mokepon** puede acceder a los siguentes vinculos (Este se empieza a documentar desde el título #16. Maquetación de Páginas Web para Videojuegos en HTML):
+
+* [Proyecto](https://santiagoencodigo.github.io/Desarrollo-Web-Profesional/pages/04-programacion-basica/02-mokepon/mokepon.html "Mokepon - Demo en vivo by Santiagoencodigo")
+
+* [Código HTML](https://github.com/santiagoencodigo/Desarrollo-Web-Profesional/blob/main/pages/04-programacion-basica/02-mokepon/mokepon.html)
+
+* [Código JavaScript](https://github.com/santiagoencodigo/Desarrollo-Web-Profesional/blob/main/pages/04-programacion-basica/02-mokepon/js/mokepon.js)
+
+* [Código CSS](https://github.com/santiagoencodigo/Desarrollo-Web-Profesional/blob/main/pages/04-programacion-basica/02-mokepon/mokepon.css)
+
+<img src="../Assets/img/code-1-mokepon.PNG">
+
+---
+
 
 
 
@@ -64,6 +92,10 @@ Lecturas Recomendadas:
 * [14. Manejo de Rutas y Archivos en Sistemas Operativos y Desarrollo Web](#manejo-de-rutas-y-archivos-en-sistemas-operativos-y-desarrollo-web)
 
 * [15. Manipulación del DOM y Eventos en JavaScript para Juegos Web](#manipulación-del-dom-y-eventos-en-javascript-para-juegos-web)
+
+### Desarrollando un juego con HTML y JavaScript
+
+* [16. Maquetación de Páginas Web para Videojuegos en HTML](#maquetación-de-páginas-web-para-videojuegos-en-html)
 
 
 
@@ -1448,6 +1480,115 @@ Estos botones son elementos clave para disparar eventos en juegos web.
 
 Es una buena práctica colocar la etiqueta (button) dentro de una etiqueta contenedora.
 Esto mejora la organización del HTML y facilita el manejo de estilos y eventos.
+
+
+
+
+
+
+
+
+
+
+
+
+---
+
+
+
+
+
+
+
+
+
+
+
+
+## Maquetación de Páginas Web para Videojuegos en HTML
+
+A continuación si desea mirar lo que se esta desarrollando:
+
+* [Proyecto](https://santiagoencodigo.github.io/Desarrollo-Web-Profesional/pages/04-programacion-basica/02-mokepon/mokepon.html "Mokepon - Demo en vivo by Santiagoencodigo")
+
+* [Código HTML](https://github.com/santiagoencodigo/Desarrollo-Web-Profesional/blob/main/pages/04-programacion-basica/02-mokepon/mokepon.html)
+
+* [Código JavaScript](https://github.com/santiagoencodigo/Desarrollo-Web-Profesional/blob/main/pages/04-programacion-basica/02-mokepon/js/mokepon.js)
+
+* [Código CSS](https://github.com/santiagoencodigo/Desarrollo-Web-Profesional/blob/main/pages/04-programacion-basica/02-mokepon/mokepon.css)
+
+---
+
+La maquetación es el proceso de organizar y estructurar visualmente los elementos de una página web.
+Define cómo se distribuyen los componentes en pantalla antes de aplicar estilos o lógica avanzada.
+
+* Maquetación by Wikipedia: https://es.wikipedia.org/wiki/Maquetaci%C3%B3n
+
+El juego requiere que el usuario primero seleccione una mascota por medio de botones y, posteriormente, pueda elegir entre distintos ataques.
+Este flujo define el orden lógico de interacción dentro del juego.
+
+Se crean tres botones que representan los ataques disponibles: Fuego, Agua y Tierra.
+Estos botones permiten al usuario interactuar con el juego y ejecutar acciones específicas.
+
+* Button en HTML by MDN: https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/button
+
+La etiqueta (section) se utiliza para dividir una página en secciones semánticas.
+Cada sección representa un bloque de contenido con un propósito específico.
+
+Una section agrupa contenido relacionado dentro del documento.
+Su uso mejora la legibilidad del código y la organización estructural de la página.
+
+* Section en HTML by MDN: https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/section
+
+El atributo id="" permite identificar un elemento de forma única dentro del documento HTML.
+Es fundamental para poder acceder a elementos desde CSS o JavaScript.
+
+En los nombres de id no se permiten espacios.
+Se recomienda usar guiones (-), guiones bajos (_) o notación camelCase, como SeleccionarMascota.
+
+* ID en HTML by MDN: https://developer.mozilla.org/es/docs/Web/HTML/Reference/Global_attributes/id
+
+* ID en HTML by w3schools: https://www.w3schools.com/html/html_id.asp
+
+Se crea una sección con id seleccionar-mascota que contiene un título y los elementos necesarios para elegir una mascota.
+Incluye un botón que confirma la selección del jugador.
+
+Se crea una sección con id seleccionar-ataque que contiene un título (h2) con el texto “Elige tu ataque”.
+En esta sección se encuentran los botones de ataque disponibles.
+
+El juego incluye un sistema de vidas tanto para el jugador como para el enemigo.
+Cada uno comienza con 3 vidas, las cuales disminuyen según el resultado de los ataques.
+
+* Una página dinámica es aquella cuyo contenido puede cambiar durante la ejecución, normalmente mediante JavaScript.
+Los valores no están definidos de forma fija en el HTML.
+
+* Una página estática muestra contenido fijo que no cambia durante la ejecución.
+El contenido está definido directamente en el archivo HTML.
+
+La etiqueta (span) es un contenedor en línea utilizado para envolver pequeñas porciones de texto.
+No tiene significado visual propio, pero es muy útil para manipulación con JavaScript.
+
+Los (span) se utilizan para mostrar valores que pueden cambiar, como vidas del jugador o del enemigo.
+JavaScript puede modificar su contenido sin recargar la página.
+
+El mensaje puede mostrar información como:
+“El jugador atacó con Fuego, el enemigo atacó con Tierra — ganaste”.
+Este contenido no se define en el HTML, sino que se genera dinámicamente.
+
+* span en HTML by MDN: https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/span
+
+La etiqueta (h1) debe utilizarse una sola vez por página.
+Representa el título principal del documento y mejora la accesibilidad y el SEO.
+
+Se crea una sección con id mensajes que contiene un párrafo dinámico.
+El texto de este párrafo se actualiza mediante JavaScript según el resultado de cada combate.
+
+Se crea una sección con id reiniciar que contiene un botón para reiniciar el juego.
+Este botón permite volver al estado inicial sin recargar la página.
+
+<img src="https://i1.wp.com/css-tricks.com/wp-content/uploads/2019/06/sections-diagram.png?resize=1024%2C656&ssl=1">
+
+*Imagen Tomada De: https://css-tricks.com/how-to-section-your-html/*
 
 ---
 
