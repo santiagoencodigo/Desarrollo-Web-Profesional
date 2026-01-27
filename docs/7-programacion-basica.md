@@ -109,6 +109,8 @@ Si desea mirar **Mokepon** puede acceder a los siguentes vinculos (Este se empie
 
 * [22. Selección Aleatoria de Mascota Enemiga en JavaScript](#selección-aleatoria-de-mascota-enemiga-en-javascript)
 
+* [23. Eventos de clic y lógica de ataque en JavaScript](#eventos-de-clic-y-lógica-de-ataque-en-javascript)
+
 
 
 
@@ -2043,6 +2045,72 @@ Este enfoque mejora la experiencia del jugador y refuerza conceptos clave como f
 
 *Imagenes Tomadas De:https://platzi.com/cursos/programacion-basica/51998-enemigos-aleatorios/*
 
+
+
+
+
+
+
+
+
+
 ---
 
 
+
+
+
+
+
+
+
+
+## Eventos de clic y lógica de ataque en JavaScript
+
+En esta etapa del desarrollo se comienza a programar la lógica de combate entre las mascotas, específicamente la selección de ataques por parte del jugador.
+
+Dentro de la función **iniciarJuego()** se crean variables que representan los botones de Fuego, Agua y Tierra definidos previamente en el HTML.
+
+Estas variables se obtienen utilizando document.getElementById(), enlazando cada botón con su respectivo identificador.
+Posteriormente, a cada botón se le asigna un evento de clic que ejecuta una función específica:
+
+* Botón Fuego → ataqueFuego()
+
+* Botón Agua → ataqueAgua()
+
+* Botón Tierra → ataqueTierra()
+
+De esta forma, cada acción del usuario queda correctamente asociada a una lógica concreta.
+
+> De esta forma, cada acción del usuario queda correctamente asociada a una lógica concreta.
+
+En JavaScript, cuando se crea una función, las variables declaradas dentro de ella solo existen en ese ámbito, es decir, no pueden ser utilizadas fuera de la función.
+
+Para compartir información entre diferentes funciones, se utilizan variables globales (o compartidas), las cuales se declaran fuera de las funciones o en un ámbito accesible para todas.
+
+En este caso, se crea la variable:
+
+    let ataqueJugador
+
+Esta variable permitirá almacenar el ataque seleccionado por el jugador y será utilizada posteriormente para comparar ataques con el enemigo.
+
+Al trabajar con funciones, es posible ocultar (colapsar) el contenido de una función en el editor usando el botón que aparece junto al número de la línea donde inicia la función.
+Esto ayuda a tener una vista más limpia del código y facilita la navegación en archivos grandes.
+
+Dentro de cada función de ataque (ataqueFuego, ataqueAgua, ataqueTierra), se modifica el valor de la variable ataqueJugador, asignándole un string según el botón presionado:
+
+* 'fuego'
+
+* 'agua'
+
+* 'tierra'
+
+De esta manera, el programa guarda la elección del jugador y prepara la información necesaria para ejecutar la lógica del combate.
+
+> La siguente imagen es una versión alterna de mokepon, en donde un usuario modificó el input type radio a uno de selección por el usuario y creo otros poderes por cada mascota.
+
+<img src="https://i.imgur.com/X9qseVj.gif">
+
+*Imagen Tomada De: https://platzi.com/cursos/programacion-basica/ataques-aleatorios-del-enemigo/*
+
+---
