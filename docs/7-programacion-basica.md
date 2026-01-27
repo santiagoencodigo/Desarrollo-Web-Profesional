@@ -107,6 +107,8 @@ Si desea mirar **Mokepon** puede acceder a los siguentes vinculos (Este se empie
 
 * [21. Manipulación del DOM con JavaScript para mostrar mascota seleccionada](#manipulación-del-dom-con-javascript-para-mostrar-mascota-seleccionada)
 
+* [22. Selección Aleatoria de Mascota Enemiga en JavaScript](#selección-aleatoria-de-mascota-enemiga-en-javascript)
+
 
 
 
@@ -1969,4 +1971,78 @@ Consultar MDN es una práctica recomendada para:
 La actualización dinámica del contenido mediante **innerHTML es una de las formas más comunes de manipulación del DOM**.
 En este caso, permite mostrar la mascota seleccionada según la decisión del jugador, reforzando la interacción y el control visual del estado del juego.
 
+
+
+
+
+
+
+
+
+
+
 ---
+
+
+
+
+
+
+
+
+
+
+
+## Selección Aleatoria de Mascota Enemiga en JavaScript
+
+Para trabajar de forma más eficiente en Visual Studio Code, se utiliza el atajo Ctrl + O, el cual permite abrir rápidamente archivos del proyecto sin necesidad de buscarlos manualmente en el explorador.
+
+Para seleccionar la mascota del enemigo de forma aleatoria, se utiliza una función basada en Math.random() y Math.floor():
+
+* Math.random() genera un número decimal aleatorio entre 0 y 1.
+
+* Math.floor() redondea el número hacia abajo, obteniendo un valor entero.
+
+La fórmula utilizada es:
+
+    Math.floor(Math.random() * (max - min + 1) + min)
+
+Esta lógica permite generar un número entero aleatorio dentro de un rango definido, en este caso entre 1 y 3, representando cada una de las posibles mascotas enemigas.
+
+La función **seleccionarMascotaEnemigo()** se invoca dentro de la función encargada de seleccionar la mascota del jugador.
+De esta forma, una vez el jugador elige su mascota, automáticamente se asigna una mascota aleatoria al enemigo, manteniendo el flujo del juego.
+
+Se define la función **seleccionarMascotaEnemigo()**, dentro de la cual se obtiene un número aleatorio:
+
+Se crea la variable mascotaAleatoria usando la función aleatorio(1,3).
+
+Según el valor obtenido, se utilizan condicionales para determinar la mascota correspondiente:
+
+* 1 → Hipodoge
+
+* 2 → Capipepo
+
+* 3 → Ratigueya
+
+Dependiendo del valor generado, se modifica el contenido del elemento spanMascotaEnemigo utilizando innerHTML, mostrando en pantalla la mascota seleccionada para el enemigo.
+
+Este proceso permite:
+
+* Automatizar la elección del enemigo
+
+* Mantener la lógica clara y organizada
+
+* Aumentar el dinamismo del juego sin interacción adicional del usuario
+
+La selección aleatoria de la mascota enemiga es una aplicación práctica del uso de números aleatorios en JavaScript y de la manipulación del DOM.
+Este enfoque mejora la experiencia del jugador y refuerza conceptos clave como funciones, condicionales y flujo de ejecución del programa.
+
+<img src="https://static.platzi.com/media/user_upload/html-aaa0b435-499f-4259-a6ac-fe94877a3d87.jpg">
+
+<img src="https://static.platzi.com/media/user_upload/javascript-c1bcbee3-cb98-475d-b548-dd1aa197857d.jpg">
+
+*Imagenes Tomadas De:https://platzi.com/cursos/programacion-basica/51998-enemigos-aleatorios/*
+
+---
+
+
