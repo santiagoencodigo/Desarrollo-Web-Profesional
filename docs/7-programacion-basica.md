@@ -111,6 +111,8 @@ Si desea mirar **Mokepon** puede acceder a los siguentes vinculos (Este se empie
 
 * [23. Eventos de clic y lógica de ataque en JavaScript](#eventos-de-clic-y-lógica-de-ataque-en-javascript)
 
+* [24. Ataques Aleatorios para Mascotas Enemigas en JavaScript](#ataques-aleatorios-para-mascotas-enemigas-en-javascript)
+
 
 
 
@@ -2112,5 +2114,63 @@ De esta manera, el programa guarda la elección del jugador y prepara la informa
 <img src="https://i.imgur.com/X9qseVj.gif">
 
 *Imagen Tomada De: https://platzi.com/cursos/programacion-basica/ataques-aleatorios-del-enemigo/*
+
+
+
+
+
+
+
+
+
+
+---
+
+
+
+
+
+
+
+
+
+
+## Ataques Aleatorios para Mascotas Enemigas en JavaScript
+
+En la etapa anterior se programaron los ataques del jugador. El siguiente paso es implementar el comportamiento del enemigo, el cual debe seleccionar su ataque de manera aleatoria.
+
+Para lograr esto, se crea una nueva función encargada exclusivamente de generar el ataque enemigo.
+
+Dentro de cada una de las funciones de ataque del jugador (ataqueFuego(), ataqueAgua(), ataqueTierra()), se agrega la invocación a la función:
+
+    ataqueAleatorioEnemigo()
+
+De esta manera, cada vez que el jugador realiza un ataque, el enemigo responde automáticamente con uno propio.
+
+Se define una variable global:
+
+    let ataqueEnemigo
+
+Esta variable se declara sin valor inicial, ya que su contenido se asignará dinámicamente cuando se ejecute la función que determina el ataque del enemigo.
+
+El uso de una variable global permite que el valor del ataque enemigo pueda ser utilizado posteriormente en la lógica de combate.
+
+Se crea la función ataqueAleatorioEnemigo(), dentro de la cual se genera un número aleatorio utilizando la función aleatorio(1, 3).
+
+A partir del número generado, se implementa una serie de condicionales que determinan el ataque del enemigo:
+
+Si el número es 1, el ataque será fuego
+
+Si el número es 2, el ataque será agua
+
+Si el número es 3, el ataque será tierra
+
+Según el resultado, la variable ataqueEnemigo se asigna con el valor correspondiente.
+
+Con esta lógica, el enemigo obtiene un ataque aleatorio cada vez que el jugador ataca, lo que permite avanzar hacia la implementación completa del sistema de combate y la comparación de ataques.
+
+<img src="https://static.platzi.com/media/user_upload/Captura-a852589c-7cf5-45e6-b5b9-a6d465ebe547.jpg">
+
+*Imagen Tomada De: https://platzi.com/cursos/programacion-basica/52000-ataques-en-javascript/*
 
 ---

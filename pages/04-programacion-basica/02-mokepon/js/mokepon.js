@@ -1,3 +1,4 @@
+ /* las constantes nunca van a variar. */
 const sectionSeleccionarAtaque=document.getElementById('seleccionar-ataque')
 const sectionReiniciar=document.getElementById('section-reiniciar')
 const botonSeleccionar = document.getElementById('boton-seleccionar')
@@ -21,9 +22,10 @@ const ataquesDelEnemigo = document.getElementById("ataques-del-enemigo")
 const ContenedorTarjetas = document.getElementById("contenedorTarjetas")
 
 
+/* Las razones del por qué no se cambian estas let, es porque son variables. */
 let mokepones = [] /* Esto se llama arrays o arreglos */
-let ataqueJugador  /* Las razones del por qué no se cambian estas let, es porque son variables. */
-let ataqueEnemigo   /* las constantes nunca van a variar. */
+let ataqueJugador  
+let ataqueEnemigo  
 let opcionDeMokepones
 
 let inputHipodoge
