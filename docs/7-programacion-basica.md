@@ -113,6 +113,8 @@ Si desea mirar **Mokepon** puede acceder a los siguentes vinculos (Este se empie
 
 * [24. Ataques Aleatorios para Mascotas Enemigas en JavaScript](#ataques-aleatorios-para-mascotas-enemigas-en-javascript)
 
+* [25. Creación de Mensajes Dinámicos en Combate HTML y JavaScript](#creación-de-mensajes-dinámicos-en-combate-html-y-javascript)
+
 
 
 
@@ -2174,3 +2176,79 @@ Con esta lógica, el enemigo obtiene un ataque aleatorio cada vez que el jugador
 *Imagen Tomada De: https://platzi.com/cursos/programacion-basica/52000-ataques-en-javascript/*
 
 ---
+
+## Creación de Mensajes Dinámicos en Combate HTML y JavaScript
+
+Ya tenemos definidos los ataques del jugador y del enemigo en JavaScript.
+Ahora el objetivo es mostrar en la página web, de forma dinámica, qué ataque realizó cada mascota en cada turno.
+
+Para esto, necesitamos crear un mensaje nuevo por cada ataque, en lugar de reemplazar siempre el mismo contenido.
+Por esta razón, innerHTML ya no es suficiente y debemos usar nuevos métodos de manipulación del DOM.
+
+JavaScript nos permite crear etiquetas HTML directamente desde el código usando el método:
+
+    document.createElement()
+
+Este método crea un elemento HTML en memoria, sin insertarlo todavía en el documento.
+
+* createElement en JS by MDN: https://developer.mozilla.org/es/docs/Web/API/Document/createElement
+
+Se crea una nueva función llamada crearMensaje(), la cual será la encargada de generar un mensaje por cada ataque.
+
+Esta función se invoca después de que el enemigo selecciona su ataque, ya que en ese momento ya conocemos:
+
+* El ataque del jugador
+
+* El ataque del enemigo
+
+Dentro de la función crearMensaje():
+
+Se crea una variable: let parrafo = document.createElement('p')
+
+> Esto genera una nueva etiqueta (p).
+
+A este párrafo se le asigna contenido usando innerHTML, concatenando la información de los ataques:
+
+* Ataque del jugador
+
+* Ataque del enemigo
+
+De esta forma, cada combate genera su propio texto independiente.
+
+Una vez creado el párrafo, surge la pregunta:
+
+**¿Dónde se coloca este nuevo elemento dentro del HTML?**
+
+Para resolver esto, utilizamos otro método del DOM.
+
+El método appendChild() permite insertar un elemento como hijo dentro de otro, colocándolo al final.
+
+* appendChild en JS by MDN: https://developer.mozilla.org/es/docs/Web/API/Node/appendChild
+
+Se obtiene una referencia a una (section) del HTML que contendrá los mensajes:
+
+sectionMensajes, identificada por su id
+
+Se inserta el párrafo creado usando:
+
+    sectionMensajes.appendChild(parrafo)
+
+Esto provoca que cada nuevo mensaje se agregue al final de la sección, sin borrar los mensajes anteriores.
+
+Por lo que:
+
+Cada vez que el jugador presiona un botón de ataque:
+
+1. Se ejecuta el ataque del jugador
+
+2. Se genera el ataque aleatorio del enemigo
+
+3. Se crea un nuevo párrafo con el resultado
+
+4. El mensaje se añade dinámicamente al HTML
+
+Esto permite mostrar un historial completo de ataques, haciendo el juego más claro, dinámico y profesional.
+
+<img src="https://static.platzi.com/media/user_upload/asdfdsaf-b3b39650-f596-4657-8bd6-eadf914f4719.jpg">
+
+*Imagen Tomada De: https://platzi.com/cursos/programacion-basica/imprimiendo-ataques-enemigo/*
