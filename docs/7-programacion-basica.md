@@ -115,6 +115,8 @@ Si desea mirar **Mokepon** puede acceder a los siguentes vinculos (Este se empie
 
 * [25. Creación de Mensajes Dinámicos en Combate HTML y JavaScript](#creación-de-mensajes-dinámicos-en-combate-html-y-javascript)
 
+* [26. Lógica de Combate en JavaScript para juego Mokepon](#lógica-de-combate-en-javascript-para-juego-mokepon)
+
 
 
 
@@ -2252,3 +2254,108 @@ Esto permite mostrar un historial completo de ataques, haciendo el juego más cl
 <img src="https://static.platzi.com/media/user_upload/asdfdsaf-b3b39650-f596-4657-8bd6-eadf914f4719.jpg">
 
 *Imagen Tomada De: https://platzi.com/cursos/programacion-basica/imprimiendo-ataques-enemigo/*
+
+
+
+
+
+
+
+
+
+
+
+---
+
+
+
+
+
+
+
+
+
+
+
+## Lógica de Combate en JavaScript para juego Mokepon
+
+Hasta este punto, el juego ya muestra en pantalla:
+
+* El ataque seleccionado por el jugador
+
+* El ataque seleccionado por el enemigo
+
+El siguiente paso es determinar el resultado del combate, es decir, saber si el jugador: Gana, Pierde o Empata.
+
+La lógica del combate en Mokepon es muy similar a la utilizada anteriormente en el juego de Piedra, Papel o Tijera.
+
+---
+
+**La diferencia principal es que:**
+
+* Antes se trabajaba con valores numéricos
+
+* Ahora se trabaja con strings ('fuego', 'agua', 'tierra')
+
+Aun así, el principio es exactamente el mismo:
+
+* Un ataque vence a otro
+
+* Uno pierde contra otro
+
+* Y si ambos son iguales, hay empate
+
+> Reutilización de Código
+
+---
+
+Se crea una nueva función llamada **combate()**, cuya responsabilidad es: comparar el ataque del jugador (ataqueJugador),comparar el ataque del enemigo (ataqueEnemigo), determinar el resultado del enfrentamiento.
+
+Dentro de la función combate() se implementa una serie de condicionales (if, else if, else) utilizando el operador lógico && para evaluar múltiples condiciones al mismo tiempo.
+
+Ejemplos de situaciones de victoria:
+
+* Fuego vence a Tierra
+
+* Agua vence a Fuego
+
+* Tierra vence a Agua
+
+Si ambos ataques son iguales, el resultado es empate.
+En cualquier otro caso, el jugador pierde.
+
+La lógica sigue el mismo patrón que el ejercicio clásico de Piedra, Papel o Tijera.
+
+> La siguiente imagen muestra un ejemplo claro de esta lógica de combate:
+
+<img src="https://static.platzi.com/media/user_upload/Logica%20del%20combate-e723aa58-7249-44cc-979b-9b84e9574370.jpg">
+
+*Imagen Tomada De: https://platzi.com/cursos/programacion-basica/52002-ganaste-perdiste-o-empataste/*
+
+Una vez determinado el resultado del combate dentro de combate():
+
+* Se genera un valor como 'GANASTE', 'PERDISTE' o 'EMPATE'
+
+Este valor se envía como argumento a la función crearMensaje()
+
+De esta forma:
+
+* combate() se encarga de la lógica
+
+* crearMensaje(resultado) se encarga de mostrar el mensaje en el HTML
+
+**Flujo general del combate**
+
+1. El jugador elige un ataque
+
+2. El enemigo elige un ataque aleatorio
+
+3. Se ejecuta la función combate()
+
+4. Se determina el resultado
+
+5. Se llama a crearMensaje(resultado)
+
+6. El resultado se muestra dinámicamente en pantalla
+
+---
