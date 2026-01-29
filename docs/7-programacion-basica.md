@@ -123,6 +123,8 @@ Si desea mirar **Mokepon** puede acceder a los siguentes vinculos (Este se empie
 
 * [29. Validación de Vidas y Mensaje Final en Juegos](#validación-de-vidas-y-mensaje-final-en-juegos)
 
+* [30. Funcionalidad de Reinicio y Desactivación de Botones en Juego](#funcionalidad-de-reinicio-y-desactivación-de-botones-en-juego)
+
 
 
 
@@ -2612,5 +2614,104 @@ Siendo asi:
 <img src="https://static.platzi.com/media/user_upload/MOKEPON-ebf6e1a2-52ca-4bc0-bc9d-70508c00243a.jpg">
 
 *Imagen Tomadada De: https://platzi.com/cursos/programacion-basica/52005-quien-gano-el-juego/*
+
+
+
+
+
+
+
+
+
+
+---
+
+
+
+
+
+
+
+
+
+
+## Funcionalidad de Reinicio y Desactivación de Botones en Juego
+
+Ya tenemos toda la funcionalidad de los mensajes y de las vidas una vez se pierde o gana. Ahora debemos hacer funcionar que nuestro boton HTML de reiniciar funcione para poder realizar una revancha o jugar varias veces de forma seguida.
+
+En este momento estamos en: Si escojemos una mascota y luego seleccionamos ataques, perderemos o ganaremos hasta que el jugador o el enemigo llegue a 0 vidas. El problema es que siguen activados los botones de todos los ataques y por ende se seguiran restando vidas.
+
+> Hay que realizar esa validación.
+
+* Debemos hacer que los botones de ataques no funcionen una vez se halla perdido o ganado la batalla.
+
+* Debemos hacer funcional el boton de reiniciar para volver a iniciar el juego una vez decidido el estado de la batalla.
+
+---
+
+**Funcionalidad de Boton Reiniciar**
+
+Dentro de la función iniciarJuego() hemos estado agregando cada uno de los botones con su respectivo addEventListener.
+
+* Aqui se encuentran las declaraciones de las variables de los botones: seleccionar mascota, ataque fuego, ataque agua, ataque tierra, y ahora **se crea la nueva variable botonReiniciar**. De la misma forma como todos los botones que hemos trabajado.
+
+Este nuevo boton tendrá su respectivo addEventListener y una vez el escuchador click sea identificado, ejecute la función reiniciarJuego()
+
+Entonces ahora vamos a crear esa función.
+
+Se crea la función reiniciarJuego() y dentro de esta vamos a usar:
+
+**location**: Un objeto especial asi como window y document y se refiere a la ubicación en donde se encuentra el usuario respecto a la página, es decir la URL. 
+
+* location en JS by MDN: https://developer.mozilla.org/en-US/docs/Web/API/Location
+
+Y location tiene un método el cual es .reload() el cual recarga la página llevandola al punto inicial. 
+
+* location.reload en JS by MDN: https://developer.mozilla.org/en-US/docs/Web/API/Location/reload
+
+Esto nos sirve al 100% debido a que limpia el contenido de la sección mensajes con cada uno de los appendChild que le hemos insertado en las funciones de combate(), crearMensaje() y crearMensajeFinal().
+
+por ende la función es muy sencilla:
+
+    function reiniciarJuego(){
+        location.reload()
+    }
+
+---
+
+**Deshabilitación botones de ataque**
+
+Ahora, en este punto igualmente seguimos con el problema de la validación de las vidas una vez se llega a cero pues se pueden seguir realizando ataques y llegar a números negativos como -4 vidas del enemigo.
+
+Por ende, en el momento que el enemigo o el jugador lleguen a 0 vidas vamos a deshabilitar estos botones.
+
+Existe el atributo disabled en HTML, en donde si se lo insertados a un boton: Este boton deja de recibir el click y sus estilos quedan como trasparentes reflejando que ya no tiene funcionalidad.
+
+* disabled en HTML by MDN: https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Attributes/disabled
+
+Asi que una vez llegue nuestro mensaje final en la función crearMensajeFinal vamos a deshabilitar cada uno de los botones por medio de JavaScript.
+
+* disabled en JS by w3schools: https://www.w3schools.com/jsref/prop_text_disabled.asp
+
+> A continuación una imagen sobre un fragmento de código JavaScript con una solución alternativa por medio de una nueva función bloquearAtaques() que sigue las mismas dinamicas que nuestra función crearMensajeFinal().
+
+<img src="https://static.platzi.com/media/user_upload/codigo2-cea942c2-71b9-47d7-b8d5-fac85f85c373.jpg">
+
+*Imagen Tomada De: https://platzi.com/cursos/programacion-basica/52006-reiniciando-el-juego/*
+
+A cada una de las variables que declaran nuestros botones, vamos a copiarlas y pegarlas en la función crearMensajeFinal() y en vez de tener un addEventListener vamos a hacer que cada boton tenga el atributo disabled en true, es decir:
+
+    botonFuego = document.getElementById('boton-fuego')
+    botonFuego.disabled = True
+
+Y lo mismo aplica para cada boton. Y esto hace lo mismo que agregarle el atributo disabled a nuestra etiqueta boton en HTML.
+
+Por lo que ahora ya no podemos lanzar ni recibir ataques una vez una mascota halla "muerto" o simplemente que halla quedado con cero vidas, por lo que ya implementamos una nueva validación para nuestro juego Mokepon. Y además, ya podemos usar el boton de reiniciar que aparece una vez el combate ya esta decidido.
+
+> A continuación una captura que describe la situación.
+
+<img src="https://static.platzi.com/media/user_upload/image-cf25a5fb-c1d0-4074-b9c1-185b24374cbd.jpg">
+
+*Imagen Tomada De: https://platzi.com/cursos/programacion-basica/52006-reiniciando-el-juego/*
 
 ---
