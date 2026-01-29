@@ -119,6 +119,8 @@ Si desea mirar **Mokepon** puede acceder a los siguentes vinculos (Este se empie
 
 * [27. Operadores Lógicos en Programación: AND, OR y NOT](#operadores-lógicos-en-programación-and-or-y-not)
 
+* [28. Actualización de Vidas en Juego de Combate con JavaScript](#actualización-de-vidas-en-juego-de-combate-con-javascript)
+
 
 
 
@@ -2466,4 +2468,89 @@ En el algoritmo combate() estos operadores permiten:
 
 Este conocimiento es fundamental no solo para videojuegos, sino para cualquier sistema que requiera toma de decisiones, validaciones, seguridad o automatización de procesos.
 
+
+
+
+
+
+
+
+
+
+
+
 ---
+
+
+
+
+
+
+
+
+
+
+
+
+## Actualización de Vidas en Juego de Combate con JavaScript
+
+Hasta este punto del proyecto ya contamos con:
+
+* Selección de la mascota
+
+* Ataques del jugador y del enemigo
+
+* Creación y visualización de mensajes de combate
+
+Sin embargo, aunque los ataques ya funcionan, las vidas del jugador y del enemigo aún no cambian, sin importar cuántos ataques se realicen. Por eso, en esta sección vamos a implementar el contador de vidas.
+
+> ♥ ♥ ♥
+
+Como ya sabíamos que las vidas no debían ser dinámicas por sí solas, las encapsulamos dentro de una etiqueta **span**. Lo único que faltaba era asignarles un id para poder modificarlas desde JavaScript.
+
+Los IDs que utilizaremos son:
+
+* vidas-jugador
+
+* vidas-enemigo
+
+En JavaScript, accedemos a estos elementos usando: document.getElementById()
+
+Además, vamos a invocar la función revisarVidas() dentro de la función combate(), ya que es allí donde se determina el resultado de cada enfrentamiento.
+
+let spanVidasJugador (la misma lógica se aplicará luego para el enemigo).
+
+Para poder controlar correctamente las vidas, necesitamos llevar el conteo desde JavaScript, así que creamos dos variables globales:
+
+* let vidasJugador
+
+* let vidasEnemigo
+
+Cuando el jugador pierde un combate, dentro de la condicional correspondiente, simplemente restamos una vida usando el operador --:
+
+    vidasJugador--
+
+Este operador se encarga de disminuir el valor en 1.
+
+* Expresiones y Operadores en JS by MDN: https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Expressions_and_operators
+
+Luego, actualizamos el contenido del span usando innerHTML:
+
+spanVidasJugador.innerHTML = vidasJugador
+
+La misma lógica se repite para el enemigo:
+
+* Si el jugador gana, se restan vidas al enemigo
+
+* Se actualiza el **span** correspondiente con innerHTML
+
+De esta forma, las vidas se van reflejando correctamente en pantalla después de cada combate.
+
+En este punto surge un detalle importante:
+podemos seguir atacando incluso cuando las vidas llegan a cero, lo que provoca que aparezcan valores negativos.
+
+En el siguiente título vamos a solucionar este problema, evitando que el combate continúe cuando alguno de los dos personajes ya no tenga vidas.
+
+<img src="https://static.platzi.com/media/user_upload/Captura%20de%20pantalla%202022-08-09%20161731-17cf0661-6a4a-4fc2-aed6-31459b10c26f.jpg">
+
+*Imagen Tomada De: https://platzi.com/cursos/programacion-basica/contador-de-vidas/*
