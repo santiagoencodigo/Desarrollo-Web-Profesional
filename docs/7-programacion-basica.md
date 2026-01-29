@@ -117,6 +117,8 @@ Si desea mirar **Mokepon** puede acceder a los siguentes vinculos (Este se empie
 
 * [26. Lógica de Combate en JavaScript para juego Mokepon](#lógica-de-combate-en-javascript-para-juego-mokepon)
 
+* [27. Operadores Lógicos en Programación: AND, OR y NOT](#operadores-lógicos-en-programación-and-or-y-not)
+
 
 
 
@@ -2357,5 +2359,111 @@ De esta forma:
 5. Se llama a crearMensaje(resultado)
 
 6. El resultado se muestra dinámicamente en pantalla
+
+
+
+
+
+
+
+
+
+
+
+
+---
+
+
+
+
+
+
+
+
+
+
+
+
+## Operadores Lógicos en Programación: AND, OR y NOT
+
+Antes de profundizar en estructuras de control más avanzadas, es importante comprender los fundamentos lógicos que dieron origen a la programación moderna. Estos conceptos no solo explican cómo funcionan los lenguajes de programación, sino también cómo opera internamente una computadora.
+
+En la función **combate()** se utilizó el operador lógico &&. Para entender de dónde proviene este operador, es necesario remontarnos a los principios básicos de la computación.
+
+Las computadoras trabajan con un sistema binario, compuesto únicamente por dos valores:
+
+* 1 → Verdadero
+
+* 0 → Falso
+
+Una analogía común es la de un bombillo:
+
+Bombillo encendido → 1 → Verdadero
+
+Bombillo apagado → 0 → Falso
+
+<img src="https://cdn-icons-gif.flaticon.com/12511/12511260.gif">
+
+*Imagen Tomada De: https://www.flaticon.es/icono-animado-gratis/bombilla_12511260*
+
+Este modelo binario es la base sobre la cual funcionan los circuitos electrónicos y, por extensión, todos los programas que se ejecutan en un computador.
+
+A partir de este sistema binario surgen los valores booleanos, que representan estados de verdad:
+
+* true
+
+* false
+
+Por esta razón, en representaciones populares de la computación (como películas sobre hackers o ciencia ficción) es común ver secuencias de 1 y 0, ya que simbolizan el lenguaje más básico de las máquinas.
+
+Para un análisis más profundo de estos conceptos, [se puede consultar el documento Fundamentos de Ingeniería de Software, disponible en este mismo repositorio.](https://github.com/santiagoencodigo/Desarrollo-Web-Profesional/blob/main/docs/6-fundamentos-ingenieria-software.md "Fundamentos Ingeniería de Software - Desarrollo Web Profesional by Santiagoencodigo")
+
+El entendimiento de los valores booleanos permite introducir un concepto fundamental en programación: [las tablas de verdad.](https://es.wikipedia.org/wiki/Tabla_de_verdad "Tablas de Verdad by Wikipedia")
+
+Las tablas de verdad describen el comportamiento de los operadores lógicos cuando se evalúan una o más condiciones. Esto es especialmente importante cuando se trabaja con condicionales complejas, como ocurre en el algoritmo **combate()**, donde no se evalúa una sola condición, sino múltiples al mismo tiempo.
+
+---
+
+El operador AND se utiliza cuando todas las condiciones deben cumplirse para que el resultado sea verdadero.
+
+* Una expresión con AND es verdadera únicamente si ambas condiciones son verdaderas.
+
+---
+
+El operador OR se utiliza cuando al menos una de las condiciones debe cumplirse para que el resultado sea verdadero.
+
+* Si una condición es verdadera, el resultado será verdadero.
+
+* Solo será falso si todas las condiciones son falsas.
+
+Este operador es útil cuando existen múltiples caminos válidos para que una acción se ejecute.
+
+---
+
+El operador NOT se utiliza para invertir el valor lógico de una expresión.
+
+* true se convierte en false
+
+* false se convierte en true
+
+Este operador es especialmente útil cuando se desea evaluar la negación de una condición existente.
+
+---
+
+<img src="https://logicautem.wordpress.com/wp-content/uploads/2016/03/tablas-de-verdad.jpg">
+
+*Imagen Tomada De: https://logicautem.wordpress.com/2016/03/05/tablas-de-verdad/*
+
+En el algoritmo combate() estos operadores permiten:
+
+* Evaluar múltiples condiciones simultáneamente
+
+* Representar reglas del juego de forma clara y estructurada
+
+* Traducir reglas del mundo real en decisiones lógicas precisas
+
+> Gracias al uso de operadores lógicos, el programa puede tomar decisiones complejas de manera consistente y predecible.
+
+Este conocimiento es fundamental no solo para videojuegos, sino para cualquier sistema que requiera toma de decisiones, validaciones, seguridad o automatización de procesos.
 
 ---
