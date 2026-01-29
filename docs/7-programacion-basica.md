@@ -121,6 +121,8 @@ Si desea mirar **Mokepon** puede acceder a los siguentes vinculos (Este se empie
 
 * [28. Actualización de Vidas en Juego de Combate con JavaScript](#actualización-de-vidas-en-juego-de-combate-con-javascript)
 
+* [29. Validación de Vidas y Mensaje Final en Juegos](#validación-de-vidas-y-mensaje-final-en-juegos)
+
 
 
 
@@ -2554,3 +2556,61 @@ En el siguiente título vamos a solucionar este problema, evitando que el combat
 <img src="https://static.platzi.com/media/user_upload/Captura%20de%20pantalla%202022-08-09%20161731-17cf0661-6a4a-4fc2-aed6-31459b10c26f.jpg">
 
 *Imagen Tomada De: https://platzi.com/cursos/programacion-basica/contador-de-vidas/*
+
+
+
+
+
+
+
+
+
+
+---
+
+
+
+
+
+
+
+
+
+
+## Validación de Vidas y Mensaje Final en Juegos
+
+Ya contamos con la lógica de vidas por lo que el siguiente paso es determinar quién gana la batalla y mostrar el mensaje final correspondiente.
+
+Dentro de la función combate(), una vez finalizado el intercambio de ataques, se invoca la función **revisarVidas()** en donde esta se encarga de evaluar las vidas del jugador y del enemigo.
+
+Dentro de esta función se utilizan condicionales para determinar el resultado del combate:
+
+* Si las vidas del enemigo llegan a cero, el jugador gana.
+
+* Si las vidas del jugador llegan a cero, el enemigo gana.
+
+Dependiendo del resultado se altera al parametro de la función crearMensajeFinal(resultadoFinal)
+
+Por ende la función crearMensajeFinal esta esperando un parametro, el cual se define dentro de las condicionales de revisarVidas() siendo asi, esta parte del código la que se encarga de mostrar el mensaje final del juego: Victoria o Derrota.
+
+        function revisarVidas() {
+            if (vidasEnemigo == 0) {
+                crearMensajeFinal("Ganaste")
+            } else if (vidasJugador == 0) {
+                crearMensajeFinal("Perdiste")
+            }
+        }
+
+Con esta estructura ya podemos determinar claramente quién ganó y quién perdió y se genera un mensaje final dependiendo del estado del combate.
+
+Dentro de la función crearMensajeFinal() se crea entonces la variable de sectionMensajes la cual identifica un div dentro del HTML y por medio de document.createElement('p') se crea un parrafo el cual se inserta al sectionMensajes mediante un appendChild.
+
+Siendo asi:
+
+    sectionMensajes.appendChild(parrafo)
+
+<img src="https://static.platzi.com/media/user_upload/MOKEPON-ebf6e1a2-52ca-4bc0-bc9d-70508c00243a.jpg">
+
+*Imagen Tomadada De: https://platzi.com/cursos/programacion-basica/52005-quien-gano-el-juego/*
+
+---
