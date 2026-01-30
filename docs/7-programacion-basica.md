@@ -125,6 +125,8 @@ Si desea mirar **Mokepon** puede acceder a los siguentes vinculos (Este se empie
 
 * [30. Funcionalidad de Reinicio y Desactivación de Botones en Juego](#funcionalidad-de-reinicio-y-desactivación-de-botones-en-juego)
 
+* [31. Mostrar y Ocultar secciones en HTML con JavaScript](#mostrar-y-ocultar-secciones-en-html-con-javascript)
+
 
 
 
@@ -2714,4 +2716,109 @@ Por lo que ahora ya no podemos lanzar ni recibir ataques una vez una mascota hal
 
 *Imagen Tomada De: https://platzi.com/cursos/programacion-basica/52006-reiniciando-el-juego/*
 
+
+
+
+
+
+
+
+
+
+
+
 ---
+
+
+
+
+
+
+
+
+
+
+
+
+## Mostrar y Ocultar secciones en HTML con JavaScript
+
+En una página web no solamente tenemos al HTML, pues tambien tenemos a JavaScript y a CSS.
+
+CSS nos ayuda a darle estilos a nuestro juego o página web: Cambiando los colores, los textos, la ubicación e incluso podemos darle animaciones a nuestros elementos HTML.
+
+> En el siguente módulo vamos a por eso.
+
+<img src="https://www.cursosgis.com/wp-content/uploads/2017/06/lenguajes_1.png">
+
+*Imagen Tomada De: https://www.cursosgis.com/como-integramos-los-lenguajes-html-css-y-javascript/*
+
+En esta sección vamos a ocultar una sección HTML para que no aparezcan las de selección mascota ni las de selección de ataques juntas en la misma ventana, lo haremos por medio de JavaScript.
+
+En este momento como aparecen las dos secciones en la misma ventana, nos podemos saltar la selección de la mascota y pasar directamente a los ataques. Además de que el boton de reiniciar siempre ha estado visible tambien por lo que se puede reiniciar la página por medio del boton todo el tiempo sin que esto realmente se requiera.
+
+Por lo que tenemos que esconderlas en algunas funciones.
+
+Requerimos que solo aparezca la sección de seleccionar mascota y que no aparezcan las de reiniciar y tampoco las de selección ataques. Por lo que vamos a la primera función que se ejecuta en nuestro JavaScript justo despues de cargar todo el HTML: **iniciarJuego()**
+
+De forma semántica, nosotros tenemos separado cada una de estas secciones en el HTML mediante etiquetas **section**.
+
+* section en HTML by MDN: https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/section
+
+Por lo que dentro de la función **iniciarJuego()**:
+
+Se declaran las variables que identifican a nuestras secciones
+
+    let sectionSeleccionarAtaque = document.getElementById('seleccionar-ataque')
+    sectionSeleccionarAtaque.style.display = 'none'
+
+usaremos las propiedades .style.display y le damos el valor 'none' a nuestra sección por ende esta sección no va a aparecer una vez se cargue la página.
+
+* Estilos de elemento DOM HTML by w3schools: https://www.w3schools.com/jsref/prop_html_style.asp
+
+* Estilos y Clases en JS by javascript.info: https://javascript.info/styles-and-classes
+
+* .style.display en JS by w3schools: https://www.w3schools.com/Jsref/prop_style_display.asp
+
+por defecto los elementos HTML tienen ciertas propiedades style, pues nosotros no decidimos el tamaño ni el color de algún elemento de nuestro HTML, por eso los títulos son de color negro, el texto es de color negro y nuestros botones como gris: Son estilos por defecto que han sido estandarizados para HTML.
+
+> Todos estos estilos eventualmente se pueden modificar mediante CSS.
+
+Ahora tenemos un nuevo problema, si le damos a nuestra mascota: Aun no aparece esta nueva sección porque sigue en none y no se ha programado cuando vuelve a aparecer.
+
+Por lo que, recordemos en nuestra función iniciarJuego() cuando le damos click al boton seleccionar mascota, ejecuta la función seleccionarMascotaJugador(). Por lo que vamos a hacer que en el inicio de esta función, nuestra sección tenga otro valor que permita su visualización.
+
+    let sectionSeleccionarAtaque = document.getElementById('seleccionar-ataque')
+    sectionSeleccionarAtaque.style.display = 'block'
+
+> Otro tipo de display
+
+Ahora ya una vez seleccionada la mascota, ya no quiero que me aparezca esta sección de seleccionar mascota. Por ende vamos a poner el display none en nuestra sección seleccionarMascota declarando su variable dentro de la función **seleccionarMascotaJugador()**
+
+    let sectionSeleccionarMascota = document.getElementById('seleccionar-mascota')
+    sectionSeleccionarMascota.style.display = 'none'
+
+Como resultado entonces, una vez se ejecute nuestra función: 
+
+* La sección seleccionar ataque va a aparecer.
+
+* La sección seleccionar mascota va a desaparecer.
+
+Ahora el único detalle que nos falta es el boton de reiniciar, pues aparece desde el inicio hasta el fin. En nuestro juego necesitamos que solo aparezca una vez se halla perdido o ganado la batalla.
+
+por lo que en la función **iniciarJuego()** se crea una nueva variable:
+
+    let sectionReiniciar = document.getElementById('reiniciar')
+    sectionReiniciar.style.display = 'none'
+
+Por ende ya no nos encontraremos a nuestro boton de reiniciar al iniciar el documento. Pero entonces una vez seleccionada la mascota, seleccionados los ataques y haber perdido o ganado, todavia no va a aparecer nuestro boton por lo que en la función **crearMensajeFinal()**: En la misma función que mandamos a deshabilitar cada uno de los botones de ataque una vez el jugador o el enemigo llegan a 0 vidas.
+
+por lo que en código:
+
+    let sectionReiniciar = document.getElementById('reiniciar')
+    sectionReiniciar.style.display = 'block'
+
+Ya tenemos toda la lógica de nuestro juego, en el siguente módulo vamos a trabajar con todo el diseño por medio de CSS.
+
+<img src="https://assets-v2.lottiefiles.com/a/35735896-1176-11ee-8649-af549fb59863/lsQS6q92QV.gif">
+
+*Imagen Tomada De: https://lottiefiles.com/es/free-animations/css*
