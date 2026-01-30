@@ -6,7 +6,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 body {
     font-family: "Poppins", serif;
-    background-color: #c28b15;
+    background-image: url('../../../Assets/img/2-cuadricula-negra.jpg');
+}
+
+/* variables */
+
+:root {
+    --color-blue: #1E90FF;
 }
 
 #seleccionar-mascota {
@@ -18,8 +24,16 @@ body {
 
 .titulo {
     color: white;
-    font-size: 45px;
-    font-family: "Montserrat", serif;
+
+    /* Decidi que fuera grande por el poco contenido en la sección inicial, pero queda responsive pendiente. */
+    font-size: 100px;
+    font-family: fantasy, monospace;
+
+    /* Inclina el texto mucho más que font-style: italic; */
+    font-style: oblique;
+
+    /* La sombra del texto: el primer pixel es horizontal, el segundo es vertical y el tercero es difuminado. Luego sigue el color. */
+    text-shadow: 8px 8px 10px var(--color-blue);
 }
 
 .subtitulo{

@@ -127,6 +127,10 @@ Si desea mirar **Mokepon** puede acceder a los siguentes vinculos (Este se empie
 
 * [31. Mostrar y Ocultar secciones en HTML con JavaScript](#mostrar-y-ocultar-secciones-en-html-con-javascript)
 
+### Estilos con CSS
+
+* [32. Estilos CSS: Selectores, Propiedades y Valores](#estilos-css-selectores-propiedades-y-valores)
+
 
 
 
@@ -2822,3 +2826,119 @@ Ya tenemos toda la lógica de nuestro juego, en el siguente módulo vamos a trab
 <img src="https://assets-v2.lottiefiles.com/a/35735896-1176-11ee-8649-af549fb59863/lsQS6q92QV.gif">
 
 *Imagen Tomada De: https://lottiefiles.com/es/free-animations/css*
+
+
+
+
+
+
+
+
+
+
+---
+
+
+
+
+
+
+
+
+
+
+# Estilos con CSS
+
+
+
+
+
+
+
+
+
+
+## Estilos CSS: Selectores, Propiedades y Valores
+
+De ahora en adelante vamos a aprender CSS, un lenguaje de estilos el cual es la herramienta que usaremos para estilizar nuestro Mokepon. Hasta ahora nuestro juego tiene HTML y JavaScript. Por lo que a continuación vamos a ver:
+
+* Cómo cambiar el color de nuestros títulos.
+
+* Cómo cambiar nuestro color de fondo.
+
+* Como cambiar el posicionamiento de nuestros elementos.
+
+> **[Si deseas mirar el código CSS puedes hacer click en este vinculo!](https://github.com/santiagoencodigo/Desarrollo-Web-Profesional/blob/main/pages/04-programacion-basica/02-mokepon/mokepon.css)**
+
+Por lo que en la carpeta de nuestra carpeta de mokepon, vamos a crear un nuevo archivo asi como fue con el de JavaScript, por ende creamos un archivo style.css y lo importamos en nuestro HTML mediante la etiqueta link dentro de la etiqueta head.
+
+Por lo que:
+
+    <link rel = "stylesheet" href="./style.css">
+
+* link en HTML by MDN: https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/link
+
+Existen selectores, es el como nombranos nuestras etiquetas HTML asi como lo estabamos haciendo con ID en JavaScript. Y una vez escrito el selector dentro de las { } se insertaran las propiedades que son las caracteristicas que vamos a modificar y el valor, que es en la forma que vamos a modificar esa propiedad o caracteristica.
+
+* selectores en CSS by MDN: https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Basic_selectors
+
+por ejemplo:
+
+    h1 {
+        color: blue;
+    }
+
+CSS trabaja muy de la mano con HTML. 
+
+> Decidimos que cualquier etiqueta h1 quede de color blue.
+
+Por ende estamos creando un vinculo entre el archivo CSS y el HTML, esto se hace por medio de selectores en donde en el ejemplo de arriba, el selector es el h1.
+
+Hay varios tipos de selectores en CSS
+
+* Selector de tipo: Nombra de forma general cada etiqueta como h1, p, body, y como tal cualquier etiqueta HTML.
+
+* Selector de clase: A ciertas etiquetas HTML se les agrega clases, para que a ese conjunto de etiquetas se les de esa misma clase de estilos y se ven como por ejemplo: h1 class="titulo", p class="parrafo-uno" (El nombre de la clase, lo decidimos nosotros como programadores.)
+ 
+* Selector de ID: Similar al de JavaScript en donde se identifica a un sólo elemento con un ID o Identificador.
+
+Despues de seleccionar el vinculo, abrimos unas llaves { } asi como en las funciones de JavaScript, en donde dentro de estas llaves en CSS vamos a declarar los estilos que tendra esa etiqueta o ese selector en especifico.
+
+Dentro de las { } vamos a encontrar entonces las propiedades como background-color, margin, color, padding, etc... Y luego de : de la propiedad, sigue el valor.
+
+como por ejemplo:
+
+    margin: 0px;
+    color: yellow;
+    background-color: black;
+
+* Las propiedades son las caracteristicas que le podemos agregar a ese elemento HTML: Como color, alto, ancho, posición.
+
+* Los valores corresponde a la propiedad, como el color, pues puede ser negro, blanco y todos los colores que existan. Y si es margin, el tamaño en pixeles como 1px, 1rem, 1vh, etc... (Sistemas de medidas).
+
+**A continuación una página recomendada para mirar las propiedades y textos en general:**
+
+* cssrefence: https://cssreference.io/
+
+Esta página es muy recomendada para mirar todas las propiedades que tenemos disponibles en CSS.
+
+---
+
+**A continuación una página recomendada para mirar todos los colores que tenemos disponibles en CSS:**
+
+* htmlcolorcodes: https://htmlcolorcodes.com/es/
+
+> A continuación una versión de Mokepon con un diseño interesante por parte de la estudiante Camila Fernanda Torres Parra
+
+<img src="https://static.platzi.com/media/user_upload/upload-3b77ba87-c539-426e-aa80-30a6b906ac9a.png">
+
+> La siguente imagen es una versión muy completa por parte del estudiante Raúl Adolfo Sánchez Rodríguez
+
+<img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExZDR5ZXYyc215ZHkzMjF0bncxZzhnem1zN2JnMHBlODhiMWlvOHAzeSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/EJkKEllHIhTVHA5glU/giphy.gif">
+
+*Imagenes Tomadas De: https://platzi.com/cursos/programacion-basica/anatomia-de-css/*
+
+
+
+
+
