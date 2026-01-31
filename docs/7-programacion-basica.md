@@ -131,6 +131,16 @@ Si desea mirar **Mokepon** puede acceder a los siguentes vinculos (Este se empie
 
 * [32. Estilos CSS: Selectores, Propiedades y Valores](#estilos-css-selectores-propiedades-y-valores)
 
+* [33. Tipos de Visualización en CSS: Display Block, Inline e Inline Block](#tipos-de-visualización-en-css-display-block-inline-e-inline-block)
+
+* [34. Alineación de Elementos con Flexbox en CSS](#alineación-de-elementos-con-flexbox-en-css)
+
+* [35. Modelo de Caja en CSS: Espaciado y Bordes](#modelo-de-caja-en-css-espaciado-y-bordes)
+
+* [36. Diseño y Estilo de Páginas Web con HTML y CSS](#diseño-y-estilo-de-páginas-web-con-html-y-css)
+
+* [37. Estilos CSS para Botones en Juegos: Diseño de Pantallas Interactivas](#estilos-css-para-botones-en-juegos-diseño-de-pantallas-interactivas)
+
 
 
 
@@ -2942,3 +2952,325 @@ Esta página es muy recomendada para mirar todas las propiedades que tenemos dis
 
 
 
+
+
+
+
+
+
+---
+
+
+
+
+
+
+
+
+
+
+
+## Tipos de Visualización en CSS: Display Block, Inline e Inline Block
+
+Los tipos de visualización tambien son conocidos como tipos de display, vamos a ver los 3 más importantes:
+
+Display Block, Inline, Inline Block.
+
+* display en CSS by MDN: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/display
+
+Pensemos de cada elemento HTML como una caja, una visualización tipo block es la que utiliza el 100% de el with y lo que necesite de height. Pero el inline sólo ocupa lo que necesita.
+
+Es recomendable probar qué sucede con cada elemento una vez cambias en sus propiedades el width y el height.
+
+<img src="https://static.platzi.com/media/user_upload/upload-a7fb8929-2359-435f-a302-1ec6a87d1521.png">
+
+*Imagen Tomada De: https://platzi.com/cursos/programacion-basica/tipos-de-display/*
+
+
+
+
+
+
+
+
+
+
+
+---
+
+
+
+
+
+
+
+
+
+
+
+## Alineación de Elementos con Flexbox en CSS
+
+Anteriormente habia un problema con el posicionamiento en CSS debido a que era muy complicado, ahora por medio de flex es mucho más facil.
+
+Con Flexbox podemos alinear nuestros elementos de forma vertical, horizontal, podemos mover elementos como hacia la izquierda todos, a la derecha todos, etc... 
+
+Necesitamos contenedores/padre y elementos/hijos.
+
+* Los contenedores o padres: Son esas etiquetas HTML que contienen varios elementos por dentro como las etiquetas form, section, div, body, main, header.
+
+* Los elementos o hijos: Son esas etiquetas HTML que son elementos, como las etiquetas img, p, h1, input, label, etc...
+
+> Aunque P tambien puede ser un elemento o un contenedor.
+
+<img src="https://static.platzi.com/media/user_upload/Flexbox%20CSS-08adf878-9636-4f82-bc82-d4de000dda4f.jpg">
+
+*Imagen Tomada De: https://platzi.com/cursos/programacion-basica/flexbox/*
+
+---
+
+**Página Recomendada:**
+
+CSS TRICKS: https://css-tricks.com/
+
+Tiene diversas guias en inglés con información sobre CSS en general, como por ejemplo:
+
+* flexbox guide by CSS TRICKS: https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+
+---
+
+Nosotros para centrar nuestro contenido del juego y alinearlo a como se nos de la gana, podemos usar flexbox por medio de la propiedad display y el valor flex, siendo asi:
+
+    display:flex;
+
+y una vez hecho, vamos a determinar en qué dirección o ubicación queremos nuestros elementos. Digamos, en la siguente imagen esta en columna. Por medio de la propiedad flex-direction: column; por lo que:
+
+    display: flex;
+    flex-direction: column;
+
+y por otro lado, si queremos el contenido centrado. Ya una vez hecho el display:flex; Podemos usar justify-content para alinear nuestros elementos de forma horizontal.
+
+Y para poder alinear de forma central en la dimension vertical, podemos usar align-items: center;
+
+Entonces:
+
+    .seleccionar-mascota {
+        display: flex;
+        flex-direction: column;
+
+        justify-content: center;
+        align-items: center;
+    }
+
+<img src="https://static.platzi.com/media/user_upload/flexbox-e2bdaa04-3120-4d05-b85b-c31268fbd488.jpg">
+
+*Imagen Tomada De: https://platzi.com/cursos/programacion-basica/flexbox/*
+
+
+
+
+
+
+
+
+
+
+
+
+
+---
+
+
+
+
+
+
+
+
+
+
+
+
+
+## Modelo de Caja en CSS: Espaciado y Bordes
+
+Hay cierto espacio externo e interno dentro de cada elemento ya sea etiqueta padre o etiqueta hijo, podemos pensar de cada elemento HTML como una caja.
+
+* Modelo de Caja en CSS by MDN: https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Box_model
+
+El modelo de caja consiste en que cada elemento contiene los siguentes elementos de espaciado:
+
+* Margin
+
+* Border
+
+* Padding
+
+* Content
+
+<img src="https://media.gcflearnfree.org/content/5ef2084faaf0ac46dc9c10be_06_23_2020/box_model.png">
+
+*Imagen Tomada De: https://platzi.com/cursos/programacion-basica/modelo-de-caja/*
+
+En donde cada elemento, tiene un tamaño como tal. Y si agregamos un padding, esas dimensiones se van a alterar adquiriendo ese nuevo tamaño tambien.
+
+> Cada una de estas son propiedades CSS.
+
+Si no queremos que se nos modifique las dimensiones de nuestra caja podemos utilizar la propiedad
+
+    box-sizing: border-box;
+
+Por lo que nuestra caja no se va a crecer por el padding o border que lleguemos a agregar.
+
+* box sizing: border box en CSS by midudev: https://midu.dev/que-es-y-para-que-sirve-box-sizing-border-box/
+
+* box sizing en CSS by MDN: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/box-sizing
+
+Gracias a esto, entonces por cada label vamos a agregar estas caracteristicas para hacer esos elementos más grandes y más vistozos. 
+
+Además en el input agregaremos la propiedad y el valor **display: none;** para que asi desaparezcan los circulos o los inputs type radio y asi quedará solamente la caja del label y aun asi, funcionará común y corriente debido a la relación de cada label con su respectivo input.
+
+* Display en CSS by MDN: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/display
+
+Ya con los principios que hemos visto de CSS se nos permite poder realizar un diseño bonito y agradable para la vista. Por lo que a continuación diferentes versiones de varios usuarios.
+
+> Versión de Jafet Alvaro Antonio
+
+<img src="https://static.platzi.com/media/user_upload/Captura-471ded36-3756-4224-8546-0946e3568d6c.jpg">
+
+> Versión de Jaime Saul Romero Lezama
+
+<img src="https://static.platzi.com/media/user_upload/mokemon-inicio-48428304-0716-4cf5-aa7f-4a3342c245e2.jpg">
+
+> Versión de Anyela Paola Gil
+
+<img src="https://static.platzi.com/media/user_upload/mokepon-0dacd3b6-0479-4c49-a3ba-87ed808aefb9.jpg">
+
+> Versión de Diana Clabel
+
+<img src="https://static.platzi.com/media/user_upload/kawaiipon-2a356b3f-1ecf-4a5b-b7a7-b3f0d88b0aa4.jpg">
+
+> Versión de Steve Calderón Sánchez
+
+<img src="https://static.platzi.com/media/user_upload/Captura%20de%20Pantalla%202022-08-15%20a%20la%28s%29%208.47.14%20p.m.-50aeb031-b992-474b-a546-8112741493ee.jpg">
+
+> Versión de Daniel Ardila
+
+<img src="https://static.platzi.com/media/user_upload/Captura-0faa0314-7ee5-4c86-a9a5-dad05693177d.jpg">
+
+> Versión de alan david González guzmán
+
+<img src="https://static.platzi.com/media/user_upload/Captura%20de%20pantalla%202023-03-12%20145216-8ecbeed9-03c5-41f3-8d63-49fe5dd3ef1a.jpg">
+
+> Versión de Sofía Geisel
+
+<img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNzhtMzc3cGdxd3c5ZGh2aGNvMzlkM2RpOW83ZnNmbXdtMWFmd3NseCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/aroksyHpBpYpJYPU5j/giphy.gif">
+
+
+
+
+
+
+
+
+
+
+
+---
+
+
+
+
+
+
+
+
+
+
+
+## Diseño y Estilo de Páginas Web con HTML y CSS
+
+Antes de programar, se piensa mucho en el diseño de una página web y es importante usar herramientas para poder inspirarse. Una página recomendada es:
+
+* Pinterest: https://co.pinterest.com/
+
+Es muy recomendable revisar esta página, hacer su login y buscar páginas web. Muy interesante las busquedas que pueden salir debido a que muchos diseñadores publican sus trabajos aqui. Como por ejemplo, algunos de los elementos que me he encontrado:
+
+<img src="https://i.pinimg.com/736x/ac/7a/62/ac7a628b7e492f74b35c4c8c6a0e7c19.jpg">
+
+*Imagen Tomada De: https://co.pinterest.com/pin/770960030004116941/*
+
+<img src="https://i.pinimg.com/736x/72/20/49/722049f5f5d1b680b4accb9265e6eac5.jpg">
+
+*Imagen Tomada De: https://co.pinterest.com/pin/31032684928135750/*
+
+He incluso ya diseños muy avanzados como el siguente: https://co.pinterest.com/pin/770960030004116959/
+
+Tambien se pueden hacer busquedas de Diseño Web, Diseño de App.
+
+---
+
+Por otro lado, otra herramienta muy recomendable es:
+
+* colorhunt: https://colorhunt.co/
+
+Es para revisar todo tipo de paleta de colores, importante para cuando estas buscando combinaciones de colores, paletas de colores, etc...
+
+<img src="https://colorhunt.co/img/color-hunt-og.png">
+
+*Imagen Tomada De: https://colorhunt.co/*
+
+---
+
+Mirando el lado de la tipografía, tenemos las fuentes, el tipo de letra. Para esto es muy recomendable:
+
+* googlefonts: https://fonts.google.com/
+
+> Pienso que sería muy interesante, realizar la documentación con diferentes tipografias, trabajos y muchas explicaciones jugando con todo tipo de diseños de este estilo.
+
+Es una buena practica que los estilos que se editan en el CSS esten en el orden que uno leeria el HTML.
+
+Entonces. Mirar una paleta de colores, mirar diseños interesantes para inspirarse, utilizar diferentes tipos de fuentes, son unas cuantas herramientas que podemos utilizar para ayudarnos con ese diseño.
+
+A continuación una serie de versiones de mokepon aplicando muchas de estas recomendaciones entre paleta de colores, diseño, fuentes.
+
+> Versión de Benjamin Santos Sanchez
+
+<img src="https://static.platzi.com/media/user_upload/upload-a38660fd-80bc-4642-b591-fba40c4bca43.png">
+
+> Versión de Mauricio Franco
+
+<img src="https://static.platzi.com/media/user_upload/upload-43e9f37b-4bf9-4f23-bf33-ecacfb50bd5c.png">
+
+*Imagenes Tomadas De: https://platzi.com/cursos/programacion-basica/imagenes-para-los-mokepones/*
+
+
+
+
+
+
+
+
+
+
+---
+
+
+
+
+
+
+
+
+
+
+## Estilos CSS para Botones en Juegos: Diseño de Pantallas Interactivas
+
+Para un boton es agradable ponerle un width y un height, para que no sea un cuadrado es bonito ponerle la propiedad y valor border-radius: 5px; y entre más px, más circular. Ajustarle los colores background, border en relación al fondo de la página, es importante mirar qué contraste se hacen los colores. 
+
+Finalmente para separar el boton de cualquier elemento es bueno usar la propiedad margin.
+
+> Versión de Johan Nicolás Díaz Cárdena
+
+<img src="https://static.platzi.com/media/user_upload/upload-48ec60c9-edca-45a5-94f1-aea75a74e832.png">
+
+*Imagen Tomada De: https://platzi.com/cursos/programacion-basica/estilos-del-boton/*

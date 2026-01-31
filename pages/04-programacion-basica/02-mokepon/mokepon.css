@@ -1,19 +1,47 @@
-/* Existen diferentes PSEUDOS CLASES que dependen de las acciones del usuario */
-/* :hover --> Cuando el usuario pasa el mouse sobre el elemento */
-/* :active --> Cuando el usuario hace click en el elemento */
-/* :checked --> Cuando el usuario selecciona un input */
+/* Inicia mi documento CSS */
+
+    /* Edición del 04/08/2025 */
+    /* Edición del 30/01/2025 */
+
+
+
+
+        /* Existen diferentes PSEUDOS CLASES que dependen de las acciones del usuario */
+
+        /* :hover --> Cuando el usuario pasa el mouse sobre el elemento */
+        /* :active --> Cuando el usuario hace click en el elemento */
+        /* :checked --> Cuando el usuario selecciona un input */
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 body {
     font-family: "Poppins", serif;
-    background-image: url('../../../Assets/img/2-cuadricula-negra.jpg');
 }
+
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    background: linear-gradient(135deg, gray, var(--color-second));
+}
+
+
+
+
+
+
 
 /* variables */
 
 :root {
-    --color-blue: #1E90FF;
+    --color-primary: #1E90FF;
+    --color-second: #557D96;
+    --background-early-color: rgb(221, 221, 221);
 }
+
+
+
+
+
 
 #seleccionar-mascota {
     display: flex;
@@ -22,8 +50,13 @@ body {
     align-items: center;
 }
 
+
+
+
+
+
 .titulo {
-    color: white;
+    color: var(--background-early-color);
 
     /* Decidi que fuera grande por el poco contenido en la sección inicial, pero queda responsive pendiente. */
     font-size: 100px;
@@ -33,97 +66,184 @@ body {
     font-style: oblique;
 
     /* La sombra del texto: el primer pixel es horizontal, el segundo es vertical y el tercero es difuminado. Luego sigue el color. */
-    text-shadow: 8px 8px 10px var(--color-blue);
+    text-shadow: 8px 8px 10px var(--color-second);
 }
 
 .subtitulo{
-    color: white;
-    font-size: 30px;
+    color: var(--background-early-color);
+    font-size: 50px;
+    font-weight: 600;
+    text-shadow: 4px 4px 6px var(--color-second);
 }
+
+
+
+
+
 
 .tarjetas, .tarjetas-ataques {
     display:flex;
+    margin: 10px;
     gap:10px;
 }
 
 .tarjeta-de-mokepon {
-    width: 180px;
-    height: 100px;
-    background: rgb(253, 73, 73);
+    width: 200px;
+    height: 120px;
+
     padding: 10px;
+
     box-sizing: border-box;
-    border-radius: 20px;
+
+    border:1px solid white;
+    border-radius: 5px;
+
+    background: transparent;
+    color: black;
+
+
     display:flex;
-    color: white;
     align-items: center;
     justify-content: center;
+
     cursor:pointer;
     /*margin: 10px; --> Margen (cuadro más externo */
     /*border: 1px solid hotpink; ---> Color de la margen*/
-    transition: 0.7s;
+    transition: 0.7s all;
 }
 
 .tarjeta-de-mokepon:hover{
-    transform: scale(1.1);
+    border:1px solid black;
+    box-shadow: 8px 8px 10px var(--color-second);
+}
+
+.tarjeta-de-mokepon img {
+    width: 80px;
+    transition: 1s all;
+}
+
+.tarjeta-de-mokepon:hover img {
+    width: 85px;
 }
 
 #boton-seleccionar {
-    width: 180px;
-    height: 40px;
-    border-radius: 20px;
-    background: #eb503f;
-    border: 2px solid #eb503f;
-    color: white;
+    width: 200px;
+    height: 60px;
+
+    border-radius: 5px;
+
+    background: var(--color-second);
+    border: 2px solid black;
+    color: var(--background-early-color);
+
+    cursor: pointer;
+
     font-family: "Poppins", serif;
     margin-top: 20px;  /*margin-(top,right,left) o margin: 10px 10px 10px 10px*/
+
     transition:0.7s;
 }
 
 #boton-seleccionar:hover{
     transform: scale(1.1);
-    background-color:white;
+    background-color:var(--background-early-color);
+    box-shadow: 8px 8px 8px var(--color-second);
     color:black;
-}
-
-
-.tarjeta-de-mokepon img {
-    width: 80px
 }
 
 input {
     display: none
 }
 
-
-
 input:checked + label {
-    background-color: #131311;
+    border:1px solid black;
+    background-color: gray;
+    font-weight: bold;
 }
+
+#btn-home {
+    margin-top: 20px;
+    padding: 10px;
+    text-decoration: none;
+    color: var(--background-early-color);
+    font-family: "Poppins", serif;
+
+    border:1px solid white;
+
+    transition: 1s;
+}
+
+#btn-home:hover {
+    transform: scale(1.3);
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+/* Segunda Sección: Ataque */
 
 #seleccionar-ataque {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background:linear-gradient(135deg, gray, var(--color-second));
 }
 
-.boton-de-ataque {
-    background-color: rgb(253, 73, 73);
-    padding: 10px;
-    box-sizing: border-box;
-    border-radius: 20px;
-    border-color: transparent;
-    width: 100px;
-    color: white;
-    font-family: "Poppins", serif
-    
-}
+/* Botones de Ataque */
+
+    .boton-de-ataque {
+        background-color: transparent;
+        padding: 10px;
+        box-sizing: border-box;
+
+        border: 1px solid white;
+        border-radius: 5px;
+
+        width: 100px;
+        color: white;
+
+        font-family: "Poppins", serif;
+
+        cursor: pointer;
+
+        transition: 1s all;
+    }
+
+    .boton-de-ataque:hover {
+        border-color: transparent;
+    }
+
+    /* Colores Individuales */
+
+    #boton-fuego:hover {
+        background-color: rgba(219, 133, 14, 0.9);
+        box-shadow: 8px 8px 70px #ffec1e;
+    }
+
+    #boton-agua:hover {
+        background-color: #539fb8;
+        box-shadow: 8px 8px 70px #00BFFF;
+    }
+    #boton-tierra:hover {
+        background-color: #50902a;
+        box-shadow: 8px 8px 70px #1af01e;
+    }
 
 #mensajes {
     width: 280px;
-    background-color: rgb(253, 73, 73);
+    background-color: var(--background-early-color);
+
     padding: 20px;
     margin-top: 20px;
-    border-radius: 20px;
+
+    border-radius: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -131,11 +251,23 @@ input:checked + label {
 }
 
 #reiniciar {
-    border: none black;
-    background-color: rgb(253, 73, 73);
-    color: white;
+    padding: 10px;
+
+    border: 1px solid transparent;
+    background-color: var(--color-second);
+    color: var(--background-early-color);
     font-family: 'Poppins', serif;
+
+    cursor: pointer;
+    transition: 1s all;
 }
+
+#reiniciar:hover {
+    background-color: var(--background-early-color);
+    border:1px solid black;
+    color: black;
+}
+
 
 .ataques {
     display: grid;
@@ -146,11 +278,11 @@ input:checked + label {
     display: flex;
     flex-direction: column;
     align-items:center;
-    background-color: white;
-    /* EDICION DEL 4/08/2025 */
+    background-color: var(--background-early-color);
+
     padding:20px;
     margin:20px;
-    border-radius:20px;
+    border-radius:5px;
 
 }
 
