@@ -141,6 +141,10 @@ Si desea mirar **Mokepon** puede acceder a los siguentes vinculos (Este se empie
 
 * [37. Estilos CSS para Botones en Juegos: Diseño de Pantallas Interactivas](#estilos-css-para-botones-en-juegos-diseño-de-pantallas-interactivas)
 
+* [38. Estilos CSS para Mejorar la Interfaz del Juego](#estilos-css-para-mejorar-la-interfaz-del-juego)
+
+* [39. Estilizado de Pantallas de Juego con CSS y Flexbox](#estilizado-de-pantallas-de-juego-con-css-y-flexbox)
+
 
 
 
@@ -3274,3 +3278,73 @@ Finalmente para separar el boton de cualquier elemento es bueno usar la propieda
 <img src="https://static.platzi.com/media/user_upload/upload-48ec60c9-edca-45a5-94f1-aea75a74e832.png">
 
 *Imagen Tomada De: https://platzi.com/cursos/programacion-basica/estilos-del-boton/*
+
+
+
+
+
+
+
+
+
+
+---
+
+
+
+
+
+
+
+
+
+
+## Estilos CSS para Mejorar la Interfaz del Juego
+
+Para pensar en una interfaz, es muy recomendable realizar dibujos y luego revisar el HTML, CSS y JS para verificar qué se tiene y cuáles son los cambios que se tiene que realizar. Asi estructuramos antes de escribir código haciendo mucho más facil su desarrollo pues cómo hacemos algo que realmente todavia no tenemos tan claro.
+
+> Por esto mismo tambien es importante tomar referencias de páginas como pinterest.
+
+Por lo que en conclusión es tener bien definido en la página cuáles son los elementos padre y los elementos hijo. Asi entonces podremos crear divs o usar html semántico para tener contenedores los cuales tienen elementos que podremos distribuir al 100% de nuestro gusto.
+
+* HTML semántico by Wikipedia: https://es.wikipedia.org/wiki/HTML_sem%C3%A1ntico
+
+* Elementos Semánticos by freecodecamp: https://www.freecodecamp.org/espanol/news/elementos-semanticos-html5-explicados/
+
+* div en HTML by MDN: https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/div
+
+Las formas de distribución es de las diferentes combinaciones que tenemos entre:
+
+* display en CSS by MDN: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/display
+
+* align-items en CSS by MDN: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/align-items
+
+* justify-content en CSS by MDN: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/justify-content
+
+<img src="https://maquetadoraweb.wordpress.com/wp-content/uploads/2011/12/boceto.png">
+
+*Imagen Tomada De: https://maquetadoraweb.wordpress.com/2011/12/05/curso-de-css-y-html-pasos-iniciales-para-una-correcta-maquetacion/*
+
+
+
+
+
+
+
+
+
+
+---
+
+
+
+
+
+
+
+
+
+
+## Estilizado de Pantallas de Juego con CSS y Flexbox
+
+Como recomendaciones para estilización, primero es pensar de la pagina como cajas pequeñas que son contenidas en cajas grandes. Y lo otro es
