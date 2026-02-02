@@ -16,6 +16,8 @@ const spanVidasJugador = document.getElementById('vidas-jugador')
 const spanVidasEnemigo = document.getElementById('vidas-enemigo')
 
 const sectionMensajes = document.getElementById("resultado")
+const sectionResultados = document.getElementById("mensajes")
+
 const ataquesDelJugador = document.getElementById("ataques-del-jugador")        
 const ataquesDelEnemigo = document.getElementById("ataques-del-enemigo")
 
@@ -104,6 +106,8 @@ function iniciarJuego() {
 
 function seleccionarMascota(){
     sectionSeleccionarMascota.style.display = 'none'
+
+    // sectionSeleccionarAtaque.style.display = 'block'
     sectionSeleccionarAtaque.style.display = 'flex'
 
     //Esto es una forma de modificación del DOM
@@ -135,15 +139,15 @@ function SeleccionarMascotaEnemigo(){
 }
 
 function ataqueFuego(){
-    ataqueJugador = 'Fuego'
+    ataqueJugador = 'Fuego 🔥'
     ataqueAleatorioEnemigo()
 }
 function ataqueAgua(){
-    ataqueJugador = 'Agua'
+    ataqueJugador = 'Agua 🌊'
     ataqueAleatorioEnemigo()
 }
 function ataqueTierra(){
-    ataqueJugador = 'Tierra'
+    ataqueJugador = 'Tierra 🌱'
     ataqueAleatorioEnemigo()
 }
 
@@ -151,11 +155,11 @@ function ataqueAleatorioEnemigo(){
     let ataqueAleatorio = aleatorio(1,3)
 
     if(ataqueAleatorio == 1) {
-        ataqueEnemigo = 'Fuego'
+        ataqueEnemigo = 'Fuego 🔥'
     } else if(ataqueAleatorio == 2) {
-        ataqueEnemigo = 'Agua'
+        ataqueEnemigo = 'Agua 🌊'
     } else {
-        ataqueEnemigo = 'Tierra'
+        ataqueEnemigo = 'Tierra 🌱'
     }
     
     combate()
@@ -166,36 +170,72 @@ function ataqueAleatorioEnemigo(){
 //¿Cómo podrías mejorar tu codigo?
 
 function combate(){
-
-
     if(ataqueJugador == ataqueEnemigo) {
-        crearMensaje("Empate🙌")
-    } else if(ataqueJugador == 'Fuego' && ataqueEnemigo == 'Tierra') {
-        crearMensaje("Ganaste👍")
+        sectionResultados.style.backgroundColor = '#bababa'
+        crearMensaje("Empate 🙌")
+    } else if(ataqueJugador == 'Fuego 🔥' && ataqueEnemigo == 'Tierra🌱') {
+        sectionResultados.style.backgroundColor = '#8bbc8b'
+        crearMensaje("Ganaste 👍")
         vidasEnemigo--
-        spanVidasEnemigo.innerHTML = vidasEnemigo
-    } else if(ataqueJugador == 'Agua' && ataqueEnemigo == 'Fuego') {
-        crearMensaje("Ganaste👍")
+        // spanVidasEnemigo.innerHTML = vidasEnemigo
+    } else if(ataqueJugador == 'Agua 🌊' && ataqueEnemigo == 'Fuego 🔥') {
+        sectionResultados.style.backgroundColor = '#8bbc8b'
+        crearMensaje("Ganaste 👍")
         vidasEnemigo--
-        spanVidasEnemigo.innerHTML = vidasEnemigo
-    } else if(ataqueJugador == 'Tierra' && ataqueEnemigo == 'Agua') {
-        crearMensaje("Ganaste👍")
+        // spanVidasEnemigo.innerHTML = vidasEnemigo
+    } else if(ataqueJugador == 'Tierra 🌱' && ataqueEnemigo == 'Agua 🌊') {
+        sectionResultados.style.backgroundColor = '#8bbc8b'
+        crearMensaje("Ganaste 👍")
         vidasEnemigo--
-        spanVidasEnemigo.innerHTML = vidasEnemigo
+        // spanVidasEnemigo.innerHTML = vidasEnemigo
     } else {
-        crearMensaje("Perdiste❌")
+        sectionResultados.style.backgroundColor = '#e78282'
+        crearMensaje("Perdiste ❌")
         vidasJugador--
-        spanVidasJugador.innerHTML = vidasJugador
+        // spanVidasJugador.innerHTML = vidasJugador
     }
+
+    // Corazones que representan vidas en el juego.
+    
+        // Vidas Jugador
+        if (vidasJugador==3){
+            spanVidasJugador.innerHTML = '🤍🤍🤍'
+        } else if (vidasJugador==2){
+            spanVidasJugador.innerHTML = '🤍🤍'
+        } else if (vidasJugador==1){
+            spanVidasJugador.innerHTML = '🤍'
+        } else {
+            spanVidasJugador.innerHTML = '💀'
+        }
+
+        // Vidas Enemigo
+        if (vidasEnemigo==3){
+            spanVidasEnemigo.innerHTML = '🖤🖤🖤'
+        } else if (vidasEnemigo==2){
+            spanVidasEnemigo.innerHTML = '🖤🖤'
+        } else if (vidasEnemigo==1){
+            spanVidasEnemigo.innerHTML = '🖤'
+        } else {
+            spanVidasEnemigo.innerHTML = '💀'
+        }
+
+        // Cara Feliz en Caso de Ganar
+        if (vidasJugador == 0 && vidasEnemigo != 0){
+            spanVidasEnemigo.innerHTML = '😉'
+                        
+        } else if (vidasEnemigo == 0 && vidasJugador != 0){
+            spanVidasJugador.innerHTML = '😉'
+        }
 
     revisarVidas()
 }
 
 function revisarVidas(){
+
     if(vidasEnemigo == 0) {
-        crearMensajeFinal('Ganaste🥳')
+        crearMensajeFinal('Ganaste 🥳')
     }else if(vidasJugador == 0) {
-        crearMensajeFinal('Perdiste😥')
+        crearMensajeFinal('Perdiste 😥')
     }
 }
 

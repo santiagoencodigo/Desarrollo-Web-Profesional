@@ -12,16 +12,25 @@
         /* :active --> Cuando el usuario hace click en el elemento */
         /* :checked --> Cuando el usuario selecciona un input */
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+/* Font - Family Tipografía */
+    @import url('https://fonts.googleapis.com/css2?family=Fascinate&display=swap');
+
+
+/* Estilos */
+
 body {
-    font-family: "Poppins", serif;
+    font-family: "Fascinate", system-ui;
 }
 
 html, body {
     width: 100%;
     height: 100%;
     margin: 0;
-    background: linear-gradient(135deg, gray, var(--color-second));
+    background: linear-gradient(135deg, var(--color-third), var(--color-second));
+}
+
+button {
+    font-family: "Fascinate", system-ui;
 }
 
 
@@ -33,9 +42,14 @@ html, body {
 /* variables */
 
 :root {
+    /* Colores */
     --color-primary: #1E90FF;
     --color-second: #557D96;
+    --color-third: gray;
     --background-early-color: rgb(221, 221, 221);
+
+    /* Letras y Fuentes */
+    --tipografia: "Fascinate", system-ui;
 }
 
 
@@ -60,13 +74,15 @@ html, body {
 
     /* Decidi que fuera grande por el poco contenido en la sección inicial, pero queda responsive pendiente. */
     font-size: 100px;
-    font-family: fantasy, monospace;
+    font-family: var(--tipografia);
 
     /* Inclina el texto mucho más que font-style: italic; */
     font-style: oblique;
 
     /* La sombra del texto: el primer pixel es horizontal, el segundo es vertical y el tercero es difuminado. Luego sigue el color. */
     text-shadow: 8px 8px 10px var(--color-second);
+
+    margin-bottom: 0;
 }
 
 .subtitulo{
@@ -95,11 +111,11 @@ html, body {
 
     box-sizing: border-box;
 
-    border:1px solid white;
+    border:2px solid var(--color-second);
     border-radius: 5px;
 
     background: transparent;
-    color: black;
+    color: var(--background-early-color);
 
 
     display:flex;
@@ -113,8 +129,8 @@ html, body {
 }
 
 .tarjeta-de-mokepon:hover{
-    border:1px solid black;
-    box-shadow: 8px 8px 70px var(--color-second);
+    border:2px solid white;
+    box-shadow: 8px 8px 90px var(--color-second);
 }
 
 .tarjeta-de-mokepon img {
@@ -127,13 +143,16 @@ html, body {
 
     border-radius: 5px;
 
-    background: var(--background-early-color);
-    border: 1px solid transparent;
-    color: black;
+    background: transparent;
+    box-shadow: 10px 10px 50px var(--color-second);
+
+    border: 2px solid var(--color-second);
+    color: white;
 
     cursor: pointer;
 
-    font-family: "Poppins", serif;
+    font-family: var(--tipografia);
+
     margin-top: 20px;  /*margin-(top,right,left) o margin: 10px 10px 10px 10px*/
 
     transition:0.7s;
@@ -141,9 +160,9 @@ html, body {
 
 #boton-seleccionar:hover{
     transform: scale(1.1);
-    background-color: white;
+    background-color: var(--background-early-color);
     box-shadow: 8px 8px 50px var(--color-second);
-    color:black;
+    color:var(--color-second);
 }
 
 input {
@@ -151,8 +170,9 @@ input {
 }
 
 input:checked + label {
-    border:1px solid black;
-    background-color: gray;
+    border:2px solid var(--background-early-color);
+    background-color: var(--background-early-color);
+    color: var(--color-second);
 }
 
 #btn-home {
@@ -160,9 +180,9 @@ input:checked + label {
     padding: 10px;
     text-decoration: none;
     color: var(--background-early-color);
-    font-family: "Poppins", serif;
+    font-family: var(--tipografia);
 
-    border:1px solid white;
+    border:2px solid white;
 
     transition: 1s;
 }
@@ -170,6 +190,7 @@ input:checked + label {
 #btn-home:hover {
     transform: scale(1.3);
     font-weight: bold;
+    box-shadow: 1px 1px 12px white;
 }
 
 
@@ -200,11 +221,12 @@ input:checked + label {
         border: 1px solid white;
         border-radius: 5px;
 
-        width: 100px;
+        width: 120px;
         color: white;
 
-        font-family: "Poppins", serif;
-
+        font-family: var(--tipografia);
+        font-size:15px;
+        
         cursor: pointer;
 
         transition: 1s all;
@@ -234,6 +256,9 @@ input:checked + label {
     width: 280px;
     background-color: var(--background-early-color);
 
+    color: var(--color-second);
+    font-size: 20px;
+
     padding: 20px;
     margin-top: 20px;
 
@@ -249,8 +274,10 @@ input:checked + label {
 
     border: 1px solid transparent;
     background-color: var(--color-second);
+
     color: var(--background-early-color);
     font-family: 'Poppins', serif;
+    font-size: 15px;
 
     cursor: pointer;
     transition: 1s all;
@@ -258,14 +285,15 @@ input:checked + label {
 
 #reiniciar:hover {
     background-color: var(--background-early-color);
-    border:1px solid black;
-    color: black;
+    border:1px solid var(--color-second);
+    color: var(--color-second);
 }
 
-
 .ataques {
-    display: grid;
-    grid-template-columns: 150px 150px;
+    display: flex;
+    /* grid-template-columns: 150px 150px; */
+
+    margin: 10px;
 }
 
 .ataques-jugador, .ataques-enemigo {
@@ -273,15 +301,35 @@ input:checked + label {
     flex-direction: column;
     align-items:center;
     background-color: var(--background-early-color);
+    color: var(--color-second);
 
+    width:200px;
     padding:20px;
     margin:20px;
     border-radius:5px;
 
 }
 
-@media (max-width: 360px) {
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+/* Responsive Desing */
+
+@media (max-width: 620px) {
     .tarjetas, .tarjetas-ataques {
         flex-direction: column;
     }
 }
+
+/* Otras adecuaciones responsive pendientes. */

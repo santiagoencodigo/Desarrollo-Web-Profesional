@@ -145,6 +145,14 @@ Si desea mirar **Mokepon** puede acceder a los siguentes vinculos (Este se empie
 
 * [39. Estilizado de Pantallas de Juego con CSS y Flexbox](#estilizado-de-pantallas-de-juego-con-css-y-flexbox)
 
+* [40. Separación de Mensajes y estilos en JavaScript y HTML](#separación-de-mensajes-y-estilos-en-javascript-y-html)
+
+* [41. CSS GRID: Organiza Elementos en Rejillas Bidimensionales](#css-grid-organiza-elementos-en-rejillas-bidimensionales)
+
+* [42. Diseño Responsivo con CSS: Media Queries y Flexbox](#diseño-responsivo-con-css-media-queries-y-flexbox)
+
+* [43. Pseudoclases en CSS: Mejora la Interacción del Usuario]
+
 
 
 
@@ -3347,4 +3355,306 @@ Las formas de distribución es de las diferentes combinaciones que tenemos entre
 
 ## Estilizado de Pantallas de Juego con CSS y Flexbox
 
-Como recomendaciones para estilización, primero es pensar de la pagina como cajas pequeñas que son contenidas en cajas grandes. Y lo otro es
+Como recomendaciones para estilización, primero es pensar de la pagina como cajas pequeñas que son contenidas en cajas grandes. Esto es importante para tener mucha facilidad al momento de trabajar con el diseño en el CSS.
+
+La segunda recomendación es primero estilizar lo más grande y luego hasta lo más pequeño. (Esto facilita bastante el trabajo.)
+
+En ese orden vamos a trabajar primero con el gran contenedor, luego el título, luego el subtítulo y luego nuestras cajas de selección de mascota o la de selección de ataque.
+
+Si nosotros editamos nuestra sección de seleccionar ataque, el contenedor principal. No vamos a ver ningún cambio en el diseño, esto es debido a que anteriormente en nuestro JavaScript nosotros usamos que al momento de darle al boton de seleccionar-mascota, hay un método addEventListener el cual pone en display none la sección seleccionar mascota y en display block en nuestra sección seleccionar mascota.
+
+Por lo que se cruza en el código el display block en JS y el display flex en CSS, pero la jerarquia prioriza el JS por lo que tenemos que cambiar el display block por un display flex en JS.
+
+Por lo que si miramos nuestra sección seleccionar-ataque, ya veremos los elementos uno al lado de otro estilo fila siendo asi el flex mostrandose.
+
+* Usaremos flex-direction: column; para tener nuestros estilos de arriba hacia abajo.
+
+* Usamos align-items: center; para tener todo nuestro contenido centrado.
+
+Siendo asi editado nuestra caja contenedora.
+
+**A continuación habran apuntes del cómo podría realizarse el diseño.**
+
+Es muy recomendable para elementos que son similares como los botones de ataque, que en su HTML se le agregue un atributo clase para editarlos de forma simultanea en el CSS y no uno por uno.
+
+En el momento de editar los botones, es recomendable siempre agregarle un padding (espacio interno), un box-sizing:border-box; para que siempre mantenga su tamaño sin importar el border, padding y demás tamaños internos que afecten al tamaño final. Y si se quiere, se puede agregarle un border-radius: 5px; (Entre más pixeles del 1 al 100, más circular.) si es de su gusto que el boton quede como circular o con los bordes circulares.
+
+Por otro lado, en los botones la tipografía que se halla puesto en el padre contenedor, no la toma. Por ende si se desea que el boton por dentro tenga una tipografía diferente, es necesario atribuirle la propiedad y valor font-family: (familia que se desea o encontrada e importada de google fonts); 
+
+> Versión de Anyela Paola Gil
+
+<img src="https://static.platzi.com/media/user_upload/2-53fe937e-47cc-46ea-8faa-421fce7214a0.jpg">
+
+*Imagen Tomada De: https://platzi.com/cursos/programacion-basica/layout-titulo-y-ataques/*
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+---
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## Separación de Mensajes y estilos en JavaScript y HTML
+
+En el desarrollo de interfaces web modernas es fundamental estructurar el contenido utilizando contenedores semánticos. Estos consisten en elementos HTML que no solo agrupan contenido visualmente, sino que también aportan significado tanto al navegador como a los motores de búsqueda y a las tecnologías de accesibilidad.
+
+Algunos ejemplos de contenedores semánticos son **header**, **main**, **section**, **article**, **nav** y **footer**. Su función principal es separar lógicamente las diferentes secciones de una aplicación o sitio web, facilitando la lectura del código, el mantenimiento del proyecto y la comprensión de la jerarquía del contenido.
+
+<footer>. Su función principal es separar lógicamente las diferentes secciones de una aplicación o sitio web, facilitando la lectura del código, el mantenimiento del proyecto y la comprensión de la jerarquía del contenido.
+
+El uso adecuado de estos elementos mejora:
+
+* La accesibilidad, ya que los lectores de pantalla interpretan mejor la estructura.
+
+* El SEO, al permitir que los motores de búsqueda comprendan el propósito de cada sección.
+
+* La escalabilidad del proyecto, al hacer el código más ordenado y predecible.
+
+Una práctica altamente recomendada durante el desarrollo frontend es el uso de las herramientas de desarrollo del navegador (DevTools). Estas herramientas permiten inspeccionar el HTML y CSS que se está renderizando en tiempo real.
+
+**Al inspeccionar un elemento específico dentro de la página, el navegador muestra:**
+
+* La estructura HTML correspondiente.
+
+* Las reglas CSS aplicadas, indicando su origen, especificidad y posibles sobrescrituras.
+
+Esta metodología permite realizar modificaciones directamente desde el panel de CSS del inspector, lo que resulta especialmente útil para:
+
+* Probar estilos visuales sin alterar el código fuente.
+
+* Ajustar márgenes, tamaños, colores y posiciones en tiempo real.
+
+* Detectar conflictos entre reglas CSS.
+
+Una vez obtenidos los resultados deseados, el código puede ser trasladado manualmente al archivo CSS del proyecto, garantizando así que los cambios sean persistentes.
+
+La razón del por qué se mencionan estas etiquetas es que en el HTML, tenemos varias secciones que se podrian separar en varios. Como por ejemplo, separar las secciones de ataques tanto de nuestro enemigo como de nuestro jugador y asi no tenerlo en un sólo parrafo de texto asi como lo estabamos haciendo anteriormente con un nuevo appendChild que como tal era una frase de concatenacion entre las variables que guardaban el ataque de nuestro jugador y del enemigo y si gano o perdio.
+
+A continuación una serie de ejemplos de esto:
+
+> Versión de: Felipe Moreno en donde separo los ataques del jugador de los ataques del enemigo.
+
+<img src="https://i.imgur.com/n5Gtv89.png">
+
+> Versión de: Esteban Chica en donde agrego diferentes imagenes y solamente el ataque enunciando abajo si se gano o perdió además de que menciona una revancha y no un "reiniciar".
+
+<img src="https://static.platzi.com/media/user_upload/Error%20solucionado-340ebb2c-9fe8-4f39-8862-ffc69fa054bb.jpg">
+
+*Imagen Tomada De: https://platzi.com/cursos/programacion-basica/51972-editando-javascript/*
+
+---
+
+A continuación un nuevo atajo que sirve un monton!
+
+A medida que un proyecto crece, el código HTML y CSS puede volverse extenso. En este contexto, el uso de atajos como Ctrl + F (o Cmd + F en macOS) se convierte en una herramienta esencial.
+
+Esta funcionalidad permite:
+
+* Localizar rápidamente etiquetas HTML específicas.
+
+* Buscar clases (class) o identificadores (id) dentro del código.
+
+* Identificar propiedades CSS concretas o valores específicos.
+
+
+
+
+
+
+
+
+
+
+
+
+---
+
+
+
+
+
+
+
+
+
+
+
+
+## CSS GRID: Organiza Elementos en Rejillas Bidimensionales
+
+con Flexbox solo podemos tener una dimensión pues dependemos de las celdas por asi decirlo, en el elemento contenedor que tenemos para poder ubicar nuestra etiqueta.
+
+CSS GRID permite tener dos dimensiones siendo asi filas y columnas pues esta tecnologia divide lo que tenemos en nuestra pantalla por secciones o fracciones. Esto permite hacer un diseño mucho más complejo.
+
+Esto permite diseños como el siguente:
+
+> Versión de David Logreira
+
+<img src="https://static.platzi.com/media/user_upload/Screenshot%202022-09-28%20201434-21485c62-2dce-4079-b1a4-a4477544dd3c.jpg">
+
+> Versión de Raul Arias
+
+<img src="https://static.platzi.com/media/user_upload/Captura%20de%20pantalla%202022-08-29%20143127-45d6b9eb-6dce-40d5-b815-f26fdcc0e5ff.jpg">
+
+*Imagenes Tomadas De: https://platzi.com/cursos/programacion-basica/css-grid/*
+
+* CSS GRID by CSS TRICKS: https://css-tricks.com/css-grid-layout-guide/
+
+* cssgridgarden: https://cssgridgarden.com/#es
+
+* flexbox froggy: https://flexboxfroggy.com/#es
+
+
+
+
+
+
+
+
+
+
+
+
+---
+
+
+
+
+
+
+
+
+
+
+
+
+## Diseño Responsivo con CSS: Media Queries y Flexbox
+
+Como desarrollador frontend no solamente trabajamos para dispositivos web o desktop sino tambien para dispositivos moviles o pequeños. Es como ir a una página de una empresa reconocida, si la abres desde el celular veras la versión pequeña de esa página, o si la ves desde el computador veras una versión grande.
+
+A esto se le conoce como diseño responsivo.
+
+* Responsive Desing by MDN: https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/CSS_layout/Responsive_Design
+
+* Diseño Responsivo by IONOS: https://www.ionos.com/es-us/digitalguide/paginas-web/diseno-web/que-es-el-diseno-responsivo/
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Diseno-web-responsive-design.jpg">
+
+*Imagen Tomada De: https://es.wikipedia.org/wiki/Dise%C3%B1o_web_adaptable*
+
+Cuando nosotros movemos el tamaño del inspector en una página web, nosotros podemos mirar el tamaño de la página en píxeles en donde inicialmente los celulares pequeños inician desde 360 píxeles de ancho. Si usamos nuestro juego web en un celular van a haber muchos elementos que la pantalla se va a comer o simplemente no tendrá visibilidad por su tamaño.
+
+Es como tratar mirar un boton el cual tiene 700px de with mientras que un celular puede medir 350px por ende, solo se tendrá la mitad de la visibilidad del total del elemento.
+
+Por lo que la solución es hacer que si el servidor de la pagina/la pagina, al detectar los pixeles del dispositivo (Algo que es normal, pues va en los metadatos al realizar una petición cuando ingresas a un dominio o a una dirección ip: Temas Vistos en [Fundamentos de la Ingenieria de Software](https://github.com/santiagoencodigo/Desarrollo-Web-Profesional/blob/main/docs/6-fundamentos-ingenieria-software.md "Fundamentos de Ingenieria de Software.md by Santiagoencodigo" )). 
+
+En otras palabras, el mismo navegador de tu dispositivo envia datos de cuanto mide en pixeles la pantalla del dispositivo en el que buscas ir a una página.
+
+Entonces para eso, podemos usar una herramienta llamada media querie. Permitiendonos asi organizar el contenido para dispositivos grandes o para dispositivos pequeños dependiendo del caso de uso que se necesite.
+
+La forma de usarlo es insertando en el código CSS:
+
+> @media (tamaño del dispotivio)
+
+    @media (max-width: 360px) {
+        .tarjetas {
+            flex-direction: column;
+        }
+    }
+
+> Captura de Edwin Romero
+
+<img src="https://static.platzi.com/media/user_upload/photo_4920268097567435459_y-f55761d2-4b19-4de1-b020-5564e7fe3e72.jpg">
+
+*Imagen Tomada De: https://platzi.com/cursos/programacion-basica/responsive-design/*
+
+
+
+
+
+
+
+
+
+
+
+---
+
+
+
+
+
+
+
+
+
+
+
+## Pseudoclases en CSS: Mejora la Interacción del Usuario
+
+Tras dominar un conjunto amplio de propiedades de CSS y tecnologías fundamentales como Flexbox, CSS Grid y Media Queries, damos un paso más hacia la creación de interfaces dinámicas, intuitivas y centradas en la experiencia del usuario mediante el uso de las pseudoclases.
+
+Las pseudoclases son palabras clave que se añaden a los selectores CSS para definir un estado especial de un elemento. A diferencia de las clases tradicionales, no se declaran directamente en el HTML, sino que representan condiciones dinámicas que dependen de la interacción del usuario, del estado del documento o de la posición del elemento dentro del DOM.
+
+Sintácticamente, una pseudoclase se define utilizando dos puntos (:) después del selector:
+
+    selector:pseudoclase {
+    propiedad: valor;
+    }
+
+Las pseudoclases permiten modificar la apariencia de un elemento sin necesidad de JavaScript, lo que contribuye a un código más limpio, eficiente y mantenible.
+
+Importancia de las pseudoclases en la experiencia de usuario (UX)
+
+Desde el punto de vista de UX (User Experience), las pseudoclases cumplen un rol clave al:
+
+* Proporcionar retroalimentación visual inmediata.
+
+* Guiar al usuario durante la navegación.
+
+* Comunicar estados como disponibilidad, selección o foco.
+
+* Incrementar la sensación de respuesta e interactividad del sistema.
+
+* Un sitio web sin pseudoclases suele percibirse como estático o poco intuitivo.
+
+Digamos, en la imagen a continuación de la interfaz de mi proyecto. Se puede visualizar los 3 estados de los botones de selección de mascota donde Capipepo esta normal sin ningún estado, Hipodoge esta checked, y Ratigueya esta Hover.
+
+<img src="https://static.platzi.com/media/user_upload/upload-cb8714c2-71fe-43a2-857c-0c78c79e26a6.png">
+
+**Lecturas Recomendadas:**
+
+* Pseudo clases en CSS by MDN: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes
+
+* Pseudo Clases by w3schools: https://www.w3schools.com/css/css_pseudo_classes.asp
+
+* Pseudo Elementos by MDN: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements
+
+* Pseudo Elementos by w3schools: https://www.w3schools.com/css/css_pseudo_elements.asp
+
+<img src="https://lenguajecss.com/css/pseudoclases/que-son/sintaxis-pseudoclases.png">
+
+*Imagen Tomada De: https://lenguajecss.com/css/pseudoclases/que-son/*
+
+---
