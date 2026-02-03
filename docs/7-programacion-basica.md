@@ -151,7 +151,11 @@ Si desea mirar **Mokepon** puede acceder a los siguentes vinculos (Este se empie
 
 * [42. Diseño Responsivo con CSS: Media Queries y Flexbox](#diseño-responsivo-con-css-media-queries-y-flexbox)
 
-* [43. Pseudoclases en CSS: Mejora la Interacción del Usuario]
+* [43. Pseudoclases en CSS: Mejora la Interacción del Usuario](#pseudoclases-en-css-mejora-la-interacción-del-usuario)
+
+### Optimización del Código
+
+* [44. Optimizacion del Código JavaScript con Clases y Objetos]
 
 
 
@@ -3657,4 +3661,116 @@ Digamos, en la imagen a continuación de la interfaz de mi proyecto. Se puede vi
 
 *Imagen Tomada De: https://lenguajecss.com/css/pseudoclases/que-son/*
 
+
+
+
+
+
+
+
+
+
+
+
 ---
+
+
+
+
+
+
+
+
+
+
+
+
+# Optimizacion del Código
+
+
+
+
+
+
+
+
+
+
+
+
+## Optimizacion del Código JavaScript con Clases y Objetos
+
+Tenemos ya nuestro código HTML, CSS y JavaScript. A continuación trabajaremos todo el módulo de optimización de código que está enfocado en JavaScript, siendo asi diferentes aportaciones al código haciendolo más profesional.
+
+Ya tenemos nuestros personajes, pero **¿Y si nos pidieran crear 1.000 personajes?** Harias un copy-paste de todo el código cambiando las variables? Esto no es lo ideal porque gastaría demasiado tiempo.
+
+Haremos una nueva función de JavaScript para la cual, si necesitamos agregar más personajes, no se tenga que hacer de forma manual sino poder **automatizar más este proceso**.
+
+Asi entonces, aprenderemos unos nuevos conceptos:
+
+* ¿Qué son las clases? by MDN: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes
+
+* ¿Qué son los objetos? by MDN: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_objects
+
+> Y como puedo hacer que la interacción de mis objetos puedan interactuar con el DOM?
+
+---
+
+A continuación vamos a revisar el código verificando entonces, el funcionamiento de nuestro código y la busqueda de oportunidades de integración de nuestra nueva idea.
+
+> Hemos visto entonces, el código de forma muy simplificada... Ahora lo que sigue es hacerlo mejor. (Puede que sea código más complejo.)
+
+En nuestro HTML tenemos lo siguente:
+
+    <input type="radio" name="mascota" id="hipodoge" />
+    <label class="tarjeta-mokepon" for="hipodoge">
+        <p>Hipodoge</p>
+    <img src="../pages/04-programacion-basica/02-mokepon/assets/hipodoge.png">
+    </label>
+
+Eso quiere decir que tenemos por cada mascota, tener que escribir esto. Además de tener que modificar el JavaScript para poder incorporarlo en las funciones. En el CSS realmente no hay que agregar mayor trabajo debido a que gracias a las **clases** ya con escribir la class="tarjeta-mokepon" se nos permite que utilice esos estilos generales establecidos en esa clase.
+
+<img src="https://cdn-wcsm.alura.com.br/2025/04/oop-car-methods-and-attributes.png">
+
+*Imagen Tomada De: https://www.aluracursos.com/blog/poo-que-es-la-programacion-orientada-a-objetos*
+
+Pero aun asi es un problema con el HTML y el JS debido a todo el trabajo manual que debemos hacer para incorporar una nueva mascota o peor si son varias.
+
+Esto implica mucho tiempo y por ende no es lo ideal.
+
+Eventualmente estaremos mejorando ese aspecto para ayudar en los tiempos de desarrollo.
+
+Además... lo mismo sucede con nuestros ataques, si quisieramos incorporar nuevos ataques tendriamos que hacer bastante trabajo manual. ¿Cómo podemos mejorar ese aspecto?
+
+Por otro lado, como incorporamos que esos ataques sean aptos para unos personajes y no para otros? Pues actualmente todos los personajes tienen los mismos 3 ataques.
+
+---
+
+Por otro lado, en el HTML nuestra etiqueta script no deberia ir en el head sino en el body pues generamos un bloqueo porque cuando el navegador empieza a leer nuestro código empieza a leer el CSS, el HTML y si se encuentra JavaScript, deja de lado todo lo que estaba haciendo. Siendo asi un bloqueo y por ende malas practicas.
+
+Entonces asi, se debe cambiar su posición del head hacia donde justo antes de que termine la etiqueta body.
+
+Por ende el navegador va a leer primero el HTML, los Estilos y finalmente el código JavaScript. Si nosotros trabajamos en JavaScript es para nosotros agregarle interacción asi que... Si no podemos mirar nuestra página tampoco importa que podamos ver nuestra interacción siendo asi mejor agregar el vinculo al JS al final. 
+
+Por lo que de esta forma aseguramos mirar nuestra página y luego cargar toda su interacción y asi mejoramos el performance o velocidad de nuestra página.
+
+* Pregunta de Reddit - ¿Se debe poner la etiqueta **script** en la etiqueta **head** o justo antes del cierre de la etiqueta **body**? : https://www.reddit.com/r/webdev/comments/v8zdoo/should_the_script_tag_be_placed_in_the_head_tag/
+
+---
+
+Al mirar el código JavaScript tenemos variables y funciones, y dentro de funciones hay variables y hay algunas variables que se repiten en varias funciones.
+
+En el código es muy importante el "No te repitas cuando haces código" o "Don´t repeat yourself" = DRY
+
+* DRY by Wikipedia: https://es.wikipedia.org/wiki/No_te_repitas
+
+Por ende hay mucho código que estamos repitiendo en las funciones, asi que cómo hacemos para que en una línea de código no nos repitamos? Entonces para aprender mucho más, es importante mirar tu código y pensar **¿Cómo puedo mejorarlo?**
+
+Como por ejemplo:
+
+* En el JavaScript repetimos muchas veces las declaraciones de los botones. Siendo asi la misma línea de código.
+
+Es muy importante primero realizar el código y que sea funcional, eventualmente se mira y verifica si se puede mejorar.
+
+---
+
