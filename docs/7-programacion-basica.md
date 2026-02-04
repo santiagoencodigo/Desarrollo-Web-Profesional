@@ -155,7 +155,9 @@ Si desea mirar **Mokepon** puede acceder a los siguentes vinculos (Este se empie
 
 ### Optimización del Código
 
-* [44. Optimizacion del Código JavaScript con Clases y Objetos]
+* [44. Optimizacion del Código JavaScript con Clases y Objetos](#optimizacion-del-código-javascript-con-clases-y-objetos)
+
+* [45. Optimización de Código JavaScript: Variables y Funciones](#optimización-de-código-javascript-variables-y-funciones)
 
 
 
@@ -3772,5 +3774,71 @@ Como por ejemplo:
 
 Es muy importante primero realizar el código y que sea funcional, eventualmente se mira y verifica si se puede mejorar.
 
+
+
+
+
+
+
+
+
+
 ---
 
+
+
+
+
+
+
+
+
+
+## Optimización de Código JavaScript: Variables y Funciones
+
+En el codigo no siempre la misma solución tiene que ser la solución pues podemos llegar a diferentes soluciones y si funciona, esta bien hecho.
+
+* Se puede usar el atajo control + alt + flecha hacia arriba o hacia abajo dependiendo de donde se quiere la multiple opción de escribir.
+
+* Si se mantiene la tecla control y se oprime alguna flecha de dirección hacia arriba o hacia abajo, se estará navegando en el documento. (Opción para no usar el la rueda de scroll que tiene un mouse.)
+
+Cuando inicia el HTML y se lee el JavaScript iniciamos con la función **iniciarJuego()** que contiene muchas declaraciones de variables y muy posiblemente son elementos que estaremos re utilizando para las diferentes 
+funciones.
+
+Por lo que se selecciona cada una de las declaraciones... Siendo asi:
+
+    let (nombreVariable) = document.getElementById('(id del elemento HTML)')
+
+Se corta y se pega en lo más arriba del código llevandonos asi cada una de las declaraciones de las variables en nuestra función iniciarJuego().
+
+La razón del por qué fueron todas las variables, es porque son elementos HTML. Estos jamás van a variar y los estaremos utilizando a lo largo de nuestro código si queremos ir agregando nuevas funcionalidades a nuestro programa.
+
+Es importante limpiar los espacios y que aun asi sea legible el código. Entre menos espacio mejor porque mejora el performance de nuestra página pero a su vez puede ser un poco más complicado para nosotros visualizar nuestro código.
+
+Es importante que cada cierto grupo de modificaciones, revisar el programa para verificar que no se ha "roto" nada.
+
+Es un problema cuando una variable se repite, pues incluso aparecerá en la consola en rojo ['(el nombre de la variable)' has already been declared] 
+
+Por ende, se va a revisar función por función cada una de las declaraciones siendo asi, los elementos HTML trasladados hacia el inicio del documento. Por como fuimos trabajando, hay demasiadas funciones en las que se repiten las mismas líneas de código declarando variables que identifican elementos HTML.
+
+<img src="https://static.platzi.com/media/user_upload/js-1b0cd1e0-9843-474f-996f-4da9d76977fa.jpg">
+
+*Imagen Tomada De: https://platzi.com/cursos/programacion-basica/dont-repeat-yourself-dry/*
+
+---
+
+Hay tipos de variables:
+
+* const en JS by MDN: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const
+
+* let en JS by MDN: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let
+
+En donde las variables let son todas las variables que pueden variar en donde si tenemos un valor y luego se valor cambia, lo podemos hacer.
+
+Pero hay otra forma de declarar variables y es por medio de const, que son constantes. Esto quiere decir que no puede cambiar su valor una vez que se crea. En consecuencia todos los elementos HTML declarados en el JS, los cambiaremos de let a const debido a que no van a cambiar su valor.
+
+<img src="https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fi%2Fiun7rdwubbb4eivzb4r8.jpeg">
+
+*Imagen Tomada De: https://dev.to/duxtech/scope-en-javascript-var-let-y-const-5eh2*
+
+---

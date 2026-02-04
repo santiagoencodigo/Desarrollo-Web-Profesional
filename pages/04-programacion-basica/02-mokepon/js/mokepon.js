@@ -1,40 +1,48 @@
- /* las constantes nunca van a variar. */
-const sectionSeleccionarAtaque=document.getElementById('seleccionar-ataque')
-const sectionReiniciar=document.getElementById('section-reiniciar')
-const botonSeleccionar = document.getElementById('boton-seleccionar')
-const botonFuego = document.getElementById('boton-fuego')
-const botonAgua = document.getElementById('boton-agua')
-const botonTierra = document.getElementById('boton-tierra')
-const botonReiniciar = document.getElementById('reiniciar')
+/* Las constantes nunca van a variar. */
 
-const sectionSeleccionarMascota=document.getElementById('seleccionar-mascota')
-const SpanMascotaJugador = document.getElementById('mascota-jugador')
 
-const SpanMascotaEnemigo = document.getElementById('mascota-enemigo')
+    const sectionSeleccionarAtaque=document.getElementById('seleccionar-ataque')
+    const sectionReiniciar=document.getElementById('section-reiniciar')
+    const botonSeleccionar = document.getElementById('boton-seleccionar')
 
-const spanVidasJugador = document.getElementById('vidas-jugador')
-const spanVidasEnemigo = document.getElementById('vidas-enemigo')
+    // Botones de ataque
+    const botonFuego = document.getElementById('boton-fuego')
+    const botonAgua = document.getElementById('boton-agua')
+    const botonTierra = document.getElementById('boton-tierra')
 
-const sectionMensajes = document.getElementById("resultado")
-const sectionResultados = document.getElementById("mensajes")
+    // Botón de reiniciar
+    const botonReiniciar = document.getElementById('reiniciar')
 
-const ataquesDelJugador = document.getElementById("ataques-del-jugador")        
-const ataquesDelEnemigo = document.getElementById("ataques-del-enemigo")
+    // Seleccionar Mascota
+    const sectionSeleccionarMascota=document.getElementById('seleccionar-mascota')
 
-const ContenedorTarjetas = document.getElementById("contenedorTarjetas")
+    const SpanMascotaJugador = document.getElementById('mascota-jugador')
+    const SpanMascotaEnemigo = document.getElementById('mascota-enemigo')
+
+    const spanVidasJugador = document.getElementById('vidas-jugador')
+    const spanVidasEnemigo = document.getElementById('vidas-enemigo')
+
+    const sectionMensajes = document.getElementById("resultado")
+    const sectionResultados = document.getElementById("mensajes")
+
+    const ataquesDelJugador = document.getElementById("ataques-del-jugador")        
+    const ataquesDelEnemigo = document.getElementById("ataques-del-enemigo")
+
+    const ContenedorTarjetas = document.getElementById("contenedorTarjetas")
 
 
 /* Las razones del por qué no se cambian estas let, es porque son variables. */
-let mokepones = [] /* Esto se llama arrays o arreglos */
-let ataqueJugador  
-let ataqueEnemigo  
-let opcionDeMokepones
 
-let inputHipodoge
-let inputCapipepo
-let inputRatigueya
-let vidasJugador = 3
-let vidasEnemigo = 3
+    let mokepones = [] /* Esto se llama arrays o arreglos */
+    let ataqueJugador  
+    let ataqueEnemigo  
+    let opcionDeMokepones
+
+    let inputHipodoge
+    let inputCapipepo
+    let inputRatigueya
+    let vidasJugador = 3
+    let vidasEnemigo = 3
 
 class Mokepon { 
     constructor(nombre, foto, vida) {
