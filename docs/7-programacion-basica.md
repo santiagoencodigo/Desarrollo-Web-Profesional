@@ -3869,12 +3869,57 @@ Pero hay otra forma de declarar variables y es por medio de const, que son const
 
 Vamos a aprender dos nuevos conceptos que nos van a ayudar muchisimo, a poder optimizar el código de nuestro juego. Esto son **las clases y los objetos.**
 
+* ¿Qué son las clases? by MDN: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes
+
+* ¿Qué son los objetos? by MDN: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_objects
+
 Cada uno de nuestros personajes se convierten al final en un objeto. ¿Cómo se puede replicar un objeto?, ¿De donde vienen los objetos? 
 
 Son dos conceptos totalmente relacionados porque sin clases no habria objetos.
 
 Cuando nosotros construimos una clase, construimos el template que vamos a popular despues con información para poder construir objetos. Cada vez que nosotros queremos construir una casa no podemos hacerlo sin esos planos.
 
-Si nosotros ya tenemos los planos de nuestra clasa, entonces ya nosotros podemos replicar estos planos en cuanto a cuantas cosas vallamos a hacer.
+Si nosotros ya tenemos los planos de una casa, entonces ya nosotros podemos replicar estos planos en cuanto a cuantas cosas vallamos a hacer. 
 
-Las propiedades de las casas pueden variar pues podemos tener casas que son de diferente color, diferentes muebles, posiblemente en muchas veces
+Las propiedades de las casas pueden variar pues podemos tener casas que son de diferente color, diferentes muebles, posiblemente en muchas veces diferentes distribuciones o algo muy particular por cada una de las casas, pero la base de todas las casas va a ser el mismo plano.
+
+A este plano se le pueden hacer diferentes modificaciones para que las casas se puedan ver diferentes.
+
+Si queremos construir otra casa, agarramos el plano y editamos su propiedad de color.
+
+* Si queremos crear una nueva casa, necesitamos el plano de esa casa o el template. (Objeto)
+
+* Nuestro template es donde el objeto tendrá nombre, color, y ciertas caracteristicas especiales.
+
+<img src="https://static.platzi.com/media/user_upload/clases_objetos-3ea4bb56-938e-40fb-9c05-6a393d6608ba.jpg">
+
+*Imagen Tomada De: https://platzi.com/cursos/programacion-basica/51966-clases-y-objetos/*
+
+---
+
+En nuestro juego tenemos a los mokepones que son nuestros personajes y estos personajes como objetos tienen ciertas propiedades que puede ser: El nombre, los ataques, la vida, el tipo de personaje (Fuego, Agua, Tierra).
+
+Necesitamos entonces crear el plano de esas bases y construir diferentes personajes con diferente información en donde cada punto de información se convierten en las propiedades de los personajes.
+
+Esto significa tener clases y objetos.
+
+Construimos la clase o el template o el plano de nuestro objeto y ya con que nuestra clase este lista empezamos a construir cuantos objetos nosotros empecemos a necesitar con diferente información.
+
+Será interesante ver como eso va a interactuar con nuestro HTML y ya no tener que hacer de forma manual cada uno de los personajes optimizandoa asi esa tarea.
+
+---
+
+Un objeto es Una colección de datos o propiedades relacionadas. El valor de una propiedad puede ser una variable o una función, en cuyo caso la propiedad es conocida como un método.
+
+El objeto está dividido en dos partes:
+
+Características o atributos: Las características son todo lo que representa al objeto. Por ejemplo, la cantidad de ruedas que tiene un vehículo, la marca del vehículo, el color, el tamaño, el número de placa, etc. A estos elementos se les llama atributos en el mundo de la programación. Funcionalidades o métodos: Son todas las funcionalidades que tiene el objeto o los servicios que ofrece. Por ejemplo, el vehículo nos ofrece el servicio de transportarnos, de escuchar música, de tener aire acondicionado, etc. A esto se le llama método en el mundo de la programación.
+
+Para entenderlo mejor:
+
+<img src="https://static.platzi.com/media/user_upload/clases%20y%20objetos-83fb1bcd-4764-4fb6-89ab-67654a831aa1.jpg">
+
+*Imagen Tomada De: https://platzi.com/cursos/programacion-basica/51966-clases-y-objetos/*
+
+---
+
