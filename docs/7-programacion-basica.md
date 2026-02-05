@@ -159,6 +159,8 @@ Si desea mirar **Mokepon** puede acceder a los siguentes vinculos (Este se empie
 
 * [45. Optimización de Código JavaScript: Variables y Funciones](#optimización-de-código-javascript-variables-y-funciones)
 
+* [46. Optimización de Código JavaScript con Clases y Objetos 2](#optimización-de-código-javascript-con-clases-y-objetos-2)
+
 
 
 
@@ -3841,4 +3843,38 @@ Pero hay otra forma de declarar variables y es por medio de const, que son const
 
 *Imagen Tomada De: https://dev.to/duxtech/scope-en-javascript-var-let-y-const-5eh2*
 
+
+
+
+
+
+
+
+
+
+
 ---
+
+
+
+
+
+
+
+
+
+
+
+## Optimización de Código JavaScript con Clases y Objetos 2
+
+Vamos a aprender dos nuevos conceptos que nos van a ayudar muchisimo, a poder optimizar el código de nuestro juego. Esto son **las clases y los objetos.**
+
+Cada uno de nuestros personajes se convierten al final en un objeto. ¿Cómo se puede replicar un objeto?, ¿De donde vienen los objetos? 
+
+Son dos conceptos totalmente relacionados porque sin clases no habria objetos.
+
+Cuando nosotros construimos una clase, construimos el template que vamos a popular despues con información para poder construir objetos. Cada vez que nosotros queremos construir una casa no podemos hacerlo sin esos planos.
+
+Si nosotros ya tenemos los planos de nuestra clasa, entonces ya nosotros podemos replicar estos planos en cuanto a cuantas cosas vallamos a hacer.
+
+Las propiedades de las casas pueden variar pues podemos tener casas que son de diferente color, diferentes muebles, posiblemente en muchas veces
