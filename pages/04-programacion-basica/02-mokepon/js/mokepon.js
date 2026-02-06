@@ -31,6 +31,7 @@
     const ContenedorTarjetas = document.getElementById("contenedorTarjetas")
 
 
+
 /* Las razones del por qué no se cambian estas let, es porque son variables. */
 
     let mokepones = [] /* Esto se llama arrays o arreglos */
@@ -44,18 +45,27 @@
     let vidasJugador = 3
     let vidasEnemigo = 3
 
-class Mokepon { 
-    constructor(nombre, foto, vida) {
-        this.nombre = nombre
-        this.foto = foto
-        this.vida = vida
-        this.ataques = []
-    }
-}
 
-let hipodoge = new Mokepon('Hipodoge', './assets/hipodoge.png', 5) /* Estos son objetos */
-let capipepo = new Mokepon('Capipepo', './assets/capipepo.png', 5)
-let ratigueya = new Mokepon('Ratigueya', './assets/ratigueya.png', 5)
+
+
+// Clase
+
+    class Mokepon { 
+        constructor(nombre, foto, vida) {
+            this.nombre = nombre
+            this.foto = foto
+            this.vida = vida
+            this.ataques = []
+        }
+    }
+
+
+
+// Objetos
+
+    let hipodoge = new Mokepon('Hipodoge', './assets/hipodoge.png', 5)
+    let capipepo = new Mokepon('Capipepo', './assets/capipepo.png', 5)
+    let ratigueya = new Mokepon('Ratigueya', './assets/ratigueya.png', 5)
 
 hipodoge.ataques.push(
     {nombre: '🌊', id: 'boton-agua'},

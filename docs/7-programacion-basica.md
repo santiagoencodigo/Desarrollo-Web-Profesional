@@ -161,6 +161,8 @@ Si desea mirar **Mokepon** puede acceder a los siguentes vinculos (Este se empie
 
 * [46. Optimización de Código JavaScript con Clases y Objetos 2](#optimización-de-código-javascript-con-clases-y-objetos-2)
 
+* [47. Construcción de Clases y Objetos en JavaScript](#construcción-de-clases-y-objetos-en-javascript)
+
 
 
 
@@ -3921,5 +3923,98 @@ Para entenderlo mejor:
 
 *Imagen Tomada De: https://platzi.com/cursos/programacion-basica/51966-clases-y-objetos/*
 
+
+
+
+
+
+
+
+
+
+
 ---
 
+
+
+
+
+
+
+
+
+
+
+## Construcción de Clases y Objetos en JavaScript
+
+Ya entendiendo entonces el concepto de clases y objetos, vamos a modificar nuestro código JavaScript para construir nuestra clase mokepones y los objetos de cada uno de ellos.
+
+Para crear la primera clase, se va a utilizar la palabra reservada "class" esto sólo se usa para construir clases y despues cual va a ser el nombre de la clase que en este caso va a ser Mokepon. La única regla de las clases es que su nombre debe iniciar con mayusculas. Siendo esta la variación entre las variables y las clases.
+
+* Clases by MDN: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes
+
+Se abren corchetes {} en donde la primera palabra que se va a escribir es otra palabra reservada que es **constructor()** definiendo asi, ¿Qué voy a construir? por lo que ahí voy a poner todas las propiedades que van a llevar mis objetos.
+
+* constructor en JS by MDN: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/constructor
+
+Las propiedades recordemos que puede ser nombre, la vida, la fotografía, la foto, la imagen que sea directamente de nuestro objeto.
+
+Esto puede ser digamos, si hablamos de carros: Pueden ser puertas, color y todo tipo de elementos o cosas especificas de este objeto.
+
+Dentro de **constructor()** tiene en los () cada uno de los parametros, que en nuestra clase será entonces cada propiedad/atributo que va a tener.
+
+Dentro de estos atributos tendremos entonces el nombre de nuestra mascota, la foto de esta y la vida de la mascota.
+
+> Este trabajo se realiza si en tal caso el juego llega a escalar y que quiere crear un montón de mascotas más o si se quiere agregar una serie de nuevos atributos a cada mascota.
+
+Despues de definir los parametros del constructor se agrega nuevamente { } y entonces agregamos una nueva palabra reservada siendo **this** en donde hace referencia a "esto mismo" siendo la clase misma, por lo que dice digamos: El nombre del mokepon corresponde a este nombre: **this.nombre = nombre** siendo esta la forma de declaración de las variables/parametros de esta clase.
+
+* this en JS by MDN: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this
+
+De esta misma forma tambien agrego **this.foto = foto**, **this.vida = vida**
+
+    class Mokepon {
+        constructor(nombre, foto, vida) {
+            this.nombre = nombre
+            this.foto = foto
+            this.vida = vida
+        }
+    }
+
+---
+
+Entonces ahora ya teniendo esto, nosotros podemos crear nuestros objetos.
+
+Creamos nuestro objeto declarando su variable primero, en donde será **= new**, que se refiere a un nuevo objeto por lo que de una clase que ya existe, vamos a construir un nuevo objeto.
+
+* new en JS by MDN: https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Operators/new
+
+y despues de new, agregaremos entonces el nombre de nuestra clase que en este caso es Mokepon. Y esto espera entonces ciertos valores. Que serian los mismos parametros de nuestra clase = nombre, foto, vida.
+
+**por lo que:**
+
+    let hipodoge = new Mokepon('Hipodoge', '/./assets/hipodoge.png', 5)
+
+Si nosotros escribimos console.log(Hipodoge) imprimiendo asi a nuestro objeto en la consola, va a aparecer toda esta información que tiene en sus atributos. Definiendo incluso su prototipo o ¿Qué tipo de elemento es? Que en este caso es un objeto.
+
+> A continuación un ejemplo de esto por parte de Pablo Alejandro Figueroa
+
+<img src="https://static.platzi.com/media/user_upload/Captura%20de%20pantalla%202023-02-20%20002140-df6f38bf-2f68-4ac5-81f0-a02a832d2aff.jpg">
+
+*Imagen Tomada De: https://platzi.com/cursos/programacion-basica/clases-y-objetos-de-mokepon/*
+
+Asi mismo entonces, creamos los otros dos objetos que son nuestras otras dos mascotas entonces.
+
+    let capipepo = new Mokepon('Capipepo', './assets/capipepo.png', 5)
+
+    let ratigueya = new Mokepon('Ratigueya', './assets/ratigueya.png', 5)
+
+Siendo asi, hemos programado nuestro constructor y nuestros 3 objetos que son nuestras mascotas
+
+> A continuación la imagen es el comentario del usuario Pablo Alejandro Figueroa
+
+<img src="https://static.platzi.com/media/user_upload/Captura%20de%20pantalla%202023-02-20%20002119-8cbb9b5b-0e34-49a2-971d-0ef10e49499a.jpg">
+
+*Imagen Tomada De: https://platzi.com/cursos/programacion-basica/clases-y-objetos-de-mokepon/*
+
+---
