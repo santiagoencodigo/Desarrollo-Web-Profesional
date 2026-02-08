@@ -34,7 +34,9 @@
 
 /* Las razones del por qué no se cambian estas let, es porque son variables. */
 
-    /* Esto se llama arrays o arreglos - Similar a una lista.*/
+    /*  Esto se llama arrays o arreglos - Similar a una lista.
+        En esta variable esta vacia porque por medio de push le insertamos los mokepones.
+    */
     let mokepones = [] 
 
     let ataqueJugador  
@@ -65,35 +67,38 @@
 
 // Objetos
 
+    // Objetos Instancia que vienen de mi Clase
     let hipodoge = new Mokepon('Hipodoge', './assets/hipodoge.png', 5)
     let capipepo = new Mokepon('Capipepo', './assets/capipepo.png', 5)
     let ratigueya = new Mokepon('Ratigueya', './assets/ratigueya.png', 5)
 
-hipodoge.ataques.push(
-    {nombre: '🌊', id: 'boton-agua'},
-    {nombre: '🌊', id: 'boton-agua'},
-    {nombre: '🌊', id: 'boton-agua'},
-    {nombre: '🔥', id: 'boton-fuego'},
-    {nombre: '🌱', id: 'boton-tierra'},
-)
+    // Objetos Literarios
+    hipodoge.ataques.push(
+        {nombre: '🌊', id: 'boton-agua'},
+        {nombre: '🌊', id: 'boton-agua'},
+        {nombre: '🌊', id: 'boton-agua'},
+        {nombre: '🔥', id: 'boton-fuego'},
+        {nombre: '🌱', id: 'boton-tierra'},
+    )
 
-capipepo.ataques.push(
-    {nombre: '🌱', id: 'boton-tierra'},
-    {nombre: '🌱', id: 'boton-tierra'},
-    {nombre: '🌱', id: 'boton-tierra'},
-    {nombre: '🌊', id: 'boton-agua'},
-    {nombre: '🔥', id: 'boton-fuego'}, 
-)
+    capipepo.ataques.push(
+        {nombre: '🌱', id: 'boton-tierra'},
+        {nombre: '🌱', id: 'boton-tierra'},
+        {nombre: '🌱', id: 'boton-tierra'},
+        {nombre: '🌊', id: 'boton-agua'},
+        {nombre: '🔥', id: 'boton-fuego'}, 
+    )
 
-ratigueya.ataques.push(
-    {nombre: '🔥', id: 'boton-fuego'},
-    {nombre: '🔥', id: 'boton-fuego'},
-    {nombre: '🔥', id: 'boton-fuego'},
-    {nombre: '🌊', id: 'boton-agua'},
-    {nombre: '🌱', id: 'boton-tierra'},
-)
+    ratigueya.ataques.push(
+        {nombre: '🔥', id: 'boton-fuego'},
+        {nombre: '🔥', id: 'boton-fuego'},
+        {nombre: '🔥', id: 'boton-fuego'},
+        {nombre: '🌊', id: 'boton-agua'},
+        {nombre: '🌱', id: 'boton-tierra'},
+    )
 
-mokepones.push(hipodoge,capipepo,ratigueya) /* Esto se llama push, es una función que se utiliza para agregar elementos a un array.*/
+    /* Esto se llama push, es una función que se utiliza para agregar elementos a un array.*/
+    mokepones.push(hipodoge,capipepo,ratigueya) 
 
 function iniciarJuego() {
     sectionSeleccionarAtaque.style.display = 'none'

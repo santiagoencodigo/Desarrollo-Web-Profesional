@@ -163,6 +163,8 @@ Si desea mirar **Mokepon** puede acceder a los siguentes vinculos (Este se empie
 
 * [47. Construcción de Clases y Objetos en JavaScript](#construcción-de-clases-y-objetos-en-javascript)
 
+* [48. Agregar ataques a Objetos en JavaScript](#agregar-ataques-a-objetos-en-javascript)
+
 
 
 
@@ -4073,6 +4075,109 @@ Ya despues utilizamos .push que es como decir "Empuja" o "Inyecta"
 
 Entonces, si el día de mañana yo quiero más mokepones, gasta que pone a la indicada.
 
+El método .push() en JavaScript se utiliza para añadir uno o más elementos al final de un array existente, modificando su longitud original.
+
+* .push() en JS by MDN: https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array/push
+
 <img src="https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fm28vi4f62mvduofxun0q.png">
 
 *Imagen Tomada De: https://dev.to/gastondanielsen/25-metodos-de-arrays-en-javascript-que-todo-desarrollador-debe-conocer-4a2d*
+
+
+
+
+
+
+
+
+
+
+
+---
+
+
+
+
+
+
+
+
+
+
+
+## Agregar ataques a Objetos en JavaScript
+
+> Para reflexionar, preguntese: ¿Entiende qué es un Objeto? y ¿Entiende qué es un arreglo?
+
+Falta una propiedad en nuestros objetos, son los ataques. Y como son muchos ataques tenemos que poder guardarlos y además, puede que hallan mascotas que puedan usar 10 ataques.
+
+por ende en la clase Mokepon añadimos la propiedad ataques como un arreglo, por ende:
+
+    class Mokepon {
+        constructor(nombre, imagen, vida) {
+            this.nombre = nombre
+            this.imagen = imagen
+            this.vida = vida
+            this.ataque = []
+        }
+    }
+
+Aun nos falta popularlo, pero eso lo haremos mediante un push.
+
+Si nosotros ponemos console.log(el nombre de nuestro objeto) que en nuestro caso seria console.log(hipodoge) fuera de cualquier función, si miramos las devtools miraremos toda la información de nuestro objeto. (Puede ser Hipodoge, Capipepo, Ratigueya)
+
+¿Cómo por medio de nuestros objetos podemos agregar información al arreglo ataque de nuestra clase Mokepon?
+
+Si yo quiero mirar una información en especifico de mi objeto en la consola puedo poner el nombre de mi objeto, un . y despues el nombre de mi propiedad... Digamos:
+
+    console.log(hipodoge.ataques)
+
+Es interesante entonces probar con las diferentes propiedades. En este momento si lo hacemos con ataques, nos mostrará un arreglo vacio y por ende: **[ ]**
+
+Entonces ya sabemos como llegar a los ataques, ya sabemos como inyectar cosas a un array por medio de push. Por ende:
+
+1. Llamo a mi objeto
+
+2. Agrego un . y la propiedad (.ataques)
+
+3. Agrego .push para poder inyectarle información
+
+Para insertarle ataques, se va a crear otro pequeño objeto. Estos objetos que se conocen como objetos literales en donde sólo voy a poner información de cierto objeto.
+
+* En los objetos instancias que vienen de una clase, como hipodoge, capipepo y ratigueya en el código JS, sólo hay que insertarles las propiedades en su espacio para parametros ()
+
+* Los objetos literarios yo tengo que construirlos desde cero y no tengo clases para poderlo hacer, solo guardan información: Que en este caso necesitamos ugardar la información de nuestros ataques.
+
+**Lecturas Recomendadas:**
+
+* Diferencia entre un objeto literal y un objeto de POO by fidelp27 (Usuario de Platzi): https://platzi.com/blog/diferencia-entre-un-objeto-literal-y-un-objeto-de-programacion-orientada-a-objetos-poo/
+
+* Objeto Instancia by Wikipedia: https://es.wikipedia.org/wiki/Objeto_(programaci%C3%B3n)#:~:text=En%20un%20lenguaje%20en%20el,programaci%C3%B3n:%20C++%20y%20Python.
+
+Por ende dentro de ese push, agregando una estructura en donde encierro mi contenido con ( ) y le inserto propiedades y valores dentro de { } cada una, siendo cada contenido dentro del {} un arreglo literario.
+
+**por ejemplo:**
+
+    hipodoge.ataques.push(
+        {nombre: '🌊', id: 'boton-agua'},
+        {nombre: '🌊', id: 'boton-agua'},
+        {nombre: '🌊', id: 'boton-agua'},
+        {nombre: '🔥', id: 'boton-fuego'},
+        {nombre: '🌱', id: 'boton-tierra'},
+    )
+
+Siendo asi, automaticamente se guarda la información y por ende si miramos la consola ya va a aparecer todos nuestros ataques para nuestra mascota hipodoge (objeto).
+
+* Se debe hacer lo mismo con cada uno de los objetos.
+
+> Esto ya es más difícil. Pues por medio de esto, haremos que nuestros mokepones tengan más de 3 ataques cada uno.
+
+Ahora surge una nueva duda: Si entonces, cada mascota tiene un ataque diferente disponible. ¿Cómo integramos eso? o como popularlo teniendo en cuenta que en nuestro HTML sólo tenemos 3 ataques?
+
+Por lo que tenemos que popular esa información en nuestro JS para que ya no tengamos que copiar y pegar en nuestro HTML, por ende tenemos que manipular el DOM con relación a los datos de nuestros objetos.
+
+> Aporte de Miguel David Lòpez Mèndez
+
+<img src="https://i.imgur.com/bMDb6xw.png">
+
+*Imagen Tomada De: https://platzi.com/cursos/programacion-basica/objetos-vs-arreglos/*
