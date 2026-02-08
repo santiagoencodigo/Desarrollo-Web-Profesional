@@ -34,7 +34,9 @@
 
 /* Las razones del por qué no se cambian estas let, es porque son variables. */
 
-    let mokepones = [] /* Esto se llama arrays o arreglos */
+    /* Esto se llama arrays o arreglos - Similar a una lista.*/
+    let mokepones = [] 
+
     let ataqueJugador  
     let ataqueEnemigo  
     let opcionDeMokepones

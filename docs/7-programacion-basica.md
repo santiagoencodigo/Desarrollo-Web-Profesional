@@ -4017,4 +4017,62 @@ Siendo asi, hemos programado nuestro constructor y nuestros 3 objetos que son nu
 
 *Imagen Tomada De: https://platzi.com/cursos/programacion-basica/clases-y-objetos-de-mokepon/*
 
+
+
+
+
+
+
+
+
+
 ---
+
+
+
+
+
+
+
+
+
+
+## Uso de Arreglos para Almacenar Objetos en JavaScript
+
+> Como preguntas para reflexionar: ¿Qué es un arreglo?, ¿Qué quiere decir Almacenar Objetos?
+
+Ya sabemos construir clases y a partir de esas clases, construir objetos.
+
+Ahora vamos a ver arreglos o arrays que son un tipo de variables distintas en donde podemos hacer que una variable declarada con **let** pueda ser un contador y que va guardando un digito y ese dígito es variable por lo que va cambiando, pero sólo podemos ponerle el digito. No le podemos poner 2, 3 dígitos porque no los va a guardar.
+
+Si hablamos de las **const** de igual forma, sólo puede guardar un valor que no cambia.
+
+¿Qué pasa si en una variable yo quiero poner varios valores?, diferentes nombres por ejemplo.
+
+En donde por ejemplo si tengo una clase alumnos y quiero guardar los nombres de 5 alumnos.
+
+* Los arreglos son un tipo de variable en donde puedo guardar varios valores. Y cuando llame a esa variable, me va a mostrar todos los valores que existen en esta.
+
+Lo interesante de los arreglos es que no solamente puedo llamar nombres sino que puedo generar una combinación de valores como letras, números u objetos.
+
+> Pareciera entonces, a una lista en python.
+
+Por lo que vamos a crear una variable que se llame mokepones pues ¿Y si se quiere integrar los 3 objetos, cual es la mejor forma de hacerlo? Lo ideal es crear una variable que pueda guardar los tres y si en algún momento tengo que crear otros mil, que esa variable me pueda guardar esos otros mil. Para esto entonces, se usa un array.
+
+array en JS by MDN: https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array
+
+Siendo asi, para crear nuestra variable:
+
+    let mokepones = []
+
+Los [ ] significan que por dentro la variable se puede ir agregando cada uno de los valores de nuestro interes. Que en nuestro caso es cada uno de los objetos que ya construimos. y si van a venir más vamos a meter cada uno de los objetos que iremos construyendo a raiz de nuestra clase Mokepon.
+
+Ya despues utilizamos .push que es como decir "Empuja" o "Inyecta"
+
+    mokepones.push(Hipodoge, Capipepo, Ratigueya)
+
+Entonces, si el día de mañana yo quiero más mokepones, gasta que pone a la indicada.
+
+<img src="https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fm28vi4f62mvduofxun0q.png">
+
+*Imagen Tomada De: https://dev.to/gastondanielsen/25-metodos-de-arrays-en-javascript-que-todo-desarrollador-debe-conocer-4a2d*
