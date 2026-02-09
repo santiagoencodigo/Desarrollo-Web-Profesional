@@ -163,7 +163,11 @@ Si desea mirar **Mokepon** puede acceder a los siguentes vinculos (Este se empie
 
 * [47. Construcción de Clases y Objetos en JavaScript](#construcción-de-clases-y-objetos-en-javascript)
 
-* [48. Agregar ataques a Objetos en JavaScript](#agregar-ataques-a-objetos-en-javascript)
+* [48. Uso de Arreglos para Almacenar Objetos en JavaScript](#uso-de-arreglos-para-almacenar-objetos-en-javascript)
+
+* [49. Agregar ataques a Objetos en JavaScript](#agregar-ataques-a-objetos-en-javascript)
+
+* [50. Renderizado Dinámico de Objetos HTML con JavaScript](#renderizado-dinámico-de-objetos-en-html-con-javascript)
 
 
 
@@ -4181,3 +4185,101 @@ Por lo que tenemos que popular esa información en nuestro JS para que ya no ten
 <img src="https://i.imgur.com/bMDb6xw.png">
 
 *Imagen Tomada De: https://platzi.com/cursos/programacion-basica/objetos-vs-arreglos/*
+
+
+
+
+
+
+
+
+
+
+
+
+---
+
+
+
+
+
+
+
+
+
+
+
+
+## Renderizado Dinámico de Objetos en HTML con JavaScript
+
+> Reflexione: ¿Entiende qué quiere decir Renderizado Dinámico?
+
+Ya sabriamos entonces usar arrays, teniendo uno que guarda todos los objetos de nuestros mokepones. Ahora tenemos que llevar esa información a que directamente interactue con nuestro HTML. Pues si vamos a crear otros 1.000 mokepones, que se puedan renderizar automaticamente en nuestro HTML facilmente. (Nosotros no tengamos que hacer ese trabajo de forma manual)
+
+Un buen programador automatiza su propio trabajo a ese punto, en donde se ahorra incluso nuevas posibles líneas de código.
+
+Si miramos a nuestro HTML, tenemos a cada una de nuestras mascotas de forma manual en una estructura ya definida. Pero entonces qué pasa cuando queremos dejar de utilizar esos 3 personajes y empezamos a usar otros nuevos...  Tendriamos que borrar los que ya estan y crear una estructura similar por cada uno de los nuevos mokepones que se van a usar con información diferente de cada mascota.
+
+Tendriamos un problema muy similar con cada uno de los botones de ataque pues cada mascota tiene un grupo de ataques distinto que no son los que estan en nuestra estructura de nuestro HTML.
+
+Para solucionar este problema, tenemos que absorber esta información de nuestro arreglo para poder popular ese HTML con esa información.
+
+* El término "popular" se refiere a llenar o añadir elementos a una estructura de datos, como un arreglo.
+
+Por ende vamos a agregar en la función **iniciarJuego()** esto, debido a que una vez cargue todo el sistema... Necesitamos que renderize cada una de nuestras mascotas.
+
+Asi haciendo entonces justo debajo de:
+
+    sectionSeleccionarAtaque.style.display = 'none'
+
+Que es la primera línea una vez inicia la función **iniciarJuego()**.
+
+1. llamamos entonces a nuestros mokepones
+
+2. Usamos un nuevo método para iterar o recorrer cada uno de nuestros objetos para asi poder abstraer información y poder inyectarlo en el HTML. Este metodo es **forEach()** que literalmente dice "Por cada uno".                                                
+
+4. Dentro de los parentesis habrá toda la información de nuestro código
+
+4. Dentro de los parentesis, creamos otros parentesis para definir nuestra clase.
+
+Siendo asi:
+
+    mokepones.forEach((Mokepon)=>{
+
+    })
+
+Esta línea de código lo que dice es, por cada mokepon que existe en nuestro array de mokepones haz lo siguente...
+
+* Los objetos en JavaScript son los diccionarios en Python.
+
+Dentro de los corchetes empezaremos a tomar la información de cada uno de nuestros objetos para empezar a inyectarlo en nuestro HTML.
+
+Podemos probar imprimiendo primero cada uno de los objetos. Dentro del código, podemos usar console.log(mokepon). Si revisamos la consola podemos observar como nos regresa cada uno de nuestros objetos. Recordemos tambien, que si queremos mirar algo en especifico podemos hacer console.log(mokepon.nombre).
+
+De esta forma podremos observar nuestros objetos y cada una de sus propiedades.
+
+* Array.prototype.forEach() en JS by MDN: https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach
+
+---
+
+**Ahora, ¿Cómo hacemos para mostrar esa información en nuestro HTML?**
+
+Tenemos que asignar una variable para poder guardar ahí toda la estructura del HTML que vamos a hacer en JavaScript, para luego poder insertar esa llave con estructura de valor directamente en nuestro HTML.
+
+Toca entonces generar una nueva variable.
+
+Por ende, se declara la variable OpcionDeMokepones por medio de un let, en donde se declaran estas variables. Lo dejamos vacio porque lo vamos a utilizar abajo para poder inyectarle un valor. 
+
+Por lo que dentro de forEach, vamos a agregar un template literario que lo usaremos para implementar HTML con algunos de los valores de nuestras variables para que podamos hacer un mix de ambas cosas.
+
+Para poder utilizar estos templates literarios tenemos que usar la comilla invertida **``**, se puede hacer por medio de alt+96, la otra forma puede ser oprimiendo altgr + }
+
+Dentro de estas ´´ vamos a insertar nuestro código HTML de forma que sea generalizada con variables. Pues en nuestro HTML cada uno de los inputs, es el siguente:
+
+    <input type="radio" name="mascota" id = "hipodoge" />
+    <label class="tarjeta-de-mokepon" for = "hipodoge">
+        <p>hipodoge</p>
+        <img src="./assets/mokepones/hipodoge.png" alt ="hipodoge">
+    </label>
+
+Por ende, vamos a copiar esa misma estructura y la pondremos dentro de las comillas invertidas en JS. Tenemos que agregarle variables a ese código debido a que 

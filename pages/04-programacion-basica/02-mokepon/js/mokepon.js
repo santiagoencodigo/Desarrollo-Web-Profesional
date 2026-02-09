@@ -41,11 +41,14 @@
 
     let ataqueJugador  
     let ataqueEnemigo  
+
+    // Esta variable es para popular nuestro HTML
     let opcionDeMokepones
 
     let inputHipodoge
     let inputCapipepo
     let inputRatigueya
+    
     let vidasJugador = 3
     let vidasEnemigo = 3
 
