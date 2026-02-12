@@ -4282,4 +4282,64 @@ Dentro de estas ´´ vamos a insertar nuestro código HTML de forma que sea gene
         <img src="./assets/mokepones/hipodoge.png" alt ="hipodoge">
     </label>
 
-Por ende, vamos a copiar esa misma estructura y la pondremos dentro de las comillas invertidas en JS. Tenemos que agregarle variables a ese código debido a que 
+Por ende, vamos a copiar esa misma estructura y la pondremos dentro de las comillas invertidas en JS. Se podrá observar este código como string. Entonces ahora, ¿Cómo hacemos para integrarle información de cada uno de nuestros objetos?
+
+Entonces hay que pensar, de mis objetos respecto al renderizado del HTML ¿Qué información es unica por objeto?, ¿Qué valores de ciertas propiedades necesito? 
+
+A nosotros nos interesa:
+
+1. El nombre de nuestra mascota (objeto): Esto lo utilizamos en los atributos HTML id, for, la etiqueta p, y en el alt de la imagen.
+
+2. Valor o URL de donde está la imagen.
+
+Para inyectar información de cada una de las propiedades:
+
+* . Se integra el signo pesos justo donde ira la variable y luego los signos corchetes para determinar cual es la variable que nos interesa para poder extraer su valor. Pues siendo asi, se inserta mokepon.atributo para determinar muchas de estas acciones. En nuestro caso siempre será mokepon.
+
+Siendo asi el siguente template literario:
+
+    mokepones.forEach((mokepon) => {
+    opcionDeMokepones =`
+    <input type="radio" name="mascota" id=${mokepon.nombre} />
+    <label class="tarjeta-de-mokepon" for=${mokepon.nombre}>
+        <p>${mokepon.nombre}</p>
+        <img src=${mokepon.foto}
+        alt=${mokepon.nombre}>
+    </label>)
+    ` /* las comillas se hacen con alt gr y } */
+
+Como llevamos trabajando nuestro JavaScript con IDs al div con class "tarjetas" le insertaremos el atributo id con el valor "contenedorTarjetas", este nombre es el adecuado porque es ahí el lugar que recibira todas nuestras tarjetas pues puede que hoy tengamos 3 mascotas, pero mañana puede que tengamos mil.
+
+* Esta idea me gusta relacionarla mucho de mas o menos el cómo seria react, del cómo esto sirve para una ecommerce de lo que sea ya que estos pueden ser perfectamente tarjetas de productos. Y de hecho estoy pensando en hacer un proyecto que sea esto mismo, haria que por medio del código, el proyecto sea totalmente escalable.
+
+> Algo como mejora es incorporar un mismo estilo para nombrar las variables, id y clases. Pues tengo varias estilo nombre-variable y otras estilo nombreVariable.
+
+Y entonces creamos una nueva variable constante por parte del HTML, siendo este contenedor tarjetas.
+
+Ya una vez definida, la vamos a insertar justo debajo de nuestro forEach con elementos HTML por dentro siendo asi el contenedorTarjetas. Le agregamos la propiedad .innerHTML que sea igual a opcionDeMokepones (el forEach que recorre cada objeto para determinar sus elementos HTML), es de tenerse en cuenta que tenemos 3 elementos por lo que si usamos:
+
+    contenedorTarjeta.innerHTML = opcionDeMokepones
+
+Sólo se va a imprimir uno, entonces para imprimir cada uno de los elementos por medio de la iteración de cada uno de nuestros objetos (forEach), le vamos a agregar un + justo antes del =
+
+siendo asi:
+
+    contenedorTarjeta.innerHTML += opcionDeMokepones
+
+Por lo que ahora sí, va a aparecer cada uno de nuestros objetos y por ende las tarjetas de los mokepones como si estuvieran en el HTML.
+
+De esta forma integramos HTML con JS, por lo que ya dependiendo de la cantidad de arreglos. Estos se van a imprimir ahí. Asi se manejarian las ecommerce o tiendas virtuales.
+
+Si tenemos la información en una base de datos que se convierta en un JSON que seria como un objeto podremos imprimir cuantos productos existan en nuestra base de datos y asi nosotros ahorramos muchisimo tiempo.
+
+En JS estamos inyectando el valor de ciertas variables, que por medio de la modificación del DOM van a aparecer y por ende seran renderizadas. Automatizamos un proceso que se podria o normalmente se realizaria cada elemento por el HTML. (Diferencias entre junior y senior).
+
+Me parece muy agradable esto, porque si agregamos 50 mokepones a nuestro array, 50 mokepones se van a renderizar en nuestro HTML y asi estariamos iterando a traves de los objetos.
+
+> Ya estamos manipulando JavaScript y HTML: Estamos pasando de una página estatica a una dinamica. Ten en cuenta que una página estatica es la que tiene todo su código de forma estatica. La dinamica es que con relación al JS va a ir cambiando. Asi es como la industria actual funciona.
+
+Con esto todavia no se termina de resolver algunos de los problemas que existen.
+
+Es muy importante para el aprendizaje leer y re leer el código buscando entender cada expresión usada en la sintaxis, duplicar el código, craer un proyecto paralelo sería muy interesante.
+
+---

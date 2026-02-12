@@ -103,6 +103,9 @@
     /* Esto se llama push, es una función que se utiliza para agregar elementos a un array.*/
     mokepones.push(hipodoge,capipepo,ratigueya) 
 
+
+// Inician Funciones
+
 function iniciarJuego() {
     sectionSeleccionarAtaque.style.display = 'none'
 
