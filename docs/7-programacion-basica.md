@@ -169,6 +169,8 @@ Si desea mirar **Mokepon** puede acceder a los siguentes vinculos (Este se empie
 
 * [50. Renderizado Dinámico de Objetos HTML con JavaScript](#renderizado-dinámico-de-objetos-en-html-con-javascript)
 
+* [51. Solución de errores en variables y elementos HTML en JavaScript](#solución-de-errores-en-variables-y-elementos-html-en-javascript)
+
 
 
 
@@ -4342,4 +4344,75 @@ Con esto todavia no se termina de resolver algunos de los problemas que existen.
 
 Es muy importante para el aprendizaje leer y re leer el código buscando entender cada expresión usada en la sintaxis, duplicar el código, craer un proyecto paralelo sería muy interesante.
 
+
+
+
+
+
+
+
+
+
 ---
+
+
+
+
+
+
+
+
+
+
+## Solución de errores en variables y elementos HTML en JavaScript
+
+Nuestro juego esta parcialmente roto, todo aparenta bien si miramos la consola. Pero entonces si seleccionamos a una mascota podremos observar que en la consola va a aparecer:
+
+    Uncaught TypeError: Cannot read properties of null (reading 'checked') at HTMLButtonElement.seleccionarMascotaJugador
+
+Que en otras palabras es como si un input no existiera, no nos va a aparecer el nombre de la mascota que seleccionamos justo debajo de las vidas.
+
+Ahora, como anteriormente nosotros bajamos nuestro script pues primero se lee el HTML y luego sí el JavaScript por lo que nuestro navegador renderiza primero todo los elementos HTML. Una vez llega a lo ultimo del documento para leer el código JS, revisa el documento JS de arriba hacia abajo de la misma forma. Entonces, pensando de esa forma en nuestro código JS el navegador va a leer primero las variables declaradas al inicio de todo.
+
+> Ligamos variables a un elemento HTML mediante IDs
+
+El problema de nuestro código es que como se lee de ultimas el JavaScript, y por nuestro template literario... Los IDs de nuestras mascotas y su selección no existian una vez finalizaba el HTML. Esto es asi, hasta que inicia la función de **iniciarJuego()** que es donde todo se empieza a inyectar.
+
+Eso quiere decir, que inicialmente no se encuentran el valor de esas variables quedando asi nulas hasta que se ejecuta la función. 
+
+Vamos a borrar las constantes que identificaban a cada una de nuestras mascotas: Hipodoge, Capipepo, Ratigueya.
+
+Estas variables las vamos a insertar dentro de nuestro template literario. Sólo que quitandoles su declaración como CONST o como LET dejando asi:
+
+    inputHipodoge = document.getElementById('hipodoge')
+    inputCapipepo = document.getElementById("capipepo")
+    inputRatigueya = document.getElementById("ratigueya")
+
+Por lo que asi, ahora se generan primero los elementos HTML y luego ligamos con del ID a nuestras variables.
+
+Ahora si volvemos a seleccionar nuestra mascota, el error habrá cambiado apareciendo asi:
+
+    Uncaught TypeError: Cannot read properties of null (reading 'checked') at HTMLButtonElement.seleccionarMascotaJugador    
+
+Este error es básico.
+
+Si observamos el cómo estan escritas nuestras variables de boton de mascota, veremos que hay una diferencia en donde nuestros objetos (mokepones) cada vez que son declarados en los parametros del objeto, esta con mayuscula inicial por cada nombre de cada mascota.
+
+Siendo asi, un problema en donde el ID no coincide con el valor de la propiedad. Por lo que de forma muy rápida para solucionar esto es escribiendo la primera mayuscula inicial :
+
+    inputHipodoge = document.getElementById('Hipodoge')
+    inputCapipepo = document.getElementById("Capipepo")
+    inputRatigueya = document.getElementById("Ratigueya")
+
+Ahora podemos seguir iterando entonces.
+
+Como reflexión a lo largo de la carrera nos podremos encontrar mucho con errores de tipografia. Estos errores son frustrantes porque muchas veces todo puede aparentar estar bien. Y sí, en la lógica pero no en la información.
+
+> Foto de Template Literario de: Bryan Andres Vera Garcia
+
+<img src="https://static.platzi.com/media/user_upload/2022-09-29_19h58_51-58fbbaf9-1118-428c-9477-cc7abac57639.jpg">
+
+<img src="https://static.platzi.com/media/user_upload/2022-09-29_20h00_43-564ddb77-b37f-4c13-83a7-41ceee33e903.jpg">
+
+*Imagen Tomada De: https://platzi.com/cursos/programacion-basica/declaracion-lenta-de-variables/*
+
