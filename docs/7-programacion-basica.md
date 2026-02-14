@@ -171,6 +171,8 @@ Si desea mirar **Mokepon** puede acceder a los siguentes vinculos (Este se empie
 
 * [51. Solución de errores en variables y elementos HTML en JavaScript](#solución-de-errores-en-variables-y-elementos-html-en-javascript)
 
+* [52. Uso de Objetos para Centralizar Información en JavaScript](#uso-de-objetos-para-centralizar-información-en-javascript)
+
 
 
 
@@ -4416,3 +4418,114 @@ Como reflexión a lo largo de la carrera nos podremos encontrar mucho con errore
 
 *Imagen Tomada De: https://platzi.com/cursos/programacion-basica/declaracion-lenta-de-variables/*
 
+
+
+
+
+
+
+
+
+
+---
+
+
+
+
+
+
+
+
+
+
+## Uso de Objetos para Centralizar Información en JavaScript
+
+> Hace un año, yo estaba realizando este curso y no lo finalice. Entonces de ahora en adelante, hay información de la cual yo no sabia nada y por ende empece a aprender y a escribir código nuevo: Me siento bastante feliz de llegar a este punto.
+
+Vamos a manipular otra de las funciones, tenemos que manejar una sola fuente de verdad: Toda la información que existe en nuestros objetos asi que todas las funciones que tengan información manual, que nosotros escribimos. La vamos a iterar para que sea información que existe en nuestros objetos.
+
+En la función seleccionarMascotaJugador() hay una validación en donde un elemento HTML que esta vacio le inyectamos información. Esa información está escrita a mano: Mire el siguente código:
+
+```javascript
+    function seleccionarMascota(){
+        sectionSeleccionarMascota.style.display = 'none'
+
+        // sectionSeleccionarAtaque.style.display = 'block'
+        sectionSeleccionarAtaque.style.display = 'flex'
+
+        //Esto es una forma de modificación del DOM
+
+        if (inputHipodoge.checked) {
+            SpanMascotaJugador.innerHTML = 'Hipodoge '
+        } else if (inputCapipepo.checked) {
+            SpanMascotaJugador.innerHTML = 'Capipepo '
+        } else if (inputRatigueya.checked) {
+            SpanMascotaJugador.innerHTML = 'Ratigueya '
+        } else {
+            alert("Debes seleccionar tu mascota")
+        }
+
+        SeleccionarMascotaEnemigo()
+    }
+```
+
+Tenemos que quitar esto. Y empezar a usar nuestra fuente de verdad: La información de nuestros objetos.
+
+Cada input en ese código esta ligado a un elemento HTML, le pusimos información importante.
+
+Intente escribir inputHipodoge en la consola de las devtools del navegador. Reflexione: ¿Qué aparece? 
+Yo observo la información que populamos anteriormente de nuestros objetos a cada input. Es interesante porque no aparece en el HTML, pero al realizar la modificación del DOM mediante JavaScript este aparece común y corriente.
+
+> Lo importante de la información de nuestro input es el ID.
+
+Inserte en la consola **typeof(inputCapipepo)** y observará que inputCapipepo es un objeto. **typeof()** es un método para definir qué tipo de elemento es el elemento que se encuentra en su parametro.
+
+* typeof en JS by MDN: https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Operators/typeof
+
+Ya sabemos que si queremos llegar al metodo ID de nuestro elemento, como es un objeto pues mando a nombrar mi objeto y luego de un . agrego el atributo que deseo ver, es decir: inputCapipepo.id
+
+Esto escrito en la consola me regresa su valor ID: Capipepo
+
+De esta forma, abstraimos información de un método de un objeto.
+
+Esta información me sirve totalmente para la información de mi programa.
+
+Decidimos entonces, no dejar ese string por mascota sino el metodo de ese objeto. Siendo entonces:
+
+En vez de que nuestro código sea:
+
+```javascript
+    if (inputHipodoge.checked) {
+            SpanMascotaJugador.innerHTML = 'Hipodoge'
+    }
+```
+
+Nuestro código va a ser:
+
+```javascript
+    if (inputHipodoge.checked) {
+            SpanMascotaJugador.innerHTML = inputHipodoge.id
+    }
+```
+
+remplazando asi, cada uno de nuestros inputs. Remplazando información manual por dinamica. Por lo que nuestro código quedo asi:
+
+```javascript
+    if (inputHipodoge.checked) {
+        SpanMascotaJugador.innerHTML = inputHipodoge.id
+    } else if (inputCapipepo.checked) {
+        SpanMascotaJugador.innerHTML = inputCapipepo.id
+    } else if (inputRatigueya.checked) {
+        SpanMascotaJugador.innerHTML = inputRatigueya.id
+    } else {
+        alert("Debes seleccionar tu mascota")
+    }
+```
+
+Comprobemos entonces en nuestro programa, si probamos y miramos el span estará funcionando completamente pasando efectivamente lo que nosotros esperamos que llegue a pasar y por medio de la consola nos aparecera lo mismo que en la anterior busqueda, pero esta vez tenemos una sóla fuente de verdad.
+
+Pues si un día vamos a agregar más mascotas, no vamos a observar validación por validación para mirar donde pusimos los nombres pues ya con esto podemos asegurar que se va a cambiar dinamicamente lo que nos interesante y esto es una fuente de verdad.
+
+Tienes una variable que tiene la información que se va a utilizar repetidamente en todo el programa.
+
+---

@@ -144,11 +144,11 @@ function seleccionarMascota(){
     //Esto es una forma de modificación del DOM
 
     if (inputHipodoge.checked) {
-        SpanMascotaJugador.innerHTML = 'Hipodoge '
+        SpanMascotaJugador.innerHTML = inputHipodoge.id
     } else if (inputCapipepo.checked) {
-        SpanMascotaJugador.innerHTML = 'Capipepo '
+        SpanMascotaJugador.innerHTML = inputCapipepo.id
     } else if (inputRatigueya.checked) {
-        SpanMascotaJugador.innerHTML = 'Ratigueya '
+        SpanMascotaJugador.innerHTML = inputRatigueya.id
     } else {
         alert("Debes seleccionar tu mascota")
     }
