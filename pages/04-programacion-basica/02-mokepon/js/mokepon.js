@@ -157,7 +157,7 @@ function seleccionarMascota(){
 }
 
 function SeleccionarMascotaEnemigo(){
-    let MascotaAleatoria = aleatorio(1,3)
+    let MascotaAleatoria = aleatorio(1, mokepones.length)
 
     if (MascotaAleatoria == 1){
         SpanMascotaEnemigo.innerHTML = 'Hipodoge '

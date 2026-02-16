@@ -173,6 +173,8 @@ Si desea mirar **Mokepon** puede acceder a los siguentes vinculos (Este se empie
 
 * [52. Uso de Objetos para Centralizar Información en JavaScript](#uso-de-objetos-para-centralizar-información-en-javascript)
 
+* [53. Selección de Mascota Aleatoria en JavaScript](#selección-de-mascota-aleatoria-en-javascript)
+
 
 
 
@@ -4528,4 +4530,87 @@ Pues si un día vamos a agregar más mascotas, no vamos a observar validación p
 
 Tienes una variable que tiene la información que se va a utilizar repetidamente en todo el programa.
 
+Single Source of Truth By Wikipedia: https://en.wikipedia.org/wiki/Single_source_of_truth
+
+
+
+
+
+
+
+
+
 ---
+
+
+
+
+
+
+
+
+
+## Selección de Mascota Aleatoria en JavaScript
+
+Vamos a manipular la función **SeleccionarMascotaDelEnemigo()** esta es la función donde se va a seleccionar la mascota de nuestro enemigo en donde tenemos información, asi como en el anterior título de forma manual y queremos quitar esta información manual.
+
+Reflexione: ¿Qué pasaria si quisieramos agregar más mascotas y cómo haria entonces la función de selección de la mascota del enemigo? Tendriamos que escribir eso de forma manual, no es código sostenible ni escalable a proyectos grandes pues "¿Y si quisieramos 1000 mascotas?, ¿Cómo sucede con LOL?"
+
+Nuestro enemigo va a seleccionar algún personaje que se encuentre en nuestros objetos.
+
+A continuación observe el código como se encuentra:
+
+```javascript
+    function SeleccionarMascotaEnemigo(){
+        let MascotaAleatoria = aleatorio(1,3)
+
+        if (MascotaAleatoria == 1){
+            SpanMascotaEnemigo.innerHTML = 'Hipodoge '
+        } else if (MascotaAleatoria == 2) {
+            SpanMascotaEnemigo.innerHTML = 'Capipepo '
+        } else {
+            SpanMascotaEnemigo.innerHTML = 'Ratigueya '
+        }
+    
+    }
+```
+
+La función que se invoca **aleatorio(1,3)** esta funcionando en parametros con un mínimo y un máximo. Esto quiere decir que asi como la manejamos esta escrita para 3 mascotas. ¿Y si incorporaramos más mascotas? Esto quiere decir que si incorporaramos una nueva mascota, tendriamos que ir cambiando este número y asi cada vez que se incorpore una mascota nueva. Esto no es optimo.
+
+> Asi sea un segundo, algo pequeño, puede ser facilmente olvidado además de que debe ser iterado e irse manteniendo por el programador. Hagamos que esto sea autosostenible.
+
+Para tener una sola fuente de verdad, vamos a usar nuestro arreglo de mokepones.
+
+Revisemos **mokepones** en la consola: (3) [Mokepon, Mokepon, Mokepon]
+
+Hay una forma de abrirlo y nos aparecera, la longitud es igual a un número siendo el número de elementos que existen dentro del array. Podemos usar este número, pues si este arreglo empieza a crecer, este número tambien. 
+
+Podemos usar este número sin tener que modificar manualmente cualquier cosa.
+
+Por lo que podemos usar entonces: mokepones.length siendo asi la longitud de mokepones, o cada uno de los elementos de este array.
+
+Por lo que el código quedaria como:
+
+```javascript
+    function SeleccionarMascotaEnemigo(){
+        let MascotaAleatoria = aleatorio(0, mokepones.length - 1)
+
+        if (MascotaAleatoria == 1){
+            SpanMascotaEnemigo.innerHTML = 'Hipodoge '
+        } else if (MascotaAleatoria == 2) {
+            SpanMascotaEnemigo.innerHTML = 'Capipepo '
+        } else {
+            SpanMascotaEnemigo.innerHTML = 'Ratigueya '
+        } 
+    }
+```
+
+Por lo que actualmente como tenemos 3 mascotas en nuestro array de mokepones que son inyectados por medio de un .push... De esta forma siempre será dinamico.
+
+Pero entonces ahora tenemos un problema.
+
+El min es 1 y el maximo son 3, porque 1 más 3 son 4 por lo que tendremos que restarle 1  asi que tendriamos que restarle uno para que nos de el resultado como es.
+
+Y remplazamos el 1 por un 0.
+
+Por lo que de esta forma iniciamos desde 0 y me dará los 
