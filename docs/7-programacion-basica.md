@@ -4611,6 +4611,68 @@ Pero entonces ahora tenemos un problema.
 
 El min es 1 y el maximo son 3, porque 1 más 3 son 4 por lo que tendremos que restarle 1  asi que tendriamos que restarle uno para que nos de el resultado como es.
 
+> No entendí el razonamiento de 1 más 3 da 4 y por ende restarle 1 para que de 3.
+
 Y remplazamos el 1 por un 0.
 
-Por lo que de esta forma iniciamos desde 0 y me dará los 
+Por lo que de esta forma iniciamos desde 0 y la lista se contará de 0, 1, 2 (Del 0 al número de elementos) siendo asi un rango de números de personajes que se pueden seleccionar.
+
+Asi entonces, nosotros nos ahorramos tener que modificar este número cada cierto tiempo de acuerdo a qué mascotas agregamos o eliminamos.
+
+---
+
+Ahora, se piensa que dentro de la función seria bueno eliminar la validación quedandonos solo con la variable spanMascotaEnemigo debido a que este contiene información de la mascota que va a usar nuestro enemigo.
+
+Fijese entonces, la estructura de control dentro de la función **SeleccionarMascotaEnemigo()** el cual se ira editando.
+
+```javascript
+    if (MascotaAleatoria == 1){
+        SpanMascotaEnemigo.innerHTML = 'Hipodoge '
+    } else if (MascotaAleatoria == 2) {
+        SpanMascotaEnemigo.innerHTML = 'Capipepo '
+    } else {
+        SpanMascotaEnemigo.innerHTML = 'Ratigueya '
+    }
+```
+
+Se modifico entonces la estructura a: spanMascotaEnemigo = mokepones[MascotaAleatoria]
+
+Tenemos nosotros nuestro arreglo mokepones. 
+
+* Pruebe consultar mokepones en la consola con las dev tools. Se observará el indice de cada uno de los mokepones
+
+* El elemento 1 de una lista en programación es el 0
+
+Si nosotros usamos mokepones[1] nos va a aparecer el mokepon 0 es decir Capipepo y su información. Asi mismo si lo usamos con los otros indices del 0, al 2. Entonces: Si nosotros usamos la variable MascotaAleatoria que trae un número aleatorio, traera un indice diferente y por ende la identificación de ese objeto. (Mokepon) Siendo de esta forma la selección que el enemigo va a usar.
+
+> Me gusta bastante que sea cada vez más profesional.
+
+Siendo asi, la función quedo asi:
+
+```javascript
+    function SeleccionarMascotaEnemigo(){
+        let MascotaAleatoria = aleatorio(1, mokepones.length)
+
+        SpanMascotaEnemigo = mokepones[MascotaAleatoria]
+    }
+```
+
+Surge entonces un nuevo problema, no aparece el nombre de la mascota del enemigo una vez es seleccionada al iniciar la sección de ataques. Esto sucede porque estamos alterando una variable que esta ligada a un elemento HTML (spanMascotaEnemigo).
+
+Nosotros necesitamos que se imprima el nombre de nuestro objeto/personaje/mascota:
+
+*   Se agrega entonces en el arreglo .nombre (metodo de nuestro objeto)
+
+*   Se agrega a la variable spanMascotaEnemigo la propiedad .innerHTML
+
+Siendo de esa forma nuestra función:
+
+```javascript
+    function SeleccionarMascotaEnemigo(){
+        let MascotaAleatoria = aleatorio(1, mokepones.length)
+
+        SpanMascotaEnemigo.innerHTML = mokepones[MascotaAleatoria].nombre
+    }
+```
+
+Por ende seguimos implementando nuestra unica fuente de verdad, ya no tenemos que seguir pensando en las validaciones ni tener que incorporar esto de forma manual. Simplemente usamos los objetos que ya tenemos.

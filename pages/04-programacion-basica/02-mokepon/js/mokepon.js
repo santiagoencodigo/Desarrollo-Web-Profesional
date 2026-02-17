@@ -159,14 +159,7 @@ function seleccionarMascota(){
 function SeleccionarMascotaEnemigo(){
     let MascotaAleatoria = aleatorio(1, mokepones.length)
 
-    if (MascotaAleatoria == 1){
-        SpanMascotaEnemigo.innerHTML = 'Hipodoge '
-    } else if (MascotaAleatoria == 2) {
-        SpanMascotaEnemigo.innerHTML = 'Capipepo '
-    } else {
-        SpanMascotaEnemigo.innerHTML = 'Ratigueya '
-    }
-   
+    SpanMascotaEnemigo.innerHTML = mokepones[MascotaAleatoria].nombre
 }
 
 function ataqueFuego(){
