@@ -48,6 +48,8 @@
     let inputHipodoge
     let inputCapipepo
     let inputRatigueya
+
+    let mascotaJugador
     
     let vidasJugador = 3
     let vidasEnemigo = 3
@@ -145,13 +147,18 @@ function seleccionarMascota(){
 
     if (inputHipodoge.checked) {
         SpanMascotaJugador.innerHTML = inputHipodoge.id
+        mascotaJugador = inputHipodoge.id
     } else if (inputCapipepo.checked) {
         SpanMascotaJugador.innerHTML = inputCapipepo.id
+        mascotaJugador = inputCapipepo.id
     } else if (inputRatigueya.checked) {
         SpanMascotaJugador.innerHTML = inputRatigueya.id
+        mascotaJugador = inputRatigueya.id
     } else {
         alert("Debes seleccionar tu mascota")
     }
+
+    extraerAtaques(mascotaJugador)
 
     SeleccionarMascotaEnemigo()
 }

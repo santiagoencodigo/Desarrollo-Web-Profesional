@@ -175,6 +175,8 @@ Si desea mirar **Mokepon** puede acceder a los siguentes vinculos (Este se empie
 
 * [53. Selección de Mascota Aleatoria en JavaScript](#selección-de-mascota-aleatoria-en-javascript)
 
+* [54. Iteración de Arreglos y Manipulación del DOM en JavaScript](#iteración-de-arreglos-y-manipulación-del-dom-en-javascript)
+
 
 
 
@@ -4676,3 +4678,106 @@ Siendo de esa forma nuestra función:
 ```
 
 Por ende seguimos implementando nuestra unica fuente de verdad, ya no tenemos que seguir pensando en las validaciones ni tener que incorporar esto de forma manual. Simplemente usamos los objetos que ya tenemos.
+
+
+
+
+
+
+
+
+
+---
+
+
+
+
+
+
+
+
+
+## Iteración de Arreglos y Manipulación del DOM en JavaScript
+
+Tenemos un nuevo problema en nuestro programa, el tema de los ataques. Pues tenemos 3 botones en nuestro HTML, pero ahora ya no nos sirve porque nuestros personajes ahora tienen más ataques y sus ataques son distintos.
+
+Se invita a intentar resolver este problema de forma individual: Recordemos que se deben quitar los botones del HTML y nosotros ya tenemos un arreglo dentro de nuestro objeto donde tenemos cada uno de los elementos que vamos nosotros a renderizar asi que se tendria que iterar a traves de ese arreglo para poder mostrar los botones, algo muy similar a lo que se hizo con las tarjetas de los mokepones.
+
+> Al intentar hacerlo, me quede pensando en: ¿Donde debo incorporar el nuevo código?, ¿Debo remplazar el código HTML mediante el JS iterando por el array de ataque dentro de la clase Mokepon?, ¿Cómo será la lógica de combate?
+
+Antes de tocar el código, se debe entender bien ¿Qué vamos a hacer?
+
+Sabemos el problema base: En nuestro HTML tenemos la estructura de los botones, pero esto no nos sirve(Aunque será la estructura que vamos a utilizar). Vamos a hacer lo mismo que hicimos con nuestras tarjetas, pero con un paso extra:
+
+* Estamos usando un objeto que tiene una propiedad, que es un arreglo que son sus poderes/ataques.
+
+¿Cómo llegamos a esa propiedad?
+
+Sabemos que si agregamos el nombre de una propiedad, luego un . y luego el atributo, es decir: mokepon.ataques nos va a salir directamente ese arreglo y tenemos que iterar sobre ese arreglo.
+
+* Tenemos una nueva pregunta: ¿Cómo llegamos a los ataques del personaje que seleccionamos?
+
+Podemos generar una nueva variable que valla a guardar el nombre de ese personaje para despues poder buscar cual es ese personaje, cuales son sus ataques y guardar los ataques para generar la iteración que hicimos anteriormente.
+
+De aqui podemos sacar dos funciones:
+
+* La función para abstraer los ataques del personaje que ya seleccionamos.
+
+---
+
+Vamos a crear entonces una nueva variable llamada MascotaJugador:
+
+```javascript
+    let MascotaJugador
+```
+
+Esta variable me va a guardar la información que se genera dentro de la función **seleccionarMascota()**:
+
+```javascript
+    function seleccionarMascota(){
+        sectionSeleccionarMascota.style.display = 'none'
+
+        // sectionSeleccionarAtaque.style.display = 'block'
+        sectionSeleccionarAtaque.style.display = 'flex'
+
+        //Esto es una forma de modificación del DOM
+
+        if (inputHipodoge.checked) {
+            SpanMascotaJugador.innerHTML = inputHipodoge.id
+        } else if (inputCapipepo.checked) {
+            SpanMascotaJugador.innerHTML = inputCapipepo.id
+        } else if (inputRatigueya.checked) {
+            SpanMascotaJugador.innerHTML = inputRatigueya.id
+        } else {
+            alert("Debes seleccionar tu mascota")
+        }
+
+        SeleccionarMascotaEnemigo()
+    }
+```
+
+Hacemos que dentro de cada condicional la variable mascotaJugador tome el valor de los inputs para asi poder abstraer esa información, nosotros despues esa variable la utilizamos para buscar ese nombre en nuestros objetos para abstraer directamente los ataques.
+
+por ende nuestro código queda:
+
+```javascript
+    if (inputHipodoge.checked) {
+        SpanMascotaJugador.innerHTML = inputHipodoge.id
+        mascotaJugador = inputHipodoge.id
+    } else if (inputCapipepo.checked) {
+        SpanMascotaJugador.innerHTML = inputCapipepo.id
+        mascotaJugador = inputCapipepo.id
+    } else if (inputRatigueya.checked) {
+        SpanMascotaJugador.innerHTML = inputRatigueya.id
+        mascotaJugador = inputRatigueya.id
+    } else {
+        alert("Debes seleccionar tu mascota")
+    }
+```
+
+Siendo de esta forma, guardamos en una variable cual es la mascota del jugador. Esto es porque lo necesitamos en otra función para extraer los ataques, necesitamos el nombre del personaje para encontrar los ataques y poder usarlos en otra función y asi imprimirlos en HTML.
+
+Por ende se crea la función **extraerAtaques()** justo debajo de las condicionales de nuestra función.
+
+Esta función va a llevar un parametro, el cual va a ser la variable mascotaJugador.
+
