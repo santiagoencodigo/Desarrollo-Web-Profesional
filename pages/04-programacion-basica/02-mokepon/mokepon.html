@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset = "utf-8" />
+        <meta charset="utf-8" />
         <title>Mokepon - Santiagoencodigo</title>
         <link rel="stylesheet" href="./mokepon.css"/>
         <link rel="icon" type="image/jpg" href="../../../Assets/img/8. Mi yo creado por paint.jpg"/>
@@ -10,30 +10,23 @@
         <section id="seleccionar-mascota">
             <h1 class="titulo">Mokepon</h1>
             <h2 class="subtitulo">Elige a tu mascota:</h2>
-
-            <div id='contenedorTarjetas' class="tarjetas">
-                          
-            </div>    
-
+            <div id='contenedorTarjetas' class="tarjetas"></div>    
             <button id="boton-seleccionar">Seleccionar</button>
-
             <a href="../../../index.html" id="btn-home">Home</a>
         </section>
 
         <section id="seleccionar-ataque">
             <h1 class="titulo">Mokepon</h1>
-
             <h2 class="subtitulo">Elige tu ataque:</h2>
             
-            <div class = "tarjetas-ataques">
+            <div class="tarjetas-ataques">
                 <button id="boton-fuego" class="boton-de-ataque">Fuego 🔥</button>
                 <button id="boton-agua" class="boton-de-ataque">Agua 🌊</button>
                 <button id="boton-tierra" class="boton-de-ataque">Tierra 🌱</button>
             </div>
 
-            <div id="mensajes">
-                <p id="resultado">Mucha suerte</p>
-
+            <div id="mensajes" style="display: none;">
+                <p id="resultado"></p>
                 <section id='section-reiniciar'>
                     <button id="reiniciar">Reiniciar</button>
                 </section>
@@ -41,17 +34,42 @@
 
             <div class="ataques">
                 <div class="ataques-jugador">
-                    <p id='vidas-jugador'>🤍🤍🤍</p>
-                    <p id="mascota-jugador"></p></p> 
-                    <div id="ataques-del-jugador"></div>
+                    <div id="ataques-del-jugador" class="columna-movimientos"></div>
+                    <div class="personaje-caja">
+                        <p id="mascota-jugador"></p>
+                        <img id="foto-jugador" class="foto-combate" src="" alt="">
+                        <div class="contenedor-salud">
+                            <div class="barra-vida-contenedor">
+                                <div id="barra-vida-jugador" class="barra-vida-relleno"></div>
+                            </div>
+                            <p id="vidas-jugador" class="porcentaje-texto">100%</p>
+                        </div>
+                    </div>
                 </div>
+
                 <div class="ataques-enemigo">
-                    <p id='vidas-enemigo'>🖤🖤🖤</p>
-                    <p id="mascota-enemigo"></p></p> 
-                    <div id="ataques-del-enemigo"></div>
-                </div>               
-            </div>           
+                    <div class="personaje-caja">
+                        <p id="mascota-enemigo"></p>
+                        <img id="foto-enemigo" class="foto-combate" src="" alt="">
+                        <div class="contenedor-salud">
+                            <div class="barra-vida-contenedor">
+                                <div id="barra-vida-enemigo" class="barra-vida-relleno"></div>
+                            </div>
+                            <p id="vidas-enemigo" class="porcentaje-texto">100%</p>
+                        </div>
+                    </div>
+                    <div id="ataques-del-enemigo" class="columna-movimientos"></div>
+                </div>
+            </div>          
         </section>
+
+        <div id="modal-resultado" class="modal">
+            <div class="modal-contenido">
+                <h2 id="resultado-final-texto">¡Ganaste! 🥳</h2>
+                <button id="boton-reiniciar-modal" onclick="reiniciarJuego()">Reiniciar</button>
+            </div>
+        </div>
+
         <script src="./js/mokepon.js"></script>        
     </body>
 </html>
