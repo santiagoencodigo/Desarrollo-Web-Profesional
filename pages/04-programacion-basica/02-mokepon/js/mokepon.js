@@ -159,8 +159,19 @@ function seleccionarMascota(){
     }
 
     extraerAtaques(mascotaJugador)
-
     SeleccionarMascotaEnemigo()
+}
+
+function extraerAtaques(mascotaJugador) {
+    let ataques
+    for (let i = 0; i < mokepones.length; i++) {
+        if (mascotaJugador === mokepones[i].nombre) {
+            ataques = mokepones[i].ataques
+        }
+    
+    }
+    // console.log(ataques)
+    mostrarAtaques(ataques)
 }
 
 function SeleccionarMascotaEnemigo(){

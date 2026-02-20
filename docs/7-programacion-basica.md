@@ -4779,5 +4779,91 @@ Siendo de esta forma, guardamos en una variable cual es la mascota del jugador. 
 
 Por ende se crea la función **extraerAtaques()** justo debajo de las condicionales de nuestra función.
 
-Esta función va a llevar un parametro, el cual va a ser la variable mascotaJugador.
+Esta función va a llevar un parametro, el cual va a ser la variable mascotaJugador. La vamos a manejar como variable interna:
 
+```javascript
+    extraerAtaques(mascotaJugador)
+```
+
+Se crea justo debajo entonces, la función y por ende:
+
+¿Cómo hacemos para abstraer los ataques?, ¿Cómo crees que podemos llegar al personaje que acabamos de seleccionar?, ese mismo personaje que es nuestro objeto.
+
+Crearemos otra variable interna que llamaremos ataques porque ya una vez tengamos los ataques, debemos guardarlos para poder utilizarlos. Esta variable se puede convertir en un arreglo o puede guardar como tal tags de arreglos.
+
+Vamos a crear una pequeña iteración, un loop mediante FOR para movernos por cada uno de los personajes que tenemos actualmente para encontrar el que sea igual al que nosotros ya tenemos guardado en la variable.
+
+Se ingresa la sentencia FOR y se deja que visual studio code complete el ciclo (Autocompletado por sintaxis, se debe seleccionar for - loop) Esto lo que hace es iterar por cada uno de los elementos que existe directamente en un arreglo
+
+```javascript
+    function extraerAtaques(mascotaJugador) {
+        let ataques
+        for (let index = 0; index < array.length; index++) {
+            const element = array[index];            
+        }
+    }
+```
+
+Vamos a remplazar las variables index por variables i (Muy común y normal en el mundo de la programación para iteraciones). Por cada iteración va a agregar un valor por ende incialmente i va a ser igual a 0.
+
+El nombre de nuestro arreglo es mokepones.
+
+Y mientras nuestra iteración sea menor a la longitud de nuestro arreglo va a ejecutar el código que se encuentra abajo o dentro de las { }
+
+```javascript
+    function extraerAtaques(mascotaJugador) {
+        let ataques
+        for (let i = 0; i < mokepones.length; i++) {
+            const element = mokepones[i];
+            
+        }
+    }
+```
+
+Ahora vamos a validar el nombre que guarda la variable mascotaJugador por cada uno de los objetos que va a recorrer (Nuestros mokepones) Entonces generamos una validación (Escriba la sentencia IF y deje que se autocomplete selecciondo condición) en la que vamos a comprar nuestra variable respecto a nuestro arreglo.
+
+```javascript
+    if (mascotaJugador === mokepones[i])
+```
+
+Recordemos que si a nuestro arreglo le agregamos [ ] y un número, ese número representa el indice de nuestro arreglo pudiendo asi navegar entre cada uno de nuestros objetos.
+
+Por ende nos regresa el objeto en ese indice. Y finalmente, como de ese arreglo queremos llegar al nombre, agregamos . para seleccionar un atributo y ponemos nombre, siendo asi:
+
+```javascript
+    if (mascotaJugador === mokepones[i].nombre)
+```
+
+Siendo de esta forma nuestra validación.
+
+Ahora agregaremos el código en donde se cumpla la condición.
+
+Al ser iguales nuestros id de los inputs y el nombre de nuestros arreglos, haremos que ejecute la condicional agregandole asi, a la variable ataques el valor de los ataques de nuestro arreglo.
+
+```javascript
+    ataques = mokepones[i].ataques
+```
+
+Es recomendable insertar console.log(ataques) para mirar qué aparece en la consola. 
+
+De esta forma entonces, tenemos guardada la información de nuestros ataques para poder usarlo eventualmente. Ya tenemos nuestro arreglo listo y ya sólo es iterar sobre nuestro arreglo para inyectar en cada uno de nuestros elementos HTML.
+
+> Se invita a realizarlo pues ya se sabe como imprimirlo en HTML.
+
+Se crea una nueva función que reciba el valor de la variable ataques.
+
+Resultado:
+
+```javascript
+    function extraerAtaques(mascotaJugador) {
+        let ataques
+        for (let i = 0; i < mokepones.length; i++) {
+            if (mascotaJugador === mokepones[i].nombre) {
+                ataques = mokepones[i].ataques
+            }
+        
+        }
+        // console.log(ataques)
+        mostrarAtaques(ataques)
+    }
+```
