@@ -29,6 +29,7 @@
     const ataquesDelEnemigo = document.getElementById("ataques-del-enemigo")
 
     const ContenedorTarjetas = document.getElementById("contenedorTarjetas")
+    const ContenedorAtaques = document.getElementById("contenedorAtaques")
 
 
 

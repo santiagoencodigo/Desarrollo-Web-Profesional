@@ -4867,3 +4867,56 @@ Resultado:
         mostrarAtaques(ataques)
     }
 ```
+
+
+
+
+
+
+
+
+
+
+
+
+---
+
+
+
+
+
+
+
+
+
+
+
+
+## Crear Función "mostrarAtaques" en JavaScript para Juegos
+
+Vamos a crear la función mostrarAtaques() que es invocada en extraerAtaques().
+
+> Reflexione primero ¿Qué deberia hacer esta función?
+
+Ahora, hay que tener en cuenta que nuestro DIV que contiene los botones en el HTML pasa a ser nuestro contenedor, no necesitamos que tenga los botones sino que estos aparezcan de acuerdo a la mascota.
+
+```html
+    <div class = "tarjetas-ataques">
+        <button id="boton-fuego" class="boton-de-ataque">Fuego 🔥</button>
+        <button id="boton-agua" class="boton-de-ataque">Agua 🌊</button>
+        <button id="boton-tierra" class="boton-de-ataque">Tierra 🌱</button>
+    </div>
+```
+
+Por lo que a este DIV le agregaremos un atributo id que tenga le mismo nombre que la nomenclatura que hemos estado utilizando en nuestro HTML (contenedorTarjetas)y por ende:
+
+```html
+    <div id = "ContenedorAtaques" class = "tarjetas-ataques"></div>
+```
+
+Ya entonces, definimos en la parte de variables en nuestro JavaScript este nuevo elemento HTML. Esta variable se define con un const porque al ser un elemento HTML, este nunca va a cambiar.
+
+```javascript
+    const ContenedorAtaques = document.getElementById("contenedorAtaques")
+```
+
