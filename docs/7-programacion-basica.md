@@ -177,6 +177,8 @@ Si desea mirar **Mokepon** puede acceder a los siguentes vinculos (Este se empie
 
 * [54. Iteración de Arreglos y Manipulación del DOM en JavaScript](#iteración-de-arreglos-y-manipulación-del-dom-en-javascript)
 
+* [55. Crear Función "mostrarAtaques" en JavaScript para Juegos](#crear-función-mostrarataques-en-javascript-para-juegos)
+
 
 
 
@@ -4920,3 +4922,170 @@ Ya entonces, definimos en la parte de variables en nuestro JavaScript este nuevo
     const ContenedorAtaques = document.getElementById("contenedorAtaques")
 ```
 
+Y entonces tambien creamos una variable la cual se le pueda editar su valor, que va a contener la información de los ataques de nuestros mokepones. Siendo los ataques del personaje que seleccionamos.
+
+```javascript
+    let ataquesMokepon
+```
+
+Nos dirijimos ya a la función que estamos creando, siendo asi mostrarAtaques():
+
+```javascript
+    function mostrarAtaques(ataques) { }
+```
+
+En donde usaremos entonces, la variable ataques y el metodo forEach que tendrá como parametro cada ataque.
+
+> Por cada ataque que exista en el arreglo de ataques "haz algo"
+
+```javascript
+    ataques.forEach((ataque) => {
+        // 
+    })
+```
+
+Es de razonar entonces, ¿Qué queremos hacer? Queremos hacer una estructura en HTML que remplace los botones, necesitamos que se inyecte información de nuestros ataques. Esto es justo lo que vamos a necesitar para poder popular nuestra información.
+
+Entonces dentro de la variable ataquesMokepon será igual a (abrimos comillas invertidas) `` que se puede usar mediante **alt + 96** o tambien mediante **alt + }** separandolo entonces de forma:
+
+```javascript
+    ataquesMokepon = `
+    
+    `
+```
+
+En donde entonces, aprovecharemos esto para insertar la estructura de nuestro HTML para cada uno de los botones siendo asi: 
+
+```html
+    <button id="boton-tierra" class="boton-de-ataque">Tierra 🌱</button>
+```
+
+En donde modificaremos entonces el nombre del id haciendolo por medio de el signo ${} siendo de esa forma la propiedad de ataque.id
+
+Recordemos entonces que el funcionamiento de este bloque es de acuerdo a lo que insertamos anteriormente en el arreglo de nuestros ataques por medio del metodo .push().
+
+En donde de acuerdo al mokepon, ya sea capipepo, hipodoge o ratigueya. (Objetos/Templates Literarios) Cada uno de estos tiene una serie de ataques diferentes con su nombre y id correspondientes por ejemplo:
+
+```javascript
+    hipodoge.ataques.push(
+        {nombre: '🌊', id: 'boton-agua'},
+        {nombre: '🌊', id: 'boton-agua'},
+        {nombre: '🌊', id: 'boton-agua'},
+        {nombre: '🔥', id: 'boton-fuego'},
+        {nombre: '🌱', id: 'boton-tierra'},
+    )
+```
+
+Y el texto que nombra a nuestro ataque lo modificamos con ${ataque.nombre} siendo asi:
+
+```javascript
+    <button id="${ataque.id}" class="boton-de-ataque">${ataque.nombre}</button>
+```
+
+Ya una vez esto decidido, tendremos que inyectar abajo dentro de la función el mokepon en nuestro HTML dentro de algún elemento contenedor (Nuestro div) que en este caso es nuestro div con id contenedorAtaques.
+
+Por lo que lo nombramos por medio de nuestra variable ya creada y por medio del metodo .innerHTML y usamos el += para asi remplazar el valor de nuestro elemento por el valor de nuestra variable ataquesMokepon (Teniendo esta por dentro la estructura de nuestro boton HTML por cada uno de nuestros objetos mokepones que por dentro tienen su arreglo de ataques.):
+
+> Me parece increible como es que el código se estructura en funciones y una función depende totalmente de otra función para poder ser funcional.
+
+```javascript
+    contenedorAtaques.innerHTML += ataquesMokepon
+```
+
+Ya en nuestro HTML borramos cada uno de nuestros botones porque ya no son los ataques de nuestros personajes.
+
+Entonces ya una vez hecho esto solo queda verificar que nuestra función realmente es funcional:
+
+A mi personalmente me salió: 
+
+```javascript
+    Uncaught TypeError: Cannot read properties of null (reading 'addEventListener')
+    at iniciarJuego (mokepon.js:137:16)
+```
+
+y si selecciono un personaje me aparece:
+
+```javascript
+    mokepon.js:186 Uncaught TypeError: Cannot read properties of null (reading 'innerHTML')
+        at mokepon.js:186:9
+        at Array.forEach (<anonymous>)
+        at mostrarAtaques (mokepon.js:181:13)
+        at extraerAtaques (mokepon.js:177:5)
+        at HTMLButtonElement.seleccionarMascota (mokepon.js:164:5)
+```
+
+En donde a mi no me apareció ningún boton.
+
+**¿Qué esta sucediendo?**
+
+Recordemos que nosotros estamos nombrando unas variables en la parte superior de nuestro documento JavaScript en el cual el JavaScript tenia la información de nuestros elementos HTML que ahora en este momento ya no existen porque los borramos (Ya no existen los botones.) Y entonces mucho más abajo estamos creando estos elementos por lo que simplemente tenemos que bajar esas variables.
+
+Por ende seleccionaremos nuestros botones HTML cortandolos y les quitamos el const a por un let y entonces le quitamos su valor como variable debido a que en ese momento del documento, todavia no existen esos elementos en el HTML.
+
+Anteriormente:
+
+```javascript
+    const botonFuego = document.getElementById('boton-fuego')
+    const botonAgua = document.getElementById('boton-agua')
+    const botonTierra = document.getElementById('boton-tierra')
+```
+
+Ahora se bajaron hacia las variables let:
+
+```javascript
+    let botonFuego
+    let botonAgua
+    let botonTierra
+```
+
+y dentro de nuestra función a los botones les agregamos ese valor siendo asi dentro de nuestra función:
+
+```javascript
+    botonFuego = document.getElementById('boton-fuego')
+    botonAgua = document.getElementById('boton-agua')
+    botonTierra = document.getElementById('boton-tierra')
+```
+
+Por lo que a esa altura del documento nuestros botones ya existen ligandolos asi a los IDs y dandole su funcionalidad con cada una de las funciones que tengamos debajo de ese punto en donde le agregamos valor a estas variables.
+
+Entonces, ahora si nuevamente observamos la consola al iniciar el programa y seleccionar una mascota se matienen los mismos errores.
+
+Acabamos de ligar esas variables con un elemento HTML con cierto ID pues a ese nivel del documento esos elementos HTML son inyectados, pero entonces si observamos arriba de nuestro código tenemos cierta función que agrega el escuchador de eventos click a cada uno de estos botones para que pueda hacer algo que en estos casos es ejecutar cierta función.
+
+Es decir que al estar arriba y no abajo, estas variables a las cuales le estan dando el escuchador de eventos no existen.
+
+```javascript
+    botonFuego.addEventListener('click', ataqueFuego)
+    botonAgua.addEventListener('click', ataqueAgua)
+    botonTierra.addEventListener('click', ataqueTierra)
+```
+
+Por lo que vamos a trasladar esos elementos de nuestro código de la función iniciarJuego() hacia mostrarAtaques() en donde ya existen mis botones/variables con estos elementos HTML. Por ende ahí puedo agregar esos elementos para que hagan disparar ciertas funciones que tenemos justo debajo de nuestra función.
+
+Ya solo nos queda un pequeño problema que lo resolvemos en el siguente título en donde tenemos 2 botones más que corresponden a una mascota, por ejemplo Hipodoge tiene 3 veces el ataque de Agua y sólo le funciona el primer boton de agua, mientras que los otros dos botones de agua sólo se muestran mas no tienen funcionalidad.
+
+Nuestra función quedo:
+
+```javascript
+    function mostrarAtaques(ataques) {
+        ataques.forEach((ataque) => {
+            ataquesMokepon = `
+                <button id="${ataque.id}" class="boton-de-ataque">${ataque.nombre}</button>
+            `
+
+            ContenedorAtaques.innerHTML += ataquesMokepon
+        })        
+
+        botonFuego = document.getElementById('boton-fuego')
+        botonAgua = document.getElementById('boton-agua')
+        botonTierra = document.getElementById('boton-tierra')
+
+        botonFuego.addEventListener('click', ataqueFuego)
+        botonAgua.addEventListener('click', ataqueAgua)
+        botonTierra.addEventListener('click', ataqueTierra)
+    }
+```
+
+> La función mostrarAtaques() convierte la información (datos en el arreglo) en elementos visuales e interactivos dentro del juego. Es el puente entre la lógica del programa y la interfaz del jugador.
+
+---

@@ -5,11 +5,6 @@
     const sectionReiniciar=document.getElementById('section-reiniciar')
     const botonSeleccionar = document.getElementById('boton-seleccionar')
 
-    // Botones de ataque
-    const botonFuego = document.getElementById('boton-fuego')
-    const botonAgua = document.getElementById('boton-agua')
-    const botonTierra = document.getElementById('boton-tierra')
-
     // Botón de reiniciar
     const botonReiniciar = document.getElementById('reiniciar')
 
@@ -45,7 +40,7 @@
 
     // Esta variable es para popular nuestro HTML
     let opcionDeMokepones
-
+ 
     let inputHipodoge
     let inputCapipepo
     let inputRatigueya
@@ -54,6 +49,14 @@
     
     let vidasJugador = 3
     let vidasEnemigo = 3
+
+    // Ataques
+    let ataquesMokepon
+
+        // Botones de ataque
+        let botonFuego
+        let botonAgua
+        let botonTierra
 
 
 
@@ -132,9 +135,6 @@ function iniciarJuego() {
     sectionReiniciar.style.display = 'none'
 
     botonSeleccionar.addEventListener("click", seleccionarMascota)
-    botonFuego.addEventListener('click', ataqueFuego)
-    botonAgua.addEventListener('click', ataqueAgua)
-    botonTierra.addEventListener('click', ataqueTierra)
     botonReiniciar.addEventListener('click', reiniciarJuego)
 }
 
@@ -173,6 +173,24 @@ function extraerAtaques(mascotaJugador) {
     }
     // console.log(ataques)
     mostrarAtaques(ataques)
+}
+
+function mostrarAtaques(ataques) {
+    ataques.forEach((ataque) => {
+        ataquesMokepon = `
+            <button id="${ataque.id}" class="boton-de-ataque">${ataque.nombre}</button>
+        `
+
+        ContenedorAtaques.innerHTML += ataquesMokepon
+    })        
+
+    botonFuego = document.getElementById('boton-fuego')
+    botonAgua = document.getElementById('boton-agua')
+    botonTierra = document.getElementById('boton-tierra')
+
+    botonFuego.addEventListener('click', ataqueFuego)
+    botonAgua.addEventListener('click', ataqueAgua)
+    botonTierra.addEventListener('click', ataqueTierra)
 }
 
 function SeleccionarMascotaEnemigo(){
