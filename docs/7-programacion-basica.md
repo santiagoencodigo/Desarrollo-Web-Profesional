@@ -179,6 +179,8 @@ Si desea mirar **Mokepon** puede acceder a los siguentes vinculos (Este se empie
 
 * [55. Crear Función "mostrarAtaques" en JavaScript para Juegos](#crear-función-mostrarataques-en-javascript-para-juegos)
 
+* [56. Eventos de Clic en Botones con JavaScript](#eventos-de-clic-en-botones-con-javascript)
+
 
 
 
@@ -5088,4 +5090,74 @@ Nuestra función quedo:
 
 > La función mostrarAtaques() convierte la información (datos en el arreglo) en elementos visuales e interactivos dentro del juego. Es el puente entre la lógica del programa y la interfaz del jugador.
 
+
+
+
+
+
+
+
+
+
 ---
+
+
+
+
+
+
+
+
+
+
+## Eventos de Clic en Botones con JavaScript
+
+> Me parece curioso que varias personas concuerdan en que "Asi es como va aumentando la dificultad del curso: Freddy: dificultad nivel 1 Juan: dificultad nivel 3 Estefany: dificultad nivel 5 Diego: dificultad nivel 1847 pero no me rendiré..", "Nuevo Curso de Programación Básica es el Dark Souls de los cursos básicos de programación"
+
+En esta sección vamos a solucionar el problema de click de nuestros botones (Los que se repiten), crearemos entonces una nueva función en donde por cada uno de los botones que se genere, se les valla agregando su evento de click asi entonces nosotros lograremos que por cada uno de los eventos que se valla creando sin importar el número, tengan una función que haga algo.
+
+Tendremos que crear un nuevo arreglo en donde este va a contener cada uno de los nuevos botones que se va a agregar.
+
+Vamos a editar en el código que inyectamos código HTML desde el JavaScript para nuestros botones dentro de la función **MostrarAtaques(ataques)** 
+
+```javascript
+    <button id="${ataque.id}" class="boton-de-ataque">${ataque.nombre}</button>
+```
+
+En donde le agregaremos una nueva clase, la cual será BAtaque y por ende:
+
+```javascript
+    <button id="${ataque.id}" class="boton-de-ataque BAtaque">${ataque.nombre}</button>
+```
+
+Vamos a definir la variable botones el cual será un arreglo y estará ubicado en donde los demás LET de nuestro JS (arriba) y por ende:
+
+```javascript
+    let botones = []
+```
+
+Vamos ya nuevamente a nuestra función y vamos a popular información a nuestro array directamente por lo que justo debajo donde nosotros declaramos nuestras variables vamos a asignarle un valor a nuestra variable botones.
+
+En donde va a seleccionar todos los elementos que tengan cierta clase. Por ende, aprovecharemos esto porque cada boton que generemos va a tener esta clase. Por ende nos puede traer todos los elementos que traigan esa misma clase.
+
+No lo hacemos con el ID porque este no puede repetirse. (Es muy mala practica si no es tratado como tal.)
+
+```javascript
+    botones = document.querySelectorAll('.BAtaque')
+```
+
+Pruebe escribir 
+
+```javascript
+    console.log(botones)
+```
+
+Ya luego mirando la consola en las dev tools veremos entonces una **node list = lista de nodos** en donde si la observamos, esta estará vacia.
+
+Una vez se consulte puede aparecer: 
+
+```javascript
+    NodeList(5) [button#boton-tierra.boton-de-ataque.BAtaque, button#boton-tierra.boton-de-ataque.BAtaque, button#boton-tierra.boton-de-ataque.BAtaque, button#boton-agua.boton-de-ataque.BAtaque, button#boton-fuego.boton-de-ataque.BAtaque]
+```
+
+Este es un arreglo y

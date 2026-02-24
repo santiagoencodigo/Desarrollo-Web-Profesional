@@ -58,6 +58,9 @@
         let botonAgua
         let botonTierra
 
+        // Un array
+        let botones = []
+
 
 
 
@@ -178,7 +181,7 @@ function extraerAtaques(mascotaJugador) {
 function mostrarAtaques(ataques) {
     ataques.forEach((ataque) => {
         ataquesMokepon = `
-            <button id="${ataque.id}" class="boton-de-ataque">${ataque.nombre}</button>
+            <button id="${ataque.id}" class="boton-de-ataque BAtaque">${ataque.nombre}</button>
         `
 
         ContenedorAtaques.innerHTML += ataquesMokepon
@@ -188,9 +191,13 @@ function mostrarAtaques(ataques) {
     botonAgua = document.getElementById('boton-agua')
     botonTierra = document.getElementById('boton-tierra')
 
+    botones = document.querySelectorAll('.BAtaque')
+
     botonFuego.addEventListener('click', ataqueFuego)
     botonAgua.addEventListener('click', ataqueAgua)
     botonTierra.addEventListener('click', ataqueTierra)
+x
+    
 }
 
 function SeleccionarMascotaEnemigo(){
