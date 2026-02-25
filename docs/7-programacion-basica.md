@@ -5160,4 +5160,116 @@ Una vez se consulte puede aparecer:
     NodeList(5) [button#boton-tierra.boton-de-ataque.BAtaque, button#boton-tierra.boton-de-ataque.BAtaque, button#boton-tierra.boton-de-ataque.BAtaque, button#boton-agua.boton-de-ataque.BAtaque, button#boton-fuego.boton-de-ataque.BAtaque]
 ```
 
-Este es un arreglo y
+Esto es una lista de Nodos, es un arreglo []. Una vez hecho esto, ya podemos utilizar la variable de botones en otras funciones para poder iterar sobre los ataques y entonces agregar un evento de click por cada uno de los botones que tendremos adentro de este arreglo.
+
+---
+
+Vamos a generar una nueva función que la vamos a llamar **secuenciaAtaques():**
+
+```javascript
+    function secuenciaAtaques(){}
+```
+
+> Lo invito a reflexionar ¿Por qué esta función?
+
+Vamos a cambiar un poco la lógica del juego. Actualmente el juego se mueve por 3 vidas, nosotros podemos jugar más de 3 veces porque pueden haber momentos en donde el enemigo y el jugador puedan tener muchos empates por lo que existe la posibilidad de poder jugar de 6 a 8 veces en una sola partida.
+
+Asi mismo nosotros contamos con 3 ataques.
+
+Queremos generar una secuencia de 5 ataques en la que se den solo 5 rondas de ataques y que gane el que halla ganado más veces.
+
+Por lo que cambiaremos vidas por victorias por lo que modificaremos bastantes cosas que nos ayuden a llegar a esa lógica.
+
+De inicio cada uno de nuestros botones debe tener una función de click para que se realice algo en particular.
+
+Será muy similar a las funciones que tenemos para nuestros ataques:
+
+```javascript
+    function ataqueFuego(){
+        ataqueJugador = 'Fuego 🔥'
+        ataqueAleatorioEnemigo()
+    }
+    function ataqueAgua(){
+        ataqueJugador = 'Agua 🌊'
+        ataqueAleatorioEnemigo()
+    }
+    function ataqueTierra(){
+        ataqueJugador = 'Tierra 🌱'
+        ataqueAleatorioEnemigo()
+    }
+```
+
+En donde cada una de las funciones nos agrega un valor ya sea fuego, agua, tierra. Por lo que haremos que cada uno de los botones, una vez se halla seleccionado ya no se pueda volver a seleccionar.
+
+* Visualmente cambiaremos un boton para que se vea que ya fue seleccionado por lo que en vez de 5 ataques, te quedarian 4, y asi sucesivamente hasta llegar a las victorais correspondientes.
+
+* Asi mismo haremos que se valla guardando en otro arreglo cual es la secuencia de ataques con la que tu quieres jugar y con la cual va a jugar el enemigo.
+
+Por lo que entonces dentro de la función **secuenciaAtaques()** la variable de botones y agregamos el metodo .forEach para generar una pequeña nueva iteración en donde por cada boton que exista en el arreglo de botones "haz algo":
+
+Ese algo va a ser agregarle el evento de click y validar cual es el evento que estamos seleccionando nosotros para poder jugar con el.
+
+Por lo que cada boton va a tener el metodo .addEventListener en donde este tendrá el evento de click. Y directamente veremos que nos regresa.
+
+Esto es porque cada boton tendrá un addEventListener en donde cada que yo de click, la e significa el evento mismo por ende me regresará el evento que esta sucediendo en el momento.
+
+> Es importante llamar la función para que pueda ejecutarse
+
+Dentro de la función **SeleccionarMascotaEnemigo()** porque una vez seleccionada la mascota del enemigo se podra entonces ejecutar la secuencia en donde se van a mostrar los botones.
+
+```javascript
+    SeleccionarMascotaEnemigo() {
+        // Todo el código agregado
+        secuenciaAtaque()
+    }
+```
+
+Y dentro de la función secuenciaAtaque:
+
+```javascript
+    botones.forEach((boton) => {
+        boton.addEventListener('click', (e) => {
+            console.log(e)
+        })
+    })
+```
+
+
+Por lo que le sugiero ya con el siguente código, revisar la consola mediante las devtools que ofrece el navegador una vez seleccionada una mascota y un ataque.
+
+Una vez hecho esto, le aparecerá algo como:
+
+```javascript
+    PointerEvent {isTrusted: true, pointerId: 1, width: 1, height: 1, pressure: 0, …}
+```
+
+Es de recordar que la e hace referencia directa al evento mismo por lo que nosotros podemos encontrar a donde dimos el click que es lo que nos interesa. Esto lo podemos hacer mediante el metodo target, que si lo revisamos en nuestro PointerEvent en la consola aparece algo como:
+
+```javascript
+    target:button#boton-tierra.boton-de-ataque.BAtaque
+```
+
+> Con leer esto, aparece bien las referencias de un boton. ¿Interesante No?
+
+Seleccionamos el target y podremos mirar todas las propiedades del elemento.
+
+> Analice uno por uno. (Por ahora no tan deep, pero sí ver cuanto tiene detras.)
+
+Los elementos HTML se convierten en objetos y pues el ID, las classes y demás son propiedades de este. En este caso estamos buscando una propiedad especifica llamada TEXTCONTENT siendo este, el contenido de texto que tiene el elemento.
+
+Por lo que nosotros podemos llamar a ese objeto con el click y le daremos al .target para poder acceder a toda esta info (Propiedades de este boton) y seguido, textContent para obtener el valor de texto que contienen.
+
+Que como tal es:
+
+* Fuego = 🔥
+
+* Agua = 💧
+
+* Tierra = 🌱
+
+Y asi entonces podremos validar ciertas cosas a partir de ese valor. Por esta razón nos interesa el elemento e en nuestra iteración. Siendo este el **'elemento perse'** por lo que a partir de esta forma podremos llegar al valor de texto de nuestros objetos.
+
+Por lo que ahora en nuestra función...
+
+
+---

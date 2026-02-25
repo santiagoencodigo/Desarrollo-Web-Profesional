@@ -196,14 +196,24 @@ function mostrarAtaques(ataques) {
     botonFuego.addEventListener('click', ataqueFuego)
     botonAgua.addEventListener('click', ataqueAgua)
     botonTierra.addEventListener('click', ataqueTierra)
-x
-    
+
+    // console.log(botones)
+}
+
+function secuenciaAtaque(){
+    botones.forEach((boton) => {
+            boton.addEventListener('click', (e) => {
+                console.log(e)
+            })
+        })
 }
 
 function SeleccionarMascotaEnemigo(){
     let MascotaAleatoria = aleatorio(1, mokepones.length)
 
     SpanMascotaEnemigo.innerHTML = mokepones[MascotaAleatoria].nombre
+
+    secuenciaAtaque()
 }
 
 function ataqueFuego(){
