@@ -5259,6 +5259,8 @@ Los elementos HTML se convierten en objetos y pues el ID, las classes y demás s
 
 Por lo que nosotros podemos llamar a ese objeto con el click y le daremos al .target para poder acceder a toda esta info (Propiedades de este boton) y seguido, textContent para obtener el valor de texto que contienen.
 
+Por lo que recordemos que queremos darle la función de click a cada uno de nuestros botones para validar cual es el ataque que se esta seleccionando.
+
 Que como tal es:
 
 * Fuego = 🔥
@@ -5269,7 +5271,33 @@ Que como tal es:
 
 Y asi entonces podremos validar ciertas cosas a partir de ese valor. Por esta razón nos interesa el elemento e en nuestra iteración. Siendo este el **'elemento perse'** por lo que a partir de esta forma podremos llegar al valor de texto de nuestros objetos.
 
-Por lo que ahora en nuestra función...
+Por ende dentro de nuestra función agregaremos una condición en donde si el evento es e.target.textContent = 🔥
+
+```javascript
+    if (e.target.textContent === '🔥') {
+
+    }
+```
+
+Con esto nos interesa es generar una secuencia de ataques en donde, pues por ahora que tenemos pensado en cinco ataques, haremos un arreglo que nos permita hacer una secuencia de los cinco ataques y haga un recuento de todos los ataques que realizamos y cual es el ultimo ataque.
+
+Esta secuencia se va a guardar y con esto vamos a jugar.
+
+Para que esto pueda funcionar, tenemos que hacer una variable que le pondremos de nombre NombreAtaqueJugador
+
+```javascript
+    let NombreAtaqueJugador
+```
+
+Por lo que iremos a nuestra función y pondremos entonces que nuestra variable y le agregare entonces la función de PUSH con el parametro del nombre del ataque dentro de la condición. 
+
+Y haremos que nuestro boton cambie de estilo y que vea el cambio una vez ya fue seleccionado
+
+```javascript
+    NombreAtaqueJugador.push('Fuego')
+    console.log(NombreAtaqueJugador)
+    boton.style.backgroundColor = #1123
+```
 
 
 ---

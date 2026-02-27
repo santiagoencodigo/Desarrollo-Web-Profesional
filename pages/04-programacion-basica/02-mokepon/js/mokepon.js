@@ -61,6 +61,8 @@
         // Un array
         let botones = []
 
+    let NombreAtaqueJugador
+
 
 
 
