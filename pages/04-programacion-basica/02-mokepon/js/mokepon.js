@@ -35,7 +35,8 @@
     */
     let mokepones = [] 
 
-    let ataqueJugador  
+    // Variable para Función secuenciaAtaque()
+    let ataqueJugador = []
     let ataqueEnemigo  
 
     // Esta variable es para popular nuestro HTML
@@ -61,7 +62,6 @@
         // Un array
         let botones = []
 
-    let NombreAtaqueJugador
 
 
 
@@ -194,18 +194,26 @@ function mostrarAtaques(ataques) {
     botonTierra = document.getElementById('boton-tierra')
 
     botones = document.querySelectorAll('.BAtaque')
-
-    botonFuego.addEventListener('click', ataqueFuego)
-    botonAgua.addEventListener('click', ataqueAgua)
-    botonTierra.addEventListener('click', ataqueTierra)
-
     // console.log(botones)
 }
 
 function secuenciaAtaque(){
     botones.forEach((boton) => {
             boton.addEventListener('click', (e) => {
-                console.log(e)
+                // console.log(e)
+                if (e.target.textContent === '🔥') {
+                    ataqueJugador.push('Fuego')
+                    console.log(ataqueJugador)
+                    boton.style.background = '#112f58'
+                } else if (e.target.textContent === '🌊') {
+                    ataqueJugador.push('Agua')        
+                    console.log(ataqueJugador)
+                    boton.style.background = '#112f58'
+                } else {
+                    ataqueJugador.push('Tierra')        
+                    console.log(ataqueJugador)
+                    boton.style.background = '#112f58'                                    
+                }
             })
         })
 }
@@ -216,19 +224,6 @@ function SeleccionarMascotaEnemigo(){
     SpanMascotaEnemigo.innerHTML = mokepones[MascotaAleatoria].nombre
 
     secuenciaAtaque()
-}
-
-function ataqueFuego(){
-    ataqueJugador = 'Fuego 🔥'
-    ataqueAleatorioEnemigo()
-}
-function ataqueAgua(){
-    ataqueJugador = 'Agua 🌊'
-    ataqueAleatorioEnemigo()
-}
-function ataqueTierra(){
-    ataqueJugador = 'Tierra 🌱'
-    ataqueAleatorioEnemigo()
 }
 
 function ataqueAleatorioEnemigo(){

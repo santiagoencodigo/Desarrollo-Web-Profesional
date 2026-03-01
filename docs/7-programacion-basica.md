@@ -5283,21 +5283,100 @@ Con esto nos interesa es generar una secuencia de ataques en donde, pues por aho
 
 Esta secuencia se va a guardar y con esto vamos a jugar.
 
-Para que esto pueda funcionar, tenemos que hacer una variable que le pondremos de nombre NombreAtaqueJugador
+Para que esto pueda funcionar, tenemos que hacer una variable (array) que le pondremos de nombre AtaqueJugador y le haremos el PUSH para que valla guardando la información.
 
 ```javascript
-    let NombreAtaqueJugador
+    let AtaqueJugador = []
 ```
 
-Por lo que iremos a nuestra función y pondremos entonces que nuestra variable y le agregare entonces la función de PUSH con el parametro del nombre del ataque dentro de la condición. 
+Por lo que iremos a nuestra función y pondremos entonces que nuestra variable y le agregare entonces la función de PUSH con el parametro del nombre del ataque dentro de la condición IF. 
 
 Y haremos que nuestro boton cambie de estilo y que vea el cambio una vez ya fue seleccionado
 
 ```javascript
-    NombreAtaqueJugador.push('Fuego')
-    console.log(NombreAtaqueJugador)
-    boton.style.backgroundColor = #1123
+    function secuenciaAtaque(){
+    botones.forEach((boton) => {
+            boton.addEventListener('click', (e) => {
+                // console.log(e)
+                if (e.target.textContent === '🔥') {
+                    AtaqueJugador.push('Fuego')
+                    // Para mirar nosotros que ataques se guardan en las devtools
+                    console.log(AtaqueJugador)
+                    boton.style.background = '#112f58'
+                }
+            })
+        })
+    }
 ```
 
+Para hacer un recuento, estamos generando una validación en donde se verifica si el contenido de texto del elemento que fue seleccionado y que sea igual al emogi de fuego, va a realizar un push del elemento fuego al arreglo de ArrayAtaqueJugador, se podrá ver este arreglo por medio de la consola y el boton que fue seleccionado, se va a cambiar de color para que se sienta que ya fue seleccionado.
+
+Entonces continuaremos con la estructura de condiciones:
+
+Vamos a validar practicamente lo mismo solo que con otro elemento en esta ocación. Probemos esta vez con agua.
+
+```javascript
+    else if (e.target.textContent === '🌊') {
+        AtaqueJugador.push('Agua')        
+        console.log(AtaqueJugador)
+        boton.style.background = '#112f58'
+    } else {
+        AtaqueJugador.push('Tierra')        
+        console.log(AtaqueJugador)
+        boton.style.background = '#112f58'
+    }
+```
+
+Con esto aparentemente tenemos ya todos los eventos de click para cada uno de nuestros botones que se van a renderizar en nuestro HTML, podremos ver a cual es el evento que le vamos a estar dando click, poder imprimir eso directamente en la consola, guardar el valor en nuestra variable. Por lo que vamos entonces a mirar nuestro resultado:
+
+> Será normal que salgan errores en la consola y es importante poder identificarlos
+
+De ahí verifique justo debajo si se encuentran las siguentes funciones y eliminelas:
+
+```javascript
+    function ataqueFuego(){
+        ataqueJugador = 'Fuego 🔥'
+        ataqueAleatorioEnemigo()
+    }
+    function ataqueAgua(){
+        ataqueJugador = 'Agua 🌊'
+        ataqueAleatorioEnemigo()
+    }
+    function ataqueTierra(){
+        ataqueJugador = 'Tierra 🌱'
+        ataqueAleatorioEnemigo()
+    }
+```
+
+y puede que le salga un error en consola como:
+
+```javascript
+    Uncaught ReferenceError: ataqueFuego is not defined
+    at mostrarAtaques (mokepon.js:198:42)
+    at extraerAtaques (mokepon.js:180:5)
+    at HTMLButtonElement.seleccionarMascota (mokepon.js:167:5)
+```
+
+Por lo que tendremos que ir tambien a la función de arriba [mostrarAtaques(ataques)], donde definimos por variable el addEventListener y eliminarlo tambien.
+
+```javascript
+    botonFuego.addEventListener('click', ataqueFuego)
+    botonAgua.addEventListener('click', ataqueAgua)
+    botonTierra.addEventListener('click', ataqueTierra)
+```
+
+En donde ahora si damos click, veremos entonces como el boton fue seleccionado y se va guardando el nombre del ataque en el arreglo y asi, entonces podremos llegar a mirar en la consola algo como:
+
+```javascript
+    ['Fuego']
+    mokepon.js:210 (2) ['Fuego', 'Agua']
+    mokepon.js:214 (3) ['Fuego', 'Agua', 'Tierra']
+    mokepon.js:214 (4) ['Fuego', 'Agua', 'Tierra', 'Tierra']
+    mokepon.js:214 (5) ['Fuego', 'Agua', 'Tierra', 'Tierra', 'Tierra']
+```
+
+Siendo esta la secuencia con la que yo podría jugar, ahora tenemos que seleccionar entonces la secuencia de ataques del enemigo para que ya una vez con ambas secuencias determinar quien gana y que solo podamos jugar 5 veces.
+
+> Como todavia no se ha solucionado lo de que si no se selecciona una mascota, igual sigue... El juego se rompe, no funciona nada porque no obtiene los ataques.
 
 ---
