@@ -181,6 +181,8 @@ Si desea mirar **Mokepon** puede acceder a los siguentes vinculos (Este se empie
 
 * [56. Eventos de Clic en Botones con JavaScript](#eventos-de-clic-en-botones-con-javascript)
 
+* [57. Secuencia de Ataques y Validación de Resultados en JavaScript](#secuencia-de-ataques-y-validación-de-resultados-en-javascript)
+
 
 
 
@@ -5379,4 +5381,58 @@ Siendo esta la secuencia con la que yo podría jugar, ahora tenemos que seleccio
 
 > Como todavia no se ha solucionado lo de que si no se selecciona una mascota, igual sigue... El juego se rompe, no funciona nada porque no obtiene los ataques.
 
+
+
+
+
+
+
+
+
 ---
+
+
+
+
+
+
+
+
+
+## Secuencia de Ataques y Validación de Resultados en JavaScript
+
+> Una persona comenta que no considera que el curso sea de programación básica, otras personas dicen que ya se han perdido con el contenido y la estructura de lo que estamos haciendo. "Entre más clases, más confuso se pone."
+
+> Personalmente considero que sí esta dificil, pero por el hecho de escribir todo por este medio se me permite organizar pensamientos y definir cada elemento en la sintaxis que se escribe. Por ende, me gusta.
+
+*Foto Publicada Por Juan Omar Palma álvarez*
+
+<img src="https://static.platzi.com/media/user_upload/32b6bdc3-0366-4294-b436-c224750c89e6-322d7be6-1622-420c-8181-6f2642606f06.jpg">
+
+*Imagen Tomada De: https://platzi.com/cursos/programacion-basica/secuencia-de-ataques-del-enemigo/*
+
+> Si miramos esta imagen, podemos determinar la dificultad con la que se pueden presentar algunas personas.
+
+---
+
+Vamos a continuar entonces con el desarrollo de nuestro juego.
+
+* En el anterior título remplazamos las tres funciones que ya existian por una sóla. 
+
+* Recordemos tambien que borramos todos nuestros botones y estos funcionan desde nuestro JavaScript
+
+Asi que hicimos una sóla función donde por cada boton que se agregue un evento y pueda hacer algo. Ya una vez el boton renderizado en el HTML extraemos el emoji y con eso ya sabemos que ataque se va a realizar. Tenemos entonces tambien una función que nos ayuda a guardar estos valores y generar asi una secuencia de ataques que es con la que nosotros vamos a estar jugando.
+
+Vamos a trabajar en este título la secuencia de ataques del enemigo.
+
+Asi entonces podremos validar quién gana qué.
+
+* Es importante recordar que ya no vamos a trabajar con las vidas, en donde eran tres vidas para el jugador y tres vidas para el enemigo. Ahora vamos a trabajar por numeros de victorias. Como por ahora tenemos cinco botones vamos a tener cinco opciones para ver quién gana. La forma de validar esto es determinando quién tiene más victorias.
+
+Entonces tambien puede que en mi partida | secuencia me gane 3 partidas de 5 siendo asi que la máquina se gane 2 por ende entonces será el jugador o yo quien va a ganar. A no ser entonces que tambien se genere un empate de 2 ganas, 2 perdidas y un empate en una secuencia de 5 ataques.
+
+Por lo que el orden será:
+
+1. Generar los ataques del enemigo
+
+2. Validar a partir de los ataques del jugador y de los ataques del enemigo quién ganó determinando el número de victorias.
