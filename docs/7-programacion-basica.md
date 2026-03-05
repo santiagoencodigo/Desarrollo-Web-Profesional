@@ -5436,3 +5436,25 @@ Por lo que el orden será:
 1. Generar los ataques del enemigo
 
 2. Validar a partir de los ataques del jugador y de los ataques del enemigo quién ganó determinando el número de victorias.
+
+Primero, vamos a insertar la función  ataqueAleatorioEnemigo() justo antes de terminar nuestra función pues necesitamos que pase ahí para que el enemigo tambien pueda escojer un ataque y asi nos vayamos alternando.
+
+Entonces vamos a la función ataqueAleatorioEnemigo():
+
+```javascript
+    function ataqueAleatorioEnemigo(){
+        let ataqueAleatorio = aleatorio(1,3)
+
+        if(ataqueAleatorio == 1) {
+            ataqueEnemigo = 'Fuego 🔥'
+        } else if(ataqueAleatorio == 2) {
+            ataqueEnemigo = 'Agua 🌊'
+        } else {
+            ataqueEnemigo = 'Tierra 🌱'
+        }
+        
+        combate()
+    }
+```
+
+En donde recordemos que no son 3 ataques ahora sino las mascotas. La forma de resolver esto es la misma que en seleccionar mascota lo mismo pues ahí estaremos 
