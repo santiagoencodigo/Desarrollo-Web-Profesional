@@ -5439,7 +5439,55 @@ Por lo que el orden será:
 
 Primero, vamos a insertar la función  ataqueAleatorioEnemigo() justo antes de terminar nuestra función pues necesitamos que pase ahí para que el enemigo tambien pueda escojer un ataque y asi nos vayamos alternando.
 
-Entonces vamos a la función ataqueAleatorioEnemigo():
+* Nuestra idea principal es que podamos hacer comparaciones entre dos arreglos para asi generar la validación y por ende definir quien gana y quien pierde.
+
+Si miramos el trabajo que hicimos en el anterior título que fue la función secuenciaAtaque():
+
+```javascript
+    function secuenciaAtaque(){
+        botones.forEach((boton) => {
+                boton.addEventListener('click', (e) => {
+                    // console.log(e)
+                    if (e.target.textContent === '🔥') {
+                        ataqueJugador.push('Fuego')
+                        console.log(ataqueJugador)
+                        boton.style.background = '#112f58'
+                    } else if (e.target.textContent === '🌊') {
+                        ataqueJugador.push('Agua')        
+                        console.log(ataqueJugador)
+                        boton.style.background = '#112f58'
+                    } else {
+                        ataqueJugador.push('Tierra')        
+                        console.log(ataqueJugador)
+                        boton.style.background = '#112f58'                                    
+                    }
+                })        
+            })
+            ataqueAleatorioEnemigo()
+    }
+```
+
+Vamos a aplicar la misma logica a la secuencia de nuestro enemigo.
+
+Si miramos lo que tenemos de nuestro enemigo, podremos observar que tenemos:
+
+1. Función seleccionarMascotaEnemigo()
+
+```javascript
+    function SeleccionarMascotaEnemigo(){
+        let MascotaAleatoria = aleatorio(1, mokepones.length -1)
+
+        SpanMascotaEnemigo.innerHTML = mokepones[MascotaAleatoria].nombre
+
+        secuenciaAtaque()
+    }
+```
+
+2. Función ataqueAleatorioEnemigo()
+
+> Si observamos bien, esta es la que hay que editar. Y por otro lado, se puede observar tambien que la invocamos en nuestra función secuenciaAtaque() que esta justo arriba de la función que esta encima de este parrafo.
+
+> Recordemos que si tenemos una función que no invocamos/llamamos simplemente no va a hacer nada.
 
 ```javascript
     function ataqueAleatorioEnemigo(){
@@ -5457,4 +5505,169 @@ Entonces vamos a la función ataqueAleatorioEnemigo():
     }
 ```
 
-En donde recordemos que no son 3 ataques ahora sino las mascotas. La forma de resolver esto es la misma que en seleccionar mascota lo mismo pues ahí estaremos 
+Esta es la función que tenemos para los ataques aleatorios de nuestro enemigo, si observamos en la variable ataqueAleatorio que es igual a la función aleatorio tenemos un hardcore de 3, que recordemos que como no nos vamos a quedar solamente con 3 mascotas, tenemos que automatizar este apartado... Pues si pensamos ahora ya no tenemos 3 ataques sino 5. 
+
+Podemos basarnos en la función SeleccionarMascotaEnemigo() pues si observamos:
+
+```javascript
+    SpanMascotaEnemigo.innerHTML = mokepones[MascotaAleatoria].nombre
+```
+
+Estamos jalando la información del nombre de la mascota aleatoria en nuestros mokepones. Eso quiere decir que tambien podemos traer el número de ataque que nuestro enemigo tiene y por ende:
+
+* Tenga en cuenta que de ahora en adelante estaremos trabajando dentro de la función **ataqueAleatorioEnemigo()**
+
+```javascript
+    ataquesMokeponEnemigo = mokepones[MascotaAleatoria].ataques
+```
+
+y tenemos que ir a la parte de donde nosotros definimos nuestras variables y hacer que la variable exista:
+
+```javascript
+    ataquesMokeponEnemigo = mokepones[MascotaAleatoria].ataques
+```
+
+solo nos faltaria obtener la longitud de esa variable y ya tendriamos nuestro valor.
+
+```javascript
+    let ataqueAleatorio = aleatorio(0, ataquesMokeponEnemigo.length-1)
+```
+
+Entonces asi si de repente mañana ya nuestra lista de ataques de nuestros mokepones no son 5 sino 6, o 7, o 8 o como sea que se presente la situación ya esto se actualizará solo.
+
+---
+
+Ahora si seguimos mirando dentro de nuestra función tenemos:
+
+```js
+    if(ataqueAleatorio == 1) {
+        ataqueEnemigo = 'Fuego 🔥'
+    } else if(ataqueAleatorio == 2) {
+        ataqueEnemigo = 'Agua 🌊'
+    } else {
+        ataqueEnemigo = 'Tierra 🌱'
+    }
+```
+
+Como tal es una variable que guarda un valor, pero que estos se sustituyen como tal y esta información no se guarda en ningún array.
+
+Entonces vamos a camiar su estructura:
+
+```js
+    if(ataqueAleatorio == 1) {
+        ataqueEnemigo.push('Fuego 🔥')
+    } else if(ataqueAleatorio == 2) {
+        ataqueEnemigo.push('Agua 🌊')
+    } else {
+        ataqueEnemigo.push('Tierra 🌱')
+    }
+```
+
+Aun nuestra validación esta incompleta pues si observamos, nuestros mokepones tienen 5 ataques y ahí sólo estamos validando tres opciones de acuerdo al número que hala sido elegido. Además de que si miramos cómo se selecciona nuestro enemigo, vemos que el minimo inicia con un 0 y por ende si el número aleatorio termina siendo 0 pues no se va a seleccionar nada.
+
+```js
+    if(ataqueAleatorio == 0 || ataqueAleatorio == 1 ) {
+            ataqueEnemigo.push('Fuego 🔥')
+    } else if(ataqueAleatorio == 2 || ataqueAleatorio == 4 ) {
+        ataqueEnemigo.push('Agua 🌊')
+    } else {
+        ataqueEnemigo.push('Tierra 🌱')
+    }
+```
+
+y ahora para poder visualizar los ataques del enemigo y mirar su secuencia vamos a usar nuestro confiable:
+
+```js
+    console.log(ataqueEnemigo)
+```
+
+y vamos a nuestro navegador a observar qué sucede. Entonces salió un nuevo error:
+
+```js
+    mokepon.js:240 Uncaught TypeError: Cannot read properties of undefined (reading 'push')
+        at ataqueAleatorioEnemigo (mokepon.js:240:23)
+        at secuenciaAtaque (mokepon.js:222:9)
+        at SeleccionarMascotaEnemigo (mokepon.js:231:5)
+        at HTMLButtonElement.seleccionarMascota (mokepon.js:171:5)
+```
+
+> Vamos a leer este error a ver qué dice: No puede leer el metodo de push porque se encuentra como **undefined** | indefinido.
+
+Por lo que miremos el código a observar qué esta pasando. Como el error esta en el push, esta relacionado con la variable de ataqueEnemigo pues tenemos nuestra variable y usamos el método push para agregar información, este lo utilizamos en variables que son arreglos. Por lo que en pocas palabras a nuestra variable arriba hay que acomodarla como un array.
+
+```js
+    let ataqueEnemigo = []
+```
+
+Por ende volvemos a observar qué sucede en consola:
+
+* Aparece directamente en consola como si hubiera seleccionado agua una vez seleccionada la mascota y aun no haber seleccionado algún ataque.
+
+Esto quiere decir que la función entro antes que directamente el console.log por lo que en otras palabras la mascota del enemigo ya fue seleccionada mientras que la mascota del jugador aun no. No esta directamente mal e incluso podria ser algo que se llegara a necesitar. Pero la lógica de mi juego es que primero se seleccione el jugador y ahí sí despues el enemigo. 
+
+Por lo que se tiene que buscar donde la estamos llamando, que en este caso es en **secuenciaAtaque()**:
+
+* Dentro de esta función tenemos un forEach con un evento de click, entonces se ejecutan en las demas condicionales un click de forma automática y luego invoca a la función generando que se seleccioné el enemigo por ende la vamos a agregar al flujo de nuestras condicionales siendo de esta forma:
+
+```javascript
+    function secuenciaAtaque(){
+        botones.forEach((boton) => {
+                boton.addEventListener('click', (e) => {
+                    // console.log(e)
+                    if (e.target.textContent === '🔥') {
+                        ataqueJugador.push('Fuego')
+                        console.log(ataqueJugador)
+                        boton.style.background = '#112f58'
+                    } else if (e.target.textContent === '🌊') {
+                        ataqueJugador.push('Agua')        
+                        console.log(ataqueJugador)
+                        boton.style.background = '#112f58'
+                    } else {
+                        ataqueJugador.push('Tierra')        
+                        console.log(ataqueJugador)
+                        boton.style.background = '#112f58'                                    
+                    }
+                    ataqueAleatorioEnemigo()
+                })        
+            })            
+    }
+```
+
+Por lo que ahora:
+
+1. Al ejecutarse la función ingresa al forEach
+
+2. Existe cada boton y a cada boton le agrega el click.
+
+3. Cuando yo le haga click a un boton, selecciono un ataque.
+
+4. Despues entra la función de ataqueAleatorioEnemigo()
+
+5. Si hago otro click, selecciono otro ataque y por ende se ejecuta la función ataqueAleatorioEnemigo
+
+> Y asi se repetirá este flujo de trabajo sin limites.
+
+Volvemos a mirar nuestro navegador y ya entonces va a aparecer el registro de 2 secuencias.
+
+```js
+    ['Fuego']
+    mokepon.js:250 ['Fuego 🔥']
+    mokepon.js:216 (2) ['Fuego', 'Agua']
+    mokepon.js:250 (2) ['Fuego 🔥', 'Agua 🌊']
+    mokepon.js:220 (3) ['Fuego', 'Agua', 'Tierra']
+    mokepon.js:250 (3) ['Fuego 🔥', 'Agua 🌊', 'Tierra 🌱']
+    mokepon.js:220 (4) ['Fuego', 'Agua', 'Tierra', 'Tierra']
+    mokepon.js:250 (4) ['Fuego 🔥', 'Agua 🌊', 'Tierra 🌱', 'Fuego 🔥']
+    mokepon.js:220 (5) ['Fuego', 'Agua', 'Tierra', 'Tierra', 'Tierra']
+    mokepon.js:250 (5) ['Fuego 🔥', 'Agua 🌊', 'Tierra 🌱', 'Fuego 🔥', 'Agua 🌊']
+```
+
+> Aun hay demasiadas cosas por corregir, pero hay vamos.
+
+> Podemos mirar mas o menos como se ve el flujo de trabajo gracias al comentario de Jonathan Rafael Petit Rojas
+
+<img src="https://static.platzi.com/media/user_upload/Screenshot_1-b4da2f1b-e443-4ec7-ad7a-af9c7ab63154.jpg">
+
+*Imagen Tomada De: https://platzi.com/cursos/programacion-basica/secuencia-de-ataques-del-enemigo/*
+
+---

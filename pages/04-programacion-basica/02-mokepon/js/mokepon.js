@@ -33,34 +33,40 @@
     /*  Esto se llama arrays o arreglos - Similar a una lista.
         En esta variable esta vacia porque por medio de push le insertamos los mokepones.
     */
-    let mokepones = [] 
+        let mokepones = [] 
 
-    // Variable para Función secuenciaAtaque()
-    let ataqueJugador = []
-    let ataqueEnemigo  
+        // array para Función secuenciaAtaque()
+        let ataqueJugador = []
+
+        // array para Función ataqueAleatorioEnemigo()
+        let ataqueEnemigo = []
+
 
     // Esta variable es para popular nuestro HTML
-    let opcionDeMokepones
- 
-    let inputHipodoge
-    let inputCapipepo
-    let inputRatigueya
-
-    let mascotaJugador
+        let opcionDeMokepones
     
-    let vidasJugador = 3
-    let vidasEnemigo = 3
+        let inputHipodoge
+        let inputCapipepo
+        let inputRatigueya
+
+        let mascotaJugador
+        
+        let vidasJugador = 3
+        let vidasEnemigo = 3
 
     // Ataques
-    let ataquesMokepon
+        let ataquesMokepon
 
-        // Botones de ataque
-        let botonFuego
-        let botonAgua
-        let botonTierra
+            // Botones de ataque
+            let botonFuego
+            let botonAgua
+            let botonTierra
 
-        // Un array
-        let botones = []
+            // Un array
+            let botones = []
+        
+        let ataquesMokeponEnemigo
+
 
 
 
@@ -214,15 +220,18 @@ function secuenciaAtaque(){
                     console.log(ataqueJugador)
                     boton.style.background = '#112f58'                                    
                 }
+                
+                ataqueAleatorioEnemigo()
+
             })        
         })
-        ataqueAleatorioEnemigo()
 }
 
 function SeleccionarMascotaEnemigo(){
-    let MascotaAleatoria = aleatorio(1, mokepones.length)
+    let MascotaAleatoria = aleatorio(1, mokepones.length -1)
 
     SpanMascotaEnemigo.innerHTML = mokepones[MascotaAleatoria].nombre
+    ataquesMokeponEnemigo = mokepones[MascotaAleatoria].ataques
 
     secuenciaAtaque()
 }
@@ -230,14 +239,16 @@ function SeleccionarMascotaEnemigo(){
 function ataqueAleatorioEnemigo(){
     let ataqueAleatorio = aleatorio(1,3)
 
-    if(ataqueAleatorio == 1) {
-        ataqueEnemigo = 'Fuego 🔥'
-    } else if(ataqueAleatorio == 2) {
-        ataqueEnemigo = 'Agua 🌊'
+    if(ataqueAleatorio == 0 || ataqueAleatorio == 1 ) {
+            ataqueEnemigo.push('Fuego 🔥')
+    } else if(ataqueAleatorio == 2 || ataqueAleatorio == 4 ) {
+        ataqueEnemigo.push('Agua 🌊')
     } else {
-        ataqueEnemigo = 'Tierra 🌱'
+        ataqueEnemigo.push('Tierra 🌱')
     }
-    
+
+    console.log(ataqueEnemigo)
+
     combate()
 }
 
