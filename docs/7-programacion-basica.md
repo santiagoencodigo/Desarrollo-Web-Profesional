@@ -183,6 +183,8 @@ Si desea mirar **Mokepon** puede acceder a los siguentes vinculos (Este se empie
 
 * [57. Secuencia de Ataques y Validación de Resultados en JavaScript](#secuencia-de-ataques-y-validación-de-resultados-en-javascript)
 
+* [58. Implementación de Lógica de Combate en Juego JavaScript](#implementación-de-lógica-de-combate-en-juego-javascript)
+
 
 
 
@@ -5670,4 +5672,46 @@ Volvemos a mirar nuestro navegador y ya entonces va a aparecer el registro de 2 
 
 *Imagen Tomada De: https://platzi.com/cursos/programacion-basica/secuencia-de-ataques-del-enemigo/*
 
+
+
+
+
+
+
+
+
+
 ---
+
+
+
+
+
+
+
+
+
+
+## Implementación de Lógica de Combate en Juego JavaScript
+
+> Comenta un usuario que comenta que nunca se realizo un diagrama de flujo para el juego, pues a medida del tiempo se cambiando el funcionamiento del juego y por ende puede afectar totalmente al como se aprende. Es fundamental saber en qué parte del procedimiento estás y cómo vas a trabajar como tal.
+
+> Otro usuario critica que el profesor muchas veces escribe algo y no explica qué esta modificando.
+
+> Se recomienda mucho repetir y repasar el funcionamiento del código de uno.
+
+> Se percibio un error en la enseñanza del profesor, pero se dejo la clase con ese error. Me dí cuenta por leer el comentario.
+
+> Se comenta bastante que el nivel de dificultad para el aprendizaje subió demasiado.
+
+> Versión de Mokepon del Usuario Miguel Ángel Bolaños Quiñonez
+
+<img src="https://static.platzi.com/media/user_upload/Screenshot%202022-09-02%20154410-74b0fc41-eebc-4e26-a68e-6c1fb7e72519.jpg">
+
+*Imagen Tomada De: https://platzi.com/cursos/programacion-basica/iniciando-el-combate/*
+
+Ahora sí, vamos a iniciar con el juego.
+
+Hasta ahora hemos hecho ciertas modificaciones como permitir agregar nuestros objetos de nuestros personajes y sus ataques al HTML.
+
+Pero como tal, todavia no hemos iniciado ningún juego. Pues todavia no estamos usando la secuencia de lo que son nuestros ataques
