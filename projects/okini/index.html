@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Okini — Un viaje a Kioto en Bogotá</title>
+<meta name="description" content="Okini, café de especialidad en Bogotá. Métodos de preparación V60, Kyoto Drip y Sifón, cata semanal y domicilios en toda la ciudad.">
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rouge+Script&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Bootstrap 5 -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- Bootstrap Icons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+<!-- AOS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.css" rel="stylesheet">
+
+<!-- Estilos propios -->
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ============ NAVBAR ============ -->
+<nav class="navbar navbar-expand-lg navbar-okini fixed-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand" href="#inicio">Okini</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navOkini" aria-label="Abrir menú">
+      <i class="bi bi-list"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navOkini">
+      <ul class="navbar-nav ms-auto text-center">
+        <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link" href="#nosotros">Nosotros</a></li>
+        <li class="nav-item"><a class="nav-link" href="#metodos">Métodos</a></li>
+        <li class="nav-item"><a class="nav-link" href="#cata">Cata</a></li>
+        <li class="nav-item"><a class="nav-link" href="#domicilios">Domicilios</a></li>
+        <li class="nav-item"><a class="nav-link" href="#testimonios">Testimonios</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- ============ HERO ============ -->
+<header id="inicio" class="hero-section">
+  <div id="particles-hero" class="particles-layer"></div>
+  <div class="hero-overlay"></div>
+
+  <svg class="enso-mark enso-hero" viewBox="0 0 200 200" aria-hidden="true">
+    <path d="M100,22 A78,78 0 1 1 63,30" fill="none" stroke="#FFF6F6" stroke-width="3" stroke-linecap="round"/>
+  </svg>
+
+  <div class="hero-content text-center" data-aos="fade-in" data-aos-duration="1200">
+    <p class="hero-eyebrow">Café de especialidad · Bogotá</p>
+    <h1 class="hero-title">Okini</h1>
+    <p class="hero-slogan">Un viaje a Kioto en Bogotá</p>
+    <div class="d-flex flex-column flex-sm-row justify-content-center gap-3 mt-4">
+      <a href="#metodos" class="btn btn-okini-primary">Reservar una taza</a>
+      <a href="#metodos" class="btn btn-okini-outline">Explorar menú</a>
+    </div>
+
+    <div class="cups-counter mt-5">
+      <i class="bi bi-cup-hot"></i>
+      <span><strong id="cupsAvailableLabel">50</strong> / 50 tazas disponibles hoy</span>
+    </div>
+  </div>
+
+  <div class="scroll-hint">
+    <i class="bi bi-chevron-down"></i>
+  </div>
+</header>
+
+<!-- ============ SOBRE NOSOTROS ============ -->
+<section id="nosotros" class="section-nosotros">
+  <div class="container">
+    <div class="row align-items-center gy-5">
+      <div class="col-lg-6" data-aos="fade-right">
+        <p class="eyebrow"><span class="enso-dot"></span>Nuestra historia</p>
+        <h2 class="section-title">Sobre nosotros</h2>
+        <p class="body-text">
+          <em>"Okini"</em> significa <strong>gracias</strong> en la región de Kansai, Japón. Nuestro café nace de la
+          admiración por la cultura japonesa del café: precisión, paciencia y gratitud por cada taza.
+        </p>
+        <p class="body-text">
+          En Bogotá, traemos esa filosofía a cada grano que seleccionamos, cada método que preparamos y cada
+          cliente que nos visita.
+        </p>
+        <p class="body-text">
+          Okini es un puente entre Kioto y la capital colombiana, un espacio donde el tiempo se detiene y el
+          café se convierte en un ritual.
+        </p>
+      </div>
+      <div class="col-lg-6" data-aos="fade-left">
+        <div class="img-frame">
+          <img src="https://images.unsplash.com/photo-1522126039546-182129aa0b93?auto=format&fit=crop&w=1000&q=80" alt="Interior minimalista de Okini" class="img-fluid rounded-4">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MÉTODOS DE PREPARACIÓN ============ -->
+<section id="metodos" class="section-metodos">
+  <div class="container">
+    <div class="text-center mb-5" data-aos="fade-up">
+      <p class="eyebrow justify-content-center"><span class="enso-dot"></span>Preparaciones</p>
+      <h2 class="section-title">Nuestros métodos</h2>
+      <p class="body-text mx-auto" style="max-width:560px;">
+        Cada método revela una faceta distinta del mismo grano. Los métodos lentos requieren reserva —
+        máximo 2 tazas por persona.
+      </p>
+    </div>
+
+    <div class="row g-4" data-aos="zoom-in">
+      <!-- V60 -->
+      <div class="col-6 col-lg-3">
+        <div class="method-card">
+          <div class="method-img">
+            <img src="https://images.unsplash.com/photo-1541469406036-71229832e06e?auto=format&fit=crop&w=600&q=80" alt="Método V60">
+          </div>
+          <div class="method-body">
+            <h3>V60</h3>
+            <p>Filtrado japonés, taza limpia y notas florales bien definidas.</p>
+            <p class="method-price">$15.627 COP <span>| $5 USD</span></p>
+            <button class="btn btn-okini-primary w-100 btn-reservar"
+                    data-metodo="V60" data-precio-usd="5" data-precio-cop="15627">
+              Reservar
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Kyoto Drip -->
+      <div class="col-6 col-lg-3">
+        <div class="method-card">
+          <div class="method-img">
+            <img src="https://images.unsplash.com/photo-1570470752239-78e3fe00c416?auto=format&fit=crop&w=600&q=80" alt="Método Kyoto Drip">
+          </div>
+          <div class="method-body">
+            <h3>Kyoto Drip</h3>
+            <p>Goteo lento sobre hielo, concentrado, suave y de baja acidez.</p>
+            <p class="method-price">$21.878 COP <span>| $7 USD</span></p>
+            <button class="btn btn-okini-primary w-100 btn-reservar"
+                    data-metodo="Kyoto Drip" data-precio-usd="7" data-precio-cop="21878">
+              Reservar
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sifón -->
+      <div class="col-6 col-lg-3">
+        <div class="method-card">
+          <div class="method-img">
+            <img src="https://images.unsplash.com/photo-1754887966296-7d2b70f96dae?auto=format&fit=crop&w=600&q=80" alt="Método Sifón">
+          </div>
+          <div class="method-body">
+            <h3>Sifón</h3>
+            <p>Extracción por vacío, teatral y de cuerpo aterciopelado.</p>
+            <p class="method-price">$25.004 COP <span>| $8 USD</span></p>
+            <button class="btn btn-okini-primary w-100 btn-reservar"
+                    data-metodo="Sifón" data-precio-usd="8" data-precio-cop="25004">
+              Reservar
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Prensa Francesa -->
+      <div class="col-6 col-lg-3">
+        <div class="method-card">
+          <div class="method-img">
+            <img src="https://images.unsplash.com/photo-1708127368781-cd5f069a90a5?auto=format&fit=crop&w=600&q=80" alt="Prensa Francesa">
+          </div>
+          <div class="method-body">
+            <h3>Prensa Francesa</h3>
+            <p>Inmersión completa, cuerpo intenso. Sin reserva, hasta el cierre.</p>
+            <p class="method-price">$9.376 COP <span>| $3 USD</span></p>
+            <button class="btn btn-okini-outline w-100" disabled>Walk-in</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CATA SEMANAL ============ -->
+<section id="cata" class="section-cata">
+  <div id="particles-cata" class="particles-layer"></div>
+  <div class="container position-relative">
+    <div class="row align-items-center gy-5">
+      <div class="col-lg-6" data-aos="fade-up">
+        <p class="eyebrow eyebrow-light"><span class="enso-dot enso-dot-light"></span>Experiencia guiada</p>
+        <h2 class="section-title text-white">Cata Semanal</h2>
+        <ul class="cata-list">
+          <li><i class="bi bi-calendar-event"></i> Todos los sábados a las 10:00 a.m.</li>
+          <li><i class="bi bi-people"></i> Cupo limitado: <span id="cataSpotsLabel">8</span> personas</li>
+          <li><i class="bi bi-tag"></i> Precio: $78.137 COP | $25 USD</li>
+        </ul>
+        <p class="body-text text-white-70">
+          Una cata guiada por nuestro equipo de barismo: recorremos notas de cata, aroma y maridaje con
+          panadería de la casa, en un espacio pensado para degustar con calma.
+        </p>
+        <button class="btn btn-okini-primary btn-cata-onda" id="btnInscribirse">Inscribirme</button>
+      </div>
+      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="150">
+        <div class="img-frame img-frame-dark">
+          <img src="https://images.unsplash.com/photo-1453614512568-c4024d13c247?auto=format&fit=crop&w=900&q=80"
+               alt="Cata guiada de café" class="img-fluid rounded-4">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DOMICILIOS ============ -->
+<section id="domicilios" class="section-domicilios">
+  <div class="container">
+    <div class="text-center mb-5" data-aos="slide-up">
+      <p class="eyebrow justify-content-center"><span class="enso-dot"></span>Para llevar a casa</p>
+      <h2 class="section-title">Domicilios en Bogotá</h2>
+      <p class="body-text mx-auto" style="max-width:560px;">
+        Hacemos domicilios en toda Bogotá. Pide tu café favorito desde casa.
+      </p>
+    </div>
+
+    <div class="row gy-5">
+      <div class="col-lg-6" data-aos="slide-up">
+        <div class="product-list">
+
+          <div class="product-item">
+            <div>
+              <h4>Café en grano</h4>
+              <p>Bolsa de 250g, tueste medio, ideal para métodos lentos.</p>
+              <span class="product-price">$25.000 COP</span>
+            </div>
+            <button class="btn btn-okini-outline btn-agregar" data-producto="Café en grano (250g)" data-precio="25.000 COP">Agregar</button>
+          </div>
+
+          <div class="product-item">
+            <div>
+              <h4>Café molido</h4>
+              <p>Bolsa de 250g, molienda para filtrado casero.</p>
+              <span class="product-price">$22.000 COP</span>
+            </div>
+            <button class="btn btn-okini-outline btn-agregar" data-producto="Café molido (250g)" data-precio="22.000 COP">Agregar</button>
+          </div>
+
+          <div class="product-item">
+            <div>
+              <h4>Pan de masa madre</h4>
+              <p>Horneado diario, corteza crujiente y miga húmeda.</p>
+              <span class="product-price">$8.500 COP</span>
+            </div>
+            <button class="btn btn-okini-outline btn-agregar" data-producto="Pan de masa madre" data-precio="8.500 COP">Agregar</button>
+          </div>
+
+          <div class="product-item">
+            <div>
+              <h4>Croissant</h4>
+              <p>Mantequilla francesa, hojaldrado en el momento.</p>
+              <span class="product-price">$6.500 COP</span>
+            </div>
+            <button class="btn btn-okini-outline btn-agregar" data-producto="Croissant" data-precio="6.500 COP">Agregar</button>
+          </div>
+
+          <div class="product-item">
+            <div>
+              <h4>Cookie de chocolate</h4>
+              <p>Chispas de chocolate oscuro, centro suave.</p>
+              <span class="product-price">$5.000 COP</span>
+            </div>
+            <button class="btn btn-okini-outline btn-agregar" data-producto="Cookie de chocolate" data-precio="5.000 COP">Agregar</button>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="col-lg-6" data-aos="slide-up" data-aos-delay="150">
+        <div class="map-frame">
+          <iframe
+            src="https://www.google.com/maps?q=Calle+85+%2312-34,+Chapinero,+Bogot%C3%A1&output=embed"
+            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade" title="Ubicación de Okini en Bogotá"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TESTIMONIOS ============ -->
+<section id="testimonios" class="section-testimonios">
+  <div class="container">
+    <div class="text-center mb-5" data-aos="flip-up">
+      <p class="eyebrow justify-content-center"><span class="enso-dot"></span>Voces de Okini</p>
+      <h2 class="section-title">Lo que dicen nuestros clientes</h2>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-md-4" data-aos="flip-up">
+        <div class="testimonio-card">
+          <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=300&q=80" alt="María F." class="testimonio-foto">
+          <p class="testimonio-texto">"El mejor V60 que he probado en Bogotá. La atención es impecable y el ambiente te transporta."</p>
+          <p class="testimonio-nombre">María F.</p>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="flip-up" data-aos-delay="120">
+        <div class="testimonio-card">
+          <img src="https://images.unsplash.com/photo-1562124638-724e13052daf?auto=format&fit=crop&w=300&q=80" alt="Carlos R." class="testimonio-foto">
+          <p class="testimonio-texto">"La cata semanal es una experiencia única. Aprendí más de café en una hora que en todo un año."</p>
+          <p class="testimonio-nombre">Carlos R.</p>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="flip-up" data-aos-delay="240">
+        <div class="testimonio-card">
+          <img src="https://images.unsplash.com/photo-1489278353717-f64c6ee8a4d2?auto=format&fit=crop&w=300&q=80" alt="Laura G." class="testimonio-foto">
+          <p class="testimonio-texto">"Okini es mi lugar favorito para trabajar. El café es excelente y el wifi nunca falla."</p>
+          <p class="testimonio-nombre">Laura G.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer id="contacto" class="footer-okini">
+  <div id="particles-footer" class="particles-layer"></div>
+  <div class="container position-relative">
+    <div class="row gy-4 align-items-start">
+      <div class="col-md-4">
+        <p class="footer-brand">Okini</p>
+        <p class="text-white-70 mb-0"><i class="bi bi-geo-alt me-2"></i>Calle 85 # 12-34, Chapinero, Bogotá</p>
+      </div>
+      <div class="col-md-4">
+        <p class="footer-heading">Horario</p>
+        <p class="text-white-70 mb-0"><i class="bi bi-clock me-2"></i>Lunes a domingo, 8:00 a.m. – 8:00 p.m.</p>
+      </div>
+      <div class="col-md-4">
+        <p class="footer-heading">Síguenos</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+          <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          <a href="#" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+        </div>
+      </div>
+    </div>
+    <hr class="footer-rule">
+    <p class="text-center text-white-70 small mb-0">© 2026 Okini. Un viaje a Kioto en Bogotá.</p>
+  </div>
+</footer>
+
+<!-- ============ MODALES ============ -->
+
+<!-- Modal: cantidad de tazas a reservar -->
+<div class="modal fade" id="reservaModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content modal-okini">
+      <div class="modal-header">
+        <h5 class="modal-title"><i class="bi bi-cup-hot me-2"></i>Reservar <span id="reservaMetodoNombre"></span></h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <p class="mb-2">Precio por taza: <strong><span id="reservaPrecioCop"></span> COP | <span id="reservaPrecioUsd"></span> USD</strong></p>
+        <label for="reservaCantidad" class="form-label">Cantidad de tazas (máximo 2 por persona)</label>
+        <input type="number" class="form-control" id="reservaCantidad" min="1" max="2" value="1">
+        <div id="reservaError" class="text-danger small mt-2 d-none"></div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-okini-outline" data-bs-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-okini-primary" id="confirmarReservaBtn">Confirmar reserva</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal: confirmación de reserva -->
+<div class="modal fade" id="confirmacionModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content modal-okini text-center">
+      <div class="modal-body py-5">
+        <i class="bi bi-check-circle-fill confirmacion-icono"></i>
+        <h5 class="mt-3">¡Reserva confirmada!</h5>
+        <p id="confirmacionTexto" class="mb-1"></p>
+        <p class="text-muted small">Okini — gracias por elegirnos.</p>
+      </div>
+      <div class="modal-footer justify-content-center border-0 pb-4">
+        <button type="button" class="btn btn-okini-primary" data-bs-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal: aforo completo -->
+<div class="modal fade" id="aforoModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content modal-okini text-center">
+      <div class="modal-body py-5">
+        <i class="bi bi-x-circle-fill aforo-icono"></i>
+        <h5 class="mt-3" id="aforoTitulo">Aforo completo</h5>
+        <p id="aforoTexto" class="mb-0">Hemos alcanzado el límite de 50 tazas para hoy. ¡Te esperamos mañana desde las 8:00 a.m.!</p>
+      </div>
+      <div class="modal-footer justify-content-center border-0 pb-4">
+        <button type="button" class="btn btn-okini-primary" data-bs-dismiss="modal">Entendido</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal: inscripción a la cata -->
+<div class="modal fade" id="cataModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content modal-okini">
+      <div class="modal-header">
+        <h5 class="modal-title"><i class="bi bi-cup-straw me-2"></i>Inscripción a la Cata Semanal</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <div class="mb-3">
+          <label for="cataNombre" class="form-label">Nombre completo</label>
+          <input type="text" class="form-control" id="cataNombre" placeholder="Tu nombre">
+        </div>
+        <div class="mb-3">
+          <label for="cataCorreo" class="form-label">Correo electrónico</label>
+          <input type="email" class="form-control" id="cataCorreo" placeholder="tucorreo@ejemplo.com">
+        </div>
+        <div class="mb-2">
+          <label for="cataTelefono" class="form-label">Teléfono</label>
+          <input type="tel" class="form-control" id="cataTelefono" placeholder="300 000 0000">
+        </div>
+        <div id="cataError" class="text-danger small mt-2 d-none"></div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-okini-outline" data-bs-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-okini-primary" id="confirmarCataBtn">Enviar inscripción</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal: éxito inscripción cata -->
+<div class="modal fade" id="cataExitoModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content modal-okini text-center">
+      <div class="modal-body py-5">
+        <i class="bi bi-check-circle-fill confirmacion-icono"></i>
+        <h5 class="mt-3">¡Inscripción confirmada!</h5>
+        <p class="mb-0">Te esperamos el sábado a las 10:00 a.m.</p>
+      </div>
+      <div class="modal-footer justify-content-center border-0 pb-4">
+        <button type="button" class="btn btn-okini-primary" data-bs-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal: producto agregado -->
+<div class="modal fade" id="carritoModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content modal-okini text-center">
+      <div class="modal-body py-5">
+        <i class="bi bi-bag-check-fill confirmacion-icono"></i>
+        <h5 class="mt-3">Agregado al carrito</h5>
+        <p id="carritoTexto" class="mb-1"></p>
+        <p class="text-muted small mb-0">¿Quieres seguir comprando o finalizar?</p>
+      </div>
+      <div class="modal-footer justify-content-center border-0 pb-4">
+        <button type="button" class="btn btn-okini-outline" data-bs-dismiss="modal">Seguir comprando</button>
+        <button type="button" class="btn btn-okini-primary" id="finalizarCompraBtn" data-bs-dismiss="modal">Finalizar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal: gracias por tu compra -->
+<div class="modal fade" id="graciasCompraModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content modal-okini text-center">
+      <div class="modal-body py-5">
+        <i class="bi bi-emoji-smile confirmacion-icono"></i>
+        <h5 class="mt-3">¡Gracias por tu compra!</h5>
+        <p class="mb-0">Tu pedido llegará pronto. Okini.</p>
+      </div>
+      <div class="modal-footer justify-content-center border-0 pb-4">
+        <button type="button" class="btn btn-okini-primary" data-bs-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- AOS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
+<!-- particles.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+
+<script src="script.js"></script>
+</body>
+</html>

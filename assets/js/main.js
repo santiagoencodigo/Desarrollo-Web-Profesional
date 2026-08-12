@@ -100,6 +100,14 @@ const projectData = [
         imagen: "./assets/img/instant-talent/01-header.png",  // Respeta mayúsculas si el archivo es .PNG
         urlDoc: "https://github.com/santiagoencodigo/Desarrollo-Web-Profesional/tree/main/frontend/Instant-Talent-Outsourcing",
         urlProyecto: "./projects/instant-talent-outsourcing/index.html"
+    },
+    {
+        id: 13,
+        nombre: "13. Okini",
+        descripcion: "Módulo de desarrollo en HTML, CSS y JavaScript Vanilla. Landing page para una cafetería de especialidad con temática japonesa (Okini). Incluye sistema de reservas con contador de tazas (máx 50), validación de reglas de negocio (máximo 2 tazas por persona), precios en COP/USD, modales interactivos, animaciones con AOS, fondos de partículas y secciones como métodos de preparación, cata semanal, domicilios con mapa de Google, testimonios y diseño responsivo.",
+        imagen: "./assets/img/proyectos/08-okini.png",
+        urlDoc: "https://github.com/santiagoencodigo/Desarrollo-Web-Profesional/tree/main/projects/okini/README.md",
+        urlProyecto: "./projects/okini/index.html"
     }
 ];
 
@@ -142,6 +150,7 @@ const links = [
     { source: 9, target: 10 },
     { source: 10, target: 11 },
     { source: 11, target: 12 },
+    { source: 12, target: 13 }, // Nueva conexión lineal para Okini
     // Conexiones temáticas
     { source: 1, target: 5 },
     { source: 1, target: 6 },
@@ -154,7 +163,11 @@ const links = [
     { source: 7, target: 12 },
     { source: 8, target: 10 },
     { source: 9, target: 11 },
-    { source: 9, target: 12 }
+    { source: 9, target: 12 },
+    // Nuevas conexiones temáticas para el proyecto 13
+    { source: 9, target: 13 }, // Conecta con Fundamentos JavaScript
+    { source: 10, target: 13 }, // Conecta con Git y GitHub
+    { source: 11, target: 13 }, // Conecta con Frontend Development (AnimeShop)
 ];
 
 const simulation = d3.forceSimulation(nodes)
