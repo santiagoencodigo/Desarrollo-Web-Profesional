@@ -1,779 +1,751 @@
-# Introducción a la Terminal y Línea de Comandos
+# 4. Terminal y Línea de Comandos
 
-En esta sección encuentras mis apuntes sobre cómo utilizar la terminal (**BASH**) como una herramienta fundamental para interactuar directamente con el sistema operativo. A través de la línea de comandos podrás navegar entre carpetas, manipular archivos, gestionar permisos, entender procesos y emplear herramientas esenciales como grep, curl y otras utilidades clave.
+En esta sección encuentras mis apuntes completos sobre cómo utilizar la terminal **BASH** como una herramienta fundamental para interactuar directamente con el sistema operativo. A través de la línea de comandos podrás navegar entre carpetas, manipular archivos, gestionar permisos, entender procesos y emplear herramientas esenciales como `grep`, `curl`, `tar`, `gzip`, editores de texto y otras utilidades clave.
 
-También cómo crear alias, personalizar shell y optimizar el flujo de trabajo para mejorar la eficiencia al trabajar con proyectos, servidores y entornos de desarrollo. Esta introducción es una base sólida para comprender cómo funciona realmente el sistema desde dentro y cómo sacarle el máximo provecho a la terminal.
+También verás cómo crear alias, personalizar la shell con ZSH y Oh My ZSH, optimizar el flujo de trabajo con Tmux, y hasta usar una terminal con inteligencia artificial integrada como Warp. Esta guía es una base sólida para comprender cómo funciona realmente el sistema desde dentro y cómo sacarle el máximo provecho a la terminal.
 
->Terminal: Es una herramienta que permite comunicarnos directamente con el sistema operativo mediante texto, en lugar de usar ventanas, botones o menús.
+> **Terminal:** Es una herramienta que permite comunicarnos directamente con el sistema operativo mediante texto, en lugar de usar ventanas, botones o menús.
+>
+> **Línea de Comandos:** Es el espacio dentro de la terminal donde escribimos instrucciones (comandos) para que el sistema los ejecute.
+>
+> En lugar de hacer clic, escribimos órdenes como crear carpetas, mover archivos, instalar programas o revisar procesos. Esto nos da más control, rapidez y precisión, especialmente al trabajar con programación, servidores y sistemas avanzados.
 
->Linea de Comandos: Es el espacio dentro de la terminal donde escribimos instrucciones (Comandos) para que el sistema los ejecute.
-
->En lugar de hacer clic, escribimos órdenes como crear carpetas, mover archivos, instalar programas o revisar procesos. Esto nos da más control, rapidez y precisión, especialmente al trabajar con programación, servidores y sistemas avanzados.
-
->Profesor: Enrique Devars
-
-
-
-
+**Profesor:** Enrique Devars (curso de Platzi).
 
 ---
-
-
-
-
 
 ## Tabla de Contenido
 
-1. [Ventajas de Dominar la Terminal de Comandos para Profesionales](#ventajas-de-dominar-la-terminal-de-comandos-para-profesionales)
-2. [Qué es una Terminal y Cómo Funciona con Comandos Básicos](#qué-es-una-terminal-y-cómo-funciona-con-comandos-básicos)
+1. [Por qué la terminal define a los mejores desarrolladores](#por-qué-la-terminal-define-a-los-mejores-desarrolladores)
+2. [Qué es una terminal y cómo funciona](#qué-es-una-terminal-y-cómo-funciona)
 3. [Instalación de terminal Bash en Windows usando WSL](#instalación-de-terminal-bash-en-windows-usando-wsl)
-4. [Comandos básicos de terminal para principiantes](#comandos-básicos-de-terminal-para-principiantes)
-5. [Navegación entre directorios en Linux con Comandos de Terminal](#navegación-entre-directorios-en-linux-con-comandos-de-terminal)
-6. [Comandos para Explorar y Manipular Archivos de Texto en Terminal](#comandos-para-explorar-y-manipular-archivos-de-texto-en-terminal)
-7. [Uso de Wildcards para Búsquedas Masivas en la Terminal](#uso-de-wildcards-para-búsquedas-masivas-en-la-terminal)
-8. [Comandos GREP y FIND para búsquedas avanzadas en linux](#comandos-grep-y-find-para-búsquedas-avanzadas-en-linux)
-9. [Tipos de comandos en Linux y cómo identificarlos](#tipos-de-comandos-en-linux-y-cómo-identificarlos)
-10. [Redirecciones de terminal en Linux con operadores básicos](#redirecciones-de-terminal-en-linux-con-operadores-básicos)
-11. [Operadores de Control para Encadenar Comandos Linux](#operadores-de-control-para-encadenar-comandos-linux)
-12. []()
-13. []()
-14. []()
-15. []()
-16. []()
-17. []()
-18. []()
-18. []()
-19. []()
-20. []()
-
-
-
-
-
-
-
+4. [Primeros comandos esenciales en la terminal Linux](#primeros-comandos-esenciales-en-la-terminal-linux)
+5. [Navegación entre directorios en Linux con comandos de terminal](#navegación-entre-directorios-en-linux-con-comandos-de-terminal)
+6. [Crear y borrar archivos desde la terminal Linux](#crear-y-borrar-archivos-desde-la-terminal-linux)
+7. [Comandos para explorar y manipular archivos de texto en terminal](#comandos-para-explorar-y-manipular-archivos-de-texto-en-terminal)
+8. [Wildcards en la terminal para filtrar archivos](#wildcards-en-la-terminal-para-filtrar-archivos)
+9. [Cómo usar grep y find en Linux](#cómo-usar-grep-y-find-en-linux)
+10. [Tipos de comandos en Linux y cómo identificarlos](#tipos-de-comandos-en-linux-y-cómo-identificarlos)
+11. [Redirecciones de terminal en Linux con operadores básicos](#redirecciones-de-terminal-en-linux-con-operadores-básicos)
+12. [Operadores de control para encadenar comandos en Linux](#operadores-de-control-para-encadenar-comandos-en-linux)
+13. [Configuración de alias permanentes en terminal Linux](#configuración-de-alias-permanentes-en-terminal-linux)
+14. [Permisos de archivos en Linux con chmod](#permisos-de-archivos-en-linux-con-chmod)
+15. [Variables de entorno en Bash explicadas](#variables-de-entorno-en-bash-explicadas)
+16. [Uso de APT para gestionar paquetes en Linux](#uso-de-apt-para-gestionar-paquetes-en-linux)
+17. [Homebrew: gestor de paquetes para Mac](#homebrew-gestor-de-paquetes-para-mac)
+18. [Foreground y background en la terminal](#foreground-y-background-en-la-terminal)
+19. [Cómo identificar y matar procesos en Linux](#cómo-identificar-y-matar-procesos-en-linux)
+20. [Empaquetado y compresión de archivos con TAR y GZIP en Linux](#empaquetado-y-compresión-de-archivos-con-tar-y-gzip-en-linux)
+21. [Vim y Nano: editores de texto en terminal](#vim-y-nano-editores-de-texto-en-terminal)
+22. [Tmux para múltiples terminales en una ventana](#tmux-para-múltiples-terminales-en-una-ventana)
+23. [Comandos de red en la terminal para verificar conectividad](#comandos-de-red-en-la-terminal-para-verificar-conectividad)
+24. [Personaliza tu terminal con ZSH y Powerlevel10k](#personaliza-tu-terminal-con-zsh-y-powerlevel10k)
+25. [Warp: la terminal con IA integrada](#warp-la-terminal-con-ia-integrada)
+26. [Recursos para dominar la terminal Linux](#recursos-para-dominar-la-terminal-linux)
 
 ---
 
+## Por qué la terminal define a los mejores desarrolladores
 
+Empecemos con una historia que me marcó. **Toy Story** pudo no haber sido la película que conocemos por problemas con la terminal. Los animadores utilizaban un sistema de archivos compartidos; por errores de uno de los administradores del sistema, se empezaron a borrar cada uno de los archivos en cadena, **simplemente por ejecutar mal un comando**. Menos mal había un respaldo y se pudo mostrar esta película al mundo.
 
+Los verdaderos profesionales dominan el entorno, entienden lo que sucede "bajo el capó" y para ello utilizan la línea de comandos dentro de la terminal porque te da: **control, precisión, fiabilidad** acerca de lo que está sucediendo en tu sistema.
 
-## Ventajas de Dominar la Terminal de Comandos para Profesionales
+Al usar la terminal no se hacen clics, se dan órdenes.
 
-[Toy Story](https://es.wikipedia.org/wiki/Toy_Story "Wikipedia - Toy Story") pudo no haber sido la pelicula por problemas con la terminal, ellos utilizaban un sistema de archivos compartidos por errores de uno de los administradores del sistema se empezaron a borrar cada uno de los archivos en cadena **simplemente por ejecutar mal un comando**, pero menos mal habia un respaldo y se pudo mostrar esta pelicula al mundo.
-
-Los verdaderos profesionales, dominan el entorno, entienden que es lo que sucede "bajo el capo" y para ello utilizan la línea de comandos dentro de la terminal porque te da: Control, Presición, Fiabilidad acerca de lo que esta sucediendo en tu sistema.
-
-Al usar la terminal no se hacen clics, se dan ordenes.
-
-Por lo que la terminal no es una reliquia del pasado, es la herramienta profesional por excelensia en los técnicos en programación
+La terminal no es una reliquia del pasado, es la herramienta profesional por excelencia en los técnicos en programación.
 
 **¿Qué se gana al aprenderlo?**
 
-1. **Velocidad y Presición:** Se automatizara en unos segundos lo que con clicks tomaria horas a través de interfaces gráficas.
+1. **Velocidad y precisión:** Automatizarás en unos segundos lo que con clics tomaría horas a través de interfaces gráficas.
+2. **Conocimiento profundo:** Conocerás cómo funciona el sistema operativo y cómo se mueve la información dentro de él.
+3. **Acceso a herramientas avanzadas:** Git para control de versiones, Docker para gestión de contenedores, `htop` para monitoreo eficiente de procesos, `nmap` para analítica de redes y sistemas, y demás herramientas que solo existen en la terminal.
+4. **Personalización extrema:** Podrás crear tus propios scripts, flujos de medida de trabajo y convertirte en el arquitecto de tu entorno digital.
 
-2. **Conocimiento profundo:** Se conocerá cómo funciona el sistema operativo y cómo se mueve la información dentro de el.
+> Si buscas un buen trabajo en compañías como Google, Amazon, Facebook, CoreWeave y Red Hat, el uso de la terminal debe ser como respirar. Emplean profesionales con dominio total de la terminal y consideran esta habilidad básica e imprescindible.
 
-3. **Acceso a herramientas avanzadas:** Git para control de versiones. Docker en gestión de contenedores. Htop para monitoreo eficiente de procesos. Nmap en analítica de redes y sistemas. y demas herramientas que sólo existen en la terminal.
+No usar la terminal genera dependencia a herramientas que nos limitan. Aprenderla supone un salto enorme en el dominio técnico.
 
-4. **Personalización Extrema:** Se va a poder crear los SCRIPTS propios, flujos de medida de trabajo y convertirse en el arquitecto de tu entorno digital. La terminal es para todos: Windows, Linux, Mac e incluso tu celular puede que tenga una terminal y no lo sabias.
+<img src="https://www.profesionalreview.com/wp-content/uploads/2021/09/Terminal-de-comandos-34.png" alt="Terminal de comandos en acción">
 
->Si se busca un buen trabajo como en Compañías como Google, Amazon, Facebook, Corey Cold y Red Hat destacan: El uso de la terminal debe ser como respirar, emplean profesionales con dominio total de la terminal. consideran esta habilidad básica e imprescindible.
+*Imagen tomada de: [Profesional Review](https://www.profesionalreview.com/2021/10/06/que-es-terminal-windows-10/)*
 
->Se puede hacer una automatización de tareas repetitivas. Acortas considerablemente el tiempo dedicado a procesos manuales.
-
-El no usar la terminal genera dependencia a herramientas que nos limitan, pero si se aprende se hará un salto enorme en el dominio técnico.
-
-<img src="https://www.profesionalreview.com/wp-content/uploads/2021/09/Terminal-de-comandos-34.png">
-
-*Imagen Tomada De: https://www.profesionalreview.com/2021/10/06/que-es-terminal-windows-10/*
-
-Lectura Recomendada: https://labex.io/linuxjourney
-
-
-
+**Lectura recomendada:** [Linux Journey](https://labex.io/linuxjourney)
 
 ---
 
+## Qué es una terminal y cómo funciona
 
+¿Qué es una terminal? Esa es una pregunta que vamos a ir resolviendo a lo largo de todo este documento.
 
+La terminal es la que solemos ver usualmente en las películas de hackers, donde escriben código y cosas mágicas empiezan a suceder. (No está muy alejado de la realidad.)
 
-## Qué es una Terminal y Cómo Funciona con Comandos Básicos
+La terminal es una **Interfaz de Usuario** en la que se escribe una serie de comandos que nos va a permitir comunicarnos con el sistema operativo, es decir, darle instrucciones a nuestra computadora a través de comandos.
 
-¿Qué es una terminal? Es una pregunta que vamos a ir resolviendo a lo largo de todo este documento.
+Las terminales pueden aparecer en varios lados: en un programa, en la web, pueden aparecer sin interfaz de usuario e incluso podrían aparecer en nuestro celular si nos conectamos de una forma adecuada.
 
-La terminal es la que solemos ver usualmente en las peliculas de hacker donde escriben código y cosas magicas empiezan a suceder. (No esta muy alejado de la realidad.)
-
-La terminal es una **Interfaz de Usuario** en la que se escribe una serie de comandos que nos va a permitir comunicarnos con el sistema operativo, es decir: Darle instrucciones a nuestra computadora a traves de comandos.
-
-Las terminales pueden aparecer en varios lados, en un programa, en la web, pueden aparecer asi sin más... sin ni siquiera interfaz de usuario e incluso podría aparecer en nuestro celular si nos conectamos de una forma adecuada.
-
-Para poder ejecutar la terminal debemos hacerlo mediante un programa llamado **SHELL** pues la que realmente hará la interpretación de estos comandos es la Shell, es un programa (normalmente compilado) que actúa como interfaz entre el usuario y el sistema operativo (Se encarga de la traducción). Por lo que permite al usuario interactuar con el sistema operativo a traves de comandos de texto.
-
-Como por ejemplo: Copia un archivo, elimina un archivo, configuraciones de crear un proceso.
+Para poder ejecutar la terminal debemos hacerlo mediante un programa llamado **SHELL**, porque la que realmente hará la interpretación de estos comandos es la shell. Es un programa (normalmente compilado) que actúa como interfaz entre el usuario y el sistema operativo (se encarga de la traducción). Permite al usuario interactuar con el sistema operativo a través de comandos de texto: copiar un archivo, eliminar un archivo, configurar o crear un proceso.
 
 Aunque la mayoría de las terminales están asociadas con sistemas Linux y Unix, es posible emplearlas también en Windows mediante herramientas específicas como PowerShell o Bash a través del sistema WSL. La elección de la terminal dependerá del sistema operativo y del entorno de trabajo.
 
->Veremos la powershell
+> **Nota:** En mi caso, como tengo un sistema Windows, utilizo un sistema emulado llamado **WSL** (Windows Subsystem for Linux).
 
-Como en mi dispositivo tengo un sistema Windows se utilizará un sistema emulado llamado **WSL** | Windows Subsystem Linux.
+**La diferencia entre la terminal y la shell:**
 
-**La diferencia entre la terminal y la shell.**
+- La **terminal** es la ventana o interfaz donde escribes.
+- La **shell** es el programa que interpreta lo que escribes y lo traduce al sistema operativo.
 
->Si tambien tienes windows, oprime la tecla windows y busca "Powershell", ejecuta "Windows Powershell"
+Si tienes Windows, oprime la tecla Windows y busca "PowerShell", ejecuta "Windows PowerShell". Si usas Visual Studio Code, el atajo `Control + Ñ` te abrirá la terminal integrada.
 
->Si vas al Visual Studio Code y oprimes el atajo Control + Ñ te abrira la terminal.
+Una vez dentro de PowerShell o en la terminal de VS Code escribe `dir`. Te mostrará todos los directorios que tengas en tu dispositivo. PowerShell tiene sus propios comandos, pero no son tan utilizados a nivel global. La terminal que se utiliza globalmente y en todas partes es **BASH**, que es la que vamos a utilizar a lo largo de todos estos apuntes.
 
-Una vez dentro de Powershell o en la terminal de VSCODE escribes: **dir**
-
-<img src="https://static.platzi.com/media/user_upload/upload-c7a8f22f-a45d-49b4-abd4-f90bfed8c2ff.png">
-
-Te mostrara todos los directorios que tengas en tu dispositivo, shell tiene sus propios comandos, pero no son tan utilizados a nivel global. La terminal que se utiliza globalmente y en todas partes es **BASH** que es la que se va a estar utilizando a lo largo de todos estos apuntes.
-
-    En la mayoria de servidores windows se utiliza esta powershell
-
-* PowerShell es una terminal específica para Windows que ofrece comandos únicos para este sistema operativo. Es utilizada principalmente en servidores Windows.
-
-* la terminal Bash, frecuente en Linux y sistemas Unix, es ampliamente utilizada a nivel global y será explorada mediante emulación WSL en este repo.
+- **PowerShell** es una terminal específica para Windows que ofrece comandos únicos para este sistema operativo. Es utilizada principalmente en servidores Windows.
+- **Bash**, frecuente en Linux y sistemas Unix, es ampliamente utilizada a nivel global y será explorada mediante emulación WSL en este repo.
 
 El funcionamiento de una terminal se apoya en un programa llamado shell. Este programa interpreta los comandos que introduces y los traduce en instrucciones que el sistema operativo puede entender y ejecutar. La shell convierte estos comandos escritos en acciones concretas visibles en tu equipo.
 
-Lo que conocemos por Terminal realmente involucra 3 conceptos clave: Terminal (interfaz), Shell y Línea de comandos.
+Lo que conocemos por **Terminal** realmente involucra 3 conceptos clave: Terminal (interfaz), Shell y Línea de comandos.
 
-<img src="https://www.cs.cornell.edu/courses/cs1110/2021sp/resources/images/example-powershell.png">
+<img src="https://www.cs.cornell.edu/courses/cs1110/2021sp/resources/images/example-powershell.png" alt="Ejemplo de PowerShell">
 
-*Imagen Tomada De: https://www.cs.cornell.edu/courses/cs1110/2021sp/resources/shell-windows.html*
-
-
-
+*Imagen tomada de: [Cornell University](https://www.cs.cornell.edu/courses/cs1110/2021sp/resources/shell-windows.html)*
 
 ---
-
-
 
 ## Instalación de terminal Bash en Windows usando WSL
 
 La mayoría de personas que comienzan en el mundo de la tecnología lo hacen desde un sistema operativo Windows. Por eso, en esta sección aprenderemos a instalar una terminal Bash en Windows utilizando WSL (Windows Subsystem for Linux).
 
-Estos seran los pasos para instalar una terminal BASH en windows usando un sistema llamado Windows Subsystem for Linux.
-
 WSL permite ejecutar un sistema operativo Linux dentro de Windows, sin máquinas virtuales ni configuraciones complejas. Gracias a esto, podemos usar una terminal real de Linux directamente desde nuestro equipo.
 
-A continuación, instalaremos WSL y una distribución de Linux (en este caso Ubuntu) que incluye la shell Bash por defecto.
+**Pasos para instalar WSL y Ubuntu:**
 
-Sigue el enlace, haz la lectura y sigue los pasos: https://learn.microsoft.com/es-es/windows/wsl/install
+1. Abre PowerShell como administrador (clic derecho → Ejecutar como administrador).
+2. Ejecuta el comando:
+   ```bash
+   wsl --install
+   ```
+3. Si no se instala una distribución predeterminada (como Ubuntu), usa:
+   ```bash
+   wsl --install -d Ubuntu
+   ```
+4. Una vez instalado, busca "WSL" en el menú de inicio, ábrelo y crea un usuario y contraseña.
+5. Para verificar que tienes Bash, ejecuta:
+   ```bash
+   echo $SHELL
+   ```
+   Debe aparecer algo como `/bin/bash`.
 
->Cuando ejecutas la powershell con administrador, la dirección será PS C:\Windows\system32>
+**Importante:** Antes de instalar, puedes verificar si ya tienes WSL y su versión con:
+```bash
+wsl -v
+```
+o
+```bash
+wsl --version
+```
 
-El comando wsl --install va a instalar WSL para luego instalar una distribución de linux llamada UBUNTU, la más usada del mundo.
+<img src="https://static.platzi.com/media/user_upload/upload-661c49b7-0514-41ae-ad6c-62a90b121db5.png" alt="Verificación de WSL">
 
-Ubuntu es una distribución de linux basada en DEBIAN que ya trae por defecto la SHELL de BASH
+**Lectura recomendada:** [Documentación oficial de WSL](https://learn.microsoft.com/es-es/windows/wsl/install)
 
->Estamos descargando ubuntu.
+**Simuladores de terminal en la web (para practicar sin instalar):**
 
-Si quieres administrar las distribuciones de linux que tienes, puedes usar el comando wsl -l
-
-Con esto ejecutamos WSL (oprime tecla windows y busca WSL) y se debe crear un usuario con nombre y contraseña.
-
-De hay ya tenemos BASH, ¿Cómo sabemos que tenemos BASH? basta con usar el comando echo $SHELL y debe aparecer algo como /bin/bash - Con esto sabemos que tenemos BASH en nuestra terminal con ubuntu mediante WSL
-
->Mac tiene su propia terminal con BASH, pero puede que hallan algunos comandos que no los tome porque no es un sistema linux completo sino mas bien UNIX
-
-
-
-
+- [Terminal Temple](https://www.terminaltemple.com/)
+- [Online GDB Bash Shell](https://www.onlinegdb.com/online_bash_shell)
+- [MyCompiler Bash](https://www.mycompiler.io/es/new/bash)
 
 ---
 
-
-
-
-## Comandos básicos de terminal para principiantes
+## Primeros comandos esenciales en la terminal Linux
 
 A continuación encontrarás los comandos más básicos y a la vez más útiles para empezar a explorar el sistema operativo desde la terminal. Con ellos podrás navegar, analizar información, listar archivos y entender mejor cómo funciona Bash.
 
 > La mayoría de los comandos suelen ser abreviaciones de palabras completas.
 
-* **whoami:** Muestra el nombre del usuario con el que estás actualmente autenticado.
+| Comando | Descripción |
+| :--- | :--- |
+| `whoami` | Muestra el nombre del usuario con el que estás actualmente autenticado. |
+| `pwd` | Print Working Directory: indica la ruta exacta del directorio en el que te encuentras. |
+| `ls` | Lista el contenido del directorio actual. |
+| `ls -a` | Muestra todos los archivos, incluyendo los ocultos (los que empiezan con `.`). |
+| `ls -l` | Lista los archivos visibles en formato detallado (permisos, tamaño, propietario). |
+| `ls -la` | Combina las dos opciones anteriores. |
+| `ls -lah` | Añade "human readable" (tamaños en KB, MB). |
+| `clear` | Limpia la pantalla de la terminal (también `Ctrl + L`). |
+| `echo "texto"` | Imprime un mensaje en pantalla. |
+| `--help` | Muestra las opciones de un comando (ej. `ls --help`). |
+| `man comando` | Muestra el manual completo del comando (ej. `man echo`; salir con `q`). |
+| `uname -a` | Muestra información del sistema operativo y entorno. |
+| `date` | Muestra la fecha y hora actuales. |
 
-* **pwd = print working directory:** Indica la ruta exacta del directorio en el que te encuentras.
+<img src="https://static.platzi.com/media/user_upload/upload-8cd10dcc-593f-4658-8f84-d5f47c7bd0ca.png" alt="Tabla de comandos iniciales">
 
-> Cada usuario tiene su propio directorio home.
-
-* **ls = list:** Lista el contenido del directorio actual.
-
-> La mayoria de comandos reciben algo llamado options
-
-* **ls (list):** Lista el contenido del directorio actual.
-
-* ls -a: Le indicará al comando que muestre todos los archivos ya que pueden haber archivos visibles y no visibles, porque suelen haber archivos ocultos que normalmente son archivos de configuración.
-
-    .bashrc es de configuración de la terminal de bash
-
-### Opciones de los comandos (Flags)
-
-* **ls -a:** Muestra todos los archivos, incluyendo los ocultos (los que empiezan con .), por ejemplo: .bashrc → Archivo de configuración de Bash.
-
-* ls -l: Muestra los archivos en una lista detallada (permisos, tamaño, propietario, etc.). Solo incluye archivos visibles.
-
-
-
-**Tambien podemos combinar las opciones.**
-
-*** ls -la:** Lista todos los archivos (incluyendo ocultos) con información detallada. 
-
-> (El orden de las opciones no importa.)
-
-* **ls -al:** (Mostrara lo mismo que ls -la)
-
-* **clear:** Cuando contamos con bastante información en nuestra pantalla y no nos interesa verla podemos utilizar este comando para "limpiar" la terminal. **Se puede oprimir tambien el atajo CONTROL + L**
-
-> Con la flecha ↑ puedes navegar por el historial de comandos ya ejecutados.
-
-* **echo:** Si yo quiero guardar algún texto en mi terminal como por ejemplo echo "hola mundo" que se usa usualmente para temas de scripting
-
-* **--help:** Podemos visualizar que opciones tiene un comando pues la mayoria de comandos y sobre todo lo más utilizados suelen utilizar algo llamado --help. Se les conoce como flask en donde se pueden escribir sin ningún valor y otras veces pueden contener un valor. Por lo que otros comandos pueden recibir parametros para realizar actividades especificas y complejas.
-
-**ls --help**
-
-Entonces eso permitira mirar todos los comandos con los que se puede jugar mediante ls -- para luego combinarlos como por ejmeplo
-
-    ls -lah
-
-> Importante tener en cuenta que en la terminal todo texto que sea blanco son archivos
-
-> Todo lo que venga con una d al inicio suelen ser directorios y generalmente los veras de color azul
+**PDF con más de 400 comandos:** [Abrir link del PDF - archive.org](https://ia802909.us.archive.org/21/items/400comandosLinux/400comandos.pdf)
 
 ---
 
-A continuación **Comandos que son de utilidad en el sistema**
+## Navegación entre directorios en Linux con comandos de terminal
 
-* uname -a: Para mirar la descripción del entorno donde se esta trabajando
+Dominar la navegación entre directorios en sistemas Linux es una habilidad fundamental para interactuar con el sistema operativo mediante comandos desde la terminal. Aprenderemos cómo desplazarnos eficientemente usando rutas absolutas y relativas, así como símbolos útiles como punto (`.`), doble punto (`..`), slash (`/`) y virgulilla (`~`).
 
-* date: Para mirar la fecha
+### Rutas absolutas
 
-* man: viene de la palabra manual que nos permite el manual de cualquier comando como por ejemplo:
+Una ruta absoluta comienza siempre desde la raíz del sistema operativo, especificada por un slash (`/`). Por ejemplo, usar el comando `cd /` nos posiciona directamente en el directorio raíz del sistema Linux, que aloja importantes carpetas del sistema tales como:
 
-    man echo
+- `/bin`
+- `/dev`
+- `/lib64`
+- `/root`
+- `/home`
 
-Estos son solo los primeros comandos básicos. Aún quedan por explorar comandos de red, compresión, manipulación avanzada de archivos, y algunos incluso… para dibujar dragones 🐉
+Este método permite acceder directamente a cualquier directorio proporcionando su ruta completa.
 
-<img src="https://i.sstatic.net/cqags.png">
+### Rutas relativas y símbolos especiales
 
-*Imagen Tomada De: https://askubuntu.com/questions/1389080/how-to-get-to-the-windows-desktop-in-wsl*
+Mientras que las absolutas requieren especificar toda la ruta desde la raíz, las relativas funcionan desde el lugar actual en que nos encontramos.
 
-Lectura Recomendada: https://www.geeksforgeeks.org/linux-unix/linux-commands-cheat-sheet/
+- **`.` (punto):** directorio actual.
+- **`..` (doble punto):** directorio superior (subir un nivel).
+- **`/` (slash):** raíz del sistema.
+- **`~` (virgulilla):** directorio home del usuario actual (Alt + 126).
 
+Esto permite desplazarnos rápidamente usando comandos como `cd ..` para retroceder y `cd ~` para ir al home del usuario rápidamente, independientemente del directorio actual.
 
+### `pushd` y `popd`
 
+- **`pushd`**: guarda la ubicación actual en una pila y te mueve a la nueva ruta.
+- **`popd`**: recupera la última ubicación almacenada y te desplaza automáticamente a ella.
 
----
+Este mecanismo es muy útil para navegar cómodamente cuando trabajamos en múltiples directorios simultáneamente.
 
+### `tree`
 
+Si quieres ver la estructura de directorios en forma de árbol, instala `tree` con:
+```bash
+sudo apt install tree
+```
+Luego ejecuta `tree` en cualquier carpeta.
 
-## Navegación entre directorios en Linux con Comandos de Terminal
+<img src="https://static.platzi.com/media/user_upload/upload-3fe5cc12-ff90-457a-9f81-d3c529078f38.png" alt="Estructura de árbol de directorios">
 
-¿Cómo movernos entre directorios? ¿Cómo movernos al rededor de la terminal?
+Para entender mejor cómo se ven los directorios en Linux, pedí ayuda a Gemini y me generó este mapa visual:
 
-Es fundamental recordar que lo que hace una shell o en general la terminal es permitirnos interactuar con el sistema operativo simplemente con comandos. Sin importar qué sistema operativo tenga el dispositivo (Windows, Mac, Linux, Android) va a tener carpetas y dentro de estas archivos. Para navegar entre estos elementos solemos dar clicks en una biblioteca/explorador de archivos y eso mismo **se puede hacer a traves de la terminal**
+<img src="https://static.platzi.com/media/user_upload/upload-4ff4af9e-5550-4a0a-87d8-94bacdd3d41d.png" alt="Mapa visual de directorios Linux">
 
-### CD / Change Directory
+**Juegos para practicar navegación:**
 
-Todos los sistemas linux inician a traves de una ruta absoluta que la podemos iniciar con el simbolo slash o " / ", este simbolo representa lo que es el inicio de lo que es un sistema operativo linux.
+- [Terminus](https://web.mit.edu/mprat/Public/web/Terminus/Web/main.html)
+- [Bandit (OverTheWire)](https://overthewire.org/wargames/bandit/)
+- [CMD Challenge](https://cmdchallenge.com/)
 
-* Un truco interesante puede ser: Cuando se quiere ingresar a un directorio y analizar las diferentes opciones a las que se puede ingresar, escriba cd / y oprima la tecla de tabulación.
-
-Ahora por medio de la tabulación, vamos a tener un autocompletado. 
-
-Si entonces vamos hacia la carpeta cd /home/ lo unico que habra dentro de esta es el usuario.
-
-Para volver al lugar original que es el directorio principal, basta con escribir cd [nombre de usuario] /
-
-**A lo visto anteriormente se le conoce como navegación entre rutas fijas**
- 
-* rutas relativa: Es decirle al sistema operativo que se regruese una o dos carpeta hacia atras.
-
-La forma de ir hacia una el directorio principal de nuestro usuario es escribiendo: **cd ~**
-
-### pushd .
-
-Guarda una variable de un lugar a donde quisieramos volver de la forma más sencilla en donde se guarda y para ir hay nuevamente se puede escribir **popd**
-
-Podemos pensar de la busqueda y navegación de archivos como un arbol. En Linux para visualizar la estructura de directorios de forma jerárquica, es como si fuera un árbol.
-
-Como por ejemplo: 
-
-<img src="https://static.platzi.com/media/user_upload/upload-3fe5cc12-ff90-457a-9f81-d3c529078f38.png">
-
-Y por otro lado:
-
-* .   Directorio actual
-* ..  Directorio superior
-* /   Raiz
-* ~   Directorio home del usuario
-
-usar el comando cd / nos posiciona directamente en el directorio raíz del sistema Linux, que aloja importantes carpetas del sistema tales como:
-
-* bin 
-
-* dev 
-
-* lib64 
-
-* root 
-
-* home 
-
-
-
-
+<img src="https://static.platzi.com/media/user_upload/upload-e9cad1e3-7a67-45d3-bb5f-fc901e5af914.png" alt="Tabla de navegación entre directorios">
 
 ---
 
+## Crear y borrar archivos desde la terminal Linux
 
+| Comando | Descripción |
+| :--- | :--- |
+| `touch archivo.txt` | Crea un archivo vacío. |
+| `mkdir carpeta` | Crea un directorio. |
+| `mkdir -p padre/hijo` | Crea una jerarquía de directorios. |
+| `cp origen destino` | Copia un archivo. |
+| `cp -r origen destino` | Copia una carpeta recursivamente. |
+| `mv origen destino` | Mueve o renombra un archivo/carpeta. |
+| `rm archivo` | Elimina un archivo (sin papelera). |
+| `rm -r carpeta` | Elimina una carpeta y su contenido recursivamente. |
+| `rm -rf carpeta` | Elimina sin preguntar (¡peligroso!). |
 
-## Comandos para Explorar y Manipular Archivos de Texto en Terminal
+**Nota:** También puedes crear varios archivos en una sola línea:
+```bash
+touch file1.txt file2.txt file3.txt
+```
 
-Ahora empezando a ver usos más especificos de los comandos de la terminal y es que en cualquier sistema operativo existe una gran cantidad de archivos de texto plano y cuando estamos procesando analisis de datos o estamos descargando cierto tipo de archivos y no tenemos una interfaz gráfica. **Existen comandos que nos van a permitir explorar el contenido de estos archivos.
+<img src="https://static.platzi.com/media/user_upload/upload-fbc9d4b5-b754-4cd6-82c1-76fd6a47b775.png" alt="Crear múltiples archivos con touch">
 
-* **cat [nombre archivo]:** Por medio de cat se pueden mirar diferentes archivos de texto
-
-* **less:** Para mirar de forma más pausada el archivo.
-
-* **head:** Si quiero mostrar el contenido inicial de mis archivos pues... con head lo puedo realizar
-
-* **tail:** Si quiero mostrar el contenido final de mis archivos pues... con tail lo puedo realizar
-
-    Tanto Head como Tail tienen la opción -n que será la cantidad de lineas que puedo mostrar como por ejemplo: head -n 20 [nombre del archivo] para imprimir 20 lineas de ese archivo.
-
-* **nl:** Sirve para saber cuantas lineas de texto contiene este archivo.
-
-* **wc = word count:** Si se desea sabes cuantas palabras contiene ese archivo y si queremos ver que opciones tiene este, podemos poner man wc y entre una de las opciones esta wc --byte para que cuente cuantos bytes pesa. y puede ser por numero de caracteres, de líneas, númerm maximo de líneas.
-
-* **awk:** Sirve para determinar diferentes elementos, y entre ellos puede ser imprimir ciertas columnas en archivos csv como por ejemplo por medio de awk '{print $1}' [nombre archivo] para imprimir sólamente la primera columna. O tal vez por medio de awk -F ',' 'print{$1, $3}' [nombre del archivo] 
-
-Lectura Recomendada: https://dn790008.ca.archive.org/0/items/pdfy-MgN0H1joIoDVoIC7/The_AWK_Programming_Language.pdf
-
-
-
-
+<img src="https://static.platzi.com/media/user_upload/upload-b8adc5e4-4819-40cd-b355-71953faf24ad.png" alt="Comandos de manejo de archivos">
 
 ---
 
+## Comandos para explorar y manipular archivos de texto en terminal
 
+En cualquier sistema operativo, los archivos de texto plano son esenciales al procesar datos o descargar información específica. Para interactuar con ellos desde una terminal, existen comandos avanzados que permiten una manipulación efectiva.
 
+| Comando | Descripción |
+| :--- | :--- |
+| `cat archivo` | Muestra todo el contenido del archivo. |
+| `less archivo` | Visualiza el archivo de forma interactiva (flechas, `q` para salir). |
+| `head -n 20 archivo` | Muestra las primeras 20 líneas. |
+| `tail -n 20 archivo` | Muestra las últimas 20 líneas. |
+| `nl archivo` | Numera las líneas del archivo. |
+| `wc -l archivo` | Cuenta líneas. |
+| `wc -w archivo` | Cuenta palabras. |
+| `awk '{print $1}' archivo.csv` | Imprime la primera columna de un CSV. |
+| `awk -F ',' '{print $1, $3}' archivo.csv` | Imprime columnas 1 y 3 de un CSV con separador coma. |
 
-## Uso de Wildcards para Búsquedas Masivas en la Terminal
+**Tip extra:** Los CSV se ven mejor con este comando combinado:
+```bash
+column -t -s ',' archivo.csv | less -S
+```
+El `-S` evita que las líneas largas se rompan y puedes moverte horizontalmente con las flechas ← →.
 
-Un wildcard es un carácter especial utilizado como comodín para hacer coincidir múltiples archivos en base a un patrón determinado. Principalmente, es útil con comandos como:
+### Algunos comandos que practiqué con `awk`:
 
-* ls (listar archivos)
+- `awk '{print NF}' parrafo.txt` → imprime el número de palabras por línea.
+- `awk 'length($0) > 55 {print $0}' parrafo.txt` → imprime líneas con más de 55 caracteres.
+- `awk '{print NR ": " $0}' parrafo.txt` → añade número de línea al output.
+- `awk -F ',' 'NR > 1 {suma += $9} END {print "Suma col9: ", suma}' tiendas.csv` → suma los valores de la columna 9 excluyendo el encabezado.
+- `awk 'BEGIN {print "---TIENDAS EJEMPLO---"} {print $0}' tiendas.csv` → agrega un encabezado antes del contenido.
 
-* cp (copiar archivos)
-
-* mv (mover archivos)
-
-* rm (eliminar archivos)
-
-
-
-¿Cuáles son los principales tipos de wildcards?
-
-* Asterisco (*): representa cualquier combinación de caracteres.
-
-* Signo de interrogación (?): coincide específicamente con un único carácter.
-
-* Corchetes [ ]: agrupan caracteres específicos.
-
-* Llaves { }: agrupan patrones o palabras.
-
-> Ya vamos para un tema más avanzados -Como superpoderes.
-
-* Touch: Al momento de usar touch file1.txt file2.txt fileA.txt fileB.md data.log archivo.csv se crearon esos archivos
-
-
-
-**A continuación las wildcards**
-
-1. "*" Conciste en señalar todo y despues se le puede agregar el nombre de la extensión, como por ejemplo: *.txt y nuevamente podemos seguir usando lo de combinar diferentes comandos para mostrarlos: ls -la *.txt
-
-2. Si deseamos buscar por nombre, se le agrega un nombre inicial antes del * es decir: ls -la file*
-
-3. Si deseamos buscar por ultimo caracter, se le cambia el * por un ? debido a que ? sólo acepta un sólo carácter. Entonces ls -la file?.txt
-
-4. Ahora si deseamos buscar solamente por ultimas letras se le agrega [AB] (las letras que se desean buscar) como por ejemplo: ls -la  * [AB]. * = Me va a mostrar todos los archivos que finalicen con la letra A o la letra B.
-
-5. Ahora si deseamos buscar solamente por una seguimos haciendo uso de [] y entonces escribimos algo como: ls -la * [o] .*
-
-6. Si deseamos encontrar por dos tipos de extensiones diferentes podemos hacer uso de { } y escribir cosas como ls -la *.{md,log}
-
-* **MV = Move:** Para mover y desplazar archivos se puede mediante mv, en donde se puede desplazar por tipo de extensiones como: mv *.txt ./backup/
-
-Las wild cards son de esas cosas que hacen una diferencia enorme cuando usamos la terminal porque nos permite agrupar grandes cantidades de archivos.
-
-> Cada shell tiene su forma de wildcards y su forma de interpretar por lo que son ligeramente diferentes de unas a las otra.
-
-<img src="https://hablemoslinux.wordpress.com/wp-content/uploads/2012/03/tabla.png?w=1180">
-
-*Imagen Tomada De: https://hablemoslinux.wordpress.com/2012/03/04/486/*
-
-
-
-
+<img src="https://static.platzi.com/media/user_upload/upload-14677486-8766-479d-ad19-512217adaead.png" alt="Comandos de exploración de texto">
 
 ---
 
+## Wildcards en la terminal para filtrar archivos
 
+Un **wildcard** es un carácter especial utilizado como comodín para hacer coincidir múltiples archivos en base a un patrón determinado. Principalmente es útil con `ls`, `cp`, `mv`, `rm`, `cat`, `head`, `tail` y `grep`.
 
+| Wildcard | Descripción | Ejemplo |
+| :--- | :--- | :--- |
+| `*` | Cualquier combinación de caracteres | `*.txt` → todos los .txt |
+| `?` | Exactamente un carácter | `file?.txt` → file1.txt, fileA.txt, no file10.txt |
+| `[ ]` | Grupos de caracteres | `*[AB].*` → archivos que terminan en A o B |
+| `{ }` | Palabras o extensiones completas | `*.{md,log}` → todos .md y .log |
 
-## Comandos GREP y FIND para búsquedas avanzadas en linux
+**Ejemplo de llaves con vacío:**
+```bash
+ls -l file?{.log,,.json}
+```
+Esto lista `fileA.log`, `file4` (sin extensión), `file5.json`, etc.
 
-A lo largo de este documento hemos explorado diferentes comandos para listar, buscar archivos y en general ver información acerca de nuestro dispositivo. Existen comandos que nos permiten buscar archivos por extensión, contenido, por tamaño e incluso por ubicación. En resumen son dos comandos: **GREP** y **FIND**
-
-Estos dos comandos son de busqueda general que usan expresiones regulares (Especie de patron que hará match con una serie de carácteres) para encontrar patrones.
-
-### GREP
-
-Digamos que vamos a querrer buscar ciertos nombres en un archivo CSV que contiene una gran cantidad de datos... Podemos usar **GREP** como digamos... grep '[palabra que estamos buscando]' [nombre del archivo] y aparecerá toda la información que contenga esto. 
-
-Por otro lado este comando es case sensitive por lo que se debe tener cuidado del cómo se escribe o debe agregar un -i antes de la palabra que se esta buscando es decir: grep -i 'spider' marvel base de datos.csv
-
-Y se puede saber esta palabra en cuantos elementos aparece agregando una c despues de la -i por lo que:
-
-    grep -ic 'spider' marvel base de datos.csv
-
-Esta es una herramienta muy poderosa para la busqueda en donde le podemos integrar diferentes opciones para buscar por contenido por lo que nos permite encontrar las ocurrencias en un documento de texto lo que sea que estemos buscando. **Porque GREP nos permite buscar por contenido**
-
-Tambien podemos hacer exclusiones!
-
-Si deseamos que nos muestre toda la información a excepto de ciertos carácteres se puede por medio de: v - Es decir que: grep -v 'palabra' documento por lo que un ejemplo podría ser
-
-    - grep -iv 'spider' marvel base de datos.csv
- 
-que es muy importante si se esta haciendo un análisis de datos.
-
-<img src="https://www.web24.com.au/wp-content/uploads/2016/10/grep-small-500x295.png">
-
-*Imagen Tomada De: https://www.web24.com.au/tutorials/use-grep-command-linux*
-
-
-
-## FIND 
-
-A diferencia de GREP que busca por contenido, FIND que busca por patrones de tipo de archivo dentro de una carpeta de una manera especifica, permite buscar por nombre o patrones de archivo.
-
-El . se refiere a la misma carpeta en la que se esta en PWD y se usa la opción -type en donde podemos separarlo en si queremos encontrar un directorio un dir = **d**, o si por el otro lado queremos encontrar un archivo, un file = **f**.
-Y se le agrega un -name  en donde podriamos agregar un "*" para que sin importar el nombre, lo liste.
-
-    find . -type d -name "*"
-
-Tambien se puede hacer busqueda por tamaño de archivo como por ejemplo:
-    
-    find . -type f -size +1M
-
-**A continuación diferentes elementos de interes:**
-
-* -name: Busca por nombre de archivo (acepta wildcards)
-
-* -type: Busca por tipo (f=archivo, d=directorio)
-
-* -size: Busca por tamaño
-
-* -mtime: Busca por tiempo de modificación
-
-* -user: Busca por propietario
-
-* -exec: Ejecuta un comando sobre los archivos encontrados
-
-* -not, -and, -or: Operadores lógicos
+<img src="https://static.platzi.com/media/user_upload/upload-7742242c-1c3b-4351-92e9-7a59e7802876.png" alt="Wildcards en acción">
 
 ---
 
-* Buscar archivos por nombre: find /home -name "*.txt"
+## Cómo usar grep y find en Linux
 
-* Buscar directorios: find /var -type d -name "log*"
+### `grep`: Buscar contenido dentro de archivos
 
-* Buscar archivos modificados en los últimos 7 días: find /home -mtime -7
+`grep` busca patrones de texto dentro del contenido de un archivo usando expresiones regulares. La sintaxis básica es `grep patrón archivo`.
 
-* Buscar archivos grandes: find /var -size +10M
+- `grep -i 'spider' archivo.csv` → ignora mayúsculas/minúsculas.
+- `grep -c 'spider' archivo.csv` → cuenta el número de líneas que contienen el patrón.
+- `grep -v 'spider' archivo.csv` → muestra las líneas que **no** contienen el patrón.
+- `grep -iv 'spider' archivo.csv` → combina ignorar mayúsculas y excluir.
 
-* Ejecutar comando en archivos encontrados: find . -name "*.tmp" -exec rm {} \\;
+### `find`: Buscar archivos por nombre, tipo o tamaño
 
-* Buscar archivos con permisos específicos: find /etc -perm 644
+`find` localiza archivos y directorios en el sistema de archivos.
 
+- `find . -type d -name "*"` → busca todos los directorios desde el actual.
+- `find . -type f -name "*.txt"` → busca todos los archivos .txt.
+- `find . -type f -size +1M` → busca archivos mayores a 1 MB.
+- `find . -mtime -7` → archivos modificados en los últimos 7 días.
+- `find . -name "*.tmp" -exec rm {} \;` → elimina todos los .tmp.
 
----
-
-**¿Para qué sirven GREP y FIND?**
-
-* GREP: Busca contenido dentro de archivos.
-
-* FIND: Busca archivos o carpetas por nombre, tipo o tamaño.
-
-<img src="https://b1490832.smushcdn.com/1490832/wp-content/uploads/2019/03/find_simple.png?lossy=2&strip=1&webp=1">
-
-*Imagen Tomada De: https://www.fosslinux.com/8661/how-to-find-files-using-command-line-in-the-linux-terminal.htm*
-
-
-
+**Diferencia clave:**
+- `grep` busca **contenido**.
+- `find` busca **archivos** por nombre, tipo, tamaño, etc.
 
 ---
-
-
 
 ## Tipos de comandos en Linux y cómo identificarlos
 
-A esta altura ya habrás utilizado varios comandos para listar, buscar y revisar archivos. Pero surge una pregunta importante: **¿qué es realmente un comando?**  
-Cuando ejecutamos algo en la terminal, un comando puede ser distintos tipos de elementos.
+Cuando trabajamos en Linux, usualmente ejecutamos comandos sin reflexionar sobre su naturaleza y origen. Un comando en Linux puede ser:
 
-> En Linux solemos usar comandos sin reflexionar sobre su naturaleza y origen.
+- Un **script** en Shell.
+- Un **archivo binario ejecutable** compilado en C, C++, etc.
+- Una **utilidad del sistema**.
+- Un **alias** (un "apodo" que simplifica un comando más largo).
 
-Un comando puede ser:
+**Herramientas para identificar el tipo de comando:**
 
-- **Un script**
-- **Una utilidad del sistema**
-- **Un archivo binario ejecutable**
-- **Un alias del sistema** (un “apodo” que simplifica un comando más largo)
+- `type ls` → indica si es alias, binario, etc. Por ejemplo, `ls` suele ser alias de `ls --color=auto`.
+- `which ls` → muestra la ruta absoluta del ejecutable original.
+- `whereis ls` → muestra varias ubicaciones relacionadas (bin, man, etc.).
+- `whatis grep` → devuelve una breve descripción de lo que hace el comando.
 
----
-
-## Cómo identificar qué tipo de comando es
-
-Linux incluye herramientas que permiten saber exactamente qué estamos ejecutando.
-
-### `type` — Identificar el tipo de comando
-
-Permite determinar si algo es un alias, un script, un binario o una función del shell.
-
-Ejemplo:
-
-```bash
-type ls
-
-
-Qué significa que “todo en Linux o en una shell son binarios”
-```
-
-Cuando decimos que “todo en Linux son binarios”, no significa que todo sea solo unos y ceros visibles. Lo que significa es que casi todos los programas o comandos que ejecutas en Linux son archivos ejecutables compilados — llamados binarios — porque están hechos de código binario (0s y 1s) que la computadora puede entender directamente.
-
-<img src="https://static.platzi.com/media/user_upload/upload-a9c6ef4b-6595-4116-afb3-849938bd583e.png">
-
-
-
-
+<img src="https://static.platzi.com/media/user_upload/upload-a9c6ef4b-6595-4116-afb3-849938bd583e.png" alt="Identificación de comandos">
 
 ---
-
-
-
 
 ## Redirecciones de terminal en Linux con operadores básicos
 
-Preguntas a responder en esta sección:
+Las redirecciones del sistema son una herramienta esencial para manejar eficientemente la información que generan los comandos. Con operadores básicos como `>`, `<`, `>>` y `|` podemos redirigir salidas, entradas y errores.
 
-* ¿Cómo usar las redirecciones del sistema?
+| Operador | Descripción | Ejemplo |
+| :--- | :--- | :--- |
+| `>` | Redirige la salida a un archivo (sobrescribe). | `echo "hola" > archivo.txt` |
+| `>>` | Concatena la salida al final del archivo. | `echo "mundo" >> archivo.txt` |
+| `<` | Redirige el contenido de un archivo como entrada. | `comando < archivo.txt` |
+| `\|` | Pipe: redirige la salida de un comando como entrada de otro. | `echo "color" \| lolcat` |
+| `2>` | Redirige los errores (stderr) a un archivo. | `ls noexiste 2> errores.log` |
+| `2>>` | Concatena errores a un archivo. | `ls noexiste 2>> errores.log` |
+| `>&` | Redirige tanto salida como error. | `comando > todo.log 2>&1` |
 
-* ¿Cómo usar los operadores "<", ">"?
+**Ejemplos divertidos con `cowsay` y `lolcat`:**
 
-* ¿Cómo usar el pipe operator?
+Primero instala los paquetes:
+```bash
+sudo apt install cowsay lolcat
+```
 
+Luego prueba:
+```bash
+cowsay "Hola mundo" | lolcat
+cowsay -f dragon "Santiago" | lolcat
+```
 
----
+Puedes ver todos los animales disponibles con:
+```bash
+cowsay -l
+```
 
-¿Para qué sirven las redirecciones en nuestro sistema?
+<img src="https://static.platzi.com/media/user_upload/upload-bf433777-7415-4425-840d-491f8730154f.png" alt="Cowsay y lolcat">
 
-Cada uno de los comandos que nosotros ejecutamos un comando, se suelta una información en la interfaz del sistema. ¿Cómo hacemos cuando queremos guardar la información de nuestro comando ls o nuestro comando find la quisieramos guardar en un archivo de texto?
+**Nota:** Puedes generar tus propios "cows" con ASCII art usando la web [asciiart.eu](https://www.asciiart.eu/). También puedes editar el archivo `default.cow` y personalizarlo.
 
-* Puedes almacenar resultados que normalmente aparecen en pantalla directamente en archivos.
-
-* Facilita el envío de datos entre comandos en una cadena o flujo.
-
-
-Y para esto es que sirven las redirecciones.
-
->Las redirecciones del sistema son una herramienta esencial para manejar eficientemente la información que generan los comandos en la terminal de Linux. 
-
->operadores básicos: mayor que (>), menor que (<), doble mayor que (>>) y pipe operator (|), con estos operadores podemos redirigir salidas, entradas y errores hacia diferentes destinos, ampliando así las posibilidades de nuestro trabajo en terminal.
-
-Para realizar un pequeño ejercicio de esto tendremos que instalar una serie de comandos a traves del manejador de paquetes que tiene ubuntu llamado apt.
-
->apt Sólo funciona en distribuciones basadas en debian en este caso, [yo estoy utilizando ubuntu] por lo que si se esta utilizando otro tipo de distribución como puede ser fedora... En ese caso su manejador de paquete puedel llamarse dnf y si estas utilizando archlinux tendras que usar el manejador de paquete llamado packman, en caso de macos no existe un manejador como tal y el paquete se llama brup
-
----
-
-
-Se va a escribir en la terminal:
-
-    sudo apt install lolcat
-
-
-Datos Interesantes:
-
-1. sudo: Es un ejecutador, es decir que se le pide que ejecute como super administrador.
-2. apt: Es el manejador de paquetes del sistema operativo que estemos utilizando que en mi caso es ubuntu.
-3. install: Instalar... En donde a continuación de aqui se escriben los paquetes
-4. lolcat y cowsay son dos paquetes distintos.
-
-    ```sudo apt install cowsay```
+<img src="https://static.platzi.com/media/user_upload/upload-9989b897-9710-4ad3-a045-a0df5bee2b9e.png" alt="Ejemplo de cowsay">
 
 ---
 
+## Operadores de control para encadenar comandos en Linux
 
+Los operadores de control permiten ejecutar múltiples comandos en secuencia, condicionalmente o en segundo plano.
 
-Redirecciones
+| Operador | Descripción | Ejemplo |
+| :--- | :--- | :--- |
+| `;` | Secuencial: ejecuta uno tras otro, sin importar si falla. | `echo uno; ls; echo tres` |
+| `&&` | Condicional AND: ejecuta el segundo solo si el primero tuvo éxito. | `ls && echo "ok"` |
+| `\|\|` | Condicional OR: ejecuta el segundo solo si el primero falla. | `ls noexiste \|\| touch error.log` |
+| `&` | Envía el comando al background (segundo plano). | `sleep 10 &` |
+| `comando && comando2 \|\| comando3` | Si el primero funciona, ejecuta el segundo; si falla, el tercero. |
 
-Como por ejemplo utilizar primero
-
-    echo "hola mundo"
-
-lo que hace es imprimir y mostrarnos la salida "hola mundo" que de forma estandar se le conoce como output, por el contrario cuando un comando recibe información se le conoce por el estandar input. Pero existe un tercer estado cuando manipulamos comandos en la terminal que se le conoce como estandar error.
-
-Un ejemplo de error es cuando ingresas ls y el nombre de un archivo que no existe.
-
-    ls asjldlaskdjlñasdj
-
-Ahora, si nosotros al output lo redireccionamos a un archivo de texto mediante > archivo
-
-    echo "santiagoencodigo" > archivohola.txt
-
-y lo ejecutamos mediante
-
-    cat archivohola.txt
-
-y ahora si queremos ingresar otra línea de texto a este documento se puede hacer mediante >> archivo, a esto se le conoce como concatenar porque si cuenta con contenido, pues se lo agrega hasta el final
-
-    echo "hola mundo" >> archivohola.txt
+**Ejemplo combinado:**
+```bash
+ls && echo éxito || echo fracaso
+```
 
 ---
 
+## Configuración de alias permanentes en terminal Linux
 
+Los **alias** son apodos que asignas a comandos largos o complejos para acelerar tu trabajo.
 
-Ahora vamos a trabajar con un input.
+- Ver alias activos: `alias`
+- Crear alias temporal: `alias cls='clear'`
+- Para que sean permanentes, agrégalos al archivo `~/.bashrc` (o `~/.zshrc` si usas ZSH):
+  ```bash
+  echo 'alias cls="clear"' >> ~/.bashrc
+  source ~/.bashrc
+  ```
 
-¿Cómo hacemos que un estandar output de un comando sea el estandar input de otro comando?, para esto existe el pipe operator    
-
-Como por ejemplo:
-
-    lolcat "hola"
-
-Lolcat recibe estandar input por lo que no va a realizar nada, pero al momento de:
-
-    echo "saludo colorido" | lolcat
-
-* El signo | es el pipe operator y sirve para redireccionar a otro comando.
-
-* Lolcat será el comando que va a recibir el output de ese echo.
-
-> No entendí muy bien, hace que se ponga de colores el texto solamente
+**Ejemplo:** `alias gs='git status'`, `alias ll='ls -lah'`
 
 ---
 
+## Permisos de archivos en Linux con chmod
 
+Los permisos en Linux indican quién puede leer (`r`), escribir (`w`) y ejecutar (`x`) un archivo o directorio. Para verlos, usa `ls -la` y observa la cadena de letras.
 
-Ahora sí utilizamos cowsay, aparecera una vaca dibujada mediante simbolos y despues entre " " podemos agregar el texto que queremos que diga la vaca.
+- Primer carácter: `-` archivo, `d` directorio.
+- Luego tres grupos de `rwx` para: usuario propietario, grupo, otros.
 
-    cowsay "hello world"
+**Cambiar permisos con `chmod`:**
 
-<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrz-PpPy5p1z-wm-eH_uB68NH-dzoMO9m0dw&s">
+- `chmod +x script.sh` → añade ejecución a todos.
+- `chmod 755 script.sh` → usuario: rwx, grupo: r-x, otros: r-x.
+- `chmod 700 script.sh` → solo el usuario tiene todos los permisos.
+- `chmod 777 script.sh` → todos tienen todo (peligroso).
 
-*Imagen Tomada De: https://www.sauveconsulting.com.au/cowsay*
+**Notación numérica:**
+- `r` = 4
+- `w` = 2
+- `x` = 1
+- Suma para cada grupo.
 
----
+**Ejemplo:** `chmod 644 archivo.txt` → usuario rw-, grupo r--, otros r--.
 
-Ahora si... 
+<img src="https://static.platzi.com/media/user_upload/upload-72951aa8-a97e-4b51-8174-ba45d0888a89.jpg" alt="Permisos en Linux">
 
-    cowsay "hello world" | lolcat
+**Seguridad:** Los ciberdelincuentes pueden cambiar permisos con `chmod` para ejecutar malware. Un caso famoso es WannaCry. Por eso, siempre asigna el mínimo de permisos necesarios y evita `chmod -R 777`.
 
-hará aparecer esa vaca, pero en colores.
-
-Como por ejemplo:
-
-<img src="https://think.unblog.ch/wp-content/uploads/2020/08/lolcat_kitty.png">
-
-*Imagen Tomada De: https://think.unblog.ch/en/lolcat-for-more-color-in-the-terminal/*
-
----
-
-Ahora si deseamos agregarle un animal o formato diferente, lo podemos hacer mediante -f [formato]
-
-    cowsay -f dragon "santiagoencodigo" | lolcat
-
-<img src="https://cdn.osxdaily.com/wp-content/uploads/2014/07/lolcat-rainbow-cowsay-output-terminal.jpg">
-
-*Imagen Tomada De: https://osxdaily.com/2014/07/03/lolcat-rainbow-terminal-command-output/*
-
-Si se desea mirar qué elementos se pueden dibujar mediante formatos de cowsay, se puede mediante:
-
-    cowsay -l
-
-> los comandos LOLCAT o Cowsay usados habitualmente en ejercicios educativos
+**Recursos:** [QuickRef chmod](https://quickref.me/chmod.html)
 
 ---
 
+## Variables de entorno en Bash explicadas
 
+Una **variable de entorno** es un valor con nombre que el sistema operativo guarda para que cualquier proceso pueda leerlo. Sirve para compartir configuración, rutas y datos entre programas.
 
-Ahora ya sabiendo que cuando ingresamos algún comando erroneo o una sintaxis erronea... La terminal nos manda un error, ¿Cómo podemos capturar ese error?
+- Ver todas las variables: `env` o `env | less`
+- Ver una variable: `echo $SHELL` (muestra la shell actual)
+- `echo $PWD` (directorio actual)
+- `echo $PATH` (lista de rutas donde se buscan binarios)
 
-Se puede mediante el signo > definiendo qué queremos capturar.
+**Crear variables temporales:**
+```bash
+MI_VAR="Hola"
+echo $MI_VAR   # Hola
+```
 
-la forma de capturar en linux, es hacer referencia al elemento a capturar mediante el numero 2, es decir:
+**Exportar para que otros procesos la vean:**
+```bash
+export MI_VAR="Hola"
+```
 
-    ls asmdask 2> error.logs
-
-ahora si se desea concatenar, se puede mediante el doble signo >>
-
-    ls asmdask 2>> error.logs
-
-que ahora si probamos
-
-sudo apt install neovim 2>&1 info-install.log
-
-* el paquete neovim es para edición de texto
-
-* 2>&1: capturar los errores 2>, como que tambien capture lo que salga bien &1 
-
-* info-install.log es el nombre que decidí agregarle, pero es modificable
-
----
-
-En pocas palabras, nosotros podemos pensar: 
-
-
-Redirige el input de un comando hacia un archivo.
-
-    comando < archivo
-
-
-Redirige la salida de un comando a un archivo. El mismo sobrescribe el contenido del archivo a donde se redirige la salida.
-
-    comando > archivo
-
-
-Concatena la salida de un comando a un archivo. Si no existe el archivo lo crea.
-
-    comando >> archivo
-
-
-Redirige la salida de error de un comando a un archivo.
-
-    comando 2> archivo
-
-Redirige la salida de un comando, que se ejecuto satisfactoriamente o un comando que presento errores, a un archivo.
-
-comando > archivo 2>&1
+**Variables persistentes:** Agrégalas al archivo `~/.bashrc` o `~/.zshrc`:
+```bash
+echo 'export MI_VAR="Hola"' >> ~/.bashrc
+source ~/.bashrc
+```
 
 ---
 
-Los manejadores de paquetes varían según el sistema operativo:
+## Uso de APT para gestionar paquetes en Linux
 
-* Ubuntu (basado en Debian): APT
+**APT** (Advanced Package Tool) es el manejador de paquetes en distribuciones basadas en Debian (Ubuntu, etc.).
 
-* Fedora (basado en Red Hat): DNF
+| Comando | Descripción |
+| :--- | :--- |
+| `sudo apt update` | Actualiza la lista de paquetes disponibles. |
+| `sudo apt upgrade` | Actualiza todos los paquetes instalados. |
+| `sudo apt install paquete` | Instala un nuevo paquete. |
+| `sudo apt remove paquete` | Elimina un paquete (conserva configuraciones). |
+| `sudo apt purge paquete` | Elimina el paquete y sus configuraciones. |
+| `apt show paquete` | Muestra información del paquete. |
+| `apt search término` | Busca paquetes relacionados con el término. |
 
-* Arch Linux: PacMan
+**Ejemplo divertido:**
+```bash
+sudo apt install cmatrix
+cmatrix   # Lluvia de código Matrix
+```
 
-* macOS: Brew (se instala, no viene por defecto)
+<img src="https://static.platzi.com/media/user_upload/upload-94ae08b4-4f1b-4114-ae57-c5824d639970.png" alt="Cmatrix en acción">
 
 ---
 
-## Operadores de Control para Encadenar Comandos Linux
+## Homebrew: gestor de paquetes para Mac
+
+**Homebrew** es el manejador de paquetes para macOS (no oficial). Su sitio es [brew.sh](https://brew.sh/).
+
+- Instalar: copia el comando de la web y pégale en la terminal.
+- Ver versión: `brew --version`
+- Buscar paquete: `brew search neofetch`
+- Información: `brew info neofetch`
+- Instalar: `brew install neofetch`
+- Listar instalados: `brew list`
+- Actualizar Homebrew: `brew update`
+- Actualizar paquetes: `brew upgrade`
+- Desinstalar: `brew uninstall neofetch` y luego `brew cleanup`
+
+**Importante:** Homebrew no es oficial, así que ten cuidado con paquetes de fuentes no confiables. Si puedes descargar el software desde la fuente oficial, hazlo.
+
+<img src="https://brew.sh/assets/img/homebrew.svg" alt="Homebrew logo">
+
+---
+
+## Foreground y background en la terminal
+
+Cuando ejecutas un comando, normalmente corre en **foreground** (primer plano), bloqueando la terminal hasta que termina. Para enviarlo al **background** (segundo plano) y seguir trabajando, añade `&` al final.
+
+- `sleep 1000 &` → envía a background.
+- `jobs` → lista los procesos en background.
+- `fg %1` → trae el job 1 al foreground.
+- `Ctrl + Z` → pausa el proceso en foreground.
+- `bg %1` → reanuda el job pausado en background.
+- `kill -STOP %1` → pausa un proceso en background.
+- `kill -CONT %1` → reanuda un proceso en background.
+
+---
+
+## Cómo identificar y matar procesos en Linux
+
+Un **proceso** es cualquier programa en ejecución.
+
+- `ps` → muestra los procesos de la sesión actual.
+- `ps aux` → muestra todos los procesos con detalles (usuario, PID, CPU, memoria, comando).
+- `ps aux | grep sleep` → filtra procesos por nombre.
+- `top` → monitor interactivo en tiempo real.
+- `htop` → versión más amigable (instalar con `sudo apt install htop`).
+
+En `htop` puedes:
+- Navegar con flechas.
+- Buscar con F3.
+- Ver árbol con F5.
+- Matar un proceso con F9.
+
+**Matar un proceso:**
+- `kill PID` → envía señal de terminación (15).
+- `kill -9 PID` → mata forzosamente (señal 9).
+
+**Estados de procesos:** running, sleeping, stopped, zombie.
+
+<img src="https://static.platzi.com/media/user_upload/upload-defc9c27-4831-40cb-8e23-3c3747ad24f2.png" alt="Estados de procesos">
+
+---
+
+## Empaquetado y compresión de archivos con TAR y GZIP en Linux
+
+**Empaquetar** combina varios archivos en uno solo (`.tar`). **Comprimir** reduce el tamaño (`.gz`). Son procesos distintos.
+
+- **Empaquetar:**
+  ```bash
+  tar -cvf textos.tar textos/
+  ```
+  - `c` create, `v` verbose, `f` file.
+
+- **Comprimir:**
+  ```bash
+  gzip textos.tar   # genera textos.tar.gz
+  ```
+
+- **Descomprimir y desempaquetar en dos pasos:**
+  ```bash
+  gunzip textos.tar.gz
+  tar -xvf textos.tar
+  ```
+
+- **Todo en uno:**
+  ```bash
+  tar -xzvf textos.tar.gz
+  ```
+  - `x` extract, `z` gzip, `v` verbose, `f` file.
+
+**Empaquetar y comprimir directamente:**
+```bash
+tar -czvf textos.tar.gz textos/
+```
+
+<img src="https://static.platzi.com/media/user_upload/upload-45134d08-e9d3-4f90-945e-9f16de835d66.png" alt="Diferencias entre tar y gzip">
+
+---
+
+## Vim y Nano: editores de texto en terminal
+
+**Vim** y **Nano** son editores de texto que funcionan directamente en la terminal. Son ideales para servidores remotos y sistemas sin interfaz gráfica.
+
+**Vim:**
+
+- Abrir: `vim archivo.md`
+- Modos: lectura (por defecto), inserción (`i`), comando (`:`).
+- Guardar y salir: `:wq`
+- Salir sin guardar: `:q!`
+- Borrar línea: `dd`
+- Ir al inicio: `gg`
+- Ir a línea específica: `:4`
+
+**Nano:**
+
+- Abrir: `nano archivo.md`
+- Guardar: `Ctrl + O`
+- Salir: `Ctrl + X`
+- Cortar línea: `Ctrl + K`
+- Pegar: `Ctrl + U`
+- Ayuda: `Ctrl + G`
+
+<img src="https://static.platzi.com/media/user_upload/upload-12347d54-6905-4700-9324-4d2dfb6d8309.png" alt="Vim vs Nano">
+
+---
+
+## Tmux para múltiples terminales en una ventana
+
+**Tmux** es un multiplexor de terminales que permite dividir una ventana en paneles, manejar varias ventanas y mantener sesiones activas en segundo plano.
+
+- Instalar: `sudo apt install tmux` (Linux) o `brew install tmux` (Mac).
+- Iniciar: `tmux`
+- Prefijo: `Ctrl + b` (luego sueltas y presionas el comando).
+
+| Comando | Descripción |
+| :--- | :--- |
+| `Ctrl+b %` | Divide verticalmente. |
+| `Ctrl+b "` | Divide horizontalmente. |
+| `Ctrl+b flechas` | Navega entre paneles. |
+| `Ctrl+b c` | Crea una nueva ventana. |
+| `Ctrl+b ,` | Renombra la ventana actual. |
+| `Ctrl+b número` | Cambia a la ventana número. |
+| `Ctrl+b d` | Desconecta la sesión (queda en background). |
+| `tmux ls` | Lista sesiones activas. |
+| `tmux attach` | Reconecta a la sesión (si hay una). |
+
+<img src="https://static.platzi.com/media/user_upload/upload-d139c833-7ee3-4c2b-aee8-aa3eb597d0b9.png" alt="Tmux en acción">
+
+---
+
+## Comandos de red en la terminal para verificar conectividad
+
+| Comando | Descripción |
+| :--- | :--- |
+| `ip a` | Muestra las interfaces de red y direcciones IP. |
+| `ip r` | Muestra la tabla de ruteo. |
+| `ping www.google.com` | Envía paquetes ICMP para verificar conectividad. |
+| `curl www.google.com` | Realiza una petición HTTP GET y muestra el HTML. |
+| `curl www.google.com > index.html` | Guarda el contenido en un archivo. |
+| `wget <URL>` | Descarga archivos desde la web. |
+| `nmap` | Escanea puertos (requiere instalación). |
+| `traceroute` | Rastrea la ruta de paquetes a un destino. |
+
+---
+
+## Personaliza tu terminal con ZSH y Powerlevel10k
+
+**ZSH** es una shell alternativa a Bash con más opciones de personalización.
+
+- Instalar ZSH: `sudo apt install zsh`
+- Instalar Oh My ZSH: sigue el comando en [ohmyz.sh](https://ohmyz.sh/)
+- Cambiar la shell por defecto: responde "yes" cuando lo pregunte.
+
+**Powerlevel10k** es un tema para ZSH con iconos y colores.
+
+- Instalar las fuentes **MesloLGS Nerd Font** desde el repositorio de Powerlevel10k.
+- Clonar Powerlevel10k en `.oh-my-zsh/themes`.
+- Editar `~/.zshrc` y cambiar `ZSH_THEME="powerlevel10k/powerlevel10k"`.
+- Recargar con `source ~/.zshrc` y seguir el asistente.
+
+**Recursos:**
+- [Powerlevel10k GitHub](https://github.com/romkatv/powerlevel10k)
+- [Oh My ZSH](https://ohmyz.sh/)
+
+<img src="https://ohmyz.sh/img/themes/omz-half-life.png" alt="Oh My ZSH">
+
+**Ejemplos de personalizaciones de estudiantes:**
+
+<img src="https://static.platzi.com/media/user_upload/upload-cd0f9148-db3f-4a19-a05d-d59a2c54b429.png" alt="Terminal personalizada 1">
+
+<img src="https://static.platzi.com/media/user_upload/upload-2bf4b998-d977-4728-ae1b-8b0711d70352.png" alt="Terminal personalizada 2">
+
+---
+
+## Warp: la terminal con IA integrada
+
+**Warp** es un cliente de terminal con inteligencia artificial integrada que permite ejecutar comandos en lenguaje natural.
+
+- Descargar desde [warp.dev](https://www.warp.dev/).
+- Instalar en Windows, macOS o Linux.
+- Abrir Ubuntu en Warp (con WSL).
+- Escribir instrucciones en lenguaje natural, por ejemplo: "Create a snake game in Python from scratch".
+- Usar el **modo agente** (icono de estrellitas) para explicar errores y obtener correcciones.
+- Soporta paneles divididos al estilo Tmux (clic derecho → Split pane right).
+
+**Ventajas:** Interfaz moderna, sugerencias automáticas, explicación de errores, previsualización de comandos.
+
+**Desventajas:** Algunas funciones requieren suscripción de pago; depende de la nube para IA; no es compatible con Tmux completamente; requiere inicio de sesión.
+
+<img src="https://static.platzi.com/media/user_upload/upload-1922777c-fe06-429e-9c65-7f03041f3b86.png" alt="Warp">
+
+---
+
+## Recursos para dominar la terminal Linux
+
+- **Cheat Sheet de comandos:** [Descargar PDF](https://static.platzi.com/media/public/uploads/linux-terminal-cheat-sheet-pdf-ready_a82ec5a3-ac13-452f-955b-8789d1831203.pdf)
+- **Libro gratuito:** [Linux Basics for Hackers](https://archive.org/details/linux-basics-for-hackers) (repositorio en GitHub: [FADL285/LINUX-BASICS-FOR-HACKERS-Book](https://github.com/FADL285/LINUX-BASICS-FOR-HACKERS-Book))
+
+**Consejo final:** Dominar la terminal no es cuestión de horas, es cuestión de repetición. Practica a diario, consulta la cheat sheet y no temas equivocarte. La constancia es la clave.
+
+---
+
+*Este documento fue redactado con base en el curso "Introducción a la Terminal y Línea de Comandos" de Platzi, impartido por Enrique Devars, y complementado con experiencias personales y recursos adicionales.*
+
+> Gracias por leer.
