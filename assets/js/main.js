@@ -82,7 +82,7 @@ const projectData = [
         nombre: "10. Git y GitHub",
         descripcion: "Módulo pendiente de desarrollo enfocado en la documentación del uso de Git y GitHub como herramientas esenciales para el control de versiones y la colaboración en proyectos de software.",
         imagen: "./assets/img/proyectos/docs-06-git-y-github.png",
-        urlDoc: "https://github.com/santiagoencodigo/Desarrollo-Web-Profesional/blob/main/docs/10-git-y-github.md",
+        urlDoc: "https://github.com/santiagoencodigo/desarrollo-web-profesional/tree/main/projects/09-git-y-github/01-git-y-control-de-versiones.md",
         urlProyecto: null
     },
     {
